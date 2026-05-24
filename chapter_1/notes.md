@@ -195,3 +195,46 @@ Page 42
 If $A$ and $B$ are sets and $F$ is a function from $A$ to $B$, then given any
 element $x$ in $A$, the unique element in $B$ that is related to $x$ by $F$ is
 denoted $F(x)$, which is read **"$F$ of $x$."**
+
+---
+
+Page 48
+
+**Definition**
+
+A **graph** $G$ consists of two finite sets: a nonempty set $V(G)$ of
+**vertices** and a set $E(G)$ of **edges**, where each edge is associated with a
+set consisting of either one or two vertices called its **endpoints**. The
+correspondence from edges to endpoints is called the **edge-endpoint function**.
+
+An edge with just one endpoint is called a **loop**, and two or more distinct
+edges with the same set of endpoints are said to be **parallel**. An edge is
+said to **connect** its endpoints; two vertices that are connected by an edge
+are called **adjacent**; and a vertex that is an endpoint of a loop is said to
+be **adjacent to itself**.
+
+An edge is said to be **incident on** each of its endpoints, and two edges
+incident on the same endpoint are called **adjacent**. A vertex on which no
+edges are incident is called **isolated**.
+
+---
+
+Page 52
+
+**Definition**
+
+A **directed graph**, or **digraph**, consists of two finite sets: a nonempty
+set $V(G)$ of vertices and a set $D(G)$ of directed edges, where each is
+associated with an ordered pair of vertices called its **endpoints**. If edge
+$e$ is associated with the pair $(v, w)$ of vertices, then $e$ is said to be the
+**(directed) edge** from $v$ to $w$.
+
+---
+
+Page 54
+
+**Definition**
+
+Let $G$ be a graph and $v$ a vertex of $G$. The **degree of $v$**, denoted
+**$deg(v)$**, equals the number of edges that are incident on $v$, with an edge
+that is a loop counted twice.

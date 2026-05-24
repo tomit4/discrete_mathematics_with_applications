@@ -117,3 +117,65 @@ $(x, y) \in F$ and $(x, z) \in F$; $y = z$
 **Solution**
 
 a unique element of $B$ that is related to $x$ by $F$.
+
+---
+
+**Test Yourself**
+
+Page 57
+
+1. A graph consists of two finite sets: _______ and _______, where each edge is
+   associated with a set consisting of _______.
+
+**Solution**
+
+a finite; nonempty set of vertices; a finite set of edges.
+
+2. A loop in a graph is _______.
+
+**Solution**
+
+An edge that has a single endpoint.
+
+3. Two distinct edges in a graph are parallel if, and only if, _______.
+
+**Solution**
+
+They share the same set of endpoints.
+
+4. Two vertices are called adjacent if, and only if, _______.
+
+**Solution**
+
+They are connected by an edge.
+
+5. An edge is incident on _______.
+
+**Solution**
+
+Each of its endpoints.
+
+6. Two edges incident on the same endpoint are _______.
+
+**Solution**
+
+adjacent
+
+7. Two edges incident on the same endpoint are _______.
+
+**Solution**
+
+isolated
+
+8. In a directed graph, each edge is associated with _______.
+
+**Solution**
+
+an ordered pair of vertices called its endpoints
+
+9. The degree of a vertex in a graph is _______.
+
+**Solution**
+
+the number of edges that are incident on the vertex, with an edge that is a loop
+counted twice.

@@ -715,3 +715,130 @@ Does $f = g$?
 
 Yes. Because the absolute value of any real number equals the square root of its
 square, $|x| = \sqrt{x^2}$ for all $x \in \mathbb{R}$. Hence $f = g$.
+
+---
+
+**Example 1.4.1 Terminology**
+
+Consider the following graph:
+
+![image 1_3_2_6](./1_3_2_6.png)
+
+a. Write the vertex set and edge set, and give a table showing the edge-endpoint
+function.
+
+b. Find all edges that are incident on $v_1$, all vertices that are adjacent to
+$v_1$, all edges that are adjacent to $e_1$, all loops, all parallel edges, all
+vertices that are adjacent to themselves, and all isolated vertices.
+
+**Solution**
+
+a.
+
+$$ \text{vertex set } = \{v_1, v_2, v_3, v_4, v_5, v_6\} $$
+
+$$ \text{edge set } = \{e_1, e_2, e_3, e_4, e_5, e_6, e_7\} $$
+
+| Edge  | Endpoints      |
+| ----- | -------------- |
+| $e_1$ | $\{v_1, v_2\}$ |
+| $e_2$ | $\{v_1, v_3\}$ |
+| $e_3$ | $\{v_1, v_3\}$ |
+| $e_4$ | $\{v_2, v_3\}$ |
+| $e_5$ | $\{v_5, v_6\}$ |
+| $e_6$ | $\{v_5\}$      |
+| $e_7$ | $\{v_6\}$      |
+
+b.
+
+$e_1$, $e_2$, and $e_3$ are incident on $v_1$.
+
+$v_1$ and $v_3$ are adjacent to $v_1$.
+
+$e_2$, $e_3$, and $e_4$ are adjacent to $e_1$.
+
+$e_6$ and $e_7$ are loops.
+
+$e_2$ and $e_3$ are parallel.
+
+$v_5$ and $v_6$ are adjacent to themselves.
+
+$v_4$ is an isolated vertex.
+
+---
+
+**Example 1.4.2 Drawing More Than One Picture for a Graph**$adjacent
+
+Page 49
+
+Consider the graph specified as follows:
+
+$$ \text{vertex set } = \{v_1, v_2, v_3, v_4\} $$
+
+$$ \text{edge set } = \{e_1, e_2, e_3, e_4\} $$
+
+edge-endpoint function:
+
+| Edge  | Endpoints      |
+| ----- | -------------- |
+| $e_1$ | $\{v_1, v_3\}$ |
+| $e_2$ | $\{v_2, v_4\}$ |
+| $e_3$ | $\{v_2, v_4\}$ |
+| $e_4$ | $\{v_3\}$      |
+
+Both drawings (a) and (b) shown below are pictorial representations of this
+graph (see Page 50).
+
+---
+
+**Example 1.4.3 Labeling Drawings to Show They Represent the Same Graph**
+
+Page 50
+
+Consider the two drawings shown in Figure 1.4.1. Label vertices and edges in
+such a way that both drawings represent the same graph.
+
+(see page 50)
+
+**Solution**
+
+Imagine putting one end of a piece of string at the top vertex of Figure
+1.4.1(a) (call this vertex $v_1$), then laying the string to the next adjacent
+vertex on the lower right (call this vertex $v_2$), then laying it to the next
+adjacent vertex on the upper left ($v_3$), and so forth, returning finally to
+the top vertex $v_1$. Call the first edge $e_1$, the second edge $e_2$, and so
+forth, as shown below.
+
+(see page 50)
+
+Now imagine picking up the piece of string, together with its labels, and
+repositioning it as follows:
+
+(see page 50)
+
+This is the same as Figure 1.4.1(b), so both drawings represent the graph with
+vertex set $\{v_1, v_2, v_3, v_4, v_5\}$, edge set
+$\{e_1, e_2, e_3, e_4, e_5\}$, and edge-endpoint function as follows:
+
+| Edge  | Endpoints      |
+| ----- | -------------- |
+| $e_1$ | $\{v_1, v_2\}$ |
+| $e_2$ | $\{v_2, v_3\}$ |
+| $e_3$ | $\{v_3, v_4\}$ |
+| $e_4$ | $\{v_4, v_5\}$ |
+| $e_5$ | $\{v_5, v_1\}$ |
+
+---
+
+**Example 1.4.4 Using a Graph to Represent a Network**
+
+Page 51
+
+Telephone, electric power, gas pipeline, and air transport systems can all be
+represented by graphs, as can computer networks - from small local area networks
+to the global Internet system that connects millions of computers worldwide.
+Questions that arise in the design of such systems involve choosing connecting
+edges to minimize cost, optimize a certain type of service, and so forth. A
+typical network, called a _hub-ad-spoke model_, is shown below.
+
+(see page 51)
