@@ -150,3 +150,48 @@ parentheses or commas. The elements of $A$ are called the **characters** of the
 string. The **null string** over $A$ is defined to be the "string" with no
 characters. It is often denoted $\lambda$ and is said to have length $0$. If
 $A = \{0, 1\}$, then a string over $A$ is called a **bit string**.
+
+---
+
+Page 39
+
+**Definition**
+
+Let $A$ and $B$ be sets. A **relation $R$ from $A$ to $B$** is a subset of
+$A \times B$. Given an ordered pair $(x, y)$ in $A \times B$, **$x$ is related
+to $y$ by $R$, written $xRy$, if, and only if, $(x, y)$ is in $R$. The set $A$
+is the **domain** of $R$ and the set $B$ is called its **co-domain**.
+
+The notation for a relation $R$ may be written symbolically as follows:
+
+$xRy$ means that $(x, y) \in R$.
+
+The notation $x\cancel{R}y$ means that $x$ is not related to $y$ by $R$:
+
+$x\cancel{R}y$ means that $(x, y) \notin R$.
+
+---
+
+Page 41
+
+**Definition**
+
+A **function $F$ form a set $A$ to a set $B$** is a relation with domain $A$ and
+co-domain $B$ that satisfies the following two properties:
+
+1. For every element $x$ in $A$, there is an element $y$ in $B$ such that
+   $(x, y) \in F$.
+
+2. For all elements $x$ in $A$ and $y$ and $z$ in $B$,
+
+$$ \text{if } \quad (x, y) \in F \text{ and } (x, z) \in F \text{, } \quad \text{ then } \quad y = z $$
+
+---
+
+Page 42
+
+**Function Notation**
+
+If $A$ and $B$ are sets and $F$ is a function from $A$ to $B$, then given any
+element $x$ in $A$, the unique element in $B$ that is related to $x$ by $F$ is
+denoted $F(x)$, which is read **"$F$ of $x$."**

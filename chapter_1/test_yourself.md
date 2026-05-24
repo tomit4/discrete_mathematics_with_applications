@@ -81,3 +81,39 @@ $c \in C$.
 **Solution**
 
 parentheses; commas
+
+---
+
+**Test Yourself**
+
+Page 45
+
+1. Given sets $A$ and $B$, a relation from $A$ to $B$ is _______.
+
+**Solution**
+
+a subset of the Cartesian product $A \times B$
+
+2. A function $F$ from $A$ to $B$ is a relation from $A$ to $B$ that satisfies
+   the following two properties:
+
+a. for every element $x$ of $A$, there is _______.
+
+b. for all elements $x$ in $A$ and $yr and $z$ in $B$, if _______ then _______.
+
+**Solution**
+
+a. for every element $x$ of $A$, there is _______.
+
+an element $y$ of $B$ such that $(x, y) \in F$
+
+b. for all elements $x$ in $A$ and $y$ and $z$ in $B$, if _______ then _______.
+
+$(x, y) \in F$ and $(x, z) \in F$; $y = z$
+
+3. If $F$ is a function from $A$ to $B$ and $x$ is an element of $A$, then
+   $F(x)$ is _______.
+
+**Solution**
+
+a unique element of $B$ that is related to $x$ by $F$.

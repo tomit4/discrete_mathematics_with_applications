@@ -753,3 +753,431 @@ c. $R \times S \times T$
 **Solution**
 
 xxxxy, xxxyx, xxyxx, xyxxx, yxxxx
+
+---
+
+**Exercise Set 1.3**
+
+Page 45
+
+1. Let $A = \{2, 3, 4\}$ and $B = \{6, 8, 10\}$ and define a relation $R$ from
+   $A$ to $B$ as follows: For every $(x, y) \in A \times B$,
+
+$$ (x, y) \in R \quad \text{ means that } \frac{y}{x} \text{ is an integer.} $$
+
+**Solution**
+
+a.
+
+Is 4 _R_ 6?
+
+No, $\dfrac{6}{4} = \dfrac{3}{2}$, which is not an integer.
+
+Is 4 _R_ 8?
+
+Yes, $\dfrac{8}{4} = 2$, which is an integer.
+
+Is $(3, 8) \in R$?
+
+No, $\dfrac{8}{3}$ is not an integer.
+
+Is $(2, 10) \in R$?
+
+Yes, $\dfrac{10}{2} = 5$ which is an integer.
+
+b. Write _R_ as a set of ordered pairs.
+
+$$ R = \{(2, 6), (2, 8), (2, 10), (3, 6), (4, 8)\} $$
+
+c. Write the domain and co-domain of _R_.
+
+The domain of _R_ is $\{2, 3, 4\}$.
+
+The co-domain of _R_ is $\{6, 8, 10\}$.
+
+d. Draw an arrow diagram for _R_.
+
+2. Let $C = D = \{-3, -2, -1, 1, 2, 3\}$ and define a relation $S$ from $C$ to
+   $D$ as follows: For every $(x, y) \in C \times D$,
+
+$$ (x, y) \in S \quad \text{ means that } \frac{1}{x} - \frac{1}{y} \text{ is an integer.} $$
+
+**Solution**
+
+a.
+
+Is 2 _S_ 2?
+
+Yes, $\dfrac{1}{2} - \dfrac{1}{2} = 0 \in \mathbb{Z}$.
+
+Is -1 _S_ -1?
+
+Yes $\dfrac{1}{-1} - \dfrac{1}{-1} = 0 \in \mathbb{Z} $
+
+Is $(3, 3) \in S$?
+
+Yes $\dfrac{1}{3} - \dfrac{1}{3} = 0 \in \mathbb{Z} $
+
+Is $(3, -3) \in S$?
+
+No, $\dfrac{1}{3} - \dfrac{1}{-3} = \dfrac{2}{3} \notin \mathbb{Z} $
+
+b. Write _S_ as a set of ordered pairs.
+
+$$ S = \{(-3, -3), (-2, -2), (-1, -1), (1, 1), (2, 2), (3, 3)\} $$
+
+c. Write the domain and co-domain of _S_.
+
+The domain and co-domain of _S_ is $\{-3, -2, -1, 1, 2, 3\}$.
+
+d. Draw an arrow diagram for _S_.
+
+3. Let $E = \{1, 2, 3\}$ and $F = \{-2, -1, 0\}$ and define a relation $T$ from
+   $E$ to $F$ as follows: For every $(x, y) \in E \times F$,
+
+$$ (x, y) \in T \quad \text{ means that } \frac{x - y}{3} \text{ is an integer.} $$
+
+**Solution**
+
+a.
+
+Is 3 _T_ 0?
+
+Yes, $\dfrac{3 - 0}{3} = 1 \in \mathbb{Z}$.
+
+Is 1 _T_ (-1)?
+
+No, $\dfrac{(1) - (-1)}{3} = \dfrac{2}{3} \notin \mathbb{Z}$.
+
+Is $(2, -1) \in T$?
+
+Yes, $\dfrac{(2) - (-1)}{3} = 1 \in \mathbb{Z}$.
+
+Is $(3, -2) \in T$?
+
+No, $\dfrac{(3) - (-2)}{3} = \dfrac{5}{3} \notin \mathbb{Z}$.
+
+b. Write $T$ as a set of ordered pairs.
+
+$$ T = \{(1, -2), (2, -1), (3, 0)\} $$
+
+c. Write the domain and co-domain of $T$.
+
+The domain of $T$ is $\{1, 2, 3\}$, and the co-domain of $T$ is $\{-2, -1, 0\}$.
+
+d. Draw an arrow diagram for $T$.
+
+4. Let $G = \{-2, 0, 2\}$ and $H = \{4, 6< 8\}$ and define a relation $V$ from
+   $G$ to $H$ as follows: For every $(x, y) \in G \times H$,
+
+$$ (x, y) \in V \quad \text{ means that } \frac{x - y}{4} \text{ is an integer.} $$
+
+**Solution**
+
+a.
+
+Is 2 _V_ 6?
+
+Yes, $\dfrac{(2) - (6)}{4} = -1 \in \mathbb{Z}$.
+
+Is (-2) _V_ (8)?
+
+No, $\dfrac{(-2) - (8)}{4} = -\dfrac{10}{4} = -\dfrac{5}{2} \notin \mathbb{Z}$.
+
+Is $(0, 6) \in V$?
+
+No, $\dfrac{(0) - (6)}{4} = -\dfrac{6}{4} = -\dfrac{3}{2} \notin \mathbb{Z}$.
+
+Is $(2, 4) \in V$?
+
+No, $\dfrac{(2) - (4)}{4} = -\dfrac{1}{2} \notin \mathbb{Z}$.
+
+b. Write $V$ as a set of ordered pairs.
+
+$$ V = \{(-2, 6), (0, 4), (0, 8), (2, 6)\} $$
+
+c. Write the domain and co-domain of _V_.
+
+The domain of _V_ is $\{-2, 0, 2\}$ and the co-domain of _V_ is $\{4, 6, 8\}$
+
+d. Draw an arrow diagram for _V_.
+
+5. Define a relation $S$ from $\mathbb{R}$ to $\mathbb{R}$ as follows: For every
+   $(x, y) \in \mathbb{R} \times \mathbb{R}$,
+
+$$ (x, y) \in S \quad \text{ means that } x \geq y $$
+
+**Solution**
+
+a.
+
+Is $(2, 1) \in S$?
+
+Yes, $(2) \geq (1)$.
+
+Is $(2, 2) \in S$?
+
+Yes, $(2) \geq (2)$.
+
+Is 2 _S_ 3?
+
+No, $(2) \cancel{\geq} (3)$.
+
+Is (-1) _S_ (-2)?
+
+Yes, $(-1) \geq (-2)$.
+
+b. Draw the graph of _S_ in the Cartesian plane.
+
+6. Define a relation $R$ from $\mathbb{R}$ to $\mathbb{R}$ as follows: For every
+   $(x, y) \in \mathbb{R} \times \mathbb{R}$,
+
+$$ (x, y) \in R \quad \text{ means that } y = x^2  $$
+
+**Solution**
+
+a.
+
+Is $(2, 4) \in R$?
+
+Yes, $(4) = (2)^2$.
+
+Is $(4, 2) \in R$?
+
+No, $(2) \neq (4)^2$.
+
+Is (-3) _R_ 9?
+
+Yes, $(9) = (-3)^2$.
+
+Is 9 _R_ (-3)?
+
+No, $(-3) \neq (9)^2$.
+
+b. Draw the graph of _R_ in the Cartesian plane.
+
+7. Let $A = \{4, 5, 6\}$ and $B = \{5, 6, 7\}$ and define relations $R$, $S$,
+   and $T$ from $A$ to $B$ as follows: For every $(x, y) \in A \times B$:
+
+$$ (x, y) \in R \quad \text{ means that } x \geq y $$
+
+$$ (x, y) \in S \quad \text{ means that } \frac{x - y}{2} \text{ is an integer.} $$
+
+$$ T = \{(4, 7), (6, 5), (6, 7)\} $$
+
+**Solution**
+
+a. Draw arrow diagrams for $R$, $S$, and $T$.
+
+b. Indicate whether any of the relations $R$, $S$, and $T$ are functions.
+
+$R$ is not a function because it satisfies neither property (1) nor property (2)
+of the definition. It fails property (1) because $(4, y) \not in R$, for any $y$
+in $B$. It fails property (2) because $(6, 5) \in R$ and $(6, 6) \in R$ and
+$5 \neq 6$.
+
+$S$ is not a function because $(5, 5) \in S$ and $(5, 7) \in S$ and $5 \neq 7$.
+So $S$ does not satisfy property (2) of the definition of a function.
+
+$T$ is not a function both because $(5, x) \notin T$ for any $x$ in $B$ and
+because $(6, 5) \in T$ and $(6, 7) \in T$ and $5 \neq 7$. So $T$ does not
+satisfy either property (1) or property (2) of the definition of a function.
+
+8. Let $A = \{2, 4\}$ and $B = \{1, 3, 5\}$ and define relations $U$, $V$, and
+   $W$ from $A$ to $B$ as follows: For every $(x, y) \in A \times B$:
+
+$$ (x, y) \in U \quad \text{ means that } y - x > 2 $$
+
+$$ (x, y) \in V \quad \text{ means that } y - 1 = \frac{x}{2} $$
+
+W = \{(2, 5), (4, 1), (2, 3)\}
+
+**Solution**
+
+a. Draw arrow diagrams for $U$, $V$, and $W$.
+
+b. Indicate whether any of the relations $U$, $V$, and $W$ are functions.
+
+$U$ is not a function by property (1), as $(4, y) \notin B$.
+
+$V$ is not a function by property (1) as $(2, y) \notin B$.
+
+$T$ is not a function by property (2) as $(2, 3) \in B$ and $(2, 5) \in B$ and
+$3 \neq 5$.
+
+9.
+
+**Solution**
+
+a. Find all functions from $\{0, 1\}$ to $\{1\}$.
+
+$$ \{(0, 1), (1, 1)\} $$
+
+b. Find two relations form $\{0, 1\}$ to $\{1\}$ that are not functions.
+
+$$ \{(0, 1)\}, \{(1, 1)\} $$
+
+10. Find four relations from $\{a, b\}$ to $\{x, y\}$ that are not functions
+    from $\{a, b\}$ to $\{x, y\}$.
+
+**Solution**
+
+$$ \{(a, x)\}, \{(a, y)\}, \{(b, x)\}, \{(b, y)\} $$
+
+11. Let $A = \{0, 1, 2\}$ and let $S$ be the set of all strings over $A$. Define
+    a relation $L$ from $S$ to $\mathbb{Z}^{\text{nonneg}}$ as follows: For
+    every string $s$ in $S$ and every nonnegative integer $n$,
+
+$$ (s, n) \in L \quad \text{ means that the length of } s \text{ is } n $$
+
+Then $L$ is a function because every string in $S$ has one and only one length.
+Find $L(0201)$ and $L(12)$.
+
+**Solution**
+
+$$ L(0201) = 4 $$
+
+$$ L(12) = 2 $$
+
+12. Let $A = \{x, y\}$ and let $S$ be the set of all strings over $A$. Define a
+    relation $C$ from $S$ to $S$ as follows: For all strings $s$ and $t$ in $S$,
+
+$$ (s, t) \in C \quad \text{ means that } t = ys $$
+
+Then $C$ is a function because every string in $S$ consists entirely of $x$'s
+and $y$'s and adding an additional $y$ on the left creates a single new string
+that consists of $x$'s and $y$'s and is, therefore, also in $S$. Find $C(x)$ and
+$C(yyxyx)$.
+
+**Solution**
+
+$$ C(x) = yx $$
+
+$$ C(yyxyx) = yyyxyx $$
+
+13. Let $A = \{-1, 0, 1\}$ and $B = \{t, u, v, w\}$. Define a function
+    $F: A \to B$ by the following arrow diagram:
+
+![image 1_3_2_6](./1_3_2_6.png)
+
+**Solution**
+
+a. Write the domain and co-domain of $F$.
+
+The domain of $F$ is $\{-1, 0, 1\}$, and the co-domain of $F$ is
+$\{t, u, v, w\}$.
+
+b. Find $F(-1)$, $F(0)$, and $F(1)$.
+
+$$ F(-1) = u $$
+
+$$ F(0) = w $$
+
+$$ F(1) = u $$
+
+14. Let $C = \{1, 2, 3, 4\}$ and $D = \{a, b, c, d\}$. Define a function
+    $G: C \to D$ by the following diagram:
+
+![image 1_3_2_7](./1_3_2_7.png)
+
+**Solution**
+
+a. Write the domain and co-domain of $G$.
+
+The domain of $G$ is $\{1, 2, 3, 4\}$, and the co-domain of $G$ is
+$\{a, b, c, d\}$.
+
+b. Find $G(1)$, $G(2)$, $G(3)$, and $G(4)$.
+
+$$ G(1) = c $$
+
+$$ G(2) = c $$
+
+$$ G(3) = c $$
+
+$$ G(4) = c $$
+
+15. Let $X = \{2, 4, 5\}$ and $Y = \{1, 2, 4, 6\}$. Which of the following arrow
+    diagrams determine functions from $X$ to $Y$?
+
+![image 1_3_2_8](./1_3_2_8.png)
+
+**Solution**
+
+Only (d) is a function.
+
+(a) is not a function by property (2), as $(2, 1) \in X \to Y$ and
+$(2, 6) \in X \to Y$, and $1 \neq 6$.
+
+(b) is not a function by property (1), as $(5, y) \notin X \to Y$.
+
+(c) is not a function by property (2), as $(4, 1) \in X \to Y$ and
+$(4, 2) \in X \to Y$ and $(1 \neq 2)$.
+
+(e) is not a function by property (1), as $(2, y) \notin X \to Y$.
+
+16. Let $f$ be the squaring function defined in Example 1.3.6. Find $f(-1)$,
+    $f(0)$, and $f\left(\dfrac{1}{2}\right)$.
+
+**Solution**
+
+$$ f(-1) = (-1)^2 = 1 $$
+
+$$ f(0) = (0)^2 = 0 $$
+
+$$ f\left(\frac{1}{2}\right) = \left(\frac{1}{2}\right)^2 = \frac{1}{4} $$
+
+17. Let $g$ be the successor function defined in Example 1.3.6. Find $g(-1000)$,
+    $g(0)$, and $g(999)$.
+
+**Solution**
+
+$$ g(-1000) = (-1000) + 1 = -999 $$
+
+$$ g(0) = (0) + 1 = 1 $$
+
+$$ g(999) = (999) + 1 = 1000 $$
+
+18. Let $h$ be the constant function defined in Example 1.3.6. Find
+    $h\left(-\dfrac{12}{5}\right)$, $h\left(\dfrac{0}{1}\right)$, and
+    $h\left(\dfrac{9}{17}\right)$.
+
+**Solution**
+
+$$ h\left(-\frac{12}{5}\right) = 2 $$
+
+$$ h\left(\frac{0}{1}\right) = 2 $$
+
+$$ h\left(\frac{9}{17}\right) = 2 $$
+
+19. Define functions $f$ and $g$ from $\mathbb{R}$ to $\mathbb{R}$ by the
+    following formulas: For every $x \in \mathbb{R}$,
+
+$$ f(x) = 2x \quad \text{ and } \quad g(x) = \frac{2x^3 + 2x}{x^2 + 1} $$
+
+Does $f = g$? Explain.
+
+**Solution**
+
+Yes, by factoring out $2x$ from the numerator of $g(x)$ we find they are the
+same function:
+
+$$ g(x) = \frac{2x^3 + 2x}{x^2 + 1} = \frac{2x(x^2 + 1)}{(x^2 + 1)} = 2x = f(x) $$
+
+This means that for every input $x$ to both $g$ and $f$, $f(x) = g(x)$, and so
+$f = g$ by definition of equality of functions.
+
+20. Define functions $H$ and $K$ from $\mathbb{R}$ to $\mathbb{R}$ by the
+    following formulas: For every $x \in \mathbb{R}$,
+
+$$ H(x) = (x - 2)^2 \quad \text{ and } \quad K(x) = (x - 1)(x - 3) + 1 $$
+
+Does $H = K$? Explain.
+
+**Solution**
+
+$$ H(x) = (x - 2)^2 = (x - 2)(x - 2) = x^2 - 4x + 4 $$
+
+$$ K(x) = (x - 1)(x - 3) + 1 = x^2 - 4x + 3 + 1 = x^2 - 4x + 4 $$
+
+Therefore $H(x) = K(x)$ by the definition of equality of functions.
