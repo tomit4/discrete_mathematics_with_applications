@@ -164,3 +164,88 @@ $$ p \wedge (p \vee q) \equiv p $$
 $$ \neg \mathbf{t} \equiv \mathbf{c} $$
 
 $$ \neg \mathbf{c} \equiv \mathbf{t} $$
+
+---
+
+Page 77
+
+**Definition**
+
+If $p$ and $q$ are statement variables, the **conditional** of $q$ by $p$ is "If
+$p$ then $q$" or "$p$ implies $q$" and is denoted $p \to q$. It is false when
+$p$ is true and $q$ is false; otherwise it is true. We call $p$ the
+**hypothesis** (or **antecedent**) if the conditional and $q$ the **conclusion**
+(or **consequent**).
+
+---
+
+Page 80
+
+**Definition**
+
+The **contrapositive** of a conditional statement of the form "If $p$ then $q"
+is
+
+$$ \text{If } \neg q \text{ then } \neg p $$
+
+Symbolically,
+
+The contrapositive of $p \to q$ is $\neg q \to \neg p$.
+
+---
+
+Page 81
+
+**Definition**
+
+Suppose a conditional statement of the form "If $p$ then $q$" is given.
+
+1. The **converse** is "If $q$ then $p$."
+
+2. The **inverse** is "If $\neg p$ then $\neg q$."
+
+Symbolically,
+
+The converse of $p \to q$ is $q \to p$,
+
+and
+
+The inverse of $p \to q$ is $\neg p \to \neg q$.
+
+---
+
+Page 82
+
+**Definition**
+
+If $p$ and $q$ are statements,
+
+$p$ **only if** $q$ means "if not $q$, then not $p$,"
+
+or, equivalently,
+
+"if $p$ then $q$."
+
+---
+
+Page 83
+
+**Definition**
+
+Given statement variables $p$ and $q$, the **biconditional of $p$ and $q$** is
+"$p$ if, and only if, $q$", and is denoted $p \leftrightarrow q$. It is true if
+both $p$ and $q$ have the same truth values and is false if $p$ and $q$ have
+opposite truth values. The words _if and only if_ are sometimes abbreviated
+**iff**.
+
+---
+
+Page 84
+
+**Definition**
+
+If $r$ and $s$ are statements:
+
+$r$ is a **sufficient condition** for $s$ means "if $r$ then $s$."
+
+$r$ is a **necessarily condition** for $s$ means "if not $r$, then not $s$."

@@ -41,3 +41,78 @@ true
 **Solution**
 
 false
+
+---
+
+**Test Yourself**
+
+Page 86
+
+1. An _if-then_ statement is false if, and only if, the hypothesis is _______
+   and the conclusion is _______.
+
+**Solution**
+
+true; false
+
+2. The negation of "if $p$ then $q$" is _______.
+
+**Solution**
+
+$p$ and not $q$.
+
+$$ p \wedge \neg q $$
+
+3. The converse of "if $p$ then $q$" is _______.
+
+**Solution**
+
+if $q$ then $p$
+
+$$ q \to p $$
+
+4. The contrapositive of "if $p$ then $q$" is _______.
+
+**Solution**
+
+if not $q$ then not $p$.
+
+$$ \neg q \to \neg p $$
+
+5. The inverse of "if $p$ then $q$" is _______.
+
+**Solution**
+
+if not $p$ then not $q$.
+
+$$ \neg p \to \neg q $$
+
+6. A conditional statement and its contrapositive are _______.
+
+**Solution**
+
+logically equivalent.
+
+7. A conditional statement and its converse are not _______.
+
+**Solution**
+
+logically equivalent.
+
+8. "$R$ is a sufficient condition for $S$" means "if _______ then _______."
+
+**Solution**
+
+$R$; $S$.
+
+9. "$R$ is a necessary condition for $S$" means "if _______ then _______."
+
+**Solution**
+
+$S$; $R$
+
+10. "$R$ only if $S$" means "if _______ then _______."
+
+**Solution**
+
+$R$; $S$

@@ -757,3 +757,274 @@ $$ p \wedge (\neg q \vee q) \equiv p \text{ by distributive law for } \wedge $$
 $$ p \wedge \mathbf{t} \equiv p \text{ by negation law for } \vee $$
 
 $$ p \equiv p \text{ by identity law for } \wedge $$
+
+---
+
+**Exercise Set 2.2**
+
+Page 86
+
+Rewrite the statements in 1-4 in if-then form.
+
+1. This loop will repeat exactly $n$ times if it does not contain a **stop** or
+   a **go to**.
+
+2. I am on time for work if I catch the 8:05 bus.
+
+3. Freeze or I'll shoot.
+
+4. Fix my ceiling or I won't pay my rent.
+
+Construct truth tables for the statements forms in 5-11.
+
+5. $\neg p \vee q \to \neg q$
+
+6. $(p \vee q) \vee (\neg p \wedge q) \to q$
+
+7. $p \wedge \neg q \to r$
+
+8. $\neg p \vee q \to r$
+
+9. $p \wedge \neg r \leftrightarrow q \vee r$
+
+10. $(p \to r) \leftrightarrow (q \to r)$
+
+11. $(p \to (q \to r)) \leftrightarrow ((p \wedge q) \to r)$
+
+12. Use the logical equivalence established in Example 2.2.3,
+    $p \vee q \to r \equiv (p \to r) \wedge (q \to r)$, to rewrite the following
+    statement. (Assume that $x$ represents a fixed real number.)
+
+If $x > 2 $ or $x < -2$, then $x^2 > 4$.
+
+13. Use truth tables to verify the following logical equivalences. Include a few
+    words of explanation with your answers.
+
+a. $p \to q \equiv \neg p \vee q$
+
+b. $\neg(p \to q) \equiv p \wedge \neg q$
+
+14.
+
+a. Show that the following statement forms are all logically equivalent:
+
+$p \to q \vee r$, $p \wedge \neg q \to r$, and $p \wedge \neg r \to q$
+
+b. Use the logical equivalences established in part (a) to rewrite the following
+sentence in two different ways. (Assume that $n$ represents a fixed integer.)
+
+If $n$ is prime, then $n$ is odd or $n$ is $2$.
+
+15. Determine whether the following statement forms are logically equivalent:
+
+$p \to (q \to r)$ and $(p \to q) \to r$
+
+In 16 and 17, write each of the two statements in symbolic form and determine
+whether they are logically equivalent. Include a truth table and a few words of
+explanation to show that you understand what it means for statements to be
+logically equivalent.
+
+16. If you paid full price, you didn't buy it at Crown Books. You didn't buy it
+    at Crown Books or you paid full price.
+
+17. If $2$ is a factor of $n$ and $3$ is a factor of $n$, then $6$ is a factor
+    of $n$. $2$ is not a factor of $n$ or $3$ is not a factor of $n$ or $6$ is a
+    factor of $n$.
+
+18. Write each of the following three statements in symbolic form and determine
+    which pairs are logically equivalent. Include truth tables and a few words
+    of explanation.
+
+If it walks like a duck and it talks like a duck, then it is a duck.
+
+Either it does not walk like a duck or it does not talk like a duck, or it is a
+duck.
+
+If it does not walk like a duck and it does not talk like a duck, then it is not
+a duck.
+
+19. True or false? The negation of "If Sue is Luiz's mother, then Ali is his
+    cousin" is "If Sue is Luiz's mother, then Ali is not his cousin."
+
+20. Write negations for each of the following statements. (Assume that all
+    variables represent fixed quantities or entities, as appropriate.)
+
+a. If $P$ is a square, then $P$ is a rectangle.
+
+b. If today is New Year's Eve, then tomorrow is January.
+
+c. If the decimal expansion of $r$ is terminating, then $r$ is rational.
+
+d. If $n$ is prime, then $n$ is odd or $n$ is $2$.
+
+e. If $x$ is nonnegative, then $x$ is positive or $x$ is $0$.
+
+f. If Tom is Ann's father, then Jim is her uncle and Sue is her aunt.
+
+g. If $n$ is divisible by $6$, then $n$ is divisible by $2$ and $n$ is divisible
+by $3$.
+
+21. Suppose that $p$ and $q$ are statements so that $p \to q$ is false. Find the
+    truth values of each of the following.
+
+a. $\neg p \to q$
+
+b. $p \vee q$
+
+c. $q \to p$
+
+22. Write contrapositives for the statements of exercise 20.
+
+23. Write the converse and inverse for each statement of exercise 20.
+
+Use truth tables to establish the truth of each statement in 24-27.
+
+24. A conditional statement is not logically equivalent to its converse.
+
+25. A conditional statement is not logically equivalent to its inverse.
+
+26. A conditional statement and its contrapositive are logically equivalent to
+    each other.
+
+27. The converse and inverse of a conditional statement are logically equivalent
+    to each other.
+
+28. "Do you mean that you think you can find out the answer to it?" said the
+    March Hare.
+
+"Exactly so," said Alice.
+
+"Then you should say what you mean," the March Hare went on.
+
+"I do," Alice hastily replied; "at least-at least I mean what I say-that's the
+same thing, you know."
+
+"Not the same thing a bit!" said the Hatter.
+
+"Why, you might just as well say that 'I see what I eat' is the same thing as 'I
+eat what I see'!"
+
+-from "A Mad Tea-Party" in _Alice in Wonderland_, by Lewis Carroll
+
+The Hatter is right. "I say what I mean" is not the same thing as "I mean what I
+say." Rewrite each of these two sentences in if-then form and explain the
+logical relation between them. (This exercise is referred to in the introduction
+to Chapter 4.)
+
+If statement forms $P$ and $Q$ are logically equivalent, then
+$P \leftrightarrow Q$ is a tautology. Conversely, if $P \leftrightarrow Q$ is a
+tautology, then $P$ and $Q$ are logically equivalent. Use $\leftrightarrow$ to
+convert each of the logical equivalences in 29-31 to a tautology. Then use a
+truth table to verify each tautology.
+
+29. $p \to (q \vee r) \equiv (p \wedge \neg q) \to r$
+
+30. $p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)$
+
+31. $p \to (q \to r) \equiv (p \wedge q) \to r$
+
+Rewrite each of the statements in 32 and 33 as a conjunction of two if-then
+statements.
+
+32. This quadratic equation has two distinct real roots if, and only if, its
+    discriminant is greater than zero.
+
+33. This integer is even if, and only if, it equals twice some integer.
+
+Rewrite the statements in 34 and 35 in if-then form in two ways, one of which is
+the contrapositive of the other. Use the formal definition of "only if."
+
+34. The Cubs will win the pennant only if they win tomorrow's game.
+
+35. Sam will be allowed on Signe's racing boat only if he is an expert sailor.
+
+36. Taking the long view on your education, you go to the Prestige Corporation
+    and ask what you should do in college to be hired when you graduate. The
+    personnel director replies that you will be hired _only if_ you major in
+    mathematics or computer science, get a B average or better, and take
+    accounting. You do, in fact, become a math major, get a B+ average, and take
+    accounting. You return to Prestige Corporation, make a formal application,
+    and are turned down. Did the personnel director lie to you?
+
+Some programming languages use statements of the form "$r$ unless $s$" to mean
+that as long as $s$ does not happen, then $r$ will happen. More formally:
+
+**Definition:**
+
+If $r$ and $s$ are statements,
+
+**$r$ unless $s$** means if $\neg s$ then $r$.
+
+In 37-39 rewrite the statements in if-then form.
+
+37. Payment will be made on fifth unless a new hearing is granted.
+
+38. Ann will go unless it rains.
+
+39. This door will not open unless a security code is entered.
+
+Rewrite the statements in 40 and 41 in if-then form.
+
+40. Catching the 8:05 bus is a sufficient condition for my being on time for
+    work.
+
+41. Having two $45\degree$ angles is a sufficient condition for this triangle to
+    be a right triangle.
+
+Use the contrapositive to rewrite the statements in 42 and 43 in if-then form in
+two ways.
+
+42. Being divisible by $3$ is a necessary condition for this number to be
+    divisible by $9$.
+
+43. Doing homework regularly is a necessary condition for Jim to pass the
+    course.
+
+Note that "a sufficient condition for $s$ is $r$" means $r$ is a sufficient
+condition for $s$ and that "a necessary condition for $s$ is $r$" means $r$ is a
+necessary condition for $s$. Rewrite the statements in 44 and 45 in if-then
+form.
+
+44. A sufficient condition for Jon's team to win the championship is that it win
+    the rest of its games.
+
+45. A necessary condition for this computer program to be correct is that it not
+    produce error messages during translation.
+
+46. "If compound X is boiling, then its temperature must be at least
+    $150\degree$C." Assuming that this statement is true, which of the following
+    must also be true?
+
+a. If the temperature of compound X is at least $150\degree$C, then compound X
+is boiling.
+
+b. IF the temperature of compound X is less than $150\degree$C, then compound X
+is not boiling.
+
+c. Compound X will boil only if its temperature is at least $150\degree$C.
+
+d. If compound X is not boiling, then its temperature is less than
+$150\degree$C.
+
+e. A necessary condition for compound X to boil is that its temperature be at
+least $150\degree$C.
+
+f. A sufficient condition for compound X to boil is that its temperature be at
+least $150\degree$C.
+
+In 47-50(a) use the logical equivalences $p \to q \equiv \neg p \vee q$ and
+$p \leftrightarrow q \equiv (\neg p \vee q) \weddge (\neg q \vee p)$ to rewrite
+the given statement forms without using the symbol $\to$ or $\leftrightarrow$,
+and (b) use the logical equivalence $p \vee q \equiv \neg(\neg p \wedge \neg q)$
+to rewrite each statement form using only $\wedge$ and $\neg$.
+
+47. $p \wedge \neg q \to r$
+
+48. $p \vee \neg q \to r \vee q$
+
+49. $(p \to r) \leftrightarrow (q \to r)$
+
+50. $(p \to (q \to r)) \leftrightarrow ((p \wedge q) \to r)$
+
+51. Given any statement form, is it possible to find a logically equivalent form
+    that uses only $\neg$ and $\wedge$? Justify your answer.
