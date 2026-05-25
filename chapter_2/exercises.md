@@ -769,27 +769,105 @@ Rewrite the statements in 1-4 in if-then form.
 1. This loop will repeat exactly $n$ times if it does not contain a **stop** or
    a **go to**.
 
+"If this lop does not contain a **stop** or a **go to**, then it will repeat
+exactly $N$ times."
+
 2. I am on time for work if I catch the 8:05 bus.
+
+"If I catch the 8:05 bus, then I am on time for work."
 
 3. Freeze or I'll shoot.
 
+"If you do not freeze, then I'll shoot."
+
 4. Fix my ceiling or I won't pay my rent.
+
+"If you do not fix my ceiling, then I won't pay my rent."
 
 Construct truth tables for the statements forms in 5-11.
 
 5. $\neg p \vee q \to \neg q$
 
+| $p$ | $q$ | $\neg p$ | $\neg q$ | $\neg p \vee q$ | $\neg p \vee q \to \neg q$ |
+| --- | --- | -------- | -------- | --------------- | -------------------------- |
+| T   | T   | F        | F        | T               | F                          |
+| T   | F   | F        | T        | F               | T                          |
+| F   | T   | T        | F        | T               | F                          |
+| F   | F   | T        | T        | T               | T                          |
+
 6. $(p \vee q) \vee (\neg p \wedge q) \to q$
+
+| $p$ | $q$ | $\neg p$ | $(p \vee q)$ | $(\neg p \wedge q)$ | $(p \vee q) \vee (\neg p \wedge q)$ | $(p \vee q) \vee (\neg p \wedge q) \to q$ |
+| --- | --- | -------- | ------------ | ------------------- | ----------------------------------- | ----------------------------------------- |
+| T   | T   | F        | T            | F                   | T                                   | T                                         |
+| T   | F   | F        | T            | F                   | T                                   | F                                         |
+| F   | T   | T        | T            | T                   | T                                   | T                                         |
+| F   | F   | T        | F            | F                   | F                                   | T                                         |
 
 7. $p \wedge \neg q \to r$
 
+| $p$ | $q$ | $r$ | $\neg q$ | $p \wedge \neg q$ | $p \wedge \neg q \to r$ |
+| --- | --- | --- | -------- | ----------------- | ----------------------- |
+| T   | T   | T   | F        | F                 | T                       |
+| T   | T   | F   | F        | F                 | T                       |
+| T   | F   | T   | T        | T                 | T                       |
+| T   | F   | F   | T        | T                 | F                       |
+| F   | T   | T   | F        | F                 | T                       |
+| F   | T   | F   | F        | F                 | T                       |
+| F   | F   | T   | T        | F                 | T                       |
+| F   | F   | F   | T        | F                 | T                       |
+
 8. $\neg p \vee q \to r$
+
+| $p$ | $q$ | $r$ | $\neg p$ | $\neg p \vee q$ | $\neg p \vee q \to r$ |
+| --- | --- | --- | -------- | --------------- | --------------------- |
+| T   | T   | T   | F        | T               | T                     |
+| T   | T   | F   | F        | T               | F                     |
+| T   | F   | T   | F        | F               | T                     |
+| T   | F   | F   | F        | F               | T                     |
+| F   | T   | T   | T        | T               | T                     |
+| F   | T   | F   | T        | T               | F                     |
+| F   | F   | T   | T        | T               | T                     |
+| F   | F   | F   | T        | T               | F                     |
 
 9. $p \wedge \neg r \leftrightarrow q \vee r$
 
+| $p$ | $q$ | $r$ | $\neg r$ | $p \wedge \neg r$ | $q \vee r$ | $p \wedge \neg r \leftrightarrow q \vee r$ |
+| --- | --- | --- | -------- | ----------------- | ---------- | ------------------------------------------ |
+| T   | T   | T   | F        | F                 | T          | F                                          |
+| T   | T   | F   | T        | T                 | T          | T                                          |
+| T   | F   | T   | F        | F                 | T          | F                                          |
+| T   | F   | F   | T        | T                 | F          | F                                          |
+| F   | T   | T   | F        | F                 | T          | F                                          |
+| F   | T   | F   | T        | F                 | T          | F                                          |
+| F   | F   | T   | F        | F                 | T          | F                                          |
+| F   | F   | F   | T        | F                 | F          | T                                          |
+
 10. $(p \to r) \leftrightarrow (q \to r)$
 
+| $p$ | $q$ | $r$ | $(p \to r)$ | $(q \to r)$ | $(p \to r) \leftrightarrow (q \to r)$ |
+| --- | --- | --- | ----------- | ----------- | ------------------------------------- |
+| T   | T   | T   | T           | T           | T                                     |
+| T   | T   | F   | F           | F           | T                                     |
+| T   | F   | T   | T           | T           | T                                     |
+| T   | F   | F   | F           | T           | F                                     |
+| F   | T   | T   | T           | T           | T                                     |
+| F   | T   | F   | T           | F           | F                                     |
+| F   | F   | T   | T           | T           | T                                     |
+| F   | F   | F   | T           | T           | T                                     |
+
 11. $(p \to (q \to r)) \leftrightarrow ((p \wedge q) \to r)$
+
+| $p$ | $q$ | $r$ | $(q \to r)$ | $(p \wedge q)$ | $(p \to (q \to r))$ | $((p \wedge q) \to r)$ | $(p \to (q \to r)) \leftrightarrow ((p \wedge q) \to r)$ |
+| --- | --- | --- | ----------- | -------------- | ------------------- | ---------------------- | -------------------------------------------------------- |
+| T   | T   | T   | T           | T              | T                   | T                      | T                                                        |
+| T   | T   | F   | F           | T              | F                   | F                      | T                                                        |
+| T   | F   | T   | T           | F              | T                   | T                      | T                                                        |
+| T   | F   | F   | T           | F              | T                   | T                      | T                                                        |
+| F   | T   | T   | T           | F              | T                   | T                      | T                                                        |
+| F   | T   | F   | F           | F              | T                   | T                      | T                                                        |
+| F   | F   | T   | T           | F              | T                   | T                      | T                                                        |
+| F   | F   | F   | T           | F              | T                   | T                      | T                                                        |
 
 12. Use the logical equivalence established in Example 2.2.3,
     $p \vee q \to r \equiv (p \to r) \wedge (q \to r)$, to rewrite the following
@@ -797,27 +875,78 @@ Construct truth tables for the statements forms in 5-11.
 
 If $x > 2 $ or $x < -2$, then $x^2 > 4$.
 
+If $x > 2$, then $x^2 > 4$ and if $x < -2$, then $x^2 > 4$.
+
 13. Use truth tables to verify the following logical equivalences. Include a few
     words of explanation with your answers.
 
 a. $p \to q \equiv \neg p \vee q$
 
+| $p$ | $q$ | $\neg p$ | $p \to q$ | $\neg p \vee q$ |
+| --- | --- | -------- | --------- | --------------- |
+| T   | T   | F        | T         | T               |
+| T   | F   | F        | F         | F               |
+| F   | T   | T        | T         | T               |
+| F   | F   | T        | T         | T               |
+
+Both columns for $p \to q$ and $\neg p \vee q$ have the same truth values, so
+they are logically equivalent.
+
 b. $\neg(p \to q) \equiv p \wedge \neg q$
+
+| $p$ | $q$ | $\neg q$ | $(p \to q)$ | $\neg(p \to q)$ | $p \wedge \neg q$ |
+| --- | --- | -------- | ----------- | --------------- | ----------------- |
+| T   | T   | F        | T           | F               | F                 |
+| T   | F   | T        | F           | T               | T                 |
+| F   | T   | F        | T           | F               | F                 |
+| F   | F   | T        | T           | F               | F                 |
+
+Both columns for $\neg(p \to q)$ and $p \wedge \neg q$ have the same truth
+values, so they are logically equivalent.
 
 14.
 
 a. Show that the following statement forms are all logically equivalent:
 
-$p \to q \vee r$, $p \wedge \neg q \to r$, and $p \wedge \neg r \to q$
+$p \to (q \vee r)$, $(p \wedge \neg q) \to r$, and $(p \wedge \neg r) \to q$
+
+| $p$ | $q$ | $r$ | $\neg q$ | $\neg r$ | $(q \vee r)$ | $(p \wedge \neg q)$ | $(p \wedge \neg r)$ | $p \to (q \vee r)$ | $(p \wedge \neg q) \to r$ | $(p \wedge \neg r) \to q$ |
+| --- | --- | --- | -------- | -------- | ------------ | ------------------- | ------------------- | ------------------ | ------------------------- | ------------------------- |
+| T   | T   | T   | F        | F        | T            | F                   | F                   | T                  | T                         | T                         |
+| T   | T   | F   | F        | T        | T            | F                   | T                   | T                  | T                         | T                         |
+| T   | F   | T   | T        | F        | T            | T                   | F                   | T                  | T                         | T                         |
+| T   | F   | F   | T        | T        | F            | T                   | T                   | F                  | F                         | F                         |
+| F   | T   | T   | F        | F        | T            | F                   | F                   | T                  | T                         | T                         |
+| F   | T   | F   | F        | T        | T            | F                   | F                   | T                  | T                         | T                         |
+| F   | F   | T   | T        | F        | T            | F                   | F                   | T                  | T                         | T                         |
+| F   | F   | F   | T        | T        | F            | F                   | F                   | T                  | T                         | T                         |
 
 b. Use the logical equivalences established in part (a) to rewrite the following
 sentence in two different ways. (Assume that $n$ represents a fixed integer.)
 
 If $n$ is prime, then $n$ is odd or $n$ is $2$.
 
+"If $n$ is prime and $n$ is not odd then $n$ is $2$"
+
+"If $n$ is prime and $n$ is not $2$, then $n$ is odd."
+
 15. Determine whether the following statement forms are logically equivalent:
 
 $p \to (q \to r)$ and $(p \to q) \to r$
+
+| $p$ | $q$ | $r$ | $(q \to r)$ | $(p \to q)$ | $p \to (q \to r)$ | $(p \to q) \to r$ |
+| --- | --- | --- | ----------- | ----------- | ----------------- | ----------------- |
+| T   | T   | T   | T           | T           | T                 | T                 |
+| T   | T   | F   | F           | F           | F                 | T                 |
+| T   | F   | T   | T           | T           | T                 | T                 |
+| T   | F   | F   | T           | F           | T                 | T                 |
+| F   | T   | T   | T           | T           | T                 | T                 |
+| F   | T   | F   | F           | T           | T                 | F                 |
+| F   | F   | T   | T           | T           | T                 | T                 |
+| F   | F   | F   | T           | T           | T                 | F                 |
+
+No, they are not equivalent, $p \to (q \to r) \cancel{\equiv} (p \to q) \to r$
+as their truth values are not the same.
 
 In 16 and 17, write each of the two statements in symbolic form and determine
 whether they are logically equivalent. Include a truth table and a few words of
@@ -827,67 +956,293 @@ logically equivalent.
 16. If you paid full price, you didn't buy it at Crown Books. You didn't buy it
     at Crown Books or you paid full price.
 
+$p$ is "You paid full price"
+
+$q$ is "You bought it at Crown Books"
+
+$$ p \to \neg q \text{ and } \neg q \vee p $$
+
+| $p$ | $q$ | $\neg q$ | $p \to \neg q$ | $\neg q \vee p$ |
+| --- | --- | -------- | -------------- | --------------- |
+| T   | T   | F        | F              | T               |
+| T   | F   | T        | T              | T               |
+| F   | T   | F        | T              | F               |
+| F   | F   | T        | T              | T               |
+
+No, these two statements are not logically equivalent as their truth tables do
+not have the same truth values.
+
+$$ p \to \neg q \cancel{\equiv} \neg q \vee p $$
+
+One could not buy it at Crown Books, and not paid full price, and also one could
+have paid full price and have also bought it at Crown books.
+
 17. If $2$ is a factor of $n$ and $3$ is a factor of $n$, then $6$ is a factor
     of $n$. $2$ is not a factor of $n$ or $3$ is not a factor of $n$ or $6$ is a
     factor of $n$.
+
+$p$ is "$2$ is a factor of $n$"
+
+$q$ is "$3$ is a factor of $n$"
+
+$r$ is "$6$ is a factor of $n$"
+
+$$ p \wedge q \to r\text{ and } \neg p \vee \neg q \vee r $$
+
+| $p$ | $q$ | $r$ | $\neg p$ | $\neg q$ | $p \wedge q$ | $\neg p \vee \neg q$ | $p \wedge q \to r$ | $\neg p \vee \neg q \vee r$ |
+| --- | --- | --- | -------- | -------- | ------------ | -------------------- | ------------------ | --------------------------- |
+| T   | T   | T   | F        | F        | T            | F                    | T                  | T                           |
+| T   | T   | F   | F        | F        | T            | F                    | F                  | F                           |
+| T   | F   | T   | F        | T        | F            | T                    | T                  | T                           |
+| T   | F   | F   | F        | T        | F            | T                    | T                  | T                           |
+| F   | T   | T   | T        | F        | F            | T                    | T                  | T                           |
+| F   | T   | F   | T        | F        | F            | T                    | T                  | T                           |
+| F   | F   | T   | T        | T        | F            | T                    | T                  | T                           |
+| F   | F   | F   | T        | T        | F            | T                    | T                  | T                           |
+
+Yes, they are equivalent, as their truth tables show the same truth values.
+
+$$ p \wedge q \to r \equiv \neg p \vee \neg q \vee r $$
 
 18. Write each of the following three statements in symbolic form and determine
     which pairs are logically equivalent. Include truth tables and a few words
     of explanation.
 
+$p$ = "It walks like a duck"
+
+$q$ = "It talks like a duck"
+
+$r$ = "It is a duck"
+
 If it walks like a duck and it talks like a duck, then it is a duck.
+
+$$ p \wedge q \to r $$
 
 Either it does not walk like a duck or it does not talk like a duck, or it is a
 duck.
 
+$$ p \vee \neg q \vee r $$
+
 If it does not walk like a duck and it does not talk like a duck, then it is not
 a duck.
 
+$$ \neg p \wedge \neg q \to \neg r $$
+
+| $p$ | $q$ | $r$ | $\neg p$ | $\neg q$ | $\neg r$ | $p \wedge q$ | $p \vee \neg q$ | $\neg p \wedge \neg q$ | $p \wedge q \to r$ | $p \vee \neg q \vee r$ | $\neg p \wedge \neg q \to \neg r$ |
+| --- | --- | --- | -------- | -------- | -------- | ------------ | --------------- | ---------------------- | ------------------ | ---------------------- | --------------------------------- |
+| T   | T   | T   | F        | F        | F        | T            | T               | F                      | T                  | T                      | T                                 |
+| T   | T   | F   | F        | F        | T        | T            | T               | F                      | F                  | T                      | T                                 |
+| T   | F   | T   | F        | T        | F        | F            | T               | F                      | T                  | T                      | T                                 |
+| T   | F   | F   | F        | T        | T        | F            | T               | F                      | T                  | T                      | T                                 |
+| F   | T   | T   | T        | F        | F        | F            | F               | F                      | T                  | T                      | T                                 |
+| F   | T   | F   | T        | F        | T        | F            | F               | F                      | T                  | F                      | T                                 |
+| F   | F   | T   | T        | T        | F        | F            | T               | T                      | T                  | T                      | F                                 |
+| F   | F   | F   | T        | T        | T        | F            | T               | T                      | T                  | T                      | T                                 |
+
+No, none of these statements are equivalent, as you can see in their
+corresponding truth table's truth values.
+
+$$ p \wedge q \to r \cancel{\equiv} p \vee \neg q \vee r \cancel{\equiv} \neg p \wedge \neg q \to \neg r $$
+
 19. True or false? The negation of "If Sue is Luiz's mother, then Ali is his
     cousin" is "If Sue is Luiz's mother, then Ali is not his cousin."
+
+$p$ = "Sue is Luiz's mother"
+
+$q$ = "Ali is his cousin"
+
+Firs statement is:
+
+$$ p \to q $$
+
+Negation is:
+
+$$ p \wedge \neg q $$
+
+"Sue is Luiz's mother and Ali is not his cousin."
+
+Second statement is:
+
+$$ p \to \neg q $$
+
+Negation is:
+
+$$ p \to q $$
+
+"If Sue is Luiz's mother, then Ali is his cousin."
+
+So no, they are not equivalent:
+
+$$ p \wedge \neg q \cancel{\equiv} p \wedge q $$
 
 20. Write negations for each of the following statements. (Assume that all
     variables represent fixed quantities or entities, as appropriate.)
 
 a. If $P$ is a square, then $P$ is a rectangle.
 
+$$ p \to q $$
+
+Negation:
+
+$$ p \wedge \neg q $$
+
+"P is a square and P is not a rectangle."
+
 b. If today is New Year's Eve, then tomorrow is January.
+
+$$ p \to q $$
+
+$$ p \wedge \neg q $$
+
+"Today is New Year's Eve and tomorrow is not January."
 
 c. If the decimal expansion of $r$ is terminating, then $r$ is rational.
 
+"The decimal expansion of $r$ is terminating and $r$ is not rational."
+
 d. If $n$ is prime, then $n$ is odd or $n$ is $2$.
+
+$n$ is prime and $n$ is not odd and $n$ is not $2$.
 
 e. If $x$ is nonnegative, then $x$ is positive or $x$ is $0$.
 
+$x$ is nonnegative and $x$ is both negative and not $0$.
+
 f. If Tom is Ann's father, then Jim is her uncle and Sue is her aunt.
+
+Tom is Ann's father and either Jim is not her uncle or Sue is not her aunt.
 
 g. If $n$ is divisible by $6$, then $n$ is divisible by $2$ and $n$ is divisible
 by $3$.
 
+$n$ is divisible by $6$ and either $n$ is not divisible by $2$ or $n$ is not
+divisible by $3$.
+
 21. Suppose that $p$ and $q$ are statements so that $p \to q$ is false. Find the
     truth values of each of the following.
 
+| $p$ | $q$ | $p \to q$ |
+| --- | --- | --------- |
+| T   | T   | T         |
+| T   | F   | F         |
+| F   | T   | T         |
+| F   | F   | T         |
+
+This means that $p = T$ and $q = F$.
+
 a. $\neg p \to q$
+
+$$ F \to F = T $$
 
 b. $p \vee q$
 
+$$ T \vee F = T $$
+
 c. $q \to p$
+
+$$ F \to T = T $$
 
 22. Write contrapositives for the statements of exercise 20.
 
+a. $\neg p \to q$
+
+$$ \neg q \to p $$
+
+b. $p \vee q$
+
+$$ \neg q \to p $$
+
+c. $q \to p$
+
+$$ \neg p \to \neg q $$
+
 23. Write the converse and inverse for each statement of exercise 20.
+
+a. $\neg p \to q$
+
+Converse:
+
+$$ q \to \neg p $$
+
+Inverse:
+
+$$ p \to \neg q $$
+
+b. $p \vee q$
+
+Because the contrapositive is equivalent, we can take:
+
+$$ \neg q \to p $$
+
+Converse:
+
+$$ p \to \neg q $$
+
+Inverse:
+
+$$ q \to \neg p $$
+
+c. $q \to p$
+
+Converse:
+
+$$ p \to q $$
+
+Inverse:
+
+$$ \neg q \to \neg p $$
 
 Use truth tables to establish the truth of each statement in 24-27.
 
 24. A conditional statement is not logically equivalent to its converse.
 
+| $p$ | $q$ | $p \to q$ | $q \to p$ |
+| --- | --- | --------- | --------- |
+| T   | T   | T         | T         |
+| T   | F   | F         | T         |
+| F   | T   | T         | F         |
+| F   | F   | T         | T         |
+
+As you can see $p \to q \cancel{\equiv} q \to p$, so a conditional statement is
+not equivalent to its converse.
+
 25. A conditional statement is not logically equivalent to its inverse.
+
+| $p$ | $q$ | $\neg p$ | $\neg q$ | $p \to q$ | $\neg p \to \neg q$ |
+| --- | --- | -------- | -------- | --------- | ------------------- |
+| T   | T   | F        | F        | T         | T                   |
+| T   | F   | F        | T        | F         | T                   |
+| F   | T   | T        | F        | T         | F                   |
+| F   | F   | T        | T        | T         | T                   |
+
+As you can see $p \to q \cancel{\equiv} \neg p \to \neg q$, so a conditional
+statement is not equivalent to its inverse.
 
 26. A conditional statement and its contrapositive are logically equivalent to
     each other.
 
+| $p$ | $q$ | $\neg q$ | $\neg p$ | $p \to q$ | $\neg q \to \neg p$ |
+| --- | --- | -------- | -------- | --------- | ------------------- |
+| T   | T   | F        | F        | T         | T                   |
+| T   | F   | T        | F        | F         | F                   |
+| F   | T   | F        | T        | T         | T                   |
+| F   | F   | T        | T        | T         | T                   |
+
+As you can see $p \to q \equiv \neg q \to \neg p$, so a conditional statement is
+logically equivalent to it's contrapositive.
+
 27. The converse and inverse of a conditional statement are logically equivalent
     to each other.
+
+| $p$ | $q$ | $p \to q$ | $q \to p$ | $\neg p \to \neg q$ |
+| --- | --- | --------- | --------- | ------------------- |
+| T   | T   | T         | T         | T                   |
+| T   | F   | F         | T         | T                   |
+| F   | T   | T         | F         | F                   |
+| F   | F   | T         | T         | T                   |
+
+As you can see, $q \to p \equiv \neg p \to \neg q$, so the converse and the
+inverse of a conditional statement are logically equivalent to each other.
 
 28. "Do you mean that you think you can find out the answer to it?" said the
     March Hare.
@@ -911,6 +1266,21 @@ say." Rewrite each of these two sentences in if-then form and explain the
 logical relation between them. (This exercise is referred to in the introduction
 to Chapter 4.)
 
+$$ p \to q $$
+
+$$ q \to p $$
+
+| $p$ | $q$ | $p \to q$ | $q \to p$ |
+| --- | --- | --------- | --------- |
+| T   | T   | T         | T         |
+| T   | F   | F         | T         |
+| F   | T   | T         | F         |
+| F   | F   | T         | T         |
+
+You can also rewrite this as "If I say something, I mean it." and "If I mean it,
+I say something." Even from a linguistic standpoint these are not the same
+statements. One can "mean it" (be sincere) and never say something, for example.
+
 If statement forms $P$ and $Q$ are logically equivalent, then
 $P \leftrightarrow Q$ is a tautology. Conversely, if $P \leftrightarrow Q$ is a
 tautology, then $P$ and $Q$ are logically equivalent. Use $\leftrightarrow$ to
@@ -919,9 +1289,48 @@ truth table to verify each tautology.
 
 29. $p \to (q \vee r) \equiv (p \wedge \neg q) \to r$
 
+$$ (p \to (q \vee r)) \leftrightarrow (p \wedge \neg q \to r) $$
+
+| $p$ | $q$ | $r$ | $\neg q$ | $(q \vee r)$ | $(p \wedge \neg q)$ | $p \to (q \vee r)$ | $(p \wedge \neg q) \to r$ |
+| --- | --- | --- | -------- | ------------ | ------------------- | ------------------ | ------------------------- |
+| T   | T   | T   | F        | T            | F                   | T                  | T                         |
+| T   | T   | F   | F        | T            | F                   | T                  | T                         |
+| T   | F   | T   | T        | T            | T                   | T                  | T                         |
+| T   | F   | F   | T        | F            | T                   | F                  | F                         |
+| F   | T   | T   | F        | T            | F                   | T                  | T                         |
+| F   | T   | F   | F        | T            | F                   | T                  | T                         |
+| F   | F   | T   | T        | T            | F                   | T                  | T                         |
+| F   | F   | F   | T        | F            | F                   | T                  | T                         |
+
 30. $p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)$
 
+$$ (p \wedge (q \vee r)) \leftrightarrow ((p \wedge q) \vee (p \wedge r)) $$
+
+| $p$ | $q$ | $r$ | $(q \vee r)$ | $(p \wedge q)$ | $(p \wedge r)$ | $(p \wedge (q \vee r))$ | $((p \wedge q) \vee (p \wedge r) \)$ |
+| --- | --- | --- | ------------ | -------------- | -------------- | ----------------------- | ------------------------------------ |
+| T   | T   | T   | T            | T              | T              | T                       | T                                    |
+| T   | T   | F   | T            | T              | F              | T                       | T                                    |
+| T   | F   | T   | T            | F              | T              | T                       | T                                    |
+| T   | F   | F   | F            | F              | F              | F                       | F                                    |
+| F   | T   | T   | T            | F              | F              | F                       | F                                    |
+| F   | T   | F   | T            | F              | F              | F                       | F                                    |
+| F   | F   | T   | T            | F              | F              | F                       | F                                    |
+| F   | F   | F   | F            | F              | F              | F                       | F                                    |
+
 31. $p \to (q \to r) \equiv (p \wedge q) \to r$
+
+$$ p \to (q \to r) \leftrightarrow (p \wedge q) \to r $$
+
+| $p$ | $q$ | $r$ | $(q \to r)$ | $(p \wedge q)$ | $p \to (q \to r)$ | $(p \wedge q) \to r$ |
+| --- | --- | --- | ----------- | -------------- | ----------------- | -------------------- |
+| T   | T   | T   | T           | T              | T                 | T                    |
+| T   | T   | F   | F           | T              | F                 | F                    |
+| T   | F   | T   | T           | F              | T                 | T                    |
+| T   | F   | F   | T           | F              | T                 | T                    |
+| F   | T   | T   | T           | F              | T                 | T                    |
+| F   | T   | F   | F           | F              | T                 | T                    |
+| F   | F   | T   | T           | F              | T                 | T                    |
+| F   | F   | F   | T           | F              | T                 | T                    |
 
 Rewrite each of the statements in 32 and 33 as a conjunction of two if-then
 statements.
@@ -929,14 +1338,38 @@ statements.
 32. This quadratic equation has two distinct real roots if, and only if, its
     discriminant is greater than zero.
 
+"If this quadratic equation has two distinct real roots, then it's discriminant
+is greater than zero and if this quadratic equation's discriminant is greater
+than zero, then it has two distinct real roots."
+
 33. This integer is even if, and only if, it equals twice some integer.
+
+"If this integer is even, then it equals twice some integer and if this integer
+is equal to twice some integer, then it is even."
 
 Rewrite the statements in 34 and 35 in if-then form in two ways, one of which is
 the contrapositive of the other. Use the formal definition of "only if."
 
 34. The Cubs will win the pennant only if they win tomorrow's game.
 
+Contrapositive:
+
+"If the Cubs have not won tomorrow's game, then they will not win the pennant."
+
+Only-if:
+
+"If the Cub's won the pennant, then they will have won tomorrow's game."
+
 35. Sam will be allowed on Signe's racing boat only if he is an expert sailor.
+
+Contrapositive:
+
+"If Sam is not an expert sailor, then he will not be allowed on Sign'es racing
+boat."
+
+Only-if:
+
+"If Sam was allowed on Signe's racing boat, then he was an expert sailor."
 
 36. Taking the long view on your education, you go to the Prestige Corporation
     and ask what you should do in college to be hired when you graduate. The
@@ -945,6 +1378,12 @@ the contrapositive of the other. Use the formal definition of "only if."
     accounting. You do, in fact, become a math major, get a B+ average, and take
     accounting. You return to Prestige Corporation, make a formal application,
     and are turned down. Did the personnel director lie to you?
+
+No, because "only if" means that the conditions have already been met, not
+conditions that have yet to be met. Because you "become a math major", "get a B+
+average", and "take accounting", you have not fulfilled the director's
+requirements, which is that "You _have_ majored in mathematics or computer
+science, you have a B average or better, and you have taken accounting."
 
 Some programming languages use statements of the form "$r$ unless $s$" to mean
 that as long as $s$ does not happen, then $r$ will happen. More formally:
@@ -959,17 +1398,27 @@ In 37-39 rewrite the statements in if-then form.
 
 37. Payment will be made on fifth unless a new hearing is granted.
 
+"If a new hearing is not granted, then payment will be made on the fifth."
+
 38. Ann will go unless it rains.
 
+"If it does not rain, then Ann will go."
+
 39. This door will not open unless a security code is entered.
+
+"If a security code is not entered, then this door will not open."
 
 Rewrite the statements in 40 and 41 in if-then form.
 
 40. Catching the 8:05 bus is a sufficient condition for my being on time for
     work.
 
+"If I catch the 8:05 bus, then I am on time for work."
+
 41. Having two $45\degree$ angles is a sufficient condition for this triangle to
     be a right triangle.
+
+"If I have two $45\degree$ angles, then this triangle is a right triangle."
 
 Use the contrapositive to rewrite the statements in 42 and 43 in if-then form in
 two ways.
@@ -977,8 +1426,25 @@ two ways.
 42. Being divisible by $3$ is a necessary condition for this number to be
     divisible by $9$.
 
+The statement is:
+
+"If this number is not divisible by $3$, then this number is not divisible by
+$9$."
+
+The contrapositive is:
+
+"If this number is divisible by $9$, then this number is divisible by $3$."
+
 43. Doing homework regularly is a necessary condition for Jim to pass the
     course.
+
+The statement is:
+
+"If Jim does not do homework regularly, then Jim does not pass the course."
+
+The contrapositive is:
+
+"If Jim passed the course, then Jim did the homework."
 
 Note that "a sufficient condition for $s$ is $r$" means $r$ is a sufficient
 condition for $s$ and that "a necessary condition for $s$ is $r$" means $r$ is a
@@ -988,43 +1454,163 @@ form.
 44. A sufficient condition for Jon's team to win the championship is that it win
     the rest of its games.
 
+"If Jon's team wins the rest of its games, then it will win the championship."
+
 45. A necessary condition for this computer program to be correct is that it not
     produce error messages during translation.
+
+"If this computer program produces error messages during translation, then this
+computer program is not correct."
 
 46. "If compound X is boiling, then its temperature must be at least
     $150\degree$C." Assuming that this statement is true, which of the following
     must also be true?
 
+$p$ = "Compound X is boiling"
+
+$q$ = "Compound X's temperature is at least $150\degree$C"
+
 a. If the temperature of compound X is at least $150\degree$C, then compound X
 is boiling.
 
-b. IF the temperature of compound X is less than $150\degree$C, then compound X
+$$ q \to p $$
+
+This is not equivalent to $p \to q$, so this is not necessarily true.
+
+b. If the temperature of compound X is less than $150\degree$C, then compound X
 is not boiling.
 
+$$ \neg q \to \neg p $$
+
+This is the contrapositive statement, and is logically equivalent to the
+original statement. This is therefore true.
+
 c. Compound X will boil only if its temperature is at least $150\degree$C.
+
+"If Compound X is boiling, then its temperature is at least $150\degree$C."
+
+This is the same statement as the original $p \to q$, so this is true.
 
 d. If compound X is not boiling, then its temperature is less than
 $150\degree$C.
 
+$$ \neg p \to q $$
+
+This is not related to the original statement be it by contrapositive, converse,
+inverse, only-if, etc. So this is not true.
+
 e. A necessary condition for compound X to boil is that its temperature be at
 least $150\degree$C.
+
+"If Compound X is not at a boil, then its temperature is not at least
+$150\degree$C."
+
+$$ \neg p \to \neg c $$
+
+This is the inverse of the statement, and therefore not equivalent to the
+original statement.
 
 f. A sufficient condition for compound X to boil is that its temperature be at
 least $150\degree$C.
 
+"If Compound X is at a boil, then its temperature is at least $150\degree$C"
+
+This statement is equivalent to the original, and so therefore is true.
+
 In 47-50(a) use the logical equivalences $p \to q \equiv \neg p \vee q$ and
-$p \leftrightarrow q \equiv (\neg p \vee q) \weddge (\neg q \vee p)$ to rewrite
+$p \leftrightarrow q \equiv (\neg p \vee q) \wedge (\neg q \vee p)$ to rewrite
 the given statement forms without using the symbol $\to$ or $\leftrightarrow$,
 and (b) use the logical equivalence $p \vee q \equiv \neg(\neg p \wedge \neg q)$
 to rewrite each statement form using only $\wedge$ and $\neg$.
 
+a.
+
+$$ p \to q \equiv \neg p \vee q $$
+
+$$ p \leftrightarrow q \equiv (\neg p \vee q) \wedge (\neg q \vee p) $$
+
+Avoid $\to$ and $\leftrightarrow$.
+
+b.
+
+$$ p \vee q \equiv \neg(\neg p \wedge \neg q) $$
+
+Only use $\wedge$ and $\neg$.
+
 47. $p \wedge \neg q \to r$
+
+a.
+
+$$ (p \wedge \neg q) \to r \equiv \neg(p \wedge \neg q) \vee r $$
+
+b.
+
+$$ (p \wedge \neg q) \to r \equiv \neg(p \wedge \neg q) \vee r $$
+
+$$ \neg\left[(p \wedge \neg q) \wedge \neg r \right] $$
 
 48. $p \vee \neg q \to r \vee q$
 
+a.
+
+$$ p \vee \neg q \to r \vee q \equiv \neg(p \vee \neg q) \vee (r \vee q) $$
+
+b.
+
+$$ \neg(p \vee \neg q) \vee (r \vee q) $$
+
+$$ \neg\left[\neg\neg(p \vee \neg q) \wedge \neg(r \vee q)\right] $$
+
+$$ \neg\left[(p \vee \neg q) \wedge \neg(r \vee q)\right] $$
+
+$$ \neg\left[(p \vee \neg q) \wedge (\neg r \wedge \neg q)\right] $$
+
+$$ \neg\left[(\neg p \wedge  q) \wedge (\neg r \wedge \neg q)\right] $$
+
 49. $(p \to r) \leftrightarrow (q \to r)$
+
+a.
+
+$$ (\neg(p \to r) \vee (q \to r)) \wedge (\neg(q \to r) \vee (p \to r)) $$
+
+b.
+
+$$ \neg(\neg\neg(p \to r) \wedge \neg(q \to r)) \wedge \neg(\neg\neg(q \to r) \wedge \neg(p \to r)) $$
+
+$$ \neg((p \to r) \wedge \neg(q \to r)) \wedge \neg((q \to r) \wedge \neg(p \to r)) $$
 
 50. $(p \to (q \to r)) \leftrightarrow ((p \wedge q) \to r)$
 
+a.
+
+$$ (\neg(p \to (q \to r)) \vee ((p \wedge q) \to r)) \wedge (\neg((p \wedge q) \to r) \vee (p \to (q \to r))) $$
+
+$$ (\neg(\neg p \vee (q \to r)) \vee (\neg(p \wedge q) \vee r)) \wedge (\neg(\neg(p \wedge q) \vee r) \vee (\neg p \vee (q \to r))) $$
+
+$$ (\neg(\neg p \vee (\neg q \vee r)) \vee (\neg(p \wedge q) \vee r)) \wedge (\neg(\neg(p \wedge q) \vee r) \vee (\neg p \vee (\neg q \vee r))) $$
+
+b.
+
+Stolen from Gemini (everything else done by hand so far, lol):
+
+$$ \neg\left(\neg(p \wedge q \wedge \neg r) \wedge (p \wedge q \wedge \neg r)\right) \wedge \neg\left(\neg(p \wedge q \wedge \neg r) \wedge (p \wedge q \wedge \neg r)\right) $$
+
 51. Given any statement form, is it possible to find a logically equivalent form
     that uses only $\neg$ and $\wedge$? Justify your answer.
+
+Yes, we can always convert any statement form into a logically equivalent form
+using other equivalency identities and De Morgan's laws. Consider:
+
+$$ p \to q \equiv \neg p \vee q $$
+
+Using De Morgan's Law we can then:
+
+$$ p \to q \equiv \neg(\neg(\neg p) \wedge \neg q) $$
+
+$$ p \to q \equiv \neg(p \wedge \neg q) $$
+
+Now let's consider:
+
+$$ p \leftrightarrow q \equiv (p \to q) \wedge (q \to p) $$
+
+$$ p \leftrightarrow q \equiv \neg(p \wedge \neg q) \wedge \neg(q \wedge \neg p) $$
