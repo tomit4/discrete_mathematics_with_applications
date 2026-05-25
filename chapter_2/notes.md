@@ -91,3 +91,76 @@ A **contradiction** is a statement form that is always false regardless of the
 truth values of the individual statements substituted for its statement
 variables. A statement whose form is a contradiction is a **contradictory
 statement**.
+
+---
+
+Page 72
+
+**Theorem 2.1.1 Logical Equivalences**
+
+Given any statement variables $p$, $q$, and $r$, a tautology $\mathbf{t}$ and a
+contradiction $\mathbf{c}$, the following logical equivalences hold.
+
+1. _Communitative laws:_
+
+$$ p \wedge q \equiv q \wedge p $$
+
+$$ p \vee q \equiv q \vee p $$
+
+2. _Associative laws:_
+
+$$ (p \wedge q) \wedge r \equiv p \wedge (q \wedge r) $$
+
+$$ (p \vee q) \vee r \equiv p \vee (q \vee r) $$
+
+3. _Distributive laws:_
+
+$$ p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r) $$
+
+$$ p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r) $$
+
+4. _Identity laws:_
+
+$$ p \wedge \mathbf{t} \equiv p $$
+
+$$ p \vee \mathbf{c} \equiv p $$
+
+5. _Negation laws:_
+
+$$ p \vee \neg p \equiv \mathbf{t} $$
+
+$$ p \wedge \neg p \equiv \mathbf{c} $$
+
+6. _Double negative law:_
+
+$$ \neg(\neg p) \equiv p $$
+
+6. _Idempotent laws:_
+
+$$ p \wedge p \equiv p $$
+
+$$ p \vee p \equiv p $$
+
+8. _Universal bound laws:_Double
+
+$$ p \vee \mathbf{t} \equiv \mathbf{t} $$
+
+$$ p \wedge \mathbf{c} \equiv \mathbf{c} $$
+
+9. _De Morgan's laws:_
+
+$$ \neg (p \wedge q) \equiv \neg p \vee \neg q $$
+
+$$ \neg (p \vee q) \equiv \neg p \wedge \neg q $$
+
+10 _Absorption laws:_
+
+$$ p \vee (p \wedge q) \equiv p $$
+
+$$ p \wedge (p \vee q) \equiv p $$
+
+11. _Negations of $\mathbf{t}$ and $\mathbf{c}$:_
+
+$$ \neg \mathbf{t} \equiv \mathbf{c} $$
+
+$$ \neg \mathbf{c} \equiv \mathbf{t} $$
