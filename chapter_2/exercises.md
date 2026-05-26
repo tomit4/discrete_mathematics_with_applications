@@ -1614,3 +1614,453 @@ Now let's consider:
 $$ p \leftrightarrow q \equiv (p \to q) \wedge (q \to p) $$
 
 $$ p \leftrightarrow q \equiv \neg(p \wedge \neg q) \wedge \neg(q \wedge \neg p) $$
+
+---
+
+**Exercise Set 2.3**
+
+Page 99
+
+Use modus ponens or modus tollens to fill in the blanks in the arguments of 1-5
+so as to produce valid inferences.
+
+1.
+
+If $\sqrt{2}$ is rational, then $\sqrt{2} = \dfrac{a}{b}$ for some integers $a$
+and $b$.
+
+It is not true that $\sqrt{2} = \dfrac{a}{b}$ for some integers $a$ and $b$.
+
+$\therefore$ ______.
+
+2.
+
+If $1 - 0.99999 \dots$ is less than every positive real number, then it equals
+zero.
+
+______.
+
+$\therefore$ The number $1 - 0.99999 \dots$ equals zero.
+
+3.
+
+If logic is easy, then I am a monkey's uncle.
+
+I am not a monkey's uncle.
+
+$\therefore$ ______.
+
+4.
+
+If this graph can be colored with three colors, then it can be colored with four
+colors.
+
+This graph cannot be colored with four colors.
+
+$\therefore$ ______.
+
+5.
+
+If they were unsure about the address, then they would have telephoned.
+
+______.
+
+$\therefore$ They were sure of the address.
+
+Use truth tables to determine whether the argument forms in 6-11 are valid.
+Indicate which columns represent the premises and which represent the
+conclusion, and include a sentence explaining how the truth table supports your
+answer. Your explanation should show that you understand what it means for a
+form of argument to be valid or invalid.
+
+6.
+
+$$
+p \to q \\
+q \to p \\
+\therefore p \vee q
+$$
+
+7.
+
+$$
+p \\
+p \to q \\
+\neg q \vee r \\
+\therefore r
+$$
+
+8.
+
+$$
+p \vee q \\
+p \to \neg q \\
+p \to r \\
+\therefore r
+$$
+
+9.
+
+$$
+p \wedge q \to \neg r \\
+p \vee \neg q \\
+\neg q \to p \\
+\therefore \neg r
+$$
+
+10.
+
+$$
+p \vee q \to r \\
+\therefore \neg r \to \neg p \wedge \neg q
+$$
+
+(This is the form of argument shown on pages 37 and 38.)
+
+11.
+
+$$
+p \to q \vee r \\
+\neg q \vee \neg r \\
+\therefore \neg p \vee \neg r
+$$
+
+12. Use truth tables to show that the following forms of argument are invalid.
+
+a.
+
+$$
+p \to q \\
+q \\
+\therefore p \\
+\text{converse error}
+$$
+
+b.
+
+$$
+p \to q \\
+\neg p \\
+\therefore \neg q \\
+\text{inverse error}
+$$
+
+Use truth tables to show that the argument forms referred to in 13-21 are valid.
+Indicate which columns represent the premises and which represent the
+conclusion, and include a sentence explaining how the truth table supports your
+answer. Your explanation should show that you understand what it means for a
+form of argument to be valid.
+
+13. Modus tollens:
+
+$$
+p \to q \\
+\neg q
+\therefore \neg p
+$$
+
+14. Example 2.3.3(a)
+
+15. Example 2.3.3(b)
+
+16. Example 2.3.4(a)
+
+17. Example 2.3.4(b)
+
+18. Example 2.3.5(a)
+
+19. Example 2.3.5(b)
+
+20. Example 2.3.6
+
+21 Example 2.3.7
+
+Use symbols to write the logical form of each argument in 22 and 23, and then
+use a truth table to test the argument for validity. Indicate which columns
+represent the premises and which represent the conclusion, and include a few
+words of explanation showing that you understand the meaning of validity.
+
+22.
+
+If Tom is not on team $A$, then Hua is on team $B$.
+
+If Hua is not on team $B$, then Tom is on team $A$.
+
+$\therefore$ Tom is not on team $a$ or Hua is not on team $B$.
+
+23.
+
+Oleg is a math major or Oleg is an economics major.
+
+If Oleg is a math major, then Oleg is required to take Math 362.
+
+$\therefore$ Oleg is an economics major or Oleg is not required to take
+Math 362.
+
+Some of the arguments in 24-32 are valid, whereas others exhibit the converse or
+the inverse error. Use symbols to write the logical form of each argument. If
+the argument is valid, identify the rule of inference that guarantees its
+validity. Otherwise, state whether the converse or the inverse error is made.
+
+24.
+
+If Jules solved this problem correctly, then Jules obtained the answer $2$.
+
+Jules obtained the answer $2$.
+
+$\therefore$ Jules solved this problem correctly.
+
+25.
+
+This real number is rational or it is irrational.
+
+This real number is not rational.
+
+$\therefore$ This real number is irrational.
+
+26.
+
+If I go to the movies, I won't finish my homework.
+
+If i don't finish my homework, I won't do well on the exam tomorrow.
+
+$\therefore$ If I go to the movies, I won't do well on the exam tomorrow.
+
+27.
+
+If this number is larger than $2$, then its square is larger than $4$.
+
+This number is not larger than $2$.
+
+$\therefore$ The square of this number is not larger than $4$.
+
+28.
+
+If there are as many rational numbers as there are irrational numbers, then the
+set of all irrational numbers is infinite.
+
+The set of all irrational numbers is infinite.
+
+$\therefore$ There are as many rational numbers as there are irrational numbers.
+
+29.
+
+If at least one of these two numbers is divisible by $6$, then the product of
+these two numbers is divisible by $6$.
+
+Neither of these two numbers is divisible by $6$.
+
+$\therefore$ The product of these two numbers is not divisible by $6$.
+
+30.
+
+If this computer program is correct, then it produces the correct output when
+run with the test data my teacher gave me.
+
+This computer program produces the correct output when run with the test data my
+teacher gave me.
+
+$\therefore$ This computer program is correct.
+
+31.
+
+Sandra knows Java and Sandra knows C++.
+
+$\therefore$ Sandra knows C++.
+
+32.
+
+If I get a Christmas bonus, I'll buy a stereo.
+
+If I sell my motorcycle, I'll buy a stereo.
+
+$\therefore$ If I get a Christmas bonus or I sell my motorcycle, then I'll buy a
+stereo.
+
+33. Give an example (other than Example 2.3.11) of a valid argument with a false
+    conclusion.
+
+34. Give an example (other than Example 2.3.12) of an invalid argument with a
+    true conclusion.
+
+35. Explain in your own words what distinguishes a valid form of argument from
+    an invalid one.
+
+36. Given the following information about a computer program, find the mistake
+    in the program.
+
+a. There is an undeclared variable or there is a syntax error in the first five
+lines.
+
+b. If there is a syntax error in the first five lines, then there is a missing
+semicolon or a variable name misspelled.
+
+c. There is not a missing semicolon.
+
+d. There is not a misspelled variable name.
+
+37. In the back of an old cupboard you discover a note signed by a pirate famous
+    for his bizarre sense of humor and love of logical puzzles. In the note he
+    wrote that he had hidden treasure somewhere on the property. He listed five
+    true statements (a-e below) and challenged the reader to use them to figure
+    out the location of the treasure.
+
+a. If this house is next to a lake, then the treasure is not in the kitchen.
+
+b. If the tree in the front yard is an elm, then the treasure is in the kitchen.
+
+c. This house is next to a lake.
+
+d. The tree in the front yard is an elm or the treasure is buried under the
+flagpole.
+
+e. If the tree in the back yard is an oak, then the treasure is in the garage.
+
+Where is the treasure hidden?
+
+38. You are visiting the island described in Example 2.3.14 and have the
+    following encounters with natives.
+
+a. Two natives _A_ and _B_ address you as follows:
+
+_A_ says: Both of us are knights.
+
+_B_ says: _A_ is a knave.
+
+What are _A_ and _B_?
+
+b. Another two natives _C_ and _D_ approach you but only _C_ speaks.
+
+_C_ says: Both of us are knaves.
+
+What are _C_ and _D_?
+
+c. You then encounter natives _E_ and _F_.
+
+_E_ says: _F_ is a knave.
+
+_F_ says: _E_ is a knave.
+
+How many knaves are there?
+
+d. Finally, you meet a group of six natives, _U_, _V_, _W_, _X_, _Y_, and _Z_,
+who speak to you as follows:
+
+_U_ says: None of us is a knight.
+
+_V_ says: At least three of us are knights.
+
+_W_ Says: At most three of us are knights.
+
+_X_ says: Exactly five of us are knights.
+
+_Y_ says: Exactly two of us are knights.
+
+_Z_ says: Exactly one of us is a knight.
+
+Which are knights and which are knaves?
+
+39. The famous detective Percule Hoirot was called in to solve a baffling murder
+    mystery. He determined the following facts:
+
+a. Lord Hazelton, the murdered man, was killed by a blow on the head with a
+brass candlestick.
+
+b. Either Lady Hazelton or a maid, Sara, was in the dining room at the time of
+the murder.
+
+c. If the cook was in the kitchen at the time of the murder, then the butler
+killed Lord Hazelton with a false dose of strychnine.
+
+d. If Lady Hazelton was in the dining room at the time of the murder, then the
+chauffeur killed Lord Hazelton.
+
+e. If the cook was not in the kitchen at the time of the murder, then Sara was
+not in the dining room when the murder was committed.
+
+f. If Sara was in the dining room at the time the murder was committed, then the
+wine steward killed Lord Hazelton.
+
+Is it possible for the detective to deduce the identity of the murderer from
+these facts? If so, who did murder Lord Hazelton? (Assume there was only one
+cause of death.)
+
+40 Sharky, a leader of the underworld, was killed by one of his own band of four
+henchmen. Detective Sharp interviewed the men and determined that all were lying
+except for one. He deduced who killed Sharky on the basis of the following
+statements:
+
+a. Socko: Lefty killed Sharky.
+
+b. Fats: Muscles didn't kill Sharky.
+
+c. Lefty: Muscles was shooting craps with Socko when Sharky was knocked off.
+
+d. Muscles: Lefty didn't kill Sharky.
+
+Who did kill Sharky?
+
+In 41-44 a set of premises and a conclusion are given. Use the valid argument
+forms listed in Table 2.3.1 to deduce the conclusion from the premises, giving a
+reason for each step as in Example 2.3.8. Assume all variables are statement
+variables.
+
+41.
+
+a. $\neg p \vee q \to r$
+
+b. $s \vee \neg q$
+
+c. $\neg t$
+
+d. $p \to t$
+
+e. $\neg p \wedge r \to \neg s$
+
+f. $\therefore \neg q$
+
+42.
+
+a. $p \vee q$
+
+b. $q \to r$
+
+c. $p \wedge s \to t$
+
+d. $\neg r$
+
+e. $\neg q \to u \wedge s$
+
+f. $\therefore t$
+
+43.
+
+a. $\neg p \to r \wedge \neg s$
+
+b. $t \to s$
+
+c. $u \to \neg p$
+
+d. $\neg w$
+
+e. $u \vee w$
+
+f. $\therefore \neg t$
+
+44.
+
+a. $p \to q$
+
+b. $r \vee s$
+
+c. $\neg s \to \neg t$
+
+d. $\neg q \vee s$
+
+e. $\neg s$
+
+f. $\neg p \wedge r \to u$
+
+g. $w \vee t$
+
+h. $\therefore u \wedge w$

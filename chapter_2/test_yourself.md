@@ -116,3 +116,24 @@ $S$; $R$
 **Solution**
 
 $R$; $S$
+
+---
+
+**Test Yourself**
+
+Page 99
+
+1. For an argument to be valid means that every argument of the same form whose
+   premises _______ has a _______ conclusion.
+
+are all true; true
+
+2. For an argument to be invalid means that there is an argument of the same
+   form whose premises _______ and whose conclusion _______.
+
+are all true; is false
+
+3. For an argument to be sound means that it is _______ and its premises
+   _______. In this case we can be sure that its conclusion _______.
+
+valid; are all true; is true

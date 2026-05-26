@@ -249,3 +249,56 @@ If $r$ and $s$ are statements:
 $r$ is a **sufficient condition** for $s$ means "if $r$ then $s$."
 
 $r$ is a **necessarily condition** for $s$ means "if not $r$, then not $s$."
+
+---
+
+Page 89
+
+**Definition**
+
+An **argument is a sequence of statements, and an **argument form** is a
+sequence of statement forms. All statements in an argument and all statement
+forms in an argument form, except for the final one, are called **premises** (or
+**assumptions** or **hypotheses**). The final statement or statement form is
+called the **conclusion**. The symbol $\therefore$, which is read "therefore,"
+is normally placed just before the conclusion.
+
+To say that an _argument form_ is **valid** means that no matter what particular
+statements are substituted for the statement variables in its premises, if the
+resulting premises are all true, then the conclusion is also true. To say that
+an _argument_ is **valid** means that its form is valid.
+
+---
+
+Page 90
+
+**testing an Argument for Validity**
+
+1. Identify the premises and conclusion of the argument form.
+
+2. Construct a truth table showing the truth values of all the premises and the
+   conclusion.
+
+3. A row of the truth table in which all the premises are true is called a
+   **critical row**. If there is a critical row in which the conclusion is
+   false, then it is possible for an argument of the given form to have true
+   premises and a false conclusion, and so the argument form is invalid. If the
+   conclusion in _every_ critical row is true, then the argument form is valid.
+
+---
+
+Page 97
+
+**Definition**
+
+An argument is called **sound** if, and only if, it is valid _and_ all its
+premises are true. An argument that is not sound is called **unsound**.
+
+---
+
+Page 97
+
+**Contradiction Rule**
+
+If you can show that the supposition that statement $p$ is false leads logically
+to a contradiction, then you can conclude that $pr is true.
