@@ -1633,12 +1633,17 @@ It is not true that $\sqrt{2} = \dfrac{a}{b}$ for some integers $a$ and $b$.
 
 $\therefore$ ______.
 
+"$\sqrt{2}$ is not rational." (modus tollens)
+
 2.
 
 If $1 - 0.99999 \dots$ is less than every positive real number, then it equals
 zero.
 
 ______.
+
+"The number $1 - 0.99999 \dots$ is less than every positive real number." (modus
+ponens)
 
 $\therefore$ The number $1 - 0.99999 \dots$ equals zero.
 
@@ -1650,6 +1655,8 @@ I am not a monkey's uncle.
 
 $\therefore$ ______.
 
+"Logic is not easy." (modus tollens)
+
 4.
 
 If this graph can be colored with three colors, then it can be colored with four
@@ -1659,6 +1666,8 @@ This graph cannot be colored with four colors.
 
 $\therefore$ ______.
 
+"This graph cannot be colored with three colors." (modus tollens)
+
 5.
 
 If they were unsure about the address, then they would have telephoned.
@@ -1666,6 +1675,8 @@ If they were unsure about the address, then they would have telephoned.
 ______.
 
 $\therefore$ They were sure of the address.
+
+"They did not telephone." (modus tollens)
 
 Use truth tables to determine whether the argument forms in 6-11 are valid.
 Indicate which columns represent the premises and which represent the
@@ -1681,6 +1692,17 @@ q \to p \\
 \therefore p \vee q
 $$
 
+| $p$ | $q$ | $p \to q$ | $q \to p$ | $p \vee q$ |
+| --- | --- | --------- | --------- | ---------- |
+| T   | T   | T         | T         | T          |
+| T   | F   | F         | T         | T          |
+| F   | T   | T         | F         | T          |
+| F   | F   | T         | T         | **F**      |
+
+The last row shows that while it is possible to have all true premises, it is
+also possible to have these premises arrive at a false conclusion, therefore
+this argument form is invalid.
+
 7.
 
 $$
@@ -1689,6 +1711,20 @@ p \to q \\
 \neg q \vee r \\
 \therefore r
 $$
+
+| $p$ | $q$ | $r$ | $\neg q$ | $p \to q$ | $\neg q \vee r$ | $p$ | $r$   |
+| --- | --- | --- | -------- | --------- | --------------- | --- | ----- |
+| T   | T   | T   | F        | T         | T               | T   | **T** |
+| T   | T   | F   | F        | T         | F               | T   | F     |
+| T   | F   | T   | T        | F         | T               | T   | T     |
+| T   | F   | F   | T        | F         | T               | T   | F     |
+| F   | T   | T   | F        | T         | T               | F   | T     |
+| F   | T   | F   | F        | T         | F               | F   | F     |
+| F   | F   | T   | T        | T         | T               | F   | T     |
+| F   | F   | F   | T        | T         | T               | F   | F     |
+
+Here the only row where all the premises are true concludes with a true
+consequent, therefore this argument form is valid.
 
 8.
 
@@ -1699,6 +1735,20 @@ p \to r \\
 \therefore r
 $$
 
+| $p$ | $q$ | $r$ | $\neg q$ | $p \vee q$ | $p \to \neg q$ | $p \to r$ | $r$   |
+| --- | --- | --- | -------- | ---------- | -------------- | --------- | ----- |
+| T   | T   | T   | F        | T          | F              | T         | T     |
+| T   | T   | F   | F        | T          | F              | F         | F     |
+| T   | F   | T   | T        | T          | T              | T         | **T** |
+| T   | F   | F   | T        | T          | T              | F         | F     |
+| F   | T   | T   | F        | T          | T              | T         | **T** |
+| F   | T   | F   | F        | T          | T              | T         | **F** |
+| F   | F   | T   | T        | F          | T              | T         | T     |
+| F   | F   | F   | T        | F          | T              | T         | F     |
+
+On row 6, we see that we have all true premises that lead to a false conclusion,
+therefore this argument form is invalid.
+
 9.
 
 $$
@@ -1707,6 +1757,20 @@ p \vee \neg q \\
 \neg q \to p \\
 \therefore \neg r
 $$
+
+| $p$ | $q$ | $r$ | $\neg q$ | $\neg r$ | $p \wedge q$ | $p \wedge q \to \neg r$ | $p \vee \neg q$ | $\neg q \to p$ | $\neg r$ |
+| --- | --- | --- | -------- | -------- | ------------ | ----------------------- | --------------- | -------------- | -------- |
+| T   | T   | T   | F        | F        | T            | F                       | T               | T              | F        |
+| T   | T   | F   | F        | T        | T            | T                       | T               | T              | **T**    |
+| T   | F   | T   | T        | F        | F            | T                       | T               | T              | **F**    |
+| T   | F   | F   | T        | T        | F            | T                       | T               | T              | **T**    |
+| F   | T   | T   | F        | F        | F            | T                       | F               | T              | F        |
+| F   | T   | F   | F        | T        | F            | T                       | F               | T              | T        |
+| F   | F   | T   | T        | F        | F            | T                       | T               | F              | F        |
+| F   | F   | F   | T        | T        | F            | T                       | T               | F              | T        |
+
+On the third row, we see that we have all true premises that lead to a false
+conclusion, therefore this argument form is invalid.
 
 10.
 
@@ -1717,6 +1781,20 @@ $$
 
 (This is the form of argument shown on pages 37 and 38.)
 
+| $p$ | $q$ | $r$ | $\neg p$ | $\neg q$ | $\neg r$ | $p \vee q$ | $\p \vee q \to r$ | $\neg p \wedge \neg q$ | $\neg r \to \neg p \wedge \neg q$ |
+| --- | --- | --- | -------- | -------- | -------- | ---------- | ----------------- | ---------------------- | --------------------------------- |
+| T   | T   | T   | F        | F        | F        | T          | T                 | F                      | **T**                             |
+| T   | T   | F   | F        | F        | T        | T          | F                 | F                      | F                                 |
+| T   | F   | T   | F        | T        | F        | T          | T                 | F                      | **T**                             |
+| T   | F   | F   | F        | T        | T        | T          | F                 | F                      | F                                 |
+| F   | T   | T   | T        | F        | F        | T          | T                 | F                      | **T**                             |
+| F   | T   | F   | T        | F        | T        | T          | F                 | F                      | F                                 |
+| F   | F   | T   | T        | T        | F        | F          | T                 | T                      | **T**                             |
+| F   | F   | F   | T        | T        | T        | F          | T                 | T                      | **T**                             |
+
+All rows where the argument $p \vee q \to r$ are true have true conclusions,
+therefore this argument form is valid.
+
 11.
 
 $$
@@ -1724,6 +1802,20 @@ p \to q \vee r \\
 \neg q \vee \neg r \\
 \therefore \neg p \vee \neg r
 $$
+
+| $p$ | $q$ | $r$ | $\neg p$ | $\neg q$ | $\neg r$ | $q \vee r$ | $p \to q \vee r$ | $\neg q \vee \neg r$ | $\neg p \vee \neg r$ |
+| --- | --- | --- | -------- | -------- | -------- | ---------- | ---------------- | -------------------- | -------------------- |
+| T   | T   | T   | F        | F        | F        | T          | T                | F                    | F                    |
+| T   | T   | F   | F        | F        | T        | T          | T                | T                    | **T**                |
+| T   | F   | T   | F        | T        | F        | T          | T                | T                    | **F**                |
+| T   | F   | F   | F        | T        | T        | F          | F                | T                    | T                    |
+| F   | T   | T   | T        | F        | F        | T          | T                | F                    | T                    |
+| F   | T   | F   | T        | F        | T        | T          | T                | T                    | **T**                |
+| F   | F   | T   | T        | T        | F        | T          | T                | T                    | **T**                |
+| F   | F   | F   | T        | T        | T        | F          | T                | T                    | **T**                |
+
+On row three, we can see that there is a case where both precedents are true,
+but the consequent is false, therefore this argument form is invalid.
 
 12. Use truth tables to show that the following forms of argument are invalid.
 
@@ -1736,6 +1828,16 @@ q \\
 \text{converse error}
 $$
 
+| $p$ | $q$ | $p \to q$ | $q$ | $p$   |
+| --- | --- | --------- | --- | ----- |
+| T   | T   | T         | T   | **T** |
+| T   | F   | F         | F   | T     |
+| F   | T   | T         | T   | **F** |
+| F   | F   | T         | F   | F     |
+
+As you can see on row three, we have two hypotheses that are true, but the
+conclusion is false, therefore this argument form is invalid.
+
 b.
 
 $$
@@ -1744,6 +1846,16 @@ p \to q \\
 \therefore \neg q \\
 \text{inverse error}
 $$
+
+| $p$ | $q$ | $p \to q$ | $\neg p$ | $\neg q$ |
+| --- | --- | --------- | -------- | -------- |
+| T   | T   | T         | F        | F        |
+| T   | F   | F         | F        | T        |
+| F   | T   | T         | T        | **F**    |
+| F   | F   | T         | T        | **T**    |
+
+As you can see on row three, we have two hypotheses that are true, but the
+conclusion is false, therefore this argument form is invalid.
 
 Use truth tables to show that the argument forms referred to in 13-21 are valid.
 Indicate which columns represent the premises and which represent the
@@ -1759,21 +1871,179 @@ p \to q \\
 \therefore \neg p
 $$
 
+| $p$ | $q$ | $p \to q$ | $\neg q$ | $\neg p$ |
+| --- | --- | --------- | -------- | -------- |
+| T   | T   | T         | F        | F        |
+| T   | F   | F         | T        | F        |
+| F   | T   | T         | F        | T        |
+| F   | F   | T         | T        | **T**    |
+
+The third column $p \to q$, and fourth column $\neg q$ are the premises. And the
+final column $\neg p$ is the conclusion. Because all premises and the conclusion
+are true, and there are no rows where all premises are true and the conclusion
+is false, this argument form is valid.
+
 14. Example 2.3.3(a)
+
+$$
+p \\
+\therefore p \vee q
+$$
+
+| $p$ | $q$ | $p$ | $p \vee q$ |
+| --- | --- | --- | ---------- |
+| T   | T   | T   | **T**      |
+| T   | F   | T   | **T**      |
+| F   | T   | F   | T          |
+| F   | F   | F   | F          |
+
+The third column (copied from the first) is the first and only premise, $p$. The
+fourth and final column is the consequent, $p \vee q$. Because both rows where
+the premise is true (rows 1 and 2) return true conclusions, this argument form
+is valid.
 
 15. Example 2.3.3(b)
 
+$$
+q \\
+\therefore p \vee q
+$$
+
+| $p$ | $q$ | $p \vee q$ |
+| --- | --- | ---------- |
+| T   | T   | **T**      |
+| T   | F   | T          |
+| F   | T   | **T**      |
+| F   | F   | F          |
+
+The second column is the first and only premise, $q$. The third and final column
+is the consequent, $p \vee q$. Because both rows where the premise is true (rows
+1 and 3) return true conclusions, this argument form is valid.
+
 16. Example 2.3.4(a)
+
+$$
+p \wedge q \\
+\therefore p
+$$
+
+| $p$ | $q$ | $p \wedge q$ | $p$   |
+| --- | --- | ------------ | ----- |
+| T   | T   | T            | **T** |
+| T   | F   | F            | T     |
+| F   | T   | F            | F     |
+| F   | F   | F            | F     |
+
+The third column is the only premise, $p \wedge q$. The fourth column is the
+consequent $p$. The only row (row 1) where the premise is true, the conclusion
+is also true, therefore this argument form is valid.
 
 17. Example 2.3.4(b)
 
+$$
+p \wedge q \\
+\therefore q
+$$
+
+| $p$ | $q$ | $p \wedge q$ | $q$   |
+| --- | --- | ------------ | ----- |
+| T   | T   | T            | **T** |
+| T   | F   | F            | F     |
+| F   | T   | F            | T     |
+| F   | F   | F            | F     |
+
+The third column is the only premise, $p \wedge q$. The fourth column is the
+consequent $q$. The only row (row 1) where the premise is true, the conclusion
+is also true, therefore this argument form is valid.
+
 18. Example 2.3.5(a)
+
+$$
+p \vee q \\
+\neg q \\
+\therefore p
+$$
+
+| $p$ | $q$ | $p \vee q$ | $\neg q$ | $p$   |
+| --- | --- | ---------- | -------- | ----- |
+| T   | T   | T          | F        | T     |
+| T   | F   | T          | T        | **T** |
+| F   | T   | T          | F        | F     |
+| F   | F   | F          | T        | F     |
+
+The third and fourth rows are the premises, $p \vee q$ and $\neg q$
+respectively. And the fifth row is the conclusion $p$. The only row where all
+premises are true (row 2) returns a true conclusion, and therefore this argument
+form is valid.
 
 19. Example 2.3.5(b)
 
+$$
+p \vee q \\
+\neg p \\
+\therefore q
+$$
+
+| $p$ | $q$ | $p \vee q$ | $\neg q$ | $q$   |
+| --- | --- | ---------- | -------- | ----- |
+| T   | T   | T          | F        | T     |
+| T   | F   | T          | F        | F     |
+| F   | T   | T          | T        | **T** |
+| F   | F   | F          | T        | F     |
+
+The third and fourth rows are the premises, $p \vee q$ and $\neg p$
+respectively. And the fifth row is the conclusion $q$. The only row where all
+premises are true (row 3) returns a true conclusion, and therefore this argument
+form is valid.
+
 20. Example 2.3.6
 
+$$
+p \to q \\
+q \to r \\
+\therefore p \to r
+$$
+
+| $p$ | $q$ | $r$ | $p \to q$ | $q \to r$ | $p \to r$ |
+| --- | --- | --- | --------- | --------- | --------- |
+| T   | T   | T   | T         | T         | **T**     |
+| T   | T   | F   | T         | F         | F         |
+| T   | F   | T   | F         | T         | T         |
+| T   | F   | F   | F         | T         | F         |
+| F   | T   | T   | T         | T         | **T**     |
+| F   | T   | F   | T         | F         | T         |
+| F   | F   | T   | T         | T         | **T**     |
+| F   | F   | F   | T         | T         | **T**     |
+
+The fourth and fifth columns are the premises, $p \to q$ and $q \to r$
+respectively. The sixth column is the conclusion, $p \to r$. The rows where both
+premises are true (rows 1, 5, 7, 8) all have true conclusions, therefore this
+argument form is valid.
+
 21 Example 2.3.7
+
+$$
+p \vee q \\
+p \to r \\
+q \to r \\
+\therefore r
+$$
+
+| $p$ | $q$ | $r$ | $p \vee q$ | $p \to r$ | $q \to r$ | $r$   |
+| --- | --- | --- | ---------- | --------- | --------- | ----- |
+| T   | T   | T   | T          | T         | T         | **T** |
+| T   | T   | F   | T          | F         | F         | F     |
+| T   | F   | T   | T          | T         | T         | **T** |
+| T   | F   | F   | T          | F         | T         | F     |
+| F   | T   | T   | T          | T         | T         | **T** |
+| F   | T   | F   | T          | T         | F         | F     |
+| F   | F   | T   | F          | T         | T         | T     |
+| F   | F   | F   | F          | T         | T         | F     |
+
+The fourth, fifth, and sixth columns are the precedents, $p \vee q$, $p \to r$,
+and $q \to r$ respectively. The seventh column is the conclusion, $r$. The rows
+where all three precedents are true (1, 3, 5) also have true conclusions, and
+therefore this argument form is valid.
 
 Use symbols to write the logical form of each argument in 22 and 23, and then
 use a truth table to test the argument for validity. Indicate which columns
@@ -1788,6 +2058,30 @@ If Hua is not on team $B$, then Tom is on team $A$.
 
 $\therefore$ Tom is not on team $a$ or Hua is not on team $B$.
 
+Let $p$ be "Tom is on team $A$."
+
+Let $q$ "Hua is on team $B$."
+
+Symbolically, the given statement is:
+
+$$
+\neg p \to q \\
+\neg q \to p \\
+\therefore \neg p \vee \neg q
+$$
+
+| $p$ | $q$ | $\neg p$ | $\neg q$ | $\neg p \to q$ | $\neg q \to p$ | $\neg p \vee \neg q$ |
+| --- | --- | -------- | -------- | -------------- | -------------- | -------------------- |
+| T   | T   | F        | F        | T              | T              | **F**                |
+| T   | F   | F        | T        | T              | T              | **T**                |
+| F   | T   | T        | F        | T              | T              | **T**                |
+| F   | F   | T        | T        | F              | F              | T                    |
+
+Rows 5 and 6 are the premises, $\neg p \to q$ and $\neg q \to p$ respectively.
+The conclusion is the 7th column, $\neg p \vee \neg q$. In the first row, both
+premises are true, but the conclusion is false, therefore this argument form is
+invalid.
+
 23.
 
 Oleg is a math major or Oleg is an economics major.
@@ -1796,6 +2090,35 @@ If Oleg is a math major, then Oleg is required to take Math 362.
 
 $\therefore$ Oleg is an economics major or Oleg is not required to take
 Math 362.
+
+Let $p$ be "Oleg is a math major."
+
+Let $q$ be "Oleg is an economics major."
+
+Let $r$ be "Oleg is required to take Math 362."
+
+Symbolically, the given statement is:
+
+$$
+p \vee q \\
+p \to r \\
+\therefore q \vee \neg r
+$$
+
+| $p$ | $q$ | $r$ | $\neg r$ | $p \vee q$ | $p \to r$ | $q \vee \neg r$ |
+| --- | --- | --- | -------- | ---------- | --------- | --------------- |
+| T   | T   | T   | F        | T          | T         | **T**           |
+| T   | T   | F   | T        | T          | F         | T               |
+| T   | F   | T   | F        | T          | T         | **F**           |
+| T   | F   | F   | T        | T          | F         | T               |
+| F   | T   | T   | F        | T          | T         | **T**           |
+| F   | T   | F   | T        | T          | T         | **T**           |
+| F   | F   | T   | F        | F          | T         | F               |
+| F   | F   | F   | T        | F          | T         | T               |
+
+The 5th and 6th columns are the premises, $p \vee q$ and $p \to r$ respectively.
+The 7th column is the conclusion, $q \vee \neg r$. On row 3, the two premises
+are true but the conclusion is false, therefore this argument form is invalid.
 
 Some of the arguments in 24-32 are valid, whereas others exhibit the converse or
 the inverse error. Use symbols to write the logical form of each argument. If
@@ -1810,6 +2133,21 @@ Jules obtained the answer $2$.
 
 $\therefore$ Jules solved this problem correctly.
 
+Let $p$ be "Jules solved this problem correctly."
+
+Let $q$ be "Jules obtained answer $2$."
+
+Symbolically, the given statement is:
+
+$$
+p \to q \\
+q \\
+\therefore p
+$$
+
+Symbolically, this is exactly the converse error, and therefore is an invalid
+argument form.
+
 25.
 
 This real number is rational or it is irrational.
@@ -1817,6 +2155,20 @@ This real number is rational or it is irrational.
 This real number is not rational.
 
 $\therefore$ This real number is irrational.
+
+Let $p$ be "This real number is rational."
+
+Let $q$ be "This real number is irrational."
+
+Symbolically, our given statement is:
+
+$$
+p \vee q \\
+\neg p \\
+\therefore q
+$$
+
+This argument's form is valid by the rule of elimination.
 
 26.
 
@@ -1826,6 +2178,22 @@ If i don't finish my homework, I won't do well on the exam tomorrow.
 
 $\therefore$ If I go to the movies, I won't do well on the exam tomorrow.
 
+Let $p$ be "I go to the movies."
+
+Let $q$ be "I finish my homework."
+
+Let $r$ be "I do well on the exam tomorrow."
+
+Symbolically, the given statement is:
+
+$$
+p \to \neg q \\
+\neg q \to \neg r \\
+\therefore p \to \neg r
+$$
+
+This argument's form is valid by the rule of transitivity.
+
 27.
 
 If this number is larger than $2$, then its square is larger than $4$.
@@ -1833,6 +2201,20 @@ If this number is larger than $2$, then its square is larger than $4$.
 This number is not larger than $2$.
 
 $\therefore$ The square of this number is not larger than $4$.
+
+Let $p$ be "This number is larger than $2$a"
+
+Let $q$ be "This number's square is larger than $4$."
+
+Symbolically, the given statement is:
+
+$$
+p \to q \\
+\neg p \\
+\therefore \neg q
+$$
+
+This argument's form is invalid, as it demonstrates the inverse error.
 
 28.
 
@@ -1843,6 +2225,20 @@ The set of all irrational numbers is infinite.
 
 $\therefore$ There are as many rational numbers as there are irrational numbers.
 
+Let $p$ be "There are as many rational numbers as there are irrational numbers."
+
+Let $q$ be "The set of all irrational numbers is infinite."
+
+Symbolically, the given statement is:
+
+$$
+p \to q \\
+q \\
+\therefore p
+$$
+
+This argument's form is invalid as it demonstrates a converse error.
+
 29.
 
 If at least one of these two numbers is divisible by $6$, then the product of
@@ -1851,6 +2247,20 @@ these two numbers is divisible by $6$.
 Neither of these two numbers is divisible by $6$.
 
 $\therefore$ The product of these two numbers is not divisible by $6$.
+
+Let $p$ be "At least one of these two numbers is divisible by $6$."
+
+Let $q$ be "The product of these two numbers is divisible by $6$."
+
+Symbolically, this statement is:
+
+$$
+p \to q \\
+\neg p \\
+\therefore \neg q
+$$
+
+This argument's form is invalid as it demonstrates an inverse error.
 
 30.
 
@@ -1862,11 +2272,39 @@ teacher gave me.
 
 $\therefore$ This computer program is correct.
 
+Let $p$ be "This computer program is correct."
+
+Let $q$ be "This computer program produces the correct output when run with the
+test data my teacher gave me."
+
+Symbolically, the given statement is:
+
+$$
+p \to q \\
+q \\
+\therefore p
+$$
+
+This argument form is invalid by the converse error.
+
 31.
 
 Sandra knows Java and Sandra knows C++.
 
 $\therefore$ Sandra knows C++.
+
+Let $p$ be "Sandra knows Java."
+
+Let $q$ be "Sandra knows C++."
+
+Symbolically, the given statement is:
+
+$$
+p \wedge q \\
+\therefore q
+$$
+
+This argument's form is valid by the rule of specialization.
 
 32.
 
@@ -1877,14 +2315,51 @@ If I sell my motorcycle, I'll buy a stereo.
 $\therefore$ If I get a Christmas bonus or I sell my motorcycle, then I'll buy a
 stereo.
 
+Let $p$ be "I get a Christmas bonus."
+
+Let $r$ be "I buy a stereo."
+
+Let $q$ be "I sell my motorcycle."
+
+Symbolically, the given statement is:
+
+$$
+p \to r \\
+q \to r \\
+\therefore p \vee q \to r
+$$
+
+This argument form is valid by rule of transitivity.
+
 33. Give an example (other than Example 2.3.11) of a valid argument with a false
     conclusion.
+
+"If the sky is blue, then the ground is purple."
+
+"The sky is blue."
+
+$\therefore$ "The ground is purple."
 
 34. Give an example (other than Example 2.3.12) of an invalid argument with a
     true conclusion.
 
+"If the sky is blue, then the ground is purple."
+
+"The ground is purple."
+
+$\therefore$ "The sky is blue."
+
 35. Explain in your own words what distinguishes a valid form of argument from
     an invalid one.
+
+An argument is any statement or series of statements that are asserted to be
+true, these statement(s) are known as the premises of the argument, while the
+final statement of the argument is the conclusion. A valid argument is any
+argument in which all instances where the premises are all true and the
+conclusion is also true.
+
+An invalid argument is any argument in which all instances where the premises
+are true, there is one or more instances where the conclusion is false.
 
 36. Given the following information about a computer program, find the mistake
     in the program.
@@ -1898,6 +2373,57 @@ semicolon or a variable name misspelled.
 c. There is not a missing semicolon.
 
 d. There is not a misspelled variable name.
+
+Let $p$ be "There is an undeclared variable."
+
+Let $q$ be "There is a syntax error in the first five lines."
+
+Let $r$ be "There is a missing semicolon."
+
+Let $s$ be "There is a variable name that is misspelled."
+
+Symbolically:
+
+$$
+p \vee q \\
+q \to r \vee s \\
+\neg r \\
+\neg s \\
+\therefore p
+$$
+
+If we break this down logically, we can work backwards:
+
+1.
+
+$$
+\neg s \\
+\neg p \\
+\therefore \neg r \wedge \neg s
+$$
+
+This is true by c and d, the definition of $\vee$, and De Morgan's laws.
+
+2. Therefore $q$ cannot be true:
+
+$$
+q \to r \vee s \\
+\neg r \wedge \neg s
+\therefore \neg q
+$$
+
+This is true by b and the rule of modus tollens.
+
+3. Therefore $p$ is true:
+
+$$
+p \vee q \\
+\neg q \\
+\therefore p
+$$
+
+This is true by a and thee rule of elimination. This leaves us to conclude that
+"There is an undeclared variable."
 
 37. In the back of an old cupboard you discover a note signed by a pirate famous
     for his bizarre sense of humor and love of logical puzzles. In the note he
@@ -1918,6 +2444,73 @@ e. If the tree in the back yard is an oak, then the treasure is in the garage.
 
 Where is the treasure hidden?
 
+Let $p$ be "This house is next to a lake."
+
+Let $q$ be "The treasure is in the kitchen."
+
+Let $r$ be "The tree in the front yard is an elm."
+
+Let $s$ be "The treasure is buried under the flagpole."
+
+Let $t$ be "The tree in the back yard is an oak."
+
+Let $u$ be "The treasure is in the garage."
+
+Symbolically:
+
+$$
+p \to \neg q \\
+r \to q \\
+p \\
+r \vee s \\
+t \to u \\
+\therefore \text{ ?}
+$$
+
+1. We can work this one through as soon as we have our first true assertion,
+   which is our third assertion $p$. This is true by c.
+
+$$ p $$
+
+2.
+
+$$
+p \to \neg q \\
+p
+\therefore \neg q
+$$
+
+This is true by modus ponens.
+
+3.
+
+$$
+r \to q \\
+\neg q \\
+\therefore \neg r
+$$
+
+This is true by modus tollens.
+
+4.
+
+$$
+r \vee s \\
+\neg r \\
+\therefore s
+$$
+
+This is true by the rule of elimination. And we can actually stop here, as $s$
+is "The treasure is buried under the flagpole."
+
+Note however that if we were to go further and evaluate $t \to u$, we actually
+cannot know if $t$ is true or not, as $\neg r \cancel{\to} t$, meaning that just
+because the tree in the back yard is not an elm, it doesn't mean that the tree
+in the back yard is an oak, that statement is never given to us in the problem
+statement.
+
+So once again, the answer is "The treasure is buried under the flagpole."
+
 38. You are visiting the island described in Example 2.3.14 and have the
     following encounters with natives.
 
@@ -1929,11 +2522,62 @@ _B_ says: _A_ is a knave.
 
 What are _A_ and _B_?
 
+Suppose that _A_ is a knight:
+
+_A_ is a knight.
+
+$\therefore$ Both _A_ and _B_ are knights.
+
+Then _B_'s statement also is true:
+
+_B_ is a knight.
+
+$\therefore$ _A_ is a knave.
+
+This is a contradiction, as "_A_ is a knave" contradicts "Both _A_ and _B_ are
+knights."
+
+Therefore _A_ must be a knave.
+
+_A_ is a knave.
+
+$\therefore$ Either _A_ or _B_ or both are knaves.
+
+Then we test _B_'s statement:
+
+_B_ is a knight.
+
+$\therefore$ _A_ is a knave.
+
+Which satisfies the conclusion from our evaluation of _A_'s statement, so
+therefore _B_ is a knight.
+
+_A_ is a knave, and _B_ is a knight.
+
 b. Another two natives _C_ and _D_ approach you but only _C_ speaks.
 
 _C_ says: Both of us are knaves.
 
 What are _C_ and _D_?
+
+Suppose _C_ is a knight.
+
+_C_ is a knight
+
+$\therefore$ Both _C_ and _D_ are knaves.
+
+This is a contradiction as _C_ is assumed to be a knight, but claims both _C_
+and _D_ are a knaves.
+
+_C_ is a knave (by contradiction)
+
+This means that either _C_ or _D_ or both are knaves (by negation of the
+supposition and De Morgan's laws).
+
+But, if both are knaves, then this validates _C_'s supposition, so it must be
+that _D_ is a knight.
+
+_D_ is a knight and _C_ is a knave.
 
 c. You then encounter natives _E_ and _F_.
 
@@ -1942,6 +2586,39 @@ _E_ says: _F_ is a knave.
 _F_ says: _E_ is a knave.
 
 How many knaves are there?
+
+Let's suppose _E_ is a knight:
+
+_E_ is a knight.
+
+$\therefore$ _F_ is a knave.
+
+We then assert that _F_ is a knave by _E_'s supposition.
+
+_F_ is a knave.
+
+$\therefore$ _E_ is a knight by negation of _F_'s supposition.
+
+Which validates our initial hypothesis.
+
+Let's now hypothesize that _E_ is a knave:
+
+_E_ is a knave.
+
+$\therefore$ _F_ is a knight.
+
+We then assert that _F_ is a knight by negation of _E_'s supposition.
+
+_F_ is a knight.
+
+$\therefore$ _E_ is a knave.
+
+Which validates our secondary hypothesis.
+
+This means we cannot conclude who is a knight and who is a knave, just that
+there is a knave and a knight in this pair.
+
+This is one knave.
 
 d. Finally, you meet a group of six natives, _U_, _V_, _W_, _X_, _Y_, and _Z_,
 who speak to you as follows:
@@ -1959,6 +2636,85 @@ _Y_ says: Exactly two of us are knights.
 _Z_ says: Exactly one of us is a knight.
 
 Which are knights and which are knaves?
+
+Let's assume _U_ is a knight:
+
+_U_ is a knight.
+
+$\therefore$ None of us are knaves.
+
+But this is a contradiction, because _U_ would also be a knave by his
+supposition and that would contradict our assumption.
+
+Therefore _U_ is a knave. That's one knave. Moving on...
+
+Let's assume _V_ is a knight:
+
+_V_ is a knight.
+
+$\therefore$ At least three of us are knights.
+
+We can move on and assume this so far.
+
+Then we assume _W_ is a knight:
+
+_W_ is a knight.
+
+$\therefore$ At most three of us are knights.
+
+Both _V_ and _W_ can only be knights if there are exactly three knights, which
+the remaining statements by _X_, _Y_, and _Z_ all would contradict, and we know
+_U_ is a knave, so either _V_ or _W_ is a knave or both of them are knaves.
+
+Let's move on and assume that _X_ is a knight:
+
+_X_ is a knight.
+
+$\therefore$ Exactly five of us are knights.
+
+But we already know that can't be true, because we have a total of 6 natives
+here, and we know at least two of them are knaves (_U_ and either _V_ or _W_ or
+both are knaves so far). So _X_ is a knave.
+
+Moving on, let's assume _Y_ is a knight.
+
+_Y_ is a knight.
+
+$\therefore$ Exactly two of us are knights.
+
+Nothing thus far contradicts this except for _V_'s supposition, therefore either
+_V_ or _Y_ are knaves, but not both (one of them must be a knight).
+
+Let's assume _Z_ is a knight.
+
+_Z_ is a knight.
+
+$\therefore$ Exactly one of us is a knight.
+
+But we just established that either _V_ or _Y_ is a knave, but not both, this
+contradicts _Z_'s supposition. _Z_ is a knave.
+
+The only candidates left as knights or knaves are _V_, _W_, and _Y_.
+
+Let's suppose that both _V_ and _W_ are knaves. This would mean that there would
+be exactly three knights, which would work as that would make all _V_, _W_, and
+_Y_ as knights...except that _Y_ claims there is exactly two knights, and that
+would contradict our assumption.
+
+Therefore either _V_ or _W_ is a knave, but not both.
+
+If that's the case, then there are exactly two knights, and _Y_ is correct, _Y_
+is a knight.
+
+And for _Y_ to be a knight, _V_ must be a knave, as _V_'s suppositions
+contradicts _Y_'s confirmed supposition, while _W_'s supposition does not
+contradict _Y_'s supposition.
+
+So here's our final tally of knight's and knaves:
+
+Knaves: _U_, _V_, _X_, _Z_
+
+Knights: _W_, _Y_
 
 39. The famous detective Percule Hoirot was called in to solve a baffling murder
     mystery. He determined the following facts:
