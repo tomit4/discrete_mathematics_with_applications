@@ -2741,6 +2741,26 @@ Is it possible for the detective to deduce the identity of the murderer from
 these facts? If so, who did murder Lord Hazelton? (Assume there was only one
 cause of death.)
 
+Let's use some assumptions and then provide their corresponding conclusions.
+
+The cook was in the kitchen at the time of the murder $\therefore$ The butler
+killed Lord Hazelton with a fatal dose of strychnine (by c).
+
+This contradicts a, so this is not true. This also extends to e:
+
+The cook was not in the kitchen at the time of the murder $\therefore$ Sara was
+not in the dining room when the murder was committed. Which then contradicts f,
+and relates to b.
+
+Ether Lady Hazelton or a maid, Sara, was in the dining room at the time of the
+murder.
+
+But we know that Sara was not in the dining room by e. So Lady Hazelton was in
+the dining room at the time of the murder, which leads us to d.
+
+Lady Hazelton was in the dining room at the time of the murder. $\therefore$ The
+chauffeur killed Lord Hazelton.
+
 40 Sharky, a leader of the underworld, was killed by one of his own band of four
 henchmen. Detective Sharp interviewed the men and determined that all were lying
 except for one. He deduced who killed Sharky on the basis of the following
@@ -2755,6 +2775,13 @@ c. Lefty: Muscles was shooting craps with Socko when Sharky was knocked off.
 d. Muscles: Lefty didn't kill Sharky.
 
 Who did kill Sharky?
+
+Let's assume Socko is lying. This leads us to:
+
+Lefty didn't kill Sharky. This means that Muscles is telling the truth. This
+means that both Fats and Lefty are lying. Which means Muscles killed Sharky and
+that Muscles wasn't shooting craps with Sock when Sharky was knocked off. This
+means Muscles killed Sharky.
 
 In 41-44 a set of premises and a conclusion are given. Use the valid argument
 forms listed in Table 2.3.1 to deduce the conclusion from the premises, giving a
@@ -2775,6 +2802,44 @@ e. $\neg p \wedge r \to \neg s$
 
 f. $\therefore \neg q$
 
+$$
+p \to t \\
+\neg t \\
+\therefore \neg p
+$$
+
+By d, c, and moduls tollens.
+
+$$
+\neg p \\
+\therefore \neg p \vee q
+$$
+
+By generalization.
+
+$$
+\neg p \vee q \to r \\
+\neg p \vee q \\
+\therefore r
+$$
+
+By previous step and a.
+
+$$
+\neg p \wedge r \to \neg s \\
+\therefore \neg s
+$$
+
+By previous step and e.
+
+$$
+s \vee \neg q \\
+\neg s \\
+\therefore \neg q
+$$
+
+By previous step and b, and we have concluded at f.
+
 42.
 
 a. $p \vee q$
@@ -2789,6 +2854,53 @@ e. $\neg q \to u \wedge s$
 
 f. $\therefore t$
 
+$$
+q \to r \\
+\neg r \\
+\therefore \neg q
+$$
+
+By b and d and modus tollens.
+
+$$
+p \vee q \\
+\neg q \\
+\therefore p
+$$
+
+By a, the previous step, and elimination.
+
+$$
+\neg q \to u \wedge s \\
+\neg q \\
+\therefore u \wedge s
+$$
+
+By e and previous step.
+
+$$
+u \wedge s \\
+\therefore s
+$$
+
+By previous step and specialization.
+
+$$
+p \\
+s \\
+\therefore p \wedge s
+$$
+
+By previous steps and conjunction.
+
+$$
+p \wedge s \to t \\
+p \wedge s \\
+\therefore t
+$$
+
+By c and previous step, and we have arrived at f.
+
 43.
 
 a. $\neg p \to r \wedge \neg s$
@@ -2802,6 +2914,45 @@ d. $\neg w$
 e. $u \vee w$
 
 f. $\therefore \neg t$
+
+$$
+\neg w \\
+u \vee w \\
+\therefore u
+$$
+
+By d, e, and elimination.
+
+$$
+u \to \neg p \\
+u \\
+\therefore \neg p
+$$
+
+By previous step, c, and modus ponens.
+
+$$
+\neg p \to r \wedge \neg s \\
+\neg p \\
+\therefore r \wedge \neg s
+$$
+
+By previous step, a, and modus ponens.
+
+$$
+r \wedge \neg s \\
+\therefore \neg s
+$$
+
+By previous step and specialization.
+
+$$
+t \to s \\
+\neg s \\
+\therefore \neg t
+$$
+
+By t, previous step, and modus tollens, and we have arrived at f.
 
 44.
 
@@ -2820,3 +2971,74 @@ f. $\neg p \wedge r \to u$
 g. $w \vee t$
 
 h. $\therefore u \wedge w$
+
+1.
+
+$$
+\neg s \to \neg t \\
+\neg s \\
+\therefore \neg t
+$$
+
+By e, c, and modus ponens.
+
+2.
+
+$$
+w \vee t \\
+\neg t \\
+\therefore w
+$$
+
+By g, 2, and elimination.
+
+3.
+
+$$
+r \vee s \\
+\neg s \\
+\therefore r
+$$
+
+By b, e, and elimination.
+
+4.
+
+$$
+\neg q \vee s \\
+\neg s \\
+\therefore \neg q
+$$
+
+By d, e, and elimination.
+
+5.
+
+$$
+p \to q \\
+\neg q \\
+\therefore \neg p
+$$
+
+By a, 4, and modus tollens.
+
+6.
+
+$$
+\neg p \wedge r \to u \\
+\neg p \\
+r \\
+\therefore u
+$$
+
+By f, 5, 3, and modus ponens.
+
+7.
+
+$$
+u \\
+w \\
+\therefore u \wedge w
+$$
+
+By 2, 6, and conjunction, and we have arrived at h.
