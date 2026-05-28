@@ -3042,3 +3042,165 @@ w \\
 $$
 
 By 2, 6, and conjunction, and we have arrived at h.
+
+---
+
+**Exercise Set 2.4**
+
+Page 114
+
+Give the output signals for the circuits in 1-4 if the input signals are as
+indicated.
+
+(for 1 - 4, see page 114)
+
+In 5-8, write an input/output table for the circuit in the referenced exercise.
+
+5. Exercise 1
+
+6. Exercise 2
+
+7. Exercise 3
+
+8. Exercise 4
+
+In 9-12, find the Boolean expression that corresponds to the circuit in the
+referenced exercise.
+
+9. Exercise 1
+
+10. Exercise 2
+
+11. Exercise 3
+
+12. Exercise 4
+
+Construct circuits for the Boolean expressions in 13-17.
+
+13. $\neg P \vee Q$
+
+14. $\neg (P \vee Q)$
+
+15. $P \vee (\neg P \wedge \neg Q)$
+
+16. $(P \wedge Q) \vee \neg R$
+
+17. $(P \wedge \neg Q) \vee (\neg P \wedge R)$
+
+For each of the tables in 18-21, construct (a) a Boolean expression for having
+the given table as its truth table and (b) a circuit having the given table as
+its input.output table.
+
+18.
+
+| $P$ | $Q$ | $R$ | $S$ |
+| --- | --- | --- | --- |
+| 1   | 1   | 1   | 0   |
+| 1   | 1   | 0   | 1   |
+| 1   | 0   | 1   | 0   |
+| 1   | 0   | 0   | 0   |
+| 0   | 1   | 1   | 1   |
+| 0   | 1   | 0   | 0   |
+| 0   | 0   | 1   | 0   |
+| 0   | 0   | 0   | 0   |
+
+19.
+
+| $P$ | $Q$ | $R$ | $S$ |
+| --- | --- | --- | --- |
+| 1   | 1   | 1   | 0   |
+| 1   | 1   | 0   | 1   |
+| 1   | 0   | 1   | 0   |
+| 1   | 0   | 0   | 1   |
+| 0   | 1   | 1   | 0   |
+| 0   | 1   | 0   | 1   |
+| 0   | 0   | 1   | 0   |
+| 0   | 0   | 0   | 0   |
+
+20.
+
+| $P$ | $Q$ | $R$ | $S$ |
+| --- | --- | --- | --- |
+| 1   | 1   | 1   | 1   |
+| 1   | 1   | 0   | 0   |
+| 1   | 0   | 1   | 1   |
+| 1   | 0   | 0   | 0   |
+| 0   | 1   | 1   | 0   |
+| 0   | 1   | 0   | 0   |
+| 0   | 0   | 1   | 0   |
+| 0   | 0   | 0   | 1   |
+
+21.
+
+| $P$ | $Q$ | $R$ | $S$ |
+| --- | --- | --- | --- |
+| 1   | 1   | 1   | 0   |
+| 1   | 1   | 0   | 1   |
+| 1   | 0   | 1   | 0   |
+| 1   | 0   | 0   | 0   |
+| 0   | 1   | 1   | 1   |
+| 0   | 1   | 0   | 1   |
+| 0   | 0   | 1   | 0   |
+| 0   | 0   | 0   | 0   |
+
+22. Design a circuit to take input signals $P$, $Q$, $R$ and output a 1 if, and
+    only if, $P$ and $Q$ have the same value and $Q$ and $R$ have opposite
+    values.
+
+23. Design a circuit to take input signals $P$, $Q$, and $R$ and output a 1 if,
+    and only if, all three of $P$, $Q$, and $R$ have the same value.
+
+24. The lights in a classroom are controlled by two switches: one at the back of
+    the room and one at the front. Moving either switch to the opposite position
+    turns the lights off if they are on and on if they are off. Assume the
+    lights have been installed so that when both switches are in the down
+    position, the lights are off. Design a circuit to control the switches.
+
+25. An alarm system has three different control panels in three different
+    locations. To enable the system, switches in at least two of the panels must
+    be in the on position. If fewer than two are in the on position, the system
+    is disabled. Design a circuit to control the switches.
+
+Use the properties listed in Theorem 2.1.1 to show that each pair of circuits in
+26-29 have the same input/output table. (Find the Boolean expressions for the
+circuits and show that they are logically equivalent when regarded as statement
+forms.)
+
+(See Page 115 for circuit diagrams.)
+
+For the circuits corresponding to the Boolean expressions in each of 30 and 31
+there is an equivalent circuit with at most two logic gates. Find such a
+circuit.
+
+30. $(P \wedge Q) \vee (\neg P \wedge Q) \vee (\neg P \wedge \neg Q)$
+
+31. $(\neg P \wedge \neg Q) \vee (\neg P \wedge Q) \vee (P \wedge \neg Q)$
+
+32. The Boolean expression for the circuit in Example 2.4.5 is
+
+$$ (P \wedge Q \wedge R)  \vee (P \wedge \neg Q \wedge R) \vee (P \wedge \neg Q \wedge \neg R)$$
+
+(a disjunctive normal form). Find a circuit with at most three logic gates that
+is equivalent to this circuit.
+
+33.
+
+a. Show that for the Sheffer stroke $|$,
+
+$$ P \wedge Q \equiv (P|Q)(P|Q) $$
+
+b. Use the results of Example 2.4.7 and part (a) above to write
+$P \wedge (\neg Q \vee R)$ using only Sheffer strokes.
+
+34. Show that the following logical equivalences hold for the Peirce arrow
+    $\downarrow$, where $P \downarrow Q \equiv \neg(P \vee Q)$.
+
+a. $\neg P \equiv P \downarrow P$
+
+b. $P \vee Q \equiv (P \downarrow Q) \downarrow (P \downarrow Q)$
+
+c. $P \wedge Q \equiv (P \downarrow P) \downarrow (Q \downarrow Q)$
+
+d. Write $P \to Q$ using Peirce arrows only.
+
+e. Write $P \leftrightarrow Q$ using Peirce arrows only.

@@ -302,3 +302,21 @@ Page 97
 
 If you can show that the supposition that statement $p$ is false leads logically
 to a contradiction, then you can conclude that $pr is true.
+
+---
+
+Page 108
+
+**Definition**
+
+A **recognizer** is a circuit that outputs a 1 for exactly one particular
+combination of input signals and outputs 0's for all other combinations.
+
+---
+
+Page 112
+
+**Definition**
+
+Two digital logic circuits are **equivalent** if, and only if, their
+input/output tables are identical.

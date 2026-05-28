@@ -137,3 +137,40 @@ are all true; is false
    _______. In this case we can be sure that its conclusion _______.
 
 valid; are all true; is true
+
+---
+
+**Test Yourself**
+
+Page 113
+
+1. The input/output table for a digital logic circuit is a table that shows
+   _______.
+
+The output signal(s) that correspond to all possible combinations of input
+signals to the circuit.
+
+2. The Boolean expression that corresponds to a digital logic circuit is
+   _______.
+
+a Boolean expression that represents the input signals as variables and
+indicates the successive actions of the logic gates on the input signals.
+
+3. A recognizer is a digital logic circuit that _______.
+
+outputs a 1 for exactly one particular combination of input signals and outputs
+0s for all other combinations.
+
+4. Two digital logic circuits are equivalent if, and only if, _______.
+
+they have the same input/output table
+
+5. A NAND-gate is constructed by placing a _______ gate immediately following an
+   _______ gate.
+
+NOT; AND
+
+6. A NOR-gate is constructed by placing a _______ gate immediately following an
+   _______ gate.
+
+NOT; OR
