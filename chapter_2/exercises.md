@@ -698,7 +698,7 @@ for each step.
 
 $$ (p \wedge \neg q) \vee p \equiv p $$
 
-$$ p \vee (p \wedge \neg q) \equiv p \text{ by communative law for } \vee $$
+$$ p \vee (p \wedge \neg q) \equiv p \text{ by commutative law for } \vee $$
 
 $$ \equiv p \text{ by the absorption law for } \vee \text{ with } \neg q \text{ replacing } q $$
 
@@ -3054,28 +3054,82 @@ indicated.
 
 (for 1 - 4, see page 114)
 
+1. 1
+
+2. 1
+
+3. 1
+
+4. 1
+
 In 5-8, write an input/output table for the circuit in the referenced exercise.
 
 5. Exercise 1
 
+| $P$ | $Q$ | $R |
+| --- | --- | -- |
+| 1   | 1   | 1  |
+| 1   | 0   | 1  |
+| 0   | 1   | 0  |
+| 0   | 0   | 1  |
+
 6. Exercise 2
+
+| $P$ | $Q$ | $R |
+| --- | --- | -- |
+| 1   | 1   | 0  |
+| 1   | 0   | 1  |
+| 0   | 1   | 0  |
+| 0   | 0   | 0  |
 
 7. Exercise 3
 
+| $P$ | $Q$ | $R$ | $S$ |
+| --- | --- | --- | --- |
+| 1   | 1   | 1   | 1   |
+| 1   | 1   | 0   | 0   |
+| 1   | 0   | 1   | 1   |
+| 1   | 0   | 0   | 1   |
+| 0   | 1   | 1   | 1   |
+| 0   | 1   | 0   | 0   |
+| 0   | 0   | 1   | 1   |
+| 0   | 0   | 0   | 0   |
+
 8. Exercise 4
+
+| $P$ | $Q$ | $R$ | $S$ |
+| --- | --- | --- | --- |
+| 1   | 1   | 1   | 1   |
+| 1   | 1   | 0   | 1   |
+| 1   | 0   | 1   | 1   |
+| 1   | 0   | 0   | 1   |
+| 0   | 1   | 1   | 1   |
+| 0   | 1   | 0   | 1   |
+| 0   | 0   | 1   | 1   |
+| 0   | 0   | 0   | 1   |
 
 In 9-12, find the Boolean expression that corresponds to the circuit in the
 referenced exercise.
 
 9. Exercise 1
 
+$$ P \vee \neg Q $$
+
 10. Exercise 2
+
+$$ (P \vee Q) \wedge \neg Q $$
 
 11. Exercise 3
 
+$$ (P \wedge \neg Q) \vee R $$
+
 12. Exercise 4
 
+$$ (P \vee Q) \vee \neg(Q \wedge R) $$
+
 Construct circuits for the Boolean expressions in 13-17.
+
+(drawn out on paper)
 
 13. $\neg P \vee Q$
 
@@ -3104,6 +3158,10 @@ its input.output table.
 | 0   | 0   | 1   | 0   |
 | 0   | 0   | 0   | 0   |
 
+$$ (P \wedge Q \wedge \neg R) \vee (\neg P \wedge Q \wedge R) $$
+
+Drawn in person.
+
 19.
 
 | $P$ | $Q$ | $R$ | $S$ |
@@ -3116,6 +3174,8 @@ its input.output table.
 | 0   | 1   | 0   | 1   |
 | 0   | 0   | 1   | 0   |
 | 0   | 0   | 0   | 0   |
+
+$$ (P \wedge Q \wedge \neg R) \vee (P \wedge \neg Q \wedge \neg R) \vee (\neg P \wedge Q \wedge \neg R) $$
 
 20.
 
@@ -3130,6 +3190,8 @@ its input.output table.
 | 0   | 0   | 1   | 0   |
 | 0   | 0   | 0   | 1   |
 
+$$ (P \wedge Q \wedge R) \vee (P \wedge \neg Q \wedge R) \vee (\neg P \wedge \neg Q \wedge \neg R) $$
+
 21.
 
 | $P$ | $Q$ | $R$ | $S$ |
@@ -3143,12 +3205,40 @@ its input.output table.
 | 0   | 0   | 1   | 0   |
 | 0   | 0   | 0   | 0   |
 
+$$ (P \wedge Q \wedge \neg R) \vee (\neg P \wedge Q \wedge R) \vee (\neg P \wedge Q \wedge \neg R) $$
+
 22. Design a circuit to take input signals $P$, $Q$, $R$ and output a 1 if, and
     only if, $P$ and $Q$ have the same value and $Q$ and $R$ have opposite
     values.
 
+| $P$ | $Q$ | $R$ | $S$ |
+| --- | --- | --- | --- |
+| 1   | 1   | 1   | 0   |
+| 1   | 1   | 0   | 1   |
+| 1   | 0   | 1   | 0   |
+| 1   | 0   | 0   | 0   |
+| 0   | 1   | 1   | 0   |
+| 0   | 1   | 0   | 0   |
+| 0   | 0   | 1   | 1   |
+| 0   | 0   | 0   | 0   |
+
+$$ (P \wedge Q \wedge \neg R) \vee (\neg P \wedge \neg Q \wedge R)$$
+
 23. Design a circuit to take input signals $P$, $Q$, and $R$ and output a 1 if,
     and only if, all three of $P$, $Q$, and $R$ have the same value.
+
+| $P$ | $Q$ | $R$ | $S$ |
+| --- | --- | --- | --- |
+| 1   | 1   | 1   | 1   |
+| 1   | 1   | 0   | 0   |
+| 1   | 0   | 1   | 0   |
+| 1   | 0   | 0   | 0   |
+| 0   | 1   | 1   | 0   |
+| 0   | 1   | 0   | 0   |
+| 0   | 0   | 1   | 0   |
+| 0   | 0   | 0   | 1   |
+
+$$ (P \wedge Q \wedge R) \vee (\neg P \wedge \neg Q \wedge \neg R) $$
 
 24. The lights in a classroom are controlled by two switches: one at the back of
     the room and one at the front. Moving either switch to the opposite position
@@ -3156,10 +3246,47 @@ its input.output table.
     lights have been installed so that when both switches are in the down
     position, the lights are off. Design a circuit to control the switches.
 
+Let $P$ and $Q$ represent the switches in the classroom, with $0$ being "down"
+and $1$ being "up." Let $R$ represent the condition of the light, with $0$ being
+"off" and $1$ being "on." Initially, $P = Q = 0$ and $R = 0.$ If either $P$ or
+$Q$ (but not both) is changed to $1$, the light turns on. SO when $P = 1$ and
+$Q = 0$, then $R = 1$, and when $P = 0$ and $Q = 1$, then $R = 1$. Thus when one
+switch is up and the other is down the light is on, and hence moving the switch
+that is down to the up position turns the light off. So when $P = 1$ and
+$Q = 1$, then $R = 0$. It follows that the input/output table has the following
+appearance:
+
+| $P$ | $Q$ | $R$ |
+| --- | --- | --- |
+| 1   | 1   | 0   |
+| 1   | 0   | 1   |
+| 0   | 1   | 1   |
+| 0   | 0   | 0   |
+
+$$ (P \wedge \neg Q) \vee (\neg P \wedge Q) $$
+
 25. An alarm system has three different control panels in three different
     locations. To enable the system, switches in at least two of the panels must
     be in the on position. If fewer than two are in the on position, the system
     is disabled. Design a circuit to control the switches.
+
+Let $P$, $Q$, and $R$ represent the switches in the panels. Let 1 be "on" and 0
+be "off" for these switches. Let $S$ represent the system, with 1 being
+"enabled" and 0 being "disabled." The input/output table has the following
+appearance:
+
+| $P$ | $Q$ | $R$ | $S$ |
+| --- | --- | --- | --- |
+| 1   | 1   | 1   | 1   |
+| 1   | 1   | 0   | 1   |
+| 1   | 0   | 1   | 1   |
+| 1   | 0   | 0   | 0   |
+| 0   | 1   | 1   | 1   |
+| 0   | 1   | 0   | 0   |
+| 0   | 0   | 1   | 0   |
+| 0   | 0   | 0   | 0   |
+
+$$ (P \wedge Q \wedge R) \vee (P \wedge Q \wedge \neg R) \vee (P \wedge \neg Q \wedge R) \vee (\neg P \wedge Q \wedge R) $$
 
 Use the properties listed in Theorem 2.1.1 to show that each pair of circuits in
 26-29 have the same input/output table. (Find the Boolean expressions for the
@@ -3168,13 +3295,206 @@ forms.)
 
 (See Page 115 for circuit diagrams.)
 
+26.
+
+a. $(P \wedge Q) \vee Q$
+
+b. $(P \vee Q) \wedge Q$
+
+Show:
+
+$$ (P \wedge Q) \vee Q \equiv (P \vee Q) \wedge Q $$
+
+$$ (P \wedge Q) \vee Q \equiv Q \equiv (P \vee Q) \wedge Q $$
+
+This is true by the absorption laws.
+
+27.
+
+a. $\neg P \wedge \neg(\neg P \wedge Q)$
+
+b. $\neg(P \vee Q)$
+
+Show:
+
+$$ \neg P \wedge \neg(\neg P \wedge Q) \equiv \neg(P \vee Q) $$
+
+$$ \neg P \wedge \neg(\neg P \wedge Q) $$
+
+$$ \neg P \wedge (\neg\neg P \vee \neg Q) $$
+
+By De Morgan's law
+
+$$ \neg P \wedge (P \vee \neg Q) $$
+
+By double negative law.
+
+$$ (\neg P \wedge P) \vee (\neg P \wedge \neg Q) $$
+
+By distribution law.
+
+$$ \mathbf{c} \vee (\neg P \wedge \neg Q) $$
+
+By universal bounds law.
+
+$$ \neg P \wedge \neg Q $$
+
+By identity law.
+
+$$ \neg(P \vee Q) $$
+
+By De Morgan's law. Which is equivalent to our second statement.
+
+28.
+
+a. $(P \wedge Q) \vee (P \wedge \neg Q) \vee (\neg P \wedge \neg Q)$
+
+b. $P \vee \neg Q$
+
+Show that:
+
+$$ (P \wedge Q) \vee (P \wedge \neg Q) \vee (\neg P \wedge \neg Q) \equiv P \vee \neg Q $$
+
+$$ (P \wedge Q) \vee (P \wedge \neg Q) \vee (\neg P \wedge \neg Q) $$
+
+$$ (P \wedge (Q \vee \neg Q)) \vee (\neg P \wedge \neg Q) $$
+
+By distributive law.
+
+$$ (P \wedge \mathbf{t}) \vee (\neg P \wedge \neg Q) $$
+
+By universal bound law.
+
+$$ P \vee (\neg P \wedge \neg Q) $$
+
+By identity law.
+
+$$ (P \vee \neg P) \wedge (P \vee \neg Q) $$
+
+By distributive law.
+
+$$ \mathbf{t} \wedge (P \vee \neg Q) $$
+
+By negation law.
+
+$$ P \vee \neg Q $$
+
+By identity law. And we have arrived at our second statement.
+
+29.
+
+a. $(P \wedge Q) \vee (\neg P \wedge Q) \vee (P \wedge \neg Q)$
+
+b. $P \vee Q$
+
+Show:
+
+$$ (P \wedge Q) \vee (\neg P \wedge Q) \vee (P \wedge \neg Q) \equiv P \vee Q $$
+
+$$ (P \wedge Q) \vee (\neg P \wedge Q) \vee (P \wedge \neg Q) $$
+
+$$ ((Q \wedge P) \vee (Q \wedge \neg P)) \vee (P \wedge \neg Q) $$
+
+By commutative law.
+
+$$ (Q \wedge (P \vee \neg P)) \vee (P \wedge \neg Q) $$
+
+By distributive law.
+
+$$ (Q \wedge \mathbf{t}) \vee (P \wedge \neg Q) $$
+
+By negation law.
+
+$$ Q \vee (P \wedge \neg Q) $$
+
+By identity law.
+
+$$ (Q \vee P) \wedge (Q \vee \neg Q) $$
+
+By distributive law.
+
+$$ (Q \vee P) \wedge (\mathbf{t}) $$
+
+By negation law.
+
+$$ Q \vee P $$
+
+By identity law.
+
+$$ P \vee Q $$
+
+By commutative law. And we have arrived at our second expression.
+
 For the circuits corresponding to the Boolean expressions in each of 30 and 31
 there is an equivalent circuit with at most two logic gates. Find such a
 circuit.
 
 30. $(P \wedge Q) \vee (\neg P \wedge Q) \vee (\neg P \wedge \neg Q)$
 
+Basically, just find an equivalent circuit where there is only one expression of
+$P$ and $Q$.
+
+$$ (P \wedge Q) \vee (\neg P \wedge Q) \vee (\neg P \wedge \neg Q) $$
+
+$$ ((Q \wedge P) \vee (Q \wedge \neg P)) \vee (\neg P \wedge \neg Q) $$
+
+By commutative law.
+
+$$ (Q \wedge (P \vee \neg P)) \vee (\neg P \wedge \neg Q) $$
+
+By distributive law.
+
+$$ (Q \wedge \mathbf{t}) \vee (\neg P \wedge \neg Q) $$
+
+By negation law.
+
+$$ Q \vee (\neg P \wedge \neg Q) $$
+
+By identity law.
+
+$$ (Q \vee \neg P) \wedge (Q \vee \neg Q) $$
+
+By distributive law.
+
+$$ (Q \vee \neg P) \wedge \mathbf{t} $$
+
+By negation law.
+
+$$ Q \vee \neg P $$
+
+By identity law.
+
+$$ \neg P \vee Q $$
+
+By commutative law.
+
 31. $(\neg P \wedge \neg Q) \vee (\neg P \wedge Q) \vee (P \wedge \neg Q)$
+
+$$ (\neg P \wedge \neg Q) \vee (\neg P \wedge Q) \vee (P \wedge \neg Q) $$
+
+$$ (\neg P \wedge (\neg Q \vee Q)) \vee (P \wedge \neg Q) $$
+
+By distributive law.
+
+$$ (\neg P \wedge \mathbf{t}) \vee (P \wedge \neg Q) $$
+
+By negation law.
+
+$$ \neg P \vee (P \wedge \neg Q) $$
+
+By identity law.
+
+$$ (\neg P \vee P) \wedge (\neg P \vee \neg Q) $$
+
+By distributive law.
+
+$$ \mathbf{t} \wedge (\neg P \vee \neg Q) $$
+
+By negation law.
+
+$$ \neg P \vee \neg Q $$
+
+By identity law.
 
 32. The Boolean expression for the circuit in Example 2.4.5 is
 
@@ -3183,24 +3503,147 @@ $$ (P \wedge Q \wedge R)  \vee (P \wedge \neg Q \wedge R) \vee (P \wedge \neg Q 
 (a disjunctive normal form). Find a circuit with at most three logic gates that
 is equivalent to this circuit.
 
+$$ (P \wedge Q \wedge R)  \vee (P \wedge \neg Q \wedge R) \vee (P \wedge \neg Q \wedge \neg R)$$
+
+$$ P \wedge ((Q \wedge R) \vee (\neg Q \wedge R) \vee (\neg Q \wedge \neg R)) $$
+
+By distributive law.
+
+$$ P \wedge (((R \wedge Q) \vee (R \wedge \neg Q)) \vee (\neg Q \wedge \neg R)) $$
+
+By commutative law.
+
+$$ P \wedge ((R \wedge (Q \vee \neg Q)) \vee (\neg Q \wedge \neg R)) $$
+
+By distributive law.
+
+$$ P \wedge ((R \wedge \mathbf{t}) \vee (\neg Q \wedge \neg R)) $$
+
+By negation law.
+
+$$ P \wedge (R \vee (\neg Q \wedge \neg R)) $$
+
+By identity law.
+
+$$ P \wedge ((R \vee \neg Q) \wedge (R \vee \neg R)) $$
+
+By distributive law.
+
+$$ P \wedge ((R \vee \neg Q) \wedge \mathbf{t}) $$
+
+By negation law.
+
+$$ P \wedge (R \vee \neg Q) $$
+
+By identity law. And we have found an equivalent expression from which we could
+draw a much more simple circuit diagram.
+
 33.
 
 a. Show that for the Sheffer stroke $|$,
 
-$$ P \wedge Q \equiv (P|Q)(P|Q) $$
+$$ P \wedge Q \equiv (P|Q)|(P|Q) $$
+
+NAND simply means:
+
+$$ (P|Q) \equiv \neg(P \wedge Q) $$
+
+So this means:
+
+$$ (P|Q)|(P|Q) \equiv \neg(\neg(P \wedge Q) \wedge \neg(P \wedge Q)) $$
+
+$$ (P|Q)|(P|Q) \equiv \neg(\neg(P \wedge Q)) $$
+
+By the idempotent law.
+
+$$ (P|Q)|(P|Q) \equiv P \wedge Q $$
+
+By double negative law. And we have proven our equivalency.
 
 b. Use the results of Example 2.4.7 and part (a) above to write
 $P \wedge (\neg Q \vee R)$ using only Sheffer strokes.
+
+$$ \neg Q = (Q|Q) $$
+
+$$ P \wedge (Q|Q \vee R) $$
+
+$$ A \vee B \equiv (A|A)|(B|B) $$
+
+So:
+
+$$ P \wedge (((Q|Q)|(Q|Q))|(R|R)) $$
+
+$$ P \wedge X \equiv (P|X)|(P|X) $$
+
+So:
+
+$$ (P|(((Q|Q)|(Q|Q))|(R|R)))|(P|(((Q|Q)|(Q|Q))|(R|R))) $$
 
 34. Show that the following logical equivalences hold for the Peirce arrow
     $\downarrow$, where $P \downarrow Q \equiv \neg(P \vee Q)$.
 
 a. $\neg P \equiv P \downarrow P$
 
+Recall that $P \downarrow Q \equiv \neg(P \vee Q)$
+
+So $P \downarrow P \equiv \neg(P \vee P)$.
+
+$$ P \downarrow P \equiv \neg P $$
+
+By idempotent law.
+
 b. $P \vee Q \equiv (P \downarrow Q) \downarrow (P \downarrow Q)$
+
+$$ (P \downarrow Q) \downarrow (P \downarrow Q) $$
+
+$$ \neg(P \vee Q) \downarrow \neg(P \vee Q) $$
+
+$$ \neg(\neg(P \vee Q) \vee \neg(P \vee Q)) $$
+
+$$ \neg(\neg(P \vee Q)) $$
+
+By idempotent law.
+
+$$ P \vee Q $$
+
+By double negation law.
 
 c. $P \wedge Q \equiv (P \downarrow P) \downarrow (Q \downarrow Q)$
 
+$$ (P \downarrow P) \downarrow (Q \downarrow Q) $$
+
+$$ \neg(P \vee P) \downarrow \neg(Q \vee Q) $$
+
+$$ \neg(\neg(P \vee P) \vee \neg(Q \vee Q)) $$
+
+$$ \neg(\neg P \vee \neg Q) $$
+
+By idempotent law.
+
+$$ P \wedge Q $$
+
+By De Morgan's law.
+
 d. Write $P \to Q$ using Peirce arrows only.
 
+$$ P \to Q \equiv \neg P \vee Q $$
+
+$$ \neg P \vee Q $$
+
+$$ (P \downarrow P) \vee Q $$
+
+$$ ((P \downarrow P)\downarrow Q) \downarrow ((P \downarrow P)\downarrow Q) $$
+
 e. Write $P \leftrightarrow Q$ using Peirce arrows only.
+
+$$ P \leftrightarrow Q \equiv (P \to Q) \wedge (Q \to P) $$
+
+Using part d, we can then simplify this a bit further to:
+
+$$ (((P \downarrow P)\downarrow Q) \downarrow ((P \downarrow P)\downarrow Q)) \wedge (((Q \downarrow Q)\downarrow P) \downarrow ((Q \downarrow Q)\downarrow P)) $$
+
+$$ A \wedge B \equiv (A \downarrow A)\downarrow(B \downarrow B) $$
+
+So:
+
+$$ (((P \downarrow P)\downarrow Q) \downarrow ((P \downarrow P)\downarrow Q)\downarrow ((P \downarrow P)\downarrow Q)) \downarrow (((Q \downarrow Q)\downarrow P) \downarrow ((Q \downarrow Q)\downarrow P) \downarrow (Q \downarrow Q)) $$
