@@ -3658,29 +3658,53 @@ Represent the decimal integers in 1-6 in binary notation.
 
 1. $19$
 
+$$ 10011_2 $$
+
 2. $55$
+
+$$ 110111_2 $$
 
 3. $287$
 
+$$ 100011111_2 $$
+
 4. $458$
+
+$$ 111001010_2 $$
 
 5. $1609$
 
+$$ 11001001001_2 $$
+
 6. $1424$
+
+$$ 10110010000_2 $$
 
 Represent the integers in 7-12 in decimal notation.
 
 7. $1110_2$
 
+$$ 14_{10} $$
+
 8. $10111_2$
+
+$$ 1 + 2 + 4 + 16 = 23_{10} $$
 
 9. $110110_2$
 
+$$ 2 + 4 + 16 + 32 = 54_{10} $$
+
 10. $1100101_2$
+
+$$ 1 + 4 + 32 + 64 = 101_{10} $$
 
 11. $1000111_2$
 
+$$ 1 + 2 + 4 + 64 = 71_{10} $$
+
 12. $1011011_2$
+
+$$ 1 + 2 + 8 + 16 + 64 = 91_{10} $$
 
 Perform the arithmetic in 13-20 using binary notation.
 
@@ -3691,12 +3715,16 @@ $$
 \underline{+ 101_2}
 $$
 
+$$ 10000_2 $$
+
 14.
 
 $$
 1001_2 \\
 \underline{+ 1011_2}
 $$
+
+$$ 10100_2 $$
 
 15.
 
@@ -3705,6 +3733,8 @@ $$
 \underline{+ 11101_2}
 $$
 
+$$ 1001010_2 $$
+
 16.
 
 $$
@@ -3712,12 +3742,16 @@ $$
 \underline{+ 1001011010_2}
 $$
 
+$$ 10000010101_2 $$
+
 17.
 
 $$
 10100_2 \\
-\underline{+ 1101_2}
+\underline{- 1101_2}
 $$
+
+$$ 111_2 $$
 
 18.
 
@@ -3726,12 +3760,16 @@ $$
 \underline{- 1101_2}
 $$
 
+$$ 1101_2 $$
+
 19.
 
 $$
 101101_2 \\
 \underline{- 10011_2}
 $$
+
+$$ 11010_2 $$
 
 20.
 
@@ -3740,60 +3778,236 @@ $$
 \underline{- 10111_2}
 $$
 
+$$ 111101_2 $$
+
 21. Give the output signals $S$ and $T$ for the circuit shown below if the input
     signals $P$, $Q$, and $R$ are as specified. Note that this is _not_ the
     circuit for a full-adder.
 
 a. $P = 1$, $Q = 1$, $R = 1$
 
+$S = 0$, $T = 1$
+
 b. $P = 0$, $Q = 1$, $R = 0$
 
+$S = 0$, $T = 1$
+
 c. $P = 1$, $Q = 0$, $R = 1$
+
+$S = 0$, $T = 0$
 
 (See Page 130)
 
 22. Add $11111111_2 + 1_2$ and convert the result to decimal notation, to verify
-    that $11111111_2 = (2^8 - 1)_10$.
+    that $11111111_2 = (2^8 - 1)_{10}$.
+
+Yes, $(2^8 - 1)_{10} = 255_{10}$, and
+$11111111_2 + 1_2 = 100000000_2 = 256_{10}$
 
 Find the 8-bit two's complements for the integers in 23-26.
 
 23. $-23$
 
+$$ 11101001_2 $$
+
 24. $-67$
+
+$$ 10111101_2 $$
 
 25. $-4$
 
+$$ 11111100_2 $$
+
 26. $-115$
+
+$$ 10001101_2 $$
 
 Find the decimal representations for the integers with the 8-bit two's
 complements given in 27-30.
 
 27. $11010011$
 
+Flip, then add one, if original binary starts with 1, then is negative.
+
+$00101100_2 \to 00101101_2 = 45_{10}$
+
+$$ -45 $$
+
 28. $10011001$
+
+$01100110_2 \to 01100111_2 = 103_{10}$
+
+$$ -103 $$
 
 29. $11110010$
 
+$00001101 \to 00001110 = 14_{10}$
+
+$$ -14 $$
+
 30. $10111010$
+
+$01000101 \to 01000110 = 70_{10}$
+
+$$ -70 $$
 
 Use 8-bit two's complements to compute the sums in 31-36.
 
 31. $57 + (-118)$
 
+$$ 57_{10} = 00111001_2 $$
+
+$$ -118 = 01110110_2 \to \text{ flip } 10001001_2 + 00000001_2 = 10001010_2 $$
+
+$$
+00111001 \\
+\underline{+ 10001010} \\
+11000011
+$$
+
+$$ 11000011_2 \to \text{ flip } 00111100_2 + 00000001_2 = 00111101_2 = 61_{10} $$
+
+And because $11000011_2$ leads with a 1, we know this is negative, so the sum
+is:
+
+$$ -61 $$
+
+And that is equal to our original statement: $57 + (-118)$
+
 32. $62 + (-18)$
+
+$$ 62_{10} = 00111110_2 $$
+
+$$ 18_{10} = 00010010 \to \text{ flip } 11101101_2 + 00000001_2 = 11101110_2 $$
+
+$$
+00111110 \\
+\underline{+ 11101110} \\
+100101100
+$$
+
+We truncate the leading 1 in this case as it exceeds our 8 bits, leaving:
+
+$$ 00101100 $$
+
+And since it's a leading $0$, no need to bit flip and add 1, so we just convert
+directly to decimal:
+
+$$ 00101100_2 = 44_{10} $$
+
+So our answer is
+
+$$ 44 $$
+
+Which is equal to the given decimal statement $62 + (-18) = 44$.
 
 33. $(-6) + (-73)$
 
+$$ 6 = 00000110_2 \to \text{ flip } 11111001_2 + 00000001_2 = 11111010_2 $$
+
+$$ 73 = 01001001 \to \text{ flip } 10110110_2 + 00000001_2 = 10110111_2 $$
+
+$$
+11111010 \\
+\underline{+ 10110111} \\
+110110001
+$$
+
+Truncate the leading 1:
+
+$$ 10110001 $$
+
+Now leading 1 means it's a negative number, so bit flip and add a 1:
+
+$$ 10110001 \to \text{ flip } 01001110_2 + 00000001_2 = 01001111_2 = 79_{10} $$
+
+So our answer is:
+
+$$ -79 $$
+
+Which is equal to $(-6) + (-73)$
+
 34. $89 + (-55)$
+
+$$ 89_{10} = 01011001_2 $$
+
+$$ 55_{10} = 00110111 \to \text{ flip } \to 11001000 + 00000001 = 11001001 $$
+
+$$
+01011001 \\
+\underline{+ 11001001} \\
+100100010
+$$
+
+Truncate the leading 1 leaving:
+
+$$ 00100010 $$
+
+Leading $0$ means positive, simply convert to decimal:
+
+$$ 00100010_2 = 34_{10} $$
+
+So our answer is:
+
+$$ 34 = 89 + (-55) $$
 
 35. $(-15) + (-46)$
 
+$15_{10} = 00001111 \to \text{ flip } \to 11110000 + 00000001 = 11110001 $
+
+$$ 46_{10} = 00101110 \to \text{ flip } \to 11010001 + 00000001 = 11010010 $$
+
+$$
+11110001 \\
+\underline{+ 11010010} \\
+111000011
+$$
+
+Truncate the leading 1 leaving:
+
+$$ 11000011 $$
+
+Leading 1 is negative, so flip and add one:
+
+$$ 11000011 \to \text{ flip } \to 00111100 + 00000001 = 00111101 = 61_{10} $$
+
+So our answer is $-61 = (-15) + (-46)$.
+
 36. $123 + (-94)$
+
+$$ 123_{10} = 01111011 $$
+
+$$ 94_{10} = 01011110 \to \text{ flip } \to 10100001 + 00000001 = 10100010 $$
+
+$$
+01111011 \\
+\underline{+ 10100010} \\
+100011101
+$$
+
+Truncate the leading 1 leaving:
+
+$$ 00011101 $$
+
+Leading 0 means positive, just convert to decimal:
+
+$$ 00011101 = 29_{10} $$
+
+So our answer is $29 = 123 + (-94)$.
 
 37.
 
 a. Show that when you apply the 8-bit two's complement procedure to the 8-bit
 two's complement for $-128$, you get the 8-bit two's complement for $-128$.
+
+$$ 128_{10} = 10000000_2 \to \text{ flip } \to 01111111 + 00000001 = 10000000_2 $$
+
+Applying the two's complement again shows:
+
+$$ 10000000_2 \to \text{ flip } \to 01111111 + 00000001 = 10000000_2 $$
+
+So the 8-bit two's complement of the 8-bit two's complement of -128 is 10000000,
+which is the 8-bit two's complement of -128.
 
 b. Show that if $a$, $b$, and $a + b$ are integers in the range $1$ through
 $128$, then
@@ -3804,29 +4018,134 @@ Explain why it follows that if integers $a$, $b$, and $a + b$ are all in the
 range $1$ through $128$, then the 8-bit two's complement of $(-a) + (-b)$ is a
 negative number.
 
+My answer here is omitted, basically this has to do with why carrying works
+given any addition of any two numbers, negative or otherwise.
+
 Convert the integers in 38-40 from hexadecimal to decimal notation.
 
 38. $A2BC_{16}$
 
+$$ C_{16} = 12_{10} \cdot 1 = 12 $$
+
+$$ B_{16} = 11_{10} \cdot 16 = 176 $$
+
+$$ 2_{16} = 2_{10} \cdot 256 = 512 $$
+
+$$ A_{16} = 10_{10} \cdot 4096 = 40960 $$
+
+$$ 12 + 176 + 512 + 40960 = \boxed{41660} $$
+
 39. $E0D_{16}$
 
+$$ D_{16} = 13_{10} \cdot 1 = 13 $$
+
+$$ 0_{16} = 0_{10} \cdot 16 = 0 $$
+
+$$ E_{16} = 14_{10} \cdot 256 = 3584 $$
+
+$$ 13 + 0 + 3584 = \boxed{3597} $$
+
 40. $39EB_{16}$
+
+$$ B_{16} = 11_{10} \cdot 1 = 11 $$
+
+$$ E_{16} = 14_{10} \cdot 16 = 224 $$
+
+$$ 9_{16} = 9_{10} \cdot 256 = 2304 $$
+
+$$ 3_{16} = 3_{10} \cdot 4096 = 12288 $$
+
+$$ 11 + 224 + 2304 + 12288 = \boxed{14827} $$
 
 Convert the integers in 41-43 from hexadecimal to binary notation.
 
 41. $1C0ABE_{16}$
 
+$$ 1_{16} = 1_{10} = 0001_2 $$
+
+$$ C_{16} = 12_{10} = 1110_2 $$
+
+$$ 0_{16} = 0_{10} = 0000_2 $$
+
+$$ A_{16} = 10_{10} = 1010_2 $$
+
+$$ B_{16} = 11_{10} = 1011_2 $$
+
+$$ E_{16} = 14_{10} = 1110_2 $$
+
+Juxtapose the results:
+
+$$ 000111000000101010111110_2 $$
+
 42. $B53DF8_{16}$
 
+$$ B_{16} = 11_{10} = 1011_2 $$
+
+$$ 5_{16} = 5_{10} = 0101_2 $$
+
+$$ 3_{16} = 3_{10} = 0011_2 $$
+
+$$ D_{16} = 13_{10} = 1101_2 $$
+
+$$ F_{16} = 15_{10} = 1111_2 $$
+
+$$ 8_{16} = 8_{10} = 1000_2 $$
+
+Juxtapose the results:
+
+$$ 101101010011110111111000_2 $$
+
 43. $4ADF83_{16}$
+
+$$ 4_{16} = 4_{10} = 0100_2 $$
+
+$$ A_{16} = 10_{10} = 1010_2 $$
+
+$$ D_{16} = 13_{10} = 1101_2 $$
+
+$$ F_{16} = 15_{10} = 1111_2 $$
+
+$$ 8_{16} = 8_{10} = 1000_2 $$
+
+$$ 3_{16} = 3_{10} = 0011_2 $$
+
+$$ 010010101101111110000011_2 $$
 
 Convert the integers in 44-46 from binary to hexadecimal notation.
 
 44. $00101110_2$
 
+$$ 0010_2 = 2_{10} = 2_{16} $$
+
+$$ 1110_2 = 14_{10} = E_{16} $$
+
+$$ 2E_{16} $$
+
 45. $1011011111000101_2$
 
+$$ 1011_2 = 11_{10} = B_{16} $$
+
+$$ 0111_2 = 7_{10} = 7_{16} $$
+
+$$ 1100_2 = 12_{10} = C_{16} $$
+
+$$ 0101_2 = 5_{10} = 5_{16} $$
+
+$$ B7C5_{16} $$
+
 46. $11001001011100_2$
+
+$$ 0011001001011100_2 $$
+
+$$ 0011_2 = 3_{10} = 3_{16} $$
+
+$$ 0010_2 = 2_{10} = 2_{16} $$
+
+$$ 0101_2 = 5_{10} = 5_{16} $$
+
+$$ 1100_2 = 12_{10} = C_{16} $$
+
+$$ 325C_{16} $$
 
 47. **Octal Notation:** IN addition to binary and hexadecimal, computer
     scientists also use _octal notation_ (base 8) to represent numbers. Octal
@@ -3838,9 +4157,55 @@ Convert the integers in 44-46 from binary to hexadecimal notation.
 
 a. Convert $61502_8$ to decimal notation.
 
+$$ 6 \cdot 8^4 + 1 \cdot 8^3 + 5 \cdot 8^2 + 0 \cdot 8^1 + 2 \cdot 8^0 = 25410_{10} $$
+
 b. Convert $20763_8$ to decimal notation.
+
+$$ 2 \cdot 8^4 + 0 \cdot 8^3 + 7 \cdot 8^2 + 6 \cdot 8^1 + 3 \cdot 8^0 = 8692_{10} $$
 
 c. Describe methods for converting integers from octal to binary notation and
 the reverse that are similar to the methods used in Examples 2.5.9 and 2.5.10
 for converting back and forth from hexadecimal to binary notation. Give examples
 showing that these methods result in correct answers.
+
+To convert octal to binary, take each digit place and convert each to a binary
+number each with 3 bits. Let's take $61502_8$ for example:
+
+$$ 6_8 = 110_2 $$
+
+$$ 1_8 = 001_2 $$
+
+$$ 5_8 = 101_2 $$
+
+$$ 0_8 = 000_2 $$
+
+$$ 2_8 = 010_2 $$
+
+Then juxtapose the results:
+
+$$ 110001101000010 = 25410_{10} $$
+
+Which is what we got in part a.
+
+To convert from binary to octal, simply go in reverse. Take the binary number
+and divide it into 3-bit chunks. Consider this binary representation for part b:
+
+$$ 010000111110011 $$
+
+Divide it into 3 bit chunks and convert it into octal:
+
+$$ 010_2 = 2_8 $$
+
+$$ 000_2 = 0_8 $$
+
+$$ 111_2 = 7_8 $$
+
+$$ 110_2 = 6_8 $$
+
+$$ 011_2 = 3_8 $$
+
+Then juxtapose the results:
+
+$$ 20763_8 $$
+
+Which is exactly the number we started with in part b.
