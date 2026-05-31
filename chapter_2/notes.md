@@ -320,3 +320,70 @@ Page 112
 
 Two digital logic circuits are **equivalent** if, and only if, their
 input/output tables are identical.
+
+---
+
+Page 122
+
+**Definition**
+
+**The 8-bit two's complement** for an integer $a$ between -128 and 127 is the
+8-bit binary representation for
+
+$$
+\begin{cases}
+a & \text{if } a \geq 0 \\
+2^8 - |a| & \text{if } a < 0
+\end{cases}
+$$
+
+---
+
+Page 123
+
+**The 8-Bit Two's Complement for a Negative Integer**
+
+The 8-bit two's complement for a negative integer $a$ that is at least -128 can
+be obtained as follows:
+
+- Write the 8-bit binary representation for $|a|$.
+
+- Switch all the 1's to 0's and all the 0's to 1's. (This is called flipping, or
+  complementing, the bits.)
+
+- Add 1 in binary notation.
+
+---
+
+Page 124
+
+To find the decimal representation of the negative integer with a given 8-bit
+two's complement:
+
+- Apply the two's complement procedure to the given two's complement.
+
+- Write the decimal equivalent of the result.
+
+---
+
+Page 125
+
+To add two integers in the range -128 through 127 whose sum is also in the range
+-128 through 127:
+
+- Convert both integers to their 8-bit two's complement representations.
+
+- Add the resulting integers using ordinary binary addition, discarding any
+  carry bit of 1 that may occur in the 2<sup>8</sup>th position.
+
+- Convert the result back to decimal form.
+
+---
+
+Page 128
+
+To convert an integer from hexadecimal to binary notation:
+
+- Write each hexadecimal digit of the integer in 4-bit binary notation.
+
+- Juxtapose the results.

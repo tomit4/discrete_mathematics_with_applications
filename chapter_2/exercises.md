@@ -3647,3 +3647,200 @@ $$ A \wedge B \equiv (A \downarrow A)\downarrow(B \downarrow B) $$
 So:
 
 $$ (((P \downarrow P)\downarrow Q) \downarrow ((P \downarrow P)\downarrow Q)\downarrow ((P \downarrow P)\downarrow Q)) \downarrow (((Q \downarrow Q)\downarrow P) \downarrow ((Q \downarrow Q)\downarrow P) \downarrow (Q \downarrow Q)) $$
+
+---
+
+**Exercise Set 2.5**
+
+Page 129
+
+Represent the decimal integers in 1-6 in binary notation.
+
+1. $19$
+
+2. $55$
+
+3. $287$
+
+4. $458$
+
+5. $1609$
+
+6. $1424$
+
+Represent the integers in 7-12 in decimal notation.
+
+7. $1110_2$
+
+8. $10111_2$
+
+9. $110110_2$
+
+10. $1100101_2$
+
+11. $1000111_2$
+
+12. $1011011_2$
+
+Perform the arithmetic in 13-20 using binary notation.
+
+13.
+
+$$
+1011_2 \\
+\underline{+ 101_2}
+$$
+
+14.
+
+$$
+1001_2 \\
+\underline{+ 1011_2}
+$$
+
+15.
+
+$$
+101101_2 \\
+\underline{+ 11101_2}
+$$
+
+16.
+
+$$
+110111011_2 \\
+\underline{+ 1001011010_2}
+$$
+
+17.
+
+$$
+10100_2 \\
+\underline{+ 1101_2}
+$$
+
+18.
+
+$$
+11010_2 \\
+\underline{- 1101_2}
+$$
+
+19.
+
+$$
+101101_2 \\
+\underline{- 10011_2}
+$$
+
+20.
+
+$$
+1010100_2 \\
+\underline{- 10111_2}
+$$
+
+21. Give the output signals $S$ and $T$ for the circuit shown below if the input
+    signals $P$, $Q$, and $R$ are as specified. Note that this is _not_ the
+    circuit for a full-adder.
+
+a. $P = 1$, $Q = 1$, $R = 1$
+
+b. $P = 0$, $Q = 1$, $R = 0$
+
+c. $P = 1$, $Q = 0$, $R = 1$
+
+(See Page 130)
+
+22. Add $11111111_2 + 1_2$ and convert the result to decimal notation, to verify
+    that $11111111_2 = (2^8 - 1)_10$.
+
+Find the 8-bit two's complements for the integers in 23-26.
+
+23. $-23$
+
+24. $-67$
+
+25. $-4$
+
+26. $-115$
+
+Find the decimal representations for the integers with the 8-bit two's
+complements given in 27-30.
+
+27. $11010011$
+
+28. $10011001$
+
+29. $11110010$
+
+30. $10111010$
+
+Use 8-bit two's complements to compute the sums in 31-36.
+
+31. $57 + (-118)$
+
+32. $62 + (-18)$
+
+33. $(-6) + (-73)$
+
+34. $89 + (-55)$
+
+35. $(-15) + (-46)$
+
+36. $123 + (-94)$
+
+37.
+
+a. Show that when you apply the 8-bit two's complement procedure to the 8-bit
+two's complement for $-128$, you get the 8-bit two's complement for $-128$.
+
+b. Show that if $a$, $b$, and $a + b$ are integers in the range $1$ through
+$128$, then
+
+$$ (2^8 - a) + (2^8 - b) = (2^8 - (a + b)) + 2^8 \geq 2^8 + 2^7 $$
+
+Explain why it follows that if integers $a$, $b$, and $a + b$ are all in the
+range $1$ through $128$, then the 8-bit two's complement of $(-a) + (-b)$ is a
+negative number.
+
+Convert the integers in 38-40 from hexadecimal to decimal notation.
+
+38. $A2BC_{16}$
+
+39. $E0D_{16}$
+
+40. $39EB_{16}$
+
+Convert the integers in 41-43 from hexadecimal to binary notation.
+
+41. $1C0ABE_{16}$
+
+42. $B53DF8_{16}$
+
+43. $4ADF83_{16}$
+
+Convert the integers in 44-46 from binary to hexadecimal notation.
+
+44. $00101110_2$
+
+45. $1011011111000101_2$
+
+46. $11001001011100_2$
+
+47. **Octal Notation:** IN addition to binary and hexadecimal, computer
+    scientists also use _octal notation_ (base 8) to represent numbers. Octal
+    notation is based on the fact that any integer can be uniquely represented
+    as a sum of numbers of the form $d \cdot 8^n$, where each $n$ is a
+    nonnegative integer and each $d$ is one of the integers from $0$ to $7$.
+    Thus, for example,
+    $5073_8 = 5 \cdot 8^3 + 0 \cdot 8^2 + 7 \cdot 8^1 + 3 \cdot 8^0 = 2619_{10}$.
+
+a. Convert $61502_8$ to decimal notation.
+
+b. Convert $20763_8$ to decimal notation.
+
+c. Describe methods for converting integers from octal to binary notation and
+the reverse that are similar to the methods used in Examples 2.5.9 and 2.5.10
+for converting back and forth from hexadecimal to binary notation. Give examples
+showing that these methods result in correct answers.

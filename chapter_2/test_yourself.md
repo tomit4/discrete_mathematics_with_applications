@@ -174,3 +174,69 @@ NOT; AND
    _______ gate.
 
 NOT; OR
+
+---
+
+**Test Yourself**
+
+Page 129
+
+1. To represent a nonnegative integer in binary notation means to write it as a
+   sum of products of the form _______, where _______.
+
+$d \cdot 2^n$ $d = 1$, and $n$ is a nonnegative integer.
+
+2. To add integers in binary notation, you use the facts that $1_2 + 1_2 = $
+   _______ and $1_2 + 1_2 + 1_2 = $ _______.
+
+$10_2$; $11_2$
+
+3. To subtract integers in binary notation, you use the facts that $10_2 - 1_2 =
+   $ _______ and $11_2 - 1_2 = $ _______.
+
+$1_2$; $10_2$
+
+4. A half-adder is a digital logic circuit that _______, and a full-adder is a
+   digital logic circuit that _______.
+
+outputs the sum of any two binary digits; outputs the sum of any three binary
+digits
+
+5. If $a$ is an integer with $-128 \leq a \leq 127$, the 8-bit two's complement
+   of $a$ is _______ if $a \geq 0$ and is _______ if $a < 0$.
+
+The 8-bit representation of $a$; The 8-bit representation of $2^8 - |a|$
+
+6. To find the 8-bit two's complement of a negative integer $a$ that is at least
+   -128, you _______, _______, and _______.
+
+- Write the 8-bit binary representation for $|a|$.
+
+- Switch all the 1's to 0's and all the 0's to 1's. (This is called flipping, or
+  complementing, the bits.)
+
+- Add 1 in binary notation.
+
+7. To add two integers in the range -128 through 127 whose sum is also in the
+   range -128 through 127, you _______, ______, _______, and _______.
+
+- Convert both integers to their 8-bit two's complement representations.
+
+- Add the resulting integers using ordinary binary addition,
+
+- Discarding any carry bit of 1 that may occur in the 2<sup>8</sup>th position.
+
+- Convert the result back to decimal form.
+
+8. To represent a nonnegative integer in hexadecimal notation means to write it
+   as a sum of products of the form _______, where _______.
+
+$d \cdot 16^n$; $d = 0, 1, 2, \dots 9, A, B, C, D, E, F$ and $n$ is a
+nonnegative integer.
+
+9. To convert a nonnegative integer from hexadecimal to binary notation, you
+   _______ and _______.
+
+- Write each hexadecimal digit of the integer in 4-bit binary notation.
+
+- Juxtapose the results.
