@@ -683,61 +683,110 @@ Page 152
 
 a. There is a discrete mathematics student who is nonathletic.
 
+Yes.
+
 b. All discrete mathematics students are nonathletic.
+
+No.
 
 c. There is an athletic person who is not a discrete mathematics student.
 
+No.
+
 d. No discrete mathematics students are athletic.
+
+No.
 
 e. Some discrete mathematics students are nonathletic.
 
+Yes.
+
 f. No athletic people are discrete mathematics students.
+
+No.
 
 2. Which of the following is a negation for "All dogs are loyal"? More than one
    answer may be correct.
 
 a. All dogs are disloyal.
 
+No.
+
 b. No dogs are loyal.
+
+No.
 
 c. Some dogs are disloyal.
 
+Yes.
+
 d. Some dogs are loyal.
+
+No.
 
 e. There is a disloyal animal that is not a dog.
 
+No.
+
 f. There is a dog that is disloyal.
+
+Yes.
 
 g. No animals that are not dogs are loyal.
 
+No.
+
 h. Some animals that are not dogs are loyal.
+
+No.
 
 3. Write the formal negation for each of the following statements.
 
 a. $\forall$ string $s$, $s$ has at least one character.
 
+$\exists$ a string $s$, such that $s$ does not have any characters.
+
 b. $\forall$ computer $c$, $c$ has a CPU.
+
+$\exists$ a computer $c$, such that $c$ does not have a CPU.
 
 c. $\exists$ a movie $m$ such that $m$ is over 6 hours long.
 
+$\forall$ movies $m$, $m$ is no longer than 6 hours long.
+
 d. $\exists$ a band $b$ such that $b$ has won at least 10 Grammy awards.
+
+$\forall$ bands $b$, $b$ has won at most 9 Grammy awards.
 
 4. Write an informal negation for each of the following statements. Be careful
    to avoid negations that are ambiguous.
 
 a. All dogs are friendly.
 
+There is at least one dog that is not friendly.
+
 b. All graphs are connected.
+
+There is at least one graph that is not connected.
 
 c. Some suspicions were substantiated.
 
+All suspicions were unsubstantiated.
+
 d. Some estimates are accurate.
+
+No estimates are accurate.
 
 5. Write a negation for each of the following statements.
 
 a. Every valid argument has a true conclusion.
 
+There exists at least one valid argument that has a false conclusion.
+
 b. All real numbers are positive, negative, or zero.
+
+There exists at least one real number that is neither positive, negative, nor
+zero.
 
 Write a negation for each statement in 6 and 7.
 
@@ -745,24 +794,41 @@ Write a negation for each statement in 6 and 7.
 
 a. Sets $A$ and $B$ do not have any points in common.
 
+Sets $A$ and $B$ have at least one point in common.
+
 b. Towns $P$ and $Q$ are not connected by any road on the map.
+
+There exists at least one road on the map that connects towns $P$ and $Q$.
 
 7.
 
 a. This vertex is not connected to any other vertex in the graph.
 
+All vertexes are connected to at least one other vertex in the graph.
+
 b. This number is not related to any even number.
+
+All numbers are related to at least one even number.
 
 8. Consider the statement "There are no simple solutions to life's problems."
    Write an informal negation for the statement, and then write the statement
    formally using quantifiers and variables.
 
+"There is at least one of life's problems for which there is a simple solution."
+
+$\exists$ some life problem $x$, for which there is a simple solution.
+
 Write a negation for each statement in 9 and 10.
 
 9. $\forall$ real number $x$, if $x > 3$ then $x^2 > 9$.
 
+$\exists$ a real number $x$, such that $x > 3$ and $x^2 \leq 9$.
+
 10. $\forall$ computer program $P$, if $P$ compiles without error messages, then
     $P$ is correct.
+
+$\exists$ a computer program $P$, such that $P$ compiles without error messages
+and $P$ is incorrect.
 
 In each of 11-14 determine whether the proposed negation is correct. If it is
 not, write a correct negation.
@@ -773,6 +839,11 @@ _Statement:_ The sum of any two irrational numbers is irrational.
 
 _Proposed negation:_ The sum of any two irrational numbers is rational.
 
+No.
+
+_Corrected negation:_ There are at least two irrational numbers whose sum is
+rational.
+
 12.
 
 _Statement:_ The product of any irrational number and any rational number is
@@ -781,12 +852,22 @@ irrational.
 _Proposed negation:_ The product of any irrational number and any rational
 number is rational.
 
+No.
+
+_Corrected negation:_ There is at least one irrational number and at least one
+rational number whose product is rational.
+
 13.
 
 _Statement:_ For every integer $n$, if $n^2$ is even then $n$ is even.
 
 _Proposed negation:_ For every integer $n$, if $n^2$ is even then $n$ is not
 even.
+
+No.
+
+_Corrected negation:_ There exists an integer $n$ such that $n^2$ is even and
+$n$ is not even.
 
 14.
 
@@ -796,42 +877,90 @@ $x_1 = x_2$.
 _Proposed negation:_ For all real numbers $x_1$ and $x_2$, if $x_1^2 = x_2^2$
 then $x_1 \neq x_2$.
 
+No.
+
+_Corrected negation:_ There exists two real numbers $x_1$ and $x_2$ such that
+$x_1^2 = x_2^2$ and $x_1 \neq x_2$.
+
 15. Let $D = \{-48, -14, -8, 0, 1, 3, 16, 23, 26, 32, 36\}$. Determine which of
     the following statements are true and which are false. Provide
     counterexamples for the statements that are false.
 
 a. $\forall x \in D, \text{ if } x \text{ is odd then } x > 0$.
 
+True. All odd numbers in $D$ are positive.
+
 b.
 $\forall x \in D, \text{ if } x \text{ is less than } 0 \text{ then } x \text{ is even}$.
 
+True. All negative numbers in $D$ are even.
+
 c. $\forall x \in D, \text{ if } x \text{ is even then } x \leq 0$.
+
+False. There are some numbers in $D$ that are even and greater than 0.
+
+$$ \exists x \in D, x \text{ is even } \wedge x > 0 $$
+
+The numbers 16, 26, 32, and 36 are counterexamples that show that this statement
+is false.
 
 d.
 $\forall x \in D, \text{ if the ones digit of } x \text{ is } 2, \text{ then the tens digit is } 3 \text{ or } 4$.
 
+This is true. There is only one number that satisfies the hypothesis "the ones
+digit of $x$ is 2", which is 32. The conclusion is "the tens digit is 3 or 4",
+and that is true of the number 32, so this is a true statement.
+
 e.
 $\forall x \in D, \text{ if the ones digit of } x \text{ is } 6, \text{ then the tens digit is } 1 \text{ or } 2$.
+
+This is false. Consider the negation statement:
+
+$$ \exists x \in D, \text{ such that the one's digit of } x \text{ is } 6 \wedge \text{ the tens digit of } x \text{ is not } 1 \text{ or } 2  $$
+
+The number 36 satisfies the negation statement, and so therefore the given
+statement is false.
 
 In 16-23, write a negation for each statement.
 
 16. $\forall$ real number $x$, if $x^2 \geq 1$ then $x > 0$.
 
+$\exists$ a real number $x$, such that $x^2 \geq 1$ and $x \leq 0$.
+
 17. $\forall$ integer $d$, if $\dfrac{6}{d}$ is an integer then $d = 3$.
+
+$\exists$ an integer $d$ such that $\dfrac{6}{d}$ is an integer and $d \neq 3$.
 
 18. $\forall x \in \mathbb{R}$, if $x(x + 1) > 0$ then $x > 0$ or $x < -1$.
 
+$\exists x \in \mathbb{R}$ such that $x(x + 1) > 0$ and both $x \leq 0$ and
+$x \geq -1$.
+
 19. $\forall x \in \mathbb{Z}$, if $n$ is prime then $n$ is odd or $n = 2$.
+
+$\exists x \in \mathbb{Z}$ such that $n$ is prime and both $n$ is even and
+$n \neq 2$.
 
 20. $\forall$ integers $a$, $b$, and $c$, if $a - b$ is even and $b - c$ is
     even, then $a - c$ is even.
 
+$\exists$ integers $a$, $b$, and $c$ such that $a - b$ is even and $b - c$ is
+even and $a - c$ is not even.
+
 21. $\forall$ integer $n$, if $n$ is divisible by $6$, then $n$ is divisible by
     $2$ and $n$ is divisible by $3$.
 
+$\exists$ an integer $n$ such that $n$ is divisible by $6$ and either $n$ is not
+divisible by $2$ or $n$ is not divisible by $3$.
+
 22. If the square of an integer is odd, then the integer is odd.
 
+$\exists$ an integer with the property that the square of the integer is odd but
+the integer itself is not odd.
+
 23. If a function is differentiable then it is continuous.
+
+$\exists$ a function that is differentiable but is not continuous.
 
 24. Rewrite the statements in each pair in if-then form and indicate the logical
     relationship between them.
@@ -840,23 +969,52 @@ a.
 
 All the children in Tom's family are female.
 
+If the person is a child in Tom's family, then the person is female.
+
 All the females in Tom's family are children.
+
+If the person is a female in Tom's family, then the person is a child.
+
+The second statement is the converse of the first.
 
 b.
 
 All the integers that are greater than 5 and end in 1, 3, 7, or 9 are prime.
 
+If the integer is greater than 5 and ends in 1, 3, 7, or 9, then the integer is
+prime.
+
 All the integers that are greater than 5 and are prime end in 1, 3, 7, or 9.
+
+If the integer is greater than 5 and is prime, then the integer ends in 1, 3, 7,
+or 9.
+
+The second statement is the converse of the first.
 
 25. Each of the following statements is true. In each case write the converse
     statement, and give a counterexample showing that the converse is false.
 
 a. If $n$ is any prime number that is greater than $2$, then $n + 1$ is even.
 
+If $n + 1$ is even, then $n$ is any prime number that is greater than $2$.
+
+Counterexample: Let $n = 15$, $n + 1 = 16$, which is not a prime number.
+
 b. If $m$ is an odd integer, then $2m$ is even.
+
+If $2m$ is even, then $m$ is an odd integer.
+
+Counterexample: Let $m = 2$, $2(2) = 4$, and $4$ is not an odd integer.
 
 c. If two circles intersect in exactly two points, then they do not have a
 common center.
+
+If two circles do not have a common center, then the two circles intersect in
+exactly two points.
+
+Counterexample: Consider two circles that simply do not touch or overlap at all,
+both circles do not have a common center and they do not intersect at exactly
+two points.
 
 In 26-33, for each statement in the referenced exercise write the
 contrapositive, converse, and inverse. Indicate as best as you can which of
@@ -865,30 +1023,306 @@ that is false.
 
 26. Exercise 16
 
+Original Statement:
+
+$\forall$ real number $x$, if $x^2 \geq 1$ then $x > 0$.
+
+This is false. Consider $x = -2$, then the hypothesis $4 \geq 1$ is true, but
+the conclusion $-2 > 0$ is false. Therefore this statement is false.
+
+Contrapositive:
+
+$\forall$ real number $x$, if $x \leq 0$ then $x^2 < 1$.
+
+This is false. Consider $x = -2$, then the hypothesis $-2 \leq 0$ is true, but
+the conclusion $4 < 1$ is false. Therefore this statement is false.
+
+Converse:
+
+$\forall$ real number $x$, if $x > 0$ then $x^2 \geq 1$.
+
+This is false. Consider $x = \dfrac{1}{2}$, then the hypothesis
+$\dfrac{1}{2} > 0$ is true, but the conclusion $\dfrac{1}{4} \geq 1$ is false.
+Therefore this statement is false.
+
+Inverse:
+
+$\forall$ real number $x$, if $x^2 < 1$ then $x \leq 0$.
+
+This is false. Consider $x = \dfrac{1}{2}$, then the hypothesis
+$\dfrac{1}{4} < 1$ is true, but then the conclusion $\dfrac{1}{2} \leq 0$ is
+false. Therefore this statement is false.
+
 27. Exercise 17
+
+Original Statement:
+
+$\forall$ integer $d$, if $\dfrac{6}{d}$ is an integer then $d = 3$.
+
+This is false, consider $d = 1$ (6 would also work). The hypothesis
+$\dfrac{6}{1} = 6$ is an integer is true, but then the conclusion $1 = 3$ is
+false. Therefore this statement is false.
+
+Contrapositive:
+
+$\forall$ integer $d$, if $d \neq 3$ then $\dfrac{6}{d}$ is not an integer.
+
+This is false. Consider $d = 6$. The hypothesis $d \neq 6$ is true, but the
+conclusion $\dfrac{6}{6} = 1$ is not an integer is not true. Therefore this
+statement is false.
+
+Converse:
+
+$\forall$ integer $d$, if $d = 3$ then $\dfrac{6}{d}$ is an integer.
+
+This is true, if $d = 3$, then $\dfrac{6}{3} = 2$ is an integer is true.
+Therefore this is a true statement.
+
+Inverse:
+
+$\forall$ integer $d$, if $\dfrac{6}{d}$ is not an integer then $d \neq 3$.
+
+This is true, if $\dfrac{6}{d}$ is not an integer, than $d$ cannot be $3$ as
+then $\dfrac{6}{3} = 2$ which is an integer. Therefore $d \neq 3$ is a true
+conclusion and this is a true statement.
 
 28. Exercise 18
 
+Original Statement:
+
+$\forall x \in \mathbb{R}$, if $x(x + 1) > 0$ then $x > 0$ or $x < -1$.
+
+This is true, the hypothesis can be true, and its conclusion cannot be false.
+
+Contrapositive:
+
+$\forall x \in \mathbb{R}$, if $x \leq 0$ and $x \geq -1$ then
+$x(x + 1) \leq 0$.
+
+This is true, $x$ must lie in between $0$ and $1$ or be $0$ or $1$, and that
+will always cause $x(x + 1) \leq 0$ to be either negative or $0$. This is a true
+statement.
+
+Converse:
+
+$\forall x \in \mathbb{R}$, if $x > 0$ or $x < -1$ then $x(x + 1) > 0$.
+
+This is true, this essentially means that $x(x + 1)$ will always be positive, as
+$x$ is either always positive, or $x$ is always negative, but the multiplication
+in the conclusion causes $x(x + 1) > 0$ to always be true. This statement is
+true.
+
+Inverse:
+
+$\forall x \in \mathbb{R}$, if $x(x + 1) \leq 0$ then $x \leq 0$ and
+$x \geq -1$.
+
+Yes this is true, if $x(x + 1)$ is either negative or $0$, then $x$ must be
+between $0$ and $-1$ inclusive. This statement is true.
+
 29. Exercise 19
+
+Original Statement:
+
+$\forall x \in \mathbb{Z}$, if $n$ is prime then $n$ is odd or $n = 2$.
+
+This is a true statement, all prime numbers except for $2$ are odd.
+
+Contrapositive:
+
+$\forall x \in \mathbb{Z}$, if $n$ is not odd and $n \neq 2$ then $n$ is not
+prime.
+
+This is a true statement, if $n$ is even and not $2$, then $n$ is not a prime
+number.
+
+Converse:
+
+$\forall x \in \mathbb{Z}$, if $n$ is odd or $n = 2$, then $n$ is prime.
+
+This is false, consider $n = 9$, the hypothesis that $n$ is odd or $n = 2$ is
+true, but the conclusion $n$ is prime is false as $9$ is divisible by $3$. This
+is a false statement.
+
+Inverse:
+
+$\forall x \in \mathbb{Z}$, if $n$ is not prime then both $n$ is not odd and
+$n \neq 2$.
+
+This is false, consider $n = 9$, the hypothesis $n$ is not prime is true, but
+the hypothesis $n$ is not odd and $n \neq 2$ is false as $9$ is an odd number.
+This statement is false.
 
 30. Exercise 20
 
+Original Statement:
+
+$\forall$ integers $a$, $b$, and $c$, if $a - b$ is even and $b - c$ is even,
+then $a - c$ is even.
+
+This statement is true, as an even difference between any two numbers means that
+the two numbers themselves are even, so therefore $a$, $b$, and $c$ are even,
+and $a - c$ is even. This statement is true.
+
+Contrapositive:
+
+$\forall$ integers $a$, $b$, and $c$, if $a - c$ is not even, then either
+$a - b$ is not even or $b - c$ is not even.
+
+This statement is true. An odd difference means that at least one of the two
+integers is odd, but necessarily both, so there for if $a - c$ is odd, then
+either $a$ or $c$ is odd (but not both). This means that the conclusion is true
+because it allows for either $a - b$ or $b - c$ to be odd, which must be true if
+either $a$ or $c$ must be odd. This statement is true.
+
+Converse:
+
+$\forall$ integers $a$, $b$, and $c$, if $a - c$ is even, then $a - b$ is even
+and $b - c$ is even.
+
+This is false, consider $a = 13$, $b = 10$, and $c = 11$. This means the
+hypothesis $a - c = 13 - 11 = 2$ is even is true, but then the conclusion
+$a - b = 13 - 10 = 3$ is even and $10 - 11 = -1$ is even is false. This
+statement is false.
+
+Inverse:
+
+$\forall$ integers $a$, $b$, and $c$, if $a - b$ is not even or $b - c$ is not
+even, then $a - c$ is not even.
+
+This is false, consider $a = 13$, $b = 10$, and $c = 11$. This means the
+hypothesis $a - b = 13 - 10 = 3$ is not even or $b - c = 10 - 11 = -1$ is not
+even is true, but then the conclusion $13 - 11 = 2$ is not even is false. This
+statement is false.
+
 31. Exercise 21
+
+Original Statement:
+
+$\forall$ integer $n$, if $n$ is divisible by $6$, then $n$ is divisible by $2$
+and $n$ is divisible by $3$.
+
+This is true, any integer divisible by a non-prime number is divisible by those
+integer's prime factors.
+
+Contrapositive:
+
+$\forall$ integer $n$, if $n$ is not divisible by $2$ or $n$ is not divisible by
+$3$, then $n$ is not divisible by $6$.
+
+This is true. If $n$ is not divisible by the prime numbers $2$ or $3$, then it
+is not divisible by $6$.
+
+Converse:
+
+$\forall$ integer $n$, if $n$ is divisible by $2$ and $n$ is divisible by $3$,
+then $n$ is divisible by $6$.
+
+This is true, for the same reasons given by the original statement.
+
+Inverse:
+
+$\forall$ integer $n$, if $n$ is not divisible by $6$, then $n$ is not divisible
+by $2$ or $n$ is not divisible by $3$.
+
+This is true, for the same reasons given in the contrapositive.
 
 32. Exercise 22
 
+Original Statement:
+
+If the square of an integer is odd, then the integer is odd.
+
+This is a true statement, if the square of an integer returns an odd integer
+then that integer is odd.
+
+Contrapositive:
+
+If an integer is not odd, then the square of the integer is not odd.
+
+This is a true statement, if an integer is not odd, it's square is not odd
+(even).
+
+Converse:
+
+If an integer is odd, then the square of the integer is odd.
+
+This is a true statement, squaring any odd integer returns an odd integer.
+
+Inverse:
+
+If the square of an integer is not odd, then the integer is not odd.
+
+This is a true statement, if squaring an integer returns a not odd integer, then
+that integer is not odd.
+
 33. Exercise 23
+
+Original Statement:
+
+If a function is differentiable then it is continuous.
+
+This is true, as a function that is differentiable means that the function has a
+limit that does not approach $\infty$/$-\infty$, and a continuous function is
+any function without any breaks in it's graph along the standard Cartesian
+plane.
+
+Contrapositive:
+
+If a function is not continuous then it is not differentiable.
+
+This is true. If a function has any breaks, it's slope cannot be calculated, and
+therefore the function is not differentiable.
+
+Converse:
+
+If a function is continuous, then it is differentiable.
+
+This is false. A function can be continuous, but it's limit can approach
+$-\infty$/$\infty$, so therefore it could be not differentiable. This statement
+is false.
+
+Inverse:
+
+If a function is not differentiable then it is not continuous.
+
+This is not true. Just because a function's limit can approach
+$\infty$/$-\infty$, meaning it is not differentiable, does not necessarily mean
+that it is not continuous, as its limit could still approach some fixed number.
+This statement is false.
 
 34. Write the contrapositive for each of the following statements.
 
 a. If $n$ is prime, then $n$ is not divisible by any prime number from $2$
 through $\sqrt{n}$. (Assume that $n$ is a fixed integer.)
 
+If $n$ is divisible by any prime number from $2$ through $\sqrt{n}$ inclusive,
+then $n$ is prime.
+
 b. If $A$ and $B$ do not have any elements in common, then they are disjoint.
 (Assume that $A$ and $B$ are fixed sets.)
 
+If $A$ and $B$ are not disjoint, then $A$ and $B$ have some elements in common.
+
 35. Give an example to show that a universal conditional statement is not
     logically equivalent to its inverse.
+
+Consider the statement "If a student studies math, then they wear glasses." This
+is a universal conditional statement. Consider the inverse statement. "If a
+student does not study math, then they do not wear glasses." These two
+statements are not logically equivalent. The original statement claims that all
+students who study math wear glasses, where the second statement claims that all
+students who don't study math do not wear glasses.
+
+Consider two students, Alice and Bob. Alice studies math and wears glasses,
+while Bob does not study math, but wears glasses. For the original statement,
+these two cases would be true, Alice does study math and wears glasses, whereas
+Bob does not study math, so the conclusion that he doesn't wear glasses still is
+a true conclusion. Juxtapose this with the inverse statement, where Bob not
+studying math is true (a true hypothesis), but he does wear glasses, which
+negates the inverse statement's conclusion (it is false). This is a false
+statement, and therefore the original statement and the inverse statement are
+not logically equivalent.
 
 36. If $P(x)$ is a predicate and the domain of $x$ is the set of all real
     numbers, let $R$ be "$\forall x \in \mathbb{Z}, P(x)$" let $S$ be
@@ -898,32 +1332,78 @@ b. If $A$ and $B$ do not have any elements in common, then they are disjoint.
 a. Find a definition for $P(x)$ (but do not use "$x \in \mathbb{Z}$") so that
 $R$ is true and both $S$ and $T$ are false.
 
+Consider $P(x) = 3x \neq 1$. This is true of $R$, as there is no integer $x$
+where $3x = 1$, but is not false for $S$ and $T$ where $x = \dfrac{1}{3}$.
+
 b. Find a definition for $P(x)$ (but do not use "$x \in \mathbb{Q}$") so that
 both $R$ and $S$ are true and $T$ is false.
+
+This isn't possible, it might be possible for $P(n, x)$, but with just a single
+variable $P(x)$, this is not possible.
 
 37. Consider the following sequence of digits: 0204. A person claims that all
     the 1's in the sequence are to the left of all the 0's in the sequence. Is
     this true? Justify your answer. (_Hint:_ Write the claim formally and write
     a formal negation of it. Is the negation true or false?)
 
+Formal claim:
+
+In the sequence of digits 0204, all digits that are 1's are to the left of all
+the 0's.
+
+Negation:
+
+In the sequence of digits 0204, there exists at least one 1 that is not to the
+left of all 0's.
+
+The negation claim is false because there is no 1 in the sequence, so the
+original claim is vacuously true.
+
 38. True or false? All occurrences of the letter _u_ in _Discrete Mathematics_
     are lowercase. Justify your answer.
+
+Formal claim:
+
+$\forall$ letters $x$ in the string _Discrete Mathematics_, if $x$ is the letter
+_u_, then $x$ is lowercase.
+
+Negation:
+
+$\exists$ some letter $x$ in the string _Discrete Mathematics_ such that $x$ is
+the letter _u_ and $x$ is not lowercase.
+
+The negation statement is false, as there is no letter _u_ in _Discrete
+Mathematics_, and so the original statement is vacuously true.
 
 Rewrite each statement of 39-44 in if-then form.
 
 39. Earning a grade of C- in this course is a sufficient condition for it to
     count toward graduation.
 
+If a person earns a grade of C- in this course, then the course counts towards
+graduation.
+
 40. Being divisible by 8 is a sufficient condition for being divisible by 4.
 
+If a number is divisible by 8, then it is divisible by 4.
+
 41. Being on time each day is a necessary condition for keeping this job.
+
+If a person is not on time each day, then this person will not keep this job.
 
 42. Passing a comprehensive exam is a necessary condition for obtaining a
     master's degree.
 
+If a person does not pass a comprehensive exam, then they will not obtain a
+master's degree.
+
 43. A number is prime only if it is greater than 1.
 
+If a number is prime, then it is greater than 1.
+
 44. A polygon is square only if it has four sides.
+
+If a polygon is square, then it has four sides.
 
 Use the fact that the negation of a $\forall$ statement is a $\exists$ statement
 and that the negation of an if-then statement is an _and_ statement to rewrite
@@ -931,13 +1411,61 @@ each of the statements 45-48 without using the word _necessary_ or _sufficient_.
 
 45. Being divisible by 8 is not a necessary condition for being divisible by 4.
 
+Original without not is:
+
+Being divisible by 8 is a necessary condition for being divisible by 4.
+
+As if-then:
+
+If a number is not divisible by 8, then it is not divisible by 4.
+
+Negation:
+
+There is a number that is not divisible by 8 and is divisible by 4.
+
 46. Having a large income is not a necessary condition for a person to be happy.
+
+Original without not:
+
+Having a large income is a necessary condition for a person to be happy.
+
+If-then (necessary condition):
+
+If a person does not have a large income, then they are not happy.
+
+Negation:
+
+There is a person that does not have a large income and is happy.
 
 47. Having a large income is not a sufficient condition for a person to be
     happy.
 
+Original without not:
+
+Having a large income is a sufficient condition for a person to be happy.
+
+If-not(sufficient):
+
+If a person has a large income, then they are happy.
+
+Negation:
+
+There is a person with a large income that is not happy.
+
 48. Being a polynomial is not a sufficient condition for a function to have a
     real root.
+
+Original without not:
+
+Being a polynomial is a sufficient condition for a function to have a real root.
+
+If-then(sufficient):
+
+If a function is a polynomial, then it has a real root.
+
+Negation:
+
+There is a function that is a polynomial and does not have a real root.
 
 49. The computer scientists Richard Conway and David Gries once wrote:
 
@@ -947,8 +1475,75 @@ each of the statements 45-48 without using the word _necessary_ or _sufficient_.
 
 Rewrite this statement without using the words _necessary_ or _sufficient_.
 
+Divide it up into two statements:
+
+The absence of error messages during translation of a computer program is a
+necessary condition for reasonable [program] correctness.
+
+The absence of error messages during translation of a computer program is not a
+sufficient condition for reasonable [program] correctness.
+
+Now rewrite the first statement as an if-then (necessary):
+
+If a computer program does have error messages during translation, then the
+program does not have reasonable correctness.
+
+Now rewrite the second statement first without the not:
+
+The absence of error messages during translation of a computer program is a
+sufficient condition for reasonable [program] correctness.
+
+And rewrite as if-then(sufficient):
+
+If a computer program does not have error messages during translation, then the
+program does have reasonable correctness.
+
+And now take the negation:
+
+There is a computer program that does not have error messages during translation
+and does not have reasonable correctness.
+
+Now combine them:
+
+If a computer program does have error messages during translation, then the
+program does not have reasonable correctness, and there is a computer program
+that does not have error messages during translation but still does not have
+reasonable correctness.
+
 50. A frequent-flyer club brochure states, "You may select among carriers only
     if they offer the same lowest fare." Assuming that "only if" has its formal,
     logical meaning, does this statement guarantee that if two carriers offer
     the same lowest fare, the customer will be free to choose between them?
     Explain.
+
+Take the original statement:
+
+"You may select among carriers only if they offer the same lowest fare."
+
+Translate to if-then (only if):
+
+If you select among carriers, then they offer the same lowest fare.
+
+$$ S \to F $$
+
+Original statement.
+
+Or equivalently:
+
+If the carrier does not offer the same lowest fare, then you did not select
+among carriers.
+
+$$ \neg F \to \neg S $$
+
+The contrapositive.
+
+Now compare to the comparison statement:
+
+"If two carriers offer the same lowest fare, the customer will be free to choose
+between them."
+
+This is:
+
+$$ F \to S $$
+
+This is the converse statement, and is not logically equivalent to the original.
