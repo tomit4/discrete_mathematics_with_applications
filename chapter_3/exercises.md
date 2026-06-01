@@ -671,3 +671,284 @@ d. $a < b \text{ and } c < d \Rightarrow ac < bd$
 This is false. Say $a = -1$, $b = 2$, $c =  -8$ and $d = 3$. This would make
 $-1 < 2$ and $-8 < 3$, which is true, but then $(-1)(-8) < (2)(3)$ would be
 $8 < 6$, which is false.
+
+---
+
+**Exercise Set 3.2**
+
+Page 152
+
+1. Which of the following is a negation for "All discrete mathematics students
+   are athletic"? More than one answer may be correct.
+
+a. There is a discrete mathematics student who is nonathletic.
+
+b. All discrete mathematics students are nonathletic.
+
+c. There is an athletic person who is not a discrete mathematics student.
+
+d. No discrete mathematics students are athletic.
+
+e. Some discrete mathematics students are nonathletic.
+
+f. No athletic people are discrete mathematics students.
+
+2. Which of the following is a negation for "All dogs are loyal"? More than one
+   answer may be correct.
+
+a. All dogs are disloyal.
+
+b. No dogs are loyal.
+
+c. Some dogs are disloyal.
+
+d. Some dogs are loyal.
+
+e. There is a disloyal animal that is not a dog.
+
+f. There is a dog that is disloyal.
+
+g. No animals that are not dogs are loyal.
+
+h. Some animals that are not dogs are loyal.
+
+3. Write the formal negation for each of the following statements.
+
+a. $\forall$ string $s$, $s$ has at least one character.
+
+b. $\forall$ computer $c$, $c$ has a CPU.
+
+c. $\exists$ a movie $m$ such that $m$ is over 6 hours long.
+
+d. $\exists$ a band $b$ such that $b$ has won at least 10 Grammy awards.
+
+4. Write an informal negation for each of the following statements. Be careful
+   to avoid negations that are ambiguous.
+
+a. All dogs are friendly.
+
+b. All graphs are connected.
+
+c. Some suspicions were substantiated.
+
+d. Some estimates are accurate.
+
+5. Write a negation for each of the following statements.
+
+a. Every valid argument has a true conclusion.
+
+b. All real numbers are positive, negative, or zero.
+
+Write a negation for each statement in 6 and 7.
+
+6.
+
+a. Sets $A$ and $B$ do not have any points in common.
+
+b. Towns $P$ and $Q$ are not connected by any road on the map.
+
+7.
+
+a. This vertex is not connected to any other vertex in the graph.
+
+b. This number is not related to any even number.
+
+8. Consider the statement "There are no simple solutions to life's problems."
+   Write an informal negation for the statement, and then write the statement
+   formally using quantifiers and variables.
+
+Write a negation for each statement in 9 and 10.
+
+9. $\forall$ real number $x$, if $x > 3$ then $x^2 > 9$.
+
+10. $\forall$ computer program $P$, if $P$ compiles without error messages, then
+    $P$ is correct.
+
+In each of 11-14 determine whether the proposed negation is correct. If it is
+not, write a correct negation.
+
+11.
+
+_Statement:_ The sum of any two irrational numbers is irrational.
+
+_Proposed negation:_ The sum of any two irrational numbers is rational.
+
+12.
+
+_Statement:_ The product of any irrational number and any rational number is
+irrational.
+
+_Proposed negation:_ The product of any irrational number and any rational
+number is rational.
+
+13.
+
+_Statement:_ For every integer $n$, if $n^2$ is even then $n$ is even.
+
+_Proposed negation:_ For every integer $n$, if $n^2$ is even then $n$ is not
+even.
+
+14.
+
+_Statement:_ For all real numbers $x_1$ and $x_2$, if $x_1^2 = x_2^2$ then
+$x_1 = x_2$.
+
+_Proposed negation:_ For all real numbers $x_1$ and $x_2$, if $x_1^2 = x_2^2$
+then $x_1 \neq x_2$.
+
+15. Let $D = \{-48, -14, -8, 0, 1, 3, 16, 23, 26, 32, 36\}$. Determine which of
+    the following statements are true and which are false. Provide
+    counterexamples for the statements that are false.
+
+a. $\forall x \in D, \text{ if } x \text{ is odd then } x > 0$.
+
+b.
+$\forall x \in D, \text{ if } x \text{ is less than } 0 \text{ then } x \text{ is even}$.
+
+c. $\forall x \in D, \text{ if } x \text{ is even then } x \leq 0$.
+
+d.
+$\forall x \in D, \text{ if the ones digit of } x \text{ is } 2, \text{ then the tens digit is } 3 \text{ or } 4$.
+
+e.
+$\forall x \in D, \text{ if the ones digit of } x \text{ is } 6, \text{ then the tens digit is } 1 \text{ or } 2$.
+
+In 16-23, write a negation for each statement.
+
+16. $\forall$ real number $x$, if $x^2 \geq 1$ then $x > 0$.
+
+17. $\forall$ integer $d$, if $\dfrac{6}{d}$ is an integer then $d = 3$.
+
+18. $\forall x \in \mathbb{R}$, if $x(x + 1) > 0$ then $x > 0$ or $x < -1$.
+
+19. $\forall x \in \mathbb{Z}$, if $n$ is prime then $n$ is odd or $n = 2$.
+
+20. $\forall$ integers $a$, $b$, and $c$, if $a - b$ is even and $b - c$ is
+    even, then $a - c$ is even.
+
+21. $\forall$ integer $n$, if $n$ is divisible by $6$, then $n$ is divisible by
+    $2$ and $n$ is divisible by $3$.
+
+22. If the square of an integer is odd, then the integer is odd.
+
+23. If a function is differentiable then it is continuous.
+
+24. Rewrite the statements in each pair in if-then form and indicate the logical
+    relationship between them.
+
+a.
+
+All the children in Tom's family are female.
+
+All the females in Tom's family are children.
+
+b.
+
+All the integers that are greater than 5 and end in 1, 3, 7, or 9 are prime.
+
+All the integers that are greater than 5 and are prime end in 1, 3, 7, or 9.
+
+25. Each of the following statements is true. In each case write the converse
+    statement, and give a counterexample showing that the converse is false.
+
+a. If $n$ is any prime number that is greater than $2$, then $n + 1$ is even.
+
+b. If $m$ is an odd integer, then $2m$ is even.
+
+c. If two circles intersect in exactly two points, then they do not have a
+common center.
+
+In 26-33, for each statement in the referenced exercise write the
+contrapositive, converse, and inverse. Indicate as best as you can which of
+these statements are true and which are false. Give a counterexample for each
+that is false.
+
+26. Exercise 16
+
+27. Exercise 17
+
+28. Exercise 18
+
+29. Exercise 19
+
+30. Exercise 20
+
+31. Exercise 21
+
+32. Exercise 22
+
+33. Exercise 23
+
+34. Write the contrapositive for each of the following statements.
+
+a. If $n$ is prime, then $n$ is not divisible by any prime number from $2$
+through $\sqrt{n}$. (Assume that $n$ is a fixed integer.)
+
+b. If $A$ and $B$ do not have any elements in common, then they are disjoint.
+(Assume that $A$ and $B$ are fixed sets.)
+
+35. Give an example to show that a universal conditional statement is not
+    logically equivalent to its inverse.
+
+36. If $P(x)$ is a predicate and the domain of $x$ is the set of all real
+    numbers, let $R$ be "$\forall x \in \mathbb{Z}, P(x)$" let $S$ be
+    "$\forall x \in \mathbb{Q}, P(x)$", and let $T$ be
+    "$\forall x \in \mathbb{R}, P(x)$."
+
+a. Find a definition for $P(x)$ (but do not use "$x \in \mathbb{Z}$") so that
+$R$ is true and both $S$ and $T$ are false.
+
+b. Find a definition for $P(x)$ (but do not use "$x \in \mathbb{Q}$") so that
+both $R$ and $S$ are true and $T$ is false.
+
+37. Consider the following sequence of digits: 0204. A person claims that all
+    the 1's in the sequence are to the left of all the 0's in the sequence. Is
+    this true? Justify your answer. (_Hint:_ Write the claim formally and write
+    a formal negation of it. Is the negation true or false?)
+
+38. True or false? All occurrences of the letter _u_ in _Discrete Mathematics_
+    are lowercase. Justify your answer.
+
+Rewrite each statement of 39-44 in if-then form.
+
+39. Earning a grade of C- in this course is a sufficient condition for it to
+    count toward graduation.
+
+40. Being divisible by 8 is a sufficient condition for being divisible by 4.
+
+41. Being on time each day is a necessary condition for keeping this job.
+
+42. Passing a comprehensive exam is a necessary condition for obtaining a
+    master's degree.
+
+43. A number is prime only if it is greater than 1.
+
+44. A polygon is square only if it has four sides.
+
+Use the fact that the negation of a $\forall$ statement is a $\exists$ statement
+and that the negation of an if-then statement is an _and_ statement to rewrite
+each of the statements 45-48 without using the word _necessary_ or _sufficient_.
+
+45. Being divisible by 8 is not a necessary condition for being divisible by 4.
+
+46. Having a large income is not a necessary condition for a person to be happy.
+
+47. Having a large income is not a sufficient condition for a person to be
+    happy.
+
+48. Being a polynomial is not a sufficient condition for a function to have a
+    real root.
+
+49. The computer scientists Richard Conway and David Gries once wrote:
+
+> The absence of error messages during translation of a computer program is only
+> a necessary and not a sufficient condition for reasonable [program]
+> correctness.
+
+Rewrite this statement without using the words _necessary_ or _sufficient_.
+
+50. A frequent-flyer club brochure states, "You may select among carriers only
+    if they offer the same lowest fare." Assuming that "only if" has its formal,
+    logical meaning, does this statement guarantee that if two carriers offer
+    the same lowest fare, the customer will be free to choose between them?
+    Explain.

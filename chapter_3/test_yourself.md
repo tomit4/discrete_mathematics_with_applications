@@ -25,3 +25,41 @@ true; every $x$ in $D$.
    only if, $Q(x)$ is _______ for _______.
 
 true; at least one $x$ in $D$.
+
+---
+
+**Test Yourself**
+
+Page 152
+
+1. A negation for "All $R$ have property $S$" is "There is _______ $R$ that
+   _______."
+
+exists at least one; does not have property $S$.
+
+2. A negation for "Some $R$ have property $S$" is "_______."
+
+"No $R$ have property $S$."
+
+3. A negation for "For every $x$, if $x$ has property $P$ then $x$ has property
+   $Q$" is "_______."
+
+"There exists at least one $x$ such that $x$ has property $P$ and $x$ does not
+have property $Q$."
+
+4. The converse of "For every $x$, if $x$ has property $P$ then $x$ has property
+   $Q$" is "_______."
+
+"For every $x$, if $x$ has property $Q$ then $x$ has property $P$."
+
+5. The contrapositive of "For every $x$, if $x$ has property $P$ then $x$ has
+   property $Q$" is "_______."
+
+"For every $x$, if $x$ does not have property $Q$, then $x$ does not have
+property $P$."
+
+6. The inverse of "For every $x$, if $x$ has property $P$ then $x$ has property
+   $Q$" is "_______."
+
+"For every $x$, if $x$ does not have property $P$, then $x$ does not have
+property $Q$."
