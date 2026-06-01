@@ -139,3 +139,32 @@ Page 151
 - "$\forall x, r(x)$ **only if** $s(x)$" means
   "$\forall x, \text{ if } \neg s(x) \text{ then } \neg r(x)$" or, equivalently,
   "$\forall x, \text{ if } r(x) \text{ then } s(x)$."
+
+---
+
+Page 156
+
+**Interpreting Statements with Two Different Quantifiers**
+
+If you want to establish the truth of a statement of the form
+
+$$ \forall x \text{ in } D, \exists y \text{ in } E \text{ such that } P(x, y) $$
+
+your challenge is to allow someone else to pick whatever element $x$ in $D$ they
+wish and then you must find an element $y$ in $E$ that "works" for that
+particular $x$.
+
+If you want to establish the truth of a statement of the form
+
+$$ \exists x \text{ in } D \text{ such that } \forall y \text{ in } E, P(x, y) $$
+
+your job is to find one particular $x$ in $D$ that will "work" no matter what
+$y$ in $E$ anyone might choose to challenge you with.
+
+---
+
+**Negations of Statements with Two Different Quantifiers**
+
+$\neg(\forall x \text{ in } d, \exists y \text{ in } E \text{ such that } P(x, y)) \equiv \exists x \text{ in } D \text{ such that } \forall y \text{ in } E, \neg P(x, y)$
+
+$\neg(\exists x \text{ in } D \text{ such that } \forall y \text{ in } E, P(x, y)) \equiv \forall x \text{ in } D, \exists y \text{ in } E \text{ such that } \neg P(x, y)$
