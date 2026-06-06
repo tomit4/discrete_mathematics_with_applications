@@ -1560,22 +1560,38 @@ Page 166
 
 a. $P(\text{Tokyo}, \text{Japan})$
 
+True.
+
 b. $P(\text{Athens}, \text{Egypt})$
+
+False.
 
 c. $P(\text{Paris}, \text{France})$
 
+True.
+
 d. $P(\text{Miami}, \text{Brazil})$
+
+False.
 
 2. Let $G(x, y)$ be "$x^2 > y$." Indicate which of the following statements are
    true and which are false.
 
 a. $G(2, 3)$
 
+True. $4 > 3$.
+
 b. $G(1, 1)$
+
+False $1 \cancel{>} 1$.
 
 c. $G(\dfrac{1}{2}, \dfrac{1}{2})$
 
+False. $\dfrac{1}{4} \cancel{>} \dfrac{1}{2}$.
+
 d. $G(-2, 2)$
+
+True, $4 > 2$.
 
 3. The following statement is true: "$\forall$ nonzero number $x$, $\exists$ a
    real number $y$ such that $xy = 1$." For each $x$ given below, find a $y$ to
@@ -1583,9 +1599,15 @@ d. $G(-2, 2)$
 
 a. $x = 2$
 
+$$ y = \frac{1}{2} $$
+
 b. $x = -1$
 
+$$ y = -1 $$
+
 c. $x = \dfrac{3}{4}$
+
+$$ y = \frac{4}{3} $$
 
 4. The following statement is true: "$\forall$ real number $x$, $\exists$ an
    integer $n$ such that $n > x$.". For each $x$ given below, find an $n$ to
@@ -1593,9 +1615,15 @@ c. $x = \dfrac{3}{4}$
 
 a. $x = 15.83$
 
+$$ n = 16 $$
+
 b. $x = 10^8$
 
+$$ n = 10^8 + 1 $$
+
 c. $x = 10^{10^{10}}$
+
+$$ n = 10^{10^{10}} + 1 $$
 
 The statements in exercises 5-8 refer to the Tarski world given in Figure 3.3.1.
 Explain why each is true.
@@ -1603,36 +1631,118 @@ Explain why each is true.
 5. For every circle $x$ there is a square $y$ such that $x$ and $y$ have the
    same color.
 
+This is saying that for every circle there is at least one square that has the
+same color:
+
+| circle | square(s) with same color |
+| ------ | ------------------------- |
+| b      | h, g                      |
+| c      | j                         |
+| d      | j                         |
+
+As you can see, this is true, every circle has at least one square that has the
+same color.
+
 6. For every square $x$ there is a circle $y$ such that $x$ and $y$ have
    different colors and $y$ is above $x$.
 
+| square | circle(s) that have different color and are above the square |
+| ------ | ------------------------------------------------------------ |
+| e      | c, a, b                                                      |
+| g      | c, a                                                         |
+| j      | b                                                            |
+
+As you can see, this statement is true, every square has at least one circle
+that has a different color and is above it.
+
 7. There is a triangle $x$ such that for every square $y$, $x$ is above $y$.
 
+This is saying there is at least one triangle that is above every square. This
+is true, as the triangle d is above all the squares, e, g, and j.
+
 8. There is a triangle $x$ such that for every circle $y$, $y$ is above $x$.
+
+This is saying there is at least one triangle that is below every circle. This
+is true, both f and i are triangles that are below every circle, b, c, and a.
 
 9. Let $D = E = \{-2, -1, 0, 1, 2\}$. Explain why the following statements are
    true.
 
 a. $\forall x$ in $D$, $\exists y$ such that $x + y = 0$.
 
+This is true, for every number in $\{-2, -1, 0, 1, 2\}$ there exists at least
+one corresponding number in $\{-2, -1, 0, 1, 2\}$ such that the sum of those two
+numbers is 0. This is true. Take the following cases:
+
+$$ x = -2, y = 2, x + y = 0 $$
+
+$$ x = -1, y = 1, x + y = 0 $$
+
+$$ x = 0, y = 0, x + y = 0 $$
+
+$$ x = 1, y = -1, x + y = 0 $$
+
+$$ x = 2, y = -2, x + y = 0 $$
+
 b. $\exists x$ in $D$ such that $\forall y$ in $E$, $x + y = y$.
+
+This is true, within the set $\{-2, -1, 0, 1, 2\}$, there exists at least one
+number such that when summed with every number in $\{-2, -1, 0, 1, 2}$, the
+result will always be the one number chosen from the second set. Consider the
+following cases then:
+
+$$ x = 0, y = -2, x + y = y $$
+
+$$ x = 0, y = -1, x + y = y $$
+
+$$ x = 0, y = 0, x + y = y $$
+
+$$ x = 0, y = 1, x + y = y $$
+
+$$ x = 0, y = 2, x + y = y $$
 
 10. This exercise refers to Example 3.3.3. Determine whether each of the
     following statements is true or false.
 
 a. $\forall$ student $S$, $\exists$ a dessert $D$ such that $S$ chose $D$.
 
+For all students, there is at least one desert that that student chose.
+
+This is true, all students chose pie, and Tim chose both pie and cake..
+
 b. $\forall$ student $S$, $\exists$ a salad $T$ such that $S$ chose $T$.
+
+For all students, there is at least one salad that that student chose.
+
+This is false, Yuen did not choose a salad.
 
 c. $\exists$ a dessert $D$ such that $\forall$ student $S$, $S$ chose $D$.
 
+There exists at least one desert that all students chose.
+
+This is true, all students chose pie.
+
 d. $\exists$ a beverage $B$ such that $\forall$ student $D$, $D$ chose $B$.
+
+There exists at least one beverage that all students chose.
+
+This is false, there is no beverage that every student chose.
 
 e. $\exists$ an item $I$ such that $\forall$ student $S$, $S$ did not choose
 $I$.
 
+There exists at least one item that all students did not choose.
+
+This is false, every item was chosen by at least one student.
+
 f. $\exists$ a station $Z$ such that $\forall$ student $S$, $\exists$ an item
 $I$ such that $S$ chose $I$ from $Z$.
+
+There exists at least one station where at least one item was chosen by all
+students.
+
+This is true, from the Desserts station, the item pie was chosen by all
+students.
 
 11. Let $S$ be the set of students at your school, let $M$ be the set of movies
     that have ever been released, and let $V(s, m)$ be "student $s$ has seen
@@ -1641,28 +1751,77 @@ $I$ such that $S$ chose $I$ from $Z$.
 
 a. $\exists s \in S$ such that $V(s, \text{Casablanca})$.
 
+There is at least one student at your school that has seen Casablanca.
+
 b. $\forall s \in S, V(s, \text{Star Wars})$.
+
+Every student at your school has seen Star Wars.
 
 c. $\forall s \in S, \exists m \in M \text{ such that } V(s, m)$.
 
+Every student at your school as seen at least one movie.
+
 d. $\exists m \in M \text{ such that } \forall s \in S, V(s, m)$.
+
+There is at least one movie that every student at your school as seen.
 
 e.
 $\exists s \in S, \exists t \in S, \text{ and } \exists m \in M \text{ such that } s \neq t \text{ and } V(s, m) \wedge V(t, m)$.
 
+There are at least two different students at your school that have both seen the
+same movie.
+
 f.
 $\exists s \in S \text{ and } \exists t \in S \text{ such that } s \neq t \text{ and } \forall m \in M, V(s, m) \to V(t, m)$.
+
+There are at least two different students at your school where if the first
+student has seen a movie, then the second student has also seen that movie.
 
 12. Let $D = E = \{-2, -1, 0, 1, 2\}$. Write negations for each of the following
     statements and determine which is true, the given statement or its negation.
 
 a. $\forall x$ in $D$, $\exists y$ such that $x + y = 1$.
 
+Negation:
+
+$\exists x$ in $D$, such that $\forall y, x + y \neq 1$
+
+The negation is true. The original statement cannot be true as there is no
+corresponding number for $x = -2$ that would result in $x + y = 1$. For the
+negation to be true, there just has to be at least one value for $x$ such that
+$x + y \neq 1$, so $x = -2, y = -2, x + y = -4 \neq 1$ is just one
+counterexample.
+
 b. $\exists x$ in $D$ such that $\forall y$ in $E$, $x + y = -y$.
+
+Negation:
+
+$\forall x$ in $D$, $\exists y$ in $E$ such that $x + y \neq -y$.
+
+The negation is true. The original statement cannot be true as there is no
+single $x$ for which when summed with every number, $y$ from $E$ would equal
+$-y$. The negation however states that for every $x$ value in $D$, there is at
+least one number $y$ in $E$ where the sum does not equal $-y$.
 
 c. $\forall x$ in $D$, $\exists y$ in $E$ such that $xy \geq y$.
 
+Negation:
+
+$\exists x$ in $D$, such that $\forall y$ in $E$, $xy < y$.
+
+The original statement is true. For the negation to be true there would have to
+be at least one $x$ in $D$ where every $y$ in $E$ would be greater than the
+product of $xy$, and none of the values in $E$ would satisfy this condition.
+
 d. $\exists x$ in $D$ such that $\forall y$ in $E$, $x \leq y$.
+
+Negation:
+
+$\forall x$ in $D$, $\exists y$ in $E$ such that $x > y$.
+
+The original statement is true. For the negation to be true, every $x$ in $D$
+would have to be greater than at least one $y$ value in $E$, but because
+$D = E$, this can never be the case.
 
 In each of 13-19, (a) rewrite the statement in English without using the symbol
 $\forall$ or $\exists$ or variables and expressing your answer as simply as
@@ -1670,19 +1829,58 @@ possible, and (b) write a negation for the statement.
 
 13. $\forall$ color $C$, $\exists$ an animal $A$ such that $A$ is colored $C$.
 
+a. For every color, there is an animal of that color.
+
+b. Negation: There is a color that every animal is not that color.
+
 14. $\exists$ a book $b$ such that $\forall$ person $p$, $p$ has read $b$.
+
+a. There is a book that every person has read.
+
+b. Negation: For every book, there is a person who has not read that book.
+
+There is no book that every person has read.
 
 15. $\forall$ odd integer $n$, $\exists$ an integer $k$ such that $n = 2k + 1$.
 
+a. Given any integer $n$, there is at least one integer $k$ such that
+$n = 2k + 1$.
+
+b. Negation: There exists at least one odd integer $n$, such that for all
+integers $k$, $n \neq 2k + 1$.
+
 16. $\exists$ a real number $u$ such that $\forall$ real number $v$, $uv = v$.
+
+a. There is a real number, $u$, that when multiplied with any real number, $v$,
+$uv = v$.
+
+b. Negation: For all real numbers, $u$, there exists at least one real number
+$v$, where $uv \neq v$.
 
 17. $\forall r \in \mathbb{Q}$, $\exists$ integers $a$ and $b$ such that
     $r = \dfrac{a}{b}$.
 
+a. For all rational numbers, $r$, there exists at least two integers, $a$, and
+$b$, where $r = \dfrac{a}{b}$.
+
+b. Negation: There exists some rational number $r$, such that for all integers,
+$a$, and $b$, $r \neq \dfrac{a}{b}$.
+
 18. $\forall x \in \mathbb{R}$, $\exists$ a real number $y$ such that
     $x + y = 0$.
 
+a. Given any real number, $x$, there exists a real number $y$ where $x + y = 0$.
+
+b. Negation: There is a real number $x$, which when summed with any real number
+$y$, $x + y \neq 0$.
+
 19. $\exists x \in \mathbb{R}$ such that for every real number $y$, $x + y = 0$.
+
+a. There is a real number $x$, that when summed with any real number $y$,
+$x + y = 0$.
+
+b. Negation: Given any real number $x$, there is a real number $y$ where
+$x + y \neq 0$.
 
 20. Recall that reversing the order of the quantifiers in a statement with two
     different quantifiers may change the truth value of the statement - but it
@@ -1697,16 +1895,45 @@ a.
 (1) For every square $y$ there is a triangle $x$ such that $x$ and $y$ have
 different colors.
 
+This is true, consider the table:
+
+| square | triangle that has a different color |
+| ------ | ----------------------------------- |
+| e      | f, i                                |
+| h      | d                                   |
+| g      | d                                   |
+| j      | d, f, i                             |
+
+As you can see, for every square, there is at least one triangle that has a
+different color.
+
 (2) There is a triangle $x$ such that for every square $y$, $x$, and $y$ have
 different colors.
+
+This is false, there is no single triangle that is a different color from every
+square.
 
 b.
 
 (1) For every circle $y$ there is a square $x$ such that $x$ and $y$ have the
 same color.
 
+For every circle, there is at least one square that has the same color. This is
+true. Consider the table:
+
+| circle | square with the same color as the circle |
+| ------ | ---------------------------------------- |
+| a      | j                                        |
+| b      | h, g                                     |
+| c      | j                                        |
+
 (2) There is a square $x$ such that for every circle $y$, $x$ and $y$ have the
 same color.
+
+There is at least one square that has the same color as every circle. This
+cannot be true unless every circle were the same color and the square was also
+the same color, but every circle is not the same color so this statement cannot
+be true.
 
 21. For each of the following equations, determine which of the following
     statements are true:
@@ -1721,13 +1948,101 @@ Note that it is possible for both statements to be true or for both to be false.
 
 a. $2x + y = 7$
 
+Let $P(x, y) = 2x + y = 7$
+
+(1)
+
+$$ \forall x \in \mathbb{R}, \exists y \in \mathbb{R}, \text{ such that } P(x, y) $$
+
+This is true. For any $x$, there is always at least one $y$ where $y = 7 - 2x$.
+
+(2)
+
+$$ \exists x \in \mathbb{R}, \text{ such that }\forall y \in \mathbb{R}, P(x, y) $$
+
+This is false, the statement claims there exists some $x$ which when doubled and
+added to any $y$ will equal $7$. In other words, $x = \dfrac{7 - y}{2}$ for
+_any_ $y$, and that is impossible.
+
 b. $y + x = x + y$
+
+Let $P(x, y) = y + x = x + y$
+
+(1)
+
+$$ \forall x \in \mathbb{R}, \exists y \in \mathbb{R}, \text{ such that } P(x, y) $$
+
+This is true, as it states that for any real number $x$, there exists at least
+one real number $y$ such that their sum, $y + x$ is equal to $x + y$. By the
+commutative property of addition, this is always true.
+
+(2)
+
+$$ \exists x \in \mathbb{R}, \text{ such that }\forall y \in \mathbb{R}, P(x, y) $$
+
+This is also true, as it states there exists at least one real number $x$, where
+given any real number $y$, $y + x = x + y$, which is also true by the
+commutative property of addition.
 
 c. $x^2 - 2xy + y^2 = 0$
 
+Let $P(x, y) = x^2 - 2xy + y^2 = 0$
+
+Notice $x^2 - 2xy - y^2 = (x - y)^2 = 0$.
+
+(1)
+
+$$ \forall x \in \mathbb{R}, \exists y \in \mathbb{R}, \text{ such that } P(x, y) $$
+
+Yes this is true. This is stating "For any real number $x$, there is at least
+one corresponding real number $y$, such that $x - y = 0$". This is a true
+statement.
+
+(2)
+
+$$ \exists x \in \mathbb{R}, \text{ such that }\forall y \in \mathbb{R}, P(x, y) $$
+
+This is false, this is stating "There exists some real number $x$, where for any
+real number $y$, $x - y = 0$", and that is impossible, as that would indicate
+that $x$ is some number universally equal to any other real number.
+
 d. $(x - 5)(y - 1) = 0$
 
+Let $P(x, y) = (x - 5)(y - 1) = 0$
+
+(1)
+
+$$ \forall x \in \mathbb{R}, \exists y \in \mathbb{R}, \text{ such that } P(x, y) $$
+
+This is true, no matter what value for $x$ is chosen, there is always at least
+one real number $y$, for which $P(x, y)$ is true, namely $y = 1$.
+
+(2)
+
+$$ \exists x \in \mathbb{R}, \text{ such that }\forall y \in \mathbb{R}, P(x, y) $$
+
+This is true, there is at least one number $x$ such that when multiplied by any
+value for $y - 1$ will equal $0$, namely $x = 5$.
+
 e. $x^2 + y^2 = -1$
+
+Let $P(x, y) = x^2 + y^2 = -1$
+
+(1)
+
+$$ \forall x \in \mathbb{R}, \exists y \in \mathbb{R}, \text{ such that } P(x, y) $$
+
+This is false because the statement $x^2 + y^2 = -1$ can never be true, as both
+$x^2$ and $y^2$ must be greater than or equal to $0$, and so therefore
+$x^2 + y^2$ can _never_ equal a negative value.
+
+(2)
+
+$$ \exists x \in \mathbb{R}, \text{ such that }\forall y \in \mathbb{R}, P(x, y) $$
+
+This is false because the statement $x^2 + y^2 = -1$ can never be true, as both
+$x^2$ and $y^2$ must be greater than or equal to $0$, and so therefore
+$x^2 + y^2$ can _never_ equal a negative value.
 
 In 22 and 23, rewrite each statement without using variables or the symbol
 $\forall$ or $\exists$. Indicate whether the statement is true or false.
@@ -1736,15 +2051,30 @@ $\forall$ or $\exists$. Indicate whether the statement is true or false.
 
 a. $\forall$ real number $x$, $\exists$ a real number $y$ such that $x + y = 0$.
 
+Given any real number $x$, there is a real number $y$ where $x + y = 0$.
+
+This is true, any real number has an additive inverse.
+
 b. $\exists$ a real number $y$ such that $\forall$ real number $x$, $x + y = 0$.
+
+This is false, this is saying there exists a real number $y$, which when added
+to any real number $x$, will equal $0$. There is no such number, so this
+statement is false.
 
 23.
 
 a. $\forall$ nonzero real number $r$, $\exists$ a real number $s$ such that
 $rs = 1$.
 
+This is true, any nonzero real number $r$ will have a reciprocal $s$ such that
+$rs = 1$.
+
 b. $\exists$ a real number $r$ such that $\forall$ nonzero real number $s$,
 $rs = 1$.
+
+This is false, this is claiming there is a real number $r$ that is the
+reciprocal for any real number $s$. There is no such number, so this statement
+is false.
 
 24. Use the laws for negating universal and existential statements to derive the
     following rules:
@@ -1752,8 +2082,16 @@ $rs = 1$.
 a.
 $\neg(\forall x \in D(\forall y \in E(P(x, y)))) \equiv \exists x \in D(\exists y \in E(\neg P(x, y)))$
 
+$$ \neg(\forall x \in D(\forall y \in E(P(x, y)))) \equiv \exists x \in D(\neg(\forall y \in E(P(x, y)))) $$
+
+$$ \quad \equiv \exists x \in D(\exists y \in E \neg P(x, y)) $$
+
 b.
 $\neg(\exists x \in D(\exists y \in E(P(x, y)))) \equiv \forall x \in D(\forall y \in E(\neg P(x, y)))$
+
+$$ \neg(\exists x \in D(\exists y \in E(P(x, y)))) \equiv \forall x \in D \neg(\exists y \in E(P(x, y))) $$
+
+$$ \quad \equiv \forall x \in D(\forall y \in E(\neg P(x, y))) $$
 
 Each statement in 25-28 refers to the Tarski world of Figure 3.3.1. For each,
 (a) determine whether the statement is true or false and justify your answer,
@@ -1762,13 +2100,41 @@ result in exercise 24).
 
 25. $\forall$ circle $x$ and $\forall$ square $y$, $x$ is above $y$.
 
+(a) This is true, all circles are above all squares.
+
+(b) $\exists$ circle $x$ and $\exists$ square $y$ such that $x$ is not above
+$y$.
+
 26. $\forall$ circle $x$ and $\forall$ triangle $y$, $x$ is above $y$.
+
+(a) This is false, as not all circles are above all triangles (circles b and c
+are not above triangle d).
+
+(b) $\exists$ circle $x$ and $\exists$ triangle $y$ such that $x$ is not above
+$y$.
 
 27. $\exists$ a circle $x$ and $\exists$ a square $y$ such that $x$ is above $y$
     and $x$ and $y$ have different colors.
 
+(a) This is true, there exists at least one circle and at least one square where
+the circle is above the square and the circle and square have different colors
+(all circles, a, b, and c are above all squares, and circle b has a different
+color from squares e, and j; circle c has a different color from squares e and
+g; and circle a has different colors from squares e and g).
+
+(b) $\forall$ circle $x$ and $\forall$ square $y$, $x$ is not above $y$ and $x$
+and $y$ are the same color.
+
 28. $\exists$ a triangle $x$ and $\exists$ a square $y$ such that $x$ is above
     $y$ and $x$ and $y$ have the same color.
+
+(a) This is true, this is saying there exists at least one triangle and at least
+one square where the triangle is above the square and the triangle and the
+square are the same color. Triangle d fulfills both conditions, as it is above
+all squares, and is the same color as square e.
+
+(b) $\forall$ triangles $x$ and $\forall$ squares $y$, $x$ is not above $y$ and
+$x$ and $y$ are not the same color.
 
 For each of the statements in 29 and 30, (a) write a new statement by
 interchanging the symbols $\forall$ and $\exists$, and (b) state which is true:
@@ -1776,32 +2142,88 @@ the given statement, the version with interchanged quantifiers, neither or both.
 
 29. $\forall x \in \mathbb{R}, \exists y \in \mathhbb{R}$ such that $x < y$.
 
+(a) $\exists x \in \mathbb{R}, \forall y \in \mathbb{R}$ such that $x < y$.
+
+(b) The original statement is true (there always exists some real number $y$
+where $y = x + 1$, such that $x < y$). The interchanged statement is false, as
+there is no single real number $x$ that is less than all real numbers $y$.
+
 30. $\exists x \in \mathbb{R}$ such that $\forall y \in \mathbb{R}^{-}$ (the set
     of negative real numbers), $x > y$.
+
+(a) $\forall x \in \mathbb{R}, \exists y \in \mathbb{R}^{-}$ such that $x > y$.
+
+(b) The original statement is true, as it is saying that there exists some real
+number that is greater than any negative real number (any positive number or 0
+would fulfill this condition.) The interchanged statement is true, as for any
+real number $x$, you can always choose some negative number $y$ such that
+$y = x - 1$ where $x > y$ is true.
 
 31. Consider the statement "Everybody is older than somebody." Rewrite this
     statement in the form "$\forall$ people $x$, $\exists$ ______."
 
+"$\forall$ people $x$, $\exists$ some person $y$, such that $x$ is older than
+$y$."
+
 32. Consider the statement "Somebody is older than everybody." Rewrite this
     statement in the form "$\exists$ a person $x$ such that $\forall$ ______."
+
+"$\exists$ a person $x$ such that $\forall$ people $y$, $x$ is older than $y$."
 
 In 33-39, (a) rewrite the statement formally using quantifiers and variables,
 and (b) write a negation for the statement.
 
 33. Everybody loves somebody.
 
+(a) "$\forall$ people $x$, $\exists$ some person $y$ such that $x$ loves $y$."
+
+(b) Negation: "$\exists$ some person $x$ such that $\forall$ people $y$, $x$
+does not love $y$."
+
 34. Somebody loves everybody.
+
+(a) "$\exists$ some person $x$ such that $\forall$ people $y$, $x$ loves $y$."
+
+(b) Negation: "$\forall$ people $x$, $\exists$ some person $y$, such that $x$
+does not love $y$."
 
 35. Everybody trusts somebody.
 
+(a) "$\forall$ people $x$, $\exists$ some person $y$ such that $x$ trusts $y$."
+
+(b) Negation: "$\exists$ some person $x$, such that $\forall$ people $y$, $x$
+does not trust $y$."
+
 36. Somebody trusts everybody.
+
+(a) "$\exists$ some person $x$ such that $\forall$ people $y$, $x$ trusts $y$."
+
+(b) Negation: "$\forall$ people $x$, $\exists$ some person $y$, such that $x$
+does not trust $y$."
 
 37. Any even integer equals twice some integer.
 
+(a) "$\forall$ even integer $n$, $\exists$ some integer $k$ such that $n = 2k$."
+
+(b) Negation: "$\exists$ some integer $n$, such that $\forall$ integers $k$,
+$n \neq 2k$."
+
 38. Every action has an equal and opposite reaction.
+
+(a) "$\forall$ actions $x$, $\exists$ some action $y$, such that $y$ is the
+equal and opposite reaction to $x$."
+
+(b) Negation: "$\exists$ some action $x$ such that $\forall$ actions $y$, $y$ is
+not the equal and opposite reaction to $x$."
 
 39. There is a program that gives the correct answer to every question that is
     posed to it.
+
+(a) "$\exists$ some program $x$ such that $\forall$ questions $y$, $x$ gives the
+correct answer to $y$."
+
+(b) Negation: "$\forall$ programs $x$, $\exists$ some question $y$ such that $x$
+does not give the correct answer to $y$."
 
 40. In informal speech most sentences of the form "There is ______ every ______"
     are intended to be understood as meaning "$\forall$ ______ $\exists$
@@ -1812,7 +2234,13 @@ and (b) write a negation for the statement.
 
 a. There is a sucker born every minute.
 
+"$\forall$ minutes $x$, $\exists$ some sucker $y$ such that $y$ is born in
+minute $x$."
+
 b. There is a time for every purpose under heaven.
+
+"$\forall$ purpose under heaven $x$, $\exists$ some time $y$ such that $y$ is
+the time for $x$."
 
 41. Indicate which of the following statements are true and which are false.
     Justify your answers as best you can.
@@ -1820,25 +2248,68 @@ b. There is a time for every purpose under heaven.
 a. $\forall x \in \mathbb{Z}^{+}, \exists y \in \mathbb{Z}^{+}$ such that
 $x = y + 1$.
 
+This is false, this is stating that given any positive integer $x$, there exists
+some positive integer $y$ that such that $y = x - 1$. But take $x = 1$, and
+$1 = y + 1$ means $y = 0$, and that means this statement is false when $x = 1$.
+
 b. $\forall x \in \mathbb{Z}, \exists y \in \mathbb{Z}$ such that $x = y + 1$.
 
+This is statement is saying that given any integer $x$, there exists at least
+one integer $y$, such that $x = y + 1$. This is true. Take any $y = x - 1$, and
+you will still have an integer.
+
 c. $\exists x \in \mathbb{R}$ such that $\forall y \in \mathbb{R}, x = y + 1$ .
+
+This statement is saying there exists some real number $x$ that is equal to any
+real number $y$ plus $1$. This is false. You can't have some universal number
+$x$ that is always $1$ greater than all possible real numbers, $y.
 
 d. $\forall x \in \mathbb{R}^{+}, \exists y \in \mathbb{R}^{+}$ such that
 $xy = 1$.
 
+This statement is saying that given any positive real number, $x$, there is at
+least one positive real number $y$, such that $xy = 1$. This is true, as for any
+positive real number, there is always a reciprocal.
+
 e. $\forall x \in \mathbb{R}, \exists y \in \mathbb{R}$ such that $xy = 1$.
 
+This statement is saying that given any real number, $x$, there is at least one
+real number $y$, such that $xy = 1$. This statement is false. If $x = 0$, then
+there is no $y$ such that xy = 1$.
+
 f. $\exists x \in \mathbb{R}$ such that $\forall y \in \mathbb{R}, x + y = y$.
+
+This statement is saying there is at least one real number $x$ such that given
+any real number $y$, $x + y = y$. This is true, there is a real number for $x$,
+specifically $x = 0$, where $x$ plus any real number $y$ will equal $y$.
 
 g. $\forall x \in \mathbb{R}^{+}, \exists y \in \mathbb{R}^{+}$ such that
 $y < x$.
 
+This statement is saying that given any positive real number $x$, there is at
+least one positive real number $y$ such that $y < x$. This is true. This is
+saying that for any positive real number, there is always a positive real number
+that is less than it.
+
 h. $\exists x \in \mathbb{R}^{+}$ such that
 $\forall y \in \mathbb{R}^{+}, x \leq y$.
 
+This statement is saying there exists some positive real number $x$ such that
+given any positive real number $y$, $x \leq y$, or some universal $x$ will
+always be less than or equal to any $y$. This is false, since it is possible
+that $y = \dfrac{x}{2}$, there cannot be some universal $x$ in the set of
+positive real numbers that is always less than all positive real numbers $y$.
+
 42. Write the negation of the definition of limit of a sequence given in Example
     3.3.7.
+
+Definition of a limit:
+
+$\forall \varepsilon > 0, \exists N \in \mathbb{Z}, \forall n \in \mathbb{Z}((n > N) \to (L - \varepsilon < a_n < L + \varepsilon))$
+
+Negation:
+
+$\exists \varepsilon > 0, \forall N \in \mathbb{Z}, \exists n \in \mathbb{Z} ((n > N) \wedge ((L - \varepsilon \geq a_n) \vee (a_n \geq L + \varepsilon)))$
 
 43. The following is the definition for $\lim\limits_{x \to a}f(x) = L$:
 
@@ -1851,6 +2322,21 @@ $$ L - \varepsilon < f(x) < L + \varepsilon $$
 Write what it means for $\lim\limits_{x \to a}f(x) \neq L$. In other words,
 write the negation of the definition.
 
+Original:
+
+$$ \lim\limits_{x \to a}f(x) = L $$
+
+$$ \forall \varepsilon \in \mathbb{R} > 0, \exists \delta \in \mathbb{R} > 0, \forall x \in \mathbb{R} (((a - \delta < x < a + \delta) \wedge (x \neq a)) \to L - \varepsilon < f(x) < L + \varepsilon) $$
+
+Negation:
+
+$$ \exists \varepsilon \in \mathbb{R} > 0, \forall \delta \in \mathbb{R} > 0, \exists x \in \mathbb{R} ((a - \delta < x < a + \delta) \wedge (x \neq a)) \wedge ((L - \varepsilon \geq f(x)) \vee (f(x) \geq L + \varepsilon)))$$
+
+There exists some real number $\varepsilon > 0$ such that given any real number
+$\delta > 0$, there exists some real number $x$ such that
+$(a - \delta < x < a + \delta)$ and $x \neq a$ and $L - \varepsilon \geq f(x)$
+or $f(x) \geq L + \varepsilon$ is true.
+
 44. The notation $\exists !$ stands for the words "there exists a unique." Thus,
     for instance, "$\exists ! x$ such that $x$ is prime and $x$ is even" means
     that there is one and only one even prime number. Which of the following
@@ -1858,13 +2344,32 @@ write the negation of the definition.
 
 a. $\exists !$ real number $x$ such that $\forall$ real number $y$, $xy = y$.
 
+The statement is true, as there exists a real number $x$ for which given any
+real number $y$, $xy = y$. That number is $x = 1$, and _only_ $x = 1$ satisfies
+this condition (satisfying the unique constraint).
+
 b. $\exists !$ integer $x$ such that $\dfrac{1}{x}$ is an integer.
 
+The statement is false , there exists two integers for $x$ such that
+$\dfrac{1}{x}$ is an integer and those are $x = 1$ and $x = -1$, violating the
+unique constraint.
+
 c. $\forall$ real number $x$, $\exists !$ real number $y$ such that $x + y = 0$.
+
+The statement is true, given any real number $x$, there exists a single unique
+number that is it's additive inverse, namely it's corresponding negative number.
 
 45. Suppose that $P(x)$ is a predicate and $D$ is the domain of $x$. Rewrite the
     statement "$\exists ! x \in D \text{ such that } P(x)$" without using the
     symbol $\exists !$. (See exercise 44 for the meaning of $\exists !$.)
+
+Original:
+
+$\exists ! x \in D, P(x)$
+
+Alternative:
+
+$$ \exists x \in D (P(x) \to \forall y \in D(P(y) \to (x = y))) $$
 
 In 46-54, refer to the Tarski world given in Figure 3.1.1, which is shown again
 here for reference. The domains of all variables consist of all the objects in
@@ -1875,27 +2380,158 @@ given statement using the formal logical notation of Example 3.3.10.
 
 46. There is a triangle $x$ such that for every square $y$, $x$ is above $y$.
 
+(a) This is true, there is at least one triangle that is above every square,
+both triangles a and c are cases of this.
+
+(b) $\exists$ a triangle $x$ such that $\forall$ squares $y$, $x$ is above $y$.
+
+\(c\) $\forall$ triangles $x$, $\exists$ some square $y$ such that $x$ is not
+above $y$.
+
 47. There is a triangle $x$ such that for every circle $y$, $x$ is above $y$.
+
+(a) This is false, there is no triangle that is above every circle.
+
+(b) $\exists$ a triangle $x$ such that $\forall$ circles $y$, $x$ is above $y$.
+
+\(c\) $\forall$ triangles $x$, $\exists$ a circle $y$ such that $x$ is not above
+$y$.
 
 48. For every circle $x$, there is a square $y$ such that $y$ is to the right of
     $x$.
 
+(a) This is false, there is a circle that is not to the right of a square, and
+that is circle b.
+
+(b) $\forall$ circles $x$, $\exists$ a square $y$ such that $y$ is to the right
+of $x$.
+
+\(c\) $\exists$ a circle $x$ such that $\forall$ squares $y$, $y$ is not to the
+right of $x$.
+
 49. For every object $x$, if $x$ is a circle then there is a square $y$ such
     that $y$ has the same color as $x$.
+
+(a) This is false, there is a circle that does not have the same color as at
+least one square, and those circles are d, f, i, and k.
+
+(b)
+
+Let $P(x)$ be "$x$ is a circle" $S(y)$ be "$y$ is a square" and $Q(x, y)$ be
+"$y$ has the same color as $x$."
+
+$\forall$ objects $x$,
+$(P(x) \to \exists \text{ some square } y (S(y) \wedge Q(x, y)))$
+
+\(c\)
+
+Let $P(x)$ be "$x$ is a circle" $S(y)$ be "$y$ is a square" and $Q(x, y)$ be
+"$y$ has the same color as $x$."
+
+$\exists$ some object $x$
+$(P(x) \wedge \forall \text{ squares } y (\neg S(y) \vee \neg Q(x, y)))$
 
 50. For every object $x$, if $x$ is a triangle then there is a square $y$ such
     that $y$ is below $x$.
 
+(a) This is true, for every triangle, there is at least one square that is below
+it.
+
+(b)
+
+Let $P(x)$ be "$x$ is a triangle", $S(y)$ be "$y$ is a square", and $Q(x, y)$ be
+"$y$ is below $x$".
+
+$\forall$ objects $x$,
+$(P(x) \to \exists \text{ some square } y (S(y) \wedge Q(x,y)))$
+
+\(c\)
+
+$\exists$ some object $x$ such that
+$P(x) \wedge \forall y (\neg S(y) \vee \neg Q(x, y))$
+
+Let $P(x)$ be "$x$ is a triangle", $S(y)$ be "$y$ is a square", and $Q(x, y)$ be
+"$y$ is below $x$".
+
 51. There is a square $x$ such that for every triangle $y$, if $y$ is above $x$
     then $y$ has the same color as $x$.
 
+(a) This is true, there is at least one square where every triangle above it is
+the same color, this square is e with triangles c and a above it being the same
+color of blue.
+
+(b)
+
+Let $$ be "S(x)" be "$x$ is a square ", and $T(y)$ be "$y$ is a triangle", and
+$A(x, y)$ be "$y$ is above $x$" and $C(x, y)$ be "$y$ has the same color as
+$x$."
+
+$\exists$ some $x$ such that $(S(x) \wedge ((T(y) \wedge A(x, y)) \to C(x, y)))$
+
+\(c\)
+
+$\forall$ objects $x$,
+$\neg S(x) \vee \exists \text{ some } y ((T(y) \wedge A(x, y)) \wedge \neg C(x, y))$
+
+Let $$ be "T(x)" be "$x$ is a triangle", and $S(y)$ be "$y$ is a square", and
+$A(x, y)$ be "$y$ is above $x$" and $C(x, y)$ be "$y$ has the same color as
+$x$."
+
 52. For every circle $x$ and for every triangle $y$, $x$ is to the right of $y$.
+
+(a) This is false, every circle is not to the right of every triangle. For
+example circle b is not to the right of triangle c.
+
+(b)
+
+Let $C(x)$ be "$x$ is a circle", let $T(y)$ be "$y$ is a triangle", let
+$R(x, y)$ be "$x$ is to the right of $y$."
+
+$\forall x \forall y ((C(x) \wedge T(y)) \to R(x, y))$
+
+\(c\)
+
+$\exists x \exists y (C(x) \wedge T(y) \wedge \neg R(x, y))$
 
 53. There is a circle $x$ and there is a square $y$ such that $x$ and $y$ have
     the same color.
 
+(a) This is true, there is at least one circle and at least one square that have
+the same color, that is b and (h or j).
+
+(b)
+
+Let $C(x)$ be "$x$ is a circle", and $T(y)$ be "$y$ is a triangle", and
+$C(x, y)$ be "$x$ and $y$ have the same color."
+
+$$ \exists x \exists y (C(x) \wedge T(y) \wedge C(x, y)) $$
+
+\(c\)
+
+$$ \forall x \forall y (\neg C(x) \vee \neg T(y) \vee \neg C(x, y)) $$
+
+Let $C(x)$ be "$x$ is a circle", and $T(y)$ be "$y$ is a triangle", and
+$C(x, y)$ be "$x$ and $y$ have the same color."
+
 54. There is a circle $x$ and there is a triangle $y$ such that $x$ has the same
     color as $y$.
+
+(a) This is false, there is not any single circle that has the same color as any
+single triangle.
+
+(b)
+
+Let $C(x)$ be "$x$ is a circle", and $T(y)$ be "$y$ is a triangle", and
+$C(x, y)$ be "$x$ has the same color as $y$."
+
+$$ \exists x \exists y (C(x) \wedge T(y) \wedge C(x, y)) $$
+
+\(c\)
+
+Let $C(x)$ be "$x$ is a circle", and $T(y)$ be "$y$ is a triangle", and
+$C(x, y)$ be "$x$ has the same color as $y$."
+
+$$ \forall x \forall y (\neg C(x) \vee \neg T(y) \vee \neg C(x, y)) $$
 
 Let $P(x)$ and $Q(x)$ be predicates and suppose $D$ is the domain of $x$. In
 55-58, for the statement forms in each pair, determine whether (a) they have the
@@ -1904,11 +2540,34 @@ choice of $P(x)$, $Q(x)$, and $D$ for which they have opposite truth values.
 
 55. $\forall x \in D, (P(x) \wedge Q(x)) \text{ and } (\forall x \in D, P(x)) \wedge (\forall x \in D, Q(x))$
 
+These two statements are equivalent by the distributive law.
+
 56. $\exists x \in D, (P(x) \wedge Q(x)) \text{ and } (\exists x \in D, P(x)) \wedge (\exists x \in D, Q(x))$
+
+These two statements are not equivalent. When we separate the statement into two
+existential quantifiers on the right side of the equivalency, we are saying
+"there exists some $x$ in $D$ for which $P(x) and there exists some $x$ in $D$
+for which $Q(x)$ is true." But we could choose a different $x$ for $P(x)$ and a
+different $x$ for $Q(x)$, which is not what is happening on the left side of the
+equivalency, where the same $x$ is being chosen for both $P(x)$ and $Q(x)$.
 
 57. $\forall x \in D, (P(x) \vee Q(x)) \text{ and } (\forall x \in D, P(x)) \vee (\forall x \in D, Q(x))$
 
+These two statements are not equivalent. On the left side of the equivalency, we
+say that for any given $x$, either $P(x)$ or $Q(x)$ can be true. On the right
+side of the equivalency, we say that for any given $x$, $P(x)$ must be true or
+for any given $x$, $Q(x)$ must be true, but again, the two $x$'s do not have to
+be the same for these two predicates and so the right side equivalency is
+essentially stricter saying that either $P(x)$ must be true for every $x$ or
+$Q(x)$ must be true for every $x$. This is as opposed to the left side which
+says for any given $x$, either $P(x)$ or $Q(x)$ can be true.
+
 58. $\exists x \in D, (P(x) \vee Q(x)) \text{ and } (\exists x \in D, P(x)) \vee (\exists x \in D, Q(x))$
+
+These are equivalent. The left side is saying that there is an $x$ in $D$, where
+either $P(x)$ or $Q(x)$ or both can be true. The right side is saying there is
+an $x$ in $D$, such that $P(x)$ can be true or there is an $x$ in $D$ such that
+$Q(x)$ can be true. These are equivalent statements.
 
 In 59-61, find the answers Prolog would give if the following questions were
 added to the program given in Example 3.3.11.
@@ -1917,22 +2576,40 @@ added to the program given in Example 3.3.11.
 
 a. $?\text{isabove}(b_1, w_1)$
 
-b. $?\text{color}(X, white)$
+True.
+
+b. $?\text{color}(X, \text{white})$
+
+$X = w_2, X = w_1$
 
 c. $?\text{isabove}(X, b_3)$
+
+$X = b_2, X = w_2$
 
 60.
 
 a. $?\text{isabove}(w_1, g)$
 
-b. $?\text{color}(w_2, blue)$
+False.
+
+b. $?\text{color}(w_2, \text{blue})$
+
+False.
 
 c. $?\text{isabove}(X, b_1)$
+
+$X = g$
 
 61.
 
 a. $?\text{isabove}(w_2, b_3)$
 
-b. $?\text{color}(X, gray)$
+True.
+
+b. $?\text{color}(X, \text{gray})$
+
+$X = g$
 
 c. $?\text{isabove}(g, X)$
+
+$X = b_1, X = w_1$

@@ -77,18 +77,26 @@ Page 165
    the property that the $x$ the person gave you together with the _______ you
    subsequently found satisfy _______.
 
+$y \in E$; $y$; $P(x, y)$
+
 2. To establish the truth of a statement of the form
    "$\exists x \text{ in } D \text{ such that } \forall y \text{ in } E, P(x, y)$,"
    you need to find _______ so that no matter what _______ a person might
    subsequently give you, _______ will be true.
 
+$x \in D$; $y \in E$; $P(x, y)$
+
 3. Consider the statement
    "$\forall x, \exists y \text{ such that } P(x, y), \text{ a property involving } x \text{ and } y, \text{ is true}$."
    A negation for this statement is "_______."
 
+"$\exists x$ such that $\forall y$, the property $P(x, y)$ is false."
+
 4. Consider the statement
    "$\exists x \text{ such that } \forall y, P(x, y), \text{ a property involving } x \text{ and } y, \text{ is true}$."
    A negation for this statement is "_______."
+
+"$\forall x, \exists y$ such that the property $P(x, y)$ is false."
 
 5. Suppose $P(x, y)$ is some property involving $x$ and $y$, and suppose the
    statement
@@ -101,3 +109,6 @@ a. is true.
 b. is false.
 
 c. may be true or may be false.
+
+c is the answer, it may be true or false depending on the nature of the property
+involving $x$, and $y$. In other words, it relies on what $P(x, y)$ states.
