@@ -112,3 +112,28 @@ c. may be true or may be false.
 
 c is the answer, it may be true or false depending on the nature of the property
 involving $x$, and $y$. In other words, it relies on what $P(x, y)$ states.
+
+---
+
+**Test Yourself**
+
+Page 179
+
+1. The rule of universal instantiation says that if some property is true for
+   _______ in a domain, then it is true for _______.
+
+2. If the first two premises of universal modus ponens are written as "If $x$
+   makes $P(x)$ true, then $x$ makes $Q(x)$ true" and "For a particular value of
+   $a$ _______ , " then the conclusion can be written as "______. "
+
+3. If the first two premises of universal modus tollens are written as "If $x$
+   makes $P(x)$ true, then $x$ makes $Q(x)$ true" and "For a particular value of
+   $a$ _______ ," then the conclusion can be written as " _______. "
+
+4. If the first two premises of universal transitivity are written as "Any $x$
+   that makes $P(x)$ true makes $Q(x)$ true" and "Any $x$ that makes $Q(x)$ true
+   makes $R(x)$ true," then the conclusion can be written as "_______."
+
+5. Diagrams can be helpful in testing an argument for validity. However, if some
+   possible configurations of the premises are not drawn, a person could
+   conclude that an argument was _______ when it was actually _______.

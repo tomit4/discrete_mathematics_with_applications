@@ -163,8 +163,141 @@ $y$ in $E$ anyone might choose to challenge you with.
 
 ---
 
+Page 160
+
 **Negations of Statements with Two Different Quantifiers**
 
 $\neg(\forall x \text{ in } d, \exists y \text{ in } E \text{ such that } P(x, y)) \equiv \exists x \text{ in } D \text{ such that } \forall y \text{ in } E, \neg P(x, y)$
 
 $\neg(\exists x \text{ in } D \text{ such that } \forall y \text{ in } E, P(x, y)) \equiv \forall x \text{ in } D, \exists y \text{ in } E \text{ such that } \neg P(x, y)$
+
+---
+
+Page 169
+
+**Universal Instantiation**
+
+If a property is true of _everything_ in a set, then it is true of _any
+particular_ thing in the set.
+
+---
+
+Page 170
+
+**Universal Modus Ponens**
+
+_Formal Version_
+
+$$
+\forall x, \text{ if } P(x) \text{ then } Q(x) \\
+P(a) \text{ for a particular } a \\
+\therefore Q(a)
+$$
+
+_Informal Version_
+
+$$
+\text{If } x \text{ makes } P(x) \text{true, then } x \text{ makes } Q(x) \text{ true.} \\
+a \text{ makes } P(x) \text{ true.} \\
+\therefore a \text{ makes } Q(x) \text{ true.}
+$$
+
+---
+
+Page 172
+
+**Universal Modus Tollens**
+
+_Formal Version_
+
+$$
+\forall x, \text{ if } P(x) \text{ then } Q(x) \\
+\neg Q(a) \text{ for a particular } a \\
+\therefore \neg P(a)
+$$
+
+_Informal Version_
+
+$$
+\text{If } x \text{ makes } P(x) \text{true, then } x \text{ makes } Q(x) \text{ true.} \\
+a \text{ does not make } Q(x) \text{ true.} \\
+\therefore a \text{ does not make } P(x) \text{ true.}
+$$
+
+---
+
+Page 173
+
+**Definition**
+
+To say that an _argument form_ is **valid** means the following: No matter what
+particular predicates are substituted for the predicate symbols in its premises,
+if the resulting premise statements are all true, then the conclusion is also
+true. An _argument_ is called **valid** if, and only if, its form is valid. It
+is called _sound_ if, and only if, its form is valid and its premises are true.
+
+---
+
+Page 176
+
+**Converse Error (Quantified Form)**
+
+_Formal Version_
+
+$$
+\forall x, \text{ if } P(x) \text{ then } Q(x) \\
+Q(a) \text{ for a particular } a \\
+\therefore \neg P(a) \text{ is an invalid conclusion}
+$$
+
+_Informal Version_
+
+$$
+\text{If } x \text{ makes } P(x) \text{true, then } x \text{ makes } Q(x) \text{ true.} \\
+a \text{ makes } Q(x) \text{ true.} \\
+\therefore a \text{ makes } P(x) \text{ true. } \text{ is an invalid conclusion}
+$$
+
+---
+
+Page 176
+
+**Inverse Error (Quantified Form)**
+
+_Formal Version_
+
+$$
+\forall x, \text{ if } P(x) \text{ then } Q(x) \\
+\neg P(a) \text{ for a particular } a \\
+\therefore \neg \neg Q(a) \text{ is an invalid conclusion}
+$$
+
+_Informal Version_
+
+$$
+\text{If } x \text{ makes } P(x) \text{true, then } x \text{ makes } Q(x) \text{ true.} \\
+a \text{ does not make } P(x) \text{ true.} \\
+\therefore a \text{ does not make } Q(x) \text{ true. } \text{ is an invalid conclusion}
+$$
+
+---
+
+Page 177
+
+**Universal Transitivity**
+
+_Formal Version_
+
+$$
+\forall x P(x) \to Q(x) \\
+\forall x Q(x) \to R(x) \\
+\therefore \forall x P(x) \to R(x)
+$$
+
+_Informal Version_
+
+$$
+\text{Any } x \text{ that makes } P(x) \text{ true makes } Q(x) \text{ true.} \\
+\text{Any } x \text{ that makes } Q(x) \text{ true makes } R(x) \text{ true.} \\
+\therefore \text{Any } x \text{ that makes } P(x) \text{ true makes } R(x) \text{ true.} \\
+$$

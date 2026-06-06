@@ -2613,3 +2613,396 @@ $X = g$
 c. $?\text{isabove}(g, X)$
 
 $X = b_1, X = w_1$
+
+---
+
+**Exercise Set 3.4**
+
+Page 179
+
+1. Let the following law of algebra be the first statement of an argument: For
+   all real numbers $a$ and $b$,
+
+$$ (a + b)^2 = a^2 + 2ab + b^2 $$
+
+Suppose each of the following statements is, in turn, the second statement of
+the argument. Use universal instantiation or universal modus ponens to write the
+conclusion that follows in each case.
+
+a. $a = x$ and $b = y$ are particular real numbers.
+
+b. $a = f_i$ and $b = f_i$ are particular real numbers.
+
+c. $a = 3u$ and $b = 5v$ are particular real numbers.
+
+d. $a = g(r)$ and $b = g(s)$ are particular real numbers.
+
+e. $a = \log(t_1)$ and $b = \log(t_2)$ are particular real numbers.
+
+Use universal instantiation or universal modus ponens to fill in valid
+conclusions for the arguments in 2-4.
+
+2.
+
+$$
+\text{If an integer}  n \text{ equals } 2 \cdot k \text{ and } k \text{ is an integer, then } n \text{ is even.} \\
+0 \text{ equals } 2 \cdot 0 \text{ and } 0 \text{ is an integer.} \\
+\therefore \text{\_\_\_\_\_\_}
+$$
+
+3.
+
+$$
+\text{For all real numbers } a, b, c, \text{ and } d, \text{ if } b \neq 0 \text{ and } d \neq 0 \text{ then } \frac{a}{b} + \frac{c}{d} = \frac{(ad + bc)}{bd} \\
+a = 2, b = 3, c = 4, \text{ and } d = 5 \text{ are particular real numbers such that } b \neq 0 \text{ and } d \neq 0 \\
+\therefore \text{\_\_\_\_\_\_}
+$$
+
+4.
+
+$$
+\forall \text{ real numbers } r, a, \text{ and } b, \text{ if } r \text{ is positive, then } (r^q)^b = r^{ab} \\
+r = 3, a = \frac{1}{2}, \text{ and } b = 6 \text{ are particular real numbers such that } r \text{ is positive.} \\
+\therefore \text{\_\_\_\_\_\_}
+$$
+
+Use universal modus tollens to fill in valid conclusions for the arguments in 5
+and 6.
+
+5.
+
+$$
+\text{All irrational numbers are real numbers.} \\
+\frac{1}{0} \text{ is not a real number.} \\
+\therefore \text{\_\_\_\_\_\_}
+$$
+
+6.
+
+$$
+\text{If a computer program is correct, then compilation of the program does not produce error messages.} \\
+\text{Compilation of this program produces error messages.} \\
+\therefore \text{\_\_\_\_\_\_}
+$$
+
+Some of the arguments in 7-18 are valid by universal modus ponens or universal
+modus tollens; others are invalid and exhibit the converse or the inverse error.
+State which are valid and which are invalid. Justify your answers.
+
+7.
+
+$$
+\text{All healthy people eat an apple a day.} \\
+\text{Keisha eats an apple a day.} \\
+\therefore \text{Keisha is a healthy person.}
+$$
+
+8.
+
+$$
+\text{All freshmen must take a writing course.} \\
+\text{Caroline is a freshman.} \\
+\therefore \text{Caroline must take a writing course.}
+$$
+
+9.
+
+$$
+\text{If a graph has no edges, then it has a vertex of degree zero.} \\
+\text{This graph has at least one edge.} \\
+\therefore \text{This graph does not have a vertex of degree zero.}
+$$
+
+10.
+
+$$
+\text{If a product of two numbers is } 0 \text{, then at least one of the numbers is } 0 \text{.} \\
+\text{For a particular number } x \text{, neither } (2x + 1) \text{ nor } (x - 7) \text{ equals } 0 \text{.} \\
+\therefore \text{The product } (2x + 1)(x - 7) \text{ is not } 0 \text{.}
+$$
+
+11.
+
+$$
+\text{All cheaters sit in the back row.} \\
+\text{Monty sits in the back row.} \\
+\therefore \text{Monty is a cheater.}
+$$
+
+12.
+
+$$
+\text{If an 8-bit two's complement represents a positive integer, then the 8-bit two's complement starts with a 0.} \\
+\text{The 8-bit two's complement for this integer does not start with 0.} \\
+\therefore \text{This integer is not positive.}
+$$
+
+13.
+
+$$
+\text{For every student } x \text{, if } x \text{ studies discrete mathematics, then } x \text{ is good at logic.} \\
+\text{Tarik studies discrete mathematics.} \\
+\therefore \text{Tarik is good at logic.}
+$$
+
+14.
+
+$$
+\text{If compilation of a computer program produces error messages, then the program is not correct.} \\
+\text{Compilation of this program does not produce error messages.} \\
+\therefore \text{This program is correct.}
+$$
+
+15.
+
+$$
+\text{Any sum of two rational numbers is irrational.} \\
+\text{The sum } r + s \text{ is rational.} \\
+\therefore \text{The numbers } r \text{ and } s \text{ are both rational.}
+$$
+
+16.
+
+$$
+\text{If a number is even, then twice that number is even.} \\
+\text{The number } 2n \text{ is even, for a particular number } n \text{.} \\
+\therefore \text{The particular number } n \text{ is even.}
+$$
+
+17.
+
+$$
+\text{If an infinite series converges, then the terms go to 0.} \\
+\text{The terms of the infinite series } \sum_{n=1}^{\infty}{\frac{1}{n}} \text{ go to 0.} \\
+\therefore \text{The infinite series } \sum_{n=1}^{\infty}{\frac{1}{n}} \text{ converges.}
+$$
+
+18.
+
+$$
+\text{If an infinite series converges, then the terms go to 0.} \\
+\text{The terms of the infinite series } \sum_{n=1}^{\infty}{\frac{1}{n}} \text{ do not go to 0.} \\
+\therefore \text{The infinite series } \sum_{n=1}^{\infty}{\frac{1}{n}} \text{ does not converge.}
+$$
+
+19. Rewrite the statement "No good cars are cheap" in the form "$\forall x$ if
+    $P(x)$ then $\neg Q(x)$." Indicate whether each of the following arguments
+    is valid or invalid, and justify your answers.
+
+a.
+
+$$
+\text{No good car is cheap.} \\
+\text{A Rimbaud is a good car.} \\
+\therefore \text{A Rimbaud is not cheap.}
+$$
+
+b.
+
+$$
+\text{No good car is cheap.} \\
+\text{A Simbaru is not cheap.} \\
+\therefore \text{A Simbaru is a good car.}
+$$
+
+c.
+
+$$
+\text{No good car is cheap.} \\
+\text{A VX Roadster is cheap.} \\
+\therefore \text{A VX Roadster is not good.}
+$$
+
+d.
+
+$$
+\text{No good car is cheap.} \\
+\text{An Omnex is not a good car.} \\
+\therefore \text{An Omnex is cheap.}
+$$
+
+20.
+
+a. Use a diagram to show that the following argument can have true premises and
+a false conclusion.
+
+$$
+\text{All dogs are carnivorous.} \\
+\text{Aaron is not a dog.} \\
+\therefore \text{Aaron is not carnivorous.}
+$$
+
+b. What can you conclude about the validity or invalidity of the following
+argument form? Explain how the result from part (a) leads to this conclusion.
+
+$$
+\forall x, \text{ if } P(x) \text{ then } Q(x) \\
+\neg P(a) \text{ for a particular } a \\
+\therefore \neg Q(a)
+$$
+
+Indicate whether the arguments in 21-27 are valid or invalid. Support your
+answers by drawing diagrams.
+
+21.
+
+$$
+\text{All people are mice.} \\
+\text{All mice are mortal.} \\
+\therefore \text{All people are mortal.}
+$$
+
+22.
+
+$$
+\text{All discrete mathematics students can tell a valid argument from an invalid one.} \\
+\text{All thoughtful people can tell a valid argument from an invalid one.} \\
+\therefore \text{All discrete mathematics students are thoughtful.}
+$$
+
+23.
+
+$$
+\text{All teachers occasionally make mistakes} \\
+\text{No gods ever make mistakes.} \\
+\therefore \text{No teachers are gods.}
+$$
+
+24.
+
+$$
+\text{No vegetarians eat meat.} \\
+\text{All vegans are vegetarians.} \\
+\therefore \text{No vegans eat meat.}
+$$
+
+25.
+
+$$
+\text{No college cafeteria food is good.} \\
+\text{No good food is wasted.} \\
+\therefore \text{No college cafeteria food is wasted.}
+$$
+
+26.
+
+$$
+\text{All polynomial functions are differentiable.} \\
+\text{All differentiable functions are continuous.} \\
+\therefore \text{All polynomial functions are continuous.}
+$$
+
+27.
+
+[Adapted from Lewis Carrol.]
+
+$$
+\text{Nothing intelligible ever puzzles me.} \\
+\text{Logic puzzles me.} \\
+\therefore \text{Logic is unintelligible.}
+$$
+
+In exercises 28-32, reorder the premises in each of the arguments to show that
+the conclusion follows as valid consequence from the premises. It may be helpful
+to rewrite the statements in if-then form and replace some of them by their
+contrapositives. Exercises 28-30 refer to the kinds of Tarski words discussed in
+Examples 3.1.13 and 3.3.1. Exercises 31 and 32 are adapted from _Symbolic Logic_
+by Lewis Carroll.
+
+28.
+
+    1. Every object that is to the right of all the blue objects is above all the triangles.
+
+    2. If an object is a circle, then it is to the right of all the blue objects.
+
+    3. If an object is not a circle, then it is not gray.
+
+$\therefore$ All the gray objects are above all the triangles.
+
+29.
+
+    1. All the objects that are to the right of all the triangles are above all the circles.
+
+    2. If an object is not above all the black objects, then it is not a square.
+
+    3. All the objects that are above all the black objects are to the right of all the triangles.
+
+$\therefore$ All the squares are above all the circles.
+
+30.
+
+    1. If an object is above all the triangles, then it is above all the blue objects.
+
+    2. If an object is not above all the gray objects, then it is not a square.
+
+    3. Every black object is a square.
+
+    4. Every object that is above all the gray objects is above all the triangles.
+
+$\therefore$ If an object is black, then it is above all the blue objects.
+
+31.
+
+    1. I trust every animal that belongs to me.
+
+    2. Dogs gnaw bones.
+
+    3. I admit no animals into my study unless they will beg when told to do so.
+
+    4. All the animals in the yard are mine.
+
+    5. I admit every animal that I trust into my study.
+
+    6. The only animals that are really willing to beg when told to do so are dogs.
+
+$\therefore$ All the animals in the yard gnaw bones.
+
+32.
+
+    1. When I work a logic example without grumbling, you may be sure it is one I understand.
+
+    2. The arguments in these examples are not arranged in regular order like the ones I am used to.
+
+    3. No easy examples make my head ache.
+
+    4. I can't understand examples if the arguments are not arranged in regular order like the ones I am used to.
+
+    5. I never grumble at an example unless it gives me a headache.
+
+$\therefore$ These examples are not easy.
+
+In 33 and 34 a single conclusion follows when all the given premises are taken
+into consideration, but it is difficult to see because the premises are jumbled
+up. Reorder the premises to make it clear that a conclusion follows logically,
+and state the valid conclusion that can be drawn. (It may be helpful to rewrite
+some of the statements in if-then form and to replace some statements by their
+contrapositives.)
+
+33.
+
+    1. No birds except ostriches are at least 9 feet tall.
+
+    2. There are no birds in this aviary that belong to anyone but me.
+
+    3. No ostrich lives on mince pies.
+
+    4. I have no birds less than 9 feet high.
+
+34.
+
+    1. All writers who understand human nature are clever.
+
+    2. No one is a true poet unless he can stir the human heart.
+
+    3. Shakespeare wrote Hamlet.
+
+    4. No writer who does not understand human nature can stir the human heart.
+
+    5. None but a true poet could have written Hamlet.
+
+35. Derive the validity of universal modus tollens from the validity of
+    universal instantiation and modus tollens.
+
+36. Derive the validity of universal form of part (a) of the elimination rule
+    from the validity of universal instantiation and the valid argument called
+    elimination in Section 2.3.
