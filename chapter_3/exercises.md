@@ -2631,13 +2631,23 @@ conclusion that follows in each case.
 
 a. $a = x$ and $b = y$ are particular real numbers.
 
-b. $a = f_i$ and $b = f_i$ are particular real numbers.
+$\therefore (x + y)^2 = x^2 + 2xy + y^2$
+
+b. $a = f_i$ and $b = f_j$ are particular real numbers.
+
+$\therefore (f_i + f_j)^2 = f_i^2 + 2f_if_j + f_j^2$
 
 c. $a = 3u$ and $b = 5v$ are particular real numbers.
 
+$\therefore (3u + 5v)^2 = (3u)^2 + 2(3u)(5v) + (5v)^2$
+
 d. $a = g(r)$ and $b = g(s)$ are particular real numbers.
 
+$\therefore (g(r) + g(s))^2 = (g(r))^2 + 2(g(r))(g(s)) + (g(s))^2$
+
 e. $a = \log(t_1)$ and $b = \log(t_2)$ are particular real numbers.
+
+$\therefore (\log(t_1) + \log(t_2))^2 = (\log(t_1))^2 + 2(\log(t_1))(\log(t_2)) + (\log(t_2))^2$
 
 Use universal instantiation or universal modus ponens to fill in valid
 conclusions for the arguments in 2-4.
@@ -2650,6 +2660,8 @@ $$
 \therefore \text{\_\_\_\_\_\_}
 $$
 
+$\therefore 0 \text{ is even.}$
+
 3.
 
 $$
@@ -2658,6 +2670,8 @@ a = 2, b = 3, c = 4, \text{ and } d = 5 \text{ are particular real numbers such 
 \therefore \text{\_\_\_\_\_\_}
 $$
 
+$\therefore \dfrac{2}{3} + \dfrac{4}{5} = \dfrac{((2)(5) + (3)(4))}{(3)(5)} = \dfrac{22}{15}$
+
 4.
 
 $$
@@ -2665,6 +2679,8 @@ $$
 r = 3, a = \frac{1}{2}, \text{ and } b = 6 \text{ are particular real numbers such that } r \text{ is positive.} \\
 \therefore \text{\_\_\_\_\_\_}
 $$
+
+$\therefore (3^{\frac{1}{2}})^6 = r^{(\frac{1}{2})(6)} = r^3$
 
 Use universal modus tollens to fill in valid conclusions for the arguments in 5
 and 6.
@@ -2677,6 +2693,8 @@ $$
 \therefore \text{\_\_\_\_\_\_}
 $$
 
+$\therefore \dfrac{1}{0} \text{ is not an irrational number.}$
+
 6.
 
 $$
@@ -2684,6 +2702,8 @@ $$
 \text{Compilation of this program produces error messages.} \\
 \therefore \text{\_\_\_\_\_\_}
 $$
+
+$\therefore \text{ this program is not correct.}$
 
 Some of the arguments in 7-18 are valid by universal modus ponens or universal
 modus tollens; others are invalid and exhibit the converse or the inverse error.
@@ -2697,6 +2717,8 @@ $$
 \therefore \text{Keisha is a healthy person.}
 $$
 
+This is invalid, this is an example of a converse error.
+
 8.
 
 $$
@@ -2704,6 +2726,8 @@ $$
 \text{Caroline is a freshman.} \\
 \therefore \text{Caroline must take a writing course.}
 $$
+
+This is valid, an example of universal modus ponens.
 
 9.
 
@@ -2713,6 +2737,8 @@ $$
 \therefore \text{This graph does not have a vertex of degree zero.}
 $$
 
+Invalid, inverse error.
+
 10.
 
 $$
@@ -2720,6 +2746,8 @@ $$
 \text{For a particular number } x \text{, neither } (2x + 1) \text{ nor } (x - 7) \text{ equals } 0 \text{.} \\
 \therefore \text{The product } (2x + 1)(x - 7) \text{ is not } 0 \text{.}
 $$
+
+This is valid, an example of universal modus tollens.
 
 11.
 
@@ -2729,6 +2757,8 @@ $$
 \therefore \text{Monty is a cheater.}
 $$
 
+Invalid, converse error.
+
 12.
 
 $$
@@ -2736,6 +2766,8 @@ $$
 \text{The 8-bit two's complement for this integer does not start with 0.} \\
 \therefore \text{This integer is not positive.}
 $$
+
+Valid, universal modus tollens.
 
 13.
 
@@ -2745,6 +2777,8 @@ $$
 \therefore \text{Tarik is good at logic.}
 $$
 
+Valid, universal modus ponens.
+
 14.
 
 $$
@@ -2752,6 +2786,8 @@ $$
 \text{Compilation of this program does not produce error messages.} \\
 \therefore \text{This program is correct.}
 $$
+
+Invalid, inverse error.
 
 15.
 
@@ -2761,6 +2797,8 @@ $$
 \therefore \text{The numbers } r \text{ and } s \text{ are both rational.}
 $$
 
+Valid, universal modus ponens.
+
 16.
 
 $$
@@ -2768,6 +2806,8 @@ $$
 \text{The number } 2n \text{ is even, for a particular number } n \text{.} \\
 \therefore \text{The particular number } n \text{ is even.}
 $$
+
+Invalid, converse error.
 
 17.
 
@@ -2777,6 +2817,8 @@ $$
 \therefore \text{The infinite series } \sum_{n=1}^{\infty}{\frac{1}{n}} \text{ converges.}
 $$
 
+Invalid, converse error.
+
 18.
 
 $$
@@ -2784,6 +2826,8 @@ $$
 \text{The terms of the infinite series } \sum_{n=1}^{\infty}{\frac{1}{n}} \text{ do not go to 0.} \\
 \therefore \text{The infinite series } \sum_{n=1}^{\infty}{\frac{1}{n}} \text{ does not converge.}
 $$
+
+Valid, by universal modus tollens.
 
 19. Rewrite the statement "No good cars are cheap" in the form "$\forall x$ if
     $P(x)$ then $\neg Q(x)$." Indicate whether each of the following arguments
@@ -2797,6 +2841,14 @@ $$
 \therefore \text{A Rimbaud is not cheap.}
 $$
 
+$$
+\forall x (P(x) \to \neg Q(x)) \\
+P(a) \\
+\therefore \neg Q(a)
+$$
+
+This is valid by universal modus ponens.
+
 b.
 
 $$
@@ -2804,6 +2856,14 @@ $$
 \text{A Simbaru is not cheap.} \\
 \therefore \text{A Simbaru is a good car.}
 $$
+
+$$
+\forall x (P(x) \to \neg Q(x)) \\
+\neg Q(a) \\
+\therefore \neg P(a)
+$$
+
+This is invalid, converse error.
 
 c.
 
@@ -2813,6 +2873,14 @@ $$
 \therefore \text{A VX Roadster is not good.}
 $$
 
+$$
+\forall x (P(x) \to \neg Q(x)) \\
+\Q(a) \\
+\therefore \neg P(a)
+$$
+
+This is true by universal modus tollens.
+
 d.
 
 $$
@@ -2820,6 +2888,14 @@ $$
 \text{An Omnex is not a good car.} \\
 \therefore \text{An Omnex is cheap.}
 $$
+
+$$
+\forall x (P(x) \to \neg Q(x)) \\
+\neg P(a) \\
+\therefore Q(a)
+$$
+
+Invalid, inverse error.
 
 20.
 
@@ -2832,6 +2908,12 @@ $$
 \therefore \text{Aaron is not carnivorous.}
 $$
 
+Our diagram shows two discs, one labeled carnivorous, the other labeled dogs,
+dogs lies completely inside carnivorous. We have labeled two points, both
+"Aaron", one lies outside both carnivorous and dogs, the other lies within
+carnivorous and not dogs, showing that we have two true premises, but a false
+conclusion. This is an example of an inverse error.
+
 b. What can you conclude about the validity or invalidity of the following
 argument form? Explain how the result from part (a) leads to this conclusion.
 
@@ -2840,6 +2922,9 @@ $$
 \neg P(a) \text{ for a particular } a \\
 \therefore \neg Q(a)
 $$
+
+This is an example of an inverse error. Just because we know $\neg P(a)$ does
+not mean we can conclude anything about $Q(a)$.
 
 Indicate whether the arguments in 21-27 are valid or invalid. Support your
 answers by drawing diagrams.
@@ -2852,6 +2937,11 @@ $$
 \therefore \text{All people are mortal.}
 $$
 
+This argument is valid, even though one of the premises is false (all people are
+mice). Drawn out this is simply three discs, one being all mortal, second being
+all mice, and third being all people, people inside of mice, mice inside of
+mortal. The conclusion is true, this is an example of universal transitivity.
+
 22.
 
 $$
@@ -2859,6 +2949,25 @@ $$
 \text{All thoughtful people can tell a valid argument from an invalid one.} \\
 \therefore \text{All discrete mathematics students are thoughtful.}
 $$
+
+Let $D(x)$ be "$x$ is a discrete math student."
+
+Let $P(x)$ be "$x$ is a thoughtful person."
+
+Let $Q(x)$ be "$x$ can tell a valid argument from an invalid one."
+
+Our argument then can be read as:
+
+$$
+\forall x (D(x) \to Q(x)) \\
+\forall x (P(x) \to Q(x)) \\
+\therefore \forall x (D(x) \to P(x))
+$$
+
+This is an invalid syllogism. In diagrams, one can see that while
+$D(x) \in Q(x)$ and $P(x) \in Q(x)$, we do not know if $D(x)$ or $P(x)$ overlap
+or not, we only know that both of them lie within $Q(x)$. Therefore this
+argument is invalid.
 
 23.
 
@@ -2868,6 +2977,14 @@ $$
 \therefore \text{No teachers are gods.}
 $$
 
+This argument is valid. This is an example of universal modus tollens. In
+diagrams, we have a disc representing all people who make mistakes, inside we
+have a disc labeled teachers, and outside of both discs we have a separate disc
+labeled gods. This diagram also illustrates that if one is a teacher, which is
+within the set of people that make mistakes, then a teacher cannot also be in
+the set of gods, which explicitly lies outside the set of people that make
+mistakes.
+
 24.
 
 $$
@@ -2875,6 +2992,11 @@ $$
 \text{All vegans are vegetarians.} \\
 \therefore \text{No vegans eat meat.}
 $$
+
+This argument is valid. This is an example of universal transitivity. In
+diagrams, we have two separated discs, one labeled "vegetarians", the other
+labeled "eats meat". Inside the "vegetarians" disc we have a smaller disc
+labeled "vegans." We can see therefore that no vegans eat meat.
 
 25.
 
@@ -2884,6 +3006,30 @@ $$
 \therefore \text{No college cafeteria food is wasted.}
 $$
 
+This argument is invalid.
+
+Let $P(x)$ be "$x$ is college cafeteria food."
+
+Let $Q(x)$ be "$x$ is good food."
+
+Let $R(x)$ be "$x$ food is wasted."
+
+Our argument formally looks like:
+
+$$
+\forall x (P(x) \to \neg Q(x)) \\
+\forall x (Q(x) \to \neg R(x)) \\
+\therefore \forall x (P(x) \to \neg R(x))
+$$
+
+But we established that no college cafeteria food is good, so it does not follow
+that if the food is good, then it is not wasted means that if the food is
+cafeteria food, then it is not wasted.
+
+In diagrams, we have two separate discs, $P(x)$ and $Q(x)$, and inside $Q(x)$
+there is a third disc labeled $\neg R$. We can see therefore that just because
+$x$ is cafeteria food, that does not mean that $x$ is not wasted.
+
 26.
 
 $$
@@ -2891,6 +3037,12 @@ $$
 \text{All differentiable functions are continuous.} \\
 \therefore \text{All polynomial functions are continuous.}
 $$
+
+This argument is valid. It is an example of universal transitivity. In a
+diagram, there is a disc labeled polynomial functions, there is a disc inside
+that disc labeled "differentiable" and inside "differentiable" there is a third
+disc labeled "continuous." We can see then that the set of all polynomial
+functions contain the set of all continuous functions.
 
 27.
 
@@ -2901,6 +3053,27 @@ $$
 \text{Logic puzzles me.} \\
 \therefore \text{Logic is unintelligible.}
 $$
+
+Let $P(x)$ be "$x$ is intelligible".
+
+Let $Q(x)$ be "$x$ puzzles me."
+
+Let $a$ be logic.
+
+Our argument then takes the form:
+
+$$
+\forall x (P(x) \to \neg Q(x)) \\
+Q(a) \\
+\therefore \neg P(a)
+$$
+
+This is a valid argument. It is valid by universal modus tollens. In a diagram,
+we have two separate discs, one labeled "intelligible", the other labeled
+"puzzles me". Inside the disc "puzzles me", we have a single point labeled
+"Logic." We can see that the point of Logic does not lie inside of
+"intelligible", so therefore we can reasonably conclude that Logic is
+unintelligible.
 
 In exercises 28-32, reorder the premises in each of the arguments to show that
 the conclusion follows as valid consequence from the premises. It may be helpful
@@ -2919,6 +3092,20 @@ by Lewis Carroll.
 
 $\therefore$ All the gray objects are above all the triangles.
 
+Answer:
+
+    3. If an object is not a circle, then it is not gray.
+
+    Restated contrapositive:
+
+    3.c If an object is gray, then it is a circle.
+
+    2. If an object is a circle, then it is to the right of all the blue objects.
+
+    1. If an object is to the right of all the blue objects, then it is above all the triangles.
+
+$\therefore$ If an object is gray, then it is above all the triangles.
+
 29.
 
     1. All the objects that are to the right of all the triangles are above all the circles.
@@ -2929,6 +3116,20 @@ $\therefore$ All the gray objects are above all the triangles.
 
 $\therefore$ All the squares are above all the circles.
 
+Answer:
+
+    2. If an object is not above all the black objects, then it is not a square.
+
+    Rewritten as contrapositive:
+
+    2.c If an object is a square, then it is above all black objects.
+
+    3. If an object is above all the black objects, then it is to the right of all the triangles.
+
+    1. If an object is to the right of all the triangles, then it is above all the circles.
+
+$\therefore$ If an object is a square, then it is above all the circles.
+
 30.
 
     1. If an object is above all the triangles, then it is above all the blue objects.
@@ -2938,6 +3139,18 @@ $\therefore$ All the squares are above all the circles.
     3. Every black object is a square.
 
     4. Every object that is above all the gray objects is above all the triangles.
+
+$\therefore$ If an object is black, then it is above all the blue objects.
+
+Answer:
+
+    3. If an object is a black object, then it is a square.
+
+    2.c If an object is a square, then it is above all the gray objects.
+
+    4. If an object is above all the gray objects, then it is above all the triangles.
+
+    1. If an object is above all the triangles, then it is above all the blue objects.
 
 $\therefore$ If an object is black, then it is above all the blue objects.
 
@@ -2957,6 +3170,22 @@ $\therefore$ If an object is black, then it is above all the blue objects.
 
 $\therefore$ All the animals in the yard gnaw bones.
 
+Answer:
+
+    4. If the animal is in the yard, then it is mine.
+
+    1. If an animal is mine, then I trust the animal.
+
+    5. If I trust the animal, then I admit it into my study.
+
+    3. If I admit the animal into my study, then it is willing to beg.
+
+    6. If the animal is willing to beg, then the animal is a dog.
+
+    2. If the animal is a dog, then it gnaws bones.
+
+$\therefore$ If the animal is in the yard, then it gnaws bones.
+
 32.
 
     1. When I work a logic example without grumbling, you may be sure it is one I understand.
@@ -2970,6 +3199,21 @@ $\therefore$ All the animals in the yard gnaw bones.
     5. I never grumble at an example unless it gives me a headache.
 
 $\therefore$ These examples are not easy.
+
+Answer:
+
+    2. The arguments in these examples are not arranged in regular order like the ones I am used to.
+
+    4. If the arguments in these examples are not arranged in regular order like the ones I am used to, then the example is one I don't understand.
+
+    1c. If an example is one I don't understand, then I grumble.
+
+    5. If I do grumble, then an example makes my head ache.
+
+    3. If an example makes my head ache, then the example is not easy.
+
+$\therefore$ If it is an example from an argument that is not arranged in
+regular order like the ones I am used to, then the example is not easy.
 
 In 33 and 34 a single conclusion follows when all the given premises are taken
 into consideration, but it is difficult to see because the premises are jumbled
@@ -2988,6 +3232,18 @@ contrapositives.)
 
     4. I have no birds less than 9 feet high.
 
+Answer:
+
+    2. If a bird is in this aviary, then it belongs only to me.
+
+    4. If the bird belongs to me, then it is at least 9 feet high.
+
+    1c. If the bird is more than or equal to 9 feet high, then the bird is an ostrich.
+
+    3. If a bird is an ostrich, then it does not live on mince pies.
+
+$\therefore$ If a bird is in this aviary, then it does not live on mince pies.
+
 34.
 
     1. All writers who understand human nature are clever.
@@ -3000,9 +3256,31 @@ contrapositives.)
 
     5. None but a true poet could have written Hamlet.
 
+Answer:
+
+    3. If one is Shakespeare, then one wrote Hamlet.
+
+    5c. If one wrote Hamlet, then one is a true poet.
+
+    2c. If one is a true poet, then one can stir the human heart.
+
+    4c. If one can stir the human heart, then one is a writer who understands human nature.
+
+    1. If one is a writer who understands human nature, then one is clever.
+
+$\therefore$ If one is Shakespeare, then one is clever.
+
 35. Derive the validity of universal modus tollens from the validity of
     universal instantiation and modus tollens.
+
+Universal modus tollens is valid because it is the composition:
+
+$$ \forall x (P(x) \to Q(x)) \Rightarrow P(a) \to Q(a) \Rightarrow \neg Q(a) \Rightarrow \neg P(a) $$
+
+This is just Universal Instantiation and Universal Modus Tollens combined.
 
 36. Derive the validity of universal form of part (a) of the elimination rule
     from the validity of universal instantiation and the valid argument called
     elimination in Section 2.3.
+
+$$ \forall x (P(x) \vee Q(x)) \Rightarrow P(a) \vee Q(a) \Rightarrow Q(a) \text{ given } \neg P(a) $$

@@ -122,18 +122,28 @@ Page 179
 1. The rule of universal instantiation says that if some property is true for
    _______ in a domain, then it is true for _______.
 
+all elements; any particular element in the domain
+
 2. If the first two premises of universal modus ponens are written as "If $x$
    makes $P(x)$ true, then $x$ makes $Q(x)$ true" and "For a particular value of
    $a$ _______ , " then the conclusion can be written as "______. "
+
+$P(a)$ is true, $Q(a)$ is true
 
 3. If the first two premises of universal modus tollens are written as "If $x$
    makes $P(x)$ true, then $x$ makes $Q(x)$ true" and "For a particular value of
    $a$ _______ ," then the conclusion can be written as " _______. "
 
+$Q(a)$ is false; $P(a)$ is false
+
 4. If the first two premises of universal transitivity are written as "Any $x$
    that makes $P(x)$ true makes $Q(x)$ true" and "Any $x$ that makes $Q(x)$ true
    makes $R(x)$ true," then the conclusion can be written as "_______."
 
+"Any $x$ that makes $P(x)$ true makes $R(x)$ true"
+
 5. Diagrams can be helpful in testing an argument for validity. However, if some
    possible configurations of the premises are not drawn, a person could
    conclude that an argument was _______ when it was actually _______.
+
+valid; invalid
