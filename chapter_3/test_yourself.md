@@ -63,3 +63,41 @@ property $P$."
 
 "For every $x$, if $x$ does not have property $P$, then $x$ does not have
 property $Q$."
+
+---
+
+**Test Yourself**
+
+Page 165
+
+1. To establish the truth of a statement of the form
+   "$\forall x \text{ in } D, \exists y \text{ in } E \text{ such that } P(x)$,"
+   you imagine that someone has given you an element $x$ from $D$ but that you
+   have no control over what that element is. Then you need to find _______ with
+   the property that the $x$ the person gave you together with the _______ you
+   subsequently found satisfy _______.
+
+2. To establish the truth of a statement of the form
+   "$\exists x \text{ in } D \text{ such that } \forall y \text{ in } E, P(x, y)$,"
+   you need to find _______ so that no matter what _______ a person might
+   subsequently give you, _______ will be true.
+
+3. Consider the statement
+   "$\forall x, \exists y \text{ such that } P(x, y), \text{ a property involving } x \text{ and } y, \text{ is true}$."
+   A negation for this statement is "_______."
+
+4. Consider the statement
+   "$\exists x \text{ such that } \forall y, P(x, y), \text{ a property involving } x \text{ and } y, \text{ is true}$."
+   A negation for this statement is "_______."
+
+5. Suppose $P(x, y)$ is some property involving $x$ and $y$, and suppose the
+   statement
+   "$\forall x \text{ in } D, \exists y \text{ in } E \text{ such that } P(x, y)$"
+   is true. Then the statement
+   "$\exists x \text{ in } D \text{ such that } \forall y \text{ in } E, P(x, y)$"
+
+a. is true.
+
+b. is false.
+
+c. may be true or may be false.
