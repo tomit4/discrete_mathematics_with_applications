@@ -637,3 +637,182 @@ b.
 \(c\) $10k^2 + 10k + 6$
 
 (d) $5n^2 + 7$ is even
+
+---
+
+**Exercise Set 4.2**
+
+Page 204
+
+Prove the statements in 1-11. In each case use only the definitions of the terms
+and the Assumptions listed on page 161, not any previously established
+properties of odd and even integers. Follow the directions given in this section
+for writing proofs of universal statements.
+
+1. For every integer $n$, if $n$ is odd then $3n + 5$ is even.
+
+2. For ever integer $m$, if $m$ is even then $3m + 5$ is odd.
+
+3. For every integer $n$, $2n - 1$ is odd.
+
+4. **Theorem 4.2.2:** The difference of any even integer minus any odd integer
+   is odd.
+
+5. If $a$ and $b$ are any odd integers, then $a^2 + b^2$ is even.
+
+6. If $k$ is any odd integer and $m$ is any even integer, then $k^2 + m^2$ is
+   odd.
+
+7. The difference between the squares of any two consecutive integers is odd.
+
+8. For any integers $m$ and $n$, if $m$ is even and $n$ is odd then $5m + 3n$ is
+   odd.
+
+9. If an integer greater than $4$ is a perfect square, then the immediately
+   preceding integer is not prime.
+
+10. If $n$ is any even integer, then $(-1)^n = 1$.
+
+11. If $n$ is any odd integer, then $(-1)^n = -1$.
+
+Prove that the statements in 12-14 are false.
+
+12. There exists an integer $m \geq 3$ such that $m^2 - 1$ is prime.
+
+13. There exists an integer $n$ such that $6n^2 + 27$ is prime.
+
+14. There exists an integer $k \geq 4$ such that $2k^2 - 5k + 2$ is prime.
+
+Find the mistakes in the "proofs" shown in 15-19.
+
+15.
+
+**Theorem:** For every integer $k$, if $k > 0$ then $k^2 + 2k + 1$ is composite.
+
+**"Proof:** For $k = 2$, $k > 0$ and $k^2 + 2k + 1 = 2^2 + 2 \cdot 2 + 1 = 9$.
+And since $9 = 3 \cdot 3$, then $9$ is composite. Hence the theorem is true."
+
+16.
+
+**Theorem:** The difference between any odd integer and any even integer is odd.
+
+**"Proof:** Suppose $n$ is any odd integer, and $m$ is any even integer. By
+definition of odd, $n = 2k + 1$ where $k$ is an integer, and by definition of
+even, $m = 2k$ where $k$ is an integer. Then
+
+$$ n - m = (2k + 1) - 2k = 1 $$
+
+and $1$ is odd. Therefore, the difference between any odd integer and any even
+integer is odd."
+
+17.
+
+**Theorem:** For every integer $k$, if $k > 0$, then $k^2 + 2k + 1$ is
+composite.
+
+**"Proof:** Suppose $k$ is any integer such that $k > 0$. If $k^2 + 2k + 1$ is
+composite, then $k^2 + 2k + 1 = rs$ for some integers $r$ and $s$ such that
+
+$$ 1 < r < k^2 + 2k + 1 $$
+
+and
+
+$$ 1 < s < k^2 + 2k + 1 $$
+
+Since
+
+$$ k^2 + 2k + 1 = rs $$
+
+and both $r$ and $s$ are strictly between $1$ and $k^2 + 2k + 1$, then
+$k^2 + 2k + 1$ is not prime. Hence $k^2 + 2k + 1$ is composite as was to be
+shown."
+
+18.
+
+**Theorem:** The product of any even integer and any odd integer is even.
+
+**"Proof:** Suppose $m$ is any even integer and $n$ is any odd integer. If
+$m \cdot n$ is even, then by definition of even there exists an integer $r$ such
+that $m \cdot n = 2r$. Also since $m$ is even, there exists an integer $p$ such
+that $m = 2p$, and since $n$ is odd there exists an integer $q$ such that
+$n = 2q + 1$. Thus
+
+$$ mn = (2p)(2q + 1) = 2r $$
+
+where $r$ is an integer. By definition of even, then, $m \cdot n$ is even, as
+was to be shown."
+
+19.
+
+**Theorem:** The sum of any two even integers equals $4k$ for some integer $k$.
+
+**"Proof:** Suppose $m$ and $n$ are any two even integers. By definition of
+even, $m = 2k$ for some integer $k$ and $n = 2k$ for some integer $k$. By
+substitution,
+
+$$ m + n = 2k + 2k = 4k $$
+
+That is what was to be shown."
+
+In 20-38 determine whether the statement is true or false. Justify your answer
+with a proof or a counterexample, as appropriate. In each case use only the
+definitions of the terms and the Assumptions listed on page 161, not any
+previously established properties.
+
+20. The product of any two odd integers is odd.
+
+21. The negative of any odd integer is odd.
+
+22. For all integers $a$ and $b$, $4a + 5b + 3$ is even.
+
+23. The product of any even integer and any integer is even.
+
+24. If a sum of two integers is even, then one of the summands is even. (In the
+    expression $a + b$, $a$ and $b$ are called **summands**.)
+
+25. The difference of any two even integers is even.
+
+26. For all integers $a$, $b$, and $c$, if $a$, $b$, and $c$ are consecutive,
+    then $a + b + c$ is even.
+
+27. The difference of any two odd integers is even.
+
+28. For all integers $n$ and $m$, if $n - m$ is even then $n^3 - m^3$ is even.
+
+29. For every integer $n$, if $n$ is prime then $(-1)^n = -1$.
+
+30. For every integer $m$, if $m > 2$ then $m^2 - 4$ is composite.
+
+31. For every integer $n$, $n^2 - n + 11$ is a prime number.
+
+32. For every integer $n$, $4(n^2 + n + 1) - 3n^2$ is a perfect square.
+
+33.. Every positive integer can be expressed as a sum of three or fewer perfect
+squares.
+
+34. (Two integers are **consecutive** if, and only if, one is one more than the
+    other.) Any product of four consecutive integers is one less than a perfect
+    square.
+
+35. If $m$ and $n$ are any positive integers and $mn$ is a perfect square, then
+    $m$ and $n$ are perfect squares.
+
+36. The difference of the squares of any two consecutive integers is odd.
+
+37. For all nonnegative real numbers $a$ and $b$,
+    $\sqrt{ab} = \sqrt{a}\sqrt{b}$. (Note that if $x$ is a nonnegative real
+    number, then there is a unique nonnegative real number $y$, denoted
+    $\sqrt{x}$, such that $y^2 = x$.)
+
+38. For all nonnegative real numbers $a$ and $b$,
+
+$$ \sqrt{a + b} = \sqrt{a} + \sqrt{b} $$
+
+39. Suppose that integers $m$ and $n$ are perfect squares. Then
+    $m + n + 2\sqrt{mn}$ is also a perfect square. Why?
+
+40. If $p$ is a prime number, must $2^p - 1$ also be prime? Prove or give a
+    counterexample.
+
+41. If $n$ is a nonnegative integer, must $2^{2n} + 1$ be prime? Prove or give a
+    counterexample.

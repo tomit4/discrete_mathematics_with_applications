@@ -32,3 +32,33 @@ property.
 
 $x$ is a particular but arbitrarily chosen element of the set $D$ that makes the
 hypothesis $P(x)$ true; $x$ makes the conclusion $Q(x)$ true.
+
+---
+
+**Test Yourself**
+
+Page 204
+
+1. The meaning of every variable used in a proof should be explained with
+   ______.
+
+2. Proofs should be written in sentences that are ______ and ______.
+
+3. Every assertion in a proof should be supported by a ______.
+
+4. The following are some useful "little words and phrases" that clarify the
+   reasoning in a proof:
+
+   ______, ______, ______, ______, and ______.
+
+5. A new thought or fact that does not follow as an immediate consequence of the
+   preceding statement can be introduced by writing ______, ______, ______,
+   ______, or ______.
+
+6. To introduce a new variable that is defined in terms of previous variables,
+   use the word ______.
+
+7. Displaying equations and inequalities increases the ______ of a proof.
+
+8. Some proof-writing mistakes are ______, ______, ______, ______, ______,
+   ______, and ______.

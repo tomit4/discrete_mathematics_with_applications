@@ -103,3 +103,11 @@ $$ m + n = 2r \quad \text{where } t \text{ is an integer} $$
 
 It follows by definition of even that $m + n$ is even. _[This is what we needed
 to show.]_
+
+---
+
+Page 196
+
+Personal Note: The entirety of 4.2 is extremely helpful in breaking down in
+exactly how to write proofs (for beginners). I'd advise revisiting this entire
+section frequently.
