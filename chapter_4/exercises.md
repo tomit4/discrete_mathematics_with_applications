@@ -1857,3 +1857,241 @@ Thus there exists an nonnegative integer $n$ such that $2^{2n} + 1$ is not
 prime, and therefore the given statement is false.
 
 Q.E.D.
+
+---
+
+**Exercise Set 4.3**
+
+Page 210
+
+The numbers in 1-7 are all rational. Write each number as a ratio of two
+integers.
+
+1. $-\dfrac{35}{6}$
+
+2. $4.6037$
+
+3. $\dfrac{4}{5} + \dfrac{2}{9}$
+
+4. $0.37373737\dots$
+
+5. $0.56565656\dots$
+
+6. $320.5492492492\dots$
+
+7. $52.4672167216721\dots$
+
+8. The zero product property, says that if a product of two real numbers is $0$,
+   then one of the numbers must be $0$.
+
+a. Write this property formally using quantifiers and variables.
+
+b. Write the contrapositive of your answer to part (a).
+
+c. Write an informal version (without quantifier symbols or variables) for your
+part to part (b).
+
+9. Assume that $a$ and $b$ are both integers and that $a \neq 0$ and $b \neq 0$.
+   Explain why $\dfrac{(b - a)}{(ab^2)}$ must be a rational number.
+
+10. Assume that $m$ and $n$ are both integers and that $n \neq 0$. Explain why
+    $\dfrac{(5m - 12n)}{(4n)}$ must be a rational number.
+
+11. Prove that every integer is a rational number.
+
+12. Let $S$ be the statement "The square of any rational number is rational." A
+    formal version of $S$ is "For every rational number $r$, $r^2$ is rational."
+    Fill in the blanks in the proof for $S$.
+
+**Proof:**
+
+Suppose that $r$ is __ (a) __. By definition of rational, $r = \dfrac{a}{b}$ for
+some __ (b) __ with $b \neq 0$. By substitution,
+
+$$ r^2 = \text{\_\_ (c) \_\_} = \frac{a^2}{b^2} $$
+
+Since $a$ and $b$ are both integers, so are the products $a^2$ and __ (d) __.
+Also $b^2 \neq 0$ by the __ (e) __. Hence $r^2$ is a ratio of two integers with
+a non-zero denominator,n and so __ (f) __ by definition of rational.
+
+13. Consider the following statement: The negative of any rational number is
+    rational.
+
+a. Write the statement formally using a quantifier and a variable.
+
+b. Determine whether the statement is true or false and justify your answer.
+
+14. Consider the statement: The cube of any rational number is a rational
+    number.
+
+a. Write the statement formally using a quantifier and a variable.
+
+b. Determine whether the statement is true or false and justify your answer.
+
+Determine which of the statements in 15-19 are true and which are false. Prove
+each true statement directly from the definitions, and give a counterexample for
+each false statement. For a statement that is false, determine whether a small
+change would make it true. If so, make the change and prove the new statement.
+Follow the directions for writing proofs on page 173.
+
+15. The product of any two rational numbers is a rational number.
+
+16. The quotient of any two rational numbers is a rational number.
+
+17. The difference of any two rational numbers is a rational number.
+
+18. If $r$ and $s$ are any two rational numbers, then $\dfrac{r + s}{2}$ is
+    rational.
+
+19. For all real numbers $a$ and $b$, if $a < b$ then
+    $a < \dfrac{a + b}{2} < b$.
+
+    (You may use the properties of inequalities in T17-T27 of Appendix A.)
+
+20. Use the results of exercises 18 and 19 to prove that given any two rational
+    numbers $r$ and $s$ with $r < s$, there is another rational number between
+    $r$ and $s$. An important consequence is that there are infinitely many
+    rational numbers in between any two distinct rational numbers. See Section
+    7.4.
+
+Use the properties of even and odd integers that are listed in Example 4.3.3 to
+do exercises 21-23. Indicate which properties you use to justify your reasoning.
+
+21. True or false? If $m$ is any even integer and $n$ is any odd integer, then
+    $m^2 + 3n$ is odd. Explain.
+
+22. True or false? If $a$ is any odd integer, then $a^2 + a$ is even. Explain.
+
+23. True or false? If $k$ is any even integer and $m$ is any odd integer, then
+    $(k + 2)^2 - (m - 1)^2$ is even. Explain.
+
+Derive the statements in 24-26 as corollaries of Theorems 4.3.1, 4.3.2, and the
+results of exercises 12, 13, 14, 15, and 17.
+
+24. For any rational numbers $r$ and $s$, $2r + 3s$ is rational.
+
+25. If $r$ is any rational number, then $3r^2 - 2r + 4$ is rational.
+
+26. For any rational number $s$, $5s^3 + 8s^2 - 7$ is rational.
+
+27. It is a fact that if $n$ is any nonnegative integer, then
+
+$$ 1 + \frac{1}{2} + \frac{1}{2^2} + \frac{1}{2^3} + \dots + \frac{1}{2^n} = \frac{1 - \left(\dfrac{1}{2^{n + 1}}\right)}{1 - \left(\dfrac{1}{2}\right)}  $$
+
+(A more general form of this statement is proved in Section 5.2.) Is the
+right-hand side of this equation rational? If so, express it as a ratio of two
+integers.
+
+28. Suppose $a$, $b$, $c$, and $d$ are integers and $a \neq c$. Suppose also
+    that $x$ is a real number that satisfies the equation
+
+$$ \frac{ax + b}{cs + d} = 1 $$
+
+Must $x$ be rational? If so, express $x$ as a ratio of two integers.
+
+29. Suppose $a$, $b$, and $c$ are integers and $x$, $y$, and $z$ are nonzero
+    real numbers that satisfy the following equations:
+
+$$ \frac{xy}{x + y} = a \quad \text{ and } \quad \frac{xz}{x + z} = b \quad \text{ and } \quad \frac{yz}{y + z} = c $$
+
+Is $x$ rational? If so, express it as ratio of two integers.
+
+30. Prove that if one solution for a quadratic equation of the form
+    $x^2 + bx + c = 0$ is rational (where $b$ and $c$ are rational), then the
+    other solution is also rational. (Use the fact that if the solutions of the
+    equation are $r$ and $s$, then $x^2 + bx + c = (x - r)(x - s)$.)
+
+31. Prove that if a real number $c$ satisfies a polynomial equation of the form
+
+$$ r_3x^3 + r_2x^2 + r_1x + r_0 = 0 $$
+
+where $r_0$, $r_1$, $r_2$, and $r_3$ are rational numbers, then $c$ satisfies an
+equation of the form
+
+$$ n_3x^3 + n_2x^2 + n_1x + n_0 = 0 $$
+
+where $n_0$, $n_1$, $n_2$, and $n_3$ are integers.
+
+**Definition:** A number $c$ is called a **root** of a polynomial $p(x)$ if, and
+only if, $p(c) = 0$.
+
+32. Prove that for every real number $c$, if $c$ is a root of a polynomial with
+    rational coefficients, then $c$ is a root of a polynomial with integer
+    coefficients.
+
+Use the properties of even and odd integers that are listed in Example 4.3.3 to
+do exercises 33 and 34.
+
+33. When expressions of the form $(x - r)(x - s)$ are multiplied out, a
+    quadratic polynomial is obtained. For instance,
+    $(x - 2)(x - (-7)) = (x - 2)(x + 7) = x^2 + 5x - 14$.
+
+a. What can be said about the coefficients of the polynomial obtained by
+multiplying out $(x - r)(x - s)$ when both $r$ and $s$ are odd integers? When
+both $r$ and $s$ are even integers? When one of $r$ and $s$ is even and the
+other odd?
+
+b. It follows from part (a) that $x^2 - 1253x + 255$ cannot be written as a
+product of two polynomials with integer coefficients. Explain why this is so.
+
+34. Observe that
+
+$$ (x - r)(x -s)(x - t) = x^3 - (r + s + t)x^2 + (rs + rs + st)x - rst $$
+
+a. Derive a result for cubic polynomials similar to the result in part (a) of
+exercise 33 for quadratic polynomials.
+
+b. Can $x^3 + 7x^2 - 8x - 27$ be written as a product of three polynomials with
+integer coefficients? Explain.
+
+In 35-39 find the mistakes in the "proofs" that the sum of any two rational
+numbers is a rational number.
+
+35.
+
+**"Proof:** Any two rational numbers produce a rational number when added
+together. So if $r$ and $s$ are particular but arbitrarily chosen rational
+numbers, then $r + s$ is rational."
+
+36.
+
+**"Proof:** Let rational numbers $r = \dfrac{1}{4}$ and $s = \dfrac{1}{2}$ be
+given. Then $r + s = \dfrac{1}{4} + \dfrac{1}{2} = \dfrac{3}{4}$, which is a
+rational number. This is what was to be shown."
+
+37.
+
+**"Proof:** Suppose $r$ and $s$ are rational numbers. By definition of rational,
+$r = \dfrac{a}{b}$ for some integers $a$ and $b$ with $b \neq 0$, and
+$s = \dfrac{a}{b}$ for some integers $a$ and $b$ with $b \neq 0$. Then
+
+$$ r + s = \frac{a}{b} + \frac{a}{b} = \frac{2a}{b} $$
+
+Let $p = 2a$. Then $p$ is an integer since it is a product of integers. Hence
+$r + s = \dfrac{p}{b}$, where $p$ and $b$ are integers and $b \neq 0$. Thus
+$r + s$ is a rational number by definition of rational. This is what was to be
+shown."
+
+38.
+
+**"Proof:** Suppose $r$ and $s$ are rational numbers. Then $r = \dfrac{a}{b}$
+and $s = \dfrac{c}{d}$ for some integers $a$, $b$, $c$, and $d$ with $b \neq 0$
+and $d \neq 0$ (by definition of rational.) Then
+
+$$ r + s = \frac{a}{b} + \frac{c}{d} $$
+
+But this is a sum of two fractions, which is a fraction. So $r - s$ is a
+rational number since a rational number is a fraction."
+
+39.
+
+**"Proof:** Suppose $r$ and $s$ are rational numbers. If $r + s$ is rational,
+then by definition of rational $r + s = \dfrac{a}{b}$ for some integers $a$ and
+$b$ with $b \neq 0$. Also since $r$ and $s$ are rational, $r = \dfrac{i}{j}$ and
+$s = \dfrac{m}{n}$ for some integers $i$, $j$, $m$, and $n$ with $j \neq 0$ and
+$n \neq 0$. It follows that
+
+$$ r + s = \frac{i}{j} + \frac{m}{n} = \frac{a}{b} $$
+
+which is a quotient of two integers with a nonzero denominator. Hence it is a
+rational number. This is what is to be shown.

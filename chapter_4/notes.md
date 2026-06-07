@@ -111,3 +111,67 @@ Page 196
 Personal Note: The entirety of 4.2 is extremely helpful in breaking down in
 exactly how to write proofs (for beginners). I'd advise revisiting this entire
 section frequently.
+
+---
+
+Page 206
+
+**Definition**
+
+A real number $r$ is **rational** if, and only if, it can be expressed as a
+quotient of two integers with a nonzero denominator. A real number that is not
+rational is **irrational**. More formally, if $r$ is a real number, then
+
+$$ r \text{ is rational } \Leftrightarrow \exists \text{ integers } a \text{ and } b \text{ such that } r = \frac{a}{b} \text{ and } b \neq 0 $$
+
+---
+
+Page 207
+
+**Zero Product Property**
+
+If neither of two real numbers is zero, then their product is also not zero.
+
+---
+
+Page 208
+
+**Theorem 4.3.1**
+
+Every integer is a rational number.
+
+---
+
+Page 209
+
+**Theorem 4.3.2**
+
+The sum of any two rational numbers is rational.
+
+**Proof:**
+
+Suppose $r$ and $s$ are any rational numbers. _[We must show that $r + s$ is
+rational.]_ Then, by definition of rational, $r = \dfrac{a}{b}$ and
+$s = \dfrac{c}{d}$ for some integers $a$, $b$, $c$, and $d$ with $b \neq 0$ and
+$d \neq 0$. Thus
+
+$$ r + s = \frac{a}{b} + \frac{c}{d} \quad \text{ by substitution} $$
+
+$$ \quad = \frac{ad + bc}{bd} \quad \text{ by basic algebra} $$
+
+Let $p = ad + bc$ and $q = bd$. Then $p$ and $q$ are integers because products
+and sums of integers are integers and because $a$, $b$, $c$, and $d$ are
+integers. Also $q \neq 0$ by the zero product property. Thus
+
+$$ r + s = \frac{p}{q} \text{ where } p \text{ and } q \text{ are integers and } q \neq 0 $$
+
+Therefore, $r + s$ is rational by the definition of a rational number _[as was
+to be shown]_.
+
+---
+
+Page 210
+
+**Corollary 4.2.3**
+
+The double of a rational number is rational.

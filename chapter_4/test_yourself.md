@@ -82,3 +82,16 @@ arguing from examples; using the same letter to mean two different things;
 jumping to a conclusion; assuming what is to be proved; confusion between what
 is known and what is still to be shown; use of _any_ when the correct word is
 _some_; misuse of the word _if_
+
+---
+
+**Test Yourself**
+
+Page 210
+
+1. To show that a real number is rational, we must show that we can write it as
+   ______.
+
+2. An irrational number is a ______ that is ______.
+
+3. Zero is a rational number because ______.
