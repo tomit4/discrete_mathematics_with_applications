@@ -651,37 +651,405 @@ for writing proofs of universal statements.
 
 1. For every integer $n$, if $n$ is odd then $3n + 5$ is even.
 
+**Theorem:** Suppose $n$ is any odd integer.
+
+**Proof:**
+
+Since $n$ is odd, $n = 2k + 1$ for some integer $k$.
+
+Then
+
+$$ 3n + 5 = 3(2k + 1) + 5 \quad \text{ by substitution} $$
+
+$$ \quad = 6k + 3 + 5 $$
+
+$$ \quad = 6k + 8 $$
+
+$$ \quad = 2(3k + 4)  \quad \text{ by algebra} $$
+
+Let $t = 3k + 4$.
+
+Then $3n + 5 = 2(3k + 4) = 2t$, where $t$ is an integer because products and
+sums of integers are integers.
+
+Therefore $3n + 5$ is even by the definition of even integers.
+
+Q.E.D.
+
 2. For ever integer $m$, if $m$ is even then $3m + 5$ is odd.
 
+**Theorem:** Suppose $m$ is any even integer.
+
+**Proof:**
+
+Since $m$ is even, $m = 2k$ for some integer $k$.
+
+Then:
+
+$$ 3m + 5 = 3(2k) + 5 \quad \text{ by substitution} $$
+
+$$ \quad = 6k + 5 $$
+
+$$ \quad = 6k + 4 + 1 $$
+
+$$ \quad = 2(3k + 2) + 1 \quad \text{ by algebra} $$
+
+Let $t = 3k + 2$.
+
+Then $3m + 5 = 2(3k + 2) + 1 = 2t + 1$ where $t$ is an integer because the
+product and sum of integers are integers.
+
+Therefore $3m + 5$ is odd by the definition of odd integers.
+
+Q.E.D.
+
 3. For every integer $n$, $2n - 1$ is odd.
+
+**Theorem:**
+
+Suppose $n$ is any integer.
+
+**Proof:**
+
+Then:
+
+$$ 2n - 1 = 2n - 2 + 1 \quad \text{ by algebra} $$
+
+$$ \quad = 2(n - 1) + 1 \quad \text{ by factoring} $$
+
+Let $t = n - 1$.
+
+Then $2n - 1 = 2(n - 1) + 1 = 2t + 1$ where $t$ is an integer because the
+difference of integers is an integer.
+
+Therefore $2n - 1$ is odd by the definition of an odd integer.
+
+Q.E.D.
 
 4. **Theorem 4.2.2:** The difference of any even integer minus any odd integer
    is odd.
 
+**Theorem:** Suppose $m$ is any even integer and $n$ is any odd integer.
+
+**Proof:**
+
+Since $m$ is even and $n$ is odd, $m = 2k$ and $n = 2s + 1$ where $k$ is some
+integer and $s$ is some integer.
+
+Then
+
+$$ m - n = 2k - (2s + 1)  \quad \text{ by substitution} $$
+
+$$ \quad = 2k - 2s - 1 $$
+
+$$ \quad = 2k - 2s - 2 + 1 $$
+
+$$ \quad = 2(k - s - 1) + 1 $$
+
+Let $t = k - s - 1$.
+
+Then $m - n = 2(k - s - 1) + 1 = 2t + 1$ where $t$ is an integer because the
+difference of integers is an integer.
+
+Therefore $m - n$ is odd by the definition of odd integers.
+
+Q.E.D.
+
 5. If $a$ and $b$ are any odd integers, then $a^2 + b^2$ is even.
+
+**Theorem:** Suppose $a$ is any odd integer and $b$ is any odd integer.
+
+**Proof:**
+
+Since $a$ is an odd integer and $b$ is an odd integer, $a = 2k + 1$ and
+$b = 2s + 1$ where $k$ is some integer and $s$ is some integer.
+
+Then:
+
+$$ a^2 + b^2 = (2k + 1)^2 + (2s + 1)^2 \quad \text{ by substitution} $$
+
+$$ \quad = (2k + 1)(2k + 1) + (2s + 1)(2s + 1) \quad \text{ by exponentiation} $$
+
+$$ \quad = (4k^2 + 4k + 1) + (4s^2 + 4s + 1) $$
+
+$$ \quad = 4k^2 + 4k + 1 + 4s^2 + 4s + 1 $$
+
+$$ \quad = 4k^2 + 4k + 4s^2 + 4s + 2 $$
+
+$$ \quad = 2(2k^2 + 2k + 2s^2 + 2s + 1) $$
+
+Let $t = 2k^2 + 2k + 2s^2 + 2s + 1$.
+
+Then $a^2 + b^2 = 2(2k^2 + 2k + 2s^2 + 2s + 1) = 2t$ where $t$ is an integer
+because the product and sum of integers is an integer.
+
+Therefore $a^2 + b^2$ is even by the definition of even integers.
+
+Q.E.D.
 
 6. If $k$ is any odd integer and $m$ is any even integer, then $k^2 + m^2$ is
    odd.
 
+**Theorem:**
+
+Suppose $k$ is any odd integer and $m$ is any even integer.
+
+**Proof:**
+
+Since $k$ is an odd integer and $m$ is an even integer, $k = 2a + 1$ and
+$m = 2b$ where $a$ is some integer and $b$ is some integer.
+
+Then:
+
+$$ k^2 + m^2 = (2a + 1)^2 + (2b)^2 \quad \text{ by substitution} $$
+
+$$ \quad = (2a + 1)(2a + 1) + (2b)(2b) \quad \text{ by exponentiation} $$
+
+$$ \quad = (4a^2 + 4a + 1) + (4b^2) $$
+
+$$ \quad = 4a^2 + 4a + 4b^2 + 1 $$
+
+$$ \quad = 2(2a^2 + 2a + 2b^2) + 1 $$
+
+Let $t = 2a^2 + 2a + 2b^2$.
+
+Then $k^2 + m^2 = 2(2a^2 + 2a + 2b^2) + 1 = 2t + 1$ where $t$ is an integer
+because the product and sum of integers is an integer.
+
+Therefore $k^2 + m^2$ is odd by the definition of an odd integer.
+
+Q.E.D.
+
 7. The difference between the squares of any two consecutive integers is odd.
+
+**Theorem:**
+
+Suppose $n$ is any integer.
+
+**Proof:**
+
+Since $n$ is an integer, $n + 1$ is a consecutive integer of $n$.
+
+Then:
+
+$$ n^2 - (n + 1)^2 = n^2 - (n + 1)(n + 1) \quad \text{ by exponentiation} $$
+
+$$ \quad = n^2 - (n^2 + 2n + 1) $$
+
+$$ \quad = n^2 - n^2 - 2n - 1 \quad \text{ by distribution} $$
+
+$$ \quad = -2n - 1 \quad \text{ by distribution} $$
+
+$$ \quad = -2n - 2 + 1 $$
+
+$$ \quad = 2(-n - 1) + 1 $$
+
+Let $t = -n - 1$.
+
+Then $n^2 - (n + 1)^2 = 2(-n - 1) + 1 = 2t + 1$ where $t$ is an integer because
+the product and difference of integers is an integer.
+
+Therefore $n^2 - (n + 1)^2$ is odd by the definition of an odd integer.
+
+Q.E.D.
 
 8. For any integers $m$ and $n$, if $m$ is even and $n$ is odd then $5m + 3n$ is
    odd.
 
+**Theorem:**
+
+Suppose $m$ is any even integer and $n$ is any odd integer.
+
+**Proof:**
+
+Since $m$ is an even integer and $n$ is an odd integer, $m = 2k$ and
+$n = 2s + 1$ where $k$ is some integer and $s$ is some integer.
+
+Then:
+
+$$ 5m + 3n = 5(2k) + 3(2s + 1) \quad \text{ by substitution} $$
+
+$$ \quad = 10k + 6s + 3 $$
+
+$$ \quad = 10k + 6s + 2 + 1 $$
+
+$$ \quad = 2(5k + 3s + 1) + 1 $$
+
+Let $t = 5k + 3s + 1$.
+
+Then $5m + 3n = 2(5k + 3s + 1) + 1 = 2t + 1$ where $t$ is an integer because the
+products and sums of integers is an integer.
+
+Therefore $5m + 3n$ is odd by the definition of an odd integer.
+
+Q.E.D.
+
 9. If an integer greater than $4$ is a perfect square, then the immediately
    preceding integer is not prime.
 
+**Theorem:**
+
+Suppose $n$ is any integer where $n > 4$ and $n$ is a perfect square.
+
+**Proof:**
+
+Since $n$ is a perfect square and $n > 4$, then $n = k^2$ for some integer $k$
+where $k > 2$ or $k < -2$.
+
+Then:
+
+$$ n - 1 = k^2 - 1 \quad \text{ by substitution} $$
+
+$$ \quad = (k + 1)(k - 1) \quad \text{ by algebra} $$
+
+In order for $n - 1$ to be prime, either $k + 1$ or $k - 1$ must be equal to
+$1$.
+
+If $k > 2$, then both $k + 1 > 1$ and $k - 1 > 1$ are true.
+
+If $k < -2$, then both $k + 1 < 1$ and $k - 1 < 1$ are true.
+
+Therefore neither $k + 1$ nor $k - 1$ can ever be equal to $1$.
+
+Therefore $n - 1$ is not prime by the definition of a prime number.
+
+Q.E.D.
+
 10. If $n$ is any even integer, then $(-1)^n = 1$.
 
+**Theorem:**
+
+Suppose $n$ is any even integer.
+
+**Proof:**
+
+Since $n$ is an even integer, then $n = 2k$ where $k$ is some integer.
+
+Then:
+
+$$ (-1)^n = (-1)^{2k} \quad \text{ by substitution} $$
+
+$$ \quad = (-1)^{2 \cdot k} $$
+
+$$ \quad = ((-1)^2)^k $$
+
+$$ \quad = 1^k $$
+
+$$ \quad = 1 \quad \text{ by the laws of exponents} $$
+
+Therefore $(-1)^n = 1$.
+
+Q.E.D.
+
 11. If $n$ is any odd integer, then $(-1)^n = -1$.
+
+**Theorem:**
+
+Suppose $n$ is any odd integer.
+
+**Proof:**
+
+Since $n$ is an odd integer, then $n = 2k + 1$ where $k$ is some integer.
+
+Then:
+
+$$ (-1)^n = (-1)^{2k + 1} \quad \text{ by substitution} $$
+
+$$ (-1)^n = (-1)^{2 \cdot k} \cdot (-1)^1 $$
+
+$$ (-1)^n = ((-1)^2)^k \cdot (-1)^1 $$
+
+$$ (-1)^n = 1^k \cdot -1 $$
+
+$$ (-1)^n = 1 \cdot -1 $$
+
+$$ (-1)^n = -1 \quad \text{ by the laws of exponents} $$
+
+Therefore $(-1)^n = -1$.
+
+Q.E.D.
 
 Prove that the statements in 12-14 are false.
 
 12. There exists an integer $m \geq 3$ such that $m^2 - 1$ is prime.
 
+Take the negation first:
+
+For all integers $m \geq 3$, $m^2 - 1$ is not prime.
+
+**Theorem:**
+
+There is no integer $m \geq 3$ such that $m^2 - 1$ is prime.
+
+**Proof:**
+
+By algebra, we know that:
+
+$$ m^2 - 1 = (m + 1)(m - 1) $$
+
+We also know that for $m^2 - 1$ to be prime, either $m + 1$ or $m - 1$ must be
+equal to $1$.
+
+Since $m \geq 3$, we know that both $m + 1 \geq 4$ and $m - 1 \geq 2$ are both
+true. Thus both factors are greater than 1.
+
+Therefore $m^2 - 1$ is a product of two integers greater than $1$, so it is not
+prime.
+
+Therefore $m^2 - 1$ is not prime by the definition of prime numbers.
+
+Q.E.D.
+
 13. There exists an integer $n$ such that $6n^2 + 27$ is prime.
 
+Take the negation first:
+
+For all integers $n$, $6n^2 + 27$ is not prime.
+
+**Theorem:**
+
+There is no integer $n$ such that $6n^2 + 27$ is prime.
+
+**Proof:**
+
+By algebra we know that:
+
+$$ 6n^2 + 27 = 3(2n^2 + 9) $$
+
+Since $n^2$ is always positive or $0$, by the laws of exponentiation and by
+algebra, we can conclude that $2n^2 + 9 \geq 9$ is true.
+
+Since $3 > 1$ and $2n^2 + 9 > 1$, we then know that $6n^2 + 27$ is a product of
+two integers greater than $1$, so it is not prime.
+
+$6n^2 + 27$ is not prime by the definition of prime numbers.
+
+Q.E.D.
+
 14. There exists an integer $k \geq 4$ such that $2k^2 - 5k + 2$ is prime.
+
+Take the negation first:
+
+For all integers $k \geq 4$, $2k^2 - 5k + 2$ is not prime.
+
+**Theorem:**
+
+There is no integer $k \geq 4$ such that $2k^2 - 5k + 2$ is prime.
+
+**Proof:**
+
+By algebra we know:
+
+$$ 2k^2 - 5k + 2 = (k - 2)(2k - 1) $$
+
+Since we know that $k \geq 4$, we know that $k - 2 \geq 2$ and $2k - 1 \geq 7$.
+
+Since $k - 2 > 1$ and $2k - 1 > 1$, we then know that $2k^2 - 5k + 2$ is a
+product of two integers greater than $1$, so it is not prime.
+
+Therefore $2k^2 - 5k + 2$ is not prime by definition of prime numbers.
+
+Q.E.D.
 
 Find the mistakes in the "proofs" shown in 15-19.
 
@@ -691,6 +1059,10 @@ Find the mistakes in the "proofs" shown in 15-19.
 
 **"Proof:** For $k = 2$, $k > 0$ and $k^2 + 2k + 1 = 2^2 + 2 \cdot 2 + 1 = 9$.
 And since $9 = 3 \cdot 3$, then $9$ is composite. Hence the theorem is true."
+
+Answer: This proof just shows that the theorem is true for a single case,
+$k = 2$, in order to prove a universal claim as the theorem presents, the proof
+must prove the conclusion true for every integer $k$ where $k > 0$.
 
 16.
 
@@ -702,8 +1074,14 @@ even, $m = 2k$ where $k$ is an integer. Then
 
 $$ n - m = (2k + 1) - 2k = 1 $$
 
-and $1$ is odd. Therefore, the difference between any odd integer and any even
-integer is odd."
+Answer: This proof makes the mistake of using $k$ to represent two different
+quantities. By setting $n = 2k + 1$ and $m = 2k$, the proof implies that
+$n = m + 1$, and thus deduces the conclusion for only this situation. This proof
+falsely then "proves" that the difference between _any_ even and odd integer
+will always equal $1$, but taking most examples of even and odd integers as
+cases for this would show that this is false. In essence, this proof makes the
+mistake of assigning the same variable name to represent two different integers,
+and then by algebra comes to a false conclusion.
 
 17.
 
@@ -727,6 +1105,20 @@ and both $r$ and $s$ are strictly between $1$ and $k^2 + 2k + 1$, then
 $k^2 + 2k + 1$ is not prime. Hence $k^2 + 2k + 1$ is composite as was to be
 shown."
 
+Answer: This proof makes the mistake of assuming what is to be proved. Instead
+of proving that $k^2 + 2k + 1$ is composite, it assumes the definition of
+composite numbers applies to the expression and then extrapolates logic about
+$r$ and $s$ that cannot be known because it has not yet been proven that
+$k^2 + 2k +1$ is composite. This starts at the line starting with "Since", which
+cannot be asserted as that is an assertion of the conclusion, not the
+hypothesis.
+
+Teacher's answer: This incorrect proof assumes what is to be proved. The word
+_since_ in the third sentence is completely unjustified. The second sentence
+tells only what happens _if_ $k^2 + 2k + 1$ is composite. But at that point in
+the proof, it has not been established that $k^2 + 2k + 1$ _is_ composite. In
+fact, that is exactly what is to be proved.
+
 18.
 
 **Theorem:** The product of any even integer and any odd integer is even.
@@ -742,6 +1134,12 @@ $$ mn = (2p)(2q + 1) = 2r $$
 where $r$ is an integer. By definition of even, then, $m \cdot n$ is even, as
 was to be shown."
 
+Answer: This incorrect proof exhibits confusion between what is known and what
+is still to be shown. The writer correctly uses the definitions of even and odd
+integers to express $m$ and $n$ as $2p$ and $2q + 1$, but assumes the conclusion
+that $mn$ must be an expression of $2r$, which is exactly what is to be shown,
+but has not yet been proven. In essence, they have jumped to the conclusion.
+
 19.
 
 **Theorem:** The sum of any two even integers equals $4k$ for some integer $k$.
@@ -754,6 +1152,13 @@ $$ m + n = 2k + 2k = 4k $$
 
 That is what was to be shown."
 
+Answer: This incorrect proof suffers from multiple problems. One is that it uses
+the same variable name $k$ to represent two potentially different integers when
+expressing both $m$ and $n$ as even integers. The writer then incorrectly sums
+them to $4k$ and concludes they have proven the conclusion, but the form of $4k$
+does not explicitly show that $m + n$ is even by the definition of even
+integers.
+
 In 20-38 determine whether the statement is true or false. Justify your answer
 with a proof or a counterexample, as appropriate. In each case use only the
 definitions of the terms and the Assumptions listed on page 161, not any
@@ -761,58 +1166,694 @@ previously established properties.
 
 20. The product of any two odd integers is odd.
 
+**Theorem:**
+
+Suppose $n$ is any odd integer and $m$ is any odd integer.
+
+**Proof:**
+
+Since $n$ and $m$ are odd integers, $n = 2k + 1$ and $m = 2s + 1$ where $k$ is
+some integer and $s$ is some integer.
+
+Then:
+
+$$ n \cdot m = (2k + 1)(2s + 1) \quad \text{ by substitution} $$
+
+$$ \quad = 4ks + 2s + 2k + 1 $$
+
+$$ \quad = 2(2ks + s + k) + 1  \quad \text{ by algebra} $$
+
+Let $t = 2ks + s + k$.
+
+Then $n \cdot m = 2(2ks + s + k) + 1 = 2t + 1$ where $t$ is an integer because
+the products and sums of integers is an integer.
+
+Therefore $n \cdot m$ is odd by the definition of odd integers.
+
+Q.E.D.
+
 21. The negative of any odd integer is odd.
+
+**Theorem:**
+
+Suppose $n$ is any odd integer.
+
+**Proof:**
+
+Since $n$ is odd, $n = 2k + 1$ where $k$ is some integer.
+
+Then:
+
+$$ -n = -(2k + 1) \quad \text{ by substitution} $$
+
+$$ \quad = -2k - 1 $$
+
+$$ \quad = -2k - 2 + 1 $$
+
+$$ \quad = 2(-k - 1) + 1 $$
+
+Let $t = -k - 1$.
+
+Then $-n = 2(-k - 1) + 1 = 2t + 1$ where $t$ is an integer because the products
+and differences of integers is an integer.
+
+Therefore $-n$ is odd by definition of an odd integer.
+
+Q.E.D.
 
 22. For all integers $a$ and $b$, $4a + 5b + 3$ is even.
 
+False. Intuition says if $a = b = 0$ then $4a + 5b + 3 = 3$ which is not even.
+Let's prove this more formally.
+
+Take the negation:
+
+There exists some integer $a$ and some integer $b$ such that $4a + 5b + 3$ is
+not even.
+
+**Theorem:** There is some integer $a$ and some integer $b$ such that
+$4a + 5b + 3$ is not even.
+
+Let $a = 0$ and let $b = 0$
+
+Then:
+
+$$ 4a + 5b + 3 = 4(0) + 5(0) + 3 \quad \text{ by substitution} $$
+
+$$ \quad = 0 + 0 + 3 $$
+
+$$ \quad = 3 $$
+
+Since $3$ is not even, $4a + 5b + 3$ is not even for the given $a$ and $b$.
+
+Therefore there exists integers $a$ and $b$ such that $4a + 5b + 3$ is not even
+and the original given statement is false.
+
+Q.E.D.
+
 23. The product of any even integer and any integer is even.
+
+**Theorem:**
+
+Suppose $n$ is any even integer and $m$ is any integer.
+
+**Proof:**
+
+Since $n$ is even, $n = 2k$ for some integer $k$.
+
+Then:
+
+$$ n \cdot m = (2k)(m) \quad \text{ by substitution} $$
+
+$$ \quad = 2km $$
+
+$$ \quad = 2(km) $$
+
+Let $t = km$.
+
+Then $n \cdot m = 2(km) = 2t$ where $t$ is an integer because the product of
+integers is an integer.
+
+Therefore $n \cdot m$ is even by definition of even integers.
+
+Q.E.D.
 
 24. If a sum of two integers is even, then one of the summands is even. (In the
     expression $a + b$, $a$ and $b$ are called **summands**.)
 
+This is false, quickly consider $1 + 3 = 4$ where both the summands are odd, but
+the sum is even.
+
+Take the negation first:
+
+There exists two integers whose sum is even but neither integer is even.
+
+**Claim:**
+
+There is some integer $a$ and there is some integer $b$ such that $a + b$ is
+even and neither $a$ nor $b$ is even.
+
+**Proof:**
+
+Let $a = 1$ and $b = 3$.
+
+Then:
+
+$$ a + b = 4 $$
+
+$$ \quad = 2(2) $$
+
+Then $a + b$ is even by the definition of even integers.
+
+Then:
+
+$$ a = 1 $$
+
+$$ \quad = 2(0) + 1 $$
+
+And:
+
+$$ b = 3 $$
+
+$$ \quad = 2(1) + 1 $$
+
+Then both $a$ and $b$ are odd by the definition of odd integers.
+
+Therefore $a + b$ is even, but $a$ and $b$ are not even for the given $a$ and
+$b$, therefore the statement is false.
+
+Q.E.D.
+
 25. The difference of any two even integers is even.
+
+**Theorem:**
+
+Suppose $m$ is an even integer and $n$ is an even integer.
+
+**Proof:**
+
+Since $m$ and $n$ are even integers, $m = 2k$ and $n = 2s$ where $k$ is some
+integer and $s$ is some integer.
+
+Then:
+
+$$ n - m = (2s) - (2k) \quad \text{ by substitution} $$
+
+$$ \quad = 2s - 2k $$
+
+$$ \quad = 2(s - k) \quad \text{ by algebra} $$
+
+Let $t = s - k$.
+
+Then $n -m = 2(s - k) = 2t$ where $t$ is an integer because the difference of
+integers is an integer.
+
+Therefore $n - m$ is even by the definition of even integers.
+
+Q.E.D.
 
 26. For all integers $a$, $b$, and $c$, if $a$, $b$, and $c$ are consecutive,
     then $a + b + c$ is even.
 
+This is false. Take the negation for the claim.
+
+**Claim:**
+
+There exists some integer $a$, some integer $b$, and some integer $c$ such that
+$a$, $b$, and $c$ are consecutive and $a + b + c$ is not even.
+
+**Proof:**
+
+Let $a = 2$, $b = 3$, $c = 4$.
+
+Then:
+
+$$ a + b + c = 2 + 3 + 4 \quad \text{ by substitution} $$
+
+$$ \quad = 9 $$
+
+$$ \quad = 8 + 1 $$
+
+$$ \quad = 2(4) + 1 $$
+
+Therefore for the given $a$, $b$, and $c$, $a + b + c$ is not even, by the
+definition of an odd number.
+
+Therefore the given $a$, $b$, and $c$ are consecutive numbers, but their sum is
+not even. The statement is false.
+
+Q.E.D.
+
 27. The difference of any two odd integers is even.
+
+**Theorem:**
+
+Suppose $n$ is any odd integer and $m$ is any odd integer.
+
+**Proof:**
+
+Since $n$ and $m$ are odd integers, $n = 2k + 1$ and $m = 2s + 1$ where $k$ is
+some integer and $s$ is some integer.
+
+Then:
+
+$$ n - m = (2k + 1) - (2s + 1) \quad \text{ by substitution} $$
+
+$$ \quad = 2k + 1 - 2s - 1 $$
+
+$$ \quad = 2k - 2s $$
+
+$$ \quad = 2(k - s) $$
+
+Let $t = k - s$.
+
+Then $n - m = 2(k - s) = 2t$ where $t$ is an integer because the difference of
+integers is an integer.
+
+Therefore $n - m$ is even by definition of an even integer.
+
+Q.E.D.
 
 28. For all integers $n$ and $m$, if $n - m$ is even then $n^3 - m^3$ is even.
 
+**Theorem:**
+
+Suppose $n$ is any integer and $m$ is any integer and $n - m$ is even.
+
+**Proof:**
+
+Since we know that $n - m$ is even, $n - m = 2k$ where $k$ is some integer.
+
+Then:
+
+$$ n^3 - m^3 = (n - m)(n^2 + nm + m^2) \quad \text{ by factoring} $$
+
+$$ \quad = 2k(n^2 + nm + m^2) \quad \text{ by substitution} $$
+
+$$ \quad = 2[k(n^2 + nm + m^2)] $$
+
+Let $t = k(n^2 + nm + m^2)$.
+
+Then $n^3 - m^3 = 2t$ where $t$ is an integer because products and sums of
+integers is an integer.
+
+Therefore $n^3 - m^3$ is even by the definition of even integers.
+
+Q.E.D.
+
 29. For every integer $n$, if $n$ is prime then $(-1)^n = -1$.
+
+This is false when $n = 2$. Let's prove our claim.
+
+**Claim:**
+
+There exists some integer $n$ such that $n$ is prime and $(-1)^n \neq -1$.
+
+**Proof:**
+
+Let $n = 2$.
+
+Then:
+
+$$ (-1)^n = (-1)^2 \quad \text{ by substitution} $$
+
+$$ \quad = 1 $$
+
+$$ 1 \neq -1 $$
+
+Therefore since there is a prime number for $n$ such that $(-1)^n \neq -1$, the
+given statement is false.
+
+Q.E.D.
 
 30. For every integer $m$, if $m > 2$ then $m^2 - 4$ is composite.
 
+This is false. If $m = 3$, then $m^2 - 4 = 9 - 4 = 5$ which is not composite.
+Let's prove our claim.
+
+**Claim:**
+
+There exists some integer $m$ such that $m > 2$ and $m^2 - 4$ is not composite.
+
+**Proof:**
+
+Let $m = 3$.
+
+Then:
+
+$$ m^2 - 4 = (3)^2 - 4 \quad \text{ by substitution} $$
+
+$$ \quad = 9 - 4 $$
+
+$$ \quad = 5 $$
+
+$$ \quad = (1)(5) $$
+
+Since $m^2 - 4$ cannot be written as the product of 2 factors where both factors
+are greater than $1$, $m^2 - 4$ is not composite.
+
+Therefore since there is some integer $m$ such that $m > 2$ and $m^2 - 4$ is not
+composite, this statement is false.
+
+Q.E.D.
+
 31. For every integer $n$, $n^2 - n + 11$ is a prime number.
+
+This is false for when $n = 11$, let's formalize our claim.
+
+**Claim:**
+
+There exists some integer $n$ such that $n^2 - n + 11$ is not a prime number.
+
+**Proof:**
+
+Let $n = 11$.
+
+Then:
+
+$$ n^2 - n + 11 = (11)^2 - (11) + 11 \quad \text{ by substitution} $$
+
+$$ \quad = 121 - 11 + 11 $$
+
+$$ \quad = 121 $$
+
+$$ \quad = (11)(11) $$
+
+Therefore $n^2 - n + 11$ is not a prime number since it is divisible by a number
+other than $1$ and itself for this given $n$.
+
+Thus there exists some integer $n$ such that $n^2 - n + 11$ is not a prime
+number, and therefore the given statement is false.
+
+Q.E.D.
 
 32. For every integer $n$, $4(n^2 + n + 1) - 3n^2$ is a perfect square.
 
-33.. Every positive integer can be expressed as a sum of three or fewer perfect
-squares.
+**Theorem:**
+
+Suppose $n$ is any integer.
+
+**Proof:**
+
+Then:
+
+$$ 4(n^2 + n + 1) - 3n^2 = 4n^2 + 4n + 4 - 3n^2 \quad \text{ by distribution} $$
+
+$$ \quad = n^2 + 4n + 4 $$
+
+$$ \quad = (n + 2)(n + 2) $$
+
+$$ \quad = (n + 2)^2 $$
+
+Let $t = n + 2$.
+
+Then $4(n^2 + n + 1) - 3n^2 = t^2$ where $t$ is an integer because the sum of
+integers is an integer.
+
+Therefore $4(n^2 + n + 1) - 3n^2$ is a perfect square by the definition of
+perfect squares.
+
+Q.E.D.
+
+33. Every positive integer can be expressed as a sum of three or fewer perfect
+    squares.
+
+This is false.
+
+**Claim:**
+
+There exists some positive integer $x$ such that $x$ cannot be expressed as the
+sum of three or fewer perfect squares.
+
+**Proof:**
+
+Let $x = 7$. We check all sums of three nonnegative perfect squares
+$a^2 + b^2 + c^2$, where $a, b, c \in \{0, 1, 2\}$ because $3^2 = 9 > 7$.
+
+Possible squares: $0^2 = 0$, $1^2 = 1$, $2^2 = 4$.
+
+Now we check all sums
+
+1. Using only $0$ and $1$:
+
+- $0 + 0 + 1 = 1$, $0 + 1 + 1 = 2$, $1 + 1 + 1 = 3$
+
+All of these are too small and do not add up to $7$.
+
+2. Using a $4$ ($2^2$) with $0$ and $1$:
+
+- $4 + 0 + 0 = 4$, $4 + 0 + 1 = 5$, $4 + 1 + 1 = 6$, $4 + 4 + 0 = 8$
+
+All of these do not equal $7$.
+
+No combination sums to $7$.
+
+Therefore, since all possible combinations from the given set of numbers that
+could potentially sum to $7$ when each individual number is squared have been
+exhausted, it can be concluded that $x = 7$ cannot be expressed as the sum of
+three or fewer perfect squares.
+
+Therefore there exists at least one integer $x$ such that $x$ cannot be
+expressed as a sum of three or fewer perfect squares, and this statement is
+false.
+
+Q.E.D.
 
 34. (Two integers are **consecutive** if, and only if, one is one more than the
     other.) Any product of four consecutive integers is one less than a perfect
     square.
 
+**Theorem:**
+
+Suppose $n$ is any integer.
+
+**Proof:**
+
+Then:
+
+$$ (n)(n + 1)(n + 2)(n + 3) = (n(n + 3))(n + 1)(n + 2) $$
+
+$$ \quad = (n^2 + 3n)(n^2 + 3n + 2)$$
+
+$$ \quad = (n^2 + 3n)((n^2 + 3n) + 2)$$
+
+Let $x = n^2 + 3n$.
+
+Then:
+
+$$ \quad = (x)((x) + 2) $$
+
+$$ \quad = x^2 + 2x $$
+
+$$ \quad = x^2 + 2x + 1 - 1 $$
+
+$$ \quad = (x^2 + 2x + 1) - 1 $$
+
+$$ \quad = (x + 1)(x + 1) - 1 $$
+
+$$ \quad = (x + 1)^2 - 1 $$
+
+Then remove the substitution:
+
+$$ \quad = ((n^2 + 3n) + 1)^2 - 1 $$
+
+$$ \quad = (n^2 + 3n + 1)^2 - 1 $$
+
+Since $n^2 + 3n + 1$ is an integer because the products and sum of integers is
+an integer, this means that $(n^2 + 3n + 1)^2$ is a perfect square and
+$(n^2 + 3n + 1)^2 - 1$ is one less than a perfect square.
+
+Therefore the product of any four consecutive integers is one less than a
+perfect square.
+
+Q.E.D.
+
 35. If $m$ and $n$ are any positive integers and $mn$ is a perfect square, then
     $m$ and $n$ are perfect squares.
 
+This is false.
+
+**Claim:**
+
+There is a positive integer $m$ and there is a positive integer $n$ such that
+$mn$ is a perfect square and $m$ and $n$ are not perfect squares.
+
+**Proof:**
+
+Let $m = 2$ and $n = 8$.
+
+Then:
+
+$$ mn = (2)(8) \quad \text{ by substitution} $$
+
+$$ \quad = 16 $$
+
+$$ \quad = 4^2 $$
+
+Then $mn$ is a perfect square, but $m$ and $n$ are not perfect squares.
+
+Therefore there exists some $m$ and there exists some $n$ such that $mn$ is a
+perfect square and $m$ and $n$ are not perfect squares, proving the statement
+false.
+
+Q.E.D.
+
 36. The difference of the squares of any two consecutive integers is odd.
+
+**Theorem:**
+
+Suppose $n$ is any integer.
+
+**Proof:**
+
+Then:
+
+$$ (n + 1)^2 - n^2 = (n + 1)(n + 1) - n^2 \quad \text{ by substitution} $$
+
+$$ \quad = n^2 + 2n + 1 - n^2 $$
+
+$$ \quad = 2n + 1 $$
+
+Therefore $(n + 1)^2 - n^2$ is odd by the definition of an odd integer.
+
+Q.E.D.
 
 37. For all nonnegative real numbers $a$ and $b$,
     $\sqrt{ab} = \sqrt{a}\sqrt{b}$. (Note that if $x$ is a nonnegative real
     number, then there is a unique nonnegative real number $y$, denoted
     $\sqrt{x}$, such that $y^2 = x$.)
 
+**Theorem:**
+
+Suppose $a$ is any nonnegative real number and $b$ is any nonnegative real
+number.
+
+**Proof:**
+
+Since $a \geq 0$ and $b \geq 0$, we know that $\sqrt{a}$ and $\sqrt{b}$ are
+defined nonnegative real numbers such that:
+
+$$ (\sqrt{a})^2 = a $$
+
+and
+
+$$ (\sqrt{b})^2 = b $$
+
+Then:
+
+$$ (\sqrt{a}\sqrt{b})^2 = (\sqrt{a})^2(\sqrt{b})^2 = ab \quad \text{ by the product of powers property} $$
+
+We then know that $\sqrt{a}\sqrt{b} \geq 0$ because both factors are
+nonnegative.
+
+So $\sqrt{a}\sqrt{b}$ is a nonnegative real number whose square is $ab$.
+
+Therefore $\sqrt{ab} = \sqrt{a}\sqrt{b}$ by the definition of square root
+(uniqueness of the nonnegative number whose square is $ab$).
+
+Q.E.D.
+
 38. For all nonnegative real numbers $a$ and $b$,
 
 $$ \sqrt{a + b} = \sqrt{a} + \sqrt{b} $$
 
+This is false.
+
+**Claim:**
+
+There is some nonnegative real number $a$ and some nonnegative real number $b$
+such that $\sqrt{a + b} \neq \sqrt{a} + \sqrt{b}$.
+
+**Proof:**
+
+Let $a = 9$ and $b = 16$.
+
+Then:
+
+$$ \sqrt{a + b} = \sqrt{9 + 16} \quad \text{ by substitution} $$
+
+$$ \quad = \sqrt{25} $$
+
+$$ \quad = 5 $$
+
+Then:
+
+$$ 5 \stackrel{?}{=} \sqrt{a} + \sqrt{b} $$
+
+$$ 5 \stackrel{?}{=} \sqrt{9} + \sqrt{16} \quad \text{ by substitution} $$
+
+$$ 5 \stackrel{?}{=} 3 + 4 $$
+
+$$ 5 \neq 7 $$
+
+Therefore for the given $a$ and $b$, we have shown that
+$\sqrt{a + b} \neq \sqrt{a} + \sqrt{b}$, thus proving the statement false.
+
+Q.E.D.
+
 39. Suppose that integers $m$ and $n$ are perfect squares. Then
     $m + n + 2\sqrt{mn}$ is also a perfect square. Why?
+
+**Theorem:**
+
+Suppose $m$ is any perfect square and $n$ is any perfect square.
+
+**Proof:**
+
+Since $m$ and $n$ are perfect squares, $m = k^2$ and $n = s^2$ for some integer
+$k$ and some integer $s$.
+
+Then:
+
+$$ m + n + 2\sqrt{mn} = (k^2) + (s^2) + 2\sqrt{(k^2)(s^2)} \quad \text{ by substitution} $$
+
+$$ \quad = k^2 + s^2 + 2\sqrt{k^2}\sqrt{s^2} \quad \text{ by the product of powers property} $$
+
+$$ \quad = k^2 + s^2 + 2ks $$
+
+$$ \quad = k^2 + 2ks + s^2 \quad \text{ by the commutative property} $$
+
+$$ \quad = (k + s)(k + s) $$
+
+$$ \quad = (k + s)^2 $$
+
+Therefore $m + n + 2\sqrt{mn}$ is a perfect square by the definition of a
+perfect square.
+
+Q.E.D.
 
 40. If $p$ is a prime number, must $2^p - 1$ also be prime? Prove or give a
     counterexample.
 
+False.
+
+**Claim:**
+
+There is some prime number $p$ such that $2^p - 1$ is not prime.
+
+Let $p = 11$.
+
+Then:
+
+$$ 2^p - 1 = 2^{11} - 1 \quad \text{ by substitution} $$
+
+$$ \quad = 2048 - 1 $$
+
+$$ \quad = 2047 $$
+
+$$ \quad = (23)(89) $$
+
+Thus there is a case where $p$ is a prime number and $2^p - 1$ is not prime, and
+therefore the given statement is false.
+
+Q.E.D.
+
 41. If $n$ is a nonnegative integer, must $2^{2n} + 1$ be prime? Prove or give a
     counterexample.
+
+False.
+
+**Claim:**
+
+There exists a nonnegative integer $n$ such that $2^{2n} + 1$ is not prime.
+
+**Proof:**
+
+Let $n = 5$.
+
+Then:
+
+$$ 2^{2n} + 1 = 2^{2 \cdot 5} + 1 \quad \text{ by substitution} $$
+
+$$ \quad = 2^{10} + 1 $$
+
+$$ \quad = 1024 + 1 $$
+
+$$ \quad = 1025 $$
+
+$$ \quad = (25)(41) $$
+
+Thus there exists an nonnegative integer $n$ such that $2^{2n} + 1$ is not
+prime, and therefore the given statement is false.
+
+Q.E.D.

@@ -42,23 +42,43 @@ Page 204
 1. The meaning of every variable used in a proof should be explained with
    ______.
 
+The body of the proof.
+
 2. Proofs should be written in sentences that are ______ and ______.
 
+complete; grammatically correct
+
 3. Every assertion in a proof should be supported by a ______.
+
+reason
 
 4. The following are some useful "little words and phrases" that clarify the
    reasoning in a proof:
 
    ______, ______, ______, ______, and ______.
 
+because; since; then; thus; so; hence; therefore; consequently; it follows that;
+by substitution
+
 5. A new thought or fact that does not follow as an immediate consequence of the
    preceding statement can be introduced by writing ______, ______, ______,
    ______, or ______.
 
+observe that; note that; recall that; but; now
+
 6. To introduce a new variable that is defined in terms of previous variables,
    use the word ______.
 
+let
+
 7. Displaying equations and inequalities increases the ______ of a proof.
+
+readability
 
 8. Some proof-writing mistakes are ______, ______, ______, ______, ______,
    ______, and ______.
+
+arguing from examples; using the same letter to mean two different things;
+jumping to a conclusion; assuming what is to be proved; confusion between what
+is known and what is still to be shown; use of _any_ when the correct word is
+_some_; misuse of the word _if_
