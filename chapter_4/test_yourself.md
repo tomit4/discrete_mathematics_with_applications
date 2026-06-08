@@ -92,6 +92,13 @@ Page 210
 1. To show that a real number is rational, we must show that we can write it as
    ______.
 
+The ratio of integers, where the denominator is not 0.
+
 2. An irrational number is a ______ that is ______.
 
+real number; not rational
+
 3. Zero is a rational number because ______.
+
+zero is an integer that is a ratio of integers where the denominator is not
+zero, $0 = \dfrac{0}{1}$.
