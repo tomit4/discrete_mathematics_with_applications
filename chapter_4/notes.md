@@ -175,3 +175,221 @@ Page 210
 **Corollary 4.2.3**
 
 The double of a rational number is rational.
+
+---
+
+Page 213
+
+**Definition**
+
+If $n$ and $d$ are integers then
+
+$n$ is **divisible by** $d$ if, and only if, $n$ equals $d$ times some integer
+and $d \neq 0$.
+
+Instead of "$n$ is divisible by $d$," we can say that
+
+$n$ **is a multiple of** $d$, or
+
+$d$ **is a factor of** $n$, or
+
+$d$ **is a divisor of** $n$, or
+
+$d$ **divides** $n$.
+
+The notation $d \mid n$ is read "$d$ divides $n$." Symbolically, if $n$ and $d$
+are integers:
+
+$$ d \mid n \Leftrightarrow \exists \text{ an integer, say } k, \text{ such that } n = dk \text{ and } d \neq 0 $$
+
+The notation $d \nmid n$ is read "$d$ does not divide $n$."
+
+---
+
+Page 214
+
+**Theorem 4.4.1 A Positive Divisor of a Positive Integer**
+
+For all integers $a$ and $b$, if $a$ and $b$ are positive and $a$ divides $b$
+then $a \leq b$.
+
+**Proof:**
+
+Suppose $a$ and $b$ are positive integers such that $a$ divides $b$. _[We must
+show that $a \leq b$.]_ By definition of divisibility, there exists an integer
+$k$ so that $b = ak$. By property T25 of Appendix A, $k$ must be positive
+because both $a$ and $b$ are positive. It follows that
+
+$$ 1 \leq k $$
+
+because every positive integer is greater than or equal to $1$. Multiplying both
+sides by $a$ gives
+
+$$ a \leq ka = b $$
+
+because multiplying both sides of an inequality by a positive number preserves
+the inequality by property T20 of Appendix A. Thus $a \leq b$ _[as was to be
+shown]._
+
+---
+
+Page 214
+
+**Theorem 4.4.2 Divisors of 1**
+
+The only divisors of $1$ are $1$ and $-1$.
+
+**Proof:**
+
+Since $1 \cdot 1 = 1$ and $(-1)(-1) = 1$, both $1$ and $-1$ are divisors of $1$.
+Now suppose $m$ is any integer that divides $1$. Then there exists an integer
+$n$ such that $1 = mn$. By Theorem T25 in Appendix A, either both $m$ and $n$
+are positive or both $m$ and $n$ are negative. If both $m$ and $n$ are positive,
+then $m$ is a positive integer divisor of $1$. By Theorem 4.4.1, $m \leq 1$,
+and, since the only positive integer that is less than or equal to $1$ is $1$
+itself, it follows that $m = 1$. On the other hand, if both $m$ and $n$ are
+negative, then by Theorem T12 in Appendix A, $(-m)(-n) = mn = 1$. In this case
+$-m$ is a positive integer divisor of $1$, and so, by the same reasoning,
+$-m = 1$ and thus $m = -1$. Therefore there are only two possibilities: either
+$m = 1$ or $m = -1$. So the only divisors of $1$ are $1$ and $-1$.
+
+---
+
+Page 215
+
+For all integers $n$ and $d$, $d \nmid n \Leftrightarrow \frac{n}{d}$ is not an
+integer.
+
+---
+
+Page 216
+
+**Theorem 4.4.3 Transitivity of Divisibility**
+
+For all integers $a$, $b$, and $c$, if $a$ divides $b$ and $b$ divides $c$, then
+$a$ divides $c$.
+
+**Proof:**
+
+Suppose $a$, $b$, and $c$ are any _[particular but arbitrarily chosen]_ integers
+such that $a$ divides $b$ and $b$ divides $c$. _[We must show that $a$ divides
+$c$.]_ By definition of divisibility,
+
+$$ b = ar \text{ and } c = bs \quad \text{ for some integers } r \text{ and } s $$
+
+By substitution
+
+$$ c = bs $$
+
+$$ \quad = (ar)s $$
+
+$$ \quad = a(rs) \quad \text{ by basic algebra} $$
+
+Let $k = rs$. Then $k$ is an integer since it is a product of integers, and
+therefore
+
+$$ c = ak \quad \text{ where } k \text{ is an integer} $$
+
+Thus $a$ divides $c$ by definition of divisibility. _[This is what was to be
+shown.]_
+
+---
+
+Page 217
+
+**Theorem 4.4.4 Divisibility by a Prime**
+
+Any integer $n > 1$ is divisible by a prime number.
+
+**Proof:**
+
+Suppose $n$ is a _[particular but _arbitrarily chosen]_ integer that is greater
+than $1$. _[We must show that there is a prime number that divides $n$.]_ If $n$
+is prime, then $n$ is divisible by a prime number (namely itself), and we are
+done. If $n$ is not prime, the as discussed in Example 4.1.2b,
+
+$n = r_0s_0$ where $r_0$ and $s_0$ are integers and $1 < r_0 < n$ and
+$1 < s_0 < n$.
+
+It follows by definition of divisibility that $r_0 \mid n$.
+
+If $r_0$ is prime, then $r_0$ is a prime number that divides $n$, and we are
+done. If $r_0$ is not prime, then
+
+$r_0 = r_1s_1$ where $r_1$ and $s_1$ are integers and $1 < r_1 < r_0$ and
+$1 < s_1 < r_0$.
+
+It follows by the definition of divisibility that $r_q \mid r_0$. But we already
+know that $r_0 \mid n$. Consequently, by transitivity of divisibility,
+$r_1 \mid n$.
+
+If $r_1$ is prime, then $r_1$ is a prime number that divides $n$, and we are
+done. If $r_1$ is not prime, then
+
+$r_1 = r_2s_2$ where $r_2$ and $s_2$ are integers and $1 < r_2 < r_1$ and
+$1 < s_2 < r_1$.
+
+It follows by the definition of divisibility that $r_2 \mid r_1$. But we already
+know that $r_1 \mid n$. Consequently, by transitivity of divisibility,
+$r_2 \mid n$.
+
+If $r_2$ is prime, then $r_2$ is a prime number that divides $n$, and we are
+done. If $r_2$ is not prime, then we may repeat the previous process by
+factoring $r_2$ as $r_3s_3$.
+
+We may continue in this way, factoring successive factors of $n$ until we find a
+prime factor. We must succeed in a finite number of steps because each new
+factor is both less than the previous one (which is less than $n$) and greater
+than $1$, and there are fewer than $n$ integers strictly between $1$ and $n$.
+Thus we obtain a sequence
+
+$$ r_0, r_1, r_2, \dots, r_k $$
+
+where $k \geq 0$, $1 < r_k < r_{k - 1} < \dots < r_2 < r_1 < r_0 < n$, and
+$r_i \mid n$ for each $i = 0, 1, 2, \dots, k$. The condition for termination is
+that $r_k$ should be prime. Hence $r_k$ is a prime number that divides $n$.
+_[This is what we were to show.]_
+
+---
+
+Page 218
+
+**Proposed Divisibility Property:** For all integers $a$ and $b$, if $a \mid b$
+and $b \mid a$ then $a = b$.
+
+**Counterexample:** Let $a = 2$ and $b = -2$. Then $-2 = (-1) \cdot 2$ and
+$2 = (-1) \cdot (-2)$, and thus
+
+$$ a \mid b \text{ and } b \mid a, \text{ but } a \neq b \text{ because } 2 \neq -2 $$
+
+Therefore, the statement is false.
+
+---
+
+Page 219
+
+**Theorem 4.4.5 Unique Factorization of Integers Theorem (Fundamental Theorem of
+Arithmetic)**
+
+Given any integer $n > 1$, there exist a positive integer $k$, distinct prime
+numbers $p_1, p_2, \dots, p_k$, and positive integers $e_1, e_2, \dots, e_k$
+such that
+
+$$ n = p_1^{e_1}p_2^{e^2}p_3^{e^3}\dots p_k^{e_k} $$
+
+and any other expression for $n$ as a product of prime numbers is identical to
+this except, perhaps, for the order in which the factors are written.
+
+---
+
+Page 219
+
+**Definition**
+
+Given any integer $n > 1$, the **standard factored form** of $n$ is an
+expression of the form
+
+$$ n = p_1^{e_1}p_2^{e^2}p_3^{e^3}\dots p_k^{e_k} $$
+
+where $n$ is a positive integer, $p_1,p_2,\dots , p_k$ are prime numbers,
+$e_1,e_2,\dots ,e_k$ are positive integers, and $p_1 < p_2 < \dots < p_k$.

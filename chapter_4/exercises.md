@@ -3011,3 +3011,272 @@ which is a quotient of two integers with a nonzero denominator. Hence it is a
 rational number. This is what is to be shown.
 
 This incorrect prove is assuming what is to be proved.
+
+---
+
+**Exercise Set 4.4**
+
+Page 220
+
+Give a reason for your answer in each of 1-13. Assume that all variables
+represent integers.
+
+1. is $52$ divisible by $13$?
+
+2. Does $7 \mid 56$?
+
+3. Does $5 \mid 0$?
+
+4. Does $3$ divide $(3k + 1)(3k + 2)(3k + 3)$?
+
+5. Is $6m(2m + 10)$ divisible by $4$?
+
+6. Is $29$ a multiple of $3$?
+
+7. Is $-3$ a factor of $66$?
+
+8. Is $6a(a + b)$ a multiple of $3a$?
+
+9. Is $4$ a factor of $2a \cdot 34b$?
+
+10. Does $7 \mid 34$?
+
+11. Does $13 \mid 73$?
+
+12. If $n = 4k + 1$, does $8$ divide $n^2 - 1$?
+
+13. If $n = 4k + 3$, does $8$ divide $n^2 - 1$?
+
+14. Fill in the blanks in the following proof that for all integers $a$ and $b$,
+    if $a \mid b$ then $a \mid (-b)$.
+
+**Proof:**
+
+Suppose $a$ and $b$ are integers such that __ (a) __. By definition of
+divisibility, there exists an integer $r$ such that __ (b) __. By substitution,
+
+$$ -b = -(ar) = a(-r) $$
+
+Let $t = $ __ (c) __. Then $t$ is an integer because $t = (-1) \cdot r$, and
+both $-1$ and $r$ are integers. Thus, by substitution, $-b = at$, where $t$ is
+an integer, and by the definition of divisibility, __ (d) __, as was to be
+shown.
+
+Prove statements 15 and 16 directly from the definition of divisibility.
+
+15. For all integers $a$, $b$, and $c$, if $a \mid b$ and $a \mid c$ then
+    $a \mid (b + c)$.
+
+16. For all integers $a$, $b$, and $c$, if $a \mid b$ then $a \mid c$ then
+    $a \mid (b - c)$.
+
+17. For all integers $a$, $b$, $c$, and $d$, if $a \mid c$ and $b \mid d$ then
+    $ab \mid cd$.
+
+18. Consider the following statement: The negative of any multiple of $3$ is a
+    multiple of $3$.
+
+a. Write the statement formally using a quantifier and a variable.
+
+b. Determine whether the statement is true or false and justify your answer.
+
+19. Show that the following statement is false: For all integers $a$ and $b$, if
+    $3 \mid (a + b)$ then $3 \mid (a - b)$.
+
+For each statement in 20-32, determine whether the statement is true or false.
+Prove the statement directly from the definitions if it is true, and give a
+counterexample if it is false.
+
+20. The sum of any three consecutive integers is divisible by $3$.
+
+21. The product of any two even integers is a multiple of $4$.
+
+22. A necessary condition for an integer to be divisible by $6$ is that it be
+    divisible by $2$.
+
+23. A sufficient condition for an integer to be divisible by $8$ is that it be
+    divisible by $16$.
+
+24. For all integers $a$, $b$, and $c$, if $a \mid b$ and $a \mid c$ then
+    $a \mid (2b - 3c)$.
+
+25. For all integers $a$, $b$, and $c$, if $a$ is a factor of $c$ and $b$ is a
+    factor of $c$ then $ab$ is a factor of $c$.
+
+26. For all integers $a$, $b$, and $c$, if $ab \mid c$ then $a \mid c$ and
+    $b \mid c$.
+
+27. For all integers $a$, $b$, and $c$, if $a \mid (b + c)$ then $a \mid b$ or
+    $a \mid c$.
+
+28. For all integers $a$, $b$, and $c$, if $a \mid bc$ then $a \mid b$ or
+    $a \mid c$.
+
+29. For all integers $a$ and $b$, if $a \mid b$ then $a^2 \mid b^2$.
+
+30. For all integers $a$ and $n$, if $a \mid n^2$ and $a \leq n$ then
+    $a \mid n$.
+
+31. For all integers $a$ and $b$, if $a \mid 10b$ then $a \mid 10$ or
+    $a \mid b$.
+
+32. A fast-food chain has a contest in which a card with numbers on it is given
+    to each customer who makes a purchase. If some of the numbers on the card
+    add up to $100$, then the customer wins $100. A certain customer receives a
+    card containing the numbers
+
+72, 21, 15, 36, 69, 81, 9, 27, 42, and 63.
+
+Will the customer win $100? Why or why not?
+
+33. Is it possible to have a combination of nickels, dimes, and quarters that
+    add up to $4.72? Explain.
+
+34. Consider a string consisting of _a_'s, _b_'s, and _c_'s where the number of
+    _b_'s is three times the number of _a_'s and the number of _c_'s is five
+    times the number of _a_'s. Prove that the length of the string is divisible
+    by $3$.
+
+35. Two athletes run a circular track at a steady pace so that the first
+    completes one round in 8 minutes and the second in 10 minutes. If they both
+    start from the same spot at 4 P.M., when will be the first time they return
+    to the start?
+
+36. It can be shown (see exercises 44-48) that an integer is divisible by 3 if,
+    and only if, the sum of its digits is divisible by 3; an integer is
+    divisible by 9 if, and only if, the sum of its digits is divisible by 9; an
+    integer is divisible by 5 if, and only if, its right-most digit is a 5 or a
+    0; and an integer is divisible by 4 if, and only if, the number formed by
+    its right-most two digits is divisible by 4. Check the following integers
+    for divisibility by 3, 4, 5, and 9.
+
+a. 637,425,403,705,125
+
+b. 12,858,306,120,312
+
+c. 517,924,440,926,512
+
+d. 14,328,083,360,232
+
+37. Use the unique factorization theorem to write the following integers in
+    standard factored form.
+
+a. 1,176
+
+b. 5,733
+
+c. 3,675
+
+38. Let $n = 8,424$.
+
+a. Write the prime factorization for $n$.
+
+b. Write the prime factorization for $n^5$.
+
+c. Is $n^5$ divisible by 20? Explain.
+
+d. What is the least positive integer $m$ so that $8,424 \cdot m$ is a perfect
+square?
+
+39. Suppose that in standard factored form
+    $a = p_1^{e_1}p_2^{e_2} \dots p_k^{e^k}$, where $k$ is a positive integer;
+    $p_1, p_2, \dots, p_k$ are prime numbers; and $e_1, e_2, \dots, e_k$ are
+    positive integers.
+
+a. What is the standard factored form for $a^3$?
+
+b. Find the least positive integer $k$ such that
+$2^4 \cdot 3^5 \cdot 7 11^2 \cdot k$ is a perfect cube (that is, it equals an
+integer to the third power). Write the resulting product as a perfect cube.
+
+40.
+
+a. If $a$ and $b$ are integers and $12a = 25b$, does $12 \mid b$? does
+$25 \mid a$? Explain.
+
+b. If $x$ and $y$ are integers and $10x = 9y$, does $10 \mid y$? does
+$9 \mid x$? Explain.
+
+41. How many zeros are at the end of $45^8 \cdot 88^5$? Explain how you can
+    answer this question without actually computing the number. (_Hint:_
+    $10 = 2 \cdot 5$.)
+
+42. If $n$ is an integer and $n > 1$, then $n!$ is the product of $n$ and every
+    other positive integer that is less than $n$. For example,
+    $5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1$.
+
+a. Write $6!$ in standard factored form.
+
+b. Write $20!$ in standard factored form.
+
+c. Without computing the value of $(20!)^2$ determine how many zeros are at the
+end of this number when it is written in decimal form. Justify your answer.
+
+43. At a certain university 2/3 of the mathematics students and 3/5 of the
+    computer science students have taken a discrete mathematics course. The
+    number of mathematics students who have taken the course equals the number
+    of computer science students who have taken the course. If there are at
+    least 100 mathematics students at the university, what are the least
+    possible number of mathematics students and the least possible number of
+    computer science students at the university?
+
+**Definition:** Given any nonnegative integer $n$, the **decimal
+representation** of $n$ is an expression of the form
+
+$$ d_kd_{k + 1} \dots d_2d_1d_0 $$
+
+where $kr is a nonnegative integer, $d_0, d_1, d_2, \dots, d_k$ (called the
+**decimal digits** of $n$) are integers from $0$ to $9$ inclusive, $dk \neq 0$
+unless $n = 0$ and $k = 0$, and
+
+$$ n = d_k \cdot 10^k + d_{k + 1} \cdot 10^{k + 1} + \dots + d_2 \cdot 10^2 + d_1 \cdot 10 + d_0 $$
+
+(For example, $2,503 = 2 \cdot 10^3 + 5 \cdot 10^2 + 0 \cdot 10 + 3$.)
+
+44. Prove that if $n$ is any nonnegative integer whose decimal representation
+    ends in $0$, then $5 \mid n$. (_Hint:_ If the decimal representation of a
+    nonnegative integer $n$ ends in $d_0$, then $n = 10m + d_0$ for some integer
+    $m$.)
+
+45. Prove that if $n$ is any nonnegative integer whose decimal representation
+    ends in $5$, then $5 \mid n$.
+
+46. Prove that if the decimal representation of a nonnegative integer $n$ ends
+    in $d_1d_0$ and if $4 \mid (10d_1 + d_0)$, then $4 \mid n$. (_Hint:_ If the
+    decimal representation of a nonnegative integer $n$ ends in $d_1d_0$, then
+    there is an integer $s$ such that $n = 100s + 10d_1 + d_0$.)
+
+47. Observe that
+
+$$
+7,524 = 7 \cdot 1,000 + 5 \cdot 100 + 2 \cdot 10 + 4 \\
+\quad = 7(999 + 1) + 5(99 + 1) + 2(9 + 1) + 4 \\
+\quad = (7 \cdot 99 + 7) + (5 \cdot 99 + 5) + (2 \cdot 9 + 2) + 4 \\
+\quad = (7 \cdot 999 + 5 \cdot 99 2 \cdot 9) + (7 + 5 + 2 + 4) \\
+\quad = (7 \cdot 111 \cdot 9 + 5 \cdot 11 \cdot 9 + 2 \cdot 9) + (7 + 5 + 2 + 4) \\
+\quad = (7 \cdot 111 + 5 \cdot 11 + 2) \cdot 9 + (7 + 5 + 2 + 4) \\
+\quad = (\text{an integer divisible by 9})i + (\text{the sum of the digits of } 7,524)
+$$
+
+Since the sum of the digits of $7,524$ is divisible by $9$, $7,524$ can be
+written as a sum of two integers each of which is divisible by $9$. It follows
+from exercise 15 that $7,524$ is divisible by $9$.
+
+Generalize the argument given in this example to any nonnegative integer $n$. In
+other words, prove that for any nonnegative integer $n$, if the sum of the
+digits of $n$ is divisible by $9r, then $n$ is divisible by $9$.
+
+48. Prove that for any nonnegative integer $n$, if the sum of the digits of $n$
+    is divisible by $3$, then $n$ is divisible by $3$.
+
+49. Given a positive integer $n$ written in decimal form, the alternating sum of
+    the digits of $n$ is obtained by starting with the right-most digit,
+    subtracting the digit immediately to its left, adding the next digit to the
+    left, subtracting the next digit, and so forth. For example, the alternating
+    sum of the digits of 180,928 is $8 - 2 + 9 - 0 + 8 - 1 = 22$. Justify the
+    fact that for any nonnegative integer $n$, if the alternating sum of the
+    digits of $n$ is divisible by 11, then $n$ is divisible by 11.
+
+50. The integer 123,123 has the form _abc,abc_, where _a_, _b_, and _c_ are
+    integers from $0$ through $9$. Consider all six-digit integers of this form.
+    Which prime numbers divide every one of these integers? Prove your answer.
