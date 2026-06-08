@@ -3021,31 +3021,61 @@ Page 220
 Give a reason for your answer in each of 1-13. Assume that all variables
 represent integers.
 
-1. is $52$ divisible by $13$?
+1. Is $52$ divisible by $13$?
+
+Yes $52 = 13 \cdot 4$
 
 2. Does $7 \mid 56$?
 
+Yes $56 = 7 \cdot 8$
+
 3. Does $5 \mid 0$?
+
+Yes, $0 = 5 \cdot 0$
 
 4. Does $3$ divide $(3k + 1)(3k + 2)(3k + 3)$?
 
+Yes $3 | 3(3k + 1)(3k + 2)(k + 1)$
+
 5. Is $6m(2m + 10)$ divisible by $4$?
+
+Yes $6m(2m + 10) = 12m^2 + 60m = 4 \cdot (3m^2 + 15m)$
 
 6. Is $29$ a multiple of $3$?
 
+No, $\dfrac{29}{3} \approx 9.666666\dots$ which is not an integer.
+
 7. Is $-3$ a factor of $66$?
+
+Yes, $66 = -3(-22)$
 
 8. Is $6a(a + b)$ a multiple of $3a$?
 
+Yes, $6a(a + b) = 3a(2)(a + b)$
+
 9. Is $4$ a factor of $2a \cdot 34b$?
+
+Yes. $2a \cdot 34b = 68ab = 4(17ab) $
 
 10. Does $7 \mid 34$?
 
+No $\dfrac{34}{7} = 4 + \dfrac{6}{7}$ which is not an integer.
+
 11. Does $13 \mid 73$?
+
+No $\dfrac{73}{13} = 5 + \dfrac{8}{13}$ which is not an integer.
 
 12. If $n = 4k + 1$, does $8$ divide $n^2 - 1$?
 
+Yes.
+
+$$ n^2 - 1 = (4k + 1)^2 - 1 = 16k^2 + 8k + 1 - 1 = 16k^2 + 8k = 8(2k^2 + k) $$
+
 13. If $n = 4k + 3$, does $8$ divide $n^2 - 1$?
+
+Yes.
+
+$$ n^2 - 1 = (4k + 3)^2 - 1 = 16k^2 + 24k + 9 - 1 = 16k^2 + 24k + 8 = 8(2k^2 + 3k + 1) $$
 
 14. Fill in the blanks in the following proof that for all integers $a$ and $b$,
     if $a \mid b$ then $a \mid (-b)$.
@@ -3062,26 +3092,122 @@ both $-1$ and $r$ are integers. Thus, by substitution, $-b = at$, where $t$ is
 an integer, and by the definition of divisibility, __ (d) __, as was to be
 shown.
 
+a. $a \mid b$
+
+b. $b = a \cdot r$
+
+c. $-r$
+
+d. $a | (-b)$
+
 Prove statements 15 and 16 directly from the definition of divisibility.
 
 15. For all integers $a$, $b$, and $c$, if $a \mid b$ and $a \mid c$ then
     $a \mid (b + c)$.
 
+**Proof:**
+
+Suppose $a$, $b$, and $c$ are any integers such that $a \mid b$ and $a \mid c$
+
+By definition of divisibility, $b = ar$ and $c = as$ for some integers $r$ and
+$s$.
+
+Then:
+
+$$ b + c = ar + as = a(r + s) $$
+
+Let $t = r + s$, where $t$ is an integer because the sum of integers are
+integers. And thus $b + c = a \cdot t$. By the definition of divisibility then
+$a \mid (b + c)$.
+
+Q.E.D.
+
 16. For all integers $a$, $b$, and $c$, if $a \mid b$ then $a \mid c$ then
     $a \mid (b - c)$.
 
+**Proof:**
+
+Suppose $a$, $b$, and $c$ are any integers such that $a \mid b$ and $a \mid c$
+
+By definition of divisibility, $b = ar$ and $c = as$ for some integers $r$ and
+$s$.
+
+Then:
+
+$$ b - c = ar - as = a(r - s) $$
+
+Let $t = r - s$, where $t$ is an integer because the difference of integers are
+integers. And thus $b - c = a \cdot t$. By the definition of divisibility then
+$a \mid (b - c)$.
+
+Q.E.D.
+
 17. For all integers $a$, $b$, $c$, and $d$, if $a \mid c$ and $b \mid d$ then
     $ab \mid cd$.
+
+**Proof:**
+
+Suppose $a$, $b$, $c$, and $d$ are any integers such that $a \mid c$ and
+$b \mid d$.
+
+By definition of divisibility, $c = ar$ and $d = bs$ for some integers $r$ and
+$s$.
+
+Then:
+
+$$ cd = (ar)(bs) = ab(rs) $$
+
+Let $t = rs$, where $t$ is an integer because the product of integers are
+integers. Then $cd = ab \cdot t$. By the definition of divisibility then
+$ab \mid cd$.
+
+Q.E.D.
 
 18. Consider the following statement: The negative of any multiple of $3$ is a
     multiple of $3$.
 
 a. Write the statement formally using a quantifier and a variable.
 
+$$ \forall x \in \mathbb{Z}((3 \mid x) \to (3 \mid -x)) $$
+
 b. Determine whether the statement is true or false and justify your answer.
+
+**Proof:**
+
+Suppose $x$ is any integer such that $3 \mid x$.
+
+By definition of a multiple, $x = 3k$ for some integer $k$.
+
+Then:
+
+$$ -x = -(3k) = 3(-k) $$
+
+Then $-k$ is an integer because the product of integers are integers. Therefore,
+by the definition of divisibility, $3 \mid -x$.
+
+Q.E.D.
 
 19. Show that the following statement is false: For all integers $a$ and $b$, if
     $3 \mid (a + b)$ then $3 \mid (a - b)$.
+
+**Proof by Counterexample:**
+
+Let $a = 1$ and $b = 2$.
+
+Then:
+
+$$ a + b = 1 + 2 = 3 $$
+
+So $3 \mid 3$ is true. But, then:
+
+$$ a - b = 1 - 2 = -1 $$
+
+$$ 3 \nmid -1 $$
+
+Thus, for the given $a$ and $b$, $3 \mid (a + b)$, but $3 \nmid (a - b)$.
+Therefore the statement is false.
+
+Q.E.D.
 
 For each statement in 20-32, determine whether the statement is true or false.
 Prove the statement directly from the definitions if it is true, and give a
@@ -3089,36 +3215,230 @@ counterexample if it is false.
 
 20. The sum of any three consecutive integers is divisible by $3$.
 
+**Proof:**
+
+Suppose $n$ is any integer.
+
+Then:
+
+$$ n + (n + 1) + (n + 2) = 3n + 3 = 3(n + 1) $$
+
+Let $t = n + 1$, where $t$ is an integer because the sum of integers are
+integers. Then $n + (n + 1) + (n + 2) = 3t$. Therefore, by the definition of
+divisibility, $3 \mid n + (n + 1) + (n + 2)$.
+
+Q.E.D.
+
 21. The product of any two even integers is a multiple of $4$.
+
+**Proof:**
+
+Suppose $x$ and $y$ are any two even integers.
+
+Since $x$ and $y$ are even integers, $x = 2k$ and $y = 2m$ where $k$ and $m$ are
+some integers.
+
+Then:
+
+$$ xy = (2k)(2m) = 4km $$
+
+Let $t = km$, where $t$ is an integer because the product of integers are
+integers. Then $xy = 4t$. Therefore, by the definition of divsibility,
+$4 \mid xy$.
+
+Q.E.D.
 
 22. A necessary condition for an integer to be divisible by $6$ is that it be
     divisible by $2$.
 
+_Quick Note:_
+
+Recall that "$R$ ... necessary condition for $S$" means $S \to R$. Thus this is
+saying:
+
+If an integer is divisible by $6$, then it is divisible by $2$.
+
+**Proof:**
+
+Suppose $x$ is any integer and $6 \mid x$.
+
+Then $x = 6k$ where $k$ is some integer.
+
+Then:
+
+$$ x = 6k = 2(3k) $$
+
+Let $t = 3k$ where $t$ is an integer because the product of integers is
+integers. Then $x = 2t$. Therefore by the definition of divisibility,
+$2 \mid x$.
+
+Q.E.D.
+
 23. A sufficient condition for an integer to be divisible by $8$ is that it be
     divisible by $16$.
+
+_Quick Note:_
+
+"$R$ is a sufficient condition for $S$" means "if $R$ then $S$."
+
+This reads then as:
+
+If an integer is divisible by $16$, then it is divisible by $8$.
+
+**Proof:**
+
+Let $x$ be any integer and $16 \mid x$.
+
+Since $16 \mid x$, $x = 16k$ where $k$ is some integer.
+
+Then:
+
+$$ x = 16k = 8(2k) $$
+
+Let $t = 2k$ where $t$ is an integer by the product of integers. Then $x = 8t$,
+and thus $8 \mid x$ by the definition of divisibility.
+
+Q.E.D.
 
 24. For all integers $a$, $b$, and $c$, if $a \mid b$ and $a \mid c$ then
     $a \mid (2b - 3c)$.
 
+**Proof:**
+
+Suppose $a$, $b$, and $c$ are any integers where $a \mid b$ and $a \mid c$.
+
+Since $a \mid b$ and $a \mid c$, $b = ak$ and $c = am$ where $k$ and $m$ are
+some integers.
+
+Then:
+
+$$ 2b - 3c = 2(ak) - 3(am) $$
+
+$$ \quad = a(2k - 3m) $$
+
+Let $t = 2k - 3m$, where $t$ is an integer by the difference and product of
+integers. Then $2b - 3c = at$. Thus $a \mid 2b - 3c$ by the definition of
+divisibility.
+
+Q.E.D.
+
 25. For all integers $a$, $b$, and $c$, if $a$ is a factor of $c$ and $b$ is a
     factor of $c$ then $ab$ is a factor of $c$.
+
+**Proof by Counterexample:**
+
+Let $a = 4$, $b = 8$, and $c = 8$.
+
+Then $a \mid c$ is $4 \mid 8$ and $b \mid c$ is $8 \mid 8$, but $ab \mid c$ is
+$32 \mid 8$, which is false since $32 \nmid 8$. Therefore this statement is
+false.
+
+Q.E.D.
 
 26. For all integers $a$, $b$, and $c$, if $ab \mid c$ then $a \mid c$ and
     $b \mid c$.
 
+**Proof:**
+
+Suppose $a$, $b$, and $c$ are integers and $ab \mid c$.
+
+Since $ab \mid c$, $c = abk$ where $k$ is some integer.
+
+Then:
+
+$$ c = abk = a(bk) $$
+
+And:
+
+$$ c = abk = b(ak) $$
+
+Let $t = bk$ and $u = ak$ where $t$ and $u$ are integers by the product of
+integers. Then $c = at$ and $c = bu$. Therefore, by the definition of
+divisibility, $a \mid c$ and $b \mid c$.
+
+Q.E.D.
+
 27. For all integers $a$, $b$, and $c$, if $a \mid (b + c)$ then $a \mid b$ or
     $a \mid c$.
+
+**Proof by Counterexample:**
+
+Let $a = 3$, $b = 4$, and $c = 5$.
+
+Then $a \mid (b + c)$ is $3 \mid 9$, which is true. Then, however, $a \mid b$ is
+$3 \mid 4$, which is false since $3 \nmid 4$ and $a \mid c$ becomes $3 \mid 5$,
+which is also false since $3 \nmid 5$.
+
+Thus for the given $a$, $b$, and $c$, $a \mid (b + c)$, but $a \nmid b$ and
+$a \nmid c$. Therefore the statement is false.
+
+Q.E.D.
 
 28. For all integers $a$, $b$, and $c$, if $a \mid bc$ then $a \mid b$ or
     $a \mid c$.
 
+**Proof by Counterexample:**
+
+Let $a = 6$, $b = 2$, $c = 3$.
+
+Then $a \mid bc$ is $6 \mid 6$, which is true. Then, however, $a \mid b$ is
+$6 \mid 2$, which is false since $6 \nmid 2$ and $a \mid c$ is $6 \mid 3$ which
+also false since $6 \nmid 3$.
+
+Thus for the given $a$, $b$, and $c$, $a \mid bc$ is true, but then $a \nmid b$
+and $a \nmid c$. Therefore the statement is false.
+
+Q.E.D.
+
 29. For all integers $a$ and $b$, if $a \mid b$ then $a^2 \mid b^2$.
+
+**Proof:**
+
+Suppose $a$ and $b$ are any integers where $a \mid b$.
+
+Since $a \mid b$, then $b = ak$ for some integer $k$.
+
+Then:
+
+$$ b^2 = (ak)^2 $$
+
+$$ b^2 = a^2k^2 $$
+
+Let $t = k^2$ where $t$ is an integer by the product of integers. Then
+$b^2 = a^2t$. Therefore, by the definition of divisibility, $a^2 \mid b^2$.
+
+Q.E.D.
 
 30. For all integers $a$ and $n$, if $a \mid n^2$ and $a \leq n$ then
     $a \mid n$.
 
+**Proof by Counterexample:**
+
+Let $a = -36$ and $n = 6$.
+
+Then $a \mid n^2$ is $-36 \mid 36$, which is true and $a \leq n$ is
+$-36 \leq 6$, which is also true. Then, however, $a \mid n$ is $-36 \mid 6$,
+which is false since $-36 \nmid 6$.
+
+Thus for the given $a$ and $n$, $a \mid n^2$ and $a \leq n$, but $a \nmid n$.
+Therefore this statement is false.
+
+Q.E.D.
+
 31. For all integers $a$ and $b$, if $a \mid 10b$ then $a \mid 10$ or
     $a \mid b$.
+
+**Proof:**
+
+Let $a = 4$, $b = 2$.
+
+Then $a \mid 10b$ is $4 \mid 20$ is true, but then $a \mid 10$ is $4 \mid 10$ is
+false and $a \mid b$ is $4 \mid 2$ is false.
+
+Thus for the given $a$ and $b$, $a \mid 10b$, but then $a \nmid 10$ and
+$a \nmid b$. Therefore the statement is false.
+
+Q.E.D.
 
 32. A fast-food chain has a contest in which a card with numbers on it is given
     to each customer who makes a purchase. If some of the numbers on the card
@@ -3129,18 +3449,49 @@ counterexample if it is false.
 
 Will the customer win $100? Why or why not?
 
+No, each of the given numbers is divisible by $3$, but $3 \nmid 100$, therefore
+the sum of any of the given numbers can never equal $100.
+
 33. Is it possible to have a combination of nickels, dimes, and quarters that
     add up to $4.72? Explain.
+
+No, nickels, dimes and quarters represent 5¢, 10¢, and 25¢ respectively. They
+have a common divisor of 5, but $4.72 or 472¢, is not divisible by 5, and so it
+is not possible to have a combination of nickels, dimes and quarters that will
+add up to $4.72.
 
 34. Consider a string consisting of _a_'s, _b_'s, and _c_'s where the number of
     _b_'s is three times the number of _a_'s and the number of _c_'s is five
     times the number of _a_'s. Prove that the length of the string is divisible
     by $3$.
 
+**Proof:**
+
+Suppose $n$ is any integer that represents the number of _a_ characters in a
+string.
+
+Suppose also that $3n$ is the number of _b_ characters in the string and $5n$
+represents the number of _c_ characters in the string.
+
+Let $L$ be the length of the string.
+
+Then the length of the string is:
+
+$$ L = n + 3n + 5n = 9n = 3(3n) $$
+
+Let $t = 3n$ where $t$ is an integer by the product of integers. Then $L = 3t$.
+Thus, by the definition of divisibility, $3 \mid L$.
+
+Q.E.D.
+
 35. Two athletes run a circular track at a steady pace so that the first
     completes one round in 8 minutes and the second in 10 minutes. If they both
     start from the same spot at 4 P.M., when will be the first time they return
     to the start?
+
+We are looking at the LCM (least common multiple) of both $8$ and $10$ in this
+case, which is $40$. Then the two athletes will return to the start for the
+first time at 4:40 P.M.
 
 36. It can be shown (see exercises 44-48) that an integer is divisible by 3 if,
     and only if, the sum of its digits is divisible by 3; an integer is
@@ -3152,54 +3503,248 @@ Will the customer win $100? Why or why not?
 
 a. 637,425,403,705,125
 
+Divisible by 3?
+
+$$ 3 \stackrel{?}{\mid} (6 + 3 + 7 + 4 + 2 + 5 + 4 + 0 + 3 + 7 + 0 + 5 + 1 + 2 + 5) $$
+
+$$ 3 \stackrel{?}{\mid} 54 $$
+
+Yes, $\dfrac{54}{3} = 18$
+
+Divisible by 4?
+
+$$ 4 \stackrel{?}{\mid} 25 $$
+
+No, $\dfrac{25}{4} = 6 + \dfrac{1}{4}$
+
+Divisible by 5?
+
+Last digit a $5$ or $0$?
+
+Yes, last digit is $5$.
+
+Divisible by 9?
+
+$$ 9 \stackrel{?}{\mid} (6 + 3 + 7 + 4 + 2 + 5 + 4 + 0 + 3 + 7 + 0 + 5 + 1 + 2 + 5) $$
+
+$$ 9 \stackrel{?}{\mid} 54 $$
+
+Yes, $\dfrac{54}{9} = 6$
+
 b. 12,858,306,120,312
+
+Divisible by 3?
+
+$$ 3 \stackrel{?}{\mid} (1 + 2 + 8 + 5 + 8 + 3 + 0 + 6 + 1 + 2 + 0 + 3 + 1 + 2) $$
+
+$$ 3 \stackrel{?}{\mid} 42 $$
+
+Yes $\dfrac{42}{3} = 14$
+
+Divisible by 4?
+
+$$ 4 \stackrel{?}{\mid} 12 $$
+
+Yes $\dfrac{12}{4} = 3$
+
+Divisible by 5?
+
+Last digit a $5$ or $0$?
+
+No.
+
+Divisible by 9?
+
+$$ 9 \stackrel{?}{\mid} (1 + 2 + 8 + 5 + 8 + 3 + 0 + 6 + 1 + 2 + 0 + 3 + 1 + 2) $$
+
+$$ 9 \stackrel{?}{\mid} 42 $$
+
+No, $\dfrac{42}{9} = 4 + \dfrac{2}{3}$.
 
 c. 517,924,440,926,512
 
+Divisible by 3?
+
+$$ 3 \stackrel{?}{\mid} (5 + 1 + 7 + 9 + 2 + 4 + 4 + 4 + 0 + 9 + 2 + 6 + 5 + 1 + 2) $$
+
+$$ 3 \stackrel{?}{\mid} 61 $$
+
+No, $\dfrac{61}{3} = 20 + \dfrac{1}{3}$
+
+Divisible by 4?
+
+$$ 4 \stackrel{?}{\mid} 12 $$
+
+Yes $\dfrac{12}{4} = 3$
+
+Divisible by 5?
+
+Last digit a $5$ or $0$?
+
+No.
+
+Divisible by 9?
+
+$$ 9 \stackrel{?}{\mid} (5 + 1 + 7 + 9 + 2 + 4 + 4 + 4 + 0 + 9 + 2 + 6 + 5 + 1 + 2) $$
+
+$$ 9 \stackrel{?}{\mid} 61 $$
+
+No, $\dfrac{61}{9} = 6 + \dfrac{7}{9}$
+
 d. 14,328,083,360,232
+
+Divisible by 3?
+
+$$ 3 \stackrel{?}{\mid} (1 + 4 + 3 + 2 + 8 + 0 + 8 + 3 + 3 + 6 + 0 + 2 + 3 + 2) $$
+
+$$ 3 \stackrel{?}{\mid} 45 $$
+
+Yes $\dfrac{45}{3} = 15$
+
+Divisible by 4?
+
+$$ 4 \stackrel{?}{\mid} 32 $$
+
+Yes $\dfrac{32}{4} = 8$
+
+Divisible by 5?
+
+Last digit a $5$ or $0$?
+
+No.
+
+Divisible by 9?
+
+$$ 9 \stackrel{?}{\mid} (1 + 4 + 3 + 2 + 8 + 0 + 8 + 3 + 3 + 6 + 0 + 2 + 3 + 2) $$
+
+$$ 9 \stackrel{?}{\mid} 45 $$
+
+Yes, $\dfrac{45}{9} = 5$
 
 37. Use the unique factorization theorem to write the following integers in
     standard factored form.
 
 a. 1,176
 
+$$ 1176 = 8 \cdot 147 = 8 \cdot 7 \cdot 21 = 2 \cdot 2 \cdot 2 \cdot 7 \cdot 7 \cdot 3 $$
+
+$$ \quad = 2^3 \cdot 7^2 \cdot 3 $$
+
 b. 5,733
 
+$$ 5733 = 49 \cdot 117 = 7 \cdot 7 \cdot 9 \cdot 13 = 7^2 \cdot 3^2 \cdot 13 $$
+
+$$ \quad = 7^2 \cdot 3^2 \cdot 13 $$
+
 c. 3,675
+
+$$ 3675 = 25 \cdot 147 = 5 \cdot 5 \cdot 7 \cdot 21 = 5^2 \cdot 7 \cdot 7 \cdot 3 $$
+
+$$ \quad = 5^2 \cdot 7^2 \cdot 3 $$
 
 38. Let $n = 8,424$.
 
 a. Write the prime factorization for $n$.
 
+$$ 8,424 = 24 \cdot 351 = 6 \cdot 4 \cdot 3 \cdot 117 $$
+
+$$ \quad = 3 \cdot 2 \cdot 2 \cdot 2 \cdot 3 \cdot 3 \cdot 39 $$
+
+$$ \quad = 3^3 \cdot 2^3 \cdot 39 $$
+
+$$ \quad = 3^3 \cdot 2^3 \cdot 3 \cdot 13 $$
+
+$$ \quad = 3^4 \cdot 2^3 \cdot 13 $$
+
 b. Write the prime factorization for $n^5$.
 
+$$ n = 3^4 \cdot 2^3 \cdot 13 $$
+
+$$ n^5 = (3^4 \cdot 2^3 \cdot 13)^5 $$
+
+0$ n^5 = 3^{20} \cdot 2^{15} \cdot 13^5 $$
+
 c. Is $n^5$ divisible by 20? Explain.
+
+$$ 20 = 2^2 \cdot 5 $$
+
+So in order for $20 \mod n^5$, then $2^2 \mid n^5$ and $5 \mid n^5$,
+$2^2 \mid n^5$ is possible since one of the prime factorizations of $n^5$ is
+$2^{15}$ but none of the prime factorizations of $n^5$ is $5$. Therefore
+$20 \nmid n^5$.
 
 d. What is the least positive integer $m$ so that $8,424 \cdot m$ is a perfect
 square?
 
+To make $8424 \cdot m$ square, all prime exponents must be even. Let's examine
+our prime factorization form of $n$:
+
+$$ n = 3^4 \cdot 2^3 \cdot 13 $$
+
+Only our last two terms need an additional factor each to make their exponents
+even, so to make $8424m$ a perfect square, $m = 2 \cdot 13 = 26$, this will
+make:
+
+$$ 8424m = 3^4 \cdot 2^4 \cdot 13^2 $$
+
 39. Suppose that in standard factored form
-    $a = p_1^{e_1}p_2^{e_2} \dots p_k^{e^k}$, where $k$ is a positive integer;
+    $a = p_1^{e_1}p_2^{e_2} \dots p_k^{e_k}$, where $k$ is a positive integer;
     $p_1, p_2, \dots, p_k$ are prime numbers; and $e_1, e_2, \dots, e_k$ are
     positive integers.
 
 a. What is the standard factored form for $a^3$?
 
+$$ a^3 = p_1^{3e_1}p_2^{3e_2} \dots p_k^{3e_k} $$
+
 b. Find the least positive integer $k$ such that
-$2^4 \cdot 3^5 \cdot 7 11^2 \cdot k$ is a perfect cube (that is, it equals an
-integer to the third power). Write the resulting product as a perfect cube.
+$2^4 \cdot 3^5 \cdot 7 \cdot 11^2 \cdot k$ is a perfect cube (that is, it equals
+an integer to the third power). Write the resulting product as a perfect cube.
+
+$$ k = 2^2 \cdot 3 \cdot 7^2 \cdot 11 $$
 
 40.
 
 a. If $a$ and $b$ are integers and $12a = 25b$, does $12 \mid b$? does
 $25 \mid a$? Explain.
 
+Because $12a = 25b$, the unique factorization theorem guarantees that the
+standard factored forms of $12a$ and $25b$ must be the same. Thus $25b$ contains
+the factors $2^2 \cdot 3 (= 12)$. But since neither $2$ nor 3$ divides $25$, the
+factors $2^2 \cdot 3$ must all occur in $b$, and hence $12 \mid b$. Similarly,
+$12a$ contains the factors $5^2 = 25$, and since $5$ is not a factor of $124,
+the factors $5^2$ must occur in $a$. So $25 \mid a$.
+
 b. If $x$ and $y$ are integers and $10x = 9y$, does $10 \mid y$? does
 $9 \mid x$? Explain.
+
+Because $10x = 9y$, the unique factorization theorem guarantees that the
+standard factored forms of $10x$ and $9y$ must be the same. Thus $10x$ contains
+the factors $3^2$. But since $3$ does not divide $10$, the factor $3^2$ must all
+occur in $x$, and hence $9 \mid x$. Similary $10x$ contains factors $2 \cdot 5$,
+and since neither $5$ nor $2$ are factors of $9$, the factors $2 \cdot 5$ must
+occur in $y$. So $10 \mid y$.
 
 41. How many zeros are at the end of $45^8 \cdot 88^5$? Explain how you can
     answer this question without actually computing the number. (_Hint:_
     $10 = 2 \cdot 5$.)
+
+If we find the standard factored form of $45^8 \cdot 88^5$ and then find the
+total amount of $10$'s, this should tell us how many zeros are at the end of
+$45^8 \cdot 88^5$.
+
+$$ 45^8 \cdot 88^5 = (9 \cdot 5)^8 \cdot (4 \cdot 22)^5 $$
+
+$$ \quad = (3^2 \cdot 5)^8 \cdot (2^2 \cdot 2 \cdot 11)^5 $$
+
+$$ \quad = (3^2 \cdot 5)^8 \cdot (2^3 \cdot 11)^5 $$
+
+$$ \quad = 3^{16} \cdot 5^8 \cdot 2^{15} \cdot 11^5 $$
+
+The total amount of $10$'s we can find is the maximum amount of $5 \cdot 2$'s we
+can factor from this expression, which is $8$ (while we have 15 $2$'s, we only
+have 8 $5$'s).
+
+Therefore there are $8$ zeros in $45^8 \cdot 88^5$.
 
 42. If $n$ is an integer and $n > 1$, then $n!$ is the product of $n$ and every
     other positive integer that is less than $n$. For example,
@@ -3207,10 +3752,60 @@ $9 \mid x$? Explain.
 
 a. Write $6!$ in standard factored form.
 
+$$ 6! = 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 $$
+
+$$ 6! = 3 \cdot 2 \cdot 5 \cdot 2 \cdot 2 \cdot 3 \cdot 2 $$
+
+$$ 6! = 2^4 \cdot 3^2 \cdot 5 $$
+
 b. Write $20!$ in standard factored form.
+
+Writing this out would be exhaustive, instead let's use
+[Legendre's formula](https://en.wikipedia.org/wiki/Legendre%27s_formula).
+
+$$ 20! = 2^a \cdot 3^b \cdot 5^c \cdot 7^d \cdot 11^e \cdot 13^f \cdot 17^g \cdot 19^h $$
+
+Take the floor of every possible prime factor, and those are the exponents of
+each.
+
+$$ \left\lfloor \frac{20}{2} \right\rfloor + \left\lfloor \frac{20}{4} \right\rfloor + \left\lfloor \frac{20}{8} \right\rfloor + \left\lfloor \frac{20}{16} \right\rfloor $$
+
+$$ \quad = 10 + 5 + 2 + 1 = 18 $$
+
+$$ 2^{18} $$
+
+$$ \left\lfloor \frac{20}{3} \right\rfloor + \left\lfloor \frac{20}{9} \right\rfloor $$
+
+$$ 6 + 2 = 8 $$
+
+$$ 3^8 $$
+
+$$ \left\lfloor \frac{20}{5} \right\rfloor $$
+
+$$ 5^4 $$
+
+$$ \left\lfloor \frac{20}{7} \right\rfloor $$
+
+$$ 7^2 $$
+
+$$ \boxed{20! = 2^{18} \cdot 3^8 \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 17 \cdot 19} $$
 
 c. Without computing the value of $(20!)^2$ determine how many zeros are at the
 end of this number when it is written in decimal form. Justify your answer.
+
+We can square the answer for $20!$ from part b:
+
+$$ (20!)^2 = (2^{18} \cdot 3^8 \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 17 \cdot 19)^2 $$
+
+$$ \quad = 2^{36} \cdot 3^{16} \cdot 5^8 \cdot 7^4 \cdot 11^2 \cdot 13^2 \cdot 17^2 \cdot 19^2 $$
+
+Then take all combinations of 2 and 5, and take the minimum exponent between
+them as this will tell us how many zeros are at the end of this number when it
+is written in decimal form.
+
+$$ \min(36, 8) = 8 $$
+
+So there are 8 zeros at the end of $(20!)^2$.
 
 43. At a certain university 2/3 of the mathematics students and 3/5 of the
     computer science students have taken a discrete mathematics course. The
@@ -3219,6 +3814,49 @@ end of this number when it is written in decimal form. Justify your answer.
     least 100 mathematics students at the university, what are the least
     possible number of mathematics students and the least possible number of
     computer science students at the university?
+
+Let $M$ be the number of mathematics students and $C$ be the number of computer
+science students.
+
+Given:
+
+$$ \frac{2}{3}M = \frac{3}{5}C $$
+
+Set them equal:
+
+$$ \frac{2}{3}M = \frac{3}{5}C = x $$
+
+So:
+
+$$ M = \frac{3}{2}x $$
+
+$$ C = \frac{5}{3}x $$
+
+To make both integers, $x$ must be a multiple of $6$:
+
+$$ x = 6k $$
+
+Then:
+
+$$ M = 9k $$
+
+$$ C = 10k $$
+
+Now use the given condition:
+
+$$ M \geq 100 $$
+
+$$ 9k \geq 100 \Rightarrow k \geq 12 $$
+
+Smallest $k = 12$:
+
+$$ M = 9 \cdot 12 = 108 $$
+
+$$ C = 10 \cdot 12 = 120 $$
+
+Math Students: 108
+
+Computer Science Students: 120
 
 **Definition:** Given any nonnegative integer $n$, the **decimal
 representation** of $n$ is an expression of the form
@@ -3238,13 +3876,86 @@ $$ n = d_k \cdot 10^k + d_{k + 1} \cdot 10^{k + 1} + \dots + d_2 \cdot 10^2 + d_
     nonnegative integer $n$ ends in $d_0$, then $n = 10m + d_0$ for some integer
     $m$.)
 
+**Proof:**
+
+Suppose $n$ is any nonnegative integer whose decimal representation ends in $0$.
+
+Because $n$ is a nonnegative integer, it can be shown in decimal representation
+as:
+
+$$ n = 10m + d_0 $$
+
+Where $m$ is some integer.
+
+Since we know that $n$'s decimal representation ends in $0$, that means that
+$d_0 = 0$. So $n$ is:
+
+$$ n = 10m $$
+
+Then:
+
+$$ n = 5(2m) $$
+
+Then $2m$ is an integer by the product of integers. By the definition of
+divisibility, $5 \mid n$.
+
+Q.E.D.
+
 45. Prove that if $n$ is any nonnegative integer whose decimal representation
     ends in $5$, then $5 \mid n$.
+
+**Proof:**
+
+Suppose $n$ is any nonnegative integer whose decimal representation ends in $5$.
+
+Because $n$ is a nonnegative integer, it can be shown in decimal representation
+as:
+
+$$ n = 10m + d_0 $$
+
+Where $m$ is some integer.
+
+Since we know that $n$'s decimal representation ends in $5$, that means that
+$d_0 = 5$. So $n$ is:
+
+$$ n = 10m + 5 $$
+
+Then:
+
+$$ n = 5(2m + 1) $$
+
+Then $2m + 1$ is an integer by the product and sum of integers. By the
+definition of divisibility, $5 \mid n$.
+
+Q.E.D.
 
 46. Prove that if the decimal representation of a nonnegative integer $n$ ends
     in $d_1d_0$ and if $4 \mid (10d_1 + d_0)$, then $4 \mid n$. (_Hint:_ If the
     decimal representation of a nonnegative integer $n$ ends in $d_1d_0$, then
     there is an integer $s$ such that $n = 100s + 10d_1 + d_0$.)
+
+**Proof:**
+
+Suppose $n$ is any nonnegative integer whose decimal representation ends in
+$d_1d_0$ and $4 \mid (10d_1 + d_0)$.
+
+Since $4 \mid (10d_1 + d_0)$, then $10d_1 + d_0 = 4k$ for some integer $k$.
+
+And since the decimal representation of $n$ ends in $d_1d_0$, then there is an
+integer $s$ such that $n = 100s + 10d_1 + d_0$.
+
+$$ n = 100s + 10d_1 + d_0 $$
+
+Then, by substitution:
+
+$$ n = 100s + 4k $$
+
+$$ n = 4(25s + k) $$
+
+Where $25s + k$ is an integer by the product and sum of integers. Thus
+$4 \mid n$.
+
+Q.E.D.
 
 47. Observe that
 
@@ -3266,8 +3977,12 @@ Generalize the argument given in this example to any nonnegative integer $n$. In
 other words, prove that for any nonnegative integer $n$, if the sum of the
 digits of $n$ is divisible by $9r, then $n$ is divisible by $9$.
 
+Omitted.
+
 48. Prove that for any nonnegative integer $n$, if the sum of the digits of $n$
     is divisible by $3$, then $n$ is divisible by $3$.
+
+Omitted.
 
 49. Given a positive integer $n$ written in decimal form, the alternating sum of
     the digits of $n$ is obtained by starting with the right-most digit,
@@ -3277,6 +3992,10 @@ digits of $n$ is divisible by $9r, then $n$ is divisible by $9$.
     fact that for any nonnegative integer $n$, if the alternating sum of the
     digits of $n$ is divisible by 11, then $n$ is divisible by 11.
 
+Omitted.
+
 50. The integer 123,123 has the form _abc,abc_, where _a_, _b_, and _c_ are
     integers from $0$ through $9$. Consider all six-digit integers of this form.
     Which prime numbers divide every one of these integers? Prove your answer.
+
+Omitted.

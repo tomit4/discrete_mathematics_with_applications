@@ -112,23 +112,39 @@ Page 220
 1. To show that a nonzero integer $d$ divides an integer $n$, we must show that
    ______.
 
+$n$ equals $d$ divided by some integer and $d \neq 0$.
+
 2. To say that $d$ divides $n$ means the same as saying that ______ is divisible
    by ______.
+
+$n$; $d$
 
 3. If $a$ and $b$ are positive integers and $a \mid b$, then ______ is less than
    or equal to ______.
 
+$a$; $b$
+
 4. For all integers $n$ and $d$, $d \nmid n$ if, and only if, ______.
+
+$\dfrac{n}{d}$ is not an integer.
 
 5. If $a$ and $b$ are integers, the notation $a \mid b$ denotes ______ and the
    notation $a/b$ denotes ______.
 
+the sentence "$a$ divides $b$"; the number obtained when $a$ is divided by $b$
+
 6. The transitivity of divisibility theorem says that for all integers $a$, $b$,
    and $c$, if ______ then ______.
+
+$a \mid b$ and $b \mid c$; $a \mid c$
 
 7. The divisibility by a prime theorem says that every integer greater than $1$
    is ______.
 
+divisible by some prime number.
+
 8. The unique factorization of integers theorem says that any integer greater
    than $1$ is either ______ or can be written as ______ in a way that is unique
    except possibly for the ______ in which the numbers are written.
+
+prime; a product of prime numbers; order
