@@ -3999,3 +3999,237 @@ Omitted.
     Which prime numbers divide every one of these integers? Prove your answer.
 
 Omitted.
+
+---
+
+**Exercise Set 4.5**
+
+Page 232
+
+For each of the values of $n$ and $d$ given in 1-6, find integers $q$ and $r$
+such that $n = dq + r$ and $0 \leq r < d$.
+
+1. $n = 70$, $d = 9$
+
+2. $n = 62$, $d = 7$
+
+3. $n =36$, $d = 40$
+
+4. $n = 3$, $d = 11$
+
+5. $n = -45$, $d = 11$
+
+6. $n = -27$, $d = 8$
+
+**Evaluate the expressions in 7-10.**
+
+7.
+
+a. $43\ div\ 9$
+
+b. $43 \mod 9$
+
+8.
+
+a. $50\ div\ 7$
+
+b. $50 \mod 7$
+
+9.
+
+a. $28\ div\ 5$
+
+b. $28 \mod 5$
+
+10.
+
+a. $30\ div\ 2$
+
+b. $30 \mod 2$
+
+11. Check the correctness of formula (4.5.1) given in Example 4.5.3 for the
+    following values of $\text{Day}T$ and $N$.
+
+a. $\text{Day}T = 6(\text{Saturday}) \text{ and } N = 15$
+
+b. $\text{Day}T = 0(\text{Sunday}) \text{ and } N = 7$
+
+c. $\text{Day}T = 4(\text{Thursday}) \text{ and } N = 12$
+
+12. Justify formula (4.5.1) for general values of $\text{Day}T$ and $N$.
+
+13. On a Monday a friend says he will meet you again in 30 days. What day of the
+    week will that be?
+
+14. If today is Tuesday, what day of the week will it be 1,000 days from today?
+
+15. January 1, 2000, was a Saturday, and 2000 was a leap year. What day of the
+    week will January 1, 2050, be?
+
+16. Suppose $d$ is a positive and $n$ is any integer. If $d \mid n$, what is the
+    remainder obtained when the quotient remainder theorem is applied to $n$
+    with divisor $d$?
+
+17. Prove directly from the definitions that for every integer $n$,
+    $n^2 - n + 3$ is odd. Use division into two cases: $n$ is even and $n$ is
+    odd.
+
+18.
+
+a. Prove that the product of any two consecutive integers is even.
+
+b. The result of part (a) suggests that the second approach in the discussion of
+Example 4.5.7 might be possible after all. Write a new proof of Theorem 4.5.3
+based on this observation.
+
+19. Prove directly from the definitions that for all integers $m$ and $n$, if
+    $m$ and $n$ have the same parity, then $5m + 7n$ is even. Divide into two
+    cases: $m$ and $n$ are both even and $m$ and $n$ are both odd.
+
+20. Suppose $a$ is any integer. If $a \mod 7 = 4$, what is $5a \mod 7$? In other
+    words, if division of $a$ by $7$ gives a remainder of $4$, what is the
+    remainder when $5a$ is divided by $7$? Your solution should show that you
+    obtain the same answer no matter what integer you start with.
+
+21. Suppose $b$ is any integer. If $b \mod 12 = 5$, what is $8b \mod 12$? In
+    other words, if division of $b$ by $12$ gives a remainder of $5$, what is
+    the remainder when $8b$ is divided by $12$? Your solution should show that
+    you obtain the same answer no matter what integer you start with.
+
+22. Suppose $c$ is any integer. If $c \mod 15 = 3$, what is $10c \mod 15$? In
+    other words, if division of $c$ by $15$ gives a remainder of $3$, what is
+    the remainder when $10c$ is divided by $15$? Your solution should show that
+    you obtain the same answer no matter what integer you start with.
+
+23. Prove that for every integer $n$, if $n \mod 5 = 3$ then $n^2 \mod 5 = 4$.
+
+24. Prove that for all integers $m$ and $n$, if $m \mod 5 = 2$ and
+    $n \mod 5 = 1$ then $mn \mod 5 = 2$.
+
+25. Prove that for all integers $a$ and $b$, if $a \mod 7 = 5$ and
+    $b \mod 7 = 6$ then $ab \mod 7 = 2$.
+
+26. Prove that a necessary and sufficient condition for an integer $n$ to be
+    divisible by a positive integer $d$ is that $n \mod d = 0$.
+
+27. Use the quotient-remainder theorem with divisor equal to $2$ to prove that
+    the square of any integer can be written in one of the two forms $4k$ or
+    $4k + 1$ for some integer $k$.
+
+28.
+
+a. Prove: Given any set 9f three consecutive integers, one of the integers is a
+multiple of $3$.
+
+b. Use the result of part (a) to prove that any product of three consecutive
+integers is a multiple of 3.
+
+29.
+
+a. Use the quotient-remainder theorem with divisor equal to $3$ to prove that
+the square of any integer has the form $3k$ or $3k + 1$ for some integer $k$.
+
+b. Use the $\mod$ notation to rewrite the result of part (a).
+
+30.
+
+a. Use the quotient-remainder theorem with divisor equal to $3$ to prove that
+the product of any two consecutive integers has the form $3k$ or $3k + 2$ for
+some integer $k$.
+
+b. Use the $\mod$ notation to rewrite the result of part (a).
+
+In 32-33, you may use the properties listed in Example 4.3.3.
+
+31.
+
+a. Prove that for all integers $m$ and $n$, $m + n$ and $m - n$ are either both
+odd or both even.
+
+b. Find all solutions to the equation $m^2 - n^2 = 56$ for which both $m$ and
+$n$ are positive integers.
+
+c. Find all solutions to the equation $m^2 - n^2 = 88$ for which both $m$ and
+$n$ are positive integers.
+
+32. Given any integers $a$, $b$, and $c$, if $a - b$ is even and $b - c$ is
+    even, what can you say about the parity of $2a - (b + c)$? Prove your
+    answer.
+
+33. Given any integers $a$, $b$, and $c$, if $a - b$ is 9dd and $b - c$ is even,
+    what can you say about the parity of $a - c$? Prove your answer.
+
+34. Given any integer $n$, if $n > 3$, could $n$, $n + 2$, and $n + 4$ all be
+    prime? Prove or give a counterexample.
+
+Prove each of the statements in 35-43.
+
+35. The fourth power of any integer has the form $8m$ or $8m + 1$ for some
+    integer $m$.
+
+36. The product of any four consecutive integers is divisible by $8$.
+
+37. For any integer $n$, $n^2 + 5$ is not divisible by $4$.
+
+38. For every integer $m$, $m^2 = 5k$, or $m^w = 5k + 1$, or $m^2 = 5k + 4$ for
+    some integer $k$.
+
+39. Every prime number except $2$ and $3$ has the form $6q + 1$ or $6q + 5$ for
+    some integer $q$.
+
+40. If $n$ is any odd integer, then $n^4 \mod 16 = 1$.
+
+41. For all real numbers $x$ and $y$, $|x| \cdot |y| = |xy|$.
+
+42. For all real numbers $r$ and $c$ with $c \geq 0$, $-c \leq r \leq c$ if, and
+    only if, $|r| \leq c$. _(Hint: Proving $A$ if, and only if, $B$ requires
+    proving both if $A$ then $B$ and if $B$ then $A$.)_
+
+43. For all real numbers $a$ and $b$, $\lvert|a| - |b|\rvert \leq |a - b|$.
+
+44. A matrix $\mathbb{M}$ has 3 rows and 4 columns.
+
+$$
+\left[\begin{array}{cccc}
+a_{11} & a_{12} & a_{13} & a_{14} \\
+a_{21} & a_{22} & a_{23} & a_{24} \\
+a_{31} & a_{32} & a_{33} & a_{34} \\
+\end{array}\right]
+$$
+
+The 12 entries in the matrix are to be stored in _row major_ form in locations
+7,609 to 7,620 in a computer's memory. This means that the entries in the first
+row (reading left to right) are stored first, then the entries in the second
+row, and finally the entries in the third row.
+
+a. Which location will $a_{22}$ be stored in?
+
+b. Write a formula (in $i$ and $j$) that gives the integer $n$ so that $a_{ij}$
+is stored in location 7,609 + $n$.
+
+c. Find formulas (in $n$) for $r$ and $s$ so that $a_{rs}$ is stored in location
+7.609 + n.
+
+45. Let $\mathbb{M}$ be a matrix with $m$ rows and $n$ columns, and suppose that
+    the entries of $\mathbb{M}$ are stored in a computer's memory in row major
+    form (see exercise 44) in locations $N$, $N + 1$, $N + 2$, $\dots$,
+    $N + mn - 1$. Find formulas in $k$ for $r$ and $s$ so that $a_{rs}$ is
+    stored in location $N + k$.
+
+46. If $m$, $n$, and $d$ are integers, $d > 0$ and $m \mod d = n \mod d$, does
+    it necessarily follow that $m = n$? That $m - n$ is divisible by $d$? Prove
+    your answers.
+
+47. If $m$, $n$, and $d$ are integers $d > 0$, and $d \mid (m  - n)$, what is
+    the relation between $m 'mod d'$ and $n \mod d$? Prove your answer.
+
+48. If $m$, $n$, $a$, $b$, and $d$ are integers, $d > 0$ and $m \mod d = a$ and
+    $n \mod d = b$, is $(m + n) \mod d = a + b$? Is
+    $(m + n) \mod d = (a + b) \mod d$? Prove your answers.
+
+49. If $m$, $n$, $a$, $b$, and $d$ are integers, $d > 0$, and $m \mod d = a$ and
+    $n \mod d = b$, is $(mn) \mod d = ab$? Is $(mn) \mod d = ab \mod d$? Prove
+    your answers.
+
+50. Prove that if $m$, $d$, and $k$ are integers and $d > 0$, then
+    $(m + dk) \mod d = m \mod d$.

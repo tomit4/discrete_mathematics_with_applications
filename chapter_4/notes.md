@@ -393,3 +393,268 @@ $$ n = p_1^{e_1}p_2^{e^2}p_3^{e^3}\dots p_k^{e_k} $$
 
 where $n$ is a positive integer, $p_1,p_2,\dots , p_k$ are prime numbers,
 $e_1,e_2,\dots ,e_k$ are positive integers, and $p_1 < p_2 < \dots < p_k$.
+
+---
+
+Page 223
+
+**Theorem 4.5.1 The Quotient Remainder Theorem**
+
+Given any integer $n$ and positive integer $d$, there exists unique integers $q$
+and $r$ such that
+
+$$ n = dq + r \quad \text{ and } \quad 0 \leq r < d $$
+
+---
+
+Page 224
+
+**Definition**
+
+Given an integer $n$ and a positive integer $d$,
+
+$$ n\ div\ d = \text{ the integer quotient obtained when } n \text{ is divided by } d \text{ and } $$
+
+$$ n \mod d = \text{ the nonnegative integer remainder obtained when } n \text{ is divided by } d $$
+
+Symbolically, if $n$ and $d$ are integers and $d > 0$ then
+
+$$ n\ div\ d = \quad \text{ and } \quad n \mod d = r \Leftrightarrow n = dq + r $$
+
+where $q$ and $r$ are integers and $0 \leq r < d$.
+
+---
+
+**Theorem 4.5.2 The Parity Property**
+
+Any two consecutive integers have opposite parity.
+
+**Proof:**
+
+Suppose that two _[particular but arbitrarily chosen]_ consecutive integers are
+given; call them $m$ and $m + 1$. _[We must show that one of $m$ and $m + 1$ is
+even and that the other is odd.]_ By the parity property, either $m$ is even or
+$m$ is odd. _[We break the proof into two cases depending on whether $m$ is even
+or odd.]_
+
+_Case 1 ($m$ is even):_ In this case, $m = 2k$ for some integer $k$, and so
+$m + 1 = 2k + 1$, which is odd _[by the definition of odd.]_ Hence in this case,
+one of $m$ and $m + 1$ is even and the other is odd.
+
+_Case 2 ($m$ is odd):_ In this case, $m = 2k + 1$ for some integer $k$, and so
+$m + 1 = (2k + 1) + 1 = 2k + 2 = 2(k + 1)$. But $k + 1$ is an integer because it
+is a sum of two integers. Therefore, $m + 1$ equals twice some integer, and thus
+$m + 1$ is even. Hence in this case also, one of $m$ and $m + 1$ is even and the
+other is odd.
+
+It follows that regardless of which case actually occurs for the particular $m$
+and $m + 1$ is even and the other is odd. _[This is what was to be shown.]_
+
+---
+
+Page 227
+
+**Method of Proof by Division into Cases**
+
+To prove a statement of the form "If $A_1$ or $A_2$ or $\dots$ or $A_n$, then
+$C$," prove all of the following:
+
+$$
+\text{If } A_1, \text{ then } C \\
+\text{If } A_2, \text{ then } C \\
+\vdots \\
+\text{If } A_n, \text{ then } C \\
+$$
+
+This process shows that $C$ is true regardless of which of $A_1$, $A_2$,
+$\dots$, $A_n$ happens to be the case.
+
+---
+
+Page 229
+
+**Theorem 4.5.3**
+
+The square of any odd integer has the form $8m + 1$ for some integer $m$.
+
+**Proof:** Suppose $n$ is a _[particular but arbitrarily chosen]_ odd integer.
+By the quotient-remainder theorem with the divisor equal to $4$, $n$ can be
+written in one of the forms
+
+$$ 4q \quad \text{ or } \quad 4q + 1 \quad \text{ or } \quad 4q + 2 \quad \text{ or } \quad 4q + 3 $$
+
+for some integer $q$. In fact, since $n$ is odd and $4q$ and $4q + 2$ are even,
+$n$ must have one of the forms
+
+$$ 4q + 1 \quad \text{ or } \quad 4q + 3 $$
+
+_Case 1($n = 4q + 1$ for some integer $q$)_ _[We must find an integer $m$ such
+that $n^2 = 8m + 1$.]_ Since $n = 4q + 1$,
+
+$$ n^2 = (4q + 1)^2 \quad \text{ by substitution} $$
+
+$$ \quad = (4q + 1)(4q + 1) \quad \text{ by definition of square} $$
+
+$$ \quad = 16q^2 + 8q + 1 $$
+
+$$ \quad = 8(2q^2 + 1) + 1 \quad \text{ by the laws of algebra} $$
+
+Let $m = 2q^2 + q$. Then $m$ is an integer since $2$ and $q$ are integers and
+sums and products of integers are integers. Thus, substituting,
+
+$$ n^2 = 8m + 1 \quad \text{ where } m \text{ is an integer} $$
+
+_Case 2 ($n = 4q + 3$ for some integer $q$):_ _[We must find an integer $m$ such
+that $n^2 = 8m + 1$.]_ Since $n = 4q + 3$,
+
+$$ n^2 = (4q + 3)^2 \quad \text{ by substitution} $$
+
+$$ \quad = (4q + 3)(4q + 3) \quad \text{ by definition of square} $$
+
+$$ \quad = 16q^2 + 24q + 9 $$
+
+$$ \quad = 16q^2 + 24q + (8 + 1) $$
+
+$$ \quad = 8(2q^2 + 3q + 1) + 1 \quad \text{ by the laws of algebra} $$
+
+_[The motivation for the choice of algebra steps was the desire to write the
+expression in the form $8 \cdot \text{ some integer } + 1$.]_
+
+Let $m = 2q^2 + 3q + 1$. Then $m$ is an integer since $1$, $2$, $3$, and $q$ are
+integers and sums and products of integers are integers. Thus, substituting,
+
+$$ n^2 = 8m + 1 \quad \text{ where } m \text{ is an integer} $$
+
+Cases 1 and 2 show that given any odd integer, whether of the form $4q + 1$ or
+$4q + 3$, $n^2 = 8m + 1$ for some integer $m$. _[This is what we needed to
+show.]_
+
+---
+
+Page 231
+
+**Definition**
+
+For any real number $x$, the **absolute value of** $x$, denoted $|x|$, is
+defined as follows:
+
+$$
+|x| =
+\begin{cases}
+x & \text{if } x \geq 0 \\
+-x & \text{if } x < 0
+\end{cases}
+$$
+
+---
+
+Page 231
+
+**Lemma 4.5.4**
+
+For every real number, $r$, $-|r| \leq r \leq |r|$
+
+**Proof:** Suppose $r$ is any real number. We divide into cases according to
+whether $r = 0$, $r > 0$, or $r < 0$.
+
+_Case 1($r = 0$):_ In this case, by definition of absolute value, $|r| = r = 0$
+since $0 = -0$, we have that $-0 = -|r| = 0 = r = |r|$, and so it is true that
+
+$$ -|r| \leq r \leq |r| $$
+
+_Case 2 ($r > 0$):_ In this case, by definition of absolute value,
+[$\&|\text{pipe}|r|\text{pipe}||=|r\&$]. Also, since $r$ is positive and $-|r|$
+is negative, $-|r| < r$. Thus it is true that
+
+$$ -|r| \leq r \leq |r| $$
+
+_Case 3 ($r < 0$):_ In this case, by definition of absolute value, $|r| = -r$.
+Multiplying both sides by $-1$ gives that $-|r| = r$. Also, since $r$ is
+negative and $|r|$ is positive, $r < |r|$. Thus it is also true in this case
+that
+
+$$ -|r| \leq r \leq |r| $$
+
+Hence, in every case,
+
+$$ -|r| \leq r \leq |r| $$
+
+_[as was to be shown]._
+
+---
+
+Page 231
+
+**Lemma 4.5.5**
+
+For ever real number $r$, $|-r| = |r|$.
+
+**Proof:** Suppose $r$ is any real number. By Theorem T23 in Appendix A, if
+$r > 0$, then $-r < 0$, and if $r < 0$, then $-r > 0$. Thus
+
+$$
+|-r| =
+\begin{cases}
+-r & \text{if } -r > 0 \\
+0 & \text{if } -r = 0 \\
+-(-r) & \text{if } -r < 0
+\end{cases}
+$$
+
+$$
+\quad =
+\begin{cases}
+-r & \text{if } -r > 0 \\
+0 & \text{if } r = 0 \\
+r & \text{if } -r < 0
+\end{cases}
+$$
+
+$$
+\quad =
+\begin{cases}
+-r & \text{if } r < 0 \\
+0 & \text{if } r = 0 \\
+r & \text{if } r > 0
+\end{cases}
+$$
+
+$$
+\quad =
+\begin{cases}
+r & \text{if } r \geq 0 \\
+-r & \text{if } r < 0 \\
+\end{cases}
+$$
+
+$$ \quad = |r| $$
+
+---
+
+Page 231
+
+**Theorem 4.5.6 The Triangle Inequality**
+
+For all real numbers $x$ and $y$, $|x + y| \leq |x| + |y|$.
+
+**Proof:** Suppose $x$ and $y$ are real numbers.
+
+_Case 1 ($x + y \geq 0$):_ In this case, $|x + y| = x + y$, and so, by Lemma
+4.5.4,
+
+$$ x \leq |x| \quad \text{ and } y \leq |y| $$
+
+Hence, by Theorem T26 of Appendix A,
+
+$$ |x + y| = x + y \leq |x| + |y| $$
+
+_Case 2 ($x + y < 0$):_ In this case, $|x + y| = -(x + y) = (-x) + (-y)$, and
+so, by Lemmas 4.5.4 and 4.5.5,
+
+$$ -x \leq |-x| = |x| \quad \text{ and } \quad -y \leq |-y| = |y| $$
+
+It follows, by Theorem T26 of Appendix A, that
+
+$$ |x + y| = (-x) + (-y) \leq |x| + |y| $$
+
+Hence in both cases $|x + y| = |x| + |y|$ _[as was to be shown]._

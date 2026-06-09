@@ -148,3 +148,26 @@ divisible by some prime number.
    except possibly for the ______ in which the numbers are written.
 
 prime; a product of prime numbers; order
+
+---
+
+**Test Yourself**
+
+Page 232
+
+1. The quotient-remainder theorem says that for all integers $n$ and $d$ with
+   $d \geq 0$, there exists ______ $q$ and $r$ such that ______ and ______.
+
+2. If $n$ and $d$ are integers with $d > 0$, $n\ div\ d$ is ______ and
+   $n \mod d$ is ______.
+
+3. The parity of an integer indicates whether the integer is ______.
+
+4. According to the quotient-remainder theorem, if an integer $n$ is divided by
+   a positive integer $d$, the possible remainders are ______. This implies that
+   $n$ can be written in one of the forms ______ for some integer $q$.
+
+5. To prove a statement of the form "If $A_1$ or $A_2$ or $A_3$, then $C$,"
+   prove ______ and ______ and ______.
+
+6. The triangle inequality says that for all real numbers $x$ and $y$, ______.
