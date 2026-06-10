@@ -158,16 +158,29 @@ Page 232
 1. The quotient-remainder theorem says that for all integers $n$ and $d$ with
    $d \geq 0$, there exists ______ $q$ and $r$ such that ______ and ______.
 
+integers; $n = dq + r$; $0 \leq r < d$
+
 2. If $n$ and $d$ are integers with $d > 0$, $n\ div\ d$ is ______ and
    $n \mod d$ is ______.
 
+the quotient obtained when $n$ is divided by $d$; the nonnegative remainder
+obtained when $n$ is divided by $d$
+
 3. The parity of an integer indicates whether the integer is ______.
+
+even or odd
 
 4. According to the quotient-remainder theorem, if an integer $n$ is divided by
    a positive integer $d$, the possible remainders are ______. This implies that
    $n$ can be written in one of the forms ______ for some integer $q$.
 
+$0, 1, 2, \dots d - 1$; $dq + 1, dq + 2, \dots dq + (d - 1)$
+
 5. To prove a statement of the form "If $A_1$ or $A_2$ or $A_3$, then $C$,"
    prove ______ and ______ and ______.
 
+If $A_1$ then $C$; If $A_2$ then $C$; If $A_3$ then $C$
+
 6. The triangle inequality says that for all real numbers $x$ and $y$, ______.
+
+$|x + 6| \leq |x| + |y|$

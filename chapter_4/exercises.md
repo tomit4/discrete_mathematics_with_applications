@@ -4011,15 +4011,51 @@ such that $n = dq + r$ and $0 \leq r < d$.
 
 1. $n = 70$, $d = 9$
 
+$$ d \mid n $$
+
+$$ d \mod r $$
+
+$$ d \mid n = 7 $$
+
+$$ n = dq + r $$
+
+$$ n = 9(7) + 7 $$
+
+$$ q = 7, r = 7 $$
+
 2. $n = 62$, $d = 7$
+
+$$ n = dq + r $$
+
+$$ 62 = (7)(8) + (6) $$
+
+$$ q = 8, r = 6 $$
 
 3. $n =36$, $d = 40$
 
+$$ 36 = (40)(0) + (36) $$
+
+$$ q = 0, r = 36 $$
+
 4. $n = 3$, $d = 11$
+
+$$ 3 = (11)(0) + (3) $$
+
+$$ q = 0, r = 3 $$
 
 5. $n = -45$, $d = 11$
 
+$$ -45 = (11)(-5) + 10 $$
+
+Note that $r$ must be nonnegative, hence why negatives look different here.
+
+$$ q = -5, r = 10 $$
+
 6. $n = -27$, $d = 8$
+
+$$ -27 = (8)(-4) + 5 $$
+
+$$ q = -4, r = 5 $$
 
 **Evaluate the expressions in 7-10.**
 
@@ -4027,109 +4063,735 @@ such that $n = dq + r$ and $0 \leq r < d$.
 
 a. $43\ div\ 9$
 
+$$ 43\ div\ 9 = 4 $$
+
 b. $43 \mod 9$
+
+$$ 43 \mod 9 = 7 $$
 
 8.
 
 a. $50\ div\ 7$
 
+$$ 50\ \div\ 7 = 7 $$
+
 b. $50 \mod 7$
+
+$$ 50 \mod 7 = 1 $$
 
 9.
 
 a. $28\ div\ 5$
 
+$$ 28\ div\ 5 = 5 $$
+
 b. $28 \mod 5$
+
+$$ 28 \mod 5 = 3 $$
 
 10.
 
 a. $30\ div\ 2$
 
+$$ 30\ div\ 2 = 15 $$
+
 b. $30 \mod 2$
+
+$$ 30 \mod 2 = 0 $$
 
 11. Check the correctness of formula (4.5.1) given in Example 4.5.3 for the
     following values of $\text{Day}T$ and $N$.
 
+4.5.1
+
+$$ n = dq + r \text{ and } 0 \leq r < d $$
+
 a. $\text{Day}T = 6(\text{Saturday}) \text{ and } N = 15$
+
+$$ \text{Day}N = (\text{Day}T + N) \mod 7 $$
+
+$$ \quad = (6 + 15) \mod 7 $$
+
+$$ \quad = 21 \mod 7 = 0 $$
 
 b. $\text{Day}T = 0(\text{Sunday}) \text{ and } N = 7$
 
+$$ \text{Day}N = (\text{Day}T + N) \mod 7 $$
+
+$$ \quad = (0 + 7) \mod 7 $$
+
+$$ \quad = 7 \mod 7 = 0 $$
+
 c. $\text{Day}T = 4(\text{Thursday}) \text{ and } N = 12$
 
+$$ \text{Day}N = (\text{Day}T + N) \mod 7 $$
+
+$$ \quad = (4 + 12) \mod 7 $$
+
+$$ \quad = 16 \mod 7 = 2 $$
+
 12. Justify formula (4.5.1) for general values of $\text{Day}T$ and $N$.
+
+Omitted
 
 13. On a Monday a friend says he will meet you again in 30 days. What day of the
     week will that be?
 
+$$ \text{Day}N = (\text{Day}T + N) \mod 7 $$
+
+$$ \quad = (1 + 30) \mod 7 $$
+
+$$ \quad = 31 \mod 7 = 3  $$
+
+0 + 3 days = Wednesday
+
 14. If today is Tuesday, what day of the week will it be 1,000 days from today?
+
+$$ \text{Day}N = (\text{Day}T + N) \mod 7 $$
+
+$$ \text{Day}N = (2 + 1000) \mod 7 $$
+
+$$ \text{Day}N = 1002 \mod 7 = 1 $$
+
+Monday.
 
 15. January 1, 2000, was a Saturday, and 2000 was a leap year. What day of the
     week will January 1, 2050, be?
+
+Leap years occur roughly every 4 years. In the 50 year time span that means
+$50 \div 4 = 12.5$. Taking the ceiling of this we have 13 additional days.
+
+The amount of days for 50 years is $50 \cdot 365 = 18250$, so
+$N = 18250 + 13 = 18263$.
+
+Now we can plug this in:
+
+$$ \text{Day}N = (\text{Day}T + N) \mod 7 $$
+
+$$ \quad = (6 + 18263) \mod 7 $$
+
+$$ \quad = 18269 \mod 7 = 6 $$
+
+So January 1, 2050 will be a Saturday.
 
 16. Suppose $d$ is a positive and $n$ is any integer. If $d \mid n$, what is the
     remainder obtained when the quotient remainder theorem is applied to $n$
     with divisor $d$?
 
+$r = 0$
+
+Because $d \mid n$, $n = dq + 0$ for some integer $q$. Thus the remainder $r$,
+is $0$.
+
 17. Prove directly from the definitions that for every integer $n$,
     $n^2 - n + 3$ is odd. Use division into two cases: $n$ is even and $n$ is
     odd.
+
+**Proof:**
+
+Suppose $n$ is any integer.
+
+_Case $n$ is even:_
+
+Since $n$ is even, $n = 2k$ for some integer $k$.
+
+Then by substitution:
+
+$$ n^2 - n + 3 = (2k)^2 - (2k) + 3 $$
+
+$$ \quad = 4k^2 - 2k + 3 $$
+
+$$ \quad = 4k^2 - 2k + 2 + 1 $$
+
+$$ \quad = 2(2k^2 - k + 1) + 1 $$
+
+Let $m = 2k^2 - k + 1$, where $m$ is an integer by the product and sum of
+integers. Therefore $n^2 - n + 3$ is odd by the definition of odd integers.
+
+_Case $n$ is odd:_
+
+Since $n$ is odd, $n = 2s + 1$ for some integer $s$.
+
+Then by substitution:
+
+$$ n^2 - n + 3 = (2s + 1)^2 - (2s + 1) + 3 $$
+
+$$ n^2 - n + 3 = (2s + 1)(2s + 1) - 2s - 1 + 3 $$
+
+$$ n^2 - n + 3 = (4s^2 + 4s + 1) - 2s - 1 + 3 $$
+
+$$ n^2 - n + 3 = 4s^2 + 2s + 3 $$
+
+$$ n^2 - n + 3 = 4s^2 + 2s + 2 + 1 $$
+
+$$ n^2 - n + 3 = 2(2s^2 + s + 1) + 1 $$
+
+Let $p = 2s^2 + s + 1$ where $p$ is an integer by the product and sum of
+integers. Therefore $n^2 - n + 3$ is odd by the definition of odd integers.
+
+In both cases $n^2 - n + 3$ is odd.
+
+Q.E.D.
 
 18.
 
 a. Prove that the product of any two consecutive integers is even.
 
+**Proof:**
+
+Suppose $n$ is any integer.
+
+Then the product of $n$ and its consecutive integer is:
+
+$$ n(n + 1) = n^2 + n $$
+
+_Case where $n$ is even:_
+
+Since $n$ is even, $n = 2k$ for some integer $k$.
+
+Then by substitution:
+
+$$ n^2 + n = (2k)^2 + (2k) $$
+
+$$ \quad = 4k^2 + 2k $$
+
+$$ \quad = 2(2k^2 + k) $$
+
+Let $m = 2k^2 + k$ where $m$ is an integer by the product and sum of integers.
+Therefore $n^2 + n$ is even by the definition of even integers.
+
+_Case where $n$ is odd:_
+
+Since $n$ is odd, $n = 2s + 1$, for some integer $s$.
+
+Then by substitution:
+
+$$ n^2 + n = (2s + 1)^2 + (2s + 1) $$
+
+$$ n^2 + n = (2s + 1)(2s + 1) + 2s + 1 $$
+
+$$ n^2 + n = 4s^2 + 4s + 1 + 2s + 1 $$
+
+$$ n^2 + n = 4s^2 + 6s + 2 $$
+
+$$ n^2 + n = 2(2s^2 + 3s + 1) $$
+
+Let $p = 2s^2 + 3s + 1$, where $p$ is an integer by the product and sum of
+integers. Therefore $n^2 + n$ is even by the definition of even integers.
+
+In both cases $n^2 + n$ is even, therefore the product of any two consecutive
+integers is even.
+
+Q.E.D.
+
 b. The result of part (a) suggests that the second approach in the discussion of
 Example 4.5.7 might be possible after all. Write a new proof of Theorem 4.5.3
 based on this observation.
 
+4.5.3 Demonstrates this proof:
+
+Prove: The square of any odd integer has the form $8m + 1$ for some integer $m$.
+
+But suggests another approach might be possible.
+
+"You could try another approach by arguing that since $n$ is odd, you can
+represent it as $2q + 1$ for some integer $q$. Then
+$n^2 = (2q + 1)^2 = 4q^2 + 4q + 1 = 4(q^2 + q) + 1$". It is clear from this
+analysis that $n^2$ can be rewritten in the form $4m + 1$, but it may not be
+clear that it can be written as $8m + 1$.
+
+Given part a, we can now prove this. Let's do that now:
+
+**Proof:**
+
+Suppose $n$ is any odd integer.
+
+Since $n$ is odd, $n = 2q + 1$ for some integer $q$.
+
+Then:
+
+$$ n^2 = (2q + 1)^2 $$
+
+$$ n^2 = (2q + 1)(2q + 1) $$
+
+$$ n^2 = 4q^2 + 4q + 1 $$
+
+$$ n^2 = 4(q^2 + q) + 1 $$
+
+By part a, we know that $q^2 + q$ is even. So $q^2 + q = 2m$, for some integer
+$m$.
+
+$$ n^2 = 4(2m) + 1 $$
+
+$$ n^2 = 8m + 1 $$
+
+Therefore $n^2$ has the form $8m + 1$ for some integer $m$.
+
+Q.E.D.
+
 19. Prove directly from the definitions that for all integers $m$ and $n$, if
     $m$ and $n$ have the same parity, then $5m + 7n$ is even. Divide into two
     cases: $m$ and $n$ are both even and $m$ and $n$ are both odd.
+
+**Proof:**
+
+Suppose $m$ and $n$ are any two integers with the same parity.
+
+_Case $m$ and $n$ are even_:
+
+Since $m$ and $n$ are even, $m = 2k$ and $n = 2p$ for some integers $k$ and $p$.
+
+Then:
+
+$$ 5m + 7n = 5(2k) + 7(2p) $$
+
+$$ \quad = 10k + 14p $$
+
+$$ \quad = 2(5k + 7p) $$
+
+Let $s = 5k + 7p$ where $s$ is an integer by the product and sum of integers.
+
+Therefore $5m + 7n$ is even by the definition of even integers.
+
+_Case $m$ and $n$ are odd_:
+
+Since $m$ and $n$ are odd, $m = 2t + 1$ and $n = 2v + 1$ for some integers $t$
+and $v$.
+
+Then:
+
+$$ 5m + 7n = 5(2t + 1) + 7(2v + 1) $$
+
+$$ 5m + 7n = 10t + 5 + 14v + 7 $$
+
+$$ 5m + 7n = 10t + 14v + 12 $$
+
+$$ 5m + 7n = 2(5t + 7v + 6) $$
+
+Let $w = 5t + 7v + 6$ where $w$ is an integer by the product and sum of
+integers.
+
+Therefore $5m + 7n$ is even by the definition of even integers.
+
+In both cases, $5m + 7n$ is even. Therefore for all integers $m$ and $n$, if $m$
+and $n$ have the same parity, then $5m + 7n$ is even.
+
+Q.E.D.
 
 20. Suppose $a$ is any integer. If $a \mod 7 = 4$, what is $5a \mod 7$? In other
     words, if division of $a$ by $7$ gives a remainder of $4$, what is the
     remainder when $5a$ is divided by $7$? Your solution should show that you
     obtain the same answer no matter what integer you start with.
 
+$$ a \mod 7 = 4 $$
+
+$$ 5a \mod 7 = ? $$
+
+Since $a \mod 7 = 4$, this means that the remainder obtained when $a$ is divided
+by $7$ is $4$. This means there is some integer $q$ so that
+
+$$ a = 7q + 4 $$
+
+Thus
+
+$$ 5a = 5(7q + 4) = 35q + 20 $$
+
+And when put into the form defined by the quotient-remainder theorem:
+
+$n = dq + r$, recall our original divisor was $7$, so:
+
+$$ \quad = 7(5q + 2) + 6 $$
+
+So,
+
+$$ 5a \mod 7 = 6 $$
+
 21. Suppose $b$ is any integer. If $b \mod 12 = 5$, what is $8b \mod 12$? In
     other words, if division of $b$ by $12$ gives a remainder of $5$, what is
     the remainder when $8b$ is divided by $12$? Your solution should show that
     you obtain the same answer no matter what integer you start with.
+
+$$ b \mod 12 = 5 $$
+
+$$ 8b \mod 12 = ? $$
+
+$$ b = 12d + 5 $$
+
+$$ 8b = 8(12d + 5) $$
+
+$$ \quad = 96d + 40 $$
+
+$$ \quad = 12(8d + 3) + 4 $$
+
+$$ 8b \mod 12 = 4 $$
 
 22. Suppose $c$ is any integer. If $c \mod 15 = 3$, what is $10c \mod 15$? In
     other words, if division of $c$ by $15$ gives a remainder of $3$, what is
     the remainder when $10c$ is divided by $15$? Your solution should show that
     you obtain the same answer no matter what integer you start with.
 
+$$ c \mod 15 = 3 $$
+
+$$ 10c \mod 15 = ? $$
+
+$$ c = 15d + 3 $$
+
+$$ 10c = 10(15d + 3) $$
+
+$$ 10c = 150d + 30 $$
+
+$$ 10c = 15(10d + 2) + 0 $$
+
+$$ 10c \mod 15 = 0 $$
+
 23. Prove that for every integer $n$, if $n \mod 5 = 3$ then $n^2 \mod 5 = 4$.
+
+**Proof:**
+
+Suppose $n$ is any integer where $n \mod 5 = 3$.
+
+Since $n \mod 5 = 3$, $n = 5d + 3$ for some integer $d$.
+
+Then:
+
+$$ n^2 = (5d + 3)^2 $$
+
+$$ n^2 = (5d + 3)(5d + 3) $$
+
+$$ n^2 = 25d^2 + 30d + 9 $$
+
+$$ n^2 = 5(5d^2 + 6d + 1) + 4 $$
+
+Let $s = 5d^2 + 6d + 1$ where $s$ is an integer by the product and sum of
+integers. Then the remainder is $4$ by the quotient remainder theorem.
+
+Therefore $n^2 \mod 5 = 4$.
+
+Q.E.D.
 
 24. Prove that for all integers $m$ and $n$, if $m \mod 5 = 2$ and
     $n \mod 5 = 1$ then $mn \mod 5 = 2$.
 
+**Proof:**
+
+Suppose $m$ and $n$ are any integers where $m \mod 5 = 2$ and $n \mod 5 = 1$.
+
+Since $m \mod 5 = 2$ and $n \mod 5 = 1$, $m = 5d + 2$ and $n = 5q + 1$ for some
+integers $d$ and $q$.
+
+Then:
+
+$$ mn = (5d + 2)(5q + 1) $$
+
+$$ mn = 25dq + 5d + 10q + 2 $$
+
+$$ mn = 5(5dq + d + 2q + 0) + 2 $$
+
+$$ mn = 5(5dq + d + 2q) + 2 $$
+
+Let $u = 5dq + d + 2q$ where $u$ is an integer by the product and sum of
+integers. Then $mn$ has a remainder of $2$ when divided by $5$ by the
+quotient-remainder theorem.
+
+Therefore $mn \mod 5 = 2$.
+
+Q.E.D.
+
 25. Prove that for all integers $a$ and $b$, if $a \mod 7 = 5$ and
     $b \mod 7 = 6$ then $ab \mod 7 = 2$.
 
+**Proof:**
+
+Suppose $a$ and $b$ are any integers where $a \mod 7 = 5$ and $b \mod 7 = 6$.
+
+Since $a \mod 7 = 5$ and $b \mod 7 = 6$, $a = 7d + 5$ and $b = 7q + 6$ for some
+integers $d$ and $q$.
+
+Then:
+
+$$ ab = (7d + 5)(7q + 6) $$
+
+$$ \quad = 49dq + 35q + 42d + 30 $$
+
+$$ \quad = 7(7dq + 5q + 6d + 4) + 2 $$
+
+Let $u = 7dq + 5q + 6d + 4$ where $u$ is an integer by the product and sum of
+integers. Then by the quotient-remainder theorem, $ab$ when divided by $7$ has a
+remainder of $2$.
+
+Therefore $ab \mod 7 = 2$.
+
+Q.E.D.
+
 26. Prove that a necessary and sufficient condition for an integer $n$ to be
     divisible by a positive integer $d$ is that $n \mod d = 0$.
+
+**Proof:**
+
+Suppose $n$ is any integer and $d$ is a positive integer where $d \mid n$.
+
+Since $d \mid n$ and $d \neq 0$, $n = dq$ for some integer $q$ by the definition
+of divisibility.
+
+Then:
+
+$$ n = dq $$
+
+$$ \quad = dq + 0 $$
+
+Then, $n$ when divided by $d$ has a remainder of $0$ by the quotient-remainder
+theorem.
+
+Thus $n \mod d = 0$.
+
+Suppose then that $n \mod d = 0$ where $n$ is any integer and $d$ is a positive
+integer.
+
+Since $n \mod d = 0$ and $d \neq 0$, then $n = dq + 0$ for some integer $q$ by
+the quotient-remainder theorem.
+
+Then:
+
+$$ n = dq + 0 $$
+
+$$ n = dq $$
+
+Thus $d \mid n$ by the definition of divisibility.
+
+Therefore it has been shown that a necessary and sufficient condition for an
+integer $n$ to be divisible by a positive integer $d$ is that $n \mod d = 0$.
+
+Q.E.D.
 
 27. Use the quotient-remainder theorem with divisor equal to $2$ to prove that
     the square of any integer can be written in one of the two forms $4k$ or
     $4k + 1$ for some integer $k$.
 
+**Proof:**
+
+Suppose $n$ is any integer.
+
+_Case 1: $n$ is even:_
+
+Since $n$ is even, $n = 2q$ for some integer $q$.
+
+Then:
+
+$$ n^2 = (2q)^2 $$
+
+$$ \quad = 4q^2 $$
+
+Let $k = 2q^2$ where $k$ is an integer by the product of integers.
+
+Then $n^2$ can be written in the form of $4k$.
+
+_Case 2: $n$ is odd:_
+
+Since $n$ is odd, $n = 2q + 1$ for some integer $q$.
+
+Then:
+
+$$ n^2 = (2q + 1)^2 $$
+
+$$ \quad = (2q + 1)(2q + 1) $$
+
+$$ \quad = 4q^2 + 4q + 1 $$
+
+$$ \quad = 4(q^2 + q) + 1 $$
+
+Let $k = q^2 + q$ where $k$ is an integer by the product and sum of integers.
+
+Then $n^2$ can be written in the form of $4k + 1$.
+
+Therefore by Case 1, $n^2$ can be written in the form $4k$, and by Case 2 $n^2$
+can be written in the form $4k + 1$.
+
+Q.E.D.
+
 28.
 
-a. Prove: Given any set 9f three consecutive integers, one of the integers is a
+a. Prove: Given any set of three consecutive integers, one of the integers is a
 multiple of $3$.
+
+**Proof:**
+
+Suppose $n$ is any integer.
+
+_Case 1: $n$ is a multiple of $3$:_
+
+Since $n$ is a multiple of $3$, $n = 3d$ where $d$ is some integer.
+
+Then $n + 1 = 3d + 1$ and $(n + 1) \mod 3 = 1$ by the quotient-remainder
+theorem.
+
+Then $n + 2 = 3d + 2$ and $(n + 2) \mod 3 = 2$A by the quotient -remainder
+theorem.
+
+Therefore $n$ is a multiple of $3$ but $n + 1$ and $n + 2$ are not.
+
+_Case 2: $n + 1$ is a multiple of $3$:_
+
+Since $n + 1$ is a multiple of $3$, $n + 1 = 3d$ where $d$ is an integer such
+that $d > 0$ by the definition of divisibility.
+
+Then $n = 3d - 1 = 2d + 3 - 1 = 2d + 2$ and $n \mod 3 = 2$ by the
+quotient-remainder theorem.
+
+Then $n + 2 = 3d + 1 and $(n + 2) \mod 3 = 1$ by the quotient-remainder theorem.
+
+Therefore $n + 1$ is a multiple of $3$ but $n$ and $n + 2$ are not.
+
+_Case 3: $n + 2$ is a multiple of $3$:_
+
+Since $n + 2$ is a multiple of $3$, $n + 2 = 3d$ where $d$ is an integer such
+that $d > 0$ by the definition of divisibility.
+
+Then $n + 1 = 3d - 1 = 2d + 3 - 1 = 2d + 2$ and $(n + 1) \mod 3 = 2$ by the
+quotient-remainder theorem.
+
+Then $n = 3d - 2 = 2d + 3 - 2 = 2d + 1$ and $n \mod 3 = 1$ by the
+quotient-remainder theorem.
+
+Therefore $n + 2$ is a multiple of $3$ but $n$ and $n + 1$ are not.
+
+In all three cases, in any given set of three consecutive integers, one of the
+integers is a multiple of 3.
+
+Q.E.D.
 
 b. Use the result of part (a) to prove that any product of three consecutive
 integers is a multiple of 3.
+
+**Proof:**
+
+Suppose $n$ is any integer.
+
+By a., either $n$ or $n + 1$ or $n + 2$ is a multiple of $3$.
+
+_Case $n$ is a multiple of $3$_:
+
+Since $n$ is a multiple of $3$, $n = 3d$ for some integer $d$.
+
+Then:
+
+$$ n(n + 1)(n + 2) = (3d)(n + 1) (n + 2) $$
+
+$$ \quad = 3\left[(d)(n + 1) (n + 2)\right] $$
+
+Let $m = \left[(d)(n + 1) (n + 2)\right]$ where $m$ is an integer by the product
+and sum of integers. Then $3 \mid (n)(n + 1)(n + 2)$ by the definition of
+divisibility.
+
+Therefore $n(n + 1)(n + 2)$ is a multiple of $3$.
+
+_Case $n + 1$ is a multiple of $3$_:
+
+Since $n+ 1$ is a multiple of $3$, $n + 1 = 3d$ for some integer $d$.
+
+Then:
+
+$$ n(n + 1)(n + 2) = n(3d)(n + 2) $$
+
+$$ \quad = 3\left[n(d)(n + 2)\right] $$
+
+Let $m = \left[n(d)(n + 2)\right]$ where $m$ is an integer by the product and
+sum of integers. Then $3 \mid (n)(n + 1)(n + 2)$ by the definition of
+divisibility.
+
+Therefore $n(n + 1)(n + 2)$ is a multiple of $3$.
+
+_Case $n + 2$ is a multiple of $3$_:
+
+Since $n + 2$ is a multiple of $3$, $n + 2 = 3d$ for some integer $d$.
+
+Then:
+
+$$ n(n + 1)(n + 2) = n(n + 1)(3d) $$
+
+$$ \quad = 3\left[n(n + 1)(d)\right] $$
+
+Let $m = \left[n(n + 1)(d)\right]$ where $m$ is an integer by the product and
+sum of integers. Then $3 \mid (n)(n + 1)(n + 2)$ by the definition of
+divisibility.
+
+Therefore $n(n + 1)(n + 2)$ is a multiple of $3$.
+
+In all three cases, any product of three consecutive integers is a multiple
+of 3.
+
+Q.E.D.
 
 29.
 
 a. Use the quotient-remainder theorem with divisor equal to $3$ to prove that
 the square of any integer has the form $3k$ or $3k + 1$ for some integer $k$.
 
+**Proof:**
+
+Suppose $n$ is any integer.
+
+By the quotient-remainder theorem, $n$ can be represented as:
+
+$n = 3q, \text{ or } n = 3q + 1 \text{ or } n = 3q + 2$ for some integer $q$.
+
+_Case $n = 3q$:_
+
+Then:
+
+$$ n^2 = (3q)^2 $$
+
+$$ \quad = 9q^2 $$
+
+$$ \quad = 3(3q^2) $$
+
+Let $k = 3q^2$ where $k$ is an integer by the product of integers.
+
+Then $n^2$ has the form $3k$.
+
+_Case $n = 3q + 1$:_
+
+Then:
+
+$$ n^2 = (3q + 1)^2 $$
+
+$$ \quad = (3q + 1)(3q + 1) $$
+
+$$ \quad = 9q^2 + 6q + 1 $$
+
+$$ \quad = 3(3q^2 + 2q) + 1 $$
+
+Let $k = 3q^2 + 2q$ where $k$ is an integer by the product and sum of integers.
+
+Then $n^2$ has the form $3k + 1$.
+
+_Case $n = 3q + 2$:_
+
+Then:
+
+$$ n^2 = (3q + 2)^2 $$
+
+$$ n^2 = (3q + 2)(3q + 2) $$
+
+$$ n^2 = 9q^2 + 12q + 4 $$
+
+$$ n^2 = 9q^2 + 12q + 3 + 1 $$
+
+$$ n^2 = 3(3q^2 + 4q + 1) + 1 $$
+
+Let $k = 3q^2 + 4q + 1$ where $k$ is an integer by the product and sum of
+integers.
+
+Then $n^2$ has the form of $3k + 1$.
+
+Therefore, in all cases, the square of any integer has the form $3k$ or $3k + 1$
+for some integer $k$.
+
+Q.E.D.
+
 b. Use the $\mod$ notation to rewrite the result of part (a).
+
+Therefore, in all cases, the square of any integer $n$ in mod notation can be
+represented as $n^2 \mod 3 = 0$ or $n^2 \mod 3 = 1$.
 
 30.
 
@@ -4137,55 +4799,749 @@ a. Use the quotient-remainder theorem with divisor equal to $3$ to prove that
 the product of any two consecutive integers has the form $3k$ or $3k + 2$ for
 some integer $k$.
 
+**Proof:**
+
+Suppose $n$ is any integer.
+
+By the quotient-remainder theorem, $n$ can be represented as:
+
+$$ n = 3q \text{ or } n = 3q + 1 \text{ or } n = 3q + 2 $$
+
+for some integer $q$.
+
+Case $n = 3q$:
+
+Then:
+
+$$ n(n + 1) = (3q)(3q + 1) $$
+
+$$ \quad = 9q^2 + 3q $$
+
+$$ \quad = 3(q^2 + q) $$
+
+Let $k = q^2 + q$ where $k$ is an integer by the product and sum of integers.
+
+Then $n(n + 1)$ has the form $3k$.
+
+Case $n = 3q + 1$:
+
+Then:
+
+$$ n(n + 1) = (3q + 1)((3q + 1) + 1) $$
+
+$$ \quad = (3q + 1)(3q + 2) $$
+
+$$ \quad = 9q^2 + 9q + 2 $$
+
+$$ \quad = 3(3q^2 + 3q) + 2 $$
+
+Let $k = 3q^2 + 3q$ where $k$ is an integer by the product of integers.
+
+Then $n(n + 1)$ has the form $3k + 2$.
+
+Case $n = 3q + 2$:
+
+Then:
+
+$$ n(n + 1) = (3q + 2)((3q + 2) + 1) $$
+
+$$ \quad = (3q + 2)(3q + 3) $$
+
+$$ \quad = 9q^2 + 9q + 6 $$
+
+$$ \quad = 3(3q^2 + 3q + 2) $$
+
+Let $k = 3q^2 + 3q + 2$ where $k$ is an integer by the product and sum of
+integers.
+
+Then $n(n + 1)$ has the form $3k$.
+
+In all three cases, the product of any two consecutive integers has the form
+$3k$ or $3k + 2$.
+
+Q.E.D.
+
 b. Use the $\mod$ notation to rewrite the result of part (a).
 
-In 32-33, you may use the properties listed in Example 4.3.3.
+In all three cases, the product of any two consecutive integers, $n$ and $n + 1$
+can be written in mod notation as $n(n + 1) \mod 3 = 0$ or
+$n(n + 1) \mod 3 = 2$.
+
+In 31-33, you may use the properties listed in Example 4.3.3.
 
 31.
 
 a. Prove that for all integers $m$ and $n$, $m + n$ and $m - n$ are either both
 odd or both even.
 
+**Proof:**
+
+Suppose $m$ and $n$ are any integers.
+
+_Case both $m$ and $n$ are even:_
+
+Property 1: The sum and difference of any two even integers are even.
+
+By property 1 both $m + n$ and $m - n$ are even.
+
+_Case both $m$ and $n$ are odd:_
+
+Property 2: The sum and difference of any two odd integers are even.
+
+By property 2 both $m + n$ and $m - n$ are even.
+
+_Case where $m$ is odd and $n$ is even:_
+
+Property 5: The sum of any odd integer minus any even integer is odd.
+
+By property 5 both $m + n$ and $m - n$ are odd.
+
+_Case where $m$ is even and $n$ is odd:_
+
+Property 5: The sum of any odd integer minus any even integer is odd.
+
+By property 5 both $m + n$ and $m - n$ are odd.
+
+In all cases $m + n$ and $m - n$ are both odd or are both even.
+
+Q.E.D.
+
 b. Find all solutions to the equation $m^2 - n^2 = 56$ for which both $m$ and
 $n$ are positive integers.
 
+$$ m^2 - n^2 = (m + n)(m - n) = 56 $$
+
+$$ 56 = 2 * 28 = 2 * 2 * 14 = 2 * 2 * 2 * 7 = 2^3 * 7 = 8 * 7 $$
+
+Therefore $(m + n)(m - n) = (8)(7)$ or $(m - n)(m + n) = (8)(7)$. By part a, $m$
+and $n$ must either both be odd or both be even.
+
+$m + n = 14$ and $m - n = 4$ where $m = 9$ and $n = 5$.
+
+Or also:
+
+$m + n = 28$ and $m - n = 2$ where $m = 15$ and $n = 13$.
+
 c. Find all solutions to the equation $m^2 - n^2 = 88$ for which both $m$ and
 $n$ are positive integers.
+
+$$ m^2 - n^2 = (m + n)(m - n) = 88 $$
+
+$$ 88 = 2 * 44 = 2^2 * 22 = 2^3 * 11 $$
+
+By part a, $m$ and $n$ must either both be odd or both be even.
+
+$m + n = 22$ and $m - n = 4$ where $m = 13$ and $n = 9$
+
+$m + n = 44$ and $m - n = 2$ where $m = 23$ and $n = 21$
 
 32. Given any integers $a$, $b$, and $c$, if $a - b$ is even and $b - c$ is
     even, what can you say about the parity of $2a - (b + c)$? Prove your
     answer.
 
-33. Given any integers $a$, $b$, and $c$, if $a - b$ is 9dd and $b - c$ is even,
+**Proof:**
+
+Suppose $a$, $b$, and $c$ are any integers where $a - b$ is even and $b - c$ is
+even.
+
+Note that $$
+2a - (b + c) = a + a - (b + c) \\
+= a + a - b - c \\
+= a - b + a - c \\
+= (a - b) + (a - c)
+$$
+
+Since we know that $(a - b)$ is even and $b - c$ is even.
+
+Property 1: The difference of any two even integers are even.
+
+By Property 1, we then know that $(a - b) + (a - c)$ is even.
+
+Therefore the parity of $2a - (b + c)$ is even.
+
+Q.E.D.
+
+33. Given any integers $a$, $b$, and $c$, if $a - b$ is odd and $b - c$ is even,
     what can you say about the parity of $a - c$? Prove your answer.
+
+**Proof:**
+
+Suppose $a$, $b$ and $c$ are any integers where $a - b$ is odd and $b - c$ is
+even.
+
+Note that $a - c = (a - b) + (b - c)$
+
+By property 5, we know that the sum of any odd integer and even integer is odd.
+
+Therefore the parity of $a - c$ is odd.
+
+Q.E.D.
 
 34. Given any integer $n$, if $n > 3$, could $n$, $n + 2$, and $n + 4$ all be
     prime? Prove or give a counterexample.
+
+**Proof by Counterexample:**
+
+Case where $n = 4$:
+
+Let $n = 4$.
+
+$$
+n = 4 \\
+n + 2 = 6 \\
+n + 4 = 8
+$$
+
+Thus for the given $n$ $n > 3$, but $n$ is not prime, $n + 2$ is not prime, and
+$n + 4$ is not prime. Therefore the statement is false.
+
+Q.E.D.
 
 Prove each of the statements in 35-43.
 
 35. The fourth power of any integer has the form $8m$ or $8m + 1$ for some
     integer $m$.
 
+**Proof:**
+
+Suppose $n$ is any integer.
+
+By the quotient remainder theorem, $n$ can be written as
+
+$$
+n = 4q \text{ or} \\
+n = 4q + 1 \text{ or} \\
+n = 4q + 2 \text{ or}  \\
+n = 4q + 3 \text{ or} \\
+$$
+
+for some integer $q$.
+
+_Case $n = 4q$:_
+
+Then:
+
+$$ n^4 = (4q)^4 $$
+
+$$ \quad = 256q^4 $$
+
+$$ \quad = 8(32q^4) $$
+
+Let $m = 32q^4$ where $m$ is an integer by the product of integers.
+
+Thus $n^4$ is in the form $8m$.
+
+_Case $n = 4q + 1$:_
+
+Then:
+
+$$ n^4 = (4q + 1)^4 $$
+
+$$ \quad = 256q^4 + 256q^3 + 96q^2 + 16q + 1 $$
+
+$$ \quad = 8(32q^4 + 32q^3 + 12q^2 + 2q) + 1 $$
+
+Let $m = 32q^4 + 32q^3 + 12q^2 + 2q$ where $m$ is an integer by the product and
+sum of integers.
+
+Thus $n^4$ is in the form $8m + 1$.
+
+_Case $n = 4q + 2$:_
+
+Then:
+
+$$ n^4 = (4q + 2)^4 $$
+
+$$ n^4 = 256q^4 + 512q^3 + 384q^2 + 128q + 16 $$
+
+$$ n^4 = 8(32q^4 + 64q^3 + 48q^2 + 16q + 2) $$
+
+Let $m = 32q^4 + 64q^3 + 48q^2 + 16q + 2$ where $m$ is an integer by the product
+and sum of integers.
+
+Thus $n^4$ is in the form $8m$.
+
+_Case $n = 4q + 3$:_
+
+Then:
+
+$$ n^4 = (4q + 3)^4 $$
+
+$$ \quad = 256q^4 + 768q^3 + 864q^2 + 432q + 81 $$
+
+$$ \quad = (256q^4 + 768q^3 + 864q^2 + 432q + 80) + 1 $$
+
+$$ \quad = 8(32q^4 + 96q^3 + 108q^2 + 54q + 8) + 1 $$
+
+Let $m = 32q^4 + 96q^3 + 108q^2 + 54q + 8$ where $m$ is an integer by the
+product and sum of integers.
+
+Thus $n^4$ is in the form $8m + 1$.
+
+In all cases, the fourth power of any integer has the form $8m$ or $8m + 1$ for
+some integer $m$.
+
+Q.E.D.
+
 36. The product of any four consecutive integers is divisible by $8$.
 
+**Proof:**
+
+Suppose $n$ is any integer.
+
+By the quotient remainder theorem, $n$ can be represented as:
+
+$$
+n = 4q \text{ or} \\
+n = 4q + 1 \text{ or} \\
+n = 4q + 2 \text{ or}  \\
+n = 4q + 3 \text{ or} \\
+$$
+
+_Case $n = 4q$:_
+
+$$ n(n + 1)(n + 2)(n + 3) = (4q)(4q + 1)(4q + 2)(4q + 3) $$
+
+$$ \quad = 256q^4 + 384q^3 + 176q^2 + 24q $$
+
+$$ \quad = 8(32q^4 + 48q^3 + 22q^2 + 3q) $$
+
+Let $m = 32q^4 + 48q^3 + 22q^2 + 3q$ where $m$ is an integer by the product and
+sum of integers.
+
+Then $8 \mid n(n + 1)(n + 2)(n + 3)$.
+
+_Case $n = 4q + 1$:_
+
+$$ n(n + 1)(n + 2)(n + 3) = ((4q + 1))((4q + 1) + 1)((4q + 1) + 2)((4q + 1) + 3) $$
+
+$$ \quad = 256q^4 + 640q^3 + 560q^2 + 200q + 24 $$
+
+$$ \quad = 8(32q^4 + 80q^3 + 70q^2 + 25q + 3) $$
+
+Let $m = 32q^4 + 80q^3 + 70q^2 + 25q + 3$ where $m$ is an integer by the product
+and sum of integers.
+
+Then $8 \mid n(n + 1)(n + 2)(n + 3)$.
+
+_Case $n = 4q + 2$:_
+
+$$ n(n + 1)(n + 2)(n + 3) = ((4q + 2))((4q + 2) + 1)((4q + 2) + 2)((4q + 2) + 3) $$
+
+$$ \quad = 256q^4 + 896q^3 + 1136q^2 + 616q + 120 $$
+
+$$ \quad = 8(32q^4 + 112q^3 + 142q^2 + 77q + 15) $$
+
+Let $m = 32q^4 + 112q^3 + 142q^2 + 77q + 15$ where $m$ is an integer by the
+product and sum of integers.
+
+Then $8 \mid n(n + 1)(n + 2)(n + 3)$.
+
+_Case $n = 4q + 3$:_
+
+$$ n(n + 1)(n + 2)(n + 3) = ((4q + 3))((4q + 3) + 1)((4q + 3) + 2)((4q + 3) + 3) $$
+
+$$ \quad = 256q^4 + 1152q^3 + 1904q^2 + 1368q + 360 $$
+
+$$ \quad = 8(32q^4 + 144q^3 + 238q^2 + 171q + 45) $$
+
+Let $m = 32q^4 + 144q^3 + 238q^2 + 171q + 45$ where $m$ is an integer by the
+product and sum of integers.
+
+Then $8 \mid n(n + 1)(n + 2)(n + 3)$.
+
+In all cases $8 \mid n(n + 1)(n + 2)(n + 3)$. Therefore the product of any four
+consecutive integers is divisible by 8.
+
+Q.E.D.
+
 37. For any integer $n$, $n^2 + 5$ is not divisible by $4$.
+
+**Proof:**
+
+Suppose $n$ is any integer.
+
+_Case $n$ is even:
+
+Since $n$ is even, $n = 2k$ for any integer $k$.
+
+Then:
+
+$$ n^2 + 5 = (2k)^2 + 5 $$
+
+$$ \quad = 4k^2 + 4 + 1 $$
+
+$$ \quad = 4(k^2 + 1) + 1 $$
+
+Then $(n^2 + 5) \mod 4 = 1$ and $n^2 + 5$ is not divisible by $4$.
+
+_Case $n$ is odd:
+
+Since $n$ is odd, $n = 2k + 1$ for any integer $k$.
+
+Then:
+
+$$ n^2 + 5 = (2k + 1)^2 + 5 $$
+
+$$ \quad = (2k + 1)(2k + 1) + 5 $$
+
+$$ \quad = 4k^2 + 4k + 1 + 5 $$
+
+$$ \quad = 4k^2 + 4k + 6 $$
+
+$$ \quad = 4k^2 + 4k + 4 + 2 $$
+
+$$ \quad = 4(k^2 + k + 1) + 2 $$
+
+Let $m = k^2 + k + 1$ where $m$ is an integer by the product and sum of
+integers. Then $(n^2 + 5) \mod 4 = 2$ and $n^2 + 5$ is not divisible by $4$.
+
+In both cases, $n^2 + 5$ is not divisible by $4$.
+
+Q.E.D.
 
 38. For every integer $m$, $m^2 = 5k$, or $m^w = 5k + 1$, or $m^2 = 5k + 4$ for
     some integer $k$.
 
+**Proof:**
+
+Suppose $m$ is any integer.
+
+By the quotient-remainder theorem, we can say $m$ is:
+
+$$
+m = 5q \\
+m = 5q + 1 \\
+m = 5q + 2 \\
+m = 5q + 3 \\
+m = 5q + 4 \\
+$$
+
+_Case $m = 5q$:_
+
+$$ m^2 = (5q)^2 $$
+
+$$ m^2 = 25q^2 $$
+
+$$ m^2 = 5(5q^2) $$
+
+Let $k = 5q^2$, where $k$ is any integer by the product of integers.
+
+Then $m^2 = 5k$.
+
+_Case $m = 5q + 1$:_
+
+$$ m^2 = (5q + 1)^2 $$
+
+$$ m^2 = (5q + 1)(5q + 1) $$
+
+$$ \quad = 25q^2 + 10q + 1 $$
+
+$$ \quad = 5(5q^2 + 2q) + 1 $$
+
+Let $k = 5q^2 + 2q$, where $k$ is any integer by the product of integers.
+
+Then $m^2 = 5k + 1$.
+
+_Case $m = 5q + 2$:_
+
+$$ m^2 = (5q + 2)^2 $$
+
+$$ \quad = (5q + 2)(5q + 2) $$
+
+$$ \quad = 25q^2 + 20q + 4 $$
+
+$$ \quad = 5(5q^2 + 4q) + 4 $$
+
+Let $k = 5q^2 + 4q$, where $k$ is any integer by the product of integers.
+
+Then $m^2 = 5k + 4$.
+
+_Case $m = 5q + 3$:_
+
+$$ m^2 = (5q + 3)^2 $$
+
+$$ \quad = (5q + 3)(5q + 3) $$
+
+$$ \quad = 25q^2 + 30q + 9 $$
+
+$$ \quad = 25q^2 + 30q + 5 + 4 $$
+
+$$ \quad = 5(5q^2 + 6q + 1) + 4 $$
+
+Let $k = 5q^2 + 6q + 1$, where $k$ is any integer by the product of integers.
+
+Then $m^2 = 5k + 4$.
+
+_Case $m = 5q + 4$:_
+
+$$ m^2 = (5q + 4)^2 $$
+
+$$ \quad = (5q + 4)(5q + 4) $$
+
+$$ \quad = 25q^2 + 40q + 16 $$
+
+$$ \quad = 25q^2 + 40q + 15 + 1 $$
+
+$$ \quad = 5(5q^2 + 8q + 3) + 1 $$
+
+Let $k = 5q^2 + 8q + 3$, where $k$ is any integer by the product of integers.
+
+Then $m^2 = 5k + 1$.
+
+In all cases, $m^2 = 5k$ or $m^2 = 5k + 1$ or $m^2 = 5k + 4$. Therefore for
+every integer $m$, $m^2 = 5k$ or $m^2 = 5k + 1$ or $m^2 = 5k + 4$ for some
+integer $k$.
+
+Q.E.D.
+
 39. Every prime number except $2$ and $3$ has the form $6q + 1$ or $6q + 5$ for
     some integer $q$.
 
+Suppose $p$ is any prime number where $p \neq 2$ and $p \neq 3$.
+
+By the quotient-remainder theorem, if $p$ were any integer, we could express $p$
+as:
+
+$$
+p = 6q \\
+p = 6q + 1 \\
+p = 6q + 2 \\
+p = 6q + 3 \\
+p = 6q + 4 \\
+p = 6q + 5 \\
+$$
+
+But since $p$ is a prime number that is not $2$ and not $3$, this narrows us
+down to:
+
+$$
+p = \cancel{6q} \text{ even, not prime} \\
+p = 6q + 1 \\
+p = \cancel{6q + 2} \text{ even not prime} \\
+p = \cancel{6q + 3} \text{ divisible by 3, not prime} \\
+p = \cancel{6q + 4} \text{ even not prime} \\
+p = 6q + 5 \\
+$$
+
+Therefore, every prime number $p$ except $2$ and $3$ has the form $6q + 1$ or
+$6q + 5$.
+
+Q.E.D.
+
 40. If $n$ is any odd integer, then $n^4 \mod 16 = 1$.
 
+**Proof:**
+
+Suppose $n$ is any odd integer.
+
+Sine $n$ is odd, $n = 2k + 1$ for any integer $k$.
+
+Then:
+
+$$ n^4 = (2k + 1)^4 $$
+
+$$ \quad = (2k + 1)(2k + 1)(2k + 1)(2k + 1) $$
+
+$$ \quad = 16k^4 + 32k^3 + 24k^2 + 8k + 1 $$
+
+$$ \quad = 16k^4 + 32k^3 + 16k^2 + 8k^2 + 8k + 1 $$
+
+$$ \quad = 16(k^4 + 2k^3 + k^2) + 8k^2 + 8k + 1 $$
+
+$$ n^4 \mod 16 = 8k^2 + 8k + 1 (\mod 16) $$
+
+$$ = 8(k^2 + k) + 1 (\mod 16) $$
+
+$$ = 8(k(k + 1)) + 1 (\mod 16) $$
+
+Note here that $k(k + 1)$ is even as the product of two consecutive products is
+even. Therefore $k(k + 1) = 2m$ for some integer m$.
+
+$$ = 8(2m) + 1 (\mod 16) $$
+
+$$ = 16m + 1 (\mod 16) $$
+
+$$ n^4 \mod 16 = 1 $$
+
+Q.E.D.
+
 41. For all real numbers $x$ and $y$, $|x| \cdot |y| = |xy|$.
+
+**Proof:**
+
+Suppose $x$ and $y$ are any real numbers.
+
+_Case $x < 0$ and $y < 0$:_
+
+$$ |x| = -x \text{ by the definition of absolute value} $$
+
+$$ |y| = -y \text{ by the definition of absolute value} $$
+
+$$ |x| \cdot |y| = -x \cdot -y = xy $$
+
+Then:
+
+$$ |xy| = xy $$
+
+Since $x$ and $y$ are both negative, their product $xy$ is positive.
+
+Therefore:
+
+$$ |x| \cdot |y| = |xy| $$
+
+_Case $x \geq 0$ and $y < 0$:_
+
+$$ |x| = x $$
+
+$$ |y| = -y $$
+
+$$ |x| \cdot |y| = x \cdot -y = -xy $$
+
+Since $x$ is nonnegative and $y$ is negative, $xy \leq 0$.
+
+Therefore:
+
+$$ |xy| = -xy $$
+
+So,
+
+$$ |x| \cdot |y| = |xy| $$
+
+_Case $x < 0$ and $y \geq 0$:_
+
+$$ |x| = -x $$
+
+$$ |y| = y $$
+
+$$ |x| \cdot |y| = -xy $$
+
+Since $x$ is negative and $y$ is nonnegative, $xy \leq 0$.
+
+Therefore:
+
+$$ |xy| = -xy $$
+
+So,
+
+$$ |x| \cdot |y| = |xy| $$
+
+_Case $x \geq 0$ and $y \geq 0$:_
+
+$$ |x| = x $$
+
+$$ |y| = y $$
+
+$$ |x| \cdot |y| = xy $$
+
+Since $x$ is nonnegative and $y$ is nonnegative, $xy \geq 0$
+
+$$ |xy| = xy $$
+
+So,
+
+$$ |x| \cdot |y| = |xy| $$
+
+In all cases, $|x| \cdot |y| = |xy|$. Therefore for all real numbers $x$ and
+$y$, $|x| \cdot |y| = |xy|$.
+
+Q.E.D.
 
 42. For all real numbers $r$ and $c$ with $c \geq 0$, $-c \leq r \leq c$ if, and
     only if, $|r| \leq c$. _(Hint: Proving $A$ if, and only if, $B$ requires
     proving both if $A$ then $B$ and if $B$ then $A$.)_
 
+Suppose $r$ and $c$ are real numbers where $c \geq 0$ and $-c \leq r \leq c$.
+
+_Case where $r < 0$:_
+
+$$ |r| = -r $$
+
+Since we assumed that:
+
+$$ -c \leq r \leq c $$
+
+Then:
+
+$$ c \geq -r $$
+
+Or:
+
+$$ -r \leq c $$
+
+Since:
+
+$$ |r| = -r $$
+
+It follows that:
+
+$$ |r| \leq c $$
+
+_Case where $r \geq 0$:_
+
+$$ |r| = r $$
+
+Since we assumed that:
+
+$$ -c \leq r \leq c $$
+
+Then:
+
+$$ r \leq c $$
+
+Since:
+
+$$ |r| = r $$
+
+It follows that:
+
+$$ |r| \leq c $$
+
+Therefore $|r| \leq c$.
+
+In both cases for all real numbers $r$ and $c$ with $c \geq 0$, it has been
+shown that if $-c \leq r \leq c$, then $|r| \leq c$.
+
+And then suppose $r$ and $c$ are real numbers where $c \geq 0$ and $|r| \leq c$.
+
+_Case where $r < 0$:_
+
+$$ |r| = -r $$
+
+Since:
+
+$$ |r| \leq c $$
+
+Then:
+
+$$ -r \leq c $$
+
+$$ r \geq -c $$
+
+Or:
+
+$$ -c \leq r $$
+
+_Case where $r \geq 0$:_
+
+$$ |r| = r $$
+
+Since:
+
+$$ |r| \leq c $$
+
+$$ r \leq c $$
+
+It follows from both cases then that $-c \leq r \leq c$.
+
+Therefore it has been shown that for all real numbers $r$ and $c$ with
+$c \geq 0$, $-c \leq r \leq c$ if, and only if, $|r| \leq c$.
+
+Q.E.D.
+
 43. For all real numbers $a$ and $b$, $\lvert|a| - |b|\rvert \leq |a - b|$.
+
+Omitted.
 
 44. A matrix $\mathbb{M}$ has 3 rows and 4 columns.
 
@@ -4204,11 +5560,51 @@ row, and finally the entries in the third row.
 
 a. Which location will $a_{22}$ be stored in?
 
+$$
+\left[\begin{array}{cccc}
+7609 & 7610 & 7611 & 7612 \\
+7613 & \boxed{7614} & a_{23} & a_{24} \\
+a_{31} & a_{32} & a_{33} & a_{34} \\
+\end{array}\right]
+$$
+
 b. Write a formula (in $i$ and $j$) that gives the integer $n$ so that $a_{ij}$
 is stored in location 7,609 + $n$.
 
+Row-major order means we count:
+
+- 4 entries per row.
+
+So before row $i$, there are $4(i - 1)$ entries.
+
+Within row $i$, entry $j$ adds $j - 1$.
+
+So:
+
+$$ n = 4(i - 1) + (j - 1) $$
+
 c. Find formulas (in $n$) for $r$ and $s$ so that $a_{rs}$ is stored in location
-7.609 + n.
+$7,609 + n$.
+
+We start from:
+
+$$ n = 4(i - 1) + (j - 1) $$
+
+So:
+
+$$ n + 1 = 4(i - 1) + j $$
+
+Divide:
+
+$$ i = \lfloor \frac{n}{4} \rfloor + 1 $$
+
+Remainder gives:
+
+$$ j = (n \mod 4) + 1 $$
+
+So:
+
+$$ r = \lfloor \frac{n}{4} \rfloor + 1, \quad s = (n \mod 4) + 1 $$
 
 45. Let $\mathbb{M}$ be a matrix with $m$ rows and $n$ columns, and suppose that
     the entries of $\mathbb{M}$ are stored in a computer's memory in row major
@@ -4216,20 +5612,52 @@ c. Find formulas (in $n$) for $r$ and $s$ so that $a_{rs}$ is stored in location
     $N + mn - 1$. Find formulas in $k$ for $r$ and $s$ so that $a_{rs}$ is
     stored in location $N + k$.
 
+Row-major order means: Each row has $n$ entries.
+
+We are given location: $N + k$
+
+So $k$ counts how far into the matrix we are (starting at $0$).
+
+Row index $r$.
+
+Each full row uses $n$ positions, so
+
+$$ r = \lfloor \frac{k}{n} \rfloor + 1 $$
+
+Column index $s$.
+
+Position inside the row is the remainder:
+
+$$ s = (k \mod n) + 1 $$
+
+Final answer:
+
+$$ r = \lfloor \frac{k}{n} \rfloor + 1, \quad s = (k \mod n) + 1 $$
+
 46. If $m$, $n$, and $d$ are integers, $d > 0$ and $m \mod d = n \mod d$, does
     it necessarily follow that $m = n$? That $m - n$ is divisible by $d$? Prove
     your answers.
 
+Omitted
+
 47. If $m$, $n$, and $d$ are integers $d > 0$, and $d \mid (m  - n)$, what is
     the relation between $m 'mod d'$ and $n \mod d$? Prove your answer.
+
+Omitted
 
 48. If $m$, $n$, $a$, $b$, and $d$ are integers, $d > 0$ and $m \mod d = a$ and
     $n \mod d = b$, is $(m + n) \mod d = a + b$? Is
     $(m + n) \mod d = (a + b) \mod d$? Prove your answers.
 
+Omitted
+
 49. If $m$, $n$, $a$, $b$, and $d$ are integers, $d > 0$, and $m \mod d = a$ and
     $n \mod d = b$, is $(mn) \mod d = ab$? Is $(mn) \mod d = ab \mod d$? Prove
     your answers.
 
+Omitted
+
 50. Prove that if $m$, $d$, and $k$ are integers and $d > 0$, then
     $(m + dk) \mod d = m \mod d$.
+
+Omitted
