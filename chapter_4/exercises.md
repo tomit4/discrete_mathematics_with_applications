@@ -5661,3 +5661,937 @@ Omitted
     $(m + dk) \mod d = m \mod d$.
 
 Omitted
+
+---
+
+**Exercise Set 4.6**
+
+Page 240
+
+Compute $\lfloor x \rfloor$ and $\lceil x \rceil$ for each of the values of $x$
+in 1-4.
+
+1. $37.999$
+
+$\lfloor 37.999 \rfloor = 37$
+
+$\lceil 37.999 \rceil = 38$
+
+2. $\dfrac{17}{4}$
+
+$\dfrac{17}{4} = 4 + \dfrac{1}{4} = 4.25$
+
+$\lfloor \dfrac{17}{4} \rfloor = 4$
+
+$\lceil \dfrac{17}{4} \rceil = 5$
+
+3. $-14.00001$
+
+$\lfloor -14.00001 \rfloor = -15$
+
+$\lceil -14.00001 \rceil = -14$
+
+4. $-\dfrac{32}{5}$
+
+$-\dfrac{32}{5} = -6.4$
+
+$\lfloor -\dfrac{32}{5} \rfloor = -7$
+
+$\lceil -\dfrac{32}{5} \rceil = -6$
+
+5. Use the floor notation to express $259\ div\ 11$ and $259 \mod 11$.
+
+$$ 259\ div\ 11 = \lfloor \frac{259}{11} \rfloor = \lfloor 23.54545454\dots \rfloor = 23 $$
+
+$$ 259 \mod 11 = 259 - 11 \cdot \lfloor \frac{259}{11} \rfloor $$
+
+$$ = 259 - 11 \cdot 23 $$
+
+$$ = 6 $$
+
+6. If $k$ is an integer, what is $\lceil k \rceil$? Why?
+
+$$ \lceil k \rceil = k $$
+
+The ceiling of $k$ is $k$. Since $k$ is already an integer, then given the
+definition for ceiling:
+
+$$ \lceil k \rceil = n \Leftrightarrow n - 1 < k \leq n $$
+
+We can substitute in $n = k$:
+
+$$ k - 1 < k \leq k $$
+
+And both parts are true, so:
+
+$$ \lceil k \rceil = k $$
+
+7. If $k$ is an integer, what is $\left\lceil k + \dfrac{1}{2} \right\rceil$?
+   Why?
+
+$$ \left\lceil k + \frac{1}{2} \right\rceil = k + 1 $$
+
+By the definition of ceiling:
+
+$$ \ceil k + \dfrac{1}{2} \rceil = n \Leftrightarrow n - 1 < k + \frac{1}{2} \leq n $$
+
+Now substitute in $n = k + 1$:
+
+$$ (k + 1) - 1 < k + \frac{1}{2} \leq k + 1 $$
+
+$$ k < k + \frac{1}{2} \leq k + 1 $$
+
+And both parts are true, so:
+
+$$ \lceil k + \frac{1}{2} \rceil = k + 1 $$
+
+8. Seven pounds of raw material are needed to manufacture each unit of a certain
+   product. Express the number of units that can be produced from $n$ pounds of
+   raw material using either the floor or the ceiling notation. Which notation
+   is more appropriate?
+
+$7$ pounds of raw material per product is main ratio.
+
+This means that the number of units $q$ from $n$ pounds can be expressed using
+the quotient-remainder theorem as:
+
+$$ n = 7q $$
+
+Where the remainder is removed as no more units can be created from leftover raw
+material.
+
+And when converted to floor notation, this is:
+
+$$ q = \left\lfloor \frac{n}{7} \right\rfloor $$
+
+The reason floor is more appropriate is that leftover material would not
+realistically be able to be utilized to make another unit of said product.
+
+9. Boxes, each capable of holding 36 units, are used to ship a product from the
+   manufacturer to a wholesaler. Express the number of boxes that would be
+   required to ship $n$ units of the product using either the floor or the
+   ceiling notation. Which notation is more appropriate?
+
+Each box can hold up to $36$ units of product. Shipping $n$ units of product can
+be expressed using the quotient remainder theorem as:
+
+$$ n = 36q + r $$
+
+Where $r$ is the remaining products that did not fill another box.
+
+Then we convert to ceiling notation:
+
+$$ q = \left\lceil \frac{n}{36} \right\rceil $$
+
+The ceiling notation is more appropriate as even after packing all boxes full,
+you cannot simply not ship the remaining product, so another box filled with the
+remaining products is added to the shipment.
+
+10. If 0 = Sunday, 1 = Monday, 2 = Tuesday, ..., 6 = Saturday, then January 1 of
+    year $n$ occurs on the day of the week given by the following formula:
+
+$$ \left(n + \left\lfloor \frac{n - 1}{4} \right\rfloor - \left\lfloor \frac{n - 1}{100} \right\rfloor + \left\lfloor \frac{n - 1}{400} \right\rfloor\right) \mod 7 $$
+
+a. Use this formula to find January 1 of
+
+i. 2050
+
+6 = Saturday
+
+ii. 2100
+
+5 = Friday
+
+iii. the year of your birth.
+
+Omitted
+
+b. Interpret the different components of this formula.
+
+11. State a necessary and sufficient condition for the floor of a real number to
+    equal that number.
+
+It is a necessary and sufficient condition for any real number, $x$ to to
+satisfy $\lfloor x \rfloor = x$ that $x$ be an integer.
+
+12. Let $S$ be the statement: For any odd integer $n$,
+    $\left\lfloor \dfrac{n}{2} \right\rfloor = \dfrac{(n - 1)}{2}$. Then $S$ is
+    true, but the following "proof" is incorrect. Find the mistake.
+
+**"Proof:**
+
+Suppose $n$ is any odd integer. Then $n = 2k + 1$ for some integer $k$.
+Consequently,
+
+$$ \left\lfloor \frac{2k + 1}{2} \right\rfloor = \frac{(2k + 1) - 1}{2} = \frac{2k}{2} = k $$
+
+But $n = 2k + 1$. Solving for $k$ gives $k = \dfrac{(n - 1)}{2}$. Hence, by
+substitution, $\left\lfloor \dfrac{n}{2} \right\rfloor = \dfrac{(n - 1)}{2}$."
+
+The mistake is in the initial substitution, by setting:
+
+$$ \left\lfloor \frac{2k + 1}{2} \right\rfloor = \frac{(2k + 1) - 1}{2} $$
+
+The author of this proof assumes the what is to be proved.
+
+13. Prove that if $n$ is any even integer, then
+    $\left\lfloor \dfrac{n}{2} \right\rfloor = \dfrac{n}{2}$.
+
+**Proof:** Suppose $n$ is any even integer.
+
+Since $n$ is an even integer, $n = 2k$ for some integer $k$.
+
+Then, by substitution:
+
+$$ \left\lfloor \frac{n}{2} \right\rfloor = \left\lfloor \frac{2k}{2} \right\rfloor $$
+
+$$ = \left\lfloor k \right\rfloor $$
+
+Because $k$ is an integer, and by the definition of floor, $k \leq k < k + 1$.
+We then know that:
+
+$$ \lfloor k \rfloor = k $$
+
+It follows then that:
+
+$$ \left \lfloor \frac{2k}{2} \right\rfloor = \frac{2k}{2} $$
+
+$$ \left \lfloor \frac{n}{2} \right\rfloor = \frac{n}{2} $$
+
+Q.E.D.
+
+14. Show that the following statement is false.
+
+For all real numbers $x$ and $y$,
+$\lfloor x - y \rfloor = \lfloor x \rfloor - \lfloor y \rfloor$.
+
+**Proof by Counterexample:**
+
+Let $x = \dfrac{1}{2}$ and $y = \dfrac{3}{4}$
+
+Then:
+
+$$ \lfloor x - y \rfloor = \left\lfloor \frac{1}{2} - \frac{3}{4} \right\rfloor $$
+
+$$ = -1 $$
+
+Then consider:
+
+$$ \lfloor x \rfloor - \lfloor y - \rfloor = \left\lfloor \frac{1}{2} \right\rfloor - \left\lfloor \frac{3}{4} \right\rfloor  $$
+
+$$ = 0 - 0 $$
+
+$$ = 0 $$
+
+Thus:
+
+$$ -1 \neq 0 $$
+
+$$ \lfloor x - y \rfloor \neq \lfloor x \rfloor - \lfloor y \rfloor$ $.
+
+Therefore for the given $x$ and $y$, this statement is false.
+
+Q.E.D.
+
+Some of the statements in 15-22 are true and some are false. Prove each true
+statement and find a counterexample for each false statement, but do not use
+Theorem 4.6.1 in your proofs.
+
+15. For every real number $x$, $\lfloor x - 1 \rfloor = \lfloor x \rfloor - 1$.
+
+**Proof:**
+
+Suppose $x$ is any real number.
+
+By the definition of floor, $x$ can then be expressed as:
+
+$$ \lfloor x \rfloor \Leftrightarrow n \leq x < n + 1 $$
+
+for some integer $n$.
+
+Subtracting $1$ from all sides of the inequality is:
+
+$$ n - 1 \leq x - 1 < n $$
+
+Since $n - 1$ is an integer by the difference of integers, by the definition of
+floor:
+
+$$ \lfloor x - 1 \rfloor = n - 1 $$
+
+It follows by substitution then that:
+
+$$ \lfloor x - 1 \rfloor = \lfloor x \rfloor - 1 $$
+
+Q.E.D.
+
+16. For every real number $x$,
+    $\left\lfloor x^2 \right\rfloor = \lfloor x \rfloor^2$
+
+**Proof by Counterexample:**
+
+Let $x = -\dfrac{1}{2}$
+
+$$ x^2 = \frac{1}{4} $$
+
+$$ \lfloor x^2 \rfloor = \lfloor \frac{1}{4} \rfloor = 0 $$
+
+Now consider:
+
+$$ \lfloor x \rfloor^2 = \lfloor -\frac{1}{2} \rfloor^2 = (-1)^2 = 1 $$
+
+And then:
+
+$$ 0 \neq 1 $$
+
+$$ \lfloor x^2 \rfloor \neq \lfloor x \rfloor^2 $$
+
+Then for the given $x$, $\lfloor x^2 \rfloor \neq \lfloor x \rfloor^2$.
+Therefore the statement is false.
+
+Q.E.D.
+
+17. For every integer $n$,
+
+$$
+\left\lfloor \dfrac{n}{3} \right\rfloor =
+\begin{cases}
+\dfrac{n}{3} & \text{if } n \mod 3 = 0 \\
+\dfrac{(n - 1)}{3} & \text{if } n \mod 3 = 1 \\
+\dfrac{(n - 2)}{3} & \text{if } n \mod 3 = 2 \\
+\end{cases}
+$$
+
+**Proof:**
+
+Suppose $n$ is any integer.
+
+_Case where $n \mod 3 = 0$:_
+
+Since $n \mod 3 = 0$, then by the definition of mod:
+
+Since $n \mod 3 = 0$, $n$ can be written as:
+
+$$ n = 3q + 0 $$
+
+for some integer $q$ by the definition of mod.
+
+By substitution:
+
+$$ \left\lfloor \frac{n}{3} \right\rfloor = \left\lfloor \frac{3q}{3} \right\rfloor $$
+
+$$ = \lfloor q \rfloor $$
+
+$$ = q \quad \text{ by the definition of floor} $$
+
+Since $q = \dfrac{n}{3}$:
+
+$$ \left\lfloor \frac{n}{3} \right\rfloor = \frac{n}{3} $$
+
+_Case where $n \mod 3 = 1$:_
+
+Since $n \mod 3 = 1$, then by the definition of mod:
+
+Since $n \mod 3 = 1$, $n$ can be written as:
+
+$$ n = 3q + 1 $$
+
+for some integer $q$ by the definition of mod.
+
+By substitution:
+
+$$ \left\lfloor \frac{n}{3} \right\rfloor = \left\lfloor \frac{3q + 1}{3} \right\rfloor $$
+
+$$ = \left\lfloor \frac{3q}{3} + \frac{1}{3} \right\rfloor $$
+
+$$ = \left\lfloor q + \frac{1}{3} \right\rfloor $$
+
+$$ = q \quad \text{ by the definition of floor} $$
+
+Since $q = \dfrac{n - 1}{3}$:
+
+$$ \left\lfloor \frac{n}{3} \right\rfloor = \frac{n - 1}{3} $$
+
+_Case where $n \mod 3 = 2$:_
+
+Since $n \mod 3 = 2$, $n$ can be written as:
+
+$$ n = 3q + 2 $$
+
+for some integer $q$ by the definition of mod.
+
+By substitution:
+
+$$ \left\lfloor \frac{n}{3} \right\rfloor = \left\lfloor \frac{3q + 2}{3} \right\rfloor $$
+
+$$ = \left\lfloor \frac{3q}{3} + \frac{2}{3} \right\rfloor $$
+
+$$ = \left\lfloor q + \frac{2}{3} \right\rfloor $$
+
+$$ = q \quad \text{ by the definition of floor} $$
+
+Since $q = \dfrac{n - 2}{3}$:
+
+$$ \left\lfloor \frac{n}{3} \right\rfloor = \frac{n - 2}{3} $$
+
+Q.E.D.
+
+18. For all real numbers $x$ and $y$,
+    $\lceil x + y \rceil = \lceil x \rceil + \lceil y \rceil$.
+
+**Proof by Counterexample:**
+
+Let $x = -\dfrac{1}{2}$ and $y = -\dfrac{3}{4}$.
+
+Consider:
+
+$$ \lceil x + y \rceil = \left\lceil -\frac{1}{2} + \left(-\frac{3}{4}\right) \right\rceil $$
+
+$$ = -1 $$
+
+Then:
+
+$$ \lceil x \rceil + \lceil y \rceil = \left\lceil -\frac{1}{2} \right\rceil + \left\lceil -\frac{3}{4} \right\rceil $$
+
+$$ = 0 + 0 $$
+
+$$ = 0 $$
+
+Then:
+
+$$ -1 \neq 0 $$
+
+$$ \lceil x + y \rceil \neq \lceil x \rceil + \lceil y \rceil $$
+
+Therefore, for the given $x$ and $y$, the statement is false.
+
+Q.E.D.
+
+19. For every real number $x$, $\lceil x - 1 \rceil = \lceil x \rceil - 1$.
+
+**Proof:**
+
+Suppose $x$ is any real number.
+
+By the definition of ceiling, $x$ can be expressed as:
+
+$$ \lceil x \rceil = n \Leftrightarrow n - 1 < x \leq n $$
+
+for some integer $n$.
+
+If we then subtract $1$ from the inequality, we get:
+
+$$ n - 2 < x - 1 \leq n - 1 $$
+
+Since $n - 1$ is an integer by the difference of integers, by the definition of
+ceiling:
+
+$$ \lceil x - 1 \rceil = n - 1 $$
+
+It follows by substitution then that:
+
+$$ \lceil x - 1 \rceil = \lceil x \rceil - 1 $$
+
+Q.E.D.
+
+20. For all real numbers $x$ and $y$,
+    $\lceil xy \rceil = \lceil x \rceil \cdot \lceil y \rceil$.
+
+**Proof by Counterexample:**
+
+Let $x = 2$ and $y = \dfrac{1}{2}$.
+
+Then:
+
+$$ \lceil xy \rceil = \left\lceil 2\left(\frac{1}{2}\right) \right\rceil = \lceil 1 \rceil = 1 $$
+
+Then consider:
+
+$$ \lceil x \rceil \cdot \lceil y \rceil = \lceil 2 \rceil \cdot \left\lceil \frac{1}{2} \right\rceil $$
+
+$$ = 2 \cdot 1 $$
+
+$$ = 2 $$
+
+Since:
+
+$$ 1 \neq 2 $$
+
+Then:
+
+$$ \lceil xy \rceil \neq \lceil x \rceil \cdot \lceil y \rceil $$
+
+Thus it has been shown that for at least one given $x$ and one given $y$,
+
+$$ \lceil xy \rceil \neq \lceil x \rceil \cdot \lceil y \rceil $$
+
+Therefore the statement is false.
+
+Q.E.D.
+
+21. For every odd integer $n$,
+    $\lceil \dfrac{n}{2} \rceil = \dfrac{(n - 1)}{2}$.
+
+**Proof by Counterexample:**
+
+Let $n = 1$.
+
+Consider:
+
+$$ \left\lceil \dfrac{n}{2} \right\rceil = \left\lceil \dfrac{1}{2} \right\rceil $$
+
+$$ = 1 $$
+
+Then:
+
+$$ \frac{n - 1}{2} = \frac{1 - 1}{2} = \frac{0}{2} = 0 $$
+
+Since $1 \neq 0$:
+
+$$ \left\lceil \dfrac{n}{2} \right\rceil \neq \frac{n - 1}{2} $$
+
+Thus it has been shown that there exists some value for $n$ such that:
+
+$$ \left\lceil \dfrac{n}{2} \right\rceil \neq \frac{n - 1}{2} $$
+
+Therefore the statement is false.
+
+Q.E.D.
+
+22. For all real numbers $x$ and $y$,
+    $\lceil xy \rceil = \lceil x \rceil \cdot \lfloor y \rfloor$.
+
+**Proof by Counterexample:**
+
+Let $x = \dfrac{5}{4}$ and $y = \dfrac{1}{2}$.
+
+Then:
+
+$$ \lceil xy \rceil = \left\lceil \left(\frac{5}{4}\right)\left(\frac{1}{2}\right) \right\rceil $$
+
+$$ = 1 $$
+
+Then:
+
+$$ \lceil x \rceil \cdot \lfloor y \rfloor = \left\lceil \frac{5}{4} \right\rceil \cdot \left\lfloor \frac{1}{2} \right\rfloor $$
+
+$$ = 2 \cdot 0 = 0 $$
+
+So:
+
+$$ 1 \neq 0 $$
+
+$$ \lceil xy \rceil \neq \lceil x \rceil \cdot \lfloor y \rfloor $$
+
+So, it has been shown that there exists a value for $x$ and a value for $y$ such
+that:
+
+$$ \lceil xy \rceil \neq \lceil x \rceil \cdot \lfloor y \rfloor $$
+
+Therefore the statement is false.
+
+Q.E.D.
+
+Prove each of the following statements in 23-33.
+
+23. For any real number $x$, if $x$ is not an integer, then
+    $\lfloor x \rfloor + \lfloor -x \rfloor = -1$.
+
+Suppose $x$ is any real number where $x$ is not an integer.
+
+By the definition of floor, since $x$ is not an integer, $x$ can be expressed
+as:
+
+$$ \lfloor x \rfloor = n \Leftrightarrow n < x < n + 1 $$
+
+for $n$ is some integer.
+
+Note that since $x$ is not an integer there is no "or equal to" here.
+
+We can then multiply the inequality by $-1$:
+
+$$ -n > -x > -n - 1 $$
+
+Where $-n - 1$ is an integer by the product and difference of integers. Since
+$-n - 1$ is an integer, it then follows:
+
+$$ \lfloor -x \rfloor = -n - 1 $$
+
+$$ \lfloor x \rfloor + \lfloor -x \rfloor = n + (-n - 1) = -1 $$
+
+Therefore:
+
+$$ \lfloor x \rfloor + \lfloor -x \rfloor = -1 $$
+
+Q.E.D.
+
+24. For any integer $m$ and any real number $x$, if $x$ is not an integer, then
+    $\lfloor x \rfloor + \lfloor m - x \rfloor = m - 1$.
+
+**Proof:**
+
+Suppose $x$ is any real number where $x$ is not an integer, and suppose $m$ is
+any an integer.
+
+Since $m$ is an integer and $x$ is not an integer, then $m - x$ is not an
+integer by the difference of integers.
+
+It follows then that:
+
+$$ \lfloor m - x \rfloor = n \Leftrightarrow n < m - x < n + 1 $$
+
+for some integer $n$.
+
+Let's then subtract $m$ from the inequality:
+
+$$ n - m < -x < n + 1 - m $$
+
+And multiply the inequality by $-1$:
+
+$$ m - n > x > m - n - 1 $$
+
+Rewritten:
+
+$$ m - n - 1 < x < m - n $$
+
+Since $m - n - 1$ is an integer, this means that:
+
+$$ \lfloor x \rfloor = m - n - 1 $$
+
+By substitution then:
+
+$$ \lfloor x \rfloor + \lfloor m - x \rfloor = (m - n - 1) + (n) $$
+
+$$ \lfloor x \rfloor + \lfloor m - x \rfloor = m - 1 $$
+
+Q.E.D.
+
+25. For every real number $x$,
+    $\left\lfloor \dfrac{\left\lfloor \dfrac{x}{2}\right\rfloor}{2} \right\rfloor = \left\lfloor \dfrac{x}{4} \right\rfloor$.
+
+**Proof:**
+
+Suppose $x$ is any real number.
+
+Let $n = \left\lfloor \dfrac{x}{2} \right\rfloor$.
+
+Note that $n$ is automatically an integer due to floor always outputting an
+integer.
+
+By the definition of floor, since $n$ is an integer:
+
+$$ \left\lfloor \frac{x}{2} \right\rfloor = n \Leftrightarrow n \leq \frac{x}{2} < n + 1 $$
+
+__Case where $n$ is even:_
+
+Since $n$ is even, $n = 2k$ for some integer $k$.
+
+By substitution:
+
+$$ \left\lfloor \frac{x}{2} \right\rfloor = 2k \Leftrightarrow 2k \leq \frac{x}{2} < 2k + 1 $$
+
+We can then multiply out our inequality:
+
+$$ 2(2k) \leq x < 2(2k) + 2 $$
+
+$$ 4k \leq x < 4k + 2 $$
+
+We then divide by $4$:
+
+$$ k \leq \frac{x}{4} < k + \frac{1}{2} $$
+
+By substitution then:
+
+$$ \left\lfloor \frac{x}{4} \right\rfloor = k $$
+
+__Case where $n$ is odd:_
+
+Since $n$ is odd, $n = 2k + 1$ for some integer $k$.
+
+By substitution:
+
+$$ \left\lfloor \frac{x}{2} \right\rfloor = 2k + 1 \Leftrightarrow 2k + 1 \leq \frac{x}{2} < (2k + 1) + 1 $$
+
+We can then multiply out our inequality:
+
+$$ 2(2k + 1) \leq x < 2(2k + 1) + 2 $$
+
+$$ 4k + 2 \leq x < 4k + 4 $$
+
+We then divide by $4$:
+
+$$ k + \frac{1}{2} \leq \frac{x}{4} < k + 1 $$
+
+By substitution then:
+
+$$ \left\lfloor \frac{x}{4} \right\rfloor = k $$
+
+Thus in both cases we have shown the given statement to be true for all real
+numbers $x$.
+
+Q.E.D.
+
+26. For every real number $x$, if $x - \lfloor x \rfloor < \dfrac{1}{2}$ then
+    $\lfloor 2x \rfloor = 2\lfloor x \rfloor$.
+
+Suppose $x$ is any real number where $x - \lfloor x \rfloor < \dfrac{1}{2}$.
+
+$$ x - \lfloor x \rfloor < \frac{1}{2} $$
+
+Multiplying by $2$ gets us:
+
+$$ 2x - 2\lfloor x \rfloor < 1 $$
+
+Now add $2\lfoor x \rfloor$ to both sides:
+
+$$ 2x < 2\lfloor x \rfloor + 1 $$
+
+By definition of floor $\lfoor x \rfloor \leq x$. Thus:
+
+$$ 2\lfloor x \rfloor \leq 2x $$
+
+Putting these two inequalities together shows:
+
+$$ 2\lfloor x \rfloor \leq 2x < 2\lfloor x \rfloor + 1 $$
+
+By definition of floor, this means then that:
+
+$$ \lfloor 2x \rfloor = 2\lfloor x \rfloor $$
+
+Which is what was to be shown.
+
+Q.E.D.
+
+27. For every real number $x$, if $x - \lfloor x \rfloor \geq \dfrac{1}{2}$ then
+    $\lfloor 2x \rfloor = 2\lfloor x \rfloor + 1$.
+
+**Proof:**
+
+Suppose $x$ is any real number where $x - \lfloor x \rfloor \geq \dfrac{1}{2}$.
+
+By the definition of floor, one can express some integer $n$ such that:
+
+$$ \lfloor x \rfloor = n \Leftrightarrow n \leq x < n + 1 $$
+
+Then subtract n from the inequality:
+
+$$ 0 \leq x - n < 1 $$
+
+We know that $x - \lfloor x \rfloor \geq \dfrac{1}{2}$.
+
+$$ \frac{1}{2} \leq x - n < 1 $$
+
+Multiply all sides by $2$:
+
+$$ 1 \leq 2(x - n) < 2 $$
+
+By substitution:
+
+$$ \lfloor 2(x - n) \rfloor = 1 $$
+
+_[To get to the form we want, we have to express $x$ as a further expression of
+$n$]_
+
+We can rewrite $x$ as $x = x + n - n$:
+
+Since $n = \lfloor x \rfloor$:
+
+$$ 2x = 2(n + (x - n)) $$
+
+$$ 2x = 2n + 2(x - n) $$
+
+Then take the floor:
+
+$$ \lfloor 2x \rfloor = \lfloor 2n + 2(x - n) \rfloor $$
+
+Since $2n$ is an integer:
+
+$$ = 2n + \lfloor 2(x - n) \rfloor $$
+
+And we know that $\lfloor 2(x - n) \rfloor = 1$, so substitute:
+
+$$ = 2n + 1 $$
+
+And we know $n = \lfoor x \rfloor$, so substitute again:
+
+$$ = 2\lfoor x \rfloor + 1 $$
+
+Therefore $\lfloor 2x \rfloor = 2\lfloor x \rfloor + 1$.
+
+Q.E.D.
+
+28. For any odd integer $n$,
+
+$$ \left\lfloor \frac{n^2}{4} \right\rfloor = \left(\frac{n - 1}{2}\right)\left(\frac{n + 1}{2}\right) $$
+
+**Proof:**
+
+Suppose $n$ is any odd integer.
+
+Since $n$ is odd, $n = 2k + 1$ for some integer $k$.
+
+Then, by substitution:
+
+$$ \left\lfloor \frac{n^2}{4} \right\rfloor = \left\lfloor \frac{(2k + 1)^2}{4} \right\rfloor  $$
+
+$$ = \left\lfloor \frac{(2k + 1)(2k + 1)}{4} \right\rfloor  $$
+
+$$ = \left\lfloor \frac{4k^2 + 4k + 1}{4} \right\rfloor  $$
+
+$$ = \left\lfloor \frac{4k^2 + 4k}{4} + \frac{1}{4} \right\rfloor  $$
+
+$$ = \left\lfloor k^2 + k + \frac{1}{4} \right\rfloor  $$
+
+By the definition of floor, since $k^2 + k$ is an integer:
+
+$$ k^2 + k \leq k^2 + k + \frac{1}{4} < k^2 + k + 1 $$
+
+It then follows that:
+
+$$ = \left\lfloor k^2 + k + \frac{1}{4} \right\rfloor = k^2 + k  $$
+
+Now, also by substitution:
+
+$$ \left(\frac{n - 1}{2}\right)\left(\frac{n + 1}{2}\right) = \left(\frac{(2k + 1) - 1}{2}\right)\left(\frac{(2k + 1) + 1}{2}\right)  $$
+
+$$ = \left(\frac{2k}{2}\right)\left(\frac{2k + 2}{2}\right)  $$
+
+$$ = k(k + 1)  $$
+
+$$ k^2 + k $$
+
+We have thus shown that the two expressions are equal:
+
+$$ \left\lfloor \frac{n^2}{4} \right\rfloor = \left(\frac{n - 1}{2}\right)\left(\frac{n + 1}{2}\right) $$
+
+Q.E.D.
+
+29. For any odd integer $n$,
+
+$$ \left\lceil \frac{n^2}{4} \right\rceil = \frac{n^2 + 3}{4} $$
+
+**Proof:**
+
+Suppose $n$ is any odd integer.
+
+Since $n$ is an odd integer, $n = 2k + 1$ for some integer $k$.
+
+Then by substitution:
+
+$$ \left\lceil \frac{n^2}{4} \right\rceil = \left\lceil \frac{(2k + 1)^2}{4} \right\rceil  $$
+
+$$ = \left\lceil \frac{(2k + 1)(2k + 1)}{4} \right\rceil  $$
+
+$$ = \left\lceil \frac{4k^2 + 4k + 1}{4} \right\rceil  $$
+
+$$ = \left\lceil k^2 + k + \frac{1}{4} \right\rceil  $$
+
+By the definition of ceiling:
+
+$$ k^2 + k < k^2 + k + \frac{1}{4} \leq k^2 + k + 1 $$
+
+It then follows that
+
+$$ \lceil k^2 + k + \frac{1}{4} \rceil = k^2 + k + 1 $$
+
+Then by substution:
+
+$$ \frac{n^2 + 3}{4} = \frac{(2k + 1)^2 + 3}{4} $$
+
+$$ = \frac{(2k + 1)(2k + 1) + 3}{4} $$
+
+$$ = \frac{4k^2 + 4k + 1 + 3}{4} $$
+
+$$ = \frac{4k^2 + 4k + 4}{4} $$
+
+$$ = k^2 + k + 1 $$
+
+Thus we have shown that these two expressions are equal.
+
+$$ \left\lceil \frac{n^2}{4} \right\rceil = \frac{n^2 + 3}{4} $$
+
+Q.E.D.
+
+30. For every integer $n$,
+    $\left\lfloor \dfrac{n}{2} \right\rfloor + \left\lceil \frac{n}{2} \right\rceil = n$.
+
+**Proof:**
+
+Suppose $n$ is any integer.
+
+_Case where $n$ is even:_
+
+Since $n$ is even, $n = 2k$ for some integer $k$.
+
+By substitution:
+
+$$ \left\lfloor \frac{n}{2} \right\rfloor + \left\lceil \frac{n}{2} \right\rceil = \left\lfloor \frac{2k}{2} \right\rfloor + \left\lceil \frac{2k}{2} \right\rceil  $$
+
+$$ = \lfloor k \rfloor + \lceil k \rceil  $$
+
+Since $k$ is an integer, then we know that:
+
+$$ \lfloor k \rfloor = k \quad \text{ and } \lceil k \rceil = k $$
+
+So:
+
+$$ = \lfloor k \rfloor + \lceil k \rceil = k + k = 2k = n $$
+
+_Case where $n$ is odd:_
+
+Since $n$ is odd, $n = 2k + 1$ for some integer $k$.
+
+By substitution:
+
+$$ \left\lfloor \frac{n}{2} \right\rfloor + \left\lceil \frac{n}{2} \right\rceil = \left\lfloor \frac{2k + 1}{2} \right\rfloor + \left\lceil \frac{2k + 1}{2} \right\rceil  $$
+
+$$ = \left\lfloor \frac{2k}{2} + \frac{1}{2} \right\rfloor + \left\lceil \frac{2k}{2} + \frac{1}{2} \right\rceil  $$
+
+$$ = \left\lfloor k + \frac{1}{2} \right\rfloor + \left\lceil k + \frac{1}{2} \right\rceil  $$
+
+By the definition of floor:
+
+$$ k \leq k + \frac{1}{2} < k + 1 $$
+
+So:
+
+$$ \left\lfloor k + \frac{1}{2} \right\rfloor = k $$
+
+By the definition of ceiling:
+
+$$ k < k + \frac{1}{2} \leq k + 1 $$
+
+So:
+
+$$ \left\lceil k + \frac{1}{2} \right\rceil = k + 1 $$
+
+Then:
+
+$$ = \left\lfloor k + \frac{1}{2} \right\rfloor + \left\lceil k + \frac{1}{2} \right\rceil = k + k + 1 $$
+
+$$ = 2k + 1 = n $$
+
+In both cases we have shown that the given equation is true. Therefore we have
+shown that the given equation is true for every integer $n$.
+
+Q.E.D.
+
+31. For every integer $n$,
+    $\left\lfloor \dfrac{\left\lceil \dfrac{n}{2} \right\rceil}{3} \right\rfloor = \left\lfloor \dfrac{n}{6} \right\rfloor$.
+
+Omitted.
+
+32. For every integer $n$,
+    $\left\lceil \dfrac{\left\lceil \frac{n}{2} \right\rceil}{3} \right\rceil = \left\lceil \dfrac{n}{6} \right\rceil$
+
+Omitted.
+
+33. A necessary and sufficient condition for an integer $n$ to be divisible by a
+    nonzero integer $d$ is that
+    $n = \left\lfloor \dfrac{n}{d} \right\rfloor \cdot d$. In other words, for
+    every integer $n$ and nonzero integer $d$,
+
+a. if $d \mid n$, then $n = \left\lfloor \dfrac{n}{d} \right\rfloor \cdot d$.
+
+b. if $n = \left\lfloor \dfrac{n}{d} \right\rfloor \cdot d$ then $d \mid n$.
+
+Omitted.

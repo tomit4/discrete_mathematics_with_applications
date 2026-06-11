@@ -658,3 +658,159 @@ It follows, by Theorem T26 of Appendix A, that
 $$ |x + y| = (-x) + (-y) \leq |x| + |y| $$
 
 Hence in both cases $|x + y| = |x| + |y|$ _[as was to be shown]._
+
+---
+
+Page 234
+
+**Definition**
+
+Given any real number $x$, the **floor of** $x$, denoted $\lfloor x \rfloor$, is
+defined as follows:
+
+$\lfloor x \rfloor =$ that unique integer $n$ such that $n \leq x < n + 1$.
+
+Symbolically, if $x$ is a real number and $n$ is an integer, then
+
+$$ \lfloor x \rfloor = n \Leftrightarrow n \leq x < n + 1 $$
+
+---
+
+Page 235
+
+**Definition**
+
+Given any real number $x$, the **ceiling of** $x$, denoted $\lceil x \rceil$, is
+defined as follows:
+
+$\lceil x \rceil =$ that unique integer $n$ such that $n - 1 < x \leq n$.
+
+Symbolically, if $x$ is a real number and $n$ is an integer, then
+
+$$ \lceil x \rceil = n \Leftrightarrow n - 1 < x \leq n $$
+
+---
+
+Page 237
+
+**Theorem 4.6.1**
+
+For every real number $x$ and every integer $m$,
+$\lfloor x + m \rfloor = \lfloor x \rfloor + m$.
+
+**Proof:**
+
+Suppose any real number $x$ and any integer $m$ are given. _[We must show that
+$\lfloor x + m \rfloor = \lfloor x \rfloor + m$.]_ Let $n = \lfloor x \rfloor$.
+By definition of floor, $n$ is an integer and
+
+$$ n \leq x < n + 1 $$
+
+Add $m$ to all three parts to obtain
+
+$$ n + m \leq x + m < n + m + 1 $$
+
+_[since adding a number to both sides of an inequality does not change the
+direction of the inequality]._
+
+Now $n + m$ is an integer _[since $n$ and $m$ are integers and a sum of integers
+is an integer]_, and so, by definition of floor, the left-hand side of the
+equation to be shown is
+
+$$ \lfloor x + m \rfloor = n + m $$
+
+But $n = \lfloor x \rfloor$. Hence, by substitution,
+
+$$ n + m = \lfloor x \rfloor + m $$
+
+which is the right-hand side of the equation to be shown. Thus
+$\lfloor x + m \rfloor = \lfloor x \rfloor + m$ _[as was to be shown]._
+
+---
+
+Page 238
+
+**Theorem 4.6.2 The Floor of $\dfrac{n}{2}$**
+
+For any integer $n$,
+
+$$
+\left\lfloor \frac{n}{2} \right\rfloor =
+\begin{cases}
+\dfrac{n}{2} & \text{if } n \text{ is even} \\
+\dfrac{n - 1}{2} & \text{if } n \text{ is odd} \\
+\end{cases}
+$$
+
+**Proof:**
+
+Suppose $n$ is a _[particular but arbitrarily chosen]_ integer. By the quotient
+remainder theorem, either $n$ is odd or $n$ is even.
+
+_Case 1 ($n$ is odd):_
+
+In this case, $n = 2k + 1$ for some integer $k$. _[We must show that
+$\left\lfloor \dfrac{n}{2} \right\rfloor = \dfrac{(n - 1)}{2}$.]_ But the
+left-hand side of the equation to be shown is
+
+$$ \left\lfloor \frac{n}{2} \right\rfloor = \left\lfloor \frac{2k + 1}{2} \right\rfloor = \left\lfloor \frac{2k}{2} + \frac{1}{2} \right\rfloor = \left\lfloor k + \frac{1}{2} \right\rfloor = k $$
+
+because $k$ is an integer and $k \leq k + \dfrac{1}{2} < k + 1$. And the
+right-hand side of the equation to be shown is
+
+$$ \frac{n - 1}{2} = \frac{(2k + 1) - 1}{2} = \frac{2k}{2} = k $$
+
+also. So since both the left-hand and right-hand sides equal $k$, they are equal
+to each other. That is,
+$\left\lfloor \dfrac{n}{2} \right\rfloor = \dfrac{n - 1}{2}$ _[as was to be
+shown]._
+
+_Case 2 ($n$ is even):_
+
+In this case, $n = 2k$ for some integer $k$. _[We must show that
+$\left\lfloor \dfrac{n}{2} \right\rfloor$]_ The rest of the proof of this case
+is left as an exercise.
+
+---
+
+Page 239
+
+**Theorem 4.6.3**
+
+If $n$ is any integer and $d$ is a positive integer, and if
+$q = \left\lfloor \frac{n}{d} \right\rfloor$ and
+$r = n - d \cdot \left\lfloor \frac{n}{d} \right\rfloor$, then
+
+$$ n = dq + r \quad \text{ and } \quad 0 \leq r < d $$
+
+**Proof:**
+
+Suppose $n$ is any integer, $d$ is a positive integer,
+$q = \left\lfloor \dfrac{n}{d} \right\rfloor$, and
+$r = n - d \cdot \left\lfloor \frac{n}{d} \right\rfloor$. _[We must show that
+$n = dq + r$ and $0 \leq r < d$.]_ By substitution,
+
+$$ dq + r = d \cdot \left\lfloor \frac{n}{d} \right\rfloor + \left(n - d \cdot \left\lfloor \frac{n}{d} \right\rfloor\right) = n $$
+
+So it remains only to show that $0 \leq r < d$. But
+$q = \left\lfloor \frac{n}{d} \right\rfloor$. Thus, by definition of floor,
+
+$$ q \leq \frac{n}{d} < q + 1 $$
+
+Then
+
+$$ dq \leq n < dq + d \quad \text{ by multiplying all parts by } d $$
+
+and so
+
+$$ 0 \leq n - dq < d \quad \text{ by subtracting } dq \text{ from all parts.} $$
+
+But
+
+$$ r = n - d\left\lfloor \frac{n}{d} \right\rfloor = n - dq $$
+
+Hence
+
+$$ 0 \leq r < d \quad \text{ by substitution} $$
+
+_[This is what was to be shown.]_

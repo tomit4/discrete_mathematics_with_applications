@@ -184,3 +184,19 @@ If $A_1$ then $C$; If $A_2$ then $C$; If $A_3$ then $C$
 6. The triangle inequality says that for all real numbers $x$ and $y$, ______.
 
 $|x + 6| \leq |x| + |y|$
+
+---
+
+**Test Yourself**
+
+Page 239
+
+1. Given any real number $x$, the floor of $x$ is the unique integer $n$ such
+   that ______.
+
+$n \leq x < n + 1$
+
+2. Given any real number $x$, the ceiling of $x$ is the unique integer $n$ such
+   that ______.
+
+$n - 1 < x \leq n$
