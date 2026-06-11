@@ -6595,3 +6595,57 @@ a. if $d \mid n$, then $n = \left\lfloor \dfrac{n}{d} \right\rfloor \cdot d$.
 b. if $n = \left\lfloor \dfrac{n}{d} \right\rfloor \cdot d$ then $d \mid n$.
 
 Omitted.
+
+---
+
+**Exercise Set 4.7**
+
+Page 248
+
+1. Fill in the blanks in the following proof by contradiction that there is no
+   least positive real number.
+
+**Proof:** Suppose not. That is, suppose that there is a least positive real
+number $x$. _[We must deduce (a)]._ Consider the number $\dfrac{x}{2}$. Since
+$x$ is a positive real number, $\dfrac{x}{2}$ is also (b). In addition, we can
+deduce that $\dfrac{x}{2} < x$ by multiplying both sides of the inequality
+$1 < 2$ by \(c\) and dividing (d). Hence $\dfrac{x}{2}$ is a positive real
+number that is less than the least positive real number. This is a (e). _[Thus
+the supposition is false, and so there is no least positive real number.]_
+
+2. Is $\dfrac{1}{0}$ an irrational number? Explain.
+
+3. Use proof by contradiction to show that for every integer $n$, $3n + 2$ is
+   not divisible by $3$.
+
+4. Use proof by contradiction to show that for every integer $m$, $7m + 4$ is
+   not divisible by $7$.
+
+Carefully formulate the negations of each of the statements in 5-7. Then prove
+each statement by contradiction.
+
+5. There is no greatest even integer.
+
+6. There is no greatest negative real number.
+
+7. There is no least positive rational number.
+
+8. Fill in the blanks for the following proof that the difference of any
+   rational number and any irrational number is irrational.
+
+**Proof (by contradiction):**
+
+Suppose not. That is, suppose that there exist (a) $x$ and (b) $y$ such that
+$x - y$ is rational. By definition of rational, there exist integers $a$, $b$,
+$c$, and $d$ with $b \neq 0$ and $d \neq 0$ so that $x = $ \(c\) and $x - y =$
+(d). By substitution,
+
+$$ \frac{a}{b} - y = \frac{c}{d} $$
+
+Adding $y$ and subtracting $\dfrac{c}{d}$ on both sides gives
+
+$$ y = \text{(e)} \quad \text{ by substitution} $$
+
+$$ = \frac{ad}{bd} - \frac{bc}{bd} $$
+
+$$ = \frac{ad - bc}{bd} \quad \text{ by algebra} $$

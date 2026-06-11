@@ -200,3 +200,20 @@ $n \leq x < n + 1$
    that ______.
 
 $n - 1 < x \leq n$
+
+---
+
+**Test Yourself**
+
+Page 248
+
+1. To prove a statement by contradiction, you suppose that ______ and you show
+   that ______.
+
+2. A proof by contraposition of a statement of the form
+   "$\forall x \in D, \text{ if } P(x) \text{ then } Q(x)$" is a direct proof of
+   ______.
+
+3. To prove a statement of the form
+   "$\forall x \in D, \text{ if } P(x) \text{ then } Q(x)$" by contraposition,
+   you suppose that ______ and you show that ______.

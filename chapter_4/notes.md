@@ -814,3 +814,167 @@ Hence
 $$ 0 \leq r < d \quad \text{ by substitution} $$
 
 _[This is what was to be shown.]_
+
+---
+
+Page 241
+
+**Method of Proof by Contradiction**
+
+1. Suppose the statement to be proved is false. That is, suppose the negation of
+   the statement is true.
+
+2. Show that this supposition leads logically to a contradiction.
+
+3. Conclude that the statement to be proved is true.
+
+---
+
+Page 242
+
+**Theorem 4.7.1**
+
+There is no greatest integer.
+
+**Proof:**
+
+_[We take the negation of the theorem and suppose it to be true.]_ Suppose not.
+That is, suppose there is a greatest integer $N$. _[We must deduce a
+contradiction.]_ Then $N \geq n$ for every integer $n$. Let $M = N + 1$. Now $M$
+is an integer since it is a sum of integers. Also $M > N$ since $M = N + 1$.
+Thus $M$ is an integer that is greater than $N$. So $N$ is the greatest integer
+and $N$ is not the greatest integer, which is a contradiction. _[This
+contradiction shows that the supposition is false and hence, that the theorem is
+true.]_
+
+---
+
+**Theorem 4.7.2**
+
+There is no integer that is both even and odd.
+
+**Proof:**
+
+_[We take the negation of the theorem and suppose it to be true.]_ Suppose not.
+That is, suppose that there is at least one integer $n$ that is both even and
+odd. _[We must deduce a contradiction.]_ By definition of even, $n = 2a$ for
+some integer $a$, and by definition of odd, $n = 2b + 1$ for some integer $b$.
+Consequently,
+
+$$ 2a = 2b + 1 \quad \text{ by equating the two expressions for } n $$
+
+and so
+
+$$
+2a - 2b = 1 \\
+2(a - b) = 1 \\
+a j b = \frac{1}{2} \quad \text{ by algebra}
+$$
+
+Now since $a$ and $b$ are integers, the difference $a - b$ must also be an
+integer. But $a - b = \dfrac{1}{2}$, and $\dfrac{1}{2}$ is not an integer. Thus
+$a - b$ is an integer and $a - b$ is not an integer, which is a contradiction.
+_[This contradiction shows that the supposition is false and, hence, that the
+theorem is true.]_
+
+---
+
+Page 244
+
+**Theorem 4.7.3**
+
+The sum of any rational number and any irrational number is irrational.
+
+**Proof:**
+
+_[We take the negation of the theorem and suppose it to be true.]_ Suppose not.
+That is, suppose there is a rational number $r$ and an irrational number $s$
+such that $r + s$ is rational. _[We must deduce a contradiction.]_ By definition
+of rational, $r = \dfrac{a}{b}$ and $r + s = \dfrac{c}{d}$ for some integers
+$a$, $b$, $c$, and $d$ with $b \neq 0$ and $d \neq 0$. By substitution,
+
+$$ \frac{a}{b} + s = \frac{c}{d} $$
+
+and so,
+
+$$ s = \frac{c}{d} - \frac{a}{b} \quad \text{ by subtracting } \frac{a}{b} \text{ from both sides} $$
+
+$$ = \frac{bc - ad}{bd} $$
+
+Now $bc - ad$ and $bd$ are both integers _[since $a$, $b$, $c$, and $d$ are
+integers and since products and differences of integers are integers]_, and
+$bd \neq 0$ _[by the zero product property.]_ Hence $s$ is a quotient of the two
+integers $bc - ad$ and $bd$ with $bd \neq 0$. Thus, by definition of rational,
+$s$ is rational, which contradicts the supposition that $s$ is irrational.
+_[Hence the supposition is false and the theorem is true.]_
+
+---
+
+Page 245
+
+**Method of Proof by Contraposition**
+
+1. Express the statement to be proved in the form
+
+$$ \forall x \text{ in } D, \text{ if } P(x) \text{ then } Q(x) $$
+
+(This step may be done mentally.)
+
+2. Rewrite this statement in the contrapositive form
+
+$$ \forall x \text{ in } D, \text{ if } Q(x) \text{ is false then } P(x) \text{ is false} $$
+
+(This step may be done mentally.)
+
+3. Prove the contrapositive by a direct proof.
+
+a. Suppose $x$ is a (particular but arbitrarily chosen) element of $D$ such that
+$Q(x)$ is false.
+
+b. Show that $P(x)$ is false.
+
+---
+
+Page 245
+
+**Proposition 4.7.4**
+
+For every integer $n$, if $n^2$ is even then $n$ is even.
+
+**Proof (by contraposition):**
+
+Suppose $n$ is any odd integer. _[We must show that $n^2$ is odd.]_ By
+definition of odd, $n = 2k + 1$ for some integer $k$. By substitution and
+algebra,
+
+$$ n^2 =(2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1 $$
+
+Now $2k^2 + 2k$ is an integer because products and sums of integers are
+integers. So $n^2 = 2 \cdot (\text{an integer}) + 1$, and thus, by definition of
+odd, $n^2$ is odd _[as was to be shown]._
+
+---
+
+Page 246
+
+**Proposition 4.7.4**
+
+For every integer $n$, if $n^2$ is even then $n$ is even.
+
+**Proof (by contradiction):**
+
+_[We take the negation of the theorem and suppose it to be true.]_ Suppose not.
+That is, suppose there is an integer $n$ such that $n^2$ is even and $n$ is not
+even. _[We must deduce a contradiction.]_ By the quotient-remainder theorem with
+divisor equal to $2$, any integer is even or odd. Hence, since $n$ is not even
+it is odd, and thus, by definition of odd, $n = 2k + 1$ for some integer $k$. By
+substitution and algebra,
+
+$$ n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1 $$
+
+Now $2k^2 + 2k$ is an integer because products and sums of integers are
+integers. So $n^2 = 2 \cdot (\text{an integer}) + 1$, and thus, by definition of
+odd, $n^2$ is odd. Therefore, $n^2$ is both even and odd. This contradicts
+Theorem 4.7.2, which states that no integer can be both even and odd. _[This
+contradiction shows that the supposition is false and, hence, that the
+proposition is true.]_
