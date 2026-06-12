@@ -6649,3 +6649,240 @@ $$ y = \text{(e)} \quad \text{ by substitution} $$
 $$ = \frac{ad}{bd} - \frac{bc}{bd} $$
 
 $$ = \frac{ad - bc}{bd} \quad \text{ by algebra} $$
+
+Now both $ad - bc$ and $bd$ are integers and products and differences of (f) are
+(g). And $bd \neq 0$ by the (h). Hence $y$ is a ratio of integers with a nonzero
+denominator, and thus $y$ is (i) by definition of rational. We therefore have
+both that $y$ is irrational and that $y$ is rational, which is a contradiction.
+_[Thus the supposition is false and the statement to be proved is true.]_
+
+9.
+
+a. When asked to prove that the difference of any irrational number and any
+rational number is irrational, a student began, "Suppose not. That is, suppose
+the difference of any irrational number and any rational number is rational."
+What is wrong with beginning the proof in this way? (_Hint:_ If needed, review
+the answer to exercise 11 in Section 3.2.)
+
+b. Prove that the difference of any irrational number and any rational number is
+irrational.
+
+10. Let $S$ be the statement: For all positive real numbers $r$ and $s$,
+    $\sqrt{r + s} \neq \sqrt{r} + \sqrt{s}$. Statement $S$ is true, but the
+    following "proof" is incorrect. Find the mistake.
+
+**"Proof by contradiction:** Suppose not, that is, suppose that for all positive
+real numbers $r$ and $s$, $\sqrt{r + s} = \sqrt{r} + \sqrt{s}$. This means that
+the equation will be true no matter what positive real numbers are substituted
+for $r$ and $s$. So let $r = 9$ and $s = 16$. Then $r$ and $s$ are positive real
+numbers and
+
+$$ \sqrt{r + s} = \sqrt{9 + 16} = \sqrt{25} = 5 $$
+
+whereas
+
+$$ \sqrt{r} + \sqrt{s} = \sqrt{9} + \sqrt{16} = 3 + 4 k 7 $$
+
+Since $5 \neq 7$, we have that $\sqrt{r + s} \neq \sqrt{r} + \sqrt{s}$, which
+contradicts the supposition that $\sqrt{r + s} = \sqrt{r} + \sqrt{s}$. This
+contradiction shows that the supposition is false, and hence statement $S$ is
+true."
+
+11.
+
+Let $T$ be the statement: The sum of any two rational numbers is rational. Then
+$T$ is true, but the following "proof" is incorrect. Find the mistake.
+
+**"Proof by contradiction:** Suppose not. That is, suppose that the sum of any
+two rational numbers is not rational. This means that no matter what two
+rational numbers are chosen their sum is not rational. Now both $1$ and $3$ are
+rational because $1 = \dfrac{1}{1}$ and $3 = \dfrac{3}{1}$, and so both are
+ratios of integers with a nonzero denominator. Hence, by supposition, the sum of
+$1$ and $3$, which is $4$, is not rational. But $4$ is rational because
+$4 = \dfrac{4}{1}$, which is a ratio of integers with a nonzero denominator.
+Hence $4$ is both rational and not rational, which is a contradiction. This
+contradiction shows that the supposition is false, and hence statement $T$ is
+true.
+
+12. Let $R$ be the statement: The square root of any irrational number is
+    irrational.
+
+a. Write the negation for $R$.
+
+b. Prove $R$ by contradiction.
+
+13. Let $S$ be the statement: The product of any irrational number and any
+    nonzero rational number is irrational.
+
+a. Write the negation for $S$.
+
+b. Prove $S$ by contradiction.
+
+14. Let $T$ be the statement: For every integer $a$, if $a \mod 6 = 3$ , then
+    $a \mod 3 \neq 2$.
+
+a. Write a negation for $T$.
+
+b. Prove $T$ by contradiction.
+
+15. Do there exists integers $a$, $b$, and $c$ such that $a$, $b$, and $c$ are
+    all odd and $a^2 + b^2 = c^2$? Prove your answer.
+
+Prove each statement in 16-19 by contradiction.
+
+16. For all odd integers $a$ and $b$, $b^2 - a^2 \neq 4$. (_Hint:_
+    $b^2 - a^2 = (b + a)(b - a)$ and the only way to factor $4$ is either
+    $4 = 2 \cdot 2$ or $4 = 4 \cdot 1$.)
+
+17. For all prime numbers $a$, $b$, and $c$, $a^2 + b^2 \neq c^2$.
+
+18. If $a$ and $b$ are rational numbers, $b \neq 0$, and $r$ is an irrational
+    number, then $a + br$ is irrational.
+
+19. For any integer $n$, $n^2 - 2$ is not divisible by $4$.
+
+20. Fill in the blanks in the following proof by contraposition that for every
+    integer $n$, if $5 \cancel{\mid} n^2$ then $5 \cancel{\mid} n$.
+
+**Proof (by contraposition):** _[The contrapositive is: For every integer $n$,
+if $5 \mid n$ then $5 \mid n^2$.]_ Suppose $n$ is any integer such that (a).
+_[We must show that (b).]_ By definition of divisibility, $n =$ \(c\) for some
+integer $k$. By substitution, $n^2 = $ (d) $= 5(5k^2)$. But $5k^2$ is an integer
+because it is a product of integers. Hence $n^2 = 5 \cdot (\text{an integer})$,
+and so (e) _[as was to be shown]._
+
+21. Consider the statement "For every integer $n$, if $n^2$ is odd then $n$ is
+    odd."
+
+a. Write what you would suppose and what you would need to show to prove this
+statement by contradiction.
+
+b. Write what you would suppose and what you would need to show to prove this
+statement by contraposition.
+
+22. Consider the statement "For every real number $r$, if $r^2$ is irrational
+    then $r$ is irrational."
+
+a. Write what you would suppose and what you would need to show to prove this
+statement by contradiction.
+
+b. Write what you would suppose and what you would need to show to prove this
+statement by contraposition.
+
+Prove each of the statements in 23-25 in two ways: (a) by contraposition and (b)
+by contradiction.
+
+23. The negative of any irrational number is irrational.
+
+24. The reciprocal of any irrational number is irrational. (The **reciprocal**
+    of a nonzero real number $x$ is $\dfrac{1}{x}$.)
+
+25. For every integer $n$, if $n^2$ is odd then $n$ is odd.
+
+Use any method to prove the statements in 26-29.
+
+26. For all integers $a$, $b$, and $c$, if $a \cancel{\mid} bc$ then
+    $a \cancel{\mid} b$.
+
+27. For all positive real numbers $r$ and $s$,
+    $\sqrt{r + s} \neq \sqrt{r} + \sqrt{s}$.
+
+28. For all integers $a$, $c$, and $c$, if $a \mid b$ and $a \cancel{\mid} c$,
+    then $a \cancel{\mid} (b + c)$.
+
+29. For all integers $m$ and $n$, if $m + n$ is even then $m$ and $n$ are both
+    even or $m$ and $n$ are both odd.
+
+30.
+
+a. Let $n = 53$. Find an approximate value for $\sqrt{n}$ and write a list of
+all the prime numbers less than or equal to $\sqrt{n}$. Is the following
+statement true or false? When $n = 53$, $n$ is not divisible by any prime number
+less than or equal to $\sqrt{n}$.
+
+b. Suppose $n$ is a fixed integer. Let $S$ be the statement, "$n$ is not
+divisible by any prime number less than or equal to $\sqrt{n}$." The following
+statement is equivalent to $S$:
+
+$\forall$ prime number $p$, if $p$ is less than or equal to $\sqrt{n}$ then $n$
+is not divisible by $p$.
+
+Which of the following are negations for $S$?
+
+(i) $\exists$ a prime number $p$ such that $p \leq \sqrt{n}$ and $n$ is
+divisible by $p$.
+
+(ii) $n$ is divisible by every prime number less than or equal to $\sqrt{n}$.
+
+(iii) $\exists$ a prime number $p$ such that $p$ is a multiple of $n$ and $p$ is
+less than or equal to $\sqrt{n}$.
+
+(iv) $n$ is divisible by some prime number that is less than or equal to
+$\sqrt{n}$.
+
+(v) $\forall$ prime number $p$, if $p$ is less than or equal to $\sqrt{n}$, then
+$n$ is divisible by $p$.
+
+31.
+
+a. Prove by contraposition: For all positive integers $n$, $r$, and $s$, if
+$rs \leq n$, then $r \leq \sqrt{n}$ or $s \leq \sqrt{n}$.
+
+b. Prove: For each integer $n > 1$, if $n$ is not prime then there exists a
+prime number $p$ such that $p \leq \sqrt{n}$ and $n$ is divisible by $p$.
+(_Hint:_ Use the results of part (a), Theorems 4.4.1, 4.4.3, and 4.4.4, and the
+transitive property of order.)
+
+c. State the contrapositive of the result of part (b). The results of exercise
+31 provide a way to test whether an integer is prime.
+
+**Test for Primality**
+
+Given an integer $n > 1$, to test whether $n$ is prime check to see if it is
+divisible by a prime number less than or equal to its square root. If it is not
+divisible by any of these numbers, then it is prime.
+
+32. Use the test for primality to determine whether the following numbers are
+    prime or not.
+
+a. 667
+
+b. 557
+
+c. 527
+
+d. 613
+
+33. The sieve of Eratosthenes, named after its inventor, the Greek scholar
+    Eratosthenes (276-194 B.C.E.), provides a way to find all prime numbers less
+    than or equal to some fixed number $n$. To construct it, write out all the
+    integers from $2$ to $n$. Cross out all multiples of $2$ except $2$ itself,
+    then all multiples of $3$ except $3$ itself, then all multiples of $5$
+    except $5$ itself, and so forth. Continue crossing out the multiples of each
+    successive prime number up to $\sqrt{n}$. The numbers that are not crossed
+    out are all the prime numbers from $2$ to $n$. Here is a sieve of
+    Eratosthenes that includes the numbers from $2$ to $27$. The multiples of
+    $2$ are crossed out with a /, the multiples of 3 with a \, and the multiples
+    of 5 with a -.
+
+See image on Page 250.
+
+Use the sieve of Eratosthenes to find all prime numbers less than $100$.
+
+34. Use the test for primality and the result of exercise 33 to determine
+    whether the following numbers are prime.
+
+a. 9,269
+
+b. 9,103
+
+c. 8,623
+
+d. 7,917
+
+35. Use proof by contradiction to show that every integer greater than 11 is a
+    sum of two composite numbers.
+
+36. For all odd integers $a$, $b$, and $c$, if $z$ is a solution of
+    $ax^2 + bx + c = 0$ then $z$ is irrational. (In the proof, use the
+    properties of even and odd integers that are listed in Example 4.3.3.)
