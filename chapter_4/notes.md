@@ -978,3 +978,135 @@ odd, $n^2$ is odd. Therefore, $n^2$ is both even and odd. This contradicts
 Theorem 4.7.2, which states that no integer can be both even and odd. _[This
 contradiction shows that the supposition is false and, hence, that the
 proposition is true.]_
+
+---
+
+Page 252
+
+**Theorem 4.8.1 Irrationality of $\sqrt{2}$**
+
+$\sqrt{2}$ is irrational.
+
+**Proof (by contradiction):**
+
+_[We take the negation and suppose it to be true.]_ Suppose not. That is,
+suppose $\sqrt{2}$ is rational. Then there are integers $m$ and $n$ with no
+common factors such that
+
+$$ \sqrt{2} = \frac{m}{n} $$
+
+_[by dividing $m$ and $n$ by any common factors if necessary]._ _[We must derive
+a contradiction.]_ Squaring both sides of equation (4.8.1) gives
+
+$$ 2 = \frac{m^2}{n^2} $$
+
+Or, equivalently,
+
+$$ m^2 = 2n^2 $$
+
+Note that equation (4.8.2) implies that $m^2$ is even (by definition of even).
+It follows that $m$ is even (by Proposition 4.7.4). We file this fact away for
+future reference and also deduce (by definition of even) that
+
+$$ m = 2k \quad \text{ for some integer } k $$
+
+Substituting equation (4.8.3) into equation (4.8.2), we see that
+
+$$ m^2 = (2k)^2 = 4k^2 = 2n^2 $$
+
+Dividing both sides of the right-most equation by $2$ gives
+
+$$ n^2 = 2k^2 $$
+
+Consequently, $n^2$ is even, and so $n$ is even (by Proposition 4.7.4). But we
+also know that $m$ is even. _[This is the fact we filed away.]_ Hence both $m$
+and $n$ have a common factor of $2$. But this contradicts the supposition that
+$m$ and $n$ have no common factors. _[Hence the supposition is false and so the
+theorem is true.]_
+
+---
+
+Page 253
+
+**Proposition 4.8.2**
+
+$1 + 3\sqrt{2}$ is irrational.
+
+**Proof (by contradiction):**
+
+Suppose not. Suppose $1 + 3\sqrt{2}$ is rational. _[We must derive a
+contradiction.]_ Then by definition of rational,
+
+$$ 1 + 3\sqrt{2} = \frac{a}{b} \quad \text{ for some integers } a \text{ and } b \text{ with } b \neq 0 $$
+
+It follows that
+
+$$ 3\sqrt{2} = \frac{a}{b} - 1 \quad \text{ by subtracting } 1 \text{ from both sides} $$
+
+$$ = \frac{a}{b} - \frac{b}{b} \quad \text{ by substitution} $$
+
+$$ = \frac{a - b}{b} $$
+
+Hence
+
+$$ \sqrt{2} = \frac{a - b}{3b} $$
+
+But $a - b$ and $3b$ are integers (since $a$ and $b$ are integers and
+differences and products of integers are integers), and $3b \neq 0$ by the zero
+product property. Hence $\sqrt{2}$ is a quotient of the two integers $a - b$ and
+$3b$ with $3b \neq 0$, and so $\sqrt{2}$ is rational (by definition of
+rational). This contradicts the fact that $\sqrt{2}$ is irrational. _[The
+contradiction shows that the supposition is false.]_ Hence $1 + 3\sqrt{2}$ is
+irrational.
+
+---
+
+Page 254
+
+**Proposition 4.8.3**
+
+For any integer $a$ and any prime number $p$, if $p \mid a$ then
+$p \cancel{\mid} (a + 1)$.
+
+**Proof (by contradiction):**
+
+Suppose not. That is, suppose there exists an integer $a$ and a prime number $p$
+such that $p \mid a$ and $p \mid (a + 1)$. Then, by definition of divisibility,
+there exists integers $r$ and $s$ such that $a = pr$ and $a + 1 = ps$. It
+follows that
+
+$$ 1 = (a + 1) - a = ps - pr = p(s - r) $$
+
+and so (since $s - r$ is an integer) $p \mid 1$. But, by Theorem 4.4.2, the only
+integer divisors of $1$ are $1$ and $-1$, and $p > 1$ because $p$ is prime. Thus
+$p \leq 1$ and $p > 1$, which is a contradiction. _[Hence the supposition is
+false, and the proposition is true.]_
+
+---
+
+Page 254
+
+**Theorem 4.8.4 Infinitude of the Primes**
+
+The set of prime numbers is infinite.
+
+**Proof (by contradiction):**
+
+Suppose not. That is, suppose the set of prime numbers is finite. _[WE must
+deduce a contradiction.]_ Then some prime number $p$ is the largest of all the
+prime numbers, and hence we can list the prime numbers in ascending order.
+
+$$ 2, 3< 5, 7, 11, \dots, p $$
+
+Let $N$ be the product of all the prime numbers plus $1$:
+
+$$ N = (2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \dots p) + 1 $$
+
+Then $N > 1$, and so, by Theorem 4.4.4, $N$ is divisible by some prime number
+$q$. Because $q$ is prime, $q$ must equal one of the prime numbers
+$2, 3, 5< 7, 11, \dots, p$. Thus, by definition of divisibility, $q$ divides
+$2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \dots p$, and so, by Proposition 4.8.3, $q$
+does not divide $(2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \dots p) + 1$, which equals
+$N$. Hence $N$ is divisible by $q$ and $N$ is not divisible by $q$, and we have
+reached a contradiction. _[Therefore, the supposition is false and the theorem
+is true.]_

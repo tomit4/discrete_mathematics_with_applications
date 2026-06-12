@@ -7859,3 +7859,195 @@ d. 7,917
 36. For all odd integers $a$, $b$, and $c$, if $z$ is a solution of
     $ax^2 + bx + c = 0$ then $z$ is irrational. (In the proof, use the
     properties of even and odd integers that are listed in Example 4.3.3.)
+
+---
+
+Page 256
+
+**Exercise Set 4.8**
+
+1. A calculator display shows that $\sqrt{2} = 1.414213562$. Because
+   $1.414213562 = \dfrac{1414213562}{1000000000}$, this suggests that $\sqrt{2}$
+   is a rational number, which contradicts Theorem 4.8.1. Explain the
+   discrepancy.
+
+2. Example 4.3.1(h) illustrates a technique for showing that any repeating
+   decimal number is rational. A calculator display shows the result of a
+   certain calculation as $40.72727272727$. Can you be sure that the result of
+   the calculation is a rational number? Explain.
+
+3. Could there be a rational number whose first trillion digits are the same as
+   the first trillion digits of $\sqrt{2}$? Explain.
+
+4. A calculator display shows that the result of a certain calculation is $0.2$.
+   Can you be sure that the result of the calculation is a rational number?
+
+5. Let $s$ be the statement: The cube root of every irrational number is
+   irrational. This statement is true, but the following "proof" is incorrect.
+   Explain the mistake.
+
+**"Proof (by contradiction):**
+
+Suppose not. Suppose the cube root of every irrational number is rational. But
+$2\sqrt{2}$ is irrational because it is a product of a rational and an
+irrational number, and the cube root of $2\sqrt{2}$ is $\sqrt{2}$, which is
+irrational. This is a contradiction, and hence it is not true that the cube root
+of every irrational number is rational. Thus the statement to be proved is
+true."
+
+Determine which statements in 6-16 are true and which are false. Prove those
+that are true and disprove those that are false.
+
+6. $6 - 7\sqrt{2}$ is irrational.
+
+7. $3\sqrt{2} - 7$ is irrational.
+
+8. $\sqrt{4}$ is irrational.
+
+9. $\dfrac{\sqrt{2}}{6}$ is irrational.
+
+10. The sum of any two irrational numbers is irrational.
+
+11. The difference of any two irrational numbers is irrational.
+
+12. The positive square root of a positive irrational number is irrational.
+
+13. If $r$ is any rational number and $s$ is any irrational number, then
+    $\dfrac{r}{s}$ is irrational.
+
+14. The sum of any two positive irrational numbers is irrational.
+
+15. The product of two irrational numbers is irrational.
+
+16. If an integer greater than $1$ is a perfect square, then its cube root is
+    irrational.
+
+17. Consider the following sentence: If $x$ is rational then $\sqrt{x}$ is
+    irrational. Is this sentence always true, sometimes true and sometimes
+    false, or always false? Justify your answer.
+
+18.
+
+a. Prove that for every integer $a$, if $a^3$ is even then $a$ is even.
+
+b. Prove that $\sqrt[3]{2}$ is irrational.
+
+19.
+
+a. Use proof by contradiction to show that for any integer $n$, it is impossible
+for $n$ to equal both $3q_1 + r_1$ and $3q_2 + r_2$, where $q_1$, $q_2$, $r_1$,
+and $r_2$ are integers, $0 \leq r_1 < 3$, $0 \leq r_2 < 3$, and $r_1 \neq r_2$.
+
+b. Use proof by contradiction, the quotient-remainder theorem, division into
+cases, and the result of part (a) to prove that for every integer $n$, if $n^2$
+is divisible by $3$ then $n$ is divisible by $3$.
+
+c. Prove that $\sqrt{3}$ is irrational.
+
+20. Give an example to show that if $d$ is not prime and $n^2$ is divisible by
+    $d$, then $n$ need not be divisible by $d$.
+
+21. The quotient-remainder theorem says not only that there exist quotients and
+    remainders but also that the quotient and remainder of a division are
+    unique. Prove the uniqueness. That is, prove that if $a$ and $d$ are
+    integers with $d > 0$ and if $q_1$, $r_1$, $q_2$, and $r_2$ are integers
+    such that
+
+$$ a = dq_1 + r_1 \quad \text{ where } 0 \leq r_1 < d $$
+
+and
+
+$$ a = dq_2 + r_2 \quad \text{ where } 0 \leq r_2 < d $$
+
+then
+
+$$ q_1 = q_2 \quad \text{ and } r_1 = r_2 $$
+
+22. Prove that $\sqrt{5}$ is irrational.
+
+23. Prove that for any integer $a$, $9 \cancel{\mid} (a^2 - 3)$.
+
+24. An alternative proof of the irrationality of $\sqrt{2}$ counts the number of
+    $2$'s on the two sides of the equation $2n^2 = m^2$ and uses the unique
+    factorization of integers theorem to deduce a contradiction. Write a proof
+    that uses this approach.
+
+25. Use the proof technique illustrated in exercise 24 to prove that if $n$ is
+    any positive integer that is not a perfect square, then $\sqrt{n}$ is
+    irrational.
+
+26. Prove that $\sqrt{2} + \sqrt{3}$ is irrational.
+
+27. Prove that $\log_5(2)$ is irrational. (_Hint:_ Use the unique factorization
+    of integers theorem.)
+
+28. Let $N = 2 \cdot 3 \cdot 5 \cdot 7 + 1$. What remainder is obtained when $N$
+    is divided by $2$?$3$?$5$?$7$? Justify your answer.
+
+29. Suppose $a$ is an integer and $p$ is a prime number such that $p \mid a$ and
+    $p \mid (a + 3)$. What can you deduce about $p$? Why?
+
+30. Let $p_1, p_2, p_3, \dots$ be a list of all prime numbers in ascending
+    order. Here is a table of the first six:
+
+| $p_1$ | $p_2$ | $p_3$ | $p_4$ | $p_5$ | $p_6$ |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| $2$   | $3$   | $5$   | $7$   | $11$  | $13$  |
+
+a. Let
+$N_1 = p_1, N_2 = p_1 \cdot p_2, N_3 = p_1 \cdot p_2 \cdot p_3, \dots N_6 = p_1 \cdot p_2 \cdot p_3 \cdot p_4 \cdot p_5 \cdot p_6$.
+Calculate $N_1$, $N_2$, $N_3$, $N_4$, $N_5$, and $N_6$.
+
+b. For each $i = 1, 2, 3, 4, 5, 6$, find whether $N_i$ is itself prime or just
+has a prime factor less than itself. (_Hint:_ Use the test for primality from
+exercise 31 in Section 4.7 to determine your answers.)
+
+For exercises 31 and 32, use the fact that for ever integer $n$,
+
+$$ n! = n(n - 1) \dots 3 \cdot 2 \cdot 1 $$
+
+31. An alternative proof of the infinitude of the prime numbers begins as
+    follows:
+
+**Proof:** Suppose there are only finitely many prime numbers. Then one is the
+largest. Call it $p$. Let $M = p! + 1$. We will show that there is a prime
+number $q$ such that $q > p$. Complete this proof.
+
+32. Prove that for every integer $n$, if $n > 2$ then there is a prime number
+    $p$ such that $n < p < n!$.
+
+33. Prove that if $p_1, p_2, \dots$, and $p_n$ are distinct prime numbers with
+    $p_1 = 2$ and $n > 1$, then $p_1, p_2, \dots, p_n + 1$ can be written in the
+    form $4k + 3$ for some integer $k$.
+
+34.
+
+a. Fermat's last theorem says that for every integer $n > 2$, the equation
+$x^n + y^n = z^n$ has no positive integer solution (solution for which $x$, $y$,
+and $z$ are positive integers). Prove the following: If for every prime number
+$p > 2$, $x^p + y^p = z^p$ has no positive integer solution, then for any
+integer $n > 2$ that is not a power of $2$, $x^n + y^n = z^n$ has no positive
+integer solution.
+
+b. Fermat proved that there are no integers $x$, $y$, and $z$ such that
+$x^4 + y^4 = z^4$. Use this result to remove the restriction in part (a) that
+$n$ not be a power of $2$. That is, prove that if $n$ is a power of $2$ and
+$n > 4$, then $x^n + y^n = z^n$ has no positive integer solution.
+
+For exercises 35-38 note that to show there is a unique object with a certain
+property, show that (1) there is an object with the property and (2) if objects
+$A$ and $B$ have the property, then $A = B$.
+
+35. Prove that there exists a unique prime number of the form $n^2 - 1$, where
+    $n$ is an integer that is greater than or equal to $2$.
+
+36. Prove that there exists a unique prime number of the form $n^2 + 2n - 3$,
+    where $n$ is a positive integer.
+
+37. Prove that there is at most one real number $a$ with the property that
+    $a + r = r$ for every real number $r$. (Such a number is called an _additive
+    identity_.)
+
+38. Prove that there is at most one real number $b$ with the property that
+    $br = r$ for every real number $r$. (Such a number is called a
+    _multiplicative identity_.)
