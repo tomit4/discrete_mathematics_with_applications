@@ -210,10 +210,16 @@ Page 248
 1. To prove a statement by contradiction, you suppose that ______ and you show
    that ______.
 
+the statement is false; this supposition leads to a contradiction
+
 2. A proof by contraposition of a statement of the form
    "$\forall x \in D, \text{ if } P(x) \text{ then } Q(x)$" is a direct proof of
    ______.
 
+$\forall x \in D, \text{ if } \neg Q(x) \text{ then } \neg P(x)$
+
 3. To prove a statement of the form
    "$\forall x \in D, \text{ if } P(x) \text{ then } Q(x)$" by contraposition,
    you suppose that ______ and you show that ______.
+
+$Q(x)$ is false; $P(x)$ is false.
