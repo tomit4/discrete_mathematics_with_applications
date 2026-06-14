@@ -7807,8 +7807,6 @@ c. State the contrapositive of the result of part (b). The results of exercise
 
 Omitted.
 
-RESUME HERE.
-
 **Test for Primality**
 
 Given an integer $n > 1$, to test whether $n$ is prime check to see if it is
@@ -7871,16 +7869,59 @@ Page 256
    is a rational number, which contradicts Theorem 4.8.1. Explain the
    discrepancy.
 
+The reason for this discrepancy is due to mistaking
+$\sqrt{2} \approx 1.41.4213562$ for $\sqrt{2} = 1.414213562$. The calculator
+cannot display $\sqrt{2}$ finitely as it is an irrational number and its
+non-repeating decimal goes on forever. Therefore, you cannot find equivalencies
+for 1.414213562 and express $\sqrt{2}$ as a rational number as it is
+"demonstrated" here.
+
 2. Example 4.3.1(h) illustrates a technique for showing that any repeating
    decimal number is rational. A calculator display shows the result of a
    certain calculation as $40.72727272727$. Can you be sure that the result of
    the calculation is a rational number? Explain.
 
+Yes. The reason you can be sure that the result of the calculation is a rational
+number is because repeating decimal places can always be expressed as a rational
+number usually by subtracting the repeating decimal places from a larger number
+with the same repeating decimal places. For the given example:
+
+Let $x = 40.72727272727 \dots$, so $100x = 4072.727272727 \dots$. Then:
+
+$$ 100x - x = 99x = 4072.727272727\dots - 40.72727272727\dots = 4032 $$
+
+$$ 99x = 4032  $$
+
+$$ x = \frac{4032}{99} $$
+
+Which is an expression for 40.72727272727 in rational form.
+
 3. Could there be a rational number whose first trillion digits are the same as
    the first trillion digits of $\sqrt{2}$? Explain.
 
+Yes, because the first trillion digits of $\sqrt{2}$ is potentially finite. In
+that case it is rational. In another case where the first trillion digits are
+then repeated, then we know by 4.3.1(h) that this form of a decimal is also
+rational. Similarly, if even smaller portions of those first trillion digits are
+then repeated, this same principle applies.
+
 4. A calculator display shows that the result of a certain calculation is $0.2$.
    Can you be sure that the result of the calculation is a rational number?
+
+Yes. Since the decimal $0.2$ has a finite amount of decimal places, we can
+simply express it as a fraction:
+
+Let $x = 0.2$ and $10x = 2$.
+
+Then:
+
+$$ 10x = 2 $$
+
+$$ x = \frac{2}{10} $$
+
+$$ x = \frac{1}{5} $$
+
+Where $1$ and $5$ are integers and $5 \neq 0$. This is a rational number.
 
 5. Let $s$ be the statement: The cube root of every irrational number is
    irrational. This statement is true, but the following "proof" is incorrect.
@@ -7895,42 +7936,309 @@ irrational. This is a contradiction, and hence it is not true that the cube root
 of every irrational number is rational. Thus the statement to be proved is
 true."
 
+This incorrect proof has two problems. One is that in its supposition, the
+wording suggests that the cube root of _every_ irrational number is rational,
+when the negation of the given statement would be that "Suppose the cube root of
+_some_ irrational number is rational."
+
+The author of this incorrect proof then goes onto use a specific example of
+$2\sqrt{2}$ for their proof. While this is fine for a disproof by
+counterexample, a proof by contradiction should be more general. It should
+instead read as:
+
+**Proof by contradiction:**
+
+Suppose not. Suppose the cube root of some irrational number $x$, is rational.
+
+Since the cube root of $x$ is rational, this means that
+$\sqrt[3]{x} = \dfrac{a}{b}$ for some integers $a$ and $b$ where $b \neq 0$.
+
+Then, by laws of algebra:
+
+$$ \sqrt[3]{x} = \frac{a}{b} $$
+
+$$ x = \left(\frac{a}{b}\right)^3 $$
+
+$$ x = \frac{a^3}{b^3} $$
+
+Now, $a^3$ and $b^3$ are integers by the product of integers, where $b^3 \neq 0$
+by the zero product property. Thus $x$ is a rational number and an irrational
+number.
+
+This is a contradiction.
+
+Q.E.D.
+
 Determine which statements in 6-16 are true and which are false. Prove those
 that are true and disprove those that are false.
 
 6. $6 - 7\sqrt{2}$ is irrational.
 
+**Proof by contradiction:**
+
+Suppose not. Suppose $6 - 7\sqrt{2}$ is rational. Then by definition of
+rational,
+
+$$ 6 - 7\sqrt{2} = \frac{a}{b} $$
+
+For some integers $a$ and $b$ where $b \neq 0$.
+
+It follows that:
+
+$$ 6 - 7\sqrt{2} = \frac{a}{b} $$
+
+$$ -7\sqrt{2} = \frac{a}{b} - 6 $$
+
+$$ \sqrt{2} = \frac{6 - \dfrac{a}{b}}{7} $$
+
+$$ \sqrt{2} = \frac{6b - a}{7b} $$
+
+Now, since $6b - a$ and $7b$ are integers by the product and difference of
+integers and $7b \neq 0$ by the zero product property. This means that
+$\sqrt{2}$ is rational. The $\sqrt{2}$, however, is known to not be rational by
+Theorem 4.8.1.
+
+This is a contradiction.
+
+Q.E.D.
+
 7. $3\sqrt{2} - 7$ is irrational.
+
+**Proof by contradiction:**
+
+Suppose not. Suppose $\sqrt{2} - 7$ is rational.
+
+Since $\sqrt{2} - 7$ is rational, $\sqrt{2} - 7 = \dfrac{a}{b}$ for some
+integers $a$ and $b$ where $b \neq 0$.
+
+Then, by laws of algebra:
+
+$$ \sqrt{2} - 7 = \frac{a}{b} $$
+
+$$ \sqrt{2} = \frac{a}{b} + 7 $$
+
+$$ \sqrt{2} = \frac{a + 7b}{b} $$
+
+Now, $a + 7b$ is an integer by the product and sum of integers. Thus $\sqrt{2}$
+is rational. We know, however, by Theorem 4.8.1 that $\sqrt{2}$ is irrational.
+
+This is a contradiction.
+
+Q.E.D.
 
 8. $\sqrt{4}$ is irrational.
 
+This is false. $\sqrt{4} = 2 = \dfrac{2}{1}$, which is rational.
+
 9. $\dfrac{\sqrt{2}}{6}$ is irrational.
+
+**Proof by contradiction:**
+
+Suppose not. Suppose $\dfrac{\sqrt{2}}{6}$ is rational. Then by the definition
+of rational:
+
+$$ \frac{\sqrt{2}}{6} = \frac{a}{b} $$
+
+for some integers $a$ and $b$ where $b \neq 0$.
+
+Then, by laws of algebra:
+
+$$ \sqrt{2} = \frac{6a}{b} $$
+
+Now, $6a$ is an integer by the product of integers. Thus $\sqrt{2}$ is a
+rational number. We know by Theorem 4.8.1 that $\sqrt{2}$ is irrational.
+
+This is a contradiction.
+
+Q.E.D.
 
 10. The sum of any two irrational numbers is irrational.
 
+**Proof by counterexample:**
+
+Let $a = \sqrt{2}$, and let $b = -\sqrt{2}$. Then, their sum is:
+
+$$ a + b = \sqrt{2} + (-\sqrt{2}) = 0 = \frac{0}{1} $$
+
+Which is rational. This statement is false.
+
+Q.E.D.
+
 11. The difference of any two irrational numbers is irrational.
 
+**Proof by counterexample:**
+
+Let $a = \sqrt{2}$, and let $b = \sqrt{2}$. Then, their sum is:
+
+$$ a + b = \sqrt{2} - \sqrt{2}) = 0 = \frac{0}{1} $$
+
+Which is rational. This statement is false.
+
+Q.E.D.
+
 12. The positive square root of a positive irrational number is irrational.
+
+$$ \forall x \in \mathbb{R} (I(x) \to I(\sqrt{x})) $$
+
+Contrapositive:
+
+$$ \forall x \in \mathbb{R} (\neg I(\sqrt{x}) \to \neg I(x)) $$
+
+$$ \forall x \in \mathbb{R} (R(\sqrt{x}) \to R(x)) $$
+
+**Proof by contraposition:**
+
+Suppose $r$ is any positive real number such that $\sqrt{r}$ is rational.
+
+Since $\sqrt{r}$ is rational, $\sqrt{r} = \dfrac{a}{b}$ where $a$ and $b$ are
+integers and $b \neq 0$.
+
+Then:
+
+$$ \sqrt{r} = \frac{a}{b} $$
+
+$$ r = \left(\frac{a}{b}\right)^2 $$
+
+$$ r = \frac{a^2}{b^2} $$
+
+Now, $a^2$ and $b^2$ are both integers by the product of integers and
+$b^2 \neq 0$ by the zero product property.
+
+Therefore $r$ is a rational number.
+
+Q.E.D.
 
 13. If $r$ is any rational number and $s$ is any irrational number, then
     $\dfrac{r}{s}$ is irrational.
 
+**Proof by counterexample:**
+
+Let $r = 0$ and $s = \sqrt{2}$, then
+$\dfrac{r}{s} = \dfrac{0}{\sqrt{2}} = 0 = \dfrac{0}{1}$ which is rational.
+
+Therefore, this statement is false.
+
+Q.E.D.
+
 14. The sum of any two positive irrational numbers is irrational.
+
+**Proof by counterexample:**
+
+Let $x = \sqrt{2}$ and $y = 2 - \sqrt{2}$, then:
+
+$$ x + y = \sqrt{2} + (2 - \sqrt{2}) = 2 = \dfrac{2}{1} $$
+
+Thus, $x + y$ is a rational number.
+
+Therefore, this statement is false.
+
+Q.E.D.
 
 15. The product of two irrational numbers is irrational.
 
+**Proof by counterexample:**
+
+$$ \sqrt{2} \cdot \sqrt{2} = (\sqrt{2})^2 = 2 = \frac{2}{1} $$
+
+Which is a rational number.
+
+This statement is false.
+
+Q.E.D.
+
 16. If an integer greater than $1$ is a perfect square, then its cube root is
     irrational.
+
+**Proof by counterexample:**
+
+Consider $64 = 8^2$, then $64 > 1$ and $64$ is a perfect square. Then consider
+$\sqrt[3]{64} = 4 = \dfrac{4}{1}$. Thus $\sqrt[3]{64}$ is rational.
+
+Thus there is at least one integer greater than $1$ that is a perfect square and
+its cube root is rational.
+
+This statement is false.
+
+Q.E.D.
 
 17. Consider the following sentence: If $x$ is rational then $\sqrt{x}$ is
     irrational. Is this sentence always true, sometimes true and sometimes
     false, or always false? Justify your answer.
 
+This statement is sometimes true and sometimes false. Consider when $x = 2$,
+then $\sqrt{2}$ is irrational. This is the case when the statement is true. Then
+consider when $x = 9$ then $\sqrt{9} = 3 = \dfrac{3}{1}$ is rational.. This is a
+case when the statement is false. Therefore this statement is sometimes true and
+sometimes false.
+
 18.
 
 a. Prove that for every integer $a$, if $a^3$ is even then $a$ is even.
 
+**Proof by contrapositive:**
+
+Suppose $a$ is any integer such that $a$ is odd.
+
+Since $a$ is odd, $a = 2k + 1$ for some integer $k$.
+
+Then:
+
+$$ a^3 = (2k + 1)^3 $$
+
+$$ a^3 = 8k^3 + 12k^2 + 6k + 1 $$
+
+$$ a^3 = 2(4k^3 + 6k^2 + 3k) + 1 $$
+
+Now, $4k^3 + 6k^2 + 3k$ is an integer by the product and sum of integers.
+Therefore $a^3$ is odd by definition of odd integers.
+
+Q.E.D.
+
 b. Prove that $\sqrt[3]{2}$ is irrational.
+
+**Proof by contradiction:**
+
+Suppose not. That is, suppose $\sqrt[3]{2}$ is rational. Then, by definition of
+rational:
+
+$$ \sqrt[3]{2} = \frac{a}{b} $$
+
+for some integers $a$ and $b$ where $b \neq 0$ and $\dfrac{a}{b}$ is written in
+lowest terms.
+
+Then:
+
+$$ \sqrt[3]{2} = \frac{a}{b} $$
+
+$$ 2 = \left(\frac{a}{b}\right)^3 $$
+
+$$ 2 = \frac{a^3}{b^3} $$
+
+$$ 2b^3 = a^3 $$
+
+Now, by the definition of even integers, we know that $a^3$ is even. We also
+know by part (a), that if $a^3$ is even, then $a$ is even.
+
+Since $a$ is even, $a = 2k$ for some integer $k$. Then:
+
+$$ 2b^3 = (2k)^3 $$
+
+$$ 2b^3 = 8k^3 $$
+
+$$ 2b^3 = 8k^3 $$
+
+$$ b^3 = 4k^3 $$
+
+$$ b^3 = 2(2k^3) $$
+
+Now, $2k^3$ is an integer by the product of integers. Additionally, $b^3$ is
+even by the definition of even integers. Additionally, by part (a) $b$ is even
+since $b^3$ is even.
+
+Since both $a$ and $b$ and even, $\sqrt[3]{2}$ is not in lowest terms, so
+$\sqrt[3]{2}$ is not rational, which contradicts the supposition.
+
+Q.E.D.
 
 19.
 
@@ -7938,14 +8246,120 @@ a. Use proof by contradiction to show that for any integer $n$, it is impossible
 for $n$ to equal both $3q_1 + r_1$ and $3q_2 + r_2$, where $q_1$, $q_2$, $r_1$,
 and $r_2$ are integers, $0 \leq r_1 < 3$, $0 \leq r_2 < 3$, and $r_1 \neq r_2$.
 
+**Proof by contradiction:**
+
+Suppose not. That is, suppose $n$ is some integer such
+$n = 3q_1 + r_1 = 3q_2 + r_2$, where $q_1$, $q_2$, $r_1$, and $r_2$ are some
+integers such that $0 \leq r_1 < 3$ and $0 \leq r_2 < 3$ and $r_1 \neq r_2$.
+
+Then:
+
+$$ 3q_1 + r_1 = 3q_2 + r_2 $$
+
+$$ 3q_1 - 3q_2 = r_2 - r_1 $$
+
+$$ 3(q_1 - q_2) = r_2 - r_1 $$
+
+This means that $3 \mid (r_2 - r_1)$.
+
+Since $0 \leq r_1,r_2 < 3$, it follows that:
+
+$$ -2 \leq r_2 - r_1 \leq 2 $$
+
+This means that $3 \cancel{\mid} (r_2 - r_1)$, which contradicts the earlier
+finding that $3 \mid (r_2 - r_1)$.
+
+Q.E.D.
+
 b. Use proof by contradiction, the quotient-remainder theorem, division into
 cases, and the result of part (a) to prove that for every integer $n$, if $n^2$
 is divisible by $3$ then $n$ is divisible by $3$.
 
+**Proof by contradiction:**
+
+Suppose not. That is, suppose $n$ is some integer such that $n^2$ is divisible
+by $3$ and $n$ is not divisible by $3$.
+
+Since $n$ is not divisible by $3$, then $n = 3k + 1$ or $n = 3k + 2$ for some
+integer $k$.
+
+_Case where $n = 3k + 1$:_
+
+$$ n^2 = (3k + 1)^2 $$
+
+$$ n^2 = 9k^2 + 6k + 1 $$
+
+$$ n^2 = 3(3k^2 + 2k) + 1 $$
+
+By the quotient-remainder theorem, this means that $3 \cancel{\mid} n^2$. This
+contradicts the supposition.
+
+_Case where $n = 3k + 2$:_
+
+$$ n^2 = (3k + 2)^2 $$
+
+$$ n^2 = 9k^2 + 12k + 4 $$
+
+$$ n^2 = 9k^2 + 12k + 3 + 1 $$
+
+$$ n^2 = 3(3k^2 + 4k + 1) + 1 $$
+
+By the quotient-remainder theorem, this means that $3 \cancel{\mid} n^2$. This
+contradicts the supposition.
+
+In both cases, the supposition is contradicted.
+
+Q.E.D.
+
 c. Prove that $\sqrt{3}$ is irrational.
+
+**Proof by contradiction:**
+
+Suppose not. Suppose that $\sqrt{3}$ is rational.
+
+Since $\sqrt{3}$ is rational, $\sqrt{3} = \dfrac{a}{b}$ for some integers $a$
+and $b$ where $b \neq 0$ and $\dfrac{a}{b}$ is in lowest terms.
+
+Then:
+
+$$ \sqrt{3} = \frac{a}{b} $$
+
+$$ 3 = \left(\frac{a}{b}\right)^2 $$
+
+$$ 3 = \frac{a^2}{b^2} $$
+
+$$ 3b^2 = a^2 $$
+
+This means that $3 \mid a^2$. By part (b), we then know that $3 \mid a$. This
+means that $a = 3k$ for some integer $k$. Then:
+
+$$ 3b^2 = (3k)^2 $$
+
+$$ 3b^2 = 9k^2 $$
+
+$$ b^2 = 3k^2 $$
+
+This means that $3 \mid b^2$. Then, however, $\dfrac{a}{b}$ is not in lowest
+terms since $3 \mid a$ and $3 \mid b$. This is a contradiction.
+
+Q.E.D.
 
 20. Give an example to show that if $d$ is not prime and $n^2$ is divisible by
     $d$, then $n$ need not be divisible by $d$.
+
+We need to find a non prime number $d$ and a real number $n$ such that:
+
+$$ d \mid n^2 $$
+
+$$ d \cancel{\mid} n $$
+
+Let $d = 4$ and $n = 2$.
+
+Then:
+
+$$ 4 \mid 4 $$
+
+$$ 4 \cancel{\mid} 2 $$
 
 21. The quotient-remainder theorem says not only that there exist quotients and
     remainders but also that the quotient and remainder of a division are
@@ -7963,29 +8377,325 @@ then
 
 $$ q_1 = q_2 \quad \text{ and } r_1 = r_2 $$
 
+**Proof:**
+
+Suppose $a$, $d$ are any integers and $q_1$, $q_2$, $r_1$, and $r_2$ are some
+integers such that $a = dq_1 + r_1$ where $0 \leq r_1 < d$ and $a = dq_2 + r_2$
+where $0 \leq r_2 < d$.
+
+Then:
+
+$$ dq_1 + r_1 = dq_2 + r_2 $$
+
+$$ dq_1 - dq_2 = r_2 - r_1 $$
+
+$$ d(q_1 - q_2) = r_2 - r_1 $$
+
+Since $0 \leq r_1,r_2 < d$, this means that:
+
+$$ -(d - 1) \leq r_2 - r_1 \leq d - 1 $$
+
+And this means:
+
+$$ |r_2 - r_1| < d $$
+
+Since $d(q_1 - q_2) = r_2 - r_1$ means $d \mid (r_2 - r_1)$, but we also know
+that $|r_2 - r_1| < d$, then it follows that $r_2 - r_1 = 0$. Thus, it then
+follows that $r_1 = r_2$
+
+Then by substitution:
+
+$$ d(q_1 - q_2) = r_2 - r_1 $$
+
+$$ q_1 - q_2 = 0 $$
+
+Thus it follows that $q_1 = q_2$.
+
+Therefore, it has been shown that $q_1 = q_2$ and $r_1 = r_2$.
+
+Q.E.D.
+
 22. Prove that $\sqrt{5}$ is irrational.
 
+**Lemma 22:**
+
+If $5$ divides $a^2$, then $5$ divides $a$.
+
+**Proof by contradiction:**
+
+Suppose not, that is suppose $a$ is some integer such that $5 \mid a^2$ and
+$5 \cancel{\mid} a$.
+
+Since $5 \cancel{\mid} a$, this means that $a = 5q + r$ for some unique integers
+$q$ and $r$, such that $1 \leq r < 5$.
+
+Then, by substitution:
+
+$$ a^2 = (5q + r)^2 $$
+
+$$ a^2 = 25q^2 + 10qr + r^2 $$
+
+$$ a^2 = 5(5q^2 + 2qr) + r^2 $$
+
+So:
+
+$$ a^2 \equiv r^2 (\mod 5) $$
+
+Then by cases:
+
+$$ r = 1 \to r^2 (\mod 5) = 1 $$
+
+$$ r = 2 \to r^2 (\mod 5) = 4 $$
+
+$$ r = 3 \to r^2 (\mod 5) = 4 $$
+
+$$ r = 4 \to r^2 (\mod 5) = 1 $$
+
+So in all cases $r^2 \cancel{\equiv} 0 (\mod 5)$
+
+Therefore $5 \cancel{\mid} a^2$, which contradicts the supposition.$
+
+Q.E.D.
+
+**Proof by contradiction:**
+
+Suppose not. Suppose that $\sqrt{5}$ is rational.
+
+Since $\sqrt{5}$ is rational, $\sqrt{5} = \dfrac{a}{b}$ for some integers $a$
+and $b$ where $b \neq 0$ and $\dfrac{a}{b}$ is in lowest terms.
+
+Then:
+
+$$ \sqrt{5} = \frac{a}{b} $$
+
+$$ 5 = \left(\frac{a}{b}\right)^2 $$
+
+$$ 5 = \frac{a^2}{b^2} $$
+
+$$ 5b^2 = a^2 $$
+
+Thus we know that $5 \mid a^2$, and by Lemma 22, we then know that $5 \mid a$.
+
+So, since $5 \mid a$, $a = 5k$ for some integer $k$.
+
+Then by substitution:
+
+$$ 5b^2 = (5k)^2 $$
+
+$$ 5b^2 = 25k^2 $$
+
+$$ b^2 = 5k^2 $$
+
+So then we know that $5 \mid b^2$, and by Lemma 22, we then know that
+$5 \mid b$. Then, however, $\dfrac{a}{b}$ is not in lowest terms. Therefore
+$\sqrt{5}$ is irrational, which contradicts the supposition.
+
+Q.E.D.
+
 23. Prove that for any integer $a$, $9 \cancel{\mid} (a^2 - 3)$.
+
+_Hint:_ This statement is true. If $a^2 - 3 = 9b$, then
+$a^2 = 9b + 3 = 3(3b + 1)$, and so $a^2$ is divisible by $3$. Hence, by exercise
+19(b), $a$ is divisible by $3$. Thus $a^2 =(3c)^2$ for some integer $c$.
+
+**Proof by contradiction:**
+
+Suppose not. That is, suppose that for some integer $a$, $9 \mid (a^2 - 3)$.
+
+Since $9 \mid (a^2 - 3)$, then $a^2 - 3 = 9b$ for some integer $b$. This then
+becomes:
+
+$$ a^2 - 3 = 9b $$
+
+$$ a^2 = 9b + 3 $$
+
+$$ a^2 = 3(3b + 1) $$
+
+So $3 \mid a^2$, by 9(b), we then know that $3 \mid a$. Since $3 \mid a$,
+$a = 3c$ for some integer $c$. By substitution:
+
+$$ (3c)^2 = 3(3b + 1) $$
+
+$$ 9c^2 = 3(3b + 1) $$
+
+$$ 3c^2 = 3b + 1 $$
+
+$$ 3c^2 - 1 = 3b $$
+
+But since $ 3 \cancel{\mid} 3c^2 - 1$ and $3 \mid 3b$, this statement can never
+hold for $b$ and $c$. This is a contradiction.
+
+Q.E.D.
 
 24. An alternative proof of the irrationality of $\sqrt{2}$ counts the number of
     $2$'s on the two sides of the equation $2n^2 = m^2$ and uses the unique
     factorization of integers theorem to deduce a contradiction. Write a proof
     that uses this approach.
 
+Statement: $\sqrt{2}$ is irrational.
+
+**Proof by contradiction:**
+
+Suppose not. That is, suppose $\sqrt{2}$ is rational. Then there are some
+integers $m$ and $n$ where $n \neq 0$ such that:
+
+$$ \sqrt{2} = \frac{m}{n} $$
+
+where $\dfrac{m}{n}$ have no common factors. Then:
+
+$$ \sqrt{2} = \frac{m}{n} $$
+
+$$ 2 = \frac{m^2}{n^2} $$
+
+$$ 2n^2 = m^2 $$
+
+By the unique factorization theorem, we can express $n$ as the product of prime
+numbers as:
+
+$$ n = 2^a \cdot p_1^{e_1} \dots \cdot p_k^{e_k} $$
+
+Then, we can express $n^2$ as:
+
+$$ n^2 = 2^{2a} $$
+
+Since the exponent is even, we know the number of $2s$ in $n^2$ is even. It then
+follows that $2n^2$ adds one more $2$:
+
+$$ 2n^2 = 2^{2a + 1} $$
+
+So $2n^2$ has an odd number of $2$s.
+
+We can then apply the same logic to $m^2$.
+
+$$ m = 2^b \cdot p_1^{e_1} \dots \cdot p_q^{e_q} $$
+
+$$ m^2 = 2^{2b} $$
+
+So $m^2$ has an even number of $2$s. Thus $2n^2$ has an odd number of $2$s and
+$m^2$ has an even number of $2$s, which contradicts the statement $2n^2 = m^2$.
+
+Q.E.D.
+
 25. Use the proof technique illustrated in exercise 24 to prove that if $n$ is
     any positive integer that is not a perfect square, then $\sqrt{n}$ is
     irrational.
 
+**Proof by contradiction:**
+
+Suppose not. That is, suppose $n$ is some positive integer such that $n$ is not
+a perfect square and $\sqrt{n}$ is rational.
+
+Since $\sqrt{n}$ is rational, $\sqrt{n} = \dfrac{a}{b}$ for some integers $a$
+and $b$, where $b \neq 0$ and where $\dfrac{a}{b}$ is in lowest terms.
+
+Then:
+
+$$ \sqrt{n} = \frac{a}{b} $$
+
+$$ n = \left(\frac{a}{b}\right)^2 $$
+
+$$ n = \frac{a^2}{b^2} $$
+
+$$ nb^2 = a^2 $$
+
+By the unique factorization theorem, $a$ can be written as a product of prime
+numbers:
+
+$$ a = p_1^{e_1}p_2^{e_2} \cdot \dots \cdot p_k^{e_k} $$
+
+And:
+
+$$ a^2 = p_1^{2e_1}p_2^{2e_2} \cdot \dots \cdot p_k^{2e_k} $$
+
+This means that all prime exponents in $a^2$ are even.
+
+Similarly:
+
+$$ b = q_1^{f_1}q_2^{f_2} \cdot \dots \cdot q_m^{f_m} $$
+
+And:
+
+$$ b^2 = q_1^{2e_1}q_2^{2e_2} \cdot \dots \cdot q_k^{2e_m} $$
+
+This means that all prime exponents in $b^2$ are even.
+
+Since $nb^2 = a^2$, all prime exponents in $nb^2$ are even since all the prime
+exponents in $a^2$ are even. Therefore $n$ is a perfect square
+
+This contradicts the supposition that $n$ is not a perfect square.
+
+Q.E.D.
+
 26. Prove that $\sqrt{2} + \sqrt{3}$ is irrational.
+
+**Proof by contradiction:**
+
+Suppose not. That is suppose that $\sqrt{2} + \sqrt{3}$ is rational.
+
+Since $\sqrt{2} + \sqrt{3}$ is rational, then
+$\sqrt{2} + \sqrt{3} = \dfrac{a}{b}$ where $a$ and $b$ are some integers and
+$b \neq 0$ and $\dfrac{a}{b}$ has no common factors.
+
+Then, by substitution:
+
+$$ \sqrt{2} + \sqrt{3} = \frac{a}{b} $$
+
+$$ \left(\sqrt{2} + \sqrt{3}\right)^2 = \left(\frac{a}{b}\right)^2 $$
+
+$$ \left(\sqrt{2} + \sqrt{3}\right)\left(\sqrt{2} + \sqrt{3}\right) = \frac{a^2}{b^2} $$
+
+$$ 2 + 2\sqrt{2}\sqrt{3} + 3 = \frac{a^2}{b^2} $$
+
+$$ 2\sqrt{6} + 5 = \frac{a^2}{b^2} $$
+
+$$ 2\sqrt{6} = \frac{a^2}{b^2} - 5 $$
+
+$$ \sqrt{6} = \frac{\dfrac{a^2}{b^2} - 5}{2} $$
+
+$$ \sqrt{6} = \frac{a^2 - 5b^2}{2b^2} $$
+
+By the proof given in exercise 25, we know that $\sqrt{6}$ is irrational.
+
+Now, $a^2 - 5b^2$ is an integer by the product and difference of integers. Also
+$2b^2$ is an integer by the product of integers and $2b^2 \neq 0$ by the zero
+product property.
+
+Therefore $\sqrt{6}$ is a rational number which contradicts what we derived from
+the proof given in exercise 25 that $\sqrt{6}$ is irrational.
+
+Q.E.D.
 
 27. Prove that $\log_5(2)$ is irrational. (_Hint:_ Use the unique factorization
     of integers theorem.)
 
+Omitted.
+
 28. Let $N = 2 \cdot 3 \cdot 5 \cdot 7 + 1$. What remainder is obtained when $N$
     is divided by $2$?$3$?$5$?$7$? Justify your answer.
 
+$$ N = 2(3 \cdot 5 \cdot 7) + 1 $$
+
+$$ N \mod 2 = 1 $$
+
+$$ N = 3(2 \cdot 5 \cdot 7) + 1 $$
+
+$$ N \mod 3 = 1 $$
+
+$$ N = 5(2 \cdot 3 \cdot 7) + 1 $$
+
+$$ N \mod 5 = 1 $$
+
+$$ N = 7(2 \cdot 3 \cdot 5) + 1 $$
+
+$$ N \mod 7 = 1 $$
+
 29. Suppose $a$ is an integer and $p$ is a prime number such that $p \mid a$ and
     $p \mid (a + 3)$. What can you deduce about $p$? Why?
+
+Since $p \mid a$ and $p \mid (a + 3)$, then $p \mid ((a + 3) - a)$. It follows
+then that $p \mid 3$, and the only prime number that divides $3$ is $3$ itself.
+
+$$ p = 3 $$
 
 30. Let $p_1, p_2, p_3, \dots$ be a list of all prime numbers in ascending
     order. Here is a table of the first six:
@@ -7998,9 +8708,31 @@ a. Let
 $N_1 = p_1, N_2 = p_1 \cdot p_2, N_3 = p_1 \cdot p_2 \cdot p_3, \dots N_6 = p_1 \cdot p_2 \cdot p_3 \cdot p_4 \cdot p_5 \cdot p_6$.
 Calculate $N_1$, $N_2$, $N_3$, $N_4$, $N_5$, and $N_6$.
 
+| $N_1$ | $N_2$ | $N_3$ | $N_4$ | $N_5$  | $N_6$   |
+| ----- | ----- | ----- | ----- | ------ | ------- |
+| $2$   | $6$   | $30$  | $210$ | $2310$ | $30030$ |
+
 b. For each $i = 1, 2, 3, 4, 5, 6$, find whether $N_i$ is itself prime or just
 has a prime factor less than itself. (_Hint:_ Use the test for primality from
 exercise 31 in Section 4.7 to determine your answers.)
+
+**Test for Primality**
+
+Given an integer $n > 1$, to test whether $n$ is prime check to see if it is
+divisible by a prime number less than or equal to its square root. If it is not
+divisible by any of these numbers, then it is prime.
+
+$N_1$ is prime.
+
+$N_2$ is not prime.
+
+$N_3$ is not prime.
+
+$N_4$ is not prime.
+
+$N_5$ is not prime.
+
+$N_6$ is not prime.
 
 For exercises 31 and 32, use the fact that for ever integer $n$,
 
@@ -8013,12 +8745,40 @@ $$ n! = n(n - 1) \dots 3 \cdot 2 \cdot 1 $$
 largest. Call it $p$. Let $M = p! + 1$. We will show that there is a prime
 number $q$ such that $q > p$. Complete this proof.
 
+**Proof by contradiction:**
+
+Suppose not. That is suppose there are only finitely many prime numbers. Then
+one is the largest. Call it $p$. Let $M = p! + 1$.
+
+Let $q$ be a prime number such that $q \leq p$.
+
+Since $q \leq p$, $q \mid p!$. This means that:
+
+$$ p! \equiv 0 (\mod q) $$
+
+It then follows that:
+
+$$ M = p! + 1 \equiv 1 (\mod q) $$
+
+So, $q \cancel{\mid} M$.
+
+Since $q$ is a prime number that cannot divide $M$, either $M$ is prime itself
+or $M$ has a prime factor greater than $p$, which contradicts the supposition.
+
+Q.E.D.
+
+We will show that there is a prime number $q$ such that $q > p$.
+
 32. Prove that for every integer $n$, if $n > 2$ then there is a prime number
     $p$ such that $n < p < n!$.
+
+Omitted.
 
 33. Prove that if $p_1, p_2, \dots$, and $p_n$ are distinct prime numbers with
     $p_1 = 2$ and $n > 1$, then $p_1, p_2, \dots, p_n + 1$ can be written in the
     form $4k + 3$ for some integer $k$.
+
+Omitted.
 
 34.
 
@@ -8029,10 +8789,14 @@ $p > 2$, $x^p + y^p = z^p$ has no positive integer solution, then for any
 integer $n > 2$ that is not a power of $2$, $x^n + y^n = z^n$ has no positive
 integer solution.
 
+Omitted.
+
 b. Fermat proved that there are no integers $x$, $y$, and $z$ such that
 $x^4 + y^4 = z^4$. Use this result to remove the restriction in part (a) that
 $n$ not be a power of $2$. That is, prove that if $n$ is a power of $2$ and
 $n > 4$, then $x^n + y^n = z^n$ has no positive integer solution.
+
+Omitted.
 
 For exercises 35-38 note that to show there is a unique object with a certain
 property, show that (1) there is an object with the property and (2) if objects
@@ -8041,13 +8805,21 @@ $A$ and $B$ have the property, then $A = B$.
 35. Prove that there exists a unique prime number of the form $n^2 - 1$, where
     $n$ is an integer that is greater than or equal to $2$.
 
+Omitted.
+
 36. Prove that there exists a unique prime number of the form $n^2 + 2n - 3$,
     where $n$ is a positive integer.
+
+Omitted.
 
 37. Prove that there is at most one real number $a$ with the property that
     $a + r = r$ for every real number $r$. (Such a number is called an _additive
     identity_.)
 
+Omitted.
+
 38. Prove that there is at most one real number $b$ with the property that
     $br = r$ for every real number $r$. (Such a number is called a
     _multiplicative identity_.)
+
+Omitted.

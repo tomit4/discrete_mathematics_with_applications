@@ -234,12 +234,18 @@ Page 256
    length $1$, the ratio of the length of the hypotenuse to the length of one of
    the legs is not equal to a ratio of ______.
 
+two integers.
+
 2. One way to prove that $\sqrt{2}$ is an irrational number is to assume that
    $\sqrt{2} = \dfrac{m}{n}$ for some integers $m$ and $n$ that have no common
    factor greater than $1$, use the lemma that says that if the square of an
    integer is even then ______, and eventually show that $m$ and $n$ ______.
 
+that integer is even; have a common factor greater than 1.
+
 3. One way to prove that there are infinitely many prime numbers is to assume
    that there is a largest prime number $p$, construct the number ______, and
    then show that this number has to be divisible by a prime number that is
    greater than ______.
+
+$N = (2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \cdot \dots \cdot p) + 1$; $p$
