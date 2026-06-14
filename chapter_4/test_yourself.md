@@ -249,3 +249,26 @@ that integer is even; have a common factor greater than 1.
    greater than ______.
 
 $N = (2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \cdot \dots \cdot p) + 1$; $p$
+
+---
+
+**Test Yourself**
+
+Page 265
+
+1. The total degree of a graph is defined as ______.
+
+2. The handshake theorem says that the total degree of a graph is ______.
+
+3. In any graph the number of vertices of odd degree is ______.
+
+4. A simple graph is ______.
+
+5. A complete graph on $n$ vertices is a ______.
+
+6. A complete bipartite graph on $(m, n)$ vertices is a simple graph whose
+   vertices can be divided into two distinct, non-overlapping sets, say $V$ with
+   $m$ vertices and $W$ with $m$ vertices, in such a way that (1) there is
+   ______ from each vertex of $V$ to each vertex of $W$, (2) there is ______
+   from any one vertex of $V$ to any other of $V$, and (3) there is ______ from
+   any one vertex of $W$ to any other vertex of $W$.

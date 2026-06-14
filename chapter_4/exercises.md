@@ -8823,3 +8823,143 @@ Omitted.
     _multiplicative identity_.)
 
 Omitted.
+
+---
+
+**Exercise Set 4.9**
+
+Page 265
+
+In 1 and 2 find the degree of each vertex and the total degree of the graph.
+Check that the number of edges equals one-half of the total degree.
+
+1. See page 265.
+
+2. See page 265.
+
+3. A graph has vertices of degrees 0, 2, 2, 3, and 9. How many edges does the
+   graph have?
+
+4. A graph has vertices of degrees 1, 1, 4, 4, and 6. How many edges does the
+   graph have?
+
+In each of 5-13 either draw a graph with the specified properties or explain why
+no such graph exists.
+
+5. Graph with five vertices of degrees 1, 2, 3, 3, and 5.
+
+6. Graph of four vertices of degrees 1, 2, 3, and 3.
+
+7. Graph with four vertices of degrees 1, 1, 1, and 4.
+
+8. Graph with four vertices of degrees 1, 2, 3, and 4.
+
+9. Simple graph with four vertices of degrees 1, 2, 3, and 4.
+
+10. Simple graph with five vertices of degrees 2, 3, 3, 3, and 5.
+
+11. Simple graph with five vertices of degrees 1, 1, 1, 2, and 3.
+
+12. Simple graph with six edges and all vertices of degree 3.
+
+13. Simple graph with nine edges and all vertices of degree 3.
+
+14. At a party attended by a group of people, two people knew one other person
+    before the party, and five people knew two other people before the party.
+    The rest of the people knew three other people before the party. A total of
+    15 pairs of people knew each other before the party.
+
+a. How many people attending the party knew three other people before the party?
+
+b. How many people attended the party?
+
+15. A small social network contains three people who are network friends with
+    six other people in the network, one person who is network friend with five
+    other people in the network, and five people who are network friends with
+    four other people in the network. The rest are network friends with three
+    other people in the network. The network contains 41 pairs of network
+    friends.
+
+a. How many people are network friends with three other people in the network?
+
+b. How many people are in the network?
+
+16.
+
+a. In a group of 15 people, is it possible for each person to have exactly 3
+friends? Justify your answer. (Assume that friendship is a symmetric
+relationship: If $x$ is a friend of $y$, then $y$ is a friend of $x$.)
+
+b. In a group of 4 people, is it possible for each person to have exactly 3
+friends? Justify your answer.
+
+17. In a group of 25 people, is it possible for each to shake hands with exactly
+    3 other people? Justify your answer.
+
+18. Is there a simple graph, each of whose vertices has even degree? Justify
+    your answer.
+
+19. Suppose that $G$ is a graph with $v$ vertices and $e$ edges and that the
+    degree of each vertex is at least $d_{\text{min}}$ and at most
+    $d_{\text{max}}$. Show that
+
+$$ \frac{1}{2}d_{\text{min}} \cdot v \leq e \leq \frac{1}{2}d_{\text{max}} \cdot v $$
+
+20.
+
+a. Draw $K_6$, a complete graph on six vertices.
+
+b. Use the result of Example 4.9.9 to show that the number of edges of a simple
+graph with $n$ vertices is less than or equal to $\dfrac{n(n - 1)}{2}$.
+
+21.
+
+a. In a simple graph, must every vertex have degree that is less than the number
+of vertices in the graph? Why?
+
+b. Can there be a simple graph that has four vertices all of different degrees?
+Why?
+
+c. For any integer $n \geq 5$, can there be a simple graph that has $n$ vertices
+all of different degrees? Why?
+
+22. In a group of two or more people, must there always be at least two people
+    who are acquainted with the same number of people within the group? Why?
+
+23. Recall that $K_{m, n}$ denotes a complete bipartite graph on $(m, n)$
+    vertices.
+
+a. Draw $K_{4, 2}$.
+
+b. Draw $K_{1, 3}$.
+
+c. Draw $K_{3, 4}$.
+
+d. How many vertices of $K_{m, n}$ have degree $m$? degree $n$?
+
+e. What is the total degree of $K_{m, n}$?
+
+f. Find a formula in terms of $m$ and $n$ for the number of edges of $K_{m, n}$.
+Justify your answer.
+
+24. A (general) **bipartite graph** $G$ is a simple graph whose vertex set can
+    be partitioned into two disjoint nonempty subsets $V_1$ and $V_2$ such that
+    vertices in $V_1$ may be connected to vertices in $V_2$, but no vertices in
+    $V_1$ and no vertices in $V_2$ are connected to other vertices in $V_2$. For
+    example, the bipartite graph $G$ illustrated in (i) can be redrawn as shown
+    in (ii). From the drawing in (ii), you can see that $G$ is bipartite with
+    mutually disjoint vertex sets $V_w = \{v_1, v_3, v_5\}$ and
+    $V_2 = \{v_2, v_4, v_6\}$.
+
+(i) See Page 266
+
+(ii) See Page 266
+
+Find which of the following graphs are bipartite. Redraw the bipartite graphs so
+that their bipartite nature is evident.
+
+See Page 266.
+
+25. Suppose $r$ and $s$ are any positive integers. Does there exist a graph $G$
+    with the property that $G$ has vertices of degrees $r$ and $s$ and no other
+    degrees? Explain.

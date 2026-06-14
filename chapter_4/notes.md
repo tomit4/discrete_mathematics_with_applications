@@ -1110,3 +1110,135 @@ does not divide $(2 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \dots p) + 1$, which equals
 $N$. Hence $N$ is divisible by $q$ and $N$ is not divisible by $q$, and we have
 reached a contradiction. _[Therefore, the supposition is false and the theorem
 is true.]_
+
+---
+
+Page 258
+
+**Definition**
+
+The total degree of a graph is the sum of the degrees of all the vertices of the
+graph.
+
+---
+
+Page 259
+
+**Theorem 4.9.1 The Handshake Theorem**
+
+If $G$ is any graph, then the sum of the degrees of all the vertices of $G$
+equals twice the number of edges of $G$. Specifically, if the vertices of $G$
+are $v_1, v^2, \dots v_n$, where $n$ is a nonnegative integer, then
+
+$$ \text{the total degree of } G = \text{deg}(v_1) + \text{deg}(v_2) + \dots + \text{deg}(v_n) $$
+
+$$ = 2 \cdot (\text{the number of edges of } G) $$
+
+**Proof:**
+
+Let $G$ be a particular but arbitrarily chosen graph, and suppose that $G$ has
+$n$ vertices $v_1, v_2, \dots v_n$ and $m$ edges, where $n$ is a positive
+integer and $m$ is a nonnegative integer. We claim that each edge of $G$
+contributes $2$ to the total degree of $G$. For suppose $e$ is an arbitrarily
+chosen edge with endpoints $v_i$ and $v_j$. This edge contributes $1$ to the
+degree of $v_i$ and $1$ to the degree of $v_j$. As shown below, this is true
+even if $i = j$, because an edge that is a loop is counted twice in computing
+the degree of the vertex on which it is incident.
+
+(see Page 259)
+
+Therefore, $e$ contributes $2$ to the total degree of $G$. Since $e$ was
+arbitrarily chosen, this shows that _each_ edge of $G$ contributes $2$ to the
+total degree of $G$. Thus
+
+$$ \text{the total degree of } G = 2 \cdot (\text{the number of edges of } G) $$
+
+---
+
+Page 259
+
+**Corollary 4.9.2**
+
+The total degree of a graph is even.
+
+**Proof:** By Theorem 4.9.1 the total degree of $G$ equals $2$ times the number
+of edges of $G$, which is an integer, and so the total degree of $G$ is even.
+
+---
+
+Page 260
+
+**Proposition 4.9.3**
+
+In any graph there is an even number of vertices of odd degree.
+
+**Proof:** Suppose $G$ is any graph, and suppose $G$ has $n$ vertices of odd
+degree and $m$ vertices of even degree, where $n$ is a positive integer and $m$
+is a nonnegative integer. _[We must show that $n$ is even.]_ Let $E$ be the sum
+of the degrees of all the vertices of even degree, $O$ the sum of the degrees of
+all the vertices of odd degree, and $T$ the total degree of $G$. If
+$u_1, u_2, \dots, u_m$ are the vertices of even degree and
+$v_1, v_2, \dots, v_n$ are the vertices of odd degree, then
+
+$$ E = \text{deg}(u_1) + \text{deg}(u_2) + \dots + \text{deg}(u_m), $$
+
+$$ O = \text{deg}(v_1) + \text{deg}(v_2) + \dots + \text{deg}(v_m), \text{ and} $$
+
+$$ T = \text{deg}(u_1) + \dots + \text{deg}(u_m) + \text{deg}(v_1) + \dots + \text{deg}(v_n) = E + 0 $$
+
+Now $T$, the total degree of $G$, is an even integer by Corollary 4.9.2. Also
+$E$ is even since either $E$ is zero, which is even, or $E$ is a sum of even
+numbers. Now since
+
+$$ T = E + O $$
+
+then
+
+$$ O = T - E $$
+
+Hence $O$ is a difference of two even integers, and so $O$ is even.
+
+By assumption, $\text{deg}(v_i)$ is odd for every integer $i = 1, 2, \dots, n$.
+Thus $O$, an even integer, is a sum of the $n$ odd integers
+$\text{deg}(v_1), \text{deg}(v_2), \dots, \text{deg}(v_n)$. But if a sum of $n$
+odd integers is even, then $n$ is even. Therefore, $n$ is even _[as was to be
+shown]._
+
+---
+
+Page 262
+
+**Definition and Notation**
+
+A **simple graph** is a graph that does not have any loops or parallel edges. In
+a simple graph, an edge with endpoints $v$ and $w$ is denoted $\{v, w\}$.
+
+---
+
+Page 263
+
+**Definition**
+
+Let $n$ be a positive integer. A **complete graph on $n$ vertices**, denoted
+$K_n$, is a simple graph with $n$ vertices and exactly one edge connecting each
+pair of distinct vertices.
+
+---
+
+Page 264
+
+**Definition**
+
+Let $m$ and $n$ be positive integers. A **complete bipartite graph on $(m, n)$
+vertices**, denoted $K_{m, n}$, is a simple graph whose vertices are divided
+into two distinct subsets, $V$ with $m$ vertices and $W$ with $n$ vertices, in
+such a way that
+
+1. every vertex of $K_{m, n}$ belongs to one of $V$ or $W$, but no vertex
+   belongs to both $V$ and $W$;
+
+2. there is exactly one edge from each vertex of $V$ to each vertex of $W$;
+
+3. there is no edge from any one vertex of $V$ to any other vertex of $V$;
+
+4. there is no edge from any one vertex of $W$ to any other vertex of $W$.
