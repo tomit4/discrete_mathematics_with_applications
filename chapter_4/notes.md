@@ -1480,7 +1480,7 @@ _[If $b \neq 0$, compute $a \mod b$, the remainder of the integer division of
 $a$ by $b$, and set $r$ equal to this value. Then repeat the process using $b$
 in place of $a$ and $r$ in place of $b$.]_
 
-$\text{\textbf{while }} (b \neq 0)\\ \ \ \ \ r:= a \mod b$
+$\text{\textbf{while }} (b \neq 0)\\ \ \ \ \ r := a \mod b$
 
 _[The value of $a \mod b$ can be obtained by calling the division algorithm.]_
 

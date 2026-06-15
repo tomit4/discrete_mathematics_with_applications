@@ -9396,11 +9396,37 @@ _relatively_ prime.
 After execution, $\text{gcd} = 1$, and because of this, $34,391$ and $6,728$ are
 _relatively_ prime.
 
-RESUME HERE
-
 22. Prove that for all positive integers $a$ and $b$, $a \mid b$ if, and only
     if, $\text{gcd}(a, b) = a$. (Note that to prove "$A$ if, and only if, $B$,"
     you need to prove "if $A$ then $B$" and "if $B$ then $A$.")
+
+**Proof:**
+
+Suppose $a$ and $b$ are any positive integers such that $a \mid b$.
+
+By the definition of divisibility, any number is divisible by at least $1$ and
+itself. It follows then that $a \mid a$. This makes $a$ a common divisor of $a$
+and $b$. Thus, by definition of the common divisor, $a$ is less than or equal to
+the greatest common divisor of $a$ and $b$, $a \leq \text{gcd}(a, b)$.
+
+Similarly, since $\text{gcd}(a, b)$ is the greatest common divisor of $a$ and
+$b$, it must also divide $a$, $\text{gcd}(a, b) \mid a$. Thus, by Theorem 4.4.1,
+$\text{gcd}(a, b) \leq a$.
+
+We know that when $a \leq \text{gcd}(a, b)$ and $\text{gcd}(a, b) \leq a$ are
+both true, this means that $\text{gcd}(a, b) = a$.
+
+Therefore $\text{gcd}(a, b) = a$. _[as was to be shown.]_
+
+Then, suppose $a$ and $b$ are any positive integers such that their greatest
+common divisor is $\text{gcd}(a, b) = a$.
+
+By definition of a common divisor, $a \mid \text{gcd}(a, b)$ and
+$\text{gcd}(a, b) \mid b$.
+
+Therefore $a \mid b$. _[as was to be shown.]_
+
+Q.E.D.
 
 23.
 
@@ -9408,10 +9434,53 @@ a. Prove that if $a$ and $b$ are integers, not both zero, and
 $d = \text{gcd}(a, b)$, then $\dfrac{a}{d}$ and $\dfrac{b}{d}$ are integers with
 no common divisor that is greater than $1$.
 
+**Proof by contradiction:**
+
+Suppose not. That is, suppose that $a$ and $b$ are any nonzero integers and
+there is some positive integer $d$, where $d = \text{gcd}(a, b)$ and
+$\dfrac{a}{d}$ and $\dfrac{b}{d}$ are integers with a common divisor that is
+greater than $1$.
+
+Since $d = \text{gcd}(a, b)$. By the definition of a common divisor, $d \mid a$
+and $d \mid b$.
+
+Since $d \mid a$ and $d \mid b$, by the definition of divisibility, $a = dk$ and
+$b = dm$ for some integers $k$ and $m$. By algebra:
+
+$$ a = dk \to \frac{a}{d} = k $$
+
+$$ b = dm \to \frac{b}{d} = m $$
+
+Since $\dfrac{a}{d}$ and $\dfrac{b}{d}$ are integers with a common divisor that
+is greater than $1$. This means that $k$ and $m$ have some common divisor, $c$
+such that $c > 1$. Because $c > 1$, this means that $dc > d$. It follows that
+$dc$ would then be a common divisor of $a$ and $b$ where $dc > d$, which means
+that $d$ is not the greatest common divisor of $a$ and $b$,
+$d \neq \text{gcd}(a, b)$.
+
+This is a contradiction.
+
+Q.E.D.
+
 b. Write an algorithm that accepts the numerator and denominator of a fraction
 as input and produces as output the numerator and denominator of that fraction
 written in lowest terms. (The algorithm may call upon the Euclidean algorithm as
 needed.)
+
+**Algorithm**
+
+_[Given a rational number $\dfrac{N}{D}$, output both $N$ and $D$ in lowest
+terms.]_
+
+_[Note that $EA()$ here represents calling the Euclidean Algorithm]_
+
+**Input:** $\dfrac{N}{D}$ _[a rational number.]_
+
+**Algorithm Body:**
+
+$d := EA(N, D)\\ n := \dfrac{N}{d}\\ m := \dfrac{D}{d}$
+
+**Output:** $n$ and $m$.
 
 24. Complete the proof of Lemma 4.10.2 by proving the following: If $a$ and $b$
     are any integers with $b \neq 0$ and $q$ and $r$ are any integers such that
@@ -9422,19 +9491,113 @@ then
 
 $$ \text{gcd}(b, r) \leq \text{gcd}(a, b) $$
 
+**Continuation of Lemma 4.10.2:**
+
+2. $\text{\textbf{gcd}}(b, r) \leq \text{\textbf{gcd}}(a, b)$:
+
+a. _[We will first show that any common divisor of $b$ and $r$ is also a common
+divisor of $a$ and $b$.]_
+
+Let $b$ and $r$ be integers where $b \neq 0$, and let $c$ be a common divisor of
+$b$ and $r$. Then $c \mid b$ and $c \mid r$ and so, by definition of
+divisibility, $b = nc$ and $r = mc$, for some integers $n$ and $m$. Substitute
+into the equation
+
+$$ a = bq + r $$
+
+to obtain
+
+$$ a = (nc)q + mc $$
+
+$$ a = (nq + m)c $$
+
+Now, $nq + m$ is an integer, and so, by definition of divisibility, $c \mid a$.
+Because we already know that $c \mid b$, we can conclude that $c$ is a common
+divisor of $a$ and $b$ _[as was to be shown]._
+
+b. _[Next, we show that $\text{gcd}(b, r) \leq \text{gcd}(a, b)$.]_
+
+Now the greatest common divisor of $b$ and $r$ is defined because $b$ and $r$
+are not both zero. Also, by part (a), every common divisor of $b$ and $r$ is a
+common divisor of $a$ and $b$, and so the greatest common divisor of $b$ and $r$
+is a common divisor of $a$ and $b$. But then $\text{gcd}(b, r)$ (being one of
+the common divisors of $a$ and $b$) is less than or equal to the greatest common
+divisor of $a$ and $b$:
+
+$$ \text{gcd}(b, r) \leq \text{gcd}(a, b) $$
+
 25.
 
 a. Prove: If $a$ and $d$ are positive integers and $q$ and $r$ are integers such
-that $a = dq + r$ and $0 < r < d$, then
+that $a = dq + r$ and $0 \leq r < d$, then
 
 $$ -a = d(-(q + 1)) + (d - r) $$
 
 and
 
-$$ 0 < d - r < d $$
+$$ 0 < d - r \leq d $$
+
+**Proof:**
+
+Suppose $a$ and $d$ are positive integers, and that $q$ and $r$ are integers
+such that $a = dq + r$ and $0 \leq r < d$.
+
+By algebra:
+
+$$ a = dq + r $$
+
+$$ -a = -(dq + r) $$
+
+$$ -a = -(dq + d - d +  r) $$
+
+$$ -a = -(d(q + 1) - d + r) $$
+
+$$ -a = -d(q + 1) + d - r $$
+
+$$ -a = d(-(q + 1)) + (d - r) $$
+
+Then, also by algebra:
+
+$$ 0 \leq r < d $$
+
+$$ 0 \geq -r > -d $$
+
+Then add $d$ to all sides:
+
+$$ 0 + d \geq -r + d > -d + d $$
+
+$$ d \geq -r + d > 0 $$
+
+Rearranged:
+
+$$ 0 < d - r \leq d $$
+
+Therefore $-a = d(-(q + 1)) + (d - r)$ and $0 < d - r \leq d$.
+
+Q.E.D.
 
 b. Indicate how to modify Algorithm 4.10.1 to allow for the input $a$ to be
 negative.
+
+**Algorithm 4.10.1 Division Algorithm**
+
+_[Given an integer $a$ and a positive integer $d$, the aim of the algorithm is
+to find integers $q$ and $r$ that satisfy the conditions $a = dq + r$ and
+$0 \leq r < d$. This is done by subtracting $d$ repeatedly from $a$ until the
+result is less than $d$ but is nonnegative._
+
+$$ 0 \leq a - d - d - d - \dots - d = a - dq < d$$
+
+_The total number of $d$'s that are subtracted is the quotient $q$. The quantity
+$a - dq$ equals the remainder $r$.]_
+
+**Input:** _$a$ [an integer], $d$ [a positive integer]_
+
+**Algorithm Body:**
+
+$\text{\textbf{if }}(a \geq 0) \text{\textbf{then}}\\ \ \ r := a, q := 0\\ \ \ \text{\textbf{while }}(r \geq d)\\ \ \ \ \ r := r - d\\ \ \ \ \ q := q + 1\\ \ \ \text{\textbf{end while}}\\ \text{\textbf{else}}\\ \ \ r := -a, q := 0\\ \ \ \text{\textbf{while }}(r \geq d)\\ \ \ \ \ r := r - d\\ \ \ \ \ q := q + 1\\ \ \ \text{\textbf{end while}}\\ \ \ \text{\textbf{if }}(r == 0) \text{\textbf{ then}}\\ \ \ \ \ q := -q\\ \ \ \text{\textbf{else}}\\ \ \ \ \ q := -(q + 1)\\ \ \ \ \ r := d - r\\ \ \ \text{\textbf{end if}}\\ \text{\textbf{end if}}$
+
+**Output:** $q$, $r$
 
 26.
 
@@ -9443,13 +9606,71 @@ $0 \leq r < d$, then
 
 $$ q = \left\lfloor \frac{a}{d} \right\rfloor \quad \text{ and } r = a - \left\lfloor \frac{a}{d} \right\rfloor \cdot d$$
 
-b. In a computer language with a built-in floor function, $\text{div}$ and
-$\mod$ can be calculated as follows:
+**Proof:**
 
-$$ a \text{div } d = \left\lfoor \frac{a}{d} \right\rfloor \quad \text{ and } \quad a \mod d = a - \left\lfloor \frac{a}{d} \right\rfloor \cdot d $$
+Suppose $a$, $d$, $q$, and $r$ are any integers such that $a = dq + r$ and
+$0 \leq r < d$.
+
+By algebra:
+
+$$ a = dq + r $$
+
+$$ r = a - dq $$
+
+Then by substitution:
+
+$$ 0 \leq r < d $$
+
+$$ 0 \leq a - dq < d $$
+
+$$ dq \leq a < dq + d $$
+
+$$ dq \leq a < d(q + 1) $$
+
+$$ q \leq \frac{a}{d} < q + 1 $$
+
+Thus, by the definition of floor, $q = \left\lfloor \dfrac{a}{d} \right\rfloor$.
+
+Then, by substitution:
+
+$$ a = dq + r $$
+
+$$ a = d\left\lfloor \frac{a}{d} \right\rfloor + r $$
+
+$$ r = a - d\left\lfloor \frac{a}{d} \right\rfloor $$
+
+$$ r = a - \left\lfloor \frac{a}{d} \right\rfloor \cdot d $$
+
+Therefore $q = \left\lfloor \dfrac{a}{d} \right\rfloor$ and
+$r = a - \left\lfloor \dfrac{a}{d} \right\rfloor \cdot d$.
+
+Q.E.D.
+
+b. In a computer language with a built-in floor function, $\text{div}$ and
+$\text{mod}$ can be calculated as follows:
+
+$$ a \text{ div } d = \left\lfloor \frac{a}{d} \right\rfloor \quad \text{ and } \quad a \mod d = a - \left\lfloor \frac{a}{d} \right\rfloor \cdot d $$
 
 Rewrite the steps of Algorithm 4.10.2 for a computer language with a built-in
-floor function but without $\text{div}$ and $\mod$.
+floor function but without $\text{div}$ and $\text{mod}$.
+
+**Algorithm Body:**
+
+$a := A, b := B, r:= B$
+
+_[If $b \neq 0$, compute $a \mod b$, the remainder of the integer division of
+$a$ by $b$, and set $r$ equal to this value. Then repeat the process using $b$
+in place of $a$ and $r$ in place of $b$.]_
+
+$\text{\textbf{while }} (b \neq 0)\\ \ \ \ \ r := a - \left\lfloor \dfrac{a}{b} \right\rfloor \cdot b$
+
+_[The value of $a \mod b$ can be obtained by calling the division algorithm.]_
+
+$\ \ \ \ a := b\\ \ \ \ \ b := r\\ \text{\textbf{end while}}$
+
+_[After execution of the $\text{\textbf{while}}$ loop, $\text{gcd}(A, B) = a$.]_
+
+$\text{gcd} := a$
 
 27. An alternative to the Euclidean algorithm uses subtraction rather than
     division to compute greatest common divisors. (After all, division is
@@ -9494,9 +9715,77 @@ $\text{gcd} = \text{gcd}(A, B)$.]_
 
 a. Prove Lemma 4.10.3.
 
-b. Trace the execution of Algorithm 4.10.3 for $A = 360$ and $B = 336$.
+**Proof:**
+
+Suppose $a$ and $b$ are any integers such that $a \geq b > 0$.
+
+Let $c$ be some integer such that $c$ is common divisor of both $a$ and $b$ such
+that $c \mid a$ and $c \mid b$.
+
+Since $c \mid a$ and $c \mid b$, $a = nc$ and $b = mc$ for some integers $n$ and
+$m$.
+
+By substitution:
+
+$$ a - b = nc - mc $$
+
+$$ a - b = c(n - m) $$
+
+Now, $n - m$ is an integer by the difference of integers, and so by the
+definition of divisibility, $c \mid (a - b)$.
+
+Thus, it follows that $\text{gcd}(a, b) \leq \text{gcd}(b, a - b)$.
+
+Let $k$ be some integer such that $k$ is common divisor of both $a - b$ and $b$
+such that $k \mid (a - b)$ and $k \mid b$.
+
+Since $k \mid (a - b)$ and $k \mid b$, $a - b = nk$ and $b = mk$ for some
+integers $n$ and $m$.
+
+By substitution:
+
+$$ a - b = nk $$
+
+$$ a = nk + b $$
+
+$$ a = nk + mk $$
+
+$$ a = k(n + m) $$
+
+Since $m + n$ is an integer by the sum of integers, the definition of
+divisibility tells us that $k \mid a$.
+
+Since we already know that $k \mid b$, it follows that $k$ is a common divisor
+of both $a$ and $b$.
+
+Thus it follows that $\text{gcd}(a, b) \geq \text{gcd}(b, a - b)$.
+
+It has now been established that $\text{gcd}(a, b) \leq \text{gcd}(b, a - b)$
+and also that $\text{gcd}(a, b) \geq \text{gcd}(b, a- b)$.
+
+Therefore $\text{gcd}(a, b) = \text{gcd}(b, a - b)$
+
+Q.E.D.
+
+b. Trace the execution of Algorithm 4.10.3 for $A = 630$ and $B = 336$.
+
+|              |     |     |     |     |     |     |     |    |    |    |
+| ------------ | --- | --- | --- | --- | --- | --- | --- | -- | -- | -- |
+| $A$          | 630 |     |     |     |     |     |     |    |    |    |
+| $B$          | 336 |     |     |     |     |     |     |    |    |    |
+| $a$          | 630 | 294 | 294 | 252 | 210 | 168 | 126 | 84 | 42 | 0  |
+| $b$          | 336 | 336 | 42  | 42  | 42  | 42  | 42  | 42 | 42 | 42 |
+| $\text{gcd}$ |     |     |     |     |     |     |     |    |    | 42 |
 
 c. Trace the execution of Algorithm 4.10.3 for $A = 768$ and $B = 348$.
+
+|              |     |     |     |     |     |     |    |    |    |    |    |    |    |
+| ------------ | --- | --- | --- | --- | --- | --- | -- | -- | -- | -- | -- | -- | -- |
+| $A$          | 768 |     |     |     |     |     |    |    |    |    |    |    |    |
+| $B$          | 348 |     |     |     |     |     |    |    |    |    |    |    |    |
+| $a$          | 768 | 420 | 72  | 72  | 72  | 72  | 72 | 12 | 12 | 12 | 12 | 12 | 0  |
+| $b$          | 348 | 348 | 348 | 276 | 204 | 132 | 60 | 60 | 48 | 36 | 24 | 12 | 12 |
+| $\text{gcd}$ |     |     |     |     |     |     |    |    |    |    |    |    | 12 |
 
 Exercises 28-32 refer to the following definition.
 
@@ -9511,18 +9800,119 @@ b. for all positive integers $m$, if $a \mid m$ and $b \mid m$, then $c \leq m$.
 
 a. $\text{lcm}(12, 18)$
 
+$\text{lcm}(12, 18) = 36$
+
 b. $\text{lcm}(2^2 \cdot 3 \cdot 5, 2^3 \cdot 3^2)$
 
+$$ \text{lcm}(12, 18) = 2^3 \cdot 3^2 \cdot 5 = 360 $$
+
 c. $\text{lcm}(2800, 6125)$
+
+$$ 2800 = 100 \cdot 28 = 10^2 \cdot 7 \cdot 4 = 2^2 \cdot 5^2 \cdot 7 \cdot 2^2 = 2^4 \cdot 5^2 \cdot 7 $$
+
+$$ 6125 = 25 \cdot 245 = 5^2 \cdot 5 \cdot 49 = 5^3 \cdot 7^2 $$
+
+$$ 2800 = 2^4 \cdot 5^2 \cdot 7 $$
+
+$$ 6125 = 5^3 \cdot 7^2 $$
+
+$$ \text{lcm}(2800, 6125) = 2^4 \cdot 5^3 \cdot 7^2 = 98000 $$
 
 29. Prove that for all positive integers $a$ and $b$,
     $\text{gcd}(a, b) = \text{lcm}(a, b)$ if, and only if, $a = b$.
 
+**Proof:**
+
+Suppose $a$ and $b$ are any positive integers such that
+$\text{gcd}(a, b) = \text{lcm}(a, b)$.
+
+Let $k$ be some integer such that $k = \text{gcd}(a, b) = \text{lcm}(a, b)$.
+
+Since $k = \text{gcd}(a, b)$, $k \mid \text{gcd}(a, b)$, and thus $k \leq a$ and
+$k \leq b$.
+
+And since $k = \text{lcm}(a, b)$, $\text{lcm}(a, b) \mid k$ and thus $a \leq k$
+and $b \leq k$.
+
+Since $k \leq a$ and $a \leq k$, this means that $k = a$.
+
+And since $k \leq b$ and $b \leq k$, this means that $k = b$.
+
+By the law of transitivity, $a = k = b$.
+
+Thus $a = b$.
+
+Now, suppose $a$ and $b$ are any positive integers such that $a = b$.
+
+By the definition of greatest common divisor, $\text{gcd}(a, a) = a$.
+
+By the definition of least common multiple, $\text{lcm}(a, a) = a$.
+
+This means that $\text{gcd}(a, a) = \text{lcm}(a, a)$.
+
+Since $a = b$, $b$ can be substituted for $a$:
+
+$$ \text{gcd}(a, b) = \text{lcm}(a, b) $$
+
+Thus $\text{gcd}(a, b) = \text{lcm}(a, b)$
+
+Therefore it has been shown that if $\text{gcd}(a, b) = \text{lcm}(a, b)$, then
+$a = b$, and it has also been shown that if $a = b$, then
+$\text{gcd}(a, b) = \text{lcm}(a, b)$.
+
+Q.E.D.
+
 30. Prove that for all positive integers $a$ and $b$, $a \mid b$ if, and only
     if, $\text{lcm}(a, b) = b$.
+
+**Proof:**
+
+Suppose $a$ and $b$ are any positive integers such that $a \mid b$.
+
+By the definition of a multiple, $b \mid b$ means that $b$ is a multiple of $b$.
+
+This means that since $a \mid b$ and $b \mid b$, that $b$ is a common multiple
+of both $a$ and $b$.
+
+Let $m$ be some positive integer such that $b \mid m$ and $a \mid m$. Since $b$
+and $m$ are positive integers, and since $b \mid m$, this means that $b \leq m$.
+
+Thus $\text{lcm}(a, b) = b$.
+
+Then suppose $a$ and $b$ are any positive integers such that
+$\text{lcm}(a, b) = b$.
+
+By the definition of a common multiple, we know that $a \mid \text{lcm}(a, b)$.
+Since we also know that $\text{lcm}(a, b) = b$, by substitution:
+
+$$ a \mid b $$
+
+Thus $a \mid b$.
+
+Therefore it has been shown that if $a \mid b$, then $\text{lcm}(a, b) = b$ and
+it has also been shown that if $\text{lcm}(a, b) = b$, then $a \mid b$.
+
+Q.E.D.
 
 31. Prove that for all integers $a$ and $b$,
     $\text{gcd}(a, b) \mid \text{lcm}(a, b)$.
 
+**Proof:**
+
+Suppose $a$ and $b$ are any integers.
+
+Since $a$ is an integer, this means that $\text{gcd}(a, b) \mid a$ and
+$a \mid \text{lcm}(a, b)$.
+
+By the transitive property of divisibility, this means that:
+
+$$ \text{gcd}(a, b) \mid \text{lcm}(a, b) $$
+
+Therefore $\text{gcd}(a, b) \mid \text{lcm}(a, b)$.
+
+Q.E.D.
+
 32. Prove that for all positive integers $a$ and $b$,
     $\text{gcd}(a, b) \cdot \text{lcm}(a, b) = ab$.
+
+Omitted.
