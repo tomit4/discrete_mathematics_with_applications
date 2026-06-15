@@ -294,9 +294,15 @@ Page 277
 
 1. When an algorithm statement of the form $x := e$ is executed, ______.
 
+The expression $e$ is evaluated (using the current values of all the variables
+in the expression), and this value is placed in the memory location
+corresponding to $x$ (replacing any previous contents of the location)
+
 2. Consider an algorithm statement of the following form.
 
 $\text{\textbf{if }(condition)}\\ \text{\textbf{then }} s_1\\ \text{\textbf{else }} s_2$
+
+then the algorithm at $s_1$ is executed; then the algorithm at $s_2$ is executed
 
 When such a statement is executed, the truth or falsity of the _condition_ is
 evaluated. If _condition_ is true, ______. If _condition_ is false, ______.
@@ -312,7 +318,17 @@ $\text{\textbf{end while}}$
 When such a statement is executed, the truth or falsity of the _condition_ is
 evaluated. If _condition_ is true, ______. If _condition_ is false, ______.
 
+the statements that make up the body of the loop are executed in order and then
+execution moves back to the beginning of the loop and the process repeats; the
+loop ends and execution passes to the next algorithm statement following the
+loop
+
 4. Consider an algorithm statement of the following form.
+
+the statements that make up the body of the loop are executed in order, the
+variable's value is assigned to the next (iterated), and then execution moves
+back to the beginning of the loop and the process repeats; the loop ends and
+execution passes to the next algorithm statement following the loop
 
 $\text{\textbf{for } variable } := \text{initial expression \textbf{to} final expression.}$
 
@@ -328,13 +344,24 @@ ______. If not, ______.
 5. Given a nonnegative integer $a$ and a positive integer $d$ the division
    algorithm computes ______.
 
+Integers $q$ and $r$ with the property that $n = dq + r$ and $0 \leq r < d$.
+
 6. Given integers $a$ and $b$, not both zero, $\text{gcd}(a, b)$ is the integer
    $d$ that satisfies the following two conditions: ______ and ______.
 
+$d \mid a$ and $d \mid b$; if $c$ is a common divisor of both $a$ and $b$, then
+$c \leq d$.
+
 7. If $r$ is a positive integer, then $gcd(r, 0) =$ ______.
 
+$r$
+
 8. If $a$ and $b$ are integers not both zero and if $q$ and $r$ are nonnegative
-   integers such that $a = bq + r$ then $\text{gcd}(a,b ) =$ ______.
+   integers such that $a = bq + r$ then $\text{gcd}(a, b) =$ ______.
+
+$gcd(b, r)$
 
 9. Given positive integers $A$ and $B$ with $A > B$, the Euclidean algorithm
-   computes.
+   computes ______.
+
+the greatest common divisor of $A$ and $B$, $\text{gcd}(A, B)$.

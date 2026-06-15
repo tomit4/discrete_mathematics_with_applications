@@ -9175,9 +9175,13 @@ executed.
 
 $i := 2\\ \text{\textbf{if }} (i > 3 \text{ or } i \leq 0)\\ \ \ \ \  \text{\textbf{then }} z := 1\\ \ \ \ \  \text{\textbf{else }} z := 0$
 
+$z = 0$
+
 2.
 
 $i := 3\\ \text{\textbf{if }} (i \leq 3 \text{ or } i > 6)\\ \ \ \ \ \text{\textbf{then }} z := 2\\ \ \ \ \ \text{\textbf{else }} z := 0$
+
+$z = 2$
 
 3. Consider the following algorithm segment:
 
@@ -9188,7 +9192,11 @@ below.
 
 a. $x = 2, y = 3$
 
+$y = 3 \cdot 3 = 9$, and $x = 2 + 1 = 3$, and $z = 9 \cdot 3 \cdot = 27$
+
 b. $x = 1, y = 1$
+
+$y = 3 \cdot 1 = 3$, and $x = 1 + 1 = 2$, and $z = 3 \cdot 2 = 6$
 
 Find the values of $a$ and $e$ after execution of the loops in 4 and 5 by first
 making trace tables for them.
@@ -9197,16 +9205,49 @@ making trace tables for them.
 
 $a := 2\\ \text{\textbf{for }} i := 1 \text{\textbf{ to }} 3\\ \ \ \ \ a:= 3a + 1\\ \text{\textbf{next }} i$
 
+|     | 0 | 1 | 2  | 3  |
+| --- | - | - | -- | -- |
+| $a$ | 2 | 7 | 22 | 67 |
+| $i$ | 1 | 2 | 3  | 4  |
+
+After execution, $a = 67$.
+
 5.
 
 $e := 2, f := 0\\ \text{\textbf{for }} k := 1 \text{\textbf{ to }} 3\\ \ \ \ \ e := e \cdot k\\ \ \ \ \ f := e + f\\ \text{\textbf{next }} k$
+
+|     | 0 | 1 | 2 | 3  |
+| --- | - | - | - | -- |
+| $e$ | 2 | 2 | 4 | 12 |
+| $f$ | 0 | 2 | 6 | 18 |
+| $k$ | 1 | 2 | 3 | 4  |
+
+After execution, $e = 12$, $f = 18$.
 
 Make a trace table to trace the action of Algorithm 4.10.1 for the input
 variables given in 6 and 7.
 
 6. $a = 26, d = 7$
 
+|     | 0  | 1  | 2  | 3  |
+| --- | -- | -- | -- | -- |
+| $a$ | 26 | 26 | 26 | 26 |
+| $d$ | 7  | 7  | 7  | 7  |
+| $r$ | 26 | 19 | 12 | 5  |
+| $q$ | 0  | 1  | 2  | 3  |
+
+After execution, $q = 3$, and $r = 5$.
+
 7. $a = 59, d = 13$
+
+|     | 0  | 1  | 2  | 3  | 4  |
+| --- | -- | -- | -- | -- | -- |
+| $a$ | 59 | 59 | 59 | 59 | 59 |
+| $d$ | 13 | 13 | 13 | 13 | 13 |
+| $r$ | 59 | 46 | 33 | 20 | 7  |
+| $q$ | 0  | 1  | 2  | 3  | 4  |
+
+After execution, $q = 4$, $r = 7$.
 
 8. The following algorithm segment makes change; given an amount of money $A$
    between 1¢ and 99¢, it determines a breakdown of $A$ into quarters $(q)$,
@@ -9223,38 +9264,103 @@ $$
 
 a. Trace this algorithm segment for $A = 69$.
 
+|     |    |    |   |   |
+| --- | -- | -- | - | - |
+| $A$ | 69 | 19 | 9 |   |
+| $q$ | 2  |    |   |   |
+| $d$ |    | 1  |   |   |
+| $n$ |    |    | 1 |   |
+| $p$ |    |    |   | 4 |
+
 b. Trace this algorithm segment for $A = 87$.
+
+|     |    |    |   |   |
+| --- | -- | -- | - | - |
+| $A$ | 87 | 12 | 2 |   |
+| $q$ | 3  |    |   |   |
+| $d$ |    | 1  |   |   |
+| $n$ |    |    | 0 |   |
+| $p$ |    |    |   | 0 |
 
 Find the greatest common divisor of each of the pairs of integers in 9-12. (Use
 any method you wish.)
 
 9. $27$ and $72$
 
+$$ \text{gcd}(27, 72) = 9 $$
+
 10. $5$ and $9$
+
+$$ \text{gcd}(5, 9) = 1 $$
 
 11. $7$ and $21$
 
+$$ \text{gcd}(7, 21) = 7 $$
+
 12. $48$ and $54$
+
+$$ \text{gcd}(54, 48) = \text{gcd}(48, 6) = \text{gcd}(6, 0) = 6 $$
 
 Use the Euclidean algorithm to hand-calculate the greatest common divisors of
 each of the pairs of itnegers in 13-16.
 
 13. $1,188$ and $385$
 
+$$ \text{gcd}(1188, 385) = \text{gcd}(385, 33) = \text{gcd}(33, 22) = \text{gcd}(22, 11) = \text{gcd}(11, 0) = 11 $$
+
 14. $509$ and $1,177$
+
+$$ \text{gcd}(1177, 509) = \text{gcd}(509, 159) = \text{gcd}(159, 32) = \text{gcd}(32, 31) = \text{gcd}(31, 1) = \text{gcd}(1, 0) = 1 $$
 
 15. $832$ and $10,933$
 
+$$ \text{gcd}(10933, 832) = \text{gcd}(832, 117) = \text{gcd}(117, 13) = \text{gcd}(13, 0) = 13 $$
+
 16. $4,131$ and $2,431$
+
+$$ \text{gcd}(4131, 2431) = \text{gcd}(2431, 1700) = \text{gcd}(1700, 731) = \text{gcd}(731, 238) = \text{gcd}(238, 17) = \text{gcd}(17, 0) = 17 $$
 
 Make a trace table to trace the action of Algorithm 4.10.2 for the input
 variables given in 17-19.
 
 17. $1,001$ and $871$
 
+|              |      |     |     |    |    |    |    |
+| ------------ | ---- | --- | --- | -- | -- | -- | -- |
+| $A$          | 1001 |     |     |    |    |    |    |
+| $B$          | 871  |     |     |    |    |    |    |
+| $a$          | 1001 | 871 | 130 | 91 | 39 | 13 |    |
+| $b$          | 871  | 130 | 91  | 39 | 13 | 0  |    |
+| $r$          | 871  | 130 | 91  | 39 | 13 | 0  |    |
+| $\text{gcd}$ |      |     |     |    |    |    | 13 |
+
+After execution, $\text{gcd} = 13$.
+
 18. $5,859$ and $1,232$
 
+|              |      |      |     |     |    |    |   |   |
+| ------------ | ---- | ---- | --- | --- | -- | -- | - | - |
+| $A$          | 5859 |      |     |     |    |    |   |   |
+| $B$          | 1232 |      |     |     |    |    |   |   |
+| $a$          | 5859 | 1232 | 931 | 301 | 28 | 21 | 7 |   |
+| $b$          | 1232 | 931  | 301 | 28  | 21 | 7  | 0 |   |
+| $r$          | 1232 | 931  | 301 | 28  | 21 | 7  | 0 |   |
+| $\text{gcd}$ |      |      |     |     |    |    |   | 7 |
+
+After execution, $\text{gcd} = 7$.
+
 19. $1,570$ and $488$
+
+|              |      |     |     |    |    |    |    |   |   |
+| ------------ | ---- | --- | --- | -- | -- | -- | -- | - | - |
+| $A$          | 1570 |     |     |    |    |    |    |   |   |
+| $B$          | 488  |     |     |    |    |    |    |   |   |
+| $a$          | 1570 | 488 | 106 | 64 | 42 | 22 | 20 | 2 |   |
+| $b$          | 488  | 106 | 64  | 42 | 22 | 20 | 2  | 0 |   |
+| $r$          | 488  | 106 | 64  | 42 | 22 | 20 | 2  | 0 |   |
+| $\text{gcd}$ |      |     |     |    |    |    |    |   | 2 |
+
+After execution, $\text{gcd} = 2$.
 
 **Definition: Integers $a$ and $b$ are said to be **relatively prime** if, and
 only if, their greatest common divisor is $1$.
@@ -9264,7 +9370,33 @@ integers are relatively prime.
 
 20. $4,167$ and $2,563$
 
+|              |      |      |      |     |     |     |    |   |   |   |
+| ------------ | ---- | ---- | ---- | --- | --- | --- | -- | - | - | - |
+| $A$          | 4167 |      |      |     |     |     |    |   |   |   |
+| $B$          | 2563 |      |      |     |     |     |    |   |   |   |
+| $a$          | 4167 | 2563 | 1604 | 959 | 645 | 314 | 17 | 8 | 1 |   |
+| $b$          | 2563 | 1604 | 959  | 645 | 314 | 17  | 8  | 1 | 0 |   |
+| $r$          | 2563 | 1604 | 959  | 645 | 314 | 17  | 8  | 1 | 0 |   |
+| $\text{gcd}$ |      |      |      |     |     |     |    |   |   | 1 |
+
+After execution, $\text{gcd} = 1$, and because of this, $4,167$ and $2,563$ are
+_relatively_ prime.
+
 21. $34,391$ and $6,728$
+
+|              |       |      |     |     |    |   |   |   |   |
+| ------------ | ----- | ---- | --- | --- | -- | - | - | - | - |
+| $A$          | 34391 |      |     |     |    |   |   |   |   |
+| $B$          | 6728  |      |     |     |    |   |   |   |   |
+| $a$          | 34391 | 6728 | 751 | 720 | 31 | 7 | 3 | 1 |   |
+| $b$          | 6728  | 751  | 720 | 31  | 7  | 3 | 1 | 0 |   |
+| $r$          | 6728  | 751  | 720 | 31  | 7  | 3 | 1 | 0 |   |
+| $\text{gcd}$ |       |      |     |     |    |   |   |   | 1 |
+
+After execution, $\text{gcd} = 1$, and because of this, $34,391$ and $6,728$ are
+_relatively_ prime.
+
+RESUME HERE
 
 22. Prove that for all positive integers $a$ and $b$, $a \mid b$ if, and only
     if, $\text{gcd}(a, b) = a$. (Note that to prove "$A$ if, and only if, $B$,"
