@@ -9161,3 +9161,236 @@ See Page 266.
     degrees? Explain.
 
 Omitted.
+
+---
+
+**Exercise Set 4.10**
+
+Page 278
+
+Find the value of $z$ when each of the algorithm segments in 1 and 2 is
+executed.
+
+1.
+
+$i := 2\\ \text{\textbf{if }} (i > 3 \text{ or } i \leq 0)\\ \ \ \ \  \text{\textbf{then }} z := 1\\ \ \ \ \  \text{\textbf{else }} z := 0$
+
+2.
+
+$i := 3\\ \text{\textbf{if }} (i \leq 3 \text{ or } i > 6)\\ \ \ \ \ \text{\textbf{then }} z := 2\\ \ \ \ \ \text{\textbf{else }} z := 0$
+
+3. Consider the following algorithm segment:
+
+$\text{\textbf{if }} x \cdot y > 0 \text{\textbf{ then do }} y := 3 \cdot x\\ \ \ \ \ x := x + 1 \text{\textbf{end do}}\\ \ \ \ \ z := x \cdot y$
+
+Find the value of $z$ if prior to execution $x$ and $y$ have the values given
+below.
+
+a. $x = 2, y = 3$
+
+b. $x = 1, y = 1$
+
+Find the values of $a$ and $e$ after execution of the loops in 4 and 5 by first
+making trace tables for them.
+
+4.
+
+$a := 2\\ \text{\textbf{for }} i := 1 \text{\textbf{ to }} 3\\ \ \ \ \ a:= 3a + 1\\ \text{\textbf{next }} i$
+
+5.
+
+$e := 2, f := 0\\ \text{\textbf{for }} k := 1 \text{\textbf{ to }} 3\\ \ \ \ \ e := e \cdot k\\ \ \ \ \ f := e + f\\ \text{\textbf{next }} k$
+
+Make a trace table to trace the action of Algorithm 4.10.1 for the input
+variables given in 6 and 7.
+
+6. $a = 26, d = 7$
+
+7. $a = 59, d = 13$
+
+8. The following algorithm segment makes change; given an amount of money $A$
+   between 1¢ and 99¢, it determines a breakdown of $A$ into quarters $(q)$,
+   dimes $(d)$, nickels $(n)$, and pennies $(p)$.
+
+$$
+q := A \text{div } 25 \\
+A := A \mod 25 \\
+d := A \text{div } 10 \\
+A := A \mod 10 \\
+n := A \text{div } 5 \\
+p := A \mod 5
+$$
+
+a. Trace this algorithm segment for $A = 69$.
+
+b. Trace this algorithm segment for $A = 87$.
+
+Find the greatest common divisor of each of the pairs of integers in 9-12. (Use
+any method you wish.)
+
+9. $27$ and $72$
+
+10. $5$ and $9$
+
+11. $7$ and $21$
+
+12. $48$ and $54$
+
+Use the Euclidean algorithm to hand-calculate the greatest common divisors of
+each of the pairs of itnegers in 13-16.
+
+13. $1,188$ and $385$
+
+14. $509$ and $1,177$
+
+15. $832$ and $10,933$
+
+16. $4,131$ and $2,431$
+
+Make a trace table to trace the action of Algorithm 4.10.2 for the input
+variables given in 17-19.
+
+17. $1,001$ and $871$
+
+18. $5,859$ and $1,232$
+
+19. $1,570$ and $488$
+
+**Definition: Integers $a$ and $b$ are said to be **relatively prime** if, and
+only if, their greatest common divisor is $1$.
+
+In 20 and 21 trace the action of Algorithm 4.10.2 to determine whether the
+integers are relatively prime.
+
+20. $4,167$ and $2,563$
+
+21. $34,391$ and $6,728$
+
+22. Prove that for all positive integers $a$ and $b$, $a \mid b$ if, and only
+    if, $\text{gcd}(a, b) = a$. (Note that to prove "$A$ if, and only if, $B$,"
+    you need to prove "if $A$ then $B$" and "if $B$ then $A$.")
+
+23.
+
+a. Prove that if $a$ and $b$ are integers, not both zero, and
+$d = \text{gcd}(a, b)$, then $\dfrac{a}{d}$ and $\dfrac{b}{d}$ are integers with
+no common divisor that is greater than $1$.
+
+b. Write an algorithm that accepts the numerator and denominator of a fraction
+as input and produces as output the numerator and denominator of that fraction
+written in lowest terms. (The algorithm may call upon the Euclidean algorithm as
+needed.)
+
+24. Complete the proof of Lemma 4.10.2 by proving the following: If $a$ and $b$
+    are any integers with $b \neq 0$ and $q$ and $r$ are any integers such that
+
+$$ a = bq + r $$
+
+then
+
+$$ \text{gcd}(b, r) \leq \text{gcd}(a, b) $$
+
+25.
+
+a. Prove: If $a$ and $d$ are positive integers and $q$ and $r$ are integers such
+that $a = dq + r$ and $0 < r < d$, then
+
+$$ -a = d(-(q + 1)) + (d - r) $$
+
+and
+
+$$ 0 < d - r < d $$
+
+b. Indicate how to modify Algorithm 4.10.1 to allow for the input $a$ to be
+negative.
+
+26.
+
+a. Prove that if $a$, $d$, $q$, and $r$ are integers such that $a = dq + r$ and
+$0 \leq r < d$, then
+
+$$ q = \left\lfloor \frac{a}{d} \right\rfloor \quad \text{ and } r = a - \left\lfloor \frac{a}{d} \right\rfloor \cdot d$$
+
+b. In a computer language with a built-in floor function, $\text{div}$ and
+$\mod$ can be calculated as follows:
+
+$$ a \text{div } d = \left\lfoor \frac{a}{d} \right\rfloor \quad \text{ and } \quad a \mod d = a - \left\lfloor \frac{a}{d} \right\rfloor \cdot d $$
+
+Rewrite the steps of Algorithm 4.10.2 for a computer language with a built-in
+floor function but without $\text{div}$ and $\mod$.
+
+27. An alternative to the Euclidean algorithm uses subtraction rather than
+    division to compute greatest common divisors. (After all, division is
+    repeated subtraction.) It is based on the following lemma.
+
+**Lemma 4.10.3**
+
+**Algorithm 4.10.3 Computing gcd's by Subtraction**
+
+_[Given two positive integers $A$ and $B$, variables $a$ and $b$ are set equal
+to $A$ and $B$. Then a repetitive process begins. If $a \neq 0$, and $b \neq 0$,
+then the larger of $a$ and $b$ is set equal to
+$a - b (\text{if } a \geq b) \text{ or to } b - a(\text{if } a < b)$, and the
+smaller of $a$ and $b$ is left unchanged. This process is repeated over and over
+until eventually $a$ or $b$ becomes $0$. By Lemma 4.10.3, after each repetition
+of the process,_
+
+$$ \text{gcd}(A, B) = \text{gcd}(a, b) $$
+
+_After the last repetition,_
+
+$$ \text{gcd}(A, B) = \text{gcd}(a, 0) \quad \text{ or } \quad \text{gcd}(A, B) = \text{gcd}(0, b) $$
+
+_depending on whether $a$ or $b$ is nonzero. But by Lemma 4.10.1,_
+
+$$ \text{gcd}(a, 0) = a \quad \text{ and } \quad \text{gcd}(0, b) = b $$
+
+_Hence, after the last repetition,_
+
+$$ \text{gcd}(A, B) = a \text{ if } a \neq 0 \quad \text{ or } \quad \text{gcd}(A, B) = b \text{ if } b \neq 0 $$
+
+**Input:** $A, B$ _[positive integers]_
+
+**Algorithm Body:**
+
+$a := A, b := B\\ \text{\textbf{while }} (a \neq 0 \text{ and } b \neq 0)\\ \ \ \ \ \text{\textbf{if }} a \geq b \text{\textbf{ then }} a := a - b\\ \ \ \ \ \ \ \ \ \text{\textbf{else }} b := b - a\\ \text{\textbf{end while}}\\ \ \ \ \ \text{\textbf{if }} a = 0 \text{\textbf{ then }} gcd := b\\ \ \ \ \ \text{\textbf{else }} gcd := a$
+
+_[After execution of the **if-then-else** statement,
+$\text{gcd} = \text{gcd}(A, B)$.]_
+
+**Output:** $\text{gcd}$ _[a positive integer]_
+
+a. Prove Lemma 4.10.3.
+
+b. Trace the execution of Algorithm 4.10.3 for $A = 360$ and $B = 336$.
+
+c. Trace the execution of Algorithm 4.10.3 for $A = 768$ and $B = 348$.
+
+Exercises 28-32 refer to the following definition.
+
+**Definition:** The **least common multiple** of two nonzero integers $a$ and
+$b$, denoted $\text{\textbf{lcm}}(a, b)$, is the positive integer $c$ such that
+
+a. $a \mid c$ and $b \mid c$
+
+b. for all positive integers $m$, if $a \mid m$ and $b \mid m$, then $c \leq m$.
+
+28. Find
+
+a. $\text{lcm}(12, 18)$
+
+b. $\text{lcm}(2^2 \cdot 3 \cdot 5, 2^3 \cdot 3^2)$
+
+c. $\text{lcm}(2800, 6125)$
+
+29. Prove that for all positive integers $a$ and $b$,
+    $\text{gcd}(a, b) = \text{lcm}(a, b)$ if, and only if, $a = b$.
+
+30. Prove that for all positive integers $a$ and $b$, $a \mid b$ if, and only
+    if, $\text{lcm}(a, b) = b$.
+
+31. Prove that for all integers $a$ and $b$,
+    $\text{gcd}(a, b) \mid \text{lcm}(a, b)$.
+
+32. Prove that for all positive integers $a$ and $b$,
+    $\text{gcd}(a, b) \cdot \text{lcm}(a, b) = ab$.

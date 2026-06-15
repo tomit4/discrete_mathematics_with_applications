@@ -1242,3 +1242,252 @@ such a way that
 3. there is no edge from any one vertex of $V$ to any other vertex of $V$;
 
 4. there is no edge from any one vertex of $W$ to any other vertex of $W$.
+
+---
+
+Page 268
+
+Execution of an **if-then-else** statement occurs as follows:
+
+1. The _condition_ is evaluated by substituting the current values of all
+   algorithm variables appearing in it and evaluating the truth or falsity of
+   the resulting statement.
+
+2. If _condition_ is true, then $s_1$ is executed and execution moves to the
+   next algorithm statement following the **if-then-else** statement.
+
+3. If _condition_ is false, then $s_2$ is executed and execution moves to the
+   next algorithm statement following the **if-then-else** statement.
+
+---
+
+Page 269
+
+Execution of a **while** loop occurs as follows:
+
+1. The _condition_ is evaluated by substituting the current values of all the
+   algorithm variables and evaluating the truth or falsity of the resulting
+   statement.
+
+2. If _condition_ is true, all the statements in the body of the loop are
+   executed in order. Then execution moves back to the beginning of the loop and
+   the process repeats.
+
+3. If _condition_ is false, execution passes to the next algorithm statement
+   following the loop.
+
+---
+
+Page 270
+
+A **for-next** loop is executed as follows:
+
+1. The **for-next** loop _variable_ is set equal to the value of _initial
+   expression_.
+
+2. A check is made to determine whether the value of _variable_ is less than or
+   equal to the value of _final expression_.
+
+3. If the value of _variable_ is less than or equal to the value of _final
+   expression_, then the statements in the body of the loop are executed in
+   order, _variable_ is increased by $1$, and execution returns back to step 2.
+
+4. If the value of _variable_ is greater than the value of _final expression_,
+   then execution passes to the next algorithm statement following the loop.
+
+---
+
+Page 272
+
+**Algorithm 4.10.1 Division Algorithm**
+
+_[Given a nonnegative integer $a$ and a positive integer $d$, the aim of the
+algorithm is to find integers $q$ and $r$ that satisfy the conditions
+$a = dq + r$ and $0 \leq r < d$. This is done by subtracting $d$ repeatedly from
+$a$ until the result is less than $d$ but is still nonnegative._
+
+$$ 0 \leq a - d - d - d - \dots - d = a - dq < d$$
+
+_The total number of $d$'s that are subtracted is the quotient $q$. The quantity
+$a - dq$ equals the remainder $r$.]_
+
+**Input:** _$a$ [a nonnegative integer], $d$ [a positive integer]_
+
+**Algorithm Body:**
+
+$$ r:= a, q := 0 $$
+
+_[Repeatedly subtract $d$ from $r$ until a number less than $d$ is obtained. Add
+$1$ to $q$ each time $d$ is subtracted.]_
+
+$\text{\textbf{while}} (r \geq d)\\ \ \ \ \ r := r- d\\ \ \ \ \ q:= q + 1\\ \text{\textbf{end while}}$
+
+_[After execution of the $\text{\textbf{while}}$ loop, $a = dq + r$.]_
+
+**Output:** $q$, $r$ _[nonnegative integers]_
+
+---
+
+Page 273
+
+**Definition**
+
+Let $a$ and $b$ be integers that are not both zero. The **greatest common
+divisor** of $a$ and $b$, denoted $\text{\textbf{gcd}}(a, b)$, is that integer
+$d$ with the following properties:
+
+1. $d$ is a common divisor of both $a$ and $b$. In other words,
+
+$$ d \mid a \quad \text{ and } \quad d \mid b $$
+
+2. For every integer $c$, if $c$ is a common divisor of both $a$ and $b$, then
+   $c$ is less than or equal to $d$. In other words,
+
+$$ \text{for every integer } c, \text{ if } c \mid a \text{ and } c \mid b \text{ then } c \leq d$$
+
+---
+
+Page 274
+
+**Lemma 4.10.1**
+
+If $r$ is a positive integer, then $\text{gcd}(r, 0) = r$.
+
+**Proof:** Suppose $r$ is a positive integer. _[We must show that the greatest
+common divisor of both $r$ and $0$ is $r$.]_ Certainly, $r$ is a common divisor
+of both $r$ and $0$ because $r$ divides itself and also $r$ divides $0$ (since
+every positive integer divides $0$). Also no integer larger than $r$ can be a
+common divisor of $r$ and $0$ (since no integer larger than $r$ can divide $r$).
+Hence $r$ is the greatest common divisor of $r$ and $0$.
+
+---
+
+Page 274
+
+**Lemma 4.10.2**
+
+If $a$ and $b$ are any integers not both zero, and if $q$ and $r$ are any
+integers such that
+
+$$ a = bq + r $$
+
+then
+
+$$ \text{gcd}(a, b) = \text{gcd}(b, r) $$
+
+**Proof:** _[The proof is divided into two sections: (1) proof that
+$\text{gcd}(a, b) \leq \text{gcd}(b, r)$, and (2) proof that
+$\text{gcd}(b, r) \leq \text{gcd}(a, b)$. Since each $\text{gcd}$ is less than
+or equal to the other, the two must be equal.]_
+
+1. $\text{\textbf{gcd}}(a, b) \leq \text{\textbf{gcd}}(b, r)$:
+
+a. _[We will first show that any common divisor of $a$ and $b$ is also a common
+divisor of $b$ and $r$.]_
+
+Let $a$ and $b$ be integers, not both zero, and let $c$ be a common divisor of
+$a$ and $b$. Then $c \mid a$ and $c \mid b$, and so, by definition of
+divisibility, $a = nc$ and $b = mc$, for some integers $n$ and $m$. Substitute
+into the equation
+
+$$ a = bq + r $$
+
+to obtain
+
+$$ nc = (mc)q + r $$
+
+Then solve for $r$:
+
+$$ r = nc - (mc)q = (n - mq)c $$
+
+Now $n - mq$ is an integer, and so, by definition of divisibility, $c \mid r$.
+Because we already know that $c \mid b$, we can conclude that $c$ is a common
+divisor of $b$ and $r$ _[as was to be shown]_.
+
+b. _[Next we show that $\text{gcd}(a, b) \leq \text{gcd}(b, r)$.]_
+
+Now the greatest common divisor of $a$ and $b$ defined because $a$ and $b$ are
+not both zero. Also, by part (a), every common divisor of $a$ and $b$ is a
+common divisor of $b$ and $r$, and so the greatest common divisor of $a$ and $b$
+is a common divisor of $b$ and $r$. But then $\text{gcd}(a, b)$ (being one of
+the common divisors of $b$ and $r$) is less than or equal to the greatest common
+divisor of $b$ and $r$:
+
+$$ \text{gcd}(a, b) \leq \text{gcd}(b, r) $$
+
+2. $\text{\textbf{gcd}}(b, r) \leq \text{\textbf{gcd}}(a, b)$:
+
+The second part of the proof is very similar to the first part. It is left as an
+exercise.
+
+---
+
+Page 275
+
+**Euclidean Algorithm Description**
+
+1. Let $A$ and $B$ be integers with $A > B \geq 0$.
+
+2. To find the greatest common divisor of $A$ and $B$, first check whether
+   $B = 0$. If it is, then $\text{gcd}(A, B) = A$ by Lemma 4.10.1. If it isn't,
+   then $B > 0$ and the quotient-remainder theorem can be used to divide $A$ by
+   $B$ to obtain a quotient $q$ and a remainder $r$:
+
+$$ A = Bq + r \quad \text{ where } \quad 0 \leq r < B $$
+
+By Lemma 4.10.2, $\text{gcd}(A, B) = \text{gcd}(B, r)$. Thus the problem of
+finding the greatest common divisor of $A$ and $B$ is reduced to the problem of
+finding the greatest common divisor of $B$ and $r$.
+
+_[What makes this information useful is the fact that the larger number of the
+pair $(B, r)$ is smaller than the larger number of the pair $(A, B)$. The reason
+is that the value of $r$ found by the quotient-remainder theorem satisfies_
+
+$$ 0 \leq r < B $$
+
+_And, since by assumption $B < A$, we have that_
+
+$$ 0 \leq r < B < A $$
+
+_]_.
+
+3. Now just repeat the process, starting again at (2), but use $B$ instead of
+   $A$ and $r$ instead of $B$. The repetitions are guaranteed to terminate
+   eventually with $r = 0$ because each new remainder is less than the preceding
+   one and all are nonnegative.
+
+---
+
+Page 277
+
+**Algorithm 4.10.2 Euclidean Algorithm**
+
+_[Given two integers $A$ and $B$ with $A > B \geq 0$, this algorithm computes
+$\text{gcd}(A, B)$. It is based on two facts:_
+
+1. $\text{gcd}(a, b) = \text{gcd}(b, r)$ _if $a$, $b$, $q$, and $r$ are integers
+   with $b = b \cdot q + r$ and $0 \leq r < b$._
+
+2. $\text{gcd}(a, 0) = a$._]_
+
+**Input:** $A, B$ _[integers with $A > B \geq 0$]_
+
+**Algorithm Body:**
+
+$a := A, b := B, r:= B$
+
+_[If $b \neq 0$, compute $a \mod b$, the remainder of the integer division of
+$a$ by $b$, and set $r$ equal to this value. Then repeat the process using $b$
+in place of $a$ and $r$ in place of $b$.]_
+
+$\text{\textbf{while }} (b \neq 0)\\ \ \ \ \ r:= a \mod b$
+
+_[The value of $a \mod b$ can be obtained by calling the division algorithm.]_
+
+$\ \ \ \ a := b\\ \ \ \ \ b := r\\ \text{\textbf{end while}}$
+
+_[After execution of the $\text{\textbf{while}}$ loop, $\text{gcd}(A, B) = a$.]_
+
+$\text{gcd} := a$
+
+**Output:** $\text{gcd}$ _[a positive integer]_

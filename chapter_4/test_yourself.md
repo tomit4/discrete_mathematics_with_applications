@@ -285,3 +285,56 @@ for each pair of vertices
    any one vertex of $W$ to any other vertex of $W$.
 
 one edge; no edge; no edge
+
+---
+
+**Test Yourself**
+
+Page 277
+
+1. When an algorithm statement of the form $x := e$ is executed, ______.
+
+2. Consider an algorithm statement of the following form.
+
+$\text{\textbf{if }(condition)}\\ \text{\textbf{then }} s_1\\ \text{\textbf{else }} s_2$
+
+When such a statement is executed, the truth or falsity of the _condition_ is
+evaluated. If _condition_ is true, ______. If _condition_ is false, ______.
+
+3. Consider an algorithm statement of the following form.
+
+$\text{\textbf{while }(condition)}$
+
+_[statements that make up the body of the loop]_
+
+$\text{\textbf{end while}}$
+
+When such a statement is executed, the truth or falsity of the _condition_ is
+evaluated. If _condition_ is true, ______. If _condition_ is false, ______.
+
+4. Consider an algorithm statement of the following form.
+
+$\text{\textbf{for } variable } := \text{initial expression \textbf{to} final expression.}$
+
+_[statements that make up the body of the loop]_
+
+$\text{\textbf{next } (same) variable}$
+
+When such a statement is executed, _variable_ is set equal to the value of the
+_initial expression_, and a check is made to determine whether the value of
+_variable_ is less than or equal to the value of _final expression_. If so,
+______. If not, ______.
+
+5. Given a nonnegative integer $a$ and a positive integer $d$ the division
+   algorithm computes ______.
+
+6. Given integers $a$ and $b$, not both zero, $\text{gcd}(a, b)$ is the integer
+   $d$ that satisfies the following two conditions: ______ and ______.
+
+7. If $r$ is a positive integer, then $gcd(r, 0) =$ ______.
+
+8. If $a$ and $b$ are integers not both zero and if $q$ and $r$ are nonnegative
+   integers such that $a = bq + r$ then $\text{gcd}(a,b ) =$ ______.
+
+9. Given positive integers $A$ and $B$ with $A > B$, the Euclidean algorithm
+   computes.
