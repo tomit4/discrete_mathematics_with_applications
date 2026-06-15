@@ -258,13 +258,24 @@ Page 265
 
 1. The total degree of a graph is defined as ______.
 
+The sum of the degrees of all the vertices of the graph
+
 2. The handshake theorem says that the total degree of a graph is ______.
+
+equal to the number of edges of the graph
 
 3. In any graph the number of vertices of odd degree is ______.
 
+an even number
+
 4. A simple graph is ______.
 
+a graph with no loops or parallel edges
+
 5. A complete graph on $n$ vertices is a ______.
+
+a simple graph with $n$ vertices whose set of edges contains exactly one edge
+for each pair of vertices
 
 6. A complete bipartite graph on $(m, n)$ vertices is a simple graph whose
    vertices can be divided into two distinct, non-overlapping sets, say $V$ with
@@ -272,3 +283,5 @@ Page 265
    ______ from each vertex of $V$ to each vertex of $W$, (2) there is ______
    from any one vertex of $V$ to any other of $V$, and (3) there is ______ from
    any one vertex of $W$ to any other vertex of $W$.
+
+one edge; no edge; no edge

@@ -8835,13 +8835,49 @@ Check that the number of edges equals one-half of the total degree.
 
 1. See page 265.
 
+$\text{deg(v_1)} = 3$
+
+$\text{deg(v_2)} = 2$
+
+$\text{deg(v_3)} = 4$
+
+$\text{deg(v_4)} = 2$
+
+$\text{deg(v_5)} = 1$
+
+$\text{deg(v_6)} = 0$
+
+$\text{deg}(\text{total}) = 12$
+
+$\text{total edges} = 6$
+
 2. See page 265.
+
+$\text{deg(v_1)} = 1$
+
+$\text{deg(v_2)} = 5$
+
+$\text{deg(v_3)} = 4$
+
+$\text{deg(v_4)} = 4$
+
+$\text{deg(v_5)} = 1$
+
+$\text{deg(v_6)} = 3$
+
+$\text{deg}(\text{total}) = 18$
+
+$\text{total edges} = 9$
 
 3. A graph has vertices of degrees 0, 2, 2, 3, and 9. How many edges does the
    graph have?
 
+$$ \frac{1}{2}(0 + 2 + 2 + 3 + 9) = 8 \text{ edges} $$
+
 4. A graph has vertices of degrees 1, 1, 4, 4, and 6. How many edges does the
    graph have?
+
+$$ \frac{1}{2}(1 + 1 + 4 + 4 + 6) = 8 \text{ edges} $$
 
 In each of 5-13 either draw a graph with the specified properties or explain why
 no such graph exists.
@@ -8850,13 +8886,26 @@ no such graph exists.
 
 6. Graph of four vertices of degrees 1, 2, 3, and 3.
 
+Not possible. It has an odd number of total degrees, 9. By 4.9.2, the total
+degree of a graph must be even.
+
 7. Graph with four vertices of degrees 1, 1, 1, and 4.
+
+Not possible. It has an odd number of total degrees, 7. By 4.9.2, the total
+degree of a graph must be even.
 
 8. Graph with four vertices of degrees 1, 2, 3, and 4.
 
 9. Simple graph with four vertices of degrees 1, 2, 3, and 4.
 
+No such graph. The vertex of degree 4 would have to be connected by edges to 4
+distinct vertices other than itself. This is not possible in a simple graph
+since it cannot loop back on itself.
+
 10. Simple graph with five vertices of degrees 2, 3, 3, 3, and 5.
+
+Not possible, as the vertex of degree 5 would have to loop back on itself in a
+graph of 5 vertices, which contradicts the definition of a simple graph.
 
 11. Simple graph with five vertices of degrees 1, 1, 1, 2, and 3.
 
@@ -8871,7 +8920,19 @@ no such graph exists.
 
 a. How many people attending the party knew three other people before the party?
 
+$$ (2 \cdot 1) + (5 \cdot 2) + 3x = 2 + 10 + 3x = 12 + 3x $$
+
+$$ 12 + 3x = 2(15) $$
+
+$$ 12 + 3x = 30 $$
+
+$$ 3x = 18 $$
+
+$$ \boxed{x = 6} $$
+
 b. How many people attended the party?
+
+$$ 2 + 5 + 6 = \boxed{13} $$
 
 15. A small social network contains three people who are network friends with
     six other people in the network, one person who is network friend with five
@@ -8882,7 +8943,17 @@ b. How many people attended the party?
 
 a. How many people are network friends with three other people in the network?
 
+$$ (3 \cdot 6) + (1 \cdot 5) + (5 \cdot 4) + 3x = 41(2) $$
+
+$$ 43 + 3x = 82 $$
+
+$$ 3x = 39 $$
+
+$$ \boxed{x = 13} $$
+
 b. How many people are in the network?
+
+$$ 3 + 1 + 5 + 13 = \boxed{22} $$
 
 16.
 
@@ -8890,18 +8961,63 @@ a. In a group of 15 people, is it possible for each person to have exactly 3
 friends? Justify your answer. (Assume that friendship is a symmetric
 relationship: If $x$ is a friend of $y$, then $y$ is a friend of $x$.)
 
+**Proof by contradiction:**
+
+Suppose that, in a group of 15 people, each person had exactly three friends.
+Then you could draw a graph representing each person by a vertex and connecting
+two vertices by an edge if the corresponding people were friends. But such a
+graph would have 15 vertices, each of degree 3, for a total of 45. This would
+contradict the fact that the total degree of any graph is even. Hence the
+supposition must be false, and in a group of 15 people it is not possible for
+each to have exactly three friends.
+
 b. In a group of 4 people, is it possible for each person to have exactly 3
 friends? Justify your answer.
+
+**Proof:**
+
+Suppose that, in a group of 4 people, each person has exactly 3 friends. Then
+you could draw a graph representing each person by a vertex and connecting two
+vertices by an edge if the corresponding people were friends. Such a graph would
+have 4 vertices, each of degree 3, for a total of 12. The total degree is even,
+and therefore it is possible for each person to have exactly 3 friends.
 
 17. In a group of 25 people, is it possible for each to shake hands with exactly
     3 other people? Justify your answer.
 
+No $25 \cdot 3 = 75$ is odd number of total degrees.
+
 18. Is there a simple graph, each of whose vertices has even degree? Justify
     your answer.
+
+Yes, a minimum number of vertices would be 3. Each vertex would have a degree of
+2 that would reach out to the other two vertices.
 
 19. Suppose that $G$ is a graph with $v$ vertices and $e$ edges and that the
     degree of each vertex is at least $d_{\text{min}}$ and at most
     $d_{\text{max}}$. Show that
+
+$$ \frac{1}{2}d_{\text{min}} \cdot v \leq e \leq \frac{1}{2}d_{\text{max}} \cdot v $$
+
+**Proof:**
+
+Let $e$ be the total number of edges, let $t$ be the total degree of the graph,
+let $d_{\text{min}}$ be the minimum degree of any vertex in $G$, and let
+$d_{\text{max}}$ be the maximum degree of any vertex in $G$.
+
+The total degree of $G$ is greater than or equal to the minimum degree times the
+total amount of vertices.
+
+$$ d_{\text{min}} \cdot v \leq t  $$
+
+Also the total degree of $G$ is less than or equal to the maximum degree times
+the total amount of vertices.
+
+$$ d_{\text{min}} \cdot v \leq t \leq d_{\text{max}} \cdot v $$
+
+The total degree of $G$ is $2e$.
+
+$$ d_{\text{min}} \cdot v \leq 2e \leq d_{\text{max}} \cdot v $$
 
 $$ \frac{1}{2}d_{\text{min}} \cdot v \leq e \leq \frac{1}{2}d_{\text{max}} \cdot v $$
 
@@ -8912,19 +9028,89 @@ a. Draw $K_6$, a complete graph on six vertices.
 b. Use the result of Example 4.9.9 to show that the number of edges of a simple
 graph with $n$ vertices is less than or equal to $\dfrac{n(n - 1)}{2}$.
 
+Prove that for any positive integer $n$, the number of edges of a simple graph
+with $n$ vertices is less than or equal to $\dfrac{n(n - 1)}{2}$.
+
+**Proof:**
+
+Suppose $n$ and $e$ are any positive integers such that a simple graph $K_n$ has
+$n$ vertices and $e$ edges.
+
+By Example 4.9.9, we know the number of edges of a complete graph, $K_m$ is:
+
+$$ \text{the number of edges of } K_m = \frac{m(m - 1)}{2} $$
+
+A simple graph is a graph that does not have any loops or parallel edges, while
+a complete graph is a simple graph with $m$ vertices and exactly one edge
+connecting each pair of distinct vertices.
+
+It follows then that the total number of edges for the simple graph $K_n$ could
+only have at most the total number of edges for a complete graph of $n$
+vertices.
+
+Therefore we have proven that:
+
+$$ e \text{ for } K_n \leq \frac{n(n - 1)}{2} $$
+
+Q.E.D.
+
 21.
 
 a. In a simple graph, must every vertex have degree that is less than the number
 of vertices in the graph? Why?
 
+Yes. Let $G$ be a simple graph with $n$ vertices and let $v$ be a vertex of $G$.
+Since $G$ has no parallel edges, $v$ can be joined by at most a single edge to
+each of the $n - 1$ other vertices of $G$, and since $G$ has no loops, $v$
+cannot be joined to itself. Therefore, the maximum degree of $v$ is $n - 1$.
+
 b. Can there be a simple graph that has four vertices all of different degrees?
 Why?
+
+No. Suppose there is a simple graph with four vertices, all of which have
+different degrees. By part (a), no vertex can have a degree greater than three,
+and of course, no vertex can have a degree less than $0$. Therefore, the only
+possible degrees of the vertices are 0, 1, 2, and 3. Since all four vertices
+have different degrees, there is one vertex with each degree. But then the
+vertex of degree 3 is connected to all other vertices, which contradicts the
+fact that one of the vertices has degree 0. Hence the supposition is false, and
+there is no simple graph with four vertices each of which has a different
+degree.
 
 c. For any integer $n \geq 5$, can there be a simple graph that has $n$ vertices
 all of different degrees? Why?
 
+No, let $n$ be an integer such that $n \geq 5$, and let $G$ be a simple graph
+with $n$ vertices. By part (a) no vertex can have a degree greater than $n - 1$.
+Since $n \geq 5$, then $n - 1 \geq 4$. Therefore the only possible degrees of
+the vertices are $0, 1, \dots, n - 1$.
+
+Since there are $n$ vertices and $n$ possible degree values, each degree must
+occur exactly once. In particular there must be a vertex of degree $0$ and a
+vertex of degree $n - 1$.
+
+However, a vertex of degree $n - 1$ is adjacent to every other vertex in the
+graph, including the vertex of degree $0$. This contradicts the fact that a
+vertex of degree $0$ is adjacent to no vertices.
+
 22. In a group of two or more people, must there always be at least two people
     who are acquainted with the same number of people within the group? Why?
+
+Yes.
+
+Let the group contain $n \geq 2$ people. Model the situation with a simple graph
+$G$ where each person is represented by a vertex. Two vertices are connected by
+an edge if the corresponding people are acquainted.
+
+Then the degree of a vertex is the number of people in the group that person is
+acquainted with.
+
+By Exercise 21, a simple graph with $n$ vertices cannot have all $n$ vertices of
+different degrees. Equivalently, there must be at least two vertices with the
+same degree.
+
+Therefore, there must be at least two people who are acquainted with the same
+number of people within the group.
 
 23. Recall that $K_{m, n}$ denotes a complete bipartite graph on $(m, n)$
     vertices.
@@ -8937,10 +9123,20 @@ c. Draw $K_{3, 4}$.
 
 d. How many vertices of $K_{m, n}$ have degree $m$? degree $n$?
 
+Vertices that have degree $m$ are all vertices in $\{n\}$.
+
+Vertices that have degree $n$ are all vertices in $\{m\}$.
+
 e. What is the total degree of $K_{m, n}$?
+
+$$ (m \cdot n) + (n \cdot m) = 2mn $$
 
 f. Find a formula in terms of $m$ and $n$ for the number of edges of $K_{m, n}$.
 Justify your answer.
+
+$$ e = mn $$
+
+Justification omitted.
 
 24. A (general) **bipartite graph** $G$ is a simple graph whose vertex set can
     be partitioned into two disjoint nonempty subsets $V_1$ and $V_2$ such that
@@ -8963,3 +9159,5 @@ See Page 266.
 25. Suppose $r$ and $s$ are any positive integers. Does there exist a graph $G$
     with the property that $G$ has vertices of degrees $r$ and $s$ and no other
     degrees? Explain.
+
+Omitted.
