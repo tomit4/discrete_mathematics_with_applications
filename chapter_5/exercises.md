@@ -837,3 +837,347 @@ $$ 2301_{10} = 8FD_{16} $$
 91. Write a formal version of the algorithm you developed for exercise 87.
 
 Already done.
+
+---
+
+**Exercise Set 5.2**
+
+Page 309
+
+1. Use the technique illustrated at the beginning of this section to show that
+   the statements in (a) and (b) are true.
+
+a. If
+$\left(1 - \dfrac{1}{2}\right)\left(1 - \dfrac{1}{3}\right)\left(1 - \dfrac{1}{4}\right)\left(1 - \dfrac{1}{5}\right) = \dfrac{1}{5}$
+then
+$\left(1 - \dfrac{1}{2}\right)\left(1 - \dfrac{1}{3}\right)\left(1 - \dfrac{1}{4}\right)\left(1 - \dfrac{1}{5}\right)\left(1 - \dfrac{1}{6}\right) = \dfrac{1}{6}$.
+
+b. If
+$\left(1 - \dfrac{1}{2}\right)\left(1 - \dfrac{1}{3}\right)\left(1 - \dfrac{1}{4}\right)\left(1 - \dfrac{1}{5}\right)\left(1 - \dfrac{1}{6}\right) = \dfrac{1}{6}$
+then
+$\left(1 - \dfrac{1}{2}\right)\left(1 - \dfrac{1}{3}\right)\left(1 - \dfrac{1}{4}\right)\left(1 - \dfrac{1}{5}\right)\left(1 - \dfrac{1}{6}\right)\left(1 - \dfrac{1}{7}\right) = \dfrac{1}{7}$.
+
+2. For each positive integer $n$, let $P(n)$ be the formula
+
+$$ 1 + 3 + 5 + \dots + (2n - 1) = n^2 $$
+
+a. Write $P(1)$. Is $P(1)$ true?
+
+b. Write $P(k)$.
+
+c. Write $P(k + 1)$.
+
+d. In a proof by mathematical induction that the formula holds for every integer
+$n \geq 1$, what must be shown in the inductive step?
+
+3. For each positive integer $n$, let $P(n)$ be the formula
+
+$$ 1^2 + 2^2 + \dots + n^2 = \frac{n(n + 1)(2n + 1)}{6} $$
+
+a. Write $P(1)$. Is $P(1)$ true?
+
+b. Write $P(k)$.
+
+c. Write $P(k + 1)$.
+
+d. In a proof by mathematical induction that the formula holds for every integer
+$n \geq 1$, what must be shown in the inductive step?
+
+4. For each integer $n$ with $n \geq 2$, let $P(n)$ be the formula
+
+$$ \sum_{i = 1}^{n - 1}{i(i + 1)} = \frac{n(n - 1)(n + 1)}{3} $$
+
+a. Write $P(1)$. Is $P(1)$ true?
+
+b. Write $P(k)$.
+
+c. Write $P(k + 1)$.
+
+d. In a proof by mathematical induction that the formula holds for every integer
+$n \geq 1$, what must be shown in the inductive step?
+
+5. Fill in the missing pieces in the following proof that
+
+$$ 1 + 3 + 5 + \dots + (2n - 1) = n^2 $$
+
+for every integer $n \geq 1$.
+
+**Proof:** Let the property $P(n)$ be the equation
+
+$$ 1 + 3 + 5 + \dots + (2n - 1) = n^2 $$
+
+_Show that_ $P(1)$ is true:
+
+To establish $P(1)$, we must show that when $1$ is substituted in place of $n$,
+the left-hand side equals the right-hand side. But when $n = 1$, the left-hand
+side is the sum of all the odd integers from $1$ to $2 \cdot 1 - 1$, which is
+the sum of the odd integers from $1$ to $1$ and is just $1$. The right-hand side
+is __ (a) __, which also equals $1$. So $P(1)$ is true.
+
+_Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is
+true:_
+
+Let $k$ be any integer with $k \geq 1$.
+
+_[Suppose $P(k)$ is true. That is:]_
+
+Suppose
+
+$1 + 3 + 5 \cdot + (2k - 1) =$ __ (b) __.
+
+_[This is the inductive hypothesis.]_
+
+_[We must show that $P(k + 1)$ is true. That is:]_
+
+We must show that __ \(c\) __ = __ (d) __.
+
+Now the left-hand side of $P(k + 1)$ is
+
+$$ 1 + 3 + 5 + \dots + (2(k + 1) - 1) $$
+
+$$ = 1 + 3 + 5 + \dots + (2k + 1) $$
+
+$$ = [1 + 3 + 5 + \dots + (2k - 1)] + (2k + 1) $$
+
+the next-to-last term is $2k - 1$ because __ (e) __
+
+$$ = k^2 + (2k + 1) $$
+
+by __ (f) __
+
+$$ = (k + 1)^2 $$
+
+which is the right-hand side of $P(k + 1)$ _[as was to be shown]._
+
+_[Since we have proved the basis step and the inductive step, we conclude that
+the given statement is true.]_
+
+_Note:_ This proof was annotated to help make its logical flow more obvious. In
+standard mathematical writing, such annotation is omitted.
+
+Prove each statement in 6-9 using mathematical induction. Do not derive them
+from Theorem 5.2.1 or Theorem 5.2.2.
+
+6. For every integer $n \geq 1$,
+
+$$ 2 + 4 + 6 + \dots + 2n = n^2 + n $$
+
+7. For every integer $n \geq 1$,
+
+$$ 1 + 6 + 11 + 16 + \dots + (5n - 4) = \frac{n(5n - 3)}{2} $$
+
+8. For every integer $n \geq 0$,
+
+$$ 1 + 2 + 2^2 + \dots + 2^n = 2^{n + 1} + 1 $$
+
+9. For every integer $n \geq 3$,
+
+$$ 4^3 + 4^4 + 4^5 + \dots + 4^n = \frac{4(4^n - 16)}{3} $$
+
+Prove each of the statements in 10-18 by mathematical induction.
+
+10. $1^2 + 2^2 + \dots + n^2 = \dfrac{n(n + 1)(2n + 1)}{6}$, for every integer
+    $n \geq 1$.
+
+11. $1^3 + 2^3 + \dots + n^3 = \left[\dfrac{n(n + 1)}{2}\right]^2$, for every
+    integer $n \geq 1$.
+
+12. $\dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \dots + \dfrac{1}{n(n + 1)} = \dfrac{n}{n + 1}$,
+    for every integer $n \geq 1$.
+
+13. $\sum_{i = 1}^{n - 1}{i(i + 1)} = \dfrac{n(n - 1)(n + 1)}{3}$, for every
+    integer $n \geq 2$.
+
+14. $\sum_{i = 1}^{n + 1}{i \cdot 2^i} = n \cdot 2^{n + 2} + 2$, for every
+    integer $n \geq 0$.
+
+15. $\sum_{i = 1}^{n}{i(i!)} = (n + 1)! - 1$, for every integer $n \geq 1$.
+
+16. $\left(1 - \dfrac{1}{2^2}\right)\left(1 - \dfrac{1}{3^2}\right) \dots \left(1 - \dfrac{1}{n^2}\right) = \dfrac{n + 1}{2n}$,
+    for every integer $n \geq 2$.
+
+17. $\prod_{i = 0}^{n}{\left(\dfrac{1}{2i + 1} \cdot \dfrac{1}{2i + 2}\right)} = \dfrac{1}{(2n + 2)!}$,
+    for every integer $n \geq 0$.
+
+18. $\prod_{i = 2}^{n}{\left(1 - \dfrac{1}{i}\right)} = \dfrac{1}{n}$ for every
+    integer $n \geq 2$.
+
+_Hint:_ See the discussion at the beginning of this section.
+
+19. (For students who have studied calculus) Use mathematical induction, the
+    product rule from calculus, and the facts that $\dfrac{d(x)}{dx} = 1$ and
+    that $x^{k + 1} = x \cdot x^k$ to prove that for every integer $n \geq 1$,
+    $\dfrac{d(x^n)}{dx} = nx^{n - 1}$.
+
+Use the formula for the sum of the first $n$ integers and/or the formula for the
+sum of a geometric sequence to evaluate the sums in 20-29 or to write them in
+closed form.
+
+20. $4 + 8 + 12 + 16 + \dots + 200$
+
+21. $5 + 10 + 15 + 20 + \dots + 300$
+
+22.
+
+a. $3 + 4 + 5+ 6 + \dots + 1000$
+
+b. $3 + 4 + 5 + 6 + \dots + m$
+
+23.
+
+a. $7 + 8 + 9 + 10 + \dots + 600$
+
+b. $7 + 8 + 9 + 10 + \dots + k$
+
+24. $1 + 2 + 3 + \dots + (k - 1)$, where $k$ is any integer with $k \geq 2$.
+
+25.
+
+a. $1 + 2 + 2^2 + \dots + 2^{25}$
+
+b. $2 + 2^2 + 2^3 + \dots + 2^{26}$
+
+c. $2 + 2^2 + 2^3 + \dots + 2^n$
+
+26. $3 + 3^2 + 3^3 + \dots + 3^n$, where $n$ is any integer with $n \geq 1$.
+
+27. $5^3 + 5^4 + 5^5 + \dots + 5^k$, where $k$ is any integer with $k \geq 3$.
+
+28. $1 + \dfrac{1}{2} + \dfrac{1}{2^2} + \dots + \dfrac{1}{2^n}$, where $n$ is
+    any positive integer.
+
+29. $1 - 2 + 2^2 - 2^3 + \dots + (-1)^n2^n$, where $n$ is any positive integer.
+
+30. Observe that
+
+$$ \frac{1}{1 \cdot 3} = \frac{1}{3} $$
+
+$$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} = \frac{2}{5} $$
+
+$$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} = \frac{3}{7} $$
+
+$$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} + \frac{1}{7 \cdot 9} = \frac{4}{9} $$
+
+Guess a general formula and prove it by mathematical induction.
+
+31. Compute values of the product
+
+$$ \left(1 + \frac{1}{1}\right)\left(1 + \frac{1}{2}\right)\left(1 + \frac{1}{3}\right) \dots \left(1 + \frac{1}{n}\right) $$
+
+for small values of $n$ in order to conjecture a general formula for the
+product. Prove your conjecture by mathematical induction.
+
+32. Observe that
+
+$$ 1 = 1 $$
+
+$$ 1 - 4 = -(1 + 2) $$
+
+$$ 1 - 4 + 9 = 1 + 2 + 3 $$
+
+$$ 1 - 4 + 9 - 16 = -(1 + 2 + 3 + 4) $$
+
+$$ 1 - 4 + 9 - 16 + 25 = 1 + 2 + 3 + 4 + 5 $$
+
+Guess a general formula and prove it by mathematical induction.
+
+33. Find a formula in $n$, $a$, $m$, and $d$ for the sum
+    $(a + md) + (a + (m + 1)d) + (a + (m + 2)d) + \dots + (a + (m + n)d)$, where
+    $m$ and $n$ are integers, $n \geq 0$, and $a$ and $d$ are real numbers.
+    Justify your answer.
+
+34. Find a formula in $a$, $r$, $m$, and $n$ for the sum
+
+$$ ar^m + ar^{m + 1} + ar^{m + 2} + \dots + ar^{m + n} $$
+
+where $m$ and $n$ are integers, $n \geq 0$, and $a$ and $r$ are real numbers.
+Justify your answer.
+
+35. You have two parents, four grandparents, eight great-grandparents, and so
+    forth.
+
+a. If all your ancestors were distinct, what would be the total number of your
+ancestors for the past 40 generations (counting your parents' generation as
+number one)? (_Hint:_ Use the formula for the sum of a geometric sequence.)
+
+b. Assuming that each generation represents 25 years, how long is 40
+generations?
+
+c. The total number of people who have ever lived is approximately 10 billion,
+which equals $10^{10}$ people. Compare this fact with the answer to part (a).
+What can you deduce?
+
+Find the mistakes in the proof fragments in 36-38.
+
+36.
+
+**Theorem:**
+
+For any integer $n \geq 1$,
+
+$$ 1^2 + 2^2 + \dots + n^2 = \frac{n(n + 1)(2n + 1)}{6} $$
+
+**"Proof (by mathematical induction):**
+
+Certainly the theorem is true for $n = 1$ because $1^2 = 1$ and
+$\dfrac{1(1 + 1)(2 \cdot 1 + 1)}{6} = 1$ . So the basis step is true. For the
+inductive step, suppose that $k$ is any integer with $k \geq 1$,
+$k^2 = \dfrac{k(k + 1)(2k + 1)}{6}$. We must show that
+$(k + 1)^2 = \dfrac{(k + 1)((k + 1) + 1)(2(k + 1) + 1)}{6}$."
+
+37.
+
+**Theorem:**
+
+For any integer $n \geq 0$,
+
+$$ 1 + 2 + 2^2 + \dots + 2^n = 2^{n + 1} - 1 $$
+
+**"Proof (by mathematical induction):**
+
+Let the property $P(n)$ be
+
+$$ 1 + 2 + 2^2 + \dots + 2^n = 2^{n + 1} - 1 $$
+
+_Show that $P(0)$ is true:_
+
+The left-hand side of $P(0)$ is $1 + 2 + 2^2 + \dots + 2^0 = 1$ and the
+right-hand side is $2^{0 + 1} - 1 = 2 - 1 = 1$ also. So $P(0)$ is true."
+
+38.
+
+**Theorem:**
+
+For any integer $n \geq 1$,
+
+$$ \sum_{i = 1}^{n}{i(i!)} = (n + 1)! - 1 $$
+
+**"Proof (by mathematical induction):**
+
+Let the property $P(n)$ be
+
+$$ \sum_{i = 1}^{n}{i(i!)} = (n + 1)! - 1 $$
+
+_Show that $P(1)$ is true:_
+
+When $n = 1$,
+
+$$ \sum_{i = 1}^{i}{i(i!)} = (1 + 1)! - 1 $$
+
+So
+
+$$ 1(1!) = 2! - 1$$
+
+and
+
+$$ 1 = 1 $$
+
+Thus $P(1)$ is true."
+
+39. Use Theorem 5.2.1 to prove that if $m$ and $n$ are any positive integers and
+    $m$ is odd, then $\sum_{k = 0}^{m - 1}{(n + k)}$ is divisible by $m$. Does
+    the conclusion hold if $m$ is even? Justify your answer.
+
+40. Use Theorem 5.2.1 and the result of exercise 10 to prove that if $p$ is any
+    prime number with $p \geq 5$, then the sum of the squares of any $p$
+    consecutive integers is divisible by $p$.

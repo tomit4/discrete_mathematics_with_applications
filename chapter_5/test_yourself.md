@@ -30,3 +30,22 @@ $$ \sum_{k = m}^{n}{a_k + cb_k} $$
    _____.
 
 $$ \prod_{k = m}^{n}{a_kb_k} $$
+
+---
+
+**Test Yourself**
+
+Page 309
+
+1. Mathematical induction is a method for proving that a property defined for
+   integers $n$ is true for all values of $n$ that are _____.
+
+2. Let $P(n)$ be a property defined for integers $n$ and consider constructing a
+   proof by mathematical induction for the statement "P(n) is true for all
+   $n \geq a$."
+
+a. In the basis step one must show _____.
+
+b. In the inductive step one supposes that _____ for a particular but
+arbitrarily chosen value of an integer $k \geq a$. This supposition is called
+the _____. One then has to show that _____.
