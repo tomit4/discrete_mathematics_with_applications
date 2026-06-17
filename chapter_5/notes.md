@@ -111,7 +111,7 @@ $r[0], r[1], r[2], \dots r[k]$. Even if the initial-value of $q$ equals $0$, the
 loop should execute one time (so that $r[0]$ is computed). Thus the guard
 condition for the **while** loop is $i = 0$ or $q \neq 0$.]_
 
-$\text{\textbf{while }}(i = 0 \text{ or } q \new 0)\\ \ \ r[i] := q \mod 2\\ \ \ q := q \text{ div } 2\\ \ \ \text{[r[i] and q can be obtained by calling the division algorithm.]}\\ \ \ i := i + 1\\ \text{\textbf{end while}}$
+$\text{\textbf{while }}(i = 0 \text{ or } q \neq 0)\\ \ \ r[i] := q \mod 2\\ \ \ q := q \text{ div } 2\\ \ \ \text{[r[i] and q can be obtained by calling the division algorithm.]}\\ \ \ i := i + 1\\ \text{\textbf{end while}}$
 
 _[After execution of this step, the values of $r[0], r[1], \dots, r[i - 1]$ are
 all $0$'s and $1$'s, and
