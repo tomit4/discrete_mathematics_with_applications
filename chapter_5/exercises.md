@@ -852,10 +852,51 @@ $\left(1 - \dfrac{1}{2}\right)\left(1 - \dfrac{1}{3}\right)\left(1 - \dfrac{1}{4
 then
 $\left(1 - \dfrac{1}{2}\right)\left(1 - \dfrac{1}{3}\right)\left(1 - \dfrac{1}{4}\right)\left(1 - \dfrac{1}{5}\right)\left(1 - \dfrac{1}{6}\right) = \dfrac{1}{6}$.
 
+Since:
+
+$$ \left(1 - \dfrac{1}{2}\right)\left(1 - \dfrac{1}{3}\right)\left(1 - \dfrac{1}{4}\right)\left(1 - \dfrac{1}{5}\right) = \dfrac{1}{5} $$
+
+then we can say that:
+
+$$ \left(1 - \dfrac{1}{2}\right)\left(1 - \dfrac{1}{3}\right)\left(1 - \dfrac{1}{4}\right)\left(1 - \dfrac{1}{5}\right)\left(1 - \dfrac{1}{6}\right) = \dfrac{1}{6} = \frac{1}{5}\left(1 - \dfrac{1}{6}\right) $$
+
+Evaluating this right hand side, we find that:
+
+$$ \frac{1}{5}\left(1 - \frac{1}{6}\right) $$
+
+$$ = \frac{1}{5}\left(\frac{6}{6} - \frac{1}{6}\right) $$
+
+$$ = \frac{1}{5}\left(\frac{5}{6}\right) $$
+
+$$ = \frac{1}{6} $$
+
+Which is equal to the right hand side of the equality to be proved.
+
 b. If
 $\left(1 - \dfrac{1}{2}\right)\left(1 - \dfrac{1}{3}\right)\left(1 - \dfrac{1}{4}\right)\left(1 - \dfrac{1}{5}\right)\left(1 - \dfrac{1}{6}\right) = \dfrac{1}{6}$
 then
 $\left(1 - \dfrac{1}{2}\right)\left(1 - \dfrac{1}{3}\right)\left(1 - \dfrac{1}{4}\right)\left(1 - \dfrac{1}{5}\right)\left(1 - \dfrac{1}{6}\right)\left(1 - \dfrac{1}{7}\right) = \dfrac{1}{7}$.
+
+Given that:
+
+$$ \left(1 - \dfrac{1}{2}\right)\left(1 - \dfrac{1}{3}\right)\left(1 - \dfrac{1}{4}\right)\left(1 - \dfrac{1}{5}\right)\left(1 - \dfrac{1}{6}\right) = \dfrac{1}{6} $$
+
+Then, by substitution:
+
+$$ \left(1 - \dfrac{1}{2}\right)\left(1 - \dfrac{1}{3}\right)\left(1 - \dfrac{1}{4}\right)\left(1 - \dfrac{1}{5}\right)\left(1 - \dfrac{1}{6}\right)\left(1 - \dfrac{1}{7}\right) = \frac{1}{6}\left(1 - \dfrac{1}{7}\right) $$
+
+Evaluating this right hand side, we find:
+
+$$ \frac{1}{6}\left(1 - \frac{1}{7}\right) $$
+
+$$ = \frac{1}{6}\left(\frac{7}{7} - \frac{1}{7}\right) $$
+
+$$ = \frac{1}{6}\left(\frac{6}{7}\right) $$
+
+$$ = \frac{1}{7} $$
+
+And this is equal to the right hand side of the equality, and therefore shows
+that the statement is true.
 
 2. For each positive integer $n$, let $P(n)$ be the formula
 
@@ -863,12 +904,55 @@ $$ 1 + 3 + 5 + \dots + (2n - 1) = n^2 $$
 
 a. Write $P(1)$. Is $P(1)$ true?
 
+$$ P(n) = 1 + 3 + 5 + \dots + (2(n) - 1) = (n)^2  $$
+
+By 5.2.1:
+
+$$ P(n) = \frac{(2n - 1)((2n - 1) + 1)}{2} $$
+
+$$ = \frac{(2n - 1)(2n)}{2} $$
+
+$$ = \frac{4n^2 - 2n}{2} $$
+
+$$ = 2n^2 - n $$
+
+$$ P(1) = 1 + 3 + 5 + \dots + (2(1) - 1) = (1)^2  $$
+
+$$ = 2(1)^2 - (1) = (1)^2  $$
+
+$$ = 2(1) - (1) = (1)  $$
+
+$$ = 2 - 1 = 1 $$
+
+$$ = 1 = 1 $$
+
+$P(1)$ is true.
+
 b. Write $P(k)$.
+
+$$ P(n) = 1 + 3 + 5 + \dots + (2(n) - 1) = (n)^2  $$
+
+$$ P(k) = 1 + 3 + 5 + \dots + (2k - 1) = k^2  $$
 
 c. Write $P(k + 1)$.
 
+$$ P(n) = 1 + 3 + 5 + \dots + (2(n) - 1) = (n)^2  $$
+
+$$ P(k + 1) = 1 + 3 + 5 + \dots + (2(k + 1) - 1) = (k + 1)^2 $$
+
+Alternatively:
+
+$$ P(k + 1) = 1 + 3 + 5 + \dots + (2k + 2 - 1) = k^2 + 2k + 1 $$
+
+$$ P(k + 1) = 1 + 3 + 5 + \dots + (2k + 1) = k^2 + 2k + 1 $$
+
 d. In a proof by mathematical induction that the formula holds for every integer
 $n \geq 1$, what must be shown in the inductive step?
+
+In a proof by mathematical induction, where $P(n)$ holds for every integer
+$n \geq 1$, the inductive step where for some integer $k$ where it is assumed
+$1 + 3 + 5 + \dots + (2k - 1) = k^2$ is true (inductive hypothesis), then
+$1 + 3 + 5 + \dots + (2(k + 1) - 1) = (k + 1)^2$ must be shown to also be true.
 
 3. For each positive integer $n$, let $P(n)$ be the formula
 
@@ -876,25 +960,99 @@ $$ 1^2 + 2^2 + \dots + n^2 = \frac{n(n + 1)(2n + 1)}{6} $$
 
 a. Write $P(1)$. Is $P(1)$ true?
 
+$$ P(n) = 1^2 + 2^2 + \dots + (n)^2 = \frac{(n)((n) + 1)(2(n) + 1)}{6} $$
+
+By 5.2.1:
+
+$$ P(n) = \frac{(n^2)((n^2) + 1)}{2} $$
+
+Then:
+
+$$ P(1) = 1^2 + 2^2 + \dots + (1)^2 = \frac{(1)((1) + 1)(2(1) + 1)}{6} $$
+
+$$ = 1^2 + 2^2 + \dots + (1)^2 = \frac{(1)((1) + 1)(2(1) + 1)}{6} $$
+
+$$ = \frac{((1)^2)(((1)^2) + 1)}{2}= \frac{(1)((1) + 1)(2(1) + 1)}{6} $$
+
+$$ = \frac{(1)(1 + 1)}{2}= \frac{(1)(2)(2 + 1)}{6} $$
+
+$$ = \frac{(1)(2)}{2}= \frac{(1)(2)(3)}{6} $$
+
+$$ = \frac{2}{2} = \frac{6}{6} $$
+
+$$ = 1 = 1 $$
+
+$P(1)$ is true.
+
 b. Write $P(k)$.
+
+$$ P(k) = 1^2 + 2^2 + \dots + k^2 = \frac{(k)(k + 1)(2k + 1)}{6} $$
 
 c. Write $P(k + 1)$.
 
+$$ P(k + 1) = 1^2 + 2^2 + \dots + (k + 1)^2 = \frac{(k + 1)((k + 1) + 1)(2(k + 1) + 1)}{6} $$
+
 d. In a proof by mathematical induction that the formula holds for every integer
 $n \geq 1$, what must be shown in the inductive step?
+
+In a proof by mathematical induction, where $P(n)$ holds for every integer
+$n \geq 1$, the inductive step where for some integer $k$ where it is assumed
+$1^2 + 2^2 + \dots + k^2 = \frac{(k)(k + 1)(2k + 1)}{6}$ is true (inductive
+hypothesis), then
+$1^2 + 2^2 + \dots + (k + 1)^2 = \frac{(k + 1)((k + 1) + 1)(2(k + 1) + 1)}{6}$
+must be shown to also be true.
 
 4. For each integer $n$ with $n \geq 2$, let $P(n)$ be the formula
 
 $$ \sum_{i = 1}^{n - 1}{i(i + 1)} = \frac{n(n - 1)(n + 1)}{3} $$
 
-a. Write $P(1)$. Is $P(1)$ true?
+a. Write $P(2)$. Is $P(2)$ true?
+
+$$ P(n) = \sum_{i = 1}^{(n) - 1}{i(i + 1)} = \frac{(n)((n) - 1)((n) + 1)}{3} $$
+
+$$ P(2) = \sum_{i = 1}^{(2) - 1}{i(i + 1)} = \frac{(2)((2) - 1)((2) + 1)}{3} $$
+
+Compute left-hand side:
+
+$$ \sum_{i = 1}^{(2) - 1}{i(i + 1)} $$
+
+$$ \sum_{i = 1}^{1}{i(i + 1)} $$
+
+$$ \sum_{i = 1}^{1}{i(i + 1)} = (1)((1) + 1) $$
+
+$$ = (1)(2) $$
+
+$$ = 2 $$
+
+Compute right-hand side:
+
+$$ \frac{(2)((2) - 1)((2) + 1)}{3} $$
+
+$$ = \frac{(2)(1)(3)}{3} $$
+
+$$ = \frac{6}{3} $$
+
+$$ = 2 $$
+
+Since both the left hand side and the right hand side are equal, $P(2)$ is true.
 
 b. Write $P(k)$.
 
+$$ P(k) = \sum_{i = 1}^{(k) - 1}{i(i + 1)} = \frac{(k)((k) - 1)((k) + 1)}{3} $$
+
 c. Write $P(k + 1)$.
 
+$$ P(k + 1) = \sum_{i = 1}^{(k + 1) - 1}{i(i + 1)} = \frac{(k + 1)((k + 1) - 1)((k + 1) + 1)}{3} $$
+
 d. In a proof by mathematical induction that the formula holds for every integer
-$n \geq 1$, what must be shown in the inductive step?
+$n \geq 2$, what must be shown in the inductive step?
+
+In a proof by mathematical induction, where $P(n)$ holds for every integer
+$n \geq 2$, the inductive step where for some integer $k$ where it is assumed
+$\sum_{i = 1}^{(k) - 1}{i(i + 1)} = \dfrac{(k)((k) - 1)((k) + 1)}{3}$ is true
+(inductive hypothesis), then
+$\sum_{i = 1}^{(k + 1) - 1}{i(i + 1)} = \dfrac{(k + 1)((k + 1) - 1)((k + 1) + 1)}{3}$
+must be shown to also be true.
 
 5. Fill in the missing pieces in the following proof that
 
@@ -955,6 +1113,18 @@ the given statement is true.]_
 _Note:_ This proof was annotated to help make its logical flow more obvious. In
 standard mathematical writing, such annotation is omitted.
 
+a. $(1)^2$
+
+b. $k^2$
+
+c. $1 + 3 + 5 + \dots + (2(k + 1) - 1)$
+
+d. $(k + 1)^2$
+
+e. the odd integer just before $2k + 1$ is $2k - 1$
+
+f. inductive hypothesis
+
 Prove each statement in 6-9 using mathematical induction. Do not derive them
 from Theorem 5.2.1 or Theorem 5.2.2.
 
@@ -962,47 +1132,1004 @@ from Theorem 5.2.1 or Theorem 5.2.2.
 
 $$ 2 + 4 + 6 + \dots + 2n = n^2 + n $$
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation
+
+$$ 2 + 4 + 6 + \dots + 2n = n^2 + n $$
+
+_Basis Step: Show that $P(1)$ is true:_
+
+To establish $P(1)$, we must show that when $1$ is substituted in place of $n$,
+the left-hand side equals the right-hand side.
+
+When $n = 1$, the left-hand side is the sum of all even integers from $2$ to
+$2(1)$, which is the sum of the even integers from $2$ to $2$ and is just $2$.
+
+The right-hand side is $1^2 + 1$, which also equals $2$.
+
+Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+_Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is
+true:_
+
+Let $k$ be any integer with $k \geq 1$.
+
+Suppose $P(k)$ is true. That is, suppose:
+
+$$ 2 + 4 + 6 + \dots + 2k = k^2 + k $$
+
+This is the inductive hypothesis.
+
+We must show that $P(k + 1)$ is true. That is we must show that:
+
+$$ 2 + 4 + 6 + \dots + 2(k + 1) = (k + 1)^2 + (k + 1) $$
+
+Now the left-hand side of $P(k + 1)$ is
+
+$$ 2 + 4 + 6 + \dots + 2(k + 1) $$
+
+$$ = [2 + 4 + 6 + \dots + 2k] + (2(k + 1)) $$
+
+Where $2k$ is the next-to-last even term before $2k + 1$. Then, by inductive
+hypothesis:
+
+$$ = (k^2 + k) + (2(k + 1)) $$
+
+Then, by algebra:
+
+$$ = k^2 + 3k + 2 $$
+
+Now, the right-hand side is:
+
+$$ (k + 1)^2 + (k + 1) $$
+
+$$ (k + 1)(k + 1) + (k + 1) $$
+
+$$ (k^2 + 2k + 1) + (k + 1) $$
+
+$$ k^2 + 3k + 2 $$
+
+Thus, the left-hand and right-hand sides of $P(k + 1)$ are equal. Hence
+$P(k + 1)$ is true.
+
+Since we have proved the basis step and the inductive step, we conclude that
+$P(n)$ is true for every integer $n \geq 1$.
+
+Q.E.D.
+
 7. For every integer $n \geq 1$,
 
 $$ 1 + 6 + 11 + 16 + \dots + (5n - 4) = \frac{n(5n - 3)}{2} $$
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation
+
+$$ 1 + 6 + 11 + 16 + \dots + (5n - 4) = \frac{n(5n - 3)}{2} $$
+
+_Basis Step:_
+
+We must prove $P(1)$:
+
+$$ 1 + 6 + 11 + 16 + \dots + (5(1) - 4) = \frac{(1)(5(1) - 3)}{2} $$
+
+When $n = 1$, the left-hand side is the sum of every fifth integer from $1$ to
+$5(1) - 4$, which is $1$.
+
+The right-hand side is:
+
+$$ \frac{(1)(5(1) - 3)}{2} $$
+
+$$ = \frac{1(5 - 3)}{2} $$
+
+$$ = \frac{1(2)}{2} $$
+
+$$ = 1 $$
+
+Both sides of the equality of $P(1)$ are $1$. So $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer with $k \geq 1$.
+
+Suppose that $P(k)$ is true. That is:
+
+$$ 1 + 6 + 11 + 16 + \dots + (5k - 4) = \frac{k(5k - 3)}{2} $$
+
+We must show that $P(k + 1)$ is true. That is:
+
+$$ 1 + 6 + 11 + 16 + \dots + (5(k + 1) - 4) = \frac{(k + 1)(5(k + 1) - 3)}{2} $$
+
+Evaluating the left-hand side:
+
+$$ 1 + 6 + 11 + 16 + \dots + (5(k + 1) - 4) $$
+
+$$ = [1 + 6 + 11 + 16 + \dots + (5k - 4)] + (5(k + 1) - 4) $$
+
+Then, by inductive hypothesis:
+
+$$ = \frac{k(5k - 3)}{2} + (5(k + 1) - 4) $$
+
+Then by algebra:
+
+$$ = \frac{5k^2 - 3k}{2} + (5k + 5 - 4) $$
+
+$$ = \frac{5k^2 - 3k}{2} + \frac{2(5k + 5 - 4)}{2} $$
+
+$$ = \frac{5k^2 - 3k + 2(5k + 5 - 4)}{2} $$
+
+$$ = \frac{5k^2 - 3k + 10k + 10 - 8}{2} $$
+
+$$ = \frac{5k^2 + 7k + 2}{2} $$
+
+Now, the right-hand side:
+
+$$ \frac{(k + 1)(5(k + 1) - 3)}{2} $$
+
+$$ = \frac{(k + 1)(5k + 5 - 3)}{2} $$
+
+$$ = \frac{5k^2 + 5k + 5k + 5 - 3k - 3}{2} $$
+
+$$ = \frac{5k^2 + 10k + 5 - 3k - 3}{2} $$
+
+$$ = \frac{5k^2 + 7k + 5 - 3}{2} $$
+
+$$ = \frac{5k^2 + 7k + 2}{2} $$
+
+which is the left-hand side of $P(k + 1)$. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 8. For every integer $n \geq 0$,
 
-$$ 1 + 2 + 2^2 + \dots + 2^n = 2^{n + 1} + 1 $$
+$$ 1 + 2 + 2^2 + \dots + 2^n = 2^{n + 1} - 1 $$
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ 1 + 2 + 2^2 + \dots + 2^n = 2^{n + 1} - 1 $$
+
+_Basis Step:_
+
+Prove $P(0)$ is true.
+
+$$ P(0) = 1 + 2 + 2^2 + \dots + 2^(0) = 2^{(0) + 1} - 1 $$
+
+Evaluate the left-hand side when $n = 0$:
+
+$$ 1 + 2 + 2^2 + \dots + 2^(0) = 2^0 = 1 \quad \text{ when } n = 0 $$
+
+Evaluate the right-hand side when $n = 0$:
+
+$$ 2^{(0) + 1} - 1 $$
+
+$$ 2^1 - 1 $$
+
+$$ 1 $$
+
+Both the left-hand and right-hand sides of $P(0)$ are equal. $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer with $k \geq 0$.
+
+Suppose $P(k)$ is true. That is:
+
+$$ P(k) = 1 + 2 + 2^2 + \dots + 2^k = 2^{k + 1} + 1  $$
+
+Prove that $P(k + 1)$ is true:
+
+$$ P(k + 1) = 1 + 2 + 2^2 + \dots + 2^(k + 1) = 2^{(k + 1) + 1} + 1  $$
+
+$$ 1 + 2 + 2^2 + \dots + 2^(k + 1) = 2^{(k + 1) + 1} + 1  $$
+
+Evaluate the left-hand side:
+
+$$ 1 + 2 + 2^2 + \dots + 2^(k + 1) $$
+
+$$ [1 + 2 + 2^2 + \dots + 2^k] + 2^(k + 1) $$
+
+By inductive hypothesis:
+
+$$ (2^{k + 1} + 1) + 2^(k + 1) $$
+
+$$ 2(2^{k + 1}) + 1 $$
+
+$$ 2^{k + 2} + 1 $$
+
+Evaluate the right-hand side:
+
+$$ 2^{(k + 1) + 1} + 1  $$
+
+$$ = 2^{k + 2} + 1  $$
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 9. For every integer $n \geq 3$,
 
 $$ 4^3 + 4^4 + 4^5 + \dots + 4^n = \frac{4(4^n - 16)}{3} $$
+
+**Proof by mathematical induction:**
+
+Let $P(n)$ be the equation:
+
+$$ 4^3 + 4^4 + 4^5 + \dots + 4^n = \frac{4(4^n - 16)}{3} $$
+
+_Basis Step:_
+
+Prove $P(3)$. That is:
+
+$$ 4^3 + 4^4 + 4^5 + \dots + 4^3 = \frac{4(4^3 - 16)}{3} $$
+
+Evaluate left-hand side when $n = 3$:
+
+$$ 4^3 + 4^4 + 4^5 + \dots + 4^3 = 4^3 = 64 \quad \text{ when } n = 3 $$
+
+Evaluate right-hand side when $n = 3$:
+
+$$ \frac{4(4^3 - 16)}{3} $$
+
+$$ = \frac{4(64 - 16)}{3} $$
+
+$$ = \frac{4(48)}{3} $$
+
+$$ = \frac{192}{3} $$
+
+$$ = 64 $$
+
+Therefore $P(3)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 3$.
+
+Suppose $P(k)$. That is:
+
+$$ 4^3 + 4^4 + 4^5 + \dots + 4^k = \frac{4(4^k - 16)}{3} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ 4^3 + 4^4 + 4^5 + \dots + 4^{k + 1} = \frac{4(4^{k + 1} - 16)}{3} $$
+
+Evaluate left-hand side:
+
+$$ 4^3 + 4^4 + 4^5 + \dots + 4^{k + 1} $$
+
+$$ = [4^3 + 4^4 + 4^5 + \dots + 4^k] + 4^{k + 1} $$
+
+By inductive hypothesis:
+
+$$ = \frac{4(4^k - 16)}{3} + 4^{k + 1} $$
+
+$$ = \frac{4^{k + 1} - 64}{3} + \frac{3(4^{k + 1})}{3} $$
+
+$$ = \frac{4^{k + 1} - 64 + (3(4^{k + 1}))}{3} $$
+
+$$ = \frac{4^{k + 1} + 3(4^{k + 1}) - 64}{3} $$
+
+$$ = \frac{1(4^{k + 1}) + 3(4^{k + 1}) - 64}{3} $$
+
+$$ = \frac{4(4^{k + 1}) - 64}{3} $$
+
+$$ = \frac{4(4^{k + 1} - 16)}{3} $$
+
+Evaluate right-hand side:
+
+$$ \frac{4(4^{k + 1} - 16)}{3} $$
+
+Both the left-hand and right-hand sides of $P(k + 1)$ are equal. $P(k + 1)$ is
+true.
+
+Q.E.D.
 
 Prove each of the statements in 10-18 by mathematical induction.
 
 10. $1^2 + 2^2 + \dots + n^2 = \dfrac{n(n + 1)(2n + 1)}{6}$, for every integer
     $n \geq 1$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ 1^2 + 2^2 + \dots + n^2 = \dfrac{n(n + 1)(2n + 1)}{6} $$
+
+_Basis Step:_
+
+Prove $P(1)$. That is:
+
+$$ 1^2 + 2^2 + \dots + (1)^2 = \dfrac{(1)(1 + 1)(2(1) + 1)}{6} $$
+
+Evaluate left-hand side when $n = 1$:
+
+$$ 1^2 + 2^2 + \dots + (1)^2 = 1 $$
+
+Evaluate right-hand side when $n = 1$:
+
+$$ \dfrac{(1)(1 + 1)(2(1) + 1)}{6} $$
+
+$$ = \dfrac{(1)(2)(2 + 1)}{6} $$
+
+$$ = \dfrac{(1)(2)(3)}{6} $$
+
+$$ = \dfrac{6}{6} $$
+
+$$ = 1 $$
+
+Both the left-hand and right-hand sides of $P(1)$ are equal. Therefore $P(1)$ is
+true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$.
+
+Suppose $P(k)$. That is:
+
+$$ 1^2 + 2^2 + \dots + k^2 = \dfrac{k(k + 1)(2k + 1)}{6} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ 1^2 + 2^2 + \dots + (k + 1)^2 = \dfrac{(k + 1)((k + 1) + 1)(2(k + 1) + 1)}{6} $$
+
+$$ 1^2 + 2^2 + \dots + (k + 1)^2 = \dfrac{(k + 1)(k + 2)(2k + 2 + 1)}{6} $$
+
+$$ 1^2 + 2^2 + \dots + (k + 1)^2 = \dfrac{(k + 1)(k + 2)(2k + 3)}{6} $$
+
+Evaluate left-hand side:
+
+$$ 1^2 + 2^2 + \dots + (k + 1)^2 $$
+
+$$ = [1^2 + 2^2 + \dots + k^2] + (k + 1)^2 $$
+
+By inductive hypothesis:
+
+$$ = \dfrac{k(k + 1)(2k + 1)}{6} + (k + 1)^2 $$
+
+$$ = \dfrac{k(k + 1)(2k + 1)}{6} + \frac{6(k + 1)^2}{6} $$
+
+$$ = \dfrac{k(k + 1)(2k + 1) + 6(k + 1)^2}{6} $$
+
+$$ = \dfrac{(k + 1)[k(2k + 1) + 6(k + 1)]}{6} $$
+
+$$ = \dfrac{(k + 1)[2k^2 + k + 6k + 6]}{6} $$
+
+$$ = \dfrac{(k + 1)[2k^2 + 7k + 6]}{6} $$
+
+$$ = \dfrac{(k + 1)(k + 2)(2k + 3)}{6} $$
+
+Evaluate right-hand side:
+
+$$ = \dfrac{(k + 1)(k + 2)(2k + 3)}{6} $$
+
+Both the left-hand and right-hand sides of $P(k + 1)$ are equal. Therefore
+$P(k + 1)$ is true.
+
+Q.E.D.
+
 11. $1^3 + 2^3 + \dots + n^3 = \left[\dfrac{n(n + 1)}{2}\right]^2$, for every
     integer $n \geq 1$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ 1^3 + 2^3 + \dots + n^3 = \left[\dfrac{n(n + 1)}{2}\right]^2 $$
+
+_Basis Step:_
+
+Prove $P(1)$. That is:
+
+$$ 1^3 + 2^3 + \dots + (1)^3 = \left[\dfrac{(1)((1) + 1)}{2}\right]^2 $$
+
+Evaluate left-hand when $n = 1$:
+
+$$ 1^3 + 2^3 + \dots + (1)^3 = 1 $$
+
+Evaluate right-hand when $n = 1$:
+
+$$ \left[\dfrac{(1)((1) + 1)}{2}\right]^2 $$
+
+$$ = \left[\dfrac{(1)(2)}{2}\right]^2 $$
+
+$$ = \left[\dfrac{2}{2}\right]^2 $$
+
+$$ = [1]^2 $$
+
+$$ = 1 $$
+
+Both the left and right hand sides of $P(1)$ are true. Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$.
+
+Suppose $P(k)$. That is:
+
+$$ 1^3 + 2^3 + \dots + k^3 = \left[\dfrac{k(k + 1)}{2}\right]^2 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ 1^3 + 2^3 + \dots + (k + 1)^3 = \left[\dfrac{(k + 1)((k + 1) + 1)}{2}\right]^2 $$
+
+Evaluate left-hand:
+
+$$ 1^3 + 2^3 + \dots + (k + 1)^3 $$
+
+$$ = [1^3 + 2^3 + \dots + k^3] + (k + 1)^3 $$
+
+By inductive hypothesis:
+
+$$ = \left[\dfrac{k(k + 1)}{2}\right]^2 + (k + 1)^3 $$
+
+$$ = \dfrac{k^2(k + 1)^2}{4} + (k + 1)^3 $$
+
+$$ = \dfrac{k^2(k + 1)^2}{4} + \frac{4(k + 1)^3}{4} $$
+
+$$ = \dfrac{k^2(k + 1)^2 + 4(k + 1)^3}{4} $$
+
+$$ = \dfrac{k^2(k + 1)^2 + 4(k + 1)^2(k + 1)}{4} $$
+
+$$ = \dfrac{(k + 1)^2[k^2 + 4(k + 1)]}{4} $$
+
+$$ = \dfrac{(k + 1)^2[k^2 + 4k + 4]}{4} $$
+
+$$ = \dfrac{(k + 1)^2(k + 2)^2}{4} $$
+
+$$ = \left[\dfrac{(k + 1)(k + 2)}{2}\right]^2 $$
+
+Evaluate right-hand:
+
+$$ \left[\dfrac{(k + 1)((k + 1) + 1)}{2}\right]^2 $$
+
+$$ = \left[\dfrac{(k + 1)(k + 2)}{2}\right]^2 $$
+
+Both the left and right hand sides of $P(k + 1)$ are equal. Therefore $P(k + 1)$
+is true.
+
+Q.E.D.
 
 12. $\dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \dots + \dfrac{1}{n(n + 1)} = \dfrac{n}{n + 1}$,
     for every integer $n \geq 1$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ \dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \dots + \dfrac{1}{n(n + 1)} = \dfrac{n}{n + 1} $$
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ \dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \dots + \dfrac{1}{(1)((1) + 1)} = \dfrac{(1)}{(1) + 1} $$
+
+Evaluate left-hand when $n = 1$:
+
+$$ \dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \dots + \dfrac{1}{(1)((1) + 1)} = \frac{1}{2} $$
+
+Evaluate right-hand when $n = 1$:
+
+$$ \dfrac{(1)}{(1) + 1} $$
+
+$$ = \dfrac{1}{2} $$
+
+The left and right hand sides of $P(1)$ are equal. Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$.
+
+Suppose $P(k)$. That is:
+
+$$ \dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \dots + \dfrac{1}{k(k + 1)} = \dfrac{k}{k + 1} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ \dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \dots + \dfrac{1}{(k + 1)((k + 1) + 1)} = \dfrac{(k + 1)}{(k + 1) + 1} $$
+
+Alternatively:
+
+$$ \dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \dots + \dfrac{1}{(k + 1)(k + 2)} = \dfrac{k + 1}{k + 2} $$
+
+Evaluate left-hand:
+
+$$ \dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \dots + \dfrac{1}{(k + 1)(k + 2)} $$
+
+$$ = \left[\dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \dots + \frac{1}{k(k + 1)}\right] + \dfrac{1}{(k + 1)(k + 2)} $$
+
+By the inductive hypothesis:
+
+$$ = \dfrac{k}{k + 1} + \dfrac{1}{(k + 1)(k + 2)} $$
+
+$$ = \dfrac{k(k + 2)}{(k + 1)(k + 2)} + \dfrac{1}{(k + 1)(k + 2)} $$
+
+$$ = \dfrac{k(k + 2) + 1}{(k + 1)(k + 2)} $$
+
+$$ = \dfrac{k^2 + 2k + 1}{(k + 1)(k + 2)} $$
+
+$$ = \dfrac{(k + 1)(k + 1)}{(k + 1)(k + 2)} $$
+
+$$ = \dfrac{k + 1}{k + 2} $$
+
+Evaluate right-hand:
+
+$$ \dfrac{k + 1}{k + 2} $$
+
+Both the left and right hand sides of $P(k + 1)$ are equal. Therefore $P(k + 1)$
+is true.
+
+Q.E.D.
+
 13. $\sum_{i = 1}^{n - 1}{i(i + 1)} = \dfrac{n(n - 1)(n + 1)}{3}$, for every
     integer $n \geq 2$.
+
+Let $P(n)$ be the equation:
+
+$$ \sum_{i = 1}^{n - 1}{i(i + 1)} = \dfrac{n(n - 1)(n + 1)}{3} $$
+
+_Basis Step:_
+
+Prove $P(2)$. That is:
+
+$$ \sum_{i = 1}^{(2) - 1}{i(i + 1)} = \dfrac{(2)((2) - 1)((2) + 1)}{3} $$
+
+Alternatively:
+
+$$ \sum_{i = 1}^{1}{i(i + 1)} = \dfrac{(2)(1)(3)}{3} $$
+
+$$ \sum_{i = 1}^{1}{i(i + 1)} = 2 $$
+
+Evaluate left-hand when $n = 2$:
+
+$$ \sum_{i = 1}^{1}{i(i + 1)} $$
+
+$$ = (1)(1 + 1) = 2 $$
+
+The left and right hand sides of $P(2)$ are equal. Therefore $P(2)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$.
+
+Suppose $P(k)$. That is:
+
+$$ \sum_{i = 1}^{k - 1}{i(i + 1)} = \dfrac{k(k - 1)(k + 1)}{3} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ \sum_{i = 1}^{(k + 1) - 1}{i(i + 1)} = \dfrac{(k + 1)((k + 1) - 1)((k + 1) + 1)}{3} $$
+
+Alternatively:
+
+$$ \sum_{i = 1}^{k}{i(i + 1)} = \dfrac{(k + 1)(k)(k + 2)}{3} $$
+
+$$ \sum_{i = 1}^{k}{i(i + 1)} = \dfrac{k(k + 1)(k + 2)}{3} $$
+
+Evaluate left-hand:
+
+$$ \sum_{i = 1}^{k}{i(i + 1)} $$
+
+$$ = \left[\sum_{i = 1}^{k - 1}{i(i + 1)}\right] + k(k + 1) $$
+
+By the inductive hypothesis:
+
+$$ = \dfrac{k(k - 1)(k + 1)}{3} + k(k + 1) $$
+
+$$ = \dfrac{k(k - 1)(k + 1)}{3} + \frac{3k(k + 1)}{3} $$
+
+$$ = \dfrac{k(k - 1)(k + 1) + 3k(k + 1)}{3} $$
+
+$$ = \dfrac{k(k + 1)((k - 1) + 3)}{3} $$
+
+$$ = \dfrac{k(k + 1)(k + 2)}{3} $$
+
+Evaluate right-hand:
+
+$$ \dfrac{k(k + 1)(k + 2)}{3} $$
+
+The left and right hand sides of $P(k + 1)$ are equal. Therefore $P(k + 1)$ is
+true.
+
+Q.E.D.
 
 14. $\sum_{i = 1}^{n + 1}{i \cdot 2^i} = n \cdot 2^{n + 2} + 2$, for every
     integer $n \geq 0$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ \sum_{i = 1}^{n + 1}{i \cdot 2^i} = n \cdot 2^{n + 2} + 2 $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ \sum_{i = 1}^{(0) + 1}{i \cdot 2^i} = (0) \cdot 2^{(0) + 2} + 2 $$
+
+Alternatively:
+
+$$ \sum_{i = 1}^{1}{i \cdot 2^i} = (0) \cdot 2^{2} + 2 $$
+
+$$ \sum_{i = 1}^{1}{i \cdot 2^i} = 0 + 2 $$
+
+$$ \sum_{i = 1}^{1}{i \cdot 2^i} = 2 $$
+
+Evaluate left-hand when $n = 0$:
+
+$$ \sum_{i = 1}^{1}{i \cdot 2^i} $$
+
+$$ = (1) \cdot 2^(1) $$
+
+$$ = 2 $$
+
+Both the left and right hand sides of $P(0)$ are equal. Therefore $P(0)$ is
+true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ \sum_{i = 1}^{k + 1}{i \cdot 2^i} = k \cdot 2^{k + 2} + 2 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ \sum_{i = 1}^{(k + 1) + 1}{i \cdot 2^i} = (k + 1) \cdot 2^{(k + 1) + 2} + 2 $$
+
+Alternatively:
+
+$$ \sum_{i = 1}^{k + 2}{i \cdot 2^i} = (k + 1) \cdot 2^{k + 3} + 2 $$
+
+Evaluate left-hand:
+
+$$ \sum_{i = 1}^{k + 2}{i \cdot 2^i} $$
+
+$$ = \left[\sum_{i = 1}^{k + 1}{i \cdot 2^i}\right] + (k + 2) \cdot 2^{k + 2} $$
+
+By the inductive hypothesis:
+
+$$ = k \cdot 2^{k + 2} + 2 + (k + 2) \cdot 2^{k + 2} $$
+
+$$ = k(2^{k + 2}) + 2 + (k + 2)(2^{k + 2}) $$
+
+$$ = (2^{k + 2})(k + (k + 2)) + 2 $$
+
+$$ = (2^{k + 2})(2k + 2) + 2 $$
+
+$$ = 2(2^{k + 2})(k + 1) + 2 $$
+
+$$ = (2^{k + 3})(k + 1) + 2 $$
+
+$$ = (k + 1) \cdot 2^{k + 3} + 2 $$
+
+Evaluate right-hand:
+
+$$ (k + 1) \cdot 2^{k + 3} + 2 $$
+
+The left and right hand sides of $P(k + 1)$ are equal. Therefore $P(k + 1)$ is
+true.
+
+Q.E.D.
+
 15. $\sum_{i = 1}^{n}{i(i!)} = (n + 1)! - 1$, for every integer $n \geq 1$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ \sum_{i = 1}^{n}{i(i!)} = (n + 1)! - 1 $$
+
+_Basis Step:_
+
+Prove $P(1)$. That is:
+
+$$ \sum_{i = 1}^{(1)}{i(i!)} = ((1) + 1)! - 1 $$
+
+Evaluate left-hand side:
+
+$$ \sum_{i = 1}^{1}{i(i!)} $$
+
+$$ = 1(1!) = 1 $$
+
+Evaluate right-hand side:
+
+$$ ((1) + 1)! - 1 $$
+
+$$ = (2)! - 1 $$
+
+$$ = (2 \cdot 1) - 1 $$
+
+$$ = 2 - 1 $$
+
+$$ = 1 $$
+
+Both sides of $P(1)$ are equal. Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$.
+
+Suppose $P(k)$. That is:
+
+$$ \sum_{i = 1}^{k}{i(i!)} = (k + 1)! - 1 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ \sum_{i = 1}^{(k + 1)}{i(i!)} = ((k + 1) + 1)! - 1 $$
+
+Alternatively:
+
+$$ \sum_{i = 1}^{k + 1}{i(i!)} = (k + 2)! - 1 $$
+
+Evaluate left-hand:
+
+$$ \sum_{i = 1}^{k + 1}{i(i!)} $$
+
+$$ = \left[\sum_{i = 1}^{k}{i(i!)}\right] + (k + 1)(k + 1)! $$
+
+By the inductive hypothesis:
+
+$$ = (k + 1)! - 1 + (k + 1)(k + 1)! $$
+
+$$ = (k + 1)! + (k + 1)(k + 1)! - 1 $$
+
+$$ = (k + 1)!(1 + (k + 1)) - 1 $$
+
+$$ = (k + 1)!(k + 2) - 1 $$
+
+$$ = (k + 2)! - 1 $$
+
+Evaluate right-hand:
+
+$$ (k + 2)! - 1 $$
+
+Both sides of $P(k + 1)$ are equal. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 16. $\left(1 - \dfrac{1}{2^2}\right)\left(1 - \dfrac{1}{3^2}\right) \dots \left(1 - \dfrac{1}{n^2}\right) = \dfrac{n + 1}{2n}$,
     for every integer $n \geq 2$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ \left(1 - \dfrac{1}{2^2}\right)\left(1 - \dfrac{1}{3^2}\right) \dots \left(1 - \dfrac{1}{n^2}\right) = \dfrac{n + 1}{2n} $$
+
+_Basis Step:_
+
+Prove $P(2)$. That is:
+
+$$ \left(1 - \dfrac{1}{2^2}\right)\left(1 - \dfrac{1}{3^2}\right) \dots \left(1 - \dfrac{1}{(2)^2}\right) = \dfrac{(2) + 1}{2(2)} $$
+
+Alternatively:
+
+$$ \left(1 - \dfrac{1}{2^2}\right)\left(1 - \dfrac{1}{3^2}\right) \dots \left(1 - \dfrac{1}{4}\right) = \dfrac{3}{4} $$
+
+Evaluate left-hand side when $n = 2$:
+
+$$ \left(1 - \dfrac{1}{2^2}\right)\left(1 - \dfrac{1}{3^2}\right) \dots \left(1 - \dfrac{1}{4}\right) $$
+
+$$ = \frac{3}{4} $$
+
+Both sides of $P(2)$ are equal. Therefore $P(2)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$.
+
+Suppose $P(k)$. That is:
+
+$$ \left(1 - \dfrac{1}{2^2}\right)\left(1 - \dfrac{1}{3^2}\right) \dots \left(1 - \dfrac{1}{k^2}\right) = \dfrac{k + 1}{2k} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ \left(1 - \dfrac{1}{2^2}\right)\left(1 - \dfrac{1}{3^2}\right) \dots \left(1 - \dfrac{1}{(k + 1)^2}\right) = \dfrac{(k + 1) + 1}{2(k + 1)} $$
+
+Alternatively:
+
+$$ \left(1 - \dfrac{1}{2^2}\right)\left(1 - \dfrac{1}{3^2}\right) \dots \left(1 - \dfrac{1}{(k + 1)^2}\right) = \dfrac{k + 2}{2k + 2} $$
+
+Evaluate left-hand:
+
+$$ \left(1 - \dfrac{1}{2^2}\right)\left(1 - \dfrac{1}{3^2}\right) \dots \left(1 - \dfrac{1}{(k + 1)^2}\right) $$
+
+$$ = \left[\left(1 - \dfrac{1}{2^2}\right)\left(1 - \dfrac{1}{3^2}\right) \dots \left(1 - \frac{1}{k^2}\right)\right]\left(1 - \dfrac{1}{(k + 1)^2}\right) $$
+
+By the inductive hypothesis:
+
+$$ = \left(\frac{k + 1}{2k}\right)\left(1 - \dfrac{1}{(k + 1)^2}\right) $$
+
+$$ = \left(\frac{k + 1}{2k}\right)\left(\frac{(k + 1)^2}{(k + 1)^2} - \dfrac{1}{(k + 1)^2}\right) $$
+
+$$ = \left(\frac{k + 1}{2k}\right)\left(\dfrac{(k + 1)^2 - 1}{(k + 1)^2}\right) $$
+
+$$ = \frac{(k + 1)((k + 1)^2 - 1)}{2k(k + 1)^2} $$
+
+$$ = \frac{(k + 1)^3 - (k + 1)}{2k(k + 1)^2} $$
+
+$$ = \frac{(k + 1)^2 - 1}{2k(k + 1)} $$
+
+$$ = \frac{(k + 1)(k + 1) - 1}{2k^2 + 2k} $$
+
+$$ = \frac{k^2 + 2k + 1 - 1}{2k^2 + 2k} $$
+
+$$ = \frac{k^2 + 2k}{2k^2 + 2k} $$
+
+$$ = \frac{k(k + 2)}{k(2k + 2)} $$
+
+$$ = \frac{k + 2}{2k + 2} $$
+
+Evaluate right-hand:
+
+Both sides of $P(k + 1)$ are equal. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
+$$ \dfrac{k + 2}{2k + 2} $$
+
 17. $\prod_{i = 0}^{n}{\left(\dfrac{1}{2i + 1} \cdot \dfrac{1}{2i + 2}\right)} = \dfrac{1}{(2n + 2)!}$,
     for every integer $n \geq 0$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ \prod_{i = 0}^{n}{\left(\dfrac{1}{2i + 1} \cdot \dfrac{1}{2i + 2}\right)} = \dfrac{1}{(2n + 2)!} $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ \prod_{i = 0}^{(0)}{\left(\dfrac{1}{2i + 1} \cdot \dfrac{1}{2i + 2}\right)} = \dfrac{1}{(2(0) + 2)!} $$
+
+Alternatively:
+
+$$ \prod_{i = 0}^{(0)}{\left(\dfrac{1}{2i + 1} \cdot \dfrac{1}{2i + 2}\right)} = \dfrac{1}{2!} $$
+
+$$ \prod_{i = 0}^{(0)}{\left(\dfrac{1}{2i + 1} \cdot \dfrac{1}{2i + 2}\right)} = \dfrac{1}{2} $$
+
+Evaluate left-hand when $n = 0$:
+
+$$ \prod_{i = 0}^{(0)}{\left(\dfrac{1}{2i + 1} \cdot \dfrac{1}{2i + 2}\right)} $$
+
+$$ = \frac{1}{2} $$
+
+Both sides of $P(0)$ are equal. Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ \prod_{i = 0}^{k}{\left(\dfrac{1}{2i + 1} \cdot \dfrac{1}{2i + 2}\right)} = \dfrac{1}{(2k + 2)!} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ \prod_{i = 0}^{(k + 1)}{\left(\dfrac{1}{2i + 1} \cdot \dfrac{1}{2i + 2}\right)} = \dfrac{1}{(2(k + 1) + 2)!} $$
+
+Alternatively:
+
+$$ \prod_{i = 0}^{k + 1}{\left(\dfrac{1}{2i + 1} \cdot \dfrac{1}{2i + 2}\right)} = \dfrac{1}{(2k + 2 + 2)!} $$
+
+$$ \prod_{i = 0}^{k + 1}{\left(\dfrac{1}{2i + 1} \cdot \dfrac{1}{2i + 2}\right)} = \dfrac{1}{(2k + 4)!} $$
+
+Evaluate left-hand:
+
+$$ \prod_{i = 0}^{k + 1}{\left(\dfrac{1}{2i + 1} \cdot \dfrac{1}{2i + 2}\right)} $$
+
+$$ = \left[\prod_{i = 0}^{k}{\left(\dfrac{1}{2i + 1} \cdot \dfrac{1}{2i + 2}\right)}\right] \cdot \left(\frac{1}{2(k + 1) + 1} \cdot \frac{1}{2(k + 1) + 2}\right) $$
+
+By the inductive hypothesis:
+
+$$ = \left(\frac{1}{(2k + 2)!}\right) \cdot \left(\frac{1}{2(k + 1) + 1} \cdot \frac{1}{2(k + 1) + 2}\right) $$
+
+$$ = \left(\frac{1}{(2k + 2)!}\right) \cdot \left(\frac{1}{2k + 2 + 1} \cdot \frac{1}{2k + 2 + 2}\right) $$
+
+$$ = \left(\frac{1}{(2k + 2)!}\right) \cdot \left(\frac{1}{2k + 3} \cdot \frac{1}{2k + 4}\right) $$
+
+$$ = \frac{1}{(2k + 4)!} $$
+
+Evaluate right-hand:
+
+$$ \dfrac{1}{(2k + 4)!} $$
+
+Both sides of $P(k + 1)$ are equal. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 18. $\prod_{i = 2}^{n}{\left(1 - \dfrac{1}{i}\right)} = \dfrac{1}{n}$ for every
     integer $n \geq 2$.
 
 _Hint:_ See the discussion at the beginning of this section.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ \prod_{i = 2}^{n}{\left(1 - \dfrac{1}{i}\right)} = \dfrac{1}{n} $$
+
+_Basis Step:_
+
+Prove $P(2)$. That is:
+
+$$ \prod_{i = 2}^{2}{\left(1 - \dfrac{1}{i}\right)} = \dfrac{1}{2} $$
+
+Evaluate left-hand side when $n = 2$:
+
+$$ \prod_{i = 2}^{2}{\left(1 - \dfrac{1}{i}\right)} $$
+
+$$ = 1 - \frac{1}{2} $$
+
+$$ = \frac{1}{2} $$
+
+Both sides of $P(2)$ are equal. Therefore $P(2)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$.
+
+Suppose $P(k)$. That is:
+
+$$ \prod_{i = 2}^{k}{\left(1 - \dfrac{1}{i}\right)} = \dfrac{1}{k} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ \prod_{i = 2}^{k + 1}{\left(1 - \dfrac{1}{i}\right)} = \dfrac{1}{k + 1} $$
+
+Evaluate left-hand side:
+
+$$ \prod_{i = 2}^{k + 1}{\left(1 - \dfrac{1}{i}\right)} $$
+
+$$ = \left[\prod_{i = 2}^{k}{\left(1 - \dfrac{1}{i}\right)}\right] \cdot \left(1 - \frac{1}{k + 1}\right) $$
+
+By the inductive hypothesis:
+
+$$ = \dfrac{1}{k} \cdot \left(1 - \frac{1}{k + 1}\right) $$
+
+$$ = \dfrac{1}{k} \cdot \left(\frac{k + 1}{k + 1} - \frac{1}{k + 1}\right) $$
+
+$$ = \dfrac{1}{k} \cdot \left(\frac{(k + 1) - 1}{k + 1}\right) $$
+
+$$ = \dfrac{1}{k} \cdot \left(\frac{k}{k + 1}\right) $$
+
+$$ = \frac{1}{k + 1} $$
+
+Evaluate right-hand side:
+
+$$ \dfrac{1}{k + 1} $$
+
+Both sides of $P(k + 1)$ are equal. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 19. (For students who have studied calculus) Use mathematical induction, the
     product rule from calculus, and the facts that $\dfrac{d(x)}{dx} = 1$ and
