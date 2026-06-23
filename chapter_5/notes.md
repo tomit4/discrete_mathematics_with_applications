@@ -318,3 +318,241 @@ which is the right-hand side of $P(k + 1)$ _[as was to be shown]._
 
 _[Since we have proved the basis step and the inductive step, we conclude that
 the theorem is true.]_
+
+---
+
+Page 314
+
+**Proposition 5.3.1**
+
+For every integer $n \geq 8$, $n$¢ can be obtained using $3$¢ and $5$¢ coins.
+
+**Proof (by mathematical induction):**
+
+Let the property $P(n)$ be the sentence
+
+$n$¢ can be obtained using $3$¢ and $5$¢ coins.
+
+Show that $P(8)$ is true:
+
+$P(8)$ is true because $8$¢ can be obtained using one $3$¢ coin and one $5$¢
+coin.
+
+_[Suppose that $P(k)$ is true for a particular but arbitrarily chosen integer
+$k \geq 8$. That is:]_
+
+Suppose that $k$ is any integer with $k \geq 8$ such that
+
+$k$¢ can be obtained using $3$¢ and $5$¢ coins.
+
+_[We must show that $P(k + 1)$ is true. That is:]_ We must show that
+
+$(k + 1)$¢ can be obtained using $3$¢ and $5$¢ coins.
+
+_Case 1 (There is a $5$¢ coin among those that used to make up the $k$¢.):_
+
+In this case replace the $5$¢ coin by two $3$¢ coins; the result will be
+$(k + 1)$¢.
+
+_Case 2 (There is not a $5$¢ coin among those used to make up the $k$¢.):_
+
+In this case, because $k \geq 8$, at least three $3$¢ coins must have been used.
+So remove three $3$¢ coins and replace them by two $5$¢ coins; the result will
+be $(k + 1)$¢.
+
+Thus in either case $(k + 1)$¢ can be obtained using $3$¢ and $5$¢ coins _[as
+was to be shown]._
+
+_[Since we have proved the basis step and the inductive step, we conclude that
+the proposition is true.]_
+
+---
+
+Page 315
+
+**Proposition 5.3.2**
+
+For each integer $n \geq 0$, $2^{2n} - 1$ is divisible by $3$.
+
+**Proof (by mathematical induction):**
+
+Let the property $P(n)$ be the sentence "$2^{2n} - 1$ is divisible by $3$."
+
+$$ 2^{2n} - 1 \text{ is divisible by } 3 $$
+
+_Show that $P(0)$ is true:_
+
+To establish $P(0)$, we must show that
+
+$$ 2^{2 \cdot 0} - 1 \text{ is divisible by 3.} $$
+
+But
+
+$$ 2^{2 \cdot 0} - 1 = 2^0 - 1 = 1 - 1 = 0 $$
+
+and $0$ is divisible by $3$ because $0$ = 3 \cdot 0. Hence $P(0)$ is true.
+
+_Show that for any integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is also
+true:_
+
+_[Suppose that $P(k)$ is true for a particular but arbitrarily chosen integer
+$k \geq 0$. That is:]_
+
+Let $k$ be any integer with $k \geq 0$, and suppose that
+
+$$ 2^{2k} - 1 \text{ is divisible by } 3 $$
+
+By definition of divisibility, this means that
+
+$$ 2^{2k} - 1 = 3r \text{ for some integer } r $$
+
+_[We must show that $P(k + 1)$ is true. That is:]_ We must show that
+
+$$ 2^{2(k + 1)} - 1 \text{ is divisible by } 3 $$
+
+Now
+
+$$ 2^{2(k + 1)} - 1 = 2^{2k + 2} - 1 $$
+
+$$ = 2^{2k} \cdot 2^2 - 1 $$
+
+$$ = 2^{2k} \cdot 4 - 1 $$
+
+$$ = 2^{2k}(3 + 1) - 1 $$
+
+$$ = 2^{2k} \cdot 3 + (2^{2k} - 1) $$
+
+$$ = 2^{2=} \cdot 3 + 3r $$
+
+$$ = 3(2^{2k} + r) $$
+
+But $2^{2k} + r$ is an integer because it is a sum of products of integers, and
+so, by definition of divisibility, $2^{2(k + 1)} - 1$ is divisible by $3$ _[as
+was to be shown]_.
+
+_[Since we have proved the basis step and the inductive step, we conclude that
+the proposition is true.]_
+
+---
+
+Page 317
+
+**Proposition 5.3.3**
+
+For every integer $n \geq 3$, $2n + 1 < 2^n$.
+
+**Proof (by mathematical induction):**
+
+Let the property $P(n)$ be the inequality
+
+$$ 2n + 1 < 2^n $$
+
+_Show that $P(3)$ is true:_
+
+To establish $P(3)$, we must show that
+
+$$ 2 \cdot 3 + 1 < 2^3 $$
+
+Now
+
+$$ 2 \cdot 3 + 1 = 7 \quad \text{ and } \quad 2^3 = 8 \quad \text{ and } \quad 7 < 8 $$
+
+Hence $P(3)$ is true.
+
+_Show that for every integer $k \geq 3$, if $P(k)$ is true then $P(k + 1)$ is
+also true:_
+
+_[Suppose that $P(k)$ is true for a particular but arbitrarily chosen integer
+$k \geq 3$. That is:]_
+
+Suppose that $k$ is any integer with $k \geq 3$ such that
+
+$$ 2k + 1 < 2^k $$
+
+_[We must show that $P(k + 1)$ is true. That is:]_
+
+We must show that
+
+$$ 2(k + 1) + 1 < 2^{(k + 1)} $$
+
+Now
+
+$$ 2(k + 1) + 1 = 2k + 1 + 2 $$
+
+$$ < 2^k + 2 $$
+
+$$ < 2^k + 2^k $$
+
+$$ = 2 \cdot 2^k $$
+
+$$ = 2^{k + 1} $$
+
+Thus by transitivity of order $2(k + 1) + 1 < 2^{k + 1}$ _[as was to be shown]_.
+
+_[Since we have proved the basis step and the inductive step, we conclude that
+the proposition is true.]_
+
+---
+
+Page 319
+
+**Theorem 5.3.4 Covering a Board with Trominoes**
+
+For any integer $n \geq 1$, if one square is removed from a $2^n \times 2^n$
+checkerboard, the remaining squares can be completely covered by L-shaped
+trominoes.
+
+The main insight leading to a proof of this theorem is the observation that
+because $2^{k + 1} = 2 \cdot 2^k$, when a $2^{k + 1} \times 2^{k + 1}$ board is
+split in half both vertically and horizontally, each half side will have length
+$2^k$ and so each resulting quadrant will be a $2^k \times 2^k$ checkerboard.
+
+**Proof (by mathematical induction):**
+
+Let the property $P(n)$ be the sentence
+
+If any square is removed from a $2^n \times 2^n$ checkerboard, then the
+remaining squares can be completely covered by L-shaped trominoes.
+
+_Show that $P(1)$ is true:_
+
+A $2^1 \times 2^1$ checkerboard just consists of four squares. If one square is
+removed, the remaining squares form an L, which can be covered by a single
+L-shaped tromino, as illustrated in the figure to the left. Hence $P(1)$ is
+true.
+
+_Show that for every integer $k \geq 1$, if $P(k)$ is true then $P(k + 1)$ is
+also true:_
+
+_[Suppose that $P(k)$ is true for a particular but arbitrarily chosen integer
+$k \geq 3$. That is:]_
+
+Let $k$ be any integer such that $k \geq 1$, and suppose that
+
+If any square is removed from a $2^k \times 2^k$ checkerboard, then the
+remaining squares can be completely covered by L-shaped trominoes.
+
+$P(k)$ is the inductive hypothesis.
+
+_[We must show that $P(k + 1)$ is true. That is:]_
+
+We must show that
+
+If any square is removed from a $2^{k + 1} \times 2^{k + 1}$ checkerboard, then
+the remaining squares can be completely covered by L-shaped trominoes.
+
+Consider a $2^{2k + 1} \times 2^{k + 1}$ checkerboard with one square removed.
+Divide it into four equal quadrants: Each will consist of a $2^k \times 2^k$
+checkerboard. In one of the quadrants, one square will have been removed, and
+so, by inductive hypothesis, all the remaining squares in this quadrant can be
+completely covered by L-shaped trominoes.
+
+The other three quadrants meet at the center of the checkerboard, and the center
+of the checkerboard serves as a corner of a square from each of those quadrants.
+An L-shaped tromino can, therefore, be placed on those three central squares.
+This situation is illustrated in the figure to the left (see page 320).
+
+By inductive hypothesis, the remaining squares in each of the three quadrants
+can be completely covered by L-shaped trominoes. Thus every square in the
+$2^{k + 1} \times 2^{k + 1}$ checkerboard except the one that was removed can be
+completely covered by L-shaped trominoes _[as was to be shown]_.

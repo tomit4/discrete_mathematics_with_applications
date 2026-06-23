@@ -55,3 +55,13 @@ arbitrarily chosen value of an integer $k \geq a$. This supposition is called
 the _____. One then has to show that _____.
 
 $P(k)$ is true; inductive hypothesis; $P(k + 1)$ is true.
+
+---
+
+Page 320
+
+1. Mathematical induction differs from the kind of induction used in the natural
+   sciences because it is actually a form of _____ reasoning.
+
+2. Mathematical induction can be used to _____ conjectures that have been made
+   using inductive reasoning.
