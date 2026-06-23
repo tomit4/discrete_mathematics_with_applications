@@ -2136,44 +2136,268 @@ Q.E.D.
     that $x^{k + 1} = x \cdot x^k$ to prove that for every integer $n \geq 1$,
     $\dfrac{d(x^n)}{dx} = nx^{n - 1}$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ \frac{d(x^n)}{dx} = nx^{n - 1} $$
+
+_Basis Step:_
+
+Prove $P(1)$. That is:
+
+$$ \frac{d(x^{(1)})}{dx} = (1)x^{(1) - 1} $$
+
+Alternatively:
+
+$$ \frac{dx}{dx} = 1x^0 $$
+
+Evaluate the left-hand side when $n = 1$:
+
+$$ \frac{dx}{dx} $$
+
+By the given fact that $\dfrac{dx}{dx} = 1$:
+
+$$ = 1 $$
+
+Evaluate the right-hand side when $n = 1$:
+
+$$ = 1x^0 $$
+
+$$ = 1 $$
+
+Both the left and right hand sides of $P(1)$ are equal. Therefore $P(1)$ is
+true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$.
+
+Suppose $P(k)$. That is:
+
+$$ \frac{d(x^k)}{dx} = kx^{k - 1} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ \frac{d(x^{(k + 1)})}{dx} = (k + 1)x^{(k + 1) - 1} $$
+
+Alternatively:
+
+$$ \frac{d(x^{(k + 1)})}{dx} = (k + 1)x^k $$
+
+Evaluate left-hand side:
+
+$$ \frac{d(x^{(k + 1)})}{dx} $$
+
+$$ \frac{d(x \cdot x^k)}{dx} $$
+
+By the product rule, we can separate this out into:
+
+$$ \frac{dx}{dx} \cdot x^k + x \cdot \dfrac{d(x^k)}{dx} $$
+
+By the given fact that $\dfrac{dx}{dx} = 1$:
+
+$$ 1 \cdot x^k + x \cdot \dfrac{d(x^k)}{dx} $$
+
+By the inductive hypothesis:
+
+$$ 1 \cdot x^k + x \cdot kx^{k - 1}  $$
+
+$$ x^k  + x \cdot kx^{k - 1}  $$
+
+$$ x^k + kx^{k - 1 + 1}  $$
+
+$$ x^k + kx^{k}  $$
+
+$$ x^k(1 + k)  $$
+
+$$ (k + 1)x^k  $$
+
+Evaluate right-hand side:
+
+$$ (k + 1)x^k $$
+
+Both the left and right sides of $P(k + 1)$ are equal. Therefore $P(k + 1)$ is
+true.
+
+Q.E.D.
+
 Use the formula for the sum of the first $n$ integers and/or the formula for the
 sum of a geometric sequence to evaluate the sums in 20-29 or to write them in
 closed form.
 
 20. $4 + 8 + 12 + 16 + \dots + 200$
 
+$$ 4 + 8 + 12 + 16 + \dots + 200 $$
+
+$$ = 4(1 + 2 + 3 + 4 + \dots + 50) $$
+
+$$ = 4\frac{50(51)}{2} $$
+
+$$ = 5100 $$
+
 21. $5 + 10 + 15 + 20 + \dots + 300$
+
+$$ 5 + 10 + 15 + 20 + \dots + 300 $$
+
+$$ = 5(1 + 2 + 3 + 4 + \dots 60) $$
+
+$$ = 5\left(\frac{(60)(61)}{2}\right) $$
+
+$$ = 9150 $$
 
 22.
 
-a. $3 + 4 + 5+ 6 + \dots + 1000$
+a. $3 + 4 + 5 + 6 + \dots + 1000$
+
+$$ 3 + 4 + 5 + 6 + \dots + 1000 $$
+
+$$ = (1 + 2 + 3 + 4 + \dots + 1000) - (1 + 2) $$
+
+$$ = \left(\frac{(1000)(1001)}{2}\right) - 3 $$
+
+$$ = 500497 $$
 
 b. $3 + 4 + 5 + 6 + \dots + m$
+
+$$ 3 + 4 + 5 + 6 + \dots + m $$
+
+$$ = (1 + 2 + 3 + 4+ \dots + m) - (1 + 2) $$
+
+$$ = \left(\frac{(m)(m + 1)}{2}\right) - 3 $$
+
+$$ = \frac{m^2 + m}{2} - 3 $$
+
+$$ = \frac{m^2 + m}{2} - \frac{6}{2} $$
+
+$$ = \frac{m^2 + m - 6}{2} $$
 
 23.
 
 a. $7 + 8 + 9 + 10 + \dots + 600$
 
+$$ 7 + 8 + 9 + 10 + \dots + 600 $$
+
+$$ = (1 + 2 + 3 + 4 + \dots + 600) - (1 + 2 + 3 + 4 + 5 + 6) $$
+
+$$ = \left(\frac{(600)(601)}{2}\right) - 21 $$
+
+$$ = 180279 $$
+
 b. $7 + 8 + 9 + 10 + \dots + k$
 
+$$ 7 + 8 + 9 + 10 + \dots + k $$
+
+$$ = (1 + 2 + 3 + 4 + \dots + k) - (1 + 2 + 3 + 4 + 5 + 6) $$
+
+$$ = \left(\frac{(k)(k + 1)}{2}\right) - 21 $$
+
+$$ = \frac{k^2 + k}{2} - 21 $$
+
+$$ = \frac{k^2 + k - 42}{2} $$
+
 24. $1 + 2 + 3 + \dots + (k - 1)$, where $k$ is any integer with $k \geq 2$.
+
+$$ 1 + 2 + 3 + \dots + (k - 1) $$
+
+$$ = \frac{(k - 1)((k - 1) + 1)}{2} $$
+
+$$ = \frac{(k - 1)(k)}{2} $$
+
+$$ = \frac{k^2 - k}{2} $$
 
 25.
 
 a. $1 + 2 + 2^2 + \dots + 2^{25}$
 
+$$ 1 + 2 + 2^2 + \dots + 2^{25} $$
+
+$$ = \frac{2^{25 + 1} - 1}{2^{25} - 1} $$
+
+$$ = \frac{2^{26} - 1}{2 - 1} $$
+
+$$ = 67108863 $$
+
 b. $2 + 2^2 + 2^3 + \dots + 2^{26}$
+
+$$ 2 + 2^2 + 2^3 + \dots + 2^{26} $$
+
+$$ k 2(1 + 2 + 2^2 + \dots + 2^{25}) $$
+
+By part a:
+
+$$ = 2(67108863) $$
+
+$$ = 134217726 $$
 
 c. $2 + 2^2 + 2^3 + \dots + 2^n$
 
+$$ 2 + 2^2 + 2^3 + \dots + 2^n $$
+
+$$ 2(1 + 2 + 2^2 + \dots + 2^{n - 1}) $$
+
+$$ 2\left(\frac{2^{(n - 1) + 1} - 1}{2 - 1}\right) $$
+
+$$ 2\left(\frac{2^n - 1}{1}\right) $$
+
+$$ 2(2^n - 1) $$
+
+$$ 2^{n + 1} - 2 $$
+
 26. $3 + 3^2 + 3^3 + \dots + 3^n$, where $n$ is any integer with $n \geq 1$.
 
+$$ 3 + 3^2 + 3^3 + \dots + 3^n $$
+
+$$ 3(1 + 3 + 3^2 + \dots + 3^{n - 1}) $$
+
+$$ 3\left(\frac{3^{(n - 1) + 1} - 1}{3 - 1}\right) $$
+
+$$ 3\left(\frac{3^n - 1}{2}\right) $$
+
+$$ \frac{3^{n + 1} - 3}{2} $$
+
 27. $5^3 + 5^4 + 5^5 + \dots + 5^k$, where $k$ is any integer with $k \geq 3$.
+
+$$ 5^3 + 5^4 + 5^5 + \dots + 5^k $$
+
+$$ = 5^3(1 + 5 + 5^2 + \dots + 5^{k - 3}) $$
+
+$$ = 5^3\left(\frac{5^{(k - 3) + 1} - 1}{5 - 1}\right) $$
+
+$$ = 5^3\left(\frac{5^{k - 2} - 1}{4}\right) $$
+
+$$ = \frac{5^{k - 2 + 3} - 5^3}{4} $$
+
+$$ = \frac{5^k - 5^3}{4} $$
 
 28. $1 + \dfrac{1}{2} + \dfrac{1}{2^2} + \dots + \dfrac{1}{2^n}$, where $n$ is
     any positive integer.
 
+$$ 1 + \dfrac{1}{2} + \dfrac{1}{2^2} + \dots + \dfrac{1}{2^n} $$
+
+$$ = \frac{\left(\dfrac{1}{2}\right)^{n + 1} - 1}{\dfrac{1}{2} - 1} $$
+
+$$ = \frac{\left(\dfrac{1}{2}\right)^{n + 1} - 1}{-\dfrac{1}{2}} $$
+
+$$ = \left[\left(\dfrac{1}{2}\right)^{n + 1} - 1\right](-2) $$
+
+$$ = \left(\dfrac{-2}{2}\right)^{n + 1} + 2 $$
+
+$$ = 2 - \left(\dfrac{-2}{2}\right)^{n + 1} $$
+
+$$ = 2 + \dfrac{1}{2^n} $$
+
 29. $1 - 2 + 2^2 - 2^3 + \dots + (-1)^n2^n$, where $n$ is any positive integer.
+
+$$ 1 - 2 + 2^2 - 2^3 + \dots + (-1)^n2^n $$
+
+$$ = 1 + (-2) + (-2)^2 + (-2)^3 + \dots + (-2)^n $$
+
+$$ = \frac{(-2)^{n + 1} - 1}{(-2) - 1} $$
+
+$$ = \frac{(-2)^{n + 1} - 1}{-3} $$
 
 30. Observe that
 
@@ -2186,6 +2410,92 @@ $$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} = \frac{3}{7}
 $$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} + \frac{1}{7 \cdot 9} = \frac{4}{9} $$
 
 Guess a general formula and prove it by mathematical induction.
+
+General formula:
+
+$$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} + \dots + \frac{1}{(2n - 1)(2n + 1)} = \frac{n}{2n + 1} $$
+
+for all integers $n \geq 1$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} + \dots + \frac{1}{(2n - 1)(2n + 1)} = \frac{n}{2n + 1} $$
+
+_Basis Step:_
+
+Prove $P(1)$:
+
+$$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} + \dots + \frac{1}{(2(1) - 1)(2(1) + 1)} = \frac{(1)}{2(1) + 1} $$
+
+Evaluate left-hand side when $n = 1$:
+
+$$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} + \dots + \frac{1}{(2(1) - 1)(2(1) + 1)} $$
+
+$$ = \frac{1}{(2 - 1)(2 + 1)}$$
+
+$$ = \frac{1}{(1)(3)}$$
+
+$$ = \frac{1}{3} $$
+
+Evaluate right-hand side when $n = 1$:
+
+$$ \frac{(1)}{2(1) + 1} $$
+
+$$ \frac{1}{2 + 1} $$
+
+$$ \frac{1}{3} $$
+
+The left and right hand sides of $P(1)$ are equal. Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$.
+
+Suppose $P(k)$. That is:
+
+$$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} + \dots + \frac{1}{(2k - 1)(2k + 1)} = \frac{k}{2k + 1} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} + \dots + \frac{1}{(2(k + 1) - 1)(2(k + 1) + 1)} = \frac{(k + 1)}{2(k + 1) + 1} $$
+
+Alternatively:
+
+$$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} + \dots + \frac{1}{(2k + 2 - 1)(2k + 2 + 1)} = \frac{k + 1}{2k + 2 + 1} $$
+
+$$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} + \dots + \frac{1}{(2k + 1)(2k + 3)} = \frac{k + 1}{2k + 3} $$
+
+Evaluate the left-hand side:
+
+$$ \frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} + \dots + \frac{1}{(2k + 1)(2k + 3)} $$
+
+$$ = \left[\frac{1}{1 \cdot 3} + \frac{1}{3 \cdot 5} + \frac{1}{5 \cdot 7} + \dots + \frac{1}{(2k - 1)(2k + 1)}\right] + \frac{1}{(2k + 1)(2k + 3)} $$
+
+By the inductive hypothesis:
+
+$$ = \frac{k}{2k + 1} + \frac{1}{(2k + 1)(2k + 3)} $$
+
+$$ = \frac{k(2k + 3)}{(2k + 1)(2k + 3)} + \frac{1}{(2k + 1)(2k + 3)} $$
+
+$$ = \frac{k(2k + 3) + 1}{(2k + 1)(2k + 3)} $$
+
+$$ = \frac{2k^2 + 3k + 1}{(2k + 1)(2k + 3)} $$
+
+$$ = \frac{(2k + 1)(k + 1)}{(2k + 1)(2k + 3)} $$
+
+$$ = \frac{k + 1}{2k + 3} $$
+
+Evaluate the right-hand side:
+
+$$ \frac{k + 1}{2k + 3} $$
+
+Both sides of $P(k + 1)$ are equal. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 31. Compute values of the product
 
@@ -2208,10 +2518,108 @@ $$ 1 - 4 + 9 - 16 + 25 = 1 + 2 + 3 + 4 + 5 $$
 
 Guess a general formula and prove it by mathematical induction.
 
+$$ 1 - 4 + 9 - 16 + \dots + (-1)^{n - 1}(n^2) = (-1)^{n - 1}(1 + 2 + 3 + 4 + \dots + n) $$
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ 1 - 4 + 9 - 16 + \dots + (-1)^{n - 1}(n^2) = (-1)^{n - 1}(1 + 2 + 3 + 4 + \dots + n) $$
+
+for all integers $n \geq 1$.
+
+_Basis Step_:
+
+Prove $P(1)$. That is:
+
+$$ 1 - 4 + 9 - 16 + \dots + (-1)^{(1) - 1}((1)^2) = (-1)^{(1) - 1}(1 + 2 + 3 + 4 + \dots + (1)) $$
+
+Evaluate left-hand side when $n = 1$:
+
+$$ 1 - 4 + 9 - 16 + \dots + (-1)^{(1) - 1}((1)^2) $$
+
+$$ = (-1)^{0}(1^2) $$
+
+$$ = 1(1) $$
+
+$$ = 1 $$
+
+Evaluate right-hand side when $n = 1$:
+
+$$ (-1)^{(1) - 1}(1 + 2 + 3 + 4 + \dots + (1)) $$
+
+$$ = 1 $$
+
+Both sides of $P(1)$ are equal. Therefore $P(1)$ is true.
+
+_Inductive Step_:
+
+Let $k$ be any integer where $k \geq 1$.
+
+Suppose $P(k)$. That is:
+
+$$ 1 - 4 + 9 - 16 + \dots + (-1)^{k - 1}(k^2) = (-1)^{k - 1}(1 + 2 + 3 + 4 + \dots + k) $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ 1 - 4 + 9 - 16 + \dots + (-1)^{(k + 1) - 1}((k + 1)^2) = (-1)^{(k + 1) - 1}(1 + 2 + 3 + 4 + \dots + (k + 1)) $$
+
+Alternatively:
+
+$$ 1 - 4 + 9 - 16 + \dots + (-1)^{k}((k + 1)^2) = (-1)^{k}(1 + 2 + 3 + 4 + \dots + (k + 1)) $$
+
+Evaluate left-hand:
+
+$$ 1 - 4 + 9 - 16 + \dots + (-1)^{k}((k + 1)^2) $$
+
+$$ = \left[1 - 4 + 9 - 16 + \dots + (-1)^{k - 1}(k^2)\right] + (-1)^{k}((k + 1)^2) $$
+
+By the inductive hypothesis:
+
+$$ = (-1)^{k - 1}(1 + 2 + 3 + 4 + \dots + k) + (-1)^{k}((k + 1)^2) $$
+
+$$ = (-1)^{k - 1}\left[(1 + 2 + 3 + 4 + \dots + k) - (k + 1)^2\right] $$
+
+By 5.2.1:
+
+$$ = (-1)^{k - 1}\left[\frac{k(k + 1)}{2} - (k + 1)^2\right] $$
+
+$$ = (-1)^{k - 1}\left[(k + 1)\left(\frac{k}{2} - (k + 1)\right)\right] $$
+
+$$ = (-1)^{k - 1}\left[(k + 1)\left(\frac{k}{2} - \frac{2(k + 1)}{2}\right)\right] $$
+
+$$ = (-1)^{k - 1}\left[(k + 1)\left(\frac{k - 2(k + 1)}{2}\right)\right] $$
+
+$$ = (-1)^{k - 1}\left[(k + 1)\left(\frac{k - 2k - 2)}{2}\right)\right] $$
+
+$$ = (-1)^{k - 1}\left[(k + 1)\left(\frac{-k - 2)}{2}\right)\right] $$
+
+$$ = (-1)^{k - 1}\left[(-1)(k + 1)\left(\frac{k + 2}{2}\right)\right] $$
+
+$$ = (-1)^{k - 1}\left[(-1)\left(\frac{(k + 1)(k + 2)}{2}\right)\right] $$
+
+$$ = (-1)^{k}\left(\frac{(k + 1)(k + 2)}{2}\right) $$
+
+By 5.2.1:
+
+$$ = (-1)^{k}(1 + 2 + 3 + 4 + \dots + (k + 1)) $$
+
+Evaluate right-hand:
+
+$$ (-1)^{k}(1 + 2 + 3 + 4 + \dots + (k + 1)) $$
+
+Both sides of $P(k + 1)$ are equal. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 33. Find a formula in $n$, $a$, $m$, and $d$ for the sum
     $(a + md) + (a + (m + 1)d) + (a + (m + 2)d) + \dots + (a + (m + n)d)$, where
     $m$ and $n$ are integers, $n \geq 0$, and $a$ and $d$ are real numbers.
     Justify your answer.
+
+$$ a + (a + d) + (a + 2d) + \dots (a + nd) = (n + 1)a + d\left(\frac{n(n + 1)}{2}\right) $$
 
 34. Find a formula in $a$, $r$, $m$, and $n$ for the sum
 
@@ -2220,6 +2628,16 @@ $$ ar^m + ar^{m + 1} + ar^{m + 2} + \dots + ar^{m + n} $$
 where $m$ and $n$ are integers, $n \geq 0$, and $a$ and $r$ are real numbers.
 Justify your answer.
 
+$$ ar^m + ar^{m + 1} + ar^{m + 2} + \dots + ar^{m + n} = ar^m\left(\frac{r^{n + 1} - 1}{r - 1}\right) $$
+
+By factoring out the $ar^m$, this just becomes a geometric series:
+
+$$ ar^m(1 + r + r^2 + r^3 + \dots r^n) $$
+
+And by 5.2.2, we can substitute that series out with:
+
+$$ ar^m\left(\frac{r^{n + 1} - 1}{r - 1}\right) $$
+
 35. You have two parents, four grandparents, eight great-grandparents, and so
     forth.
 
@@ -2227,12 +2645,44 @@ a. If all your ancestors were distinct, what would be the total number of your
 ancestors for the past 40 generations (counting your parents' generation as
 number one)? (_Hint:_ Use the formula for the sum of a geometric sequence.)
 
+The geometric sequence for this is:
+
+$$ 1 + 2 + 2^2 + 2^3 + \dots + 2^n $$
+
+So, by 5.2.2, this is:
+
+$$ \frac{2^{n + 1} - 1}{2 - 1} $$
+
+Where $n$ is the number of generations. Plugging in 39 (since we count as the
+first generation) returns:
+
+$$ \frac{2^{39 + 1} - 1}{2 - 1} $$
+
+$$ = \frac{2^{40} - 1}{1} $$
+
+$$ = 2^{40} - 1 $$
+
+$$ = 1099511627775 $$
+
 b. Assuming that each generation represents 25 years, how long is 40
 generations?
+
+$$ 25 \cdot 1099511627775 $$
+
+$$ \approx 2.748779069 \cdot 10^{13} \text{ years} $$
 
 c. The total number of people who have ever lived is approximately 10 billion,
 which equals $10^{10}$ people. Compare this fact with the answer to part (a).
 What can you deduce?
+
+When demarcated for easier reading, part a's answer reads as:
+
+$$ = 1,099,511,627,775 $$
+
+Which is 1 trillion, 99 billion, 511 million, 627 thousand, 775 people. Since
+this exceeds the approximate total number of people who have ever lived. We can
+deduce that some(probably many) of my ancestors must have been related to one
+another.
 
 Find the mistakes in the proof fragments in 36-38.
 
@@ -2252,6 +2702,22 @@ inductive step, suppose that $k$ is any integer with $k \geq 1$,
 $k^2 = \dfrac{k(k + 1)(2k + 1)}{6}$. We must show that
 $(k + 1)^2 = \dfrac{(k + 1)((k + 1) + 1)(2(k + 1) + 1)}{6}$."
 
+In the inductive step, the inductive hypothesis reads:
+
+$$ k^2 = \frac{k(k + 1)(2k + 1)}{6} $$
+
+But it should read:
+
+$$ 1^2 + 2^2 + \dots + k^2 = \frac{k(k + 1)(2k + 1)}{6} $$
+
+This error cascades into their proof, which reads:
+
+$$ (k + 1)^2 = \frac{(k + 1)((k + 1) + 1)(2(k + 1) + 1)}{6} $$
+
+But instead should read:
+
+$$ 1^2 + 2^2 + \dots + (k + 1)^2 = \frac{(k + 1)((k + 1) + 1)(2(k + 1) + 1)}{6} $$
+
 37.
 
 **Theorem:**
@@ -2270,6 +2736,11 @@ _Show that $P(0)$ is true:_
 
 The left-hand side of $P(0)$ is $1 + 2 + 2^2 + \dots + 2^0 = 1$ and the
 right-hand side is $2^{0 + 1} - 1 = 2 - 1 = 1$ also. So $P(0)$ is true."
+
+The left-hand side evaluation should instead read:
+
+The left-hand side of $P(0)$ is $2^0 = 1$ since when $n = 0$, only the first
+term is evaluated..
 
 38.
 
@@ -2301,10 +2772,51 @@ $$ 1 = 1 $$
 
 Thus $P(1)$ is true."
 
+The author of this proof fragment incorrectly rewrites the upper limit as $i$
+instead of $1$. They write:
+
+$$ \sum_{i = 1}^{i}{i(i!)} = (1 + 1)! - 1 $$
+
+When it should be:
+
+$$ \sum_{i = 1}^{1}{i(i!)} = (1 + 1)! - 1 $$
+
+Then, they should evaluate each side independently, but instead they simply
+evaluate each together, which is incorrect. Instead the basis step should be
+written as:
+
+Evaluate the left-hand side when $n = 1$:
+
+$$ \sum_{i = 1}^{1}{i(i!)} $$
+
+$$ = 1(1!) $$
+
+$$ = 1(1) $$
+
+$$ = 1 $$
+
+Evaluate the right-hand side when $n = 1$:
+
+$$ (1 + 1)! - 1 $$
+
+$$ = (2)! - 1 $$
+
+$$ = (2 \cdot 1) - 1 $$
+
+$$ = 2 - 1 $$
+
+$$ = 1 $$
+
+Both sides of $P(1)$ are equal. Therefore $P(1)$ is true.
+
 39. Use Theorem 5.2.1 to prove that if $m$ and $n$ are any positive integers and
     $m$ is odd, then $\sum_{k = 0}^{m - 1}{(n + k)}$ is divisible by $m$. Does
     the conclusion hold if $m$ is even? Justify your answer.
 
+Omitted.
+
 40. Use Theorem 5.2.1 and the result of exercise 10 to prove that if $p$ is any
     prime number with $p \geq 5$, then the sum of the squares of any $p$
     consecutive integers is divisible by $p$.
+
+Omitted.
