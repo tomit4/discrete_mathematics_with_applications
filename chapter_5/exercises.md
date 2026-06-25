@@ -4830,3 +4830,344 @@ follows that $3^{k + 1} - 2$ is even, which is what we needed to show."
 Omitted.
 
 ---
+
+**Exercise Set 5.4**
+
+Page 333
+
+1. Suppose $a_1, a_2, a_3, \dots$ is a sequence defined as follows:
+
+$$ a_1 = 1, a_2 = 3, a_k = a_{k - 2} + 2a_{k - 1} $$
+
+for each integer $k \geq 3$.
+
+Prove that $a_n$ is odd for every integer $n \geq 1$.
+
+2. Suppose $b_1, b_2, b_3, \dots$ is a sequence defined as follows:
+
+$$ b_1 = 4, b_2 = 12, b_k = b_{k - 2} + b_{k - 1} $$
+
+for each integer $k \geq 3$.
+
+Prove that $b_n$ is divisible by $4$ for every integer $n \geq 1$.
+
+3. Suppose that $c_0, c_1, c_2, \dots$ is a sequence defined as follows:
+
+$$ c_0 = 2, c_1 = 2, c_2 = 6, c_k = 3c_{k - 3} $$
+
+for every integer $k \geq 3$.
+
+Prove that $c_n$ is even for each integer $n \geq 0$.
+
+4. Suppose that $d_1, d_2, d_3, \dots$ is sequence defined as follows:
+
+$$ d_1 = \frac{9}{10}, d_2 = \frac{10}{11}, d_k = d_{k - 1} \cdot d_{k - 2} $$
+
+for every integer $k \geq 3$.
+
+Prove that $0 < d_n \leq 1$ for each integer $n \geq 1$.
+
+5. Suppose that $e_0, e_1, e_2, \dots$ is a sequence defined as follows:
+
+$$ e_0 = 12, e_1 = 29, e_k, = 5e_{k - 1} - 6e_{k - 2} $$
+
+for each integer $k \geq 2$.
+
+Prove that $e_n = 5 \cdot 3^n + 7 \cdot 2^n$ for every integer $n \geq 0$.
+
+6. Suppose that $f_0, f_1, f_2, \dots$ is a sequence defined as follows:
+
+$$ f_0 = 5, f_1 = 16, f_k = 7f_{k - 1} - 10f_{k - 2} $$
+
+for every integer $k \geq 2$.
+
+Prove that $f_n = 3 \cdot 2^n + 2 \cdot 5^n$ for each integer $n \geq 0$.
+
+7. Suppose that $g_1, g_2, g_3, \dots$ is a sequence defined as follows:
+
+$$ g_1 = 3, g_2 = 5, g_k = 3g_{k - 1} - 2g_{k - 2} $$
+
+for each integer $k \geq 3$.
+
+Prove that $g_n = 2^n + 1$ for every integer $n \geq 1$.
+
+8. Suppose that $h_0, h_1, h_2, \dots$ is a sequence defined as follows:
+
+$$ h_0 = 1, h_1 = 2, h_2 = 3, h_k = h_{k - 1} + h_{k - 2} + h_{k - 3} $$
+
+for each integer $k \geq 3$.
+
+a. Prove that $h_n \leq 3^n$ for every integer $n \geq 0$.
+
+b. Suppose that $s$ is any real number such that $s^3 \geq s^2 + s + 1$. (This
+implies that $2 > s > 1.83$.) Prove that $h_n \leq s^n$ for every integer
+$n \geq 2$.
+
+9. Define a sequence $a_1, a_2, a_3, \dots$ as follows: $a_1 = 1, a_2 = 3$, and
+   $a_k = a_{k - 1} + a_{k - 2}$ for every integer $k \geq 3$. (This sequence is
+   known as the Lucas sequence.) Use strong mathematical induction to prove that
+   $a_n \leq \left(\dfrac{7}{4}\right)^n$ for every integer $n \geq 1$.
+
+10. The introductory example solved with ordinary mathematical induction in
+    Section 5.3 can also be solved using strong mathematical induction. Let
+    $P(n)$ be "any $n$¢ can be obtained using a combination of $3$¢ and $5$¢
+    coins." Use strong mathematical induction to prove that $P(n)$ is true for
+    every integer $n \geq 8$.
+
+11. You begin solving a jigsaw puzzle by finding two pieces that match and
+    fitting them together. Every subsequent step of the solution consists of
+    fitting together two blocks, each of which is made up of one or more pieces
+    that have previously been assembled. Use strong mathematical induction to
+    prove that for every integer $n \geq 1$, the number of steps required to put
+    together all $n$ pieces of a jigsaw puzzle is $n - 1$.
+
+12. The sides of a circular track contain a sequence of $n$ cans of gasoline.
+    For each integer $n \geq 1$, the total amount in the cans is sufficient to
+    enable a certain car to make one complete circuit of the track. In addition,
+    all the gasoline could fit into the car's gas tank at one time. Use
+    mathematical induction to prove that it is possible to find an initial
+    location for placing the car so that it will be able to traverse the entire
+    track by using the various amounts of gasoline in the cans that it
+    encounters along the way.
+
+13. Use strong mathematical induction to prove the existence part of the unique
+    factorization of integers theorem (Theorem 4.4.5). In other words, prove
+    that every integer greater than $1$ is either a prime number of a product of
+    prime numbers.
+
+14. Any product of two or more integers is a result of successive
+    multiplications of two integers at a time. For instance, here are a few of
+    the ways in which $a_1a_2a_3a_4$ might be computed: $(a_1a_2)(a_3a_4)$ or
+    $(((a_1a_2)a_3)a_4)$ or $a_1((a_2a_3)a_4)$. Use strong mathematical
+    induction to prove that any product of two or more odd integers is odd.
+
+15. Define the "sum" of one integer to be that integer, and use strong
+    mathematical induction to prove that for every integer $n \geq 1$, any sum
+    of $n$ even integers is even.
+
+16. Use strong mathematical induction to prove that for every integer
+    $n \geq 2$, if $n$ is even, then any sum of $n$ odd integers is even, and if
+    $n$ is odd, then any sum of $n$ odd integers is odd.
+
+17. Compute $4^1, 4^2, 4^3, 4^4, 4^5, 4^6, 4^7,$ and $4^8$. Make a conjecture
+    about the units digit of $4^n$ where $n$ is a positive integer. Use strong
+    mathematical induction to prove your conjecture.
+
+18. Compute $9^0, 9^1, 9^2, 9^3, 9^4,$ and $9^5$. Make a conjecture about the
+    units digit of $9^n$ where $n$ is a positive integer. Use strong
+    mathematical induction to prove your conjecture.
+
+19. Suppose that $a_1, a_2, a_3, \dots$ is a sequence defined as follows:
+
+$a_1 = 1$ $a_k = 2 \cdot a_{\frac{k}{2}}$
+
+for every integer $k \geq 2$.
+
+Prove that $a_n \leq n$ for each integer $n \geq 1$.
+
+20. Suppose that $b_1, b_2, b_3, \dots$ is a sequence defined as follows:
+
+$b_1 = 0, b_2 = 3, b_k = 5 \cdot b_{\frac{k}{2}} + 6$
+
+for every integer $k \geq 3$.
+
+Prove that $b_n$ is divisible by $3$ for each integer $n \geq 1$.
+
+21. Suppose that $c_1, c_2, c_3, \dots$ is a sequence defined as follows:
+
+$$ c_0 = 1, c_1 = 1, c_k = c_{\frac{k}{2}} + c_{\frac{k}{2}} $$
+
+for every integer $k \geq 2$.
+
+Prove that $c_n = n$ for each integer $n \geq 1$.
+
+22. One version of the game NIM starts with two piles of objects such as coins,
+    stones, or matchsticks. In each turn a player is required to remove from one
+    to three objects from one of the piles. The two players take turns doing
+    this until both piles are empty. The loser is the first player who can't
+    make a move. Use strong mathematical induction to show that if both piles
+    contain the same number of objects at the start of the game, the player who
+    goes second can always win.
+
+23. Define a game $G$ as follows: Begin with a pile of $n$ stones and $0$
+    points. In the first move split the pile into two possibly unequal
+    sub-piles, multiply the number of stones in one sub-pile times the number of
+    stones in the other sub-pile, and add the product to your score. In the
+    second move, split each of the newly created piles into a pair of possibly
+    unequal sub-piles, multiply the number of stones in each sub-pile times the
+    number of stones in the paired sub-pile, and add the new products to your
+    score. Continue by successively splitting each newly created pile of stones
+    that has at least two stones into a pair of sub-piles, multiplying the
+    number of stones in each sub-pile times the number of stones in the paired
+    sub-pile, and adding the new products to your score. The game $G$ ends when
+    no pile contains more than one stone.
+
+a. Play $G$ starting with $10$ stones and using the following initial moves. In
+move $1$ split the pile of $10$ stones into two sub-piles with $3$ and $7$
+stones respectively, compute $3 \cdot 7 = 21$, and find that your score is $21$.
+In move $2$ split the pile of $3$ stones into two sub-piles, with $1$ and $2$
+stones respectively, and split the pile of $7$ stones into two sub-piles, with
+$4$ and $3$ stones respectively, compute $1 \cdot 2 = 2$ and $4 \cdot 3 = 12$,
+and find that your score is $21 + 2 + 12 = 35$. In move $3$ split the pile of
+$4$ stones into two sub-piles, each with $2$ stones, and split the pile of $3$
+<F2>tones into two sub-piles, with $1$ and $2$ stones respectively, and find
+your new score. Continue splitting piles and computing your score until no pile
+has more than one stone. Show your final score along with a record of the
+numbers of stones in the piles you created with your moves.
+
+b. Play $G$ again starting with $10$ stones, but use a different initial move
+from the one in part (a). Show your final score along with a record of the
+numbers of stones in the piles you created with your moves.
+
+c. Show that you can use strong mathematical induction to prove that for every
+integer $n \geq 1$, given the set-up of game $G$, no matter how you split the
+piles in the various moves, your final score is $\dfrac{n(n - 1)}{2}$. The basis
+step may look a little strange because a pile consisting of one stone cannot be
+split into any sub-piles. Another way to say this is that it can only be split
+into zero piles, and that gives an answer that agrees with the general formula
+for the final score.
+
+24. Imagine a situation in which eight people, numbered consecutively 1-8, are
+    arranged in a circle. Starting from person #1, every second person in the
+    circle is eliminated. The elimination process continues until only one
+    person remains. In the first round the people numbered $2$, $4$, $6$, and
+    $8$ are eliminated, in the second round the people numbered $3$ and $7$ are
+    eliminated, and in the third round person #5 is eliminated, so after the
+    third round only person #1 remains, as shown on the next page.
+
+See page 336 for image.
+
+a. Given a set of sixteen people arranged in a circle and numbered,
+consecutively 1-16, list the numbers of the people who are eliminated in each
+round if every second person is eliminated and the elimination process continues
+until only one person remains. Assume that the starting point is person #1.
+
+b. Use ordinary mathematical induction to prove that for every integer
+$n \geq 1$, given any set of $2^n$ people arranged in a circle and numbered
+consecutively $1$ through $2^n$, if one starts from person #1 and goes
+repeatedly around the circle successively eliminating every second person,
+eventually only person #1 will remain.
+
+c. Use the result of part (b) to prove that for any nonnegative integers $n$ and
+$m$ with $2^n \leq 2^n + m < 2^{n + 1}$, if $r = 2^n + m$, then given any set of
+$r$ people arranged in a circle and numbered consecutively $1$ through $r$, if
+one starts from person #1 and goes repeatedly around the circle successively
+eliminating every second person, eventually only person #$(2m + 1)$ will remain.
+
+25. Find the mistake in the following "proof" that purports to show that every
+    nonnegative integer power of every nonzero real number is $1$.
+
+"**Proof:**
+
+Let $r$ be any nonzero real number and let the property $P(n)$ be the equation
+$r^n = 1$.
+
+_Show that $P(0)$ is true:_
+
+$P(0)$ is true because $r^0 = 1$ by definition of zeroth power.
+
+_Show that for every integer $k \geq 0$, if $P(i)$ is true for each integer $i$
+from $0$ through $k$, then $P(k + 1)$ is also true:_
+
+Let $k$ be any integer $k \geq 0$ and suppose that $r^i = 1$ for each integer
+$i$ from $0$ through $k$. This is the inductive hypothesis.
+
+We must show that $r^{k + 1} = 1$. Now
+
+$$ r^{k + 1} = r^{k + k - (k - 1)} $$
+
+because $k + k - (k - 1) = k + k - k + 1 = k + 1$
+
+$$ = \frac{r^k \cdot r^k}{r^{k - 1}} $$
+
+by the laws of exponents
+
+$$ = \frac{1 \cdot 1}{1} $$
+
+by inductive hypothesis
+
+$$ = 1 $$
+
+Thus $r^{k + 1} = 1$ _[as was to be shown]._
+
+_[Since we have proved both the basis and the inductive step of the strong
+mathematical induction, we conclude that the given statement is true.]"_
+
+26. Use the well-ordering principle for the integers to prove Theorem 4.4.4:
+    Every integer greater than $1$ is divisible by a prime number.
+
+27. Use the well-ordering principle for the integers to prove the existence part
+    of the unique factorization of integers theorem. In other words, prove that
+    every integer greater than $1$ is either prime or a product of prime
+    numbers.
+
+28.
+
+a. The Archimedean property for the rational numbers states that for every
+rational number $r$, there is an integer $n$ such that $n > r$. Prove this
+property.
+
+b. Prove that given any rational number $r$, the number $-r$ is also rational.
+
+c. Use the results of parts (a) and (b) to prove that given any rational number
+$r$, there is an integer $m$ such that $m < r$.
+
+29. Use the results of exercise 28 and the well-ordering principle for the
+    integers to show that given any rational number $r$, there is an integer $m$
+    such that $m \leq r < m + 1$.
+
+30. Use the well-ordering principle to prove that given any integer $n \geq 1$,
+    there exists an odd integer $m$ and a nonnegative integer $k$ such that
+    $n = 2^k \cdot m$.
+
+31. Give examples to illustrate the proof of Theorem 5.4.1.
+
+32. Suppose $P(n)$ is a property such that
+
+    1. $P(0)$, $P(1)$, $P(2)$ are all true,
+
+    2. for each integer $k \geq 0$, if $P(k)$ is true, then $P(3k)$ is true.
+       Must it follow that $P(n)$ is true for every integer $n \geq 0$? If yes,
+       explain why; if no, give a counterexample.
+
+33. Prove that if a statement can be proved by strong mathematical induction,
+    then it can be proved by ordinary mathematical induction. To do this, let
+    $P(n)$ be a property that is defined for each integer $n$, and suppose the
+    following two statements are true:
+
+    1. $P(a), P(a + 1), P(a + 2) \dots, P(b)$.
+
+    2. For any integer $k \geq b$, if $P(i)$ is true for each integer $i$ from
+       $a$ through $k$, then $P(k + 1)$ is true.
+
+The principle of strong mathematical induction would allow us to conclude
+immediately that $P(n)$ is true for every integer $n \geq a$. Can we reach the
+same conclusion using the principle of ordinary mathematical induction? Yes! To
+see this, let $Q(n)$ be the property
+
+$P(j)$ is true for each integer $j$ with $a \leq j \leq n$.
+
+Then use ordinary mathematical induction to show that $Q(n)$ is true for every
+integer $n \geq b$. That is, prove:
+
+    1. $Q(b)$ is true.
+
+    2. For each integer $k \geq b$, if $Q(k)$ is true then $Q(k + 1)$ is true.
+
+34. It is a fact that every integer $n \geq 1$ can be written in the form
+
+$$ c_r \cdot 3^r + c_{r - 1} \cdot 3^{r - 1} + \dots + c_2 \cdot 3^2 + c_1 \cdot 3 + c_0 $$
+
+where $c_r = 1$ or $2$ and $c_i = 0, 1,$ or $2$ for each integer
+$i = 0, 1, 2, \dots, r - 1$. Sketch a proof of this fact.
+
+35. Use mathematical induction to prove the existence part of the
+    quotient-remainder theorem. In other words, use mathematical induction to
+    prove that given any integer $n$ and any positive integer $d$, there exists
+    integers $q$ and $r$ such that $n = dq + r$ and $0 \leq r < d$.
+
+36. Prove that if a statement can be proved using ordinary mathematical
+    induction, then it can be proved by the well-ordering principle.
+
+37. Use the principle of ordinary mathematical induction to prove the
+    well-ordering principle for the integers.
