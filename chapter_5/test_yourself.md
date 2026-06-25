@@ -63,5 +63,9 @@ Page 320
 1. Mathematical induction differs from the kind of induction used in the natural
    sciences because it is actually a form of _____ reasoning.
 
+deductive
+
 2. Mathematical induction can be used to _____ conjectures that have been made
    using inductive reasoning.
+
+prove

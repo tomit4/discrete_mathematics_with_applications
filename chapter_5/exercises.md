@@ -2831,16 +2831,169 @@ Page 320
    show that any amount of money of at least 14¢ can be made up using 3¢ and 8¢
    coins.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the sentence:
+
+$n$¢ can be obtained using $3$¢ and $8$¢ coins.
+
+_Basis Step:_
+
+Prove $P(14)$:
+
+$P(14)$ is true because $14$¢ can be obtained using one $8$¢ coin and two $3$¢
+coins.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 14$.
+
+Suppose $P(k)$ is true. That is:
+
+$k$¢ can be obtained using $3$¢ and $8$¢ coins.
+
+Prove $P(k + 1)$. That is:
+
+$k + 1$¢ can be obtained using $3$¢ and $8$¢ coins.
+
+_Case 1 (there is a $8$¢ coin among those used to make up $k$¢):_
+
+In this case, replace the $8$¢ coin with three $3$¢ coins. The result will be
+$k + 1$¢.
+
+_Case 2 (there is not a $8$¢ coin among those used to make up $k$¢):_
+
+In this case, because $k \geq 14$, at least 5 $3$¢ coins must have been used. So
+remove five $3$¢ coins and replace them with two $8$¢ coins. The result will be
+$k + 1$¢.
+
+Therefore in either case $(k + 1)$¢ can be obtained using $3$¢ and $8$¢ coins.
+
+Q.E.D.
+
 2. Use mathematical induction to show that any postage of at least 12¢ can be
    obtained using 3¢ and 7¢ stamps.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the sentence:
+
+$n$¢ postage can be obtained using $3$¢ and $7$¢ stamps.
+
+_Basis Step:_
+
+Prove $P(12)$. That is:
+
+$12$¢ postage can be obtained using $3$¢ and $7$¢ stamps.
+
+$12$¢ can be obtained using four $3$¢ stamps. Therefore $P(12)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 12$.
+
+Suppose $P(k)$. That is:
+
+$k$¢ postage can be obtained using $3$¢ and $7$¢ stamps.
+
+Prove $P(k + 1)$. That is:
+
+$(k + 1)$¢ postage can be obtained using $3$¢ and $7$¢ stamps.
+
+_Case 1 (at least one 2 $3$¢ stamps are used to make up $k$¢):_
+
+Replace the two $3$¢ stamps with a $7$¢ stamp. This results in $(k + 1)$¢.
+
+_Case 2 (there are 1 or 0 $3$¢ stamps among those used to make up $k$¢):_
+
+Replace two $7$¢ stamps with five $3$¢ stamps. This results in $(k + 1)$¢.
+
+Therefore, in both cases $(k + 1)$ postage can be obtained using $3$¢ and $7$¢
+stamps.
+
+Q.E.D.
 
 3. Stamps are sold in packages containing either 5 stamps or 8 stamps.
 
 a. Show that a person can obtain 5, 8, 10, 13, 15, 16, 20, 21, 24, or 25 stamps
 by buying a collection of 5-stamp packages and 8-stamp packages.
 
+- 5 stamps can be obtained by purchasing one 5 stamp package.
+
+- 8 stamps can be obtained by purchasing one 8 stamp package.
+
+- 10 stamps can be obtained by purchasing two 5 stamp packages.
+
+- 13 stamps can be obtained by purchasing one 5 stamp package and one 8 stamp
+  package.
+
+- 15 stamps can be obtained by purchasing three 5 stamp packages.
+
+- 16 stamps can be obtained by purchasing two 8 stamp packages.
+
+- 20 stamps can be obtained by purchasing four 5 stamp packages.
+
+- 21 stamps can be obtained by purchasing two 8 stamp packages and one 5 stamp
+  package.
+
+- 24 stamps can be obtained by purchasing three 8 stamp packages.
+
+- 25 stamps can be obtained by purchasing five 5 stamp packages.
+
 b. Use mathematical induction to show that any quantity of at least 28 stamps
 can be obtained by buying a collection of 5-stamp packages and 8-stamp packages.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the sentence:
+
+$n$ stamps can be obtained by buying a collection of 5-stamp packages and
+8-stamp packages.
+
+_Basis Step:_
+
+Prove $P(28)$. That is:
+
+$28$ stamps can be obtained by buying a collection of 5-stamp packages and
+8-stamp packages.
+
+$28$ stamps can be obtained by buying four 5-stamp packages and one 8-stamp
+package.
+
+Therefore $P(28)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 28$.
+
+Suppose $P(k)$. That is:
+
+$k$ stamps can be obtained by buying a collection of 5-stamp packages and
+8-stamp packages.
+
+Prove $P(k + 1)$. That is:
+
+$(k + 1)$ stamps can be obtained by buying a collection of 5-stamp packages and
+8-stamp packages.
+
+_Case 1 (at least three 5-stamp packages are used in obtaining $k$ stamps):_
+
+Replace three 5-stamp packages with two 8-stamp packages. This results in
+$(k + 1)$ stamps.
+
+_Case 2 (at most two 5-stamp packages are used in obtaining $k$ stamps):_
+
+If there at most two 5-stamp packages, that means that $28-10=18$ must be made
+up of 8-stamp packages. So at least 3 8-stamp packages must be used to exceed
+the 28 minimum.
+
+Replace three 8-stamp packages with 5 5-stamp packages. This results in
+$(k + 1)$ stamps.
+
+Therefore in both cases $(k + 1)$ stamps can be obtained by buying a collection
+of 5-stamp packages and 8-stamp packages.
+
+Q.E.D.
 
 4. For each positive integer $n$, let $P(n)$ be the sentence that describes the
    following divisibility property:
@@ -2849,12 +3002,23 @@ $$ 5^n - 1 \text{ is divisible by } 4 $$
 
 a. Write $P(0)$. Is $P(0)$ true?
 
+$$ 5^0 - 1 = 1 - 1 = 0 $$
+
+$P(0)$ is true, as $0 = 0 \cdot 4$.
+
 b. Write $P(k)$.
+
+$$ P(k) = 5^k - 1 \text{ is divisible by } 4 $$
 
 c. Write $P(k + 1)$.
 
+$$ P(k + 1) = 5^{k + 1} - 1 \text{ is divisible by } 4 $$
+
 d. In a proof by mathematical induction that this divisibility property holds
 for every integer $n \geq 0$, what must be shown in the inductive step?
+
+It must be shown that supposing that $5^k - 1$ is divisible by $4$ for some
+integer $k \geq 0$, that therefore $5^{k + 1} - 1$ is divisible by $4$.
 
 5. For each positive integer $n$, let $P(n)$ be the inequality
 
@@ -2862,12 +3026,33 @@ $$ 2^n < (n + 1)! $$
 
 a. Write $P(2)$. Is $P(2)$ true?
 
+$$ P(2) = 2^2 < (2 + 1)! $$
+
+$$ P(2) = 4 < (3)! $$
+
+$$ P(2) = 4 < (3 \cdot 2 \cdot 1) $$
+
+$$ P(2) = 4 < 6 $$
+
+Yes, $P(2)$ is true because $4$ is less than $6$.
+
 b. Write $P(k)$.
+
+$$ P(k) = 2^k < (k + 1)! $$
 
 c. Write $P(k + 1)$.
 
+$$ P(k + 1) = 2^{k + 1} < ((k + 1) + 1)! $$
+
+Alternatively:
+
+$$ P(k + 1) = 2^{k + 1} < (k + 2)! $$
+
 d. In a proof by mathematical induction that this inequality holds for every
 integer $n \geq 2$, what must be shown in the inductive step?
+
+It must be shown that supposing $2^k < (k + 1)!$ is true for any integer
+$k \geq 2$, that therefore $2^{k + 1} < (k + 2)!$ is true.
 
 6. For each positive integer $n$, let $P(n)$ be the sentence
 
@@ -2876,12 +3061,29 @@ L-shaped trominoes.
 
 a. Write $P(1)$. Is $P(1)$ true?
 
+Any checkerboard with dimensions $2 \times 3(1)$ can be completely covered with
+L-shaped trominoes.
+
+Yes, this is true, a $2 \times 3$ dimension checkerboard can be completely
+covered with L-shaped trominoes (2 in fact.)
+
 b. Write $P(k)$.
+
+Any checkerboard with dimensions $2 \times 3k$ can be completely covered with
+L-shaped trominoes.
 
 c. Write $P(k + 1)$.
 
+Any checkerboard with dimensions $2 \times 3(k + 1)$ can be completely covered
+with L-shaped trominoes.
+
 d. In a proof by mathematical induction that $P(n)$ is true for each integer
 $n \geq 1$, what must be shown in the inductive step?
+
+It must be shown that supposing any checkerboard with dimensions $2 \times 3k$
+can be completely covered with L-shaped trominoes for any integer $k \geq 1$,
+that therefore any checkerboard with dimensions $2 \times 3(k + 1)$ can be
+completely covered with L-shaped trominoes.
 
 7. For each positive integer $n$, let $P(n)$ be the sentence
 
@@ -2891,53 +3093,1182 @@ $i = 1, 2, \dots, n$.
 
 a. Write $P(2)$. Is $P(2)$ true?
 
+In any round-robin tournament involving $2$ teams, the teams can be labeled
+$T_1$, $T_2$, so that $T_i$ beats $T_{i + 1}$ for every $i = 1, 2$.
+
+This is true, in a round-robin tournament involving only $2$ teams, one can
+label the teams such that $T_2$ beats $T_1$.
+
 b. Write $P(k)$.
+
+In any round-robin tournament involving $k$ teams, the teams can be labeled
+$T_1$, $T_2$, $T_3$, \dots, $T_k$, so that $T_i$ beats $T_{i + 1}$ for every
+$i = 1, 2, \dots, k$.
 
 c. Write $P(k + 1)$.
 
+In any round-robin tournament involving $(k + 1)$ teams, the teams can be
+labeled $T_1$, $T_2$, $T_3$, \dots, $T_{k + 1}$, so that $T_i$ beats $T_{i + 1}$
+for every $i = 1, 2, \dots, (k + 1)$.
+
 d. In a proof by mathematical induction that $P(n)$ is true for each integer
 $n \geq 2$, what must be shown in the inductive step?
+
+It must be shown that supposing in any round-robin tournament involving $k$
+teams, the teams can be labeled $T_1, T_2, T_3, \dots T_k$, so that $T_i$ beats
+$T_{i + 1}$ for every $i = 1, 2, \dots k$ for any integer $k \geq 2$, then
+therefore in any round-robin tournament involving $(k + 1)$ teams, the teams can
+be labeled $T_1, T_2, T_3, \dots T_{k + 1}$ so that $T_i$ beats $T_{i + 1}$ for
+every $i = 1, 2, \dots (k + 1)$.
 
 Prove each statement in 8-23 by mathematical induction.
 
 8. $5^n - 1$ is divisible by $4$, for every integer $n \geq 0$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the sentence:
+
+$$ 5^n - 1 \text{ is divisible by } 4 $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ 5^0 - 1 \text{ is divisible by } 4 $$
+
+$$ 1 - 1 \text{ is divisible by } 4 $$
+
+$$ 0 \text{ is divisible by } 4 $$
+
+This sentence is true as $0 = 0 \cdot 4$, which shows that $0$ is divisible by
+$4$ by the definition of divisibility.
+
+Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ 5^k - 1 \text{ is divisible by } 4 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ 5^{k + 1} - 1 \text{ is divisible by } 4 $$
+
+$$ 5^{k + 1} - 1 $$
+
+$$ = 5^k \cdot 5 - 1 $$
+
+$$ = 5^k \cdot (4 + 1) - 1 $$
+
+$$ = 5^k \cdot 4 + 5^k - 1 $$
+
+Since we know by the inductive hypothesis that $5^k - 1$ is divisible by $4$. By
+the definition of divisibility:
+
+$$ 5^k - 1 = 4r $$
+
+for some integer $r$. Our equation now becomes:
+
+$$ = 5^k \cdot 4 + 4r $$
+
+$$ = 4(5^k + r) $$
+
+Now, we know that $5^k + r$ is an integer by the sum and product of integers.
+Therefore, by the definition of divisibility, $5^{k + 1} - 1$ is divisible by
+$4$.
+
+Q.E.D.
+
 9. $7^n - 1$ is divisible by $6$, for every integer $n \geq 0$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the sentence:
+
+$$ 7^n - 1 \text{ is divisible by } 6 $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ 7^0 - 1 \text{ is divisible by } 6 $$
+
+$$ 7^0 - 1 $$
+
+$$ = 1 - 1 $$
+
+$$ = 0 $$
+
+$0$ is divisible by $6$ because $0 = 0 \cdot 6$.
+
+Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ 7^k - 1 \text{ is divisible by } 6 $$
+
+Prove $P(k + 1)$. That is:
+
+$$ 7^{k + 1} - 1 \text{ is divisible by } 6 $$
+
+$$ 7^{k + 1} - 1 $$
+
+$$ = 7^k \cdot 7 - 1 $$
+
+$$ = 7^k \cdot (6 + 1) - 1 $$
+
+$$ = 7^k \cdot 6 + (7^k - 1) $$
+
+By the inductive hypothesis and by the definition of divisibility:
+
+$$ = 7^k \cdot 6 + 6r $$
+
+for some integer $r$.
+
+$$ = 6(7^k + r) $$
+
+Now, we know that $7^k + r$ is an integer by the sum and product of integers.
+Therefore, by the definition of divisibility, $7^{k + 1} - 1$ is divisible by
+$6$.
+
+Q.E.D.
 
 10. $n^3 - 7n + 3$ is divisible by $3$, for each integer $n \geq 0$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the sentence:
+
+$$ n^3 - 7n + 3 \text{ is divisible by } 3 $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ (0)^3 - 7(0) + 3 \text{ is divisible by } 3 $$
+
+$$ (0)^3 - 7(0) + 3 $$
+
+$$ = 0 - 0 + 3 $$
+
+$$ = 3 $$
+
+By the definition of divisibility, $3 \mid 3$, as $3 = 1 \cdot 3$.
+
+Therefore, $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ k^3 - 7k + 3 \text{ is divisible by } 3 $$
+
+Prove $P(k + 1)$. That is:
+
+$$ (k + 1)^3 - 7(k + 1) + 3 \text{ is divisible by } 3 $$
+
+$$ (k + 1)^3 - 7(k + 1) + 3 $$
+
+$$ = (k + 1)(k + 1)(k + 1) - 7k - 7 + 3 $$
+
+$$ = (k^2 + 2k + 1)(k + 1) - 7k - 7 + 3 $$
+
+$$ = (k^2(k + 1) + 2k(k + 1) + 1(k + 1)) - 7k - 7 + 3 $$
+
+$$ = (k^3 + k^2 + 2k^2 + 2k + k + 1) - 7k - 7 + 3 $$
+
+$$ = (k^3 + 3k^2 + 3k + 1) - 7k - 7 + 3 $$
+
+$$ = (k^3 - 7k + 3) + 3k^2 + 3k + 1 - 7 $$
+
+$$ = (k^3 - 7k + 3) + 3k^2 + 3k - 6 $$
+
+By the inductive hypothesis and definition of divisibility:
+
+$$ = (3r) + 3k^2 + 3k - 6 $$
+
+for some integer $r$.
+
+$$ = 3(r + k^2 + k - 2) $$
+
+Now, we know that $r + k^2 + k - 2$ is an integer by the product and sum of
+integers. Thus, by the definition of divisibility, $(k + 1)^3 - 7(k + 1) + 3$ is
+divisible by $3$.
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 11. $3^{2n} - 1$ is divisible by $8$, for every integer $n \geq 0$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the sentence:
+
+$$ 3^{2n} - 1 \text{ is divisible by } 8 $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ 3^{2(0)} - 1 \text{ is divisible by } 8 $$
+
+$$ 3^{2(0)} - 1 $$
+
+$$ = 3^0 - 1 $$
+
+$$ = 1 - 1 $$
+
+$$ = 0 $$
+
+$0$ is divisible by $8$ as $0 = 0 \cdot 8$.
+
+Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ 3^{2k} - 1 \text{ is divisible by } 8 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ 3^{2(k + 1)} - 1 \text{ is divisible by } 8 $$
+
+$$ 3^{2(k + 1)} - 1 $$
+
+$$ = 3^{2k + 2} - 1 $$
+
+$$ = 3^{2k} \cdot 3^2 - 1 $$
+
+$$ = 3^{2k} \cdot 9 - 1 $$
+
+$$ = 3^{2k} \cdot (8 + 1) - 1 $$
+
+$$ = 3^{2k} \cdot 8 + (3^{2k} - 1) $$
+
+By the inductive hypothesis and the definition of divisibility:
+
+$$ = 3^{2k} \cdot 8 + 8r $$
+
+for some integer $r$.
+
+$$ = 8(3^{2k} + r) $$
+
+Now, $3^{2k} + r$ is an integer by the sum and product of integers. Thus
+$3^{2(k + 1)} - 1$ is divisible by $8$ by the definition of divisibility.
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 12. For any integer $n \geq 0$, $7^n - 2^n$ is divisible by $5$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the sentence:
+
+$$ 7^n - 2^n \text{ is divisible by } 5 $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ 7^0 - 2^0 \text{ is divisible by } 5 $$
+
+$$ 7^0 - 2^0 $$
+
+$$ = 1 - 1 $$
+
+$$ = 0 $$
+
+$0$ is divisible by $5$ as $0 = 0 \cdot 5$.
+
+Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ 7^k - 2^k \text{ is divisible by } 5 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ 7^{k + 1} - 2^{k + 1} \text{ is divisible by } 5 $$
+
+$$ 7^{k + 1} - 2^{k + 1} $$
+
+$$ = 7^k \cdot 7^1 - 2^k \cdot 2^1 $$
+
+$$ = 7^k \cdot (5 + 2) - 2^k \cdot 2^1 $$
+
+$$ = 7^k \cdot 5 + (2)7^k - 2^k \cdot 2^1 $$
+
+$$ = 7^k \cdot 5 + 2(7^k - 2^k) $$
+
+By the inductive hypothesis and the definition of divisibility:
+
+$$ = 7^k \cdot 5 + 2(5r) $$
+
+For some integer $r$.
+
+$$ = 5(7^k + 2r) $$
+
+Now, $7^k + 2r$ is an integer by the sum and product of integers. Thus
+$7^{k + 1} - 2^{k + 1}$ is divisible by $5$ by the definition of divisibility.
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 13. For any integer $n \geq 0$, $x^n -y^n$ is divisible by $x - y$, where $x$
     and $y$ are any integers with $x \neq y$.
 
+**Proof (by mathematical induction):**
+
+Suppose $x$ and $y$ are any integers with $x \neq y$.
+
+Let $P(n)$ be the sentence:
+
+$$ x^n - y^n \text{ is divisible by } x - y $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ x^0 - y^0 \text{ is divisible by } x - y $$
+
+$$ x^0 - y^0 $$
+
+$$ = 1 - 1 $$
+
+$$ = 0 $$
+
+$0$ is divisible by $(x - y)$ as $0 = 0 \cdot (x - y)$.
+
+Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ x^k - y^k \text{ is divisible by } x - y $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ x^{k + 1} - y^{k + 1} \text{ is divisible by } x - y $$
+
+$$ x^{k + 1} - y^{k + 1} $$
+
+$$ = x^k(x) - y^k(y) $$
+
+$$ = x^k(x) - xy^k + xy^k - y^k(y) $$
+
+$$ = x(x^k - y^k) + y^k(x - y) $$
+
+By the inductive hypothesis:
+
+$$ = x(r(x - y)) + y^k(x - y) $$
+
+for some integer $r$.
+
+$$ = (x - y)(xr + y^k) $$
+
+We know $xr + y^k$ is an integer by the sum and product of integers. By the
+definition of divisibility, $x^{k + 1} - y^{k + 1}$ is divisible by $x - y$.
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 14. $n^3 - n$ is divisible by $6$, for each integer $n \geq 0$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the sentence:
+
+$$ n^3 - n \text{ is divisible by } 6 $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ 0^3 - 0 \text{ is divisible by } 6 $$
+
+$$ 0^3 - 0 $$
+
+$$ = 0 - 0 $$
+
+$$ = 0 $$
+
+$0$ is divisible by $6$ because $0 = 0 \cdot 6$.
+
+Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ k^3 - k \text{ is divisible by } 6 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ (k + 1)^3 - (k + 1) \text{ is divisible by } 6 $$
+
+$$ (k + 1)^3 - (k + 1) $$
+
+$$ = (k + 1)(k + 1)(k + 1) - (k + 1) $$
+
+$$ = (k^2 + 2k + 1)(k + 1) - (k + 1) $$
+
+$$ = (k^3 + k^2 + 2k^2 + 2k + k + 1) - (k + 1) $$
+
+$$ = (k^3 + 3k^2 + 3k + 1) - (k + 1) $$
+
+$$ = k^3 + 3k^2 + 3k + 1 - k - 1 $$
+
+$$ = k^3 + 3k^2 + 2k $$
+
+$$ = (k^3 - k) + 3k^2 + 3k $$
+
+$$ = (k^3 - k) + 3k(k + 1) $$
+
+By the inductive hypothesis and definition of divisibility:
+
+$$ = 6r + 3k(k + 1) $$
+
+for some integer $r$.
+
+By Theorem 4.5.2, the product of any two consecutive integers must be even.
+
+$$ = 6r + 3(2m) $$
+
+for some integer $m$.
+
+$$ = 6r + 6m $$
+
+$$ = 6(r + m) $$
+
+Now, $r + m$ is an integer by the sum of integers.
+
+Therefore $(k + 1)^3 - (k + 1)$ is divisible by $6$ by the definition of
+divisibility.
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 15. $n(n^2 + 5)$ is divisible by $6$, for each integer $n \geq 0$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the sentence:
+
+$$ n(n^2 + 5) \text{ is divisible by } 6 $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ 0(0^2 + 5) \text{ is divisible by } 6 $$
+
+$$ 0(0^2 + 5) $$
+
+$$ = 0(0 + 5) $$
+
+$$ = 0(5) $$
+
+$$ = 0 $$
+
+$0$ is divisible by $6$ as $0 = 0 \cdot 6$.
+
+Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ k(k^2 + 5) \text{ is divisible by } 6 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ (k + 1)((k + 1)^2 + 5) \text{ is divisible by } 6 $$
+
+$$ (k + 1)((k + 1)^2 + 5) $$
+
+$$ = (k + 1)((k + 1)(k + 1) + 5) $$
+
+$$ = (k + 1)(k^2 + 2k + 6) $$
+
+$$ = k^3 + k^2 + 2k^2 + 2k + 6k + 6 $$
+
+$$ = k^3 + 3k^2 + 8k + 6 $$
+
+$$ = k^3 + 3k^2 + 5k + 3k + 6 $$
+
+$$ = (k^3 + 5k) + 3k^2 + 3k + 6 $$
+
+$$ = k(k^2 + 5) + 3k^2 + 3k + 6 $$
+
+$$ = k(k^2 + 5) + 3(k^2 + k + 2) $$
+
+By the inductive hypothesis and definition of divisibility:
+
+$$ = 6r + 3(k^2 + k + 2) $$
+
+for some integer $r$.
+
+$$ = 6r + 3(k(k + 1) + 2) $$
+
+By Theorem 4.5.2 $k(k + 1)$ is always even:
+
+$$ = 6r + 3(2m + 2) $$
+
+for some integer $m$.
+
+$$ = 6r + 6m + 6 $$
+
+$$ = 6(r + m + 1) $$
+
+Now, $r + m + 1$ is an integer by the sum of integers. Thus
+$(k + 1)((k + 1)^2 + 5)$ is divisible by $6$ by the definition of divisibility.
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 16. $2^n < (n + 1)!$, for every integer $n \geq 2$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the sentence:
+
+$$ 2^n < (n + 1)! $$
+
+_Basis Step:_
+
+Prove $P(2)$. That is:
+
+$$ 2^(2) < (2 + 1)! $$
+
+$$ 4 < (3)! $$
+
+$$ 4 < (3 \cdot 2 \cdot 1) $$
+
+$$ 4 < 6 $$
+
+$4$ is less than $6$.
+
+Therefore $P(2)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$.
+
+Suppose $P(k)$. That is:
+
+$$ 2^k < (k + 1)! $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ 2^{k + 1} < ((k + 1) + 1)! $$
+
+Alternatively:
+
+$$ 2^{k + 1} < (k + 2)! $$
+
+By the inductive hypothesis and the laws of exponents:
+
+$$ = 2^{k} \cdot 2 < 2(k + 1)! $$
+
+Since $k \geq 2$, then $2 < k + 2$, and so:
+
+$$ 2(k + 1)! < (k + 2)(k + 1)! = (k + 2)! $$
+
+Combining these inequalities shows:
+
+$$ 2^{k + 1} < (k + 2)! $$
+
+As was to be shown.
+
+Q.E.D.
 
 17. $1 + 3n \leq 4^n$, for every integer $n \geq 0$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the inequality:
+
+$$ 1 + 3n \leq 4^n $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ 1 + 3(0) \leq 4^0 $$
+
+$$ = 1 + 0 \leq 1 $$
+
+$$ = 1 \leq 1 $$
+
+Since $1 = 1$, $1 \leq 1$ is a true statement.
+
+Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ 1 + 3k \leq 4^k $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ 1 + 3(k + 1) \leq 4^{k + 1} $$
+
+$$ (1 + 3k) + 3 \leq 4^k \cdot 4 $$
+
+By the inductive hypothesis:
+
+$$ (1 + 3k) + 3 \leq 4^k + 3 $$
+
+Now show:
+
+$$ 4^k + 3 \leq 4^{k + 1} $$
+
+Since:
+
+$$ 4^{k + 1} = 4^k \cdot 4 $$
+
+it is enough to show:
+
+$$ 3 \leq 3 \cdot 4^k $$
+
+which is true for all $k \geq 0$.
+
+So:
+
+$$ 1 + 3(k + 1) \leq 4^k + 3 \leq 4^{k + 1} $$
+
+$$ 1 + 3(k + 1) \leq 4^{k + 1} $$
+
+Q.E.D.
+
 18. $5^n + 9 < 6^n$, for each integer $n \geq 2$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the inequality:
+
+$$ 5^n + 9 < 6^n $$
+
+_Basis Step:_
+
+Prove $P(2)$. That is:
+
+$$ 5^2 + 9 < 6^2 $$
+
+$$ 25 + 9 < 36 $$
+
+$$ 34 < 36 $$
+
+Since $34$ is less than $36$, this inequality is true.
+
+Therefore $P(2)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$.
+
+Suppose $P(k)$. That is:
+
+$$ 5^k + 9 < 6^k $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ 5^{k + 1} + 9 < 6^{k + 1} $$
+
+If we multiply the inductive hypothesis by 5:
+
+$$ 5(5^k + 9) < 5(6^k) $$
+
+$$ 5^{k + 1} + 45 < 5(6^k) $$
+
+$$ 5^{k + 1} + 45 < 5(6^k) < 6^{k + 1} $$
+
+$$ 5^{k + 1} + 45 < 5(6^k) < 6^k \cdot 6 = 6^{k + 1} $$
+
+Note that:
+
+$$ 5^{k + 1} + 9 < 5^{k + 1} + 45 < 5(6^k) < 6^k \cdot 6 = 6^{k + 1} $$
+
+Therefore:
+
+$$ 5^{k + 1} + 9 < 6^{k + 1} $$
+
+As was to be shown.
+
+Q.E.D.
 
 19. $n^2 < 2^n$, for every integer $n \geq 5$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the inequality:
+
+$$ n^2 < 2^n $$
+
+_Basis Step:_
+
+Prove $P(5)$. That is:
+
+$$ 5^2 < 2^5 $$
+
+$$ 25 < 32 $$
+
+Since $25$ is less than $32$, this is a true statement.
+
+Therefore $P(5)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 5$.
+
+Suppose $P(k)$. That is:
+
+$$ k^2 < 2^k $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ (k + 1)^2 < 2^{k + 1} $$
+
+Now, expanding out the left-hand side:
+
+$$ (k + 1)^2 = k^2 + 2k + 1 $$
+
+Consider the inductive hypothesis:
+
+$$ k^2 < 2^k $$
+
+It follows that:
+
+$$ k^2 + 2k + 1 < 2^k + 2k + 1 $$
+
+By proposition 5.3.2, $2k + 1 < 2^k$ since $k \geq 5 \geq 3$.
+
+Hence:
+
+$$ (k + 1)^2 = k^2 + 2k + 1 < 2^k + 2k + 1 < 2^k + 2^k = 2^{k + 1} $$
+
+$$ (k + 1)^2 < 2^{k + 1} $$
+
+As was to be shown.
+
+Q.E.D.
+
 20. $2^n < (n + 2)!$, for each integer $n \geq 0$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the inequality:
+
+$$ 2^n < (n + 2)! $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ 2^0 < (0 + 2)! $$
+
+$$ 1 < (2)! $$
+
+$$ 1 < 2 $$
+
+Since $1$ is less than $2$. This is a true statement.
+
+Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ 2^k < (k + 2)! $$
+
+Prove $P(k + 1)$. That is:
+
+$$ 2^{k + 1} < ((k + 1) + 2)! $$
+
+Alternatively:
+
+$$ 2^{k + 1} < (k + 3)! $$
+
+Expanding out the left-hand side:
+
+$$ 2^{k + 1} = 2^k \cdot 2 $$
+
+Consider the inductive hypothesis:
+
+$$ 2^k < (k + 2)! $$
+
+Multiple both sides by $2$:
+
+$$ 2(2^k) < 2(k + 2)! $$
+
+$$ 2^{k + 1} < 2(k + 2)! $$
+
+Now, expanding out the right-hand side:
+
+$$ (k + 3)! = (k + 3)(k + 2)! $$
+
+Since $k \geq 0$, it follows that $k + 3 \geq 3 \geq 2$. Putting out
+inequalities together then, we get:
+
+$$ 2^{k + 1} < 2(k + 2)! < (k + 3)(k + 2)! = (k + 3)! $$
+
+And now simplified:
+
+$$ 2^{k + 1} < (k + 3)! $$
+
+As was to be shown.
+
+Q.E.D.
 
 21. $\sqrt{n} < \dfrac{1}{\sqrt{1}} + \dfrac{1}{\sqrt{2}} + \dots + \dfrac{1}{\sqrt{n}}$,
     for every integer $n \geq 2$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the inequality:
+
+$$ \sqrt{n} < \dfrac{1}{\sqrt{1}} + \dfrac{1}{\sqrt{2}} + \dots + \dfrac{1}{\sqrt{n}} $$
+
+_Basis Step:_
+
+Prove $P(2)$. That is:
+
+$$ \sqrt{2} < \dfrac{1}{\sqrt{1}} + \dfrac{1}{\sqrt{2}} + \dots + \dfrac{1}{\sqrt{2}} $$
+
+$\dots \dfrac{1}{\sqrt{2}}$ just ends at term, $\dfrac{1}{\sqrt{2}}$.
+
+$$ \sqrt{2} < \dfrac{1}{\sqrt{1}} + \dfrac{1}{\sqrt{2}} $$
+
+$$ \sqrt{2} < 1 + \dfrac{1}{\sqrt{2}} $$
+
+$$ \sqrt{2} < \frac{\sqrt{2}}{\sqrt{2}} + \dfrac{1}{\sqrt{2}} $$
+
+$$ \sqrt{2} < \dfrac{\sqrt{2} + 1}{\sqrt{2}} $$
+
+$$ (\sqrt{2})(\sqrt{2}) < \left(\dfrac{\sqrt{2} + 1}{\sqrt{2}}\right)(\sqrt{2}) $$
+
+$$ 2 < \sqrt{2} + 1 \approx 2.414213562 $$
+
+This statement is true. Therefore $P(2)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$.
+
+Suppose $P(k)$. That is:
+
+$$ \sqrt{k} < \dfrac{1}{\sqrt{1}} + \dfrac{1}{\sqrt{2}} + \dots + \dfrac{1}{\sqrt{k}} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ \sqrt{k + 1} < \dfrac{1}{\sqrt{1}} + \dfrac{1}{\sqrt{2}} + \dots + \dfrac{1}{\sqrt{k + 1}} $$
+
+From the inductive hypothesis:
+
+$$ \sqrt{k} < \dfrac{1}{\sqrt{1}} + \dfrac{1}{\sqrt{2}} + \dots + \dfrac{1}{\sqrt{k}} $$
+
+Add $\dfrac{1}{\sqrt{k + 1}}$ to both sides:
+
+$$ \sqrt{k} + \frac{1}{\sqrt{k + 1}} < \dfrac{1}{\sqrt{1}} + \dfrac{1}{\sqrt{2}} + \dots + \dfrac{1}{\sqrt{k}} + \frac{1}{\sqrt{k + 1}} $$
+
+From here, it is enough to show:
+
+$$ \sqrt{k + 1} \leq \sqrt{k} + \frac{1}{\sqrt{k + 1}} $$
+
+$$ \sqrt{k + 1} - \sqrt{k} \leq \frac{1}{\sqrt{k + 1}} $$
+
+$$ \left(\sqrt{k + 1} - \sqrt{k}\right)\left(\frac{\sqrt{k + 1} + \sqrt{k}}{\sqrt{k + 1} + \sqrt{k}}\right) \leq \frac{1}{\sqrt{k + 1}} $$
+
+$$ \frac{(k + 1) - k}{\sqrt{k + 1} + \sqrt{k}} \leq \frac{1}{\sqrt{k + 1}} $$
+
+$$ \frac{1}{\sqrt{k + 1} + \sqrt{k}} \leq \frac{1}{\sqrt{k + 1}} $$
+
+Since $\sqrt{k + 1} + \sqrt{k} > \sqrt{k + 1}$, this inequality holds.
+
+Simplified, our inequality becomes:
+
+$$ \sqrt{k + 1} < \sqrt{k} + \frac{1}{\sqrt{k + 1}} < \dfrac{1}{\sqrt{1}} + \dfrac{1}{\sqrt{2}} + \dots + \dfrac{1}{\sqrt{k + 1}} $$
+
+$$ \sqrt{k + 1} < \dfrac{1}{\sqrt{1}} + \dfrac{1}{\sqrt{2}} + \dots + \dfrac{1}{\sqrt{k + 1}} $$
+
+As was to be shown.
+
+Q.E.D.
+
 22. $1 + nx \leq (1 + x)^n$, for every real number $x > -1$ and every integer
     $n \geq 2$.
+
+**Proof (by mathematical induction):**
+
+Suppose $x$ is any real number where $x > -1$.
+
+Let $P(n)$ be the sentence:
+
+$$ 1 + nx \leq (1 + x)^n $$
+
+_Basis Step:_
+
+Prove $P(2)$. That is:
+
+$$ 1 + 2x \leq (1 + x)^2 $$
+
+$$ 1 + 2x \leq 1 + 2x + x^2 $$
+
+$$ 0 \leq x^2 $$
+
+This inequality always holds.
+
+Therefore $P(2)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$.
+
+Suppose $P(k)$. That is:
+
+$$ 1 + kx \leq (1 + x)^k $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ 1 + (k + 1)x \leq (1 + x)^{k + 1} $$
+
+Consider the inductive hypothesis:
+
+$$ 1 + kx \leq (1 + x)^k $$
+
+Multiply each side by $(1 + x)$:
+
+$$ (1 + x)(1 + kx) \leq ((1 + x)^k)(1 + x) $$
+
+$$ 1 + x + kx + kx^2 \leq (1 + x)^{k + 1} $$
+
+Now it is enough to show that the left hand side of $P(k + 1)$ is less than or
+equal to the left-hand side of $(1 + x)(P(k))$:
+
+$$ 1 + (k + 1)x \leq 1 + x + kx + kx^2 $$
+
+$$ 1 + kx + x  \leq 1 + x + kx + kx^2 $$
+
+$$ 1 + x + kx  \leq 1 + x + kx + kx^2 $$
+
+$$ 0 \leq kx^2 $$
+
+Since $k \geq 2$, this inequality will always hold.
+
+Simplified, our inequality is:
+
+$$ 1 + (k + 1)x \leq 1 + x + kx + kx^2 \leq (1 + x)^{k + 1} $$
+
+$$ 1 + (k + 1)x \leq (1 + x)^{k + 1} $$
+
+As was to be shown.
+
+Q.E.D.
 
 23.
 
 a. $n^3 > 2n + 1$, for each integer $n \geq 2$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the inequality:
+
+$$ n^3 > 2n + 1 $$
+
+_Basis Step:_
+
+Prove $P(2)$. That is:
+
+$$ (2)^3 > 2(2) + 1 $$
+
+$$ 8 > 4 + 1 $$
+
+$$ 8 > 5 $$
+
+Since $8$ is greater than $5$, this statement is true.
+
+Therefore $P(2)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$.
+
+Suppose $P(k)$. That is:
+
+$$ k^3 > 2k + 1 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ (k + 1)^3 > 2(k + 1) + 1 $$
+
+Alternatively:
+
+$$ (k + 1)^3 > 2k + 2 + 1 $$
+
+$$ (k + 1)^3 > 2k + 3 $$
+
+Consider the inductive hypothesis:
+
+$$ k^3 > 2k + 1 $$
+
+Add $2$ to both sides:
+
+$$ k^3 + 2 > 2k + 1 + 2 $$
+
+$$ k^3 + 2 > 2k + 3 $$
+
+Now it is enough to prove that the left-hand side of this inequality is less
+than the left-hand side of the $P(k + 1)$ inequality:
+
+$$ (k + 1)^3 > k^3 + 2 $$
+
+$$ (k + 1)(k + 1)(k + 1) > k^3 + 2 $$
+
+$$ (k^2 + 2k + 1)(k + 1) > k^3 + 2 $$
+
+$$ k^3 + k^2 + 2k^2 + 2k + k + 1 > k^3 + 2 $$
+
+$$ k^3 + 3k^2 + 3k + 1 > k^3 + 2 $$
+
+$$ 3k^2 + 3k > 1 $$
+
+Since $k \geq 2$, this inequality will always hold.
+
+Simplified:
+
+$$ (k + 1)^3 > k^3 + 2 > 2k + 3 $$
+
+$$ (k + 1)^3 > 2k + 3 $$
+
+As was to be shown.
+
+Q.E.D.
+
 b. $n! > n^2$, for each integer $n \geq 4$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the inequality:
+
+$$ n! > n^2 $$
+
+_Basis Step:_
+
+Prove $P(4)$. That is:
+
+$$ 4! > 4^2 $$
+
+$$ (4 \cdot 3 \cdot 2 \cdot 1) > 16 $$
+
+$$ 24 > 16 $$
+
+Since $24$ is greater than $16$, this statement is true.
+
+Therefore $P(4)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 4$.
+
+Suppose $P(k)$. That is:
+
+$$ k! > k^2 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ (k + 1)! > (k + 1)^2 $$
+
+Take the inductive hypothesis:
+
+$$ k! > k^2 $$
+
+And multiply each side by $(k + 1)$:
+
+$$ (k + 1)k! > k^2(k + 1) $$
+
+$$ (k + 1)! > k^2(k + 1) $$
+
+Now it is enough to show:
+
+$$ k^2(k + 1) > (k + 1)^2 $$
+
+$$ k^2 > k + 1 $$
+
+And this inequality holds for all $k \geq 4$.
+
+Simplified:
+
+$$ (k + 1)! > k^2(k + 1) > (k + 1)^2 $$
+
+$$ (k + 1)! > (k + 1)^2 $$
+
+As was to be shown.
+
+Q.E.D.
 
 24. A sequence $a_1, a_2, a_3, \dots$ is defined by letting $a_1 = 3$ and
     $a_k = 7a_{k - 1}$ for each integer $k \geq 2$. Show that
