@@ -4274,21 +4274,230 @@ Q.E.D.
     $a_k = 7a_{k - 1}$ for each integer $k \geq 2$. Show that
     $a_n = 3 \cdot 7^{n - 1}$ for every integer $n \geq 1$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the statement:
+
+$$ a_n = 3 \cdot 7^{n - 1} $$
+
+_Basis Step:_
+
+Prove $P(1)$. That is:
+
+$$ a_1 = 3 \cdot 7^{1 - 1} $$
+
+$$ = 3 \cdot 7^{0} $$
+
+$$ = 3 \cdot 1 $$
+
+$$ = 3 $$
+
+Since $a_1 = 3$ is defined in the problem statement, this equality is true.
+
+Therefore $P(1)$ is true.
+
+_Inductive _Step:_
+
+Let $k$ be any integer such that $k \geq 1$.
+
+Suppose $P(k)$. That is:
+
+$$ a_k = 3 \cdot 7^{k - 1} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ a_{k + 1} = 3 \cdot 7^{(k + 1) - 1} $$
+
+Alternatively:
+
+$$ a_{k + 1} = 3 \cdot 7^k $$
+
+By the definition of the given sequence:
+
+$$ a_{k + 1} = 7a_k $$
+
+By the inductive hypothesis:
+
+$$ = 7(3 \cdot 7^{k - 1}) $$
+
+By the laws of exponents:
+
+$$ = 3 \cdot 7^k $$
+
+And this is the right-hand side of the equality to be shown.
+
+Q.E.D.
+
 25. A sequence $b_0, b_1, b_2, \dots$ is defined by letting $b_0 = 5$ and
     $b_k = 4 + b_{k - 1}$ for each integer $k \geq 1$. Show that $b_n > 4n$ for
     every integer $n \geq 0$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the inequality:
+
+$$ b_n > 4n $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ b_0 > 4(0) $$
+
+$$ 5 > 4(0) $$
+
+$$ 5 > 0 $$
+
+This inequality holds. Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ b_k > 4k $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ b_{k + 1} > 4(k + 1) $$
+
+By the definition of the sequence:
+
+$$ b_{k + 1} = 4 + b_k $$
+
+By the inductive hypothesis:
+
+$$ > 4 + 4k $$
+
+$$ > 4(1 + k) $$
+
+$$ > 4(k + 1) $$
+
+Q.E.D.
 
 26. A sequence $c_0, c_1, c_2, \dots$ is defined by letting $c_0 = 3$ and
     $c_k = (c_{k - 1})^2$ for every integer $k \geq 1$. Show that $c_n = 3^{2n}$
     for each integer $n \geq 0$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equality:
+
+$$ c_n = 3^{2n} $$
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ c_0 = 3^{2(0)} $$
+
+$$ c_0 = 3^{0} $$
+
+$$ c_0 = 1 $$
+
+Stopping here. It is likely Epp has a typo, she means $c_n = 3^{2^n}$, not
+$c_n = 3^{2n}$.
+
 27. A sequence $d_1, d_2, d_3, \dots$ is defined by letting $d_1 = 2$ and
     $d_k = \dfrac{d_{k - 1}}{k}$ for each integer $k \geq 2$. Show that for
     every integer $n \geq 1$, $d_n = \dfrac{2}{n!}$.
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ d_n = \frac{2}{n!} $$
+
+_Basis Step:_
+
+Prove $P(1)$. That is:
+
+$$ d_1 = \frac{2}{1!} $$
+
+$$ d_1 = \frac{2}{1} $$
+
+$$ d_1 = 2 $$
+
+Since the problem statement states that $d_1 = 2$, this matches our equality.
+
+Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ d_k = \frac{2}{k!} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ d_{k + 1} = \frac{2}{(k + 1)!} $$
+
+By the given sequence:
+
+$$ d_{k + 1} = \frac{d_k}{k + 1} $$
+
+By the inductive hypothesis:
+
+$$ = \frac{2}{(k + 1)k!} $$
+
+$$ = \frac{2}{(k + 1)!} $$
+
+Q.E.D.
+
 28. Prove that for every integer $n \geq 1$,
 
-$$ \frac{1}{3} = \frac{1 + 3 + 5 + \dots + (2n - 1)}{(2n + 1)(2n + 3) + \dots + (2n + (2n - 1))} $$
+$$ \frac{1}{3} = \frac{1 + 3 + 5 + \dots + (2n - 1)}{(2n + 1) + (2n + 3) + \dots + (2n + (2n - 1))} $$
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equality:
+
+$$ \frac{1}{3} = \frac{1 + 3 + 5 + \dots + (2n - 1)}{(2n + 1) + (2n + 3) + \dots + (2n + (2n - 1))} $$
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ \frac{1}{3} = \frac{1 + 3 + 5 + \dots + (2(1) - 1)}{(2(1) + 1) + (2(1) + 3) + \dots + (2(1) + (2(1) - 1))} $$
+
+$$ \frac{1}{3} = \frac{1 + 3 + 5 + \dots + (2 - 1)}{(2 + 1) + (2 + 3) + \dots + (2 + (2 - 1))} $$
+
+$$ \frac{1}{3} = \frac{1 + 3 + 5 + \dots + 1}{(2 + 1) + (2 + 3) + \dots + (2 + 1)} $$
+
+$$ \frac{1}{3} = \frac{1}{(2 + 1) + (2 + 3) + \dots + 3} $$
+
+$$ \frac{1}{3} = \frac{1}{3} $$
+
+Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ \frac{1}{3} = \frac{1 + 3 + 5 + \dots + (2k - 1)}{(2k + 1) + (2k + 3) + \dots + (2k + (2k - 1))} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ \frac{1}{3} = \frac{1 + 3 + 5 + \dots + (2(k + 1) - 1)}{(2(k + 1) + 1) + (2(k + 1) + 3) + \dots + (2(k + 1) + (2(k + 1) - 1))} $$
+
+Starting from the inductive hypothesis:
+
+$$ \frac{1}{3} = \frac{1 + 3 + 5 + \dots + (2k - 1)}{(2k + 1) + (2k + 3) + \dots + (2k + (2k - 1))} $$
+
+Omitted.
 
 Exercises 29 and 30 use the definition of string and string length from page 13
 in Section 1.4. Recursive definitions for these terms are given in section 5.9.
@@ -4298,10 +4507,113 @@ in Section 1.4. Recursive definitions for these terms are given in section 5.9.
     $n \geq 1$, if a string $s$ in $L$ has a length $3n$, then $s$ contains an
     even number of _b_'s.
 
-30. A set $S$ consists of strings obtgained by juxtaposing one or more copies of
+**Proof (by mathematical induction):**
+
+Suppose a set $L$ consists of strings by juxtaposing one or more of _abb_,
+_bab_, and _bba_.
+
+Let $P(n)$ be the sentence:
+
+If a string $s$ in $L$ has length $3n$, then $s$ contains an even number of
+_b_'s.
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+If a string $s$ in $L$ has length $3(1)$, then $s$ contains an even number of
+_b_'s.
+
+Since:
+
+$$ L = \{\text{abb}, \text{bab}, \text{bba}\} $$
+
+All three string $s$ in $L$ have a length of $3$ and all of them have an even
+number of _b_'s.
+
+Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+If a string $s$ in $L$ has length $3k$, then $s$ contains an even number of
+_b_'s.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+If a string $s$ in $L$ has length $3(k + 1)$, then $s$ contains an even number
+of _b_'s.
+
+Now $3(k + 1) = 3k + 3$ and the strings in $L$ are obtained by juxtaposing
+strings already in $L$ with one of _abb_, _bab_, or _bba_. Thus, either the
+initial or the final three characters in $s$ are _abb_, _bab_, or _bba_.
+Moreoever, the other $3k$ characters in $s$ are also in $L$ by definition of
+$L$, and so, by the inductive hypothesis, the other $3k$ characters in $s$
+contain an even number, say $m$, of _b_'s. Because each of _abb_, _bab_, and
+_bba_ contains 2 _b_'s, the total number of _b_'s in $s$ is $m + 2$, which is a
+sum of even integers and hence is even.
+
+Q.E.D.
+
+30. A set $S$ consists of strings obtained by juxtaposing one or more copies of
     1110 and 0111. Use mathematical induction to prove that for every integer
     $n \geq 1$, if a string $s$ in $S$ has a length $4n$, then the number of 1's
     in $s$ is a multiple of 3.
+
+**Proof (by mathematical induction):**
+
+Suppose a set $S$ contains strings obtained by juxtaposing one or more copies of
+1110 and 0111.
+
+Let $P(n)$ be the sentence:
+
+If a string $s$ in $S$ has length $4n$, then the number of $1$'s in $s$ is a
+multiple of $3$.
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+If a string $s$ in $S$ has length $4(1)$, then the number of $1$'s in $s$ is a
+multiple of $3$.
+
+Since $S$ consists only of strings obtained by juxtaposing 1110 and 0111, then
+at a minimum, the strings in $S$ must have a length of $4$. This means that the
+only two strings in $S$ that have a length of $4$ are 1110 and 0111. The number
+of $1$'s in $s$ is a multiple of $3$ in both cases.
+
+Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+If a string $s$ in $S$ has length $4k$, then the number of $1$'s in $s$ is a
+multiple of $3$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+If a string $s$ in $S$ has length $4(k + 1)$, then the number of $1$'s in $s$ is
+a multiple of $3$.
+
+Now $4(k + 1) = 4k + 4$ and the strings in $S$ are obtained by juxtaposing
+strings already in $S$ with one of 1110 or 0111. Thus, the number of $1$'s is a
+multiple of $3$ in both cases. Moreover, the other $4k$ digits in $s$ are also
+in $S$ by the definition of $S$, and so, by inductive hypothesis, the other $4k$
+characters in $s$ contain an odd number, say $m$ of $1$'s. Because each of 1110
+and 0111 contain 3 $1$'s, the total number of $1$'s in $s$ is $m + 1$, which is
+the sum of odd integers and hence is odd.
+
+Q.E.D.
 
 31. Use mathematical induction to give an alternative proof for the statement
     proved in Example 4.9.9:
@@ -4310,12 +4622,18 @@ For any positive integer $n$, a complete graph on $n$ vertices has
 $\dfrac{n(n - 1)}{2}$ edges. _Hint:_ Let $P(n)$ be the sentence, "the number of
 edges in a complete graph on $n$ vertices is $\dfrac{n(n - 1)}{2}$."
 
+Omitted.
+
 32. Some $5 \times 5$ checkerboards with one square removed can be completely
     covered by L-shaped trominoes, whereas other $5 \times 5$ checkerboards
     cannot. Find examples of both kinds of checkerboards. Justify your answers.
 
+Omitted.
+
 33. Consider a $4 \times 6$ checkerboard. Draw a covering of the board by
     L-shaped trominoes.
+
+Omitted.
 
 34.
 
@@ -4323,18 +4641,26 @@ a. Use mathematical induction to prove that for each integer $n \geq 1$, any
 checkerboard with dimensions $2 \times 3n$ can be completely covered with
 L-shaped trominoes.
 
+Omitted.
+
 b. Let $n$ be any integer greater than or equal to $1$. Use the result of part
 (a) to prove by mathematical induction that for every integer $m$, any
 checkerboard with dimensions $2m \times 3n$ can be completely covered with
 L-shaped trominoes.
+
+Omitted.
 
 35. Let $m$ and $n$ be any integers that are greater than or equal to $1$.
 
 a. Prove that a necessary condition for an $m \times n$ checkerboard to be
 completely coverable by L-shaped trominoes is that $mn$ be divisible by $3$.
 
+Omitted.
+
 b. Prove that having $$ be divisible by $3$ is not a sufficient condition for an
 $m \times n$ checkerboard to be completely covered by L-shaped trominoes.
+
+Omitted.
 
 36. In a round-robin tournament each team plays every other team exactly once
     with ties not allowed. If the teams are labeled $T_1, T_2, \dots, T_n$, then
@@ -4357,9 +4683,13 @@ to obtain an ordering $T_1, T_2, \dots, T_k$. Consider three cases: $T'$ beats
 $T_1$, $T'$ loses to the first $m$ teams (where $1 \leq m \leq k - 1$) and beats
 the $(m + 1)$st team, and $T'$ loses to all the other teams.)
 
+Omitted.
+
 37. On the outside rim of a circular disk the integers from $1$ through $30$ are
     painted in random order. Show that no matter what this order is, there must
     be three successive integers whose sum is at least 45.
+
+Omitted.
 
 38. Suppose that $n$ _a_'s and $n$ _b_'s are distributed around the outside of a
     circle. Use mathematical induction to prove that for any integer $n \geq 1$,
@@ -4371,10 +4701,14 @@ the $(m + 1)$st team, and $T'$ loses to all the other teams.)
 
 See Page 322 for image.
 
+Omitted.
+
 39. For a polygon to be **convex** means that given any two points on or inside
     the polygon, the line joining the points lies entirely inside the polygon.
     Use mathematical induction to prove that for every integer $n \geq 3$, the
     angles of any $n$-sided convex polygon add up to $180(n - 2)$ degrees.
+
+Omitted.
 
 40.
 
@@ -4383,10 +4717,14 @@ squares, if the squares in the top right and bottom left corners are removed the
 remaining board cannot be covered with dominoes. (_Hint:_ Mathematical induction
 is not needed for this proof.)
 
+Omitted.
+
 b. Use mathematical induction to prove that for each positive integer $n$, if a
 $2n \times 2n$ checkerboard with alternating black and white squares has one
 white square and one black square removed anywhere on the board, the remaining
 squares can be covered with dominoes.
+
+Omitted.
 
 41. A group of people are positioned so that the distance between any two people
     is different from the distance between any other two people. Suppose that
@@ -4396,11 +4734,15 @@ squares can be covered with dominoes.
     inspired by the article "Odd Pie Fights" by L. Carmony, _The Mathematics
     Teacher_, **72**(1), 1979, 61-64.]
 
+Omitted.
+
 42. Show that for any integer $n$, it is possible to find a group of $n$ people
     who are all positioned so that the distance between any two people is
     different from the distance between any other two people, so that each
     person sends a message to their nearest neighbor, and so that every person
     in the group receives a message from another person in the group.
+
+Omitted.
 
 43. Define a game as follows: You begin with an urn that contains a mixture of
     white and black balls, and during the game you have access to as many
@@ -4420,12 +4762,18 @@ urn, then three balls, and then four balls. For each case keep track of the
 number of white and black balls you start with and the color of the ball at the
 end of the game.
 
+Omitted.
+
 b. Does the number of white balls seem to be predictive? Does the number of
 black balls seem to be predictive? Make a conjecture about the color of the ball
 at the end of the game given the numbers of white and black balls at the
 beginning.
 
+Omitted.
+
 c. Use mathematical induction to prove the conjecture you made in part (b).
+
+Omitted.
 
 44. Let $P(n)$ be the following sentence: Given any graph $G$ with $n$ vertices
     satisfying the condition that every vertex of $G$ has degree at most $M$,
@@ -4437,6 +4785,8 @@ In order for a proof by mathematical induction to be valid, the basis statement
 must be true for $n = a$ and the argument of the inductive step must be correct
 for every integer $k \geq a$. IN 45 and 46 find the mistakes in the "proofs" by
 mathematical induction.
+
+Omitted.
 
 45.
 
@@ -4459,6 +4809,8 @@ in $B$ equal $a_1$ and all the numbers in $C$ equal $a_1$ (since both sets have
 only $k$ numbers). But every number in $A$ is in $B$ or $C$, so all the numbers
 in $A$ equal $a_1$; hence all are equal to each other."
 
+Omitted.
+
 46.
 
 **"Theorem:"** For every integer $n \geq 1$, $3^n - 2$ is even.
@@ -4474,3 +4826,7 @@ $$ = (3^k - 2) + 3^k \cdot 2 $$
 Now $3^k - 2$ is even by inductive hypothesis and $3^k \cdot 2$ is even by
 inspection. Hence the sum of the two quantities is even (by Theorem 4.1.1). It
 follows that $3^{k + 1} - 2$ is even, which is what we needed to show."
+
+Omitted.
+
+---
