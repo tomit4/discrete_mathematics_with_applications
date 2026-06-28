@@ -5500,6 +5500,50 @@ Q.E.D.
     prove that for every integer $n \geq 1$, the number of steps required to put
     together all $n$ pieces of a jigsaw puzzle is $n - 1$.
 
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "For every integer $n \geq 1$, the number of steps
+required to put together all $n$ pieces of a jigsaw puzzle is $n - 1$."
+
+_Basis Step:_
+
+Prove $P(1)$. That is:
+
+"For every integer $1 \geq 1$, the number of steps required to put together all
+$1$ pieces of a jigsaw puzzle is $1 - 1 = 0$."
+
+Since there is only $1$ piece of the jigsaw puzzle, it follows that it takes $0$
+steps to complete the jigsaw puzzle.
+
+Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$. Suppose that $P(i)$ is true, where
+$1 \leq i \leq k$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+"For every integer $(k + 1) \geq 1$, the number of steps required to put
+together all $(k + 1)$ pieces of a jigsaw puzzle is $(k + 1) - 1 = k$."
+
+Consider assembling a jigsaw puzzle consisting of $k + 1$ pieces. The last step
+involves fitting together two blocks. Suppose one of the blocks consists of $r$
+pieces and the other consists of $s$ pieces (where $r$ and $s$ are some
+integers.) Then $r + s = k + 1$ and $1 \leq r \leq k$ and $1 \leq s \leq k$.
+
+By the inductive hypothesis, the number of steps required to assemble the blocks
+are $r - 1$ and $s - 1$, respectively.
+
+Then, the total number of steps required to assemble the puzzle is
+$(r - 1) + (s - 1) + 1 = (r + s) - 1 = (k + 1) - 1 = k$.
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 12. The sides of a circular track contain a sequence of $n$ cans of gasoline.
     For each integer $n \geq 1$, the total amount in the cans is sufficient to
     enable a certain car to make one complete circuit of the track. In addition,
@@ -5509,10 +5553,109 @@ Q.E.D.
     track by using the various amounts of gasoline in the cans that it
     encounters along the way.
 
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence:
+
+For any circular track containing $n$ gasoline cans whose total gasoline is
+enough for one complete circuit (and all gasoline fits in the tank), there
+exists an initial location at which the car can start and successfully traverse
+the entire track.
+
+_Basis Step:_
+
+Prove $P(1)$. That is:
+
+For any circular track containing $1$ gasoline cans whose total gasoline is
+enough for one complete circuit (and all gasoline fits in the tank), there
+exists an initial location at which the car can start and successfully traverse
+the entire track.
+
+It follows from the given problem statement that since there is $1$ gasoline can
+whose total gasoline is enough for one complete circuit, that the initial
+location at which the car can start and successfully traverse the entire track
+is the location of this $1$ gasoline can.
+
+Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$. Suppose $P(i)$ is true for every
+integer $i$ where $1 \leq i \leq k$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+For any circular track containing $(k + 1)$ gasoline cans whose total gasoline
+is enough for one complete circuit (and all gasoline fits in the tank), there
+exists an initial location at which the car can start and successfully traverse
+the entire track.
+
+Consider an arbitrary circular track with $k + 1$ gasoline cans. Since the total
+amount of gasoline in the cans is sufficient to enable the car to make one
+complete circuit of the track, at least one gasoline can must contain enough
+gasoline to enable the car to travel to the next can.
+
+Take such a can and transfer its gasoline to the can immediately preceding it in
+the direction of travel. This reduces the number of cans from $k + 1$ to $k$.
+
+By the inductive hypothesis, the resulting configuration with $k$ cans can be
+traversed starting from some initial location. This starting location also works
+for the $k + 1$ can configuration, since the redistribution of gasoline does not
+prevent traversal of the track.
+
+Q.E.D.
+
 13. Use strong mathematical induction to prove the existence part of the unique
     factorization of integers theorem (Theorem 4.4.5). In other words, prove
-    that every integer greater than $1$ is either a prime number of a product of
+    that every integer greater than $1$ is either a prime number or a product of
     prime numbers.
+
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "$n$ is either a prime number or a product of prime
+numbers."
+
+_Basis Step:_
+
+Prove $P(2)$. That is:
+
+"$2$ is either a prime number or a product of prime numbers."
+
+By the definition of prime numbers, $2$ is a prime number.
+
+Therefore $P(2)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k > 1$. Suppose $P(i)$, for every $i$ where
+$2 \leq i \leq k$, that is:
+
+"$i$ is either a prime number or a product of prime numbers."
+
+Prove $P(k + 1)$. That is:
+
+"$(k + 1)$ is either a prime number or a product of prime numbers."
+
+_Case where $(k + 1)$ is prime:_
+
+Since $(k + 1)$ is prime, $P(k + 1)$ is true.
+
+_Case where $(k + 1)$ is composite (not prime):_
+
+Since $(k + 1)$ is composite, this means that $k + 1$ can be written as:
+
+$$ k + 1 = a \cdot b $$
+
+where $a$ and $b$ are some integers such that $2 \leq a \leq k$ and
+$2 \leq b \leq k$.
+
+By the inductive hypothesis, this means that both $P(a)$ and $P(b)$ are true. It
+follows then that $a \cdot b$ is a product of primes and that $k + 1$ is a
+product of primes. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 14. Any product of two or more integers is a result of successive
     multiplications of two integers at a time. For instance, here are a few of
@@ -5520,29 +5663,583 @@ Q.E.D.
     $(((a_1a_2)a_3)a_4)$ or $a_1((a_2a_3)a_4)$. Use strong mathematical
     induction to prove that any product of two or more odd integers is odd.
 
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "any product of $n \geq 2$ odd integers is odd."
+
+_Basis Step:_
+
+Prove $P(2)$. That is:
+
+"any product of $2$ odd integers is odd."
+
+The following is a proof from 4.2 (exercise 20) that proves this:
+
+Suppose $n$ is any odd integer and $m$ is any odd integer.
+
+Since $n$ and $m$ are odd integers, $n = 2k + 1$ and $m = 2s + 1$ where $k$ is
+some integer and $s$ is some integer.
+
+Then:
+
+$$ n \cdot m = (2k + 1)(2s + 1) \quad \text{ by substitution} $$
+
+$$ \quad = 4ks + 2s + 2k + 1 $$
+
+$$ \quad = 2(2ks + s + k) + 1  \quad \text{ by algebra} $$
+
+Let $t = 2ks + s + k$.
+
+Then $n \cdot m = 2(2ks + s + k) + 1 = 2t + 1$ where $t$ is an integer because
+the products and sums of integers is an integer.
+
+Therefore $n \cdot m$ is odd by the definition of odd integers and $P(2)$ is
+true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$. Suppose $P(i)$ for every integer $i$
+where $2 \leq i \leq k$. That is:
+
+"any product of $i$ odd integers is odd."
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+"any product of $(k + 1)$ odd integers is odd."
+
+Consider the product of a series of odd integers up until $k + 1$ integers:
+
+$$ [a_1 \cdot a_2 \cdot a_3 \cdot \dots \cdot a_k] \cdot a_{k + 1} $$
+
+By the inductive hypothesis we know that
+$[a_1 \cdot a_2 \cdot a_3 \cdot \dots \cdot a_k]$ is odd. Thus, we can rewrite
+this as:
+
+$$ (2r + 1) \cdot a_{k + 1} $$
+
+where $r$ is some integer.
+
+Now $2r + 1$ is an integer by the sum and product of integers and $2r + 1$ is
+odd by the definition of odd. The product of $(2r + 1) \cdot a_{k + 1}$ is odd
+by the proof provided in the basis step. Thus the product of $k + 1$ odd
+integers is odd.
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 15. Define the "sum" of one integer to be that integer, and use strong
     mathematical induction to prove that for every integer $n \geq 1$, any sum
     of $n$ even integers is even.
+
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "any sum of $n$ even integers is even."
+
+_Basis Step:_
+
+Prove $P(1)$. That is:
+
+"any sum of $1$ even integers is even."
+
+Let $r$ be any even integer. Since $r$ is even, $r = 2s$ for some integer $s$.
+
+By the problem statement, the sum of one integer is that integer. Therefore the
+sum of $r$ is $r$, which is even.
+
+Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$. Suppose $P(i)$ is true for every
+integer $i$ where $1 \leq i \leq k$. That is:
+
+"any sum of $i$ even integers is even."
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+"any sum of $(k + 1)$ even integers is even."
+
+Consider a series of even integers up until $k + 1$ integers:
+
+$$ a_1, a_2, a_3, \dots, a_{k + 1} $$
+
+Now consider the sum of these even integers:
+
+$$ a_1 + a_2 + a_3 + \dots + a_{k + 1} $$
+
+This can also be written as:
+
+$$ [a_1 + a_2 + a_3 + \dots + a_k] + a_{k + 1} $$
+
+By the inductive hypothesis we know that $[a_1 + a_2 + a_3 + \dots + a_k]$ is
+even. Then we can rewrite this sum as:
+
+$$ (2q) + a_{k + 1} $$
+
+for some integer $q$.
+
+Also, since we know that $a_{k + 1}$ is even, we can further rewrite this as:
+
+$$ (2q) + (2u) $$
+
+for some integer u.
+
+Then this becomes, by algebra:
+
+$$ 2(q + u) $$
+
+Now $q + u$ is an integer by the sum of integers, and $2(q + u)$ is even by the
+definition of even. Thus, the sum of $k + 1$ integers is even.
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 16. Use strong mathematical induction to prove that for every integer
     $n \geq 2$, if $n$ is even, then any sum of $n$ odd integers is even, and if
     $n$ is odd, then any sum of $n$ odd integers is odd.
 
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "If $n$ is even, then any sum of $n$ odd integers is
+even, and if $n$ is odd, then any sum of $n$ odd integers is odd."
+
+_Basis Step:_
+
+Prove $P(2)$ and $P(3)$.
+
+For $P(2)$:
+
+"If $2$ is even, then any sum of $2$ odd integers is even, and if $2$ is odd,
+then any sum of $2$ odd integers is odd."
+
+Since $2$ is even:
+
+Let $m$ and $p$ be any $2$ odd integers. Since both $m$ and $p$ are odd,
+$m = 2q + 1$ and $p = 2r + 1$ for some integers $q$ and $r$.
+
+Their sum then is:
+
+$$ m + p = 2q + 1 + 2r + 1 $$
+
+$$ = 2q + 2r + 2 $$
+
+$$ = 2(q + r + 1) $$
+
+Now $q + r + 1$ is an integer by the sum of integers. Also, $2(q + r + 1)$ is
+even by the definition of even. Thus $P(2)$ is true.
+
+and
+
+For $P(3)$:
+
+"If $3$ is even, then any sum of $3$ odd integers is even, and if $3$ is odd,
+then any sum of $3$ odd integers is odd."
+
+Since $3$ is odd:
+
+Let $a$, $b$, and $c$ be any $3$ odd integers. Since $a$, $b$, and $c$ are odd,
+then $a = 2z + 1$, $b = 2y + 1$, and $c = 2x + 1$, for some integers $z$, $y$,
+and $x$.
+
+Their sum then is:
+
+$$ a + b + c = (2z + 1) + (2y + 1) + (2x + 1) $$
+
+$$ = 2z + 2y + 2x + 2 + 1 $$
+
+$$ = 2(z + y + x + 1) + 1 $$
+
+Now, $z + y + x + 1$ is an integer by the sum of integers, and
+$2(z + y + x + 1) + 1$ is odd by the definition of odd. Thus $P(3)$ is true.
+
+Therefore $P(2)$ and $P(3)$ are both true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$. Suppose $P(i)$ for every integer $i$
+where $2 \leq i \leq k$. That is:
+
+"If $i$ is even, then any sum of $i$ odd integers is even, and if $i$ is odd,
+then any sum of $i$ odd integers is odd."
+
+Prove $P(k + 1)$. That is:
+
+"If $(k + 1)$ is even, then any sum of $(k + 1)$ odd integers is even, and if
+$(k + 1)$ is odd, then any sum of $(k + 1)$ odd integers is odd."
+
+_Case $(k + 1)$ is odd:_
+
+Consider a series of odd integers up until $k + 1$ integers:
+
+$$ a_1, a_2, a_3, \dots, a_{k + 1} $$
+
+Their sum would be:
+
+$$ a_1 + a_2 + a_3 + \dots + a_{k + 1} $$
+
+Alternatively:
+
+$$ [a_1 + a_2 + a_3 + \dots + a_k] + a_{k + 1} $$
+
+By the definition of odd, if $k + 1$ is odd, then $k$ is even. By the inductive
+hypothesis then, we know that $[a_1 + a_2 + a_3 + \dots + a_k]$ is even. Thus,
+we can rewrite our summation as:
+
+$$ 2r + a_{k + 1} $$
+
+for some integer $r$.
+
+Since we know that $a_{k + 1}$ is odd, we can further rewrite our summation as:
+
+$$ 2r + (2s + 1) $$
+
+for some integer $s$.
+
+Then, by algebra:
+
+$$ 2(r + s) + 1 $$
+
+Now, $r + s$ is an integer by the sum of integers, and $2(r + s) + 1$ is odd by
+the definition of odd.
+
+Thus $P(k + 1)$ is true in this case.
+
+_Case $(k + 1)$ is even:_
+
+Consider a series of odd integers up until $k + 1$ integers:
+
+$$ a_1, a_2, a_3, \dots, a_{k + 1} $$
+
+Their sum would be:
+
+$$ a_1 + a_2 + a_3 + \dots + a_{k + 1} $$
+
+Alternatively:
+
+$$ [a_1 + a_2 + a_3 + \dots + a_k] + a_{k + 1} $$
+
+By the definition of even, if $k + 1$ is even, then $k$ is odd. By the inductive
+hypothesis then, we know that $[a_1 + a_2 + a_3 + \dots + a_k]$ is odd. Thus, we
+can rewrite our summation as:
+
+$$ (2r + 1) + a_{k + 1} $$
+
+for some integer $r$.
+
+Since we know that $a_{k + 1}$ is odd, we can further rewrite our summation as:
+
+$$ (2r + 1) + (2s + 1) $$
+
+for some integer $s$.
+
+Then, by algebra:
+
+$$ 2r + 2s + 2 $$
+
+$$ 2(r + s + 1) $$
+
+Now, $r + s + 1$ is an integer by the sum of integers, and $2(r + s + 1)$ is
+even by the definition of even. Thus $P(k + 1)$ is true in this case.
+
+Therefore in both cases $P(k + 1)$ is true.
+
+Q.E.D.
+
 17. Compute $4^1, 4^2, 4^3, 4^4, 4^5, 4^6, 4^7,$ and $4^8$. Make a conjecture
     about the units digit of $4^n$ where $n$ is a positive integer. Use strong
     mathematical induction to prove your conjecture.
+
+$$
+4^1 = 4 \\
+4^2 = 16 \\
+4^3 = 64 \\
+4^4 = 256 \\
+4^5 = 1024 \\
+4^6 = 4096 \\
+4^7 = 16384 \\
+4^8 = 65536 \\
+$$
+
+**Conjecture:**
+
+For some integer $n \geq 1$, if $n$ is odd, then the units digit of $4^n$ is
+$4$, if $n$ is even, then the units digit of $4^n$ is $6$.
+
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence: "the units digit of $4^n$ is $4$ if $n$ is odd and
+$6$ if $n$ is even."
+
+_Basis Step:_
+
+Prove $P(1)$ and $P(2)$.
+
+For $P(1)$, since $1$ is odd, then the units of digit of $4^1$ should be $4$.
+Evaluating $4^1$:
+
+$$ 4^1 = 4 $$
+
+The units digit of $4^1$ is $4$, so $P(1)$ is true.
+
+For $P(2)$, since $2$, is even, then the units digit of $4^2$ should be $6$.
+Evaluating $4^2$:
+
+$$ 4^2 = 16 $$
+
+The units digit of $4^2$ is $6$, so $P(2)$ is true.
+
+Therefore both $P(1)$ and $P(2)$ are true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$. Suppose $P(i)$ for every integer $i$
+where $1 \leq i \leq k$. That is:
+
+"the units digit of $4^i$ is $4$ if $i$ is odd and $6$ if $i$ is even."
+
+Prove $P(k + 1)$. That is:
+
+"the units digit of $4^{k + 1}$ is $4$ if $(k + 1)$ is odd and $6$ if $(k + 1)$
+is even."
+
+_Case $(k + 1)$ is even:_
+
+Consider the following:
+
+$$ 4^{k + 1} = 4 \cdot 4^k $$
+
+By the definition of even, if $k + 1$ is even, then $k$ is odd. Thus $4^k$ is
+$4$ to the power of an odd integer. By the inductive hypothesis, we know that
+this means that:
+
+$$ 4^{k + 1} = 4 \cdot (10m + 4) $$
+
+for some integer $m$.
+
+By algebra:
+
+$$ = 40m + 16 $$
+
+$$ = 10(4m + 1) + 6 $$
+
+Where $4m + 1$ is an integer by the sum and product of integers. Thus the units
+digit of $4^{k + 1}$ is $6$.
+
+Therefore $P(k + 1)$ is true in this case.
+
+_Case $(k + 1)$ is odd:_
+
+Consider the following:
+
+$$ 4^{k + 1} = 4 \cdot 4^k $$
+
+By the definition of odd, if $k + 1$ is odd, then $k$ is even. Thus $4^k$ is $4$
+to the power of an even integer. By the inductive hypothesis, we know that this
+means that:
+
+$$ 4^{k + 1} = 4 \cdot (10m + 6) $$
+
+for some integer $m$.
+
+By algebra:
+
+$$ = 40m + 24 $$
+
+$$ = 10(4m + 2) + 4 $$
+
+Where $4m + 2$ is an integer by the sum and product of integers. Thus the units
+digit of $4^{k + 1}$ is $4$.
+
+Therefore $P(k + 1)$ is true in this case.
+
+Therefore, in both cases $P(k + 1)$ is true.
+
+Q.E.D.
 
 18. Compute $9^0, 9^1, 9^2, 9^3, 9^4,$ and $9^5$. Make a conjecture about the
     units digit of $9^n$ where $n$ is a positive integer. Use strong
     mathematical induction to prove your conjecture.
 
+$$
+9^0 = 1 \\
+9^1 = 9 \\
+9^2 = 81 \\
+9^3 = 729 \\
+9^4 = 6561 \\
+9^5 = 59049 \\
+$$
+
+**Conjecture:**
+
+For any integer $n \geq 0$, the units digit of $9^n$ is $1$ if $n$ is even, and
+$9$ if $n$ is odd.
+
+**Proof (by strong induction):**
+
+Let $P(n)$ be the sentence: "the units digit of $9^n$ is $1$ if $n$ is even, and
+$9$ if $n$ is odd."
+
+_Basis Step:_
+
+Prove $P(0)$ and $P(1)$.
+
+For $P(0)$:
+
+Since $0$ is even, the units digit of $9^0$ is claimed to be $1$. Evaluate
+$9^0$:
+
+$$ 9^0 = 1 $$
+
+Thus $P(0)$ is true.
+
+For $P(1)$:
+
+Since $1$ is odd, the units digit of $9^1$ is claimed to be $9$. Evaluate $9^1$;
+
+$$ 9^1 = 9 $$
+
+Thus $P(1)$ is true.
+
+Therefore both $P(0)$ and $P(1)$ are true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 0$. Suppose $P(i)$ for every integer $i$
+where $0 \leq i \leq k$. That is:
+
+"the units digit of $9^i$ is $1$ if $i$ is even, and $9$ if $i$ is odd."
+
+Prove $P(k + 1)$. That is:
+
+"the units digit of $9^{k + 1}$ is $1$ if $(k + 1)$ is even, and $9$ if
+$(k + 1)$ is odd."
+
+_Case where $(k + 1)$ is even:_
+
+Consider:
+
+$$ 9^{k + 1} = 9 \cdot 9^k $$
+
+By the definition of even, if $k + 1$ is even, then $k$ is odd.
+
+By the inductive hypothesis, we know that the units digit of $9^k$ is $9$ if $k$
+is odd. We can then rewrite $9^{k + 1}$ as:
+
+$$ 9^{k + 1} = 9 \cdot (10m + 9) $$
+
+for some integer $m$.
+
+Then, by algebra:
+
+$$ 9^{k + 1} = 90m + 81 $$
+
+$$ = 10(9m + 8) + 1 $$
+
+Where $9m + 8$ is an integer by the sum and product of integers. Thus the units
+digit of $9^{k + 1}$ is $1$.
+
+Therefore $P(k + 1)$ is true in this case.
+
+_Case where $(k + 1)$ is odd:_
+
+Consider:
+
+$$ 9^{k + 1} = 9 \cdot 9^k $$
+
+By the definition of odd, if $k + 1$ is odd, then $k$ is even.
+
+By the inductive hypothesis, we know that the units digit of $9^k$ is $1$ if $k$
+is even. We can then rewrite $9^{k + 1}$ as:
+
+$$ 9^{k + 1} = 9 \cdot (10m + 1) $$
+
+for some integer $m$.
+
+Then, by algebra:
+
+$$ 9^{k + 1} = 90m + 9 $$
+
+$$ = 10(9m) + 9 $$
+
+Where $9m$ is an integer by the product of integers. Thus the units digit of
+$9^{k + 1}$ is $9$.
+
+Therefore $P(k + 1)$ is true in this case.
+
+Therefore $P(k + 1)$ is true in all cases.
+
+Q.E.D.
+
 19. Suppose that $a_1, a_2, a_3, \dots$ is a sequence defined as follows:
 
-$a_1 = 1$ $a_k = 2 \cdot a_{\frac{k}{2}}$
+$a_1 = 1$ $a_k = 2 \cdot a_{\lfloor \frac{k}{2} \rfloor}$
 
 for every integer $k \geq 2$.
 
 Prove that $a_n \leq n$ for each integer $n \geq 1$.
+
+**Proof (by strong mathematical induction):**
+
+Let $a_1, a_2, a_3 \dots$ be a sequence that satisfies the recurrence relation
+$a_k = 2 \cdot a_{\lfloor \frac{k}{2} \rfloor}$ for every integer $k \geq 2$,
+with the initial condition $a_1 = 1$.
+
+Let $P(n)$ be the inequality $a_n \leq n$.
+
+_Basis Step:_
+
+Prove $P(1)$. By the given sequence, we know that $a_1 = 1$. Then:
+
+$$ 1 \leq 1 $$
+
+This is a true statement, therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$. Suppose $P(i)$ for every integer $i$
+where $1 \leq i \leq k$. That is:
+
+$$ a_k \leq k $$
+
+Prove $P(k + 1)$. That is:
+
+$$ a_{k + 1} \leq (k + 1) $$
+
+By the given sequence, we know that:
+
+$$ a_{k + 1} = 2 \cdot a_{\lfloor \frac{k + 1}{2} \rfloor} $$
+
+$$ \leq 2 \cdot \lfloor \frac{k + 1}{2} \rfloor $$
+
+By the inductive hypothesis:
+
+$$
+\leq
+\begin{cases}
+2 \cdot \left(\frac{k + 1}{2}\right) & \text{if } k \text{ is odd} \\
+2 \cdot \left(\frac{k}{2}\right) & \text{if } k \text{ is even}
+\end{cases}
+$$
+
+$$
+\leq
+\begin{cases}
+k + 1 & \text{if } k \text{ is odd} \\
+k & \text{if } k \text{ is even}
+\end{cases}
+$$
+
+$$ \leq k + 1 $$
+
+In both cases $a_{k + 1} \leq (k + 1)$. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 20. Suppose that $b_1, b_2, b_3, \dots$ is a sequence defined as follows:
 
@@ -5552,13 +6249,141 @@ for every integer $k \geq 3$.
 
 Prove that $b_n$ is divisible by $3$ for each integer $n \geq 1$.
 
+**Proof (by strong mathematical induction):**
+
+Let the sequence, $b_1, b_2, b_3, \dots$ be the sequence that satisfies the
+recurrence relation $b_k = 5 \cdot b_{\lfloor \frac{k}{2} \rfloor} + 6$ for
+every integer $k \geq 3$, with the initial conditions $b_1 = 0$ and $b_2 = 3$.
+
+Let $P(n)$ be the sentence "$b_n$ is divisible by $3$" where $n \geq 1$.
+
+_Basis Step:_
+
+Prove $P(1)$ and $P(2)$.
+
+For $P(1)$:
+
+By the given sequence $b_1 = 0$, and $0$ is divisible by $3$ since
+$0 = 0 \cdot 3$.
+
+For $P(2)$:
+
+By the given sequence $b_2 = 3$, and $3$ is divisible by $3$ since
+$3 = 1 \cdot 3$.
+
+Therefore both $P(1)$ and $P(2)$ are true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$. Suppose $P(i)$ for every integer $i$
+such that $1 \leq i \leq k$. That is:
+
+"$b_i$ is divisible by $3$"
+
+Prove $P(k + 1)$. That is:
+
+"$b_{k + 1}$ is divisible by $3$"
+
+By the given sequence, we know that:
+
+$$ b_{k + 1} = 5 \cdot b_{\lfloor \frac{k + 1}{2} \rfloor} + 6 $$
+
+Since $1 \leq \lfloor \dfrac{k + 1}{2} \rfloor \leq k$, then, by the inductive
+hypothesis, $b_{\lfloor \frac{k + 1}{2} \rfloor}$ is divisible by $3$.
+
+By the definition of divisibility, we can then rewrite $b_{k + 1}$ as:
+
+$$ b_{k + 1} = 5 \cdot 3m + 6 $$
+
+for some integer $m$.
+
+Then, by algebra:
+
+$$ = 15m + 6 $$
+
+$$ = 3(5m + 2) $$
+
+Now, $5m + 2$ is an integer by the sum and product of integers. Thus
+$3 \mid b_{k + 1}$.
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 21. Suppose that $c_1, c_2, c_3, \dots$ is a sequence defined as follows:
 
-$$ c_0 = 1, c_1 = 1, c_k = c_{\frac{k}{2}} + c_{\frac{k}{2}} $$
+$$ c_0 = 1, c_1 = 1, c_k = c_{\lfloor \frac{k}{2} \rfloor} + c_{\lfloor \frac{k}{2} \rfloor} $$
 
 for every integer $k \geq 2$.
 
 Prove that $c_n = n$ for each integer $n \geq 1$.
+
+**Proof (by strong mathematical induction):**
+
+Let the sequence, $c_0, c_1, c_2, \dots$ be the sequence that satisfies the
+recurrence relation
+$c_k = c_{\lfloor \frac{k}{2} \rfloor} + c_{\lfloor \frac{k}{2} \rfloor}$ for
+every integer $k \geq 2$, with the initial conditions $c_0 = 1$ and $c_1 = 1$.
+
+Let $P(n)$ be the equality $c_n = n$ for each integer $n \geq 1$.
+
+_Basis Step:_
+
+Prove $P(1)$ and $P(2)$.
+
+For $P(1)$:
+
+Based on the given sequence, we know that $c_1 = 1$. Thus $1 = 1$ is a true
+statement.
+
+For $P(2)$:
+
+Based on the given recurrence relation:
+
+$$ c_2 = c_{\lfloor \frac{2}{2} \rfloor} + c_{\lfloor \frac{2}{2} \rfloor} $$
+
+$$ c_2 = c_1 + c_1 $$
+
+Based on the given sequence, we know that $c_1 = 1$. By substitution:
+
+$$ c_2 = 1 + 1 $$
+
+$$ c_2 = 2 $$
+
+$2 = 2$ is a true statement.
+
+Therefore $P(1)$ and $P(2)$ are both true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 1$. Suppose $P(i)$ for every integer $i$
+such that $1 \leq i \leq k$. That is:
+
+$$ c_i = i $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ c_{k + 1} = k + 1 $$
+
+By the given sequence, we know that:
+
+$$ c_{k + 1} = c_{\lfloor \frac{k + 1}{2} \rfloor} + c_{\lfloor \frac{k + 1}{2} \rfloor} $$
+
+Since we know that $1 \leq \lfloor \dfrac{k + 1}{2} \rfloor \leq k$, by the
+inductive hypothesis, we then know that
+$c_{\lfloor \frac{k + 1}{2} \rfloor} = \dfrac{k + 1}{2}$. By substitution:
+
+$$ c_{k + 1} = \frac{k + 1}{2} + \frac{k + 1}{2} $$
+
+$$ = 2\left(\frac{k + 1}{2}\right) $$
+
+$$ = k + 1 $$
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 22. One version of the game NIM starts with two piles of objects such as coins,
     stones, or matchsticks. In each turn a player is required to remove from one
@@ -5567,6 +6392,8 @@ Prove that $c_n = n$ for each integer $n \geq 1$.
     make a move. Use strong mathematical induction to show that if both piles
     contain the same number of objects at the start of the game, the player who
     goes second can always win.
+
+Omitted.
 
 23. Define a game $G$ as follows: Begin with a pile of $n$ stones and $0$
     points. In the first move split the pile into two possibly unequal
@@ -5594,9 +6421,13 @@ your new score. Continue splitting piles and computing your score until no pile
 has more than one stone. Show your final score along with a record of the
 numbers of stones in the piles you created with your moves.
 
+Omitted.
+
 b. Play $G$ again starting with $10$ stones, but use a different initial move
 from the one in part (a). Show your final score along with a record of the
 numbers of stones in the piles you created with your moves.
+
+Omitted.
 
 c. Show that you can use strong mathematical induction to prove that for every
 integer $n \geq 1$, given the set-up of game $G$, no matter how you split the
@@ -5605,6 +6436,8 @@ step may look a little strange because a pile consisting of one stone cannot be
 split into any sub-piles. Another way to say this is that it can only be split
 into zero piles, and that gives an answer that agrees with the general formula
 for the final score.
+
+Omitted.
 
 24. Imagine a situation in which eight people, numbered consecutively 1-8, are
     arranged in a circle. Starting from person #1, every second person in the
@@ -5621,17 +6454,23 @@ consecutively 1-16, list the numbers of the people who are eliminated in each
 round if every second person is eliminated and the elimination process continues
 until only one person remains. Assume that the starting point is person #1.
 
+Omitted.
+
 b. Use ordinary mathematical induction to prove that for every integer
 $n \geq 1$, given any set of $2^n$ people arranged in a circle and numbered
 consecutively $1$ through $2^n$, if one starts from person #1 and goes
 repeatedly around the circle successively eliminating every second person,
 eventually only person #1 will remain.
 
+Omitted.
+
 c. Use the result of part (b) to prove that for any nonnegative integers $n$ and
 $m$ with $2^n \leq 2^n + m < 2^{n + 1}$, if $r = 2^n + m$, then given any set of
 $r$ people arranged in a circle and numbered consecutively $1$ through $r$, if
 one starts from person #1 and goes repeatedly around the circle successively
 eliminating every second person, eventually only person #$(2m + 1)$ will remain.
+
+Omitted.
 
 25. Find the mistake in the following "proof" that purports to show that every
     nonnegative integer power of every nonzero real number is $1$.
@@ -5672,13 +6511,19 @@ Thus $r^{k + 1} = 1$ _[as was to be shown]._
 _[Since we have proved both the basis and the inductive step of the strong
 mathematical induction, we conclude that the given statement is true.]"_
 
+Omitted.
+
 26. Use the well-ordering principle for the integers to prove Theorem 4.4.4:
     Every integer greater than $1$ is divisible by a prime number.
+
+Omitted.
 
 27. Use the well-ordering principle for the integers to prove the existence part
     of the unique factorization of integers theorem. In other words, prove that
     every integer greater than $1$ is either prime or a product of prime
     numbers.
+
+Omitted.
 
 28.
 
@@ -5686,28 +6531,44 @@ a. The Archimedean property for the rational numbers states that for every
 rational number $r$, there is an integer $n$ such that $n > r$. Prove this
 property.
 
+Omitted.
+
 b. Prove that given any rational number $r$, the number $-r$ is also rational.
+
+Omitted.
 
 c. Use the results of parts (a) and (b) to prove that given any rational number
 $r$, there is an integer $m$ such that $m < r$.
+
+Omitted.
 
 29. Use the results of exercise 28 and the well-ordering principle for the
     integers to show that given any rational number $r$, there is an integer $m$
     such that $m \leq r < m + 1$.
 
+Omitted.
+
 30. Use the well-ordering principle to prove that given any integer $n \geq 1$,
     there exists an odd integer $m$ and a nonnegative integer $k$ such that
     $n = 2^k \cdot m$.
 
+Omitted.
+
 31. Give examples to illustrate the proof of Theorem 5.4.1.
+
+Omitted.
 
 32. Suppose $P(n)$ is a property such that
 
     1. $P(0)$, $P(1)$, $P(2)$ are all true,
 
+Omitted.
+
     2. for each integer $k \geq 0$, if $P(k)$ is true, then $P(3k)$ is true.
        Must it follow that $P(n)$ is true for every integer $n \geq 0$? If yes,
        explain why; if no, give a counterexample.
+
+Omitted.
 
 33. Prove that if a statement can be proved by strong mathematical induction,
     then it can be proved by ordinary mathematical induction. To do this, let
@@ -5716,8 +6577,12 @@ $r$, there is an integer $m$ such that $m < r$.
 
     1. $P(a), P(a + 1), P(a + 2) \dots, P(b)$.
 
+Omitted.
+
     2. For any integer $k \geq b$, if $P(i)$ is true for each integer $i$ from
        $a$ through $k$, then $P(k + 1)$ is true.
+
+Omitted.
 
 The principle of strong mathematical induction would allow us to conclude
 immediately that $P(n)$ is true for every integer $n \geq a$. Can we reach the
@@ -5731,7 +6596,11 @@ integer $n \geq b$. That is, prove:
 
     1. $Q(b)$ is true.
 
+Omitted.
+
     2. For each integer $k \geq b$, if $Q(k)$ is true then $Q(k + 1)$ is true.
+
+Omitted.
 
 34. It is a fact that every integer $n \geq 1$ can be written in the form
 
@@ -5740,13 +6609,21 @@ $$ c_r \cdot 3^r + c_{r - 1} \cdot 3^{r - 1} + \dots + c_2 \cdot 3^2 + c_1 \cdot
 where $c_r = 1$ or $2$ and $c_i = 0, 1,$ or $2$ for each integer
 $i = 0, 1, 2, \dots, r - 1$. Sketch a proof of this fact.
 
+Omitted.
+
 35. Use mathematical induction to prove the existence part of the
     quotient-remainder theorem. In other words, use mathematical induction to
     prove that given any integer $n$ and any positive integer $d$, there exists
     integers $q$ and $r$ such that $n = dq + r$ and $0 \leq r < d$.
 
+Omitted.
+
 36. Prove that if a statement can be proved using ordinary mathematical
     induction, then it can be proved by the well-ordering principle.
 
+Omitted.
+
 37. Use the principle of ordinary mathematical induction to prove the
     well-ordering principle for the integers.
+
+Omitted.
