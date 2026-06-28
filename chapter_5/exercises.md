@@ -6627,3 +6627,156 @@ Omitted.
     well-ordering principle for the integers.
 
 Omitted.
+
+---
+
+**Exercise Set 5.5**
+
+Page 346
+
+Exercises 1-5 contain a while loop and a predicate. In each case show that if
+the predicate is true before entry to the loop, then it is also true after exit
+from the loop.
+
+1.
+
+loop:
+
+$\text{\textbf{while}} (m \geq 0 \text{ and } m \leq 100)\\ \ \ \ \ m := m + 1\\ \ \ \ \ n := n - 1\\ \text{\textbf{end while}}$
+
+predicate: $m + n = 100$
+
+2.
+
+loop:
+
+$\text{\textbf{while}} (m \geq 0 \text{ and } m \leq 100)\\ \ \ \ \ m := m + 4\\ \ \ \ \ n := n - 2\\ \text{\textbf{end while}}$
+
+predicate: $m + n \text{ is odd}$
+
+3.
+
+loop:
+
+$\text{\textbf{while}} (m \geq 0 \text{ and } m \leq 100)\\ \ \ \ \ m := 3 \cdot m\\ \ \ \ \ n := 5 \cdot n\\ \text{\textbf{end while}}$
+
+predicate: $m^3 > n^2$
+
+4.
+
+loop:
+
+$\text{\textbf{while}} (n \geq 0 \text{ and } n \leq 100)\\ \ \ \ \ n := n + 1\\ \text{\textbf{end while}}$
+
+predicate: $2^n < (n + 2)!$
+
+5.
+
+loop:
+
+$\text{\textbf{while}} (n \geq 3 \text{ and } n \leq 100)\\ \ \ \ \ n := n + 1\\ \text{\textbf{end while}}$
+
+predicate: $2n + 1 \leq 2^n$
+
+Exercises 6-9 each contain a while loop annotated with a pre-and a
+post-condition and also a loop invariant. In each case, use the loop invariant
+theorem to prove the correctness of the loop with respect to the pre-and
+post-conditions.
+
+6. _[Pre-condition: $m$ is a nonnegative integer, $x$ is a real number, $i = 0$,
+   and $\text{exp} = 1$.]_
+
+$\text{\textbf{while}} (i \neq m)\\ \ \ \ \ 1. \text{exp} := \text{exp} \cdot x\\ \ \ \ \ 2. i := i + 1\\ \text{\textbf{end while}}$
+
+_[Post-condition: $\text{exp} = x^m$]_
+
+loop invariant: $I(n)$ is "$\text{exp} = x^n$ and $i = n$."
+
+7. _[Pre-condition: $\text{largest} = A[1]$ and $i = 1$]_
+
+$\text{\textbf{while}} (i \neq m)\\ \ \ \ \ 1. i := i + 1\\ \ \ \ \ 2. \text{\textbf{if}} A[i] > \text{largest \textbf{then } \text{largest}} := A[i]\\ \text{\textbf{end while}}$
+
+_[Post-condition:
+$\text{largest} = \text{maximum value of } A[1], A[2], \dots, A[m]$]_
+
+loop invariant: $I(n)$ is
+"$\text{largest} = \text{maximum value of } A[1], A[2], \dots, A[n + 1]$ and
+$i = n + 1$."
+
+8. _[Pre-condition: $\text{sum} = A[1]$ and $i = 1$]_
+
+$\text{\textbf{while}} (i \neq m)\\ \ \ \ \ 1. i := i + 1\\ \ \ \ \ 2. \text{sum} := \text{sum} + A[i]\\ \text{\textbf{end while}}$
+
+_[Post condition: $\text{sum} = A[1] + A[2] + \dots + A[m]$]_
+
+loop invariant: $I(n)$ is "$i = n + 1$ and
+$\text{sum} = A[1] + A[2] + \dots + A[n + 1]$."
+
+9. _[Pre-condition: $a = A$ and $A$ is a positive integer.]_
+
+$\text{\textbf{while}} (a > 0)\\ \ \ \ \ a := a - 2\\ \text{\textbf{end while}}$
+
+_[Post-condition: $a = 0$ if $A$ is even and $a = -1$ if $A$ is odd.]_
+
+loop invariant: $I(n)$ is "Both $a$ and $A$ are even integers or both are odd
+integers and, in either case, $a \geq -1$."
+
+10. Prove correctness of the **while** loop of Algorithm 4.10.3 (in exercise 27
+    of Exercise Set 4.10) with respect to the following pre- and
+    post-conditions:
+
+_Pre-condition:_ $A$ and $B$ are positive integers, $a = A$, and $b = B$.
+
+_Post-condition:_ One of $a$ or $b$ is zero and the other is nonzero. Whichever
+is nonzero equals $\text{gcd}(A, B)$.
+
+Use the loop invariant
+
+$I(n)$
+
+"(1) $a$ and $b$ are nonnegative integers with
+$\text{gcd}(a, b) = \text{gcd}(A, B)$,
+
+(2) at most one of $a$ and $b$ equals $0$,
+
+(3) $0 \leq a + b \leq A + B - n$."
+
+11. The following **while** loop implements a way to multiply two numbers that
+    was developed by the ancient Egyptians.
+
+_[Pre-condition: $A$ and $B$ are positive integers, $x = A$, $y = B$, and
+$\text{product} = 0$.]_
+
+$\text{\textbf{while}} (y \neq 0)\\ \ \ \ \ r := y \mod 2\\ \ \ \ \ \text{\textbf{if }} r = 0\\ \ \ \ \ \ \ \ \ \text{\textbf{then do }}\\ \ \ \ \ \ \ \ \ \ \ \ \ x := 2 \cdot x\\ \ \ \ \ \ \ \ \ \ \ \ \ y := y \text{ div } 2\\ \ \ \ \ \ \ \ \ \text{\textbf{end do}}\\ \ \ \ \ \text{\textbf{if }} r = 1\\ \ \ \ \ \ \ \ \ \text{\textbf{then do }}\\ \ \ \ \ \ \ \ \ \ \ \ \ \text{product} := \text{product } + x\\ \ \ \ \ \ \ \ \ \ \ \ \ y := y - 1\\ \ \ \ \ \ \ \ \ \text{\textbf{end do}}\\ \text{\textbf{end while}}$
+
+_[Post-condition: $\text{product } = A \cdot B$]_
+
+a. Make a trace table to show that the algorithm gives the correct answer for
+multiplying $A = 13 \text{ times } B = 18$.
+
+b. Prove the correctness of this loop with respect to its pre-and
+post-conditions by using the loop invariant
+
+$I(n)$: "$xy + \text{ product} = A \cdot B$"
+
+12. The following sentence could be added to the loop invariant for the
+    Euclidean algorithm:
+
+There exist integers $u$, $v$, $s$, and $t$ such that $a = uA + vB$ and
+$b = sA + tB$.
+
+a. Show that this sentence is a loop invariant for
+
+$\text{\textbf{while}} (b \neq 0)\\ \ \ \ \ r := a \mod b\\ \ \ \ \ a := b\\ \ \ \ \ b := r\\ \text{\textbf{end while}}$
+
+b. Show that if initially $a = A$ and $b = B$, then sentence (5.5.12) is true
+before the first iteration of the loop.
+
+c. Explain how the correctness proof for the Euclidean algorithm together with
+the results of (a) and (b) above allow you to conclude that given any integers
+$A$ and $B$ with $A > B \geq 0$, there exist integers $u$ and $v$ so that
+$\text{gcd}(A, B) = uA + vB$.
+
+d. By actually calculating $u$, $v$, $s$, and $t$ at each stage of execution of
+the Euclidean algorithm, find integers $u$ and $v$ so that
+$\text{gcd}(330, 156) = 330u + 156v$.

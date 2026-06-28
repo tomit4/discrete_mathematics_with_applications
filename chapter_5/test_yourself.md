@@ -96,3 +96,34 @@ $a$; $k$; $P(k + 1)$
    than or equal to every _____, then _____.
 
 one integer; integer in $S$; $S$ contains a least element.
+
+---
+
+**Test Yourself**
+
+Page 346
+
+1. A pre-condition for an algorithm is _____ and a post-condition for an
+   algorithm is _____.
+
+2. A loop is defined as correct with respect to its pre- and post-conditions if,
+   and only if, whenever the algorithm variables satisfy the pre-condition for
+   the loop and the loop terminates after a finite number of steps, then _____.
+
+3. For each iteration of a loop, if a loop invariant is true before iteration of
+   the loop, then _____.
+
+4. Given a **while** loop with guard $G$ and a predicate $I(n)$ if the following
+   four properties are true, then the loop is correct with respect to its pre-
+   and post-conditions:
+
+(a) The pre-condition for the loop implies that _____ before the first iteration
+of the loop.
+
+(b) For every integer $k \geq 0$, if the guard $G$ and the predicate $I(k)$ are
+both true before an iteration of the loop, then _____.
+
+\(c\) After a finite number of iterations of the loop, _____.
+
+(d) If $N$ is the least number of iterations after which $G$ is false and $I(N)$
+is true, then the values of the algorithm variables will be as specified _____.
