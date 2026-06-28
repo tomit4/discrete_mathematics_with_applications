@@ -4843,6 +4843,47 @@ for each integer $k \geq 3$.
 
 Prove that $a_n$ is odd for every integer $n \geq 1$.
 
+**Proof (by strong mathematical induction):**
+
+Let the property $P(n)$ be the sentence "$a_n$ is odd."rim
+
+_Basis Step:_
+
+Prove $P(1)$ and $P(2)$ are true. That is:
+
+$$ a_1 \text{ is odd} $$
+
+and
+
+$$ a_2 \text{ is odd} $$
+
+Observe from the given definition of the sequence that $a_1 = 1$, which means
+that $P(1)$ is true since $1$ is odd. Also, observe that $a_2 = 3$, which means
+that $P(2)$ is true since $3$ is odd.
+
+_Inductive Step:_
+
+Let $k$ be any integer with $k \geq 2$. Suppose $a_i$ is odd for each integer
+$i$ with $1 \leq i \leq k$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$ is true.
+
+By the definition of the sequence, we know that
+
+$$ a_{k + 1} = a_{k - 1} + 2a_k $$
+
+By the inductive hypothesis, $a_{k - 1}$ is odd.
+
+Also, every term in the sequence is an integer by the sum of products of
+integers, and so $2a_k$ is even by the definition of even. It follows that
+$a_{k + 1}$ is the sum of an odd integer and an even integer. By Theorem 4.1.2,
+the sum of an odd and even integer is odd. Therefore $a_{k + 1}$ is odd, and
+$P(k + 1)$ is true.
+
+Q.E.D.
+
 2. Suppose $b_1, b_2, b_3, \dots$ is a sequence defined as follows:
 
 $$ b_1 = 4, b_2 = 12, b_k = b_{k - 2} + b_{k - 1} $$
@@ -4850,6 +4891,54 @@ $$ b_1 = 4, b_2 = 12, b_k = b_{k - 2} + b_{k - 1} $$
 for each integer $k \geq 3$.
 
 Prove that $b_n$ is divisible by $4$ for every integer $n \geq 1$.
+
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "$b_n$ is divisible by $4$."
+
+_Basis Step:_
+
+Prove $P(1)$ and $P(2)$. That is:
+
+$$ b_1 \text{ is divisible by } 4 $$
+
+and
+
+$$ b_2 \text{ is divisible by } 4 $$
+
+By the given sequence, we know that $b_1 = 4$, which is divisible by $4$ since
+$4 = 4 \cdot 1$. Also $b_2 = 12$, which is divisible by $4$ since
+$12 = 4 \cdot 3$. Therefore $P(1)$ and $P(2)$ are true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$. Suppose that $b_i$ is divisible by $4$
+for each integer $1 \leq i \leq k$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ b_{k + 1} \text{ is divisible by } 4 $$
+
+By the definition of the sequence, we know that
+
+$$ b_{k + 1} = b_{k - 1} + b_k $$
+
+By the inductive hypothesis, we know that $b_{k - 1}$ and $b_k$ are both
+divisible by $4$. By the definition of divisibility, $b_{k + 1}$ can be
+represented as follows:
+
+$$ b_{k + 1} = 4r + 4s $$
+
+where $r$ and $s$ are some integers. By algebra then:
+
+$$ b_{k + 1} = 4(r + s) $$
+
+Now, $r + s$ is an integer by the sum of integers. By the definition of
+divisibility, $b_{k + 1}$ is divisible by $4$. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 3. Suppose that $c_0, c_1, c_2, \dots$ is a sequence defined as follows:
 
@@ -4859,6 +4948,62 @@ for every integer $k \geq 3$.
 
 Prove that $c_n$ is even for each integer $n \geq 0$.
 
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "$c_n$ is even."
+
+_Basis Step:_
+
+Prove $P(0)$, $P(1)$, and $P(2)$. That is:
+
+$$ c_0 \text{ is even} $$
+
+and
+
+$$ c_1 \text{ is even} $$
+
+and
+
+$$ c_2 \text{ is even} $$
+
+By the given sequence $c_0 = 2$, and $2$ is even by the definition of even.
+Also, $c_1 = 2$, and $2$ is even by the definition of even. Also, $c_2 = 6$, and
+$6$ is even by the definition of even. Therefore $P(0)$, $P(1)$, and $P(2)$ are
+true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$. Suppose $c_i$ is even for each integer
+$i$ with $0 \leq i \leq k$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ c_{k + 1} \text{ is even} $$
+
+By the given sequence, we know that:
+
+$$ c_{k + 1} = 3c_{k - 2} $$
+
+By the inductive hypothesis, we know that $c_{k - 2}$ is even. $c_{k + 1}$ can
+then be represented as:
+
+$$ c_{k + 1} = 3(2r) $$
+
+for some integer $r$.
+
+Then, by algebra:
+
+$$ c_{k + 1} = 6r $$
+
+$$ c_{k + 1} = 2(3r) $$
+
+Now, $3r$ is an integer by the product of integers. It follows that $c_{k + 1}$
+is even by the definition of even. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 4. Suppose that $d_1, d_2, d_3, \dots$ is sequence defined as follows:
 
 $$ d_1 = \frac{9}{10}, d_2 = \frac{10}{11}, d_k = d_{k - 1} \cdot d_{k - 2} $$
@@ -4866,6 +5011,46 @@ $$ d_1 = \frac{9}{10}, d_2 = \frac{10}{11}, d_k = d_{k - 1} \cdot d_{k - 2} $$
 for every integer $k \geq 3$.
 
 Prove that $0 < d_n \leq 1$ for each integer $n \geq 1$.
+
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "$0 < d_n \leq 1$."
+
+_Basis Step:_
+
+Prove $P(1)$ and $P(2)$. That is:
+
+$$ 0 < d_1 \leq 1 $$
+
+and
+
+$$ 0 < d_2 \leq 1 $$
+
+By the given sequence we know that $d_1 = \dfrac{9}{10}$, and that
+$0 < \dfrac{9}{10} \leq 1$. Also, we know that $d_2 = \dfrac{10}{11}$, and that
+$0 < \dfrac{10}{11} \leq 1$. Therefore $P(1)$ and $P(2)$ are both true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$. Suppose $0 < d_i \leq 1$ for each
+integer $i$ with $1 \leq i \leq k$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ 0 < d_{k + 1} \leq 1 $$
+
+By the given sequence, we know that:
+
+$$ d_{k + 1} = d_k \cdot d_{k - 1} $$
+
+By the inductive hypothesis, we know that $0 < d_k \leq 1$ and that
+$0 < d_{k - 1} \leq 1$. Consequently, $0 < d_{k + 1} \leq 1$ because the product
+of two positive numbers less than or equal to $1$ is itself less than or equal
+to $1$. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 5. Suppose that $e_0, e_1, e_2, \dots$ is a sequence defined as follows:
 
@@ -4875,6 +5060,79 @@ for each integer $k \geq 2$.
 
 Prove that $e_n = 5 \cdot 3^n + 7 \cdot 2^n$ for every integer $n \geq 0$.
 
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "$e_n = 5 \cdot 3^n + 7 \cdot 2^n$."
+
+_Basis Step:_
+
+Prove $P(0)$ and $P(1)$. That is:
+
+$$ e_0 = 5 \cdot 3^0 + 7 \cdot 2^0 $$
+
+and
+
+$$ e_1 = 5 \cdot 3^1 + 7 \cdot 2^1 $$
+
+By the given sequence, we know that $e_0 = 12$. By algebra/arithmetic:
+
+$$ 12 = 5 \cdot 3^0 + 7 \cdot 2^0 $$
+
+$$ 12 = 5 \cdot 1 + 7 \cdot 1 $$
+
+$$ 12 = 5 + 7 $$
+
+$$ 12 = 12 $$
+
+By the given sequence, we know that $e_1 = 29$. By algebra/arithmetic:
+
+$$ 29 = 5 \cdot 3^1 + 7 \cdot 2^1 $$
+
+$$ 29 = 5 \cdot 3 + 7 \cdot 2 $$
+
+$$ 29 = 15 + 14 $$
+
+$$ 29 = 29 $$
+
+Therefore $P(0)$ and $P(1)$ are both true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$. Suppose
+$e_i = 5 \cdot 3^i + 7 \cdot 2^i$ for each integer $i$ with $0 \leq i \leq k$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ e_{k + 1} = 5 \cdot 3^{k + 1} + 7 \cdot 2^{k + 1} $$
+
+By the given sequence, we know that:
+
+$$ e_{k + 1} = 5e_{k} - 6e_{k - 1} $$
+
+By the inductive hypothesis and substitution, $e_{k + 1}$ can be rewritten as:
+
+$$ e_{k + 1} = 5(5 \cdot 3^k + 7 \cdot 2^k) - 6(5 \cdot 3^{k - 1} + 7 \cdot 2^{k - 1}) $$
+
+$$ = 25 \cdot 3^k + 35 \cdot 2^k - 30 \cdot 3^{k - 1} - 42 \cdot 2^{k - 1} $$
+
+$$ = 25 \cdot 3^k + 35 \cdot 2^k - 10 \cdot 3 \cdot 3^{k - 1} - 21 \cdot 2 \cdot 2^{k - 1} $$
+
+$$ = 25 \cdot 3^k + 35 \cdot 2^k - 10 \cdot 3^k - 21 \cdot 2^k $$
+
+$$ = (25 - 10) \cdot 3^k + (35 - 21) \cdot 2^k $$
+
+$$ = 15 \cdot 3^k + 14 \cdot 2^k $$
+
+$$ = 5 \cdot 3 \cdot 3^k + 7 \cdot 2 \cdot 2^k $$
+
+$$ = 5 \cdot 3^{k + 1} + 7 \cdot 2^{k + 1} $$
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 6. Suppose that $f_0, f_1, f_2, \dots$ is a sequence defined as follows:
 
 $$ f_0 = 5, f_1 = 16, f_k = 7f_{k - 1} - 10f_{k - 2} $$
@@ -4882,6 +5140,77 @@ $$ f_0 = 5, f_1 = 16, f_k = 7f_{k - 1} - 10f_{k - 2} $$
 for every integer $k \geq 2$.
 
 Prove that $f_n = 3 \cdot 2^n + 2 \cdot 5^n$ for each integer $n \geq 0$.
+
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "$f_n = 3 \cdot 2^n + 2 \cdot 5^n$."
+
+_Basis Step:_
+
+Prove $P(0)$ and $P(1)$. That is:
+
+$$ f_0 = 3 \cdot 2^0 + 2 \cdot 5^0 $$
+
+$$ f_1 = 3 \cdot 2^1 + 2 \cdot 5^1 $$
+
+By the given sequence, we know that $f_0 = 5$. So, by algebra/arithmetic:
+
+$$ 5 = 3 \cdot 2^0 + 2 \cdot 5^0 $$
+
+$$ 5 = 3 \cdot 1 + 2 \cdot 1 $$
+
+$$ 5 = 3 + 2 $$
+
+$$ 5 = 5 $$
+
+By the given sequence, we know that $f_1 = 16$. So, by algebra/arithmetic:
+
+$$ 16 = 3 \cdot 2^1 + 2 \cdot 5^1 $$
+
+$$ 16 = 3 \cdot 2 + 2 \cdot 5 $$
+
+$$ 16 = 6 + 10 $$
+
+$$ 16 = 16 $$
+
+Therefore $P(0)$ and $P(1)$ are both true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$. Suppose
+$f_i = 3 \cdot 2^i + 2 \cdot 5^i$ for each integer $i$ with $0 \leq i \leq k$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ f_{k + 1} = 3 \cdot 2^{k + 1} + 2 \cdot 5^{k + 1} $$
+
+By the given sequence, we know that:
+
+$$ f_{k + 1} = 7f_k - 10f_{k - 1} $$
+
+By the inductive hypothesis and substitution, $f_{k + 1}$ can be rewritten as:
+
+$$ f_{k + 1} = 7(3 \cdot 2^k + 2 \cdot 5^k) - 10(3 \cdot 2^{k - 1} + 2 \cdot 5^{k - 1}) $$
+
+$$ = (21 \cdot 2^k + 14 \cdot 5^k) - (30 \cdot 2^{k - 1} + 20 \cdot 5^{k - 1}) $$
+
+$$ = (21 \cdot 2 \cdot 2^{k - 1} + 14 \cdot 5 \cdot 5^{k - 1}) - (30 \cdot 2^{k - 1} + 20 \cdot 5^{k - 1}) $$
+
+$$ = 42 \cdot 2^{k - 1} + 70 \cdot 5^{k - 1} - 30 \cdot 2^{k - 1} - 20 \cdot 5^{k - 1} $$
+
+$$ = (42 - 30) \cdot 2^{k - 1} + (70 - 20) \cdot 5^{k - 1} $$
+
+$$ = 12 \cdot 2^{k - 1} + 50 \cdot 5^{k - 1} $$
+
+$$ = 3 \cdot 2 \cdot 2 \cdot 2^{k - 1} + 2 \cdot 5 \cdot 5 \cdot 5^{k - 1} $$
+
+$$ = 3 \cdot 2^{k + 1} + 2 \cdot 5^{k + 1} $$
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 7. Suppose that $g_1, g_2, g_3, \dots$ is a sequence defined as follows:
 
@@ -4891,6 +5220,77 @@ for each integer $k \geq 3$.
 
 Prove that $g_n = 2^n + 1$ for every integer $n \geq 1$.
 
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "$g_n = 2^n + 1$."
+
+_Basis Step:_
+
+Prove $P(1)$ and $P(2)$. That is:
+
+$$ g_1 = 2^1 + 1 $$
+
+and
+
+$$ g_2 = 2^2 + 1 $$
+
+By the given sequence, we know that $g_1 = 3$. By algebra/arithmetic:
+
+$$ 3 = 2^1 + 1 $$
+
+$$ 3 = 2 + 1 $$
+
+$$ 3 = 3 $$
+
+By the given sequence, we know that $g_2 = 5$. By algebra/arithmetic:
+
+$$ 5 = 2^2 + 1 $$
+
+$$ 5 = 4 + 1 $$
+
+$$ 5 = 5 $$
+
+Therefore $P(1)$ and $P(2)$ are both true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$. Suppose $g_i = 2^i + 1$ for each
+integer $i$ with $1 \leq i \leq k$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ g_{k + 1} = 2^{k + 1} + 1 $$
+
+By the given sequence, we know that:
+
+$$ g_{k + 1} = 3g_k - 2g_{k - 1} $$
+
+By the inductive hypothesis and substitution, $g_{k + 1}$ can be rewritten as:
+
+$$ g_{k + 1} = 3(2^k + 1) - 2(2^{k - 1} + 1) $$
+
+$$ = 3 \cdot 2^k + 3 - 2 \cdot 2^{k - 1} - 2 $$
+
+$$ = 3 \cdot 2 \cdot 2^{k - 1} + 3 - 2 \cdot 2^{k - 1} - 2 $$
+
+$$ = 6 \cdot 2^{k - 1} + 3 - 2 \cdot 2^{k - 1} - 2 $$
+
+$$ = (6 - 2) \cdot 2^{k - 1} + 3 - 2 $$
+
+$$ = 4 \cdot 2^{k - 1} + 1 $$
+
+$$ = 2 \cdot 2 \cdot 2^{k - 1} + 1 $$
+
+$$ = 2 \cdot 2^{k} + 1 $$
+
+$$ = 2^{k + 1} + 1 $$
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 8. Suppose that $h_0, h_1, h_2, \dots$ is a sequence defined as follows:
 
 $$ h_0 = 1, h_1 = 2, h_2 = 3, h_k = h_{k - 1} + h_{k - 2} + h_{k - 3} $$
@@ -4899,20 +5299,199 @@ for each integer $k \geq 3$.
 
 a. Prove that $h_n \leq 3^n$ for every integer $n \geq 0$.
 
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "$h_n \leq 3^n$."
+
+_Basis Step:_
+
+Prove $P(0)$, $P(1)$, and $P(2)$. That is:
+
+$$ h_0 \leq 3^0 $$
+
+and
+
+$$ h_1 \leq 3^1 $$
+
+and
+
+$$ h_2 \leq 3^2 $$
+
+By the given sequence we know that $h_0 = 1$. By substitution:
+
+$$ 1 \leq 3^0 $$
+
+$$ 1 \leq 1 $$
+
+By the given sequence we know that $h_1 = 2$. By substitution:
+
+$$ 2 \leq 3^1 $$
+
+$$ 2 \leq 3 $$
+
+By the given sequence we know that $h_2 = 3$. By substitution:
+
+$$ 3 \leq 3^2 $$
+
+$$ 3 \leq 9 $$
+
+Therefore $P(0)$, $P(1)$, and $P(2)$ are all true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 3$. Suppose $h_i \leq 3^i$ for each integer
+$i$ with $0 \leq i \leq k$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ h_{k + 1} \leq 3^{k + 1} $$
+
+By the given sequence, we know that:
+
+$$ h_{k + 1} = h_k + h_{k - 1} + h_{k - 2} $$
+
+$$ = h_k + h_{k - 1} + h_{k - 2} \leq 3^k + 3^{k - 1} + 3^{k - 2} $$
+
+$$ = h_k + h_{k - 1} + h_{k - 2} \leq 3^{k - 2}(3^2 + 3^1 + 1) $$
+
+$$ = h_k + h_{k - 1} + h_{k - 2} \leq 3^{k - 2}(9 + 3 + 1) $$
+
+$$ = h_k + h_{k - 1} + h_{k - 2} \leq 13 \cdot 3^{k - 2} $$
+
+Since $3^{k + 1} = 3^3 \cdot 3^{k - 2} = 27 \cdot 3^{k - 2}$, we know then that:
+
+$$ = h_k + h_{k - 1} + h_{k - 2} \leq 13 \cdot 3^{k - 2} \leq 27 \cdot 3^{k - 2} = 3^{k + 1} $$
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 b. Suppose that $s$ is any real number such that $s^3 \geq s^2 + s + 1$. (This
 implies that $2 > s > 1.83$.) Prove that $h_n \leq s^n$ for every integer
 $n \geq 2$.
+
+Omitted.
 
 9. Define a sequence $a_1, a_2, a_3, \dots$ as follows: $a_1 = 1, a_2 = 3$, and
    $a_k = a_{k - 1} + a_{k - 2}$ for every integer $k \geq 3$. (This sequence is
    known as the Lucas sequence.) Use strong mathematical induction to prove that
    $a_n \leq \left(\dfrac{7}{4}\right)^n$ for every integer $n \geq 1$.
 
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "$a_n \leq \left(\dfrac{7}{4}\right)^n$."
+
+_Basis Step:_
+
+Prove $P(1)$ and $P(2)$. That is:
+
+$$ a_1 \leq \left(\dfrac{7}{4}\right)^1 $$
+
+and
+
+$$ a_2 \leq \left(\dfrac{7}{4}\right)^2 $$
+
+By the given sequence, we know that $a_1 = 1$. By substitution:
+
+$$ 1 \leq \left(\dfrac{7}{4}\right)^1 $$
+
+$$ 1 \leq \dfrac{7}{4} = 1.75 $$
+
+By the given sequence, we know that $a_2 = 3$. By substitution:
+
+$$ 3 \leq \left(\dfrac{7}{4}\right)^2 $$
+
+$$ 3 \leq \dfrac{49}{16} = 3.0625 $$
+
+Therefore $P(1)$ and $P(2)$ are both true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$. Suppose
+$a_i \leq \left(\dfrac{7}{4}\right)^i$ for each integer $i$ with
+$1 \leq i \leq k$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ a_{k + 1} \leq \left(\dfrac{7}{4}\right)^{k + 1} $$
+
+By the given sequence, we know that:
+
+$$ a_{k + 1} = a_k + a_{k - 1} $$
+
+$$ = a_k + a_{k - 1} \leq \left(\frac{7}{4}\right)^k + \left(\frac{7}{4}\right)^{k - 1} $$
+
+$$ \leq \left(\frac{7}{4}\right) \cdot \left(\frac{7}{4}\right)^{k - 1} + \left(\frac{7}{4}\right)^{k - 1} $$
+
+$$ \leq \left(\frac{7}{4} + 1\right) \cdot \left(\frac{7}{4}\right)^{k - 1} $$
+
+$$ \leq \left(\frac{11}{4}\right) \cdot \left(\frac{7}{4}\right)^{k - 1} $$
+
+Since we know that:
+
+$$ \left(\dfrac{7}{4}\right)^{k + 1} = \frac{7}{4} \cdot \frac{7}{4} \cdot \left(\frac{7}{4}\right)^{k - 1} $$
+
+$$ \left(\dfrac{7}{4}\right)^{k + 1} = \frac{49}{16} \cdot \left(\frac{7}{4}\right)^{k - 1} $$
+
+Since $\dfrac{11}{4} < \dfrac{49}{16}$, it follows that:
+
+$$ a_{k + 1} = \frac{11}{4} \cdot \left(\frac{7}{4}\right)^{k - 1} \leq \frac{49}{16} \cdot \left(\frac{7}{4}\right)^{k - 1} = \left(\dfrac{7}{4}\right)^{k + 1} $$
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 10. The introductory example solved with ordinary mathematical induction in
     Section 5.3 can also be solved using strong mathematical induction. Let
     $P(n)$ be "any $n$¢ can be obtained using a combination of $3$¢ and $5$¢
     coins." Use strong mathematical induction to prove that $P(n)$ is true for
     every integer $n \geq 8$.
+
+**Proof (by strong mathematical induction):**
+
+Let $P(n)$ be the sentence "any $n$¢ can be obtained using a combination of $3$¢
+and $5$¢ coins."
+
+_Basis Step:_
+
+Prove $P(8)$ and $P(9)$.
+
+$P(8)$ is true because $8$¢ can be obtained by using one $3$¢ coin and one $5$¢
+coin.
+
+$P(9)$ is true because $9$¢ can be obtained by using three $3$¢ coins.
+
+Therefore $P(8)$ and $P(9)$ are both true.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 8$. Suppose $P(i)$ is true for every
+integer $i$ where $8 \leq i \leq k$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+"any $(k + 1)$¢ can be obtained using a combination of $3$¢ and $5$¢ coins."
+
+_Case 1 (There is a $5$¢ coin among those that used to make up the $k$¢.):_
+
+In this case replace the $5$¢ coin by two $3$¢ coins; the result will be
+$(k + 1)$¢.
+
+_Case 2 (There is not a $5$¢ coin among those used to make up the $k$¢.):_
+
+In this case, because $k \geq 8$, at least three $3$¢ coins must have been used.
+So remove three $3$¢ coins and replace them by two $5$¢ coins; the result will
+be $(k + 1)$¢.
+
+Thus in either case $(k + 1)$¢ can be obtained using $3$¢ and $5$¢ coins.
+
+Q.E.D.
 
 11. You begin solving a jigsaw puzzle by finding two pieces that match and
     fitting them together. Every subsequent step of the solution consists of

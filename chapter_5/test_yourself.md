@@ -81,12 +81,18 @@ Page 333
 1. In a proof by strong mathematical induction the basis step may require
    checking a property $P(n)$ for more _____ value of $n$.
 
+than one
+
 2. Suppose that in the basis step for a proof by strong mathematical induction
    the property $P(n)$ was checked for every integer $n$ from $a$ through $b$.
    Then in the inductive step one assumes that for any integer $k \geq b$, the
    property $P(n)$ is true for all values of $i$ from _____ through _____ and
    one shows that _____ is true.
 
+$a$; $k$; $P(k + 1)$
+
 3. According to the well-ordering principle for the integers, if a set $S$ of
    integers contains at least _____ and if there is some integer that is less
    than or equal to every _____, then _____.
+
+one integer; integer in $S$; $S$ contains a least element.
