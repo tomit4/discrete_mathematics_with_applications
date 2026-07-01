@@ -7141,3 +7141,332 @@ the Euclidean algorithm, find integers $u$ and $v$ so that
 $\text{gcd}(330, 156) = 330u + 156v$.
 
 Omitted.
+
+---
+
+**Exercise Set 5.6**
+
+Page 360
+
+Find the first four terms of each of the recursively defined sequences in 1-8.
+
+1. $a_k = 2a_{k - 1} + k$, for every integer $k \geq 2$ $a_1 = 1$
+
+2. $b_k = b_{k - 1} + 3_k$, for every integer $k \geq 2$ $b_1 = 1$
+
+3. $c_k = k(c_{k - 1})^2$, for every integer $k \geq 1$ $c_0 = 1$
+
+4. $d_k = k(d_{k - 1})^2$, for every integer $k \geq 1$ $d_0 = 3$
+
+5. $s_k = s_{k - 1} + 2s_{k - 2}$, for every integer $k \geq 2$, $s_0 = 1$,
+   $s_1 = 1$
+
+6. $t_k = t_{k - 1} + 2t_{k - 2}$, for every integer $k \geq 2$
+   $t_0 = -1, t_1 = 2$
+
+7. $u_k = ku_{k - 1} - u_{k - 2}$, for every integer $k \geq 3$
+   $u_1 = 1, u_2 = 1$
+
+8. $v_k = v_{k - 1} + v_{k - 2} + 1$, for every integer $k \geq 3$
+   $v_1 = 1, v_2 = 3$
+
+9. Let $a_0, a_1, a_2, \dots$ be defined by the formula $a_n = 3n + 1$, for
+   every integer $n \geq 0$. Show that this sequence satisfies the recurrence
+   relation $a_k = a_{k - 1} + 3$, for every integer $k \geq 1$.
+
+10. let $b_0, b_1, b_2, \dots$ be defined by the formula $b_n = 4^n$, for every
+    integer $n \geq 0$. Show that this sequence satisfies the recurrence
+    relation $b_k = 4b_{k - 1}$, for every integer $k \geq 1$.
+
+11. Let $c_0, c_1, c_2, \dots$ be defined by the formula $c_n = 2^n - 1$ for
+    every integer $n \geq 0$. Show that this sequence satisfies the recurrence
+    relation $c_k = 2c_{k  - 1} + 1$ for every integer $k \geq 1$.
+
+12. Let $s_0, s_1, s_2, \dots$ be defined by the formula
+    $s_n = \dfrac{(-1)^n}{n!}$ for every integer $n \geq 0$. Show that this
+    sequence satisfies the following recurrence relation for every integer
+    $k \geq 1$:
+
+$$ s_k = \frac{-s_{k - 1}}{k} $$
+
+13. Let $t_0, t_1, t_2, \dots$ be defined by the formula $t_n = 2 + n$ for every
+    integer $n \geq 0$. Show that this sequence satisfies the following
+    recurrence relation for every integer $k \geq 2$:
+
+$$ t_k = 2t_{k - 1} - t_{k - 2} $$
+
+14. Let $d_0, d_1, d_2, \dots$ be defined by the formula $d_n = 3^n - 2^n$ for
+    every integer $n \geq 0$. Show that this sequence satisfies the following
+    recurrence relation for every integer $k \geq 2$:
+
+$$ d_k = 5d_{k - 1} - 6d_{k - 2} $$
+
+15. For the sequence of Catalan numbers defined in Example 5.6.4, prove that for
+    each integer $n \geq 1$,
+
+$$ C_n = \frac{1}{4n + 2}\binom{2n + 2}{n + 1}$$
+
+16. Use the recurrence relation and values for the Tower of Hanoi sequence
+    $m_1, m_2, m_3, \dots$ discussed in Example 5.6.5 to compute $m_7$ and
+    $m_8$.
+
+17. _Tower of Hanoi with Adjacency Requirement:_
+
+Suppose that in addition to the requirement that they never move a larger disk
+on top of a smaller one, the priests who move the disks of the Tower of Hanoi
+are also allowed only to move disks one by one from one pole to an _adjacent_
+pole. Assume poles $A$ and $C$ are at the two ends of the row and pole $B$ is in
+the middle. Let
+
+$$ a_n = \left[\text{the minimum number of moves needed to transfer a tower of } n \text{ disks from pole } A \text{ to pole } C \right] $$
+
+a. Find $a_1, a_2$, and $a_3$.
+
+b. Find $a_4$.
+
+c. Find a recurrence relation for $a_1, a_2, a_3, \dots$. Justify your answer.
+
+18. _Tower of Hanoi with Adjacency Requirement:_
+
+Suppose the same situation as in exercise 17. Let
+
+$$ b_n = \left[\text{the minimum number of moves needed to transfer a tower of } n \text{ disks from pole } A \text{ to pole } B \right] $$
+
+a. Find $b_1, b_2$, and $b_3$.
+
+b. Find $b_4$.
+
+c. Show that $b_k = a_{k - 1} + 1 + b_{k - 1}$ for each integer $k \geq 2$,
+where $a_1, a_2, a_3, \dots$ is the sequence defined in exercise 17.
+
+d. Show that $b_k \leq 3b_{k - 1} + 1$ for each integer $k \geq 2$.
+
+e. Show that $b_k = 3b_{k - 1} + 1$ for each integer $k \geq 2$.
+
+19. _Four-Pole Tower of Hanoi:_
+
+Suppose that the Tower of Hanoi problem has four poles in a row instead of
+three. Disks can be transferred one by one from one pole to any other pole, but
+at no time may a larger disk be placed on top of a smaller disk. Let $s_n$ be
+the minimum number of moves needed to transfer the entire tower of $n$ disks
+from the left-most to the right-most pole.
+
+a. Find $s_1, s_2$, and $s_3$.
+
+b. Find $s_4$.
+
+c. Show that $s_k \leq 2s_{k - 2} + 3$ for every integer $k \geq 3$.
+
+20. _Tower of Hanoi Poles in a Circle:_
+
+Suppose that instead of being lined up in a row, the three poles for the
+original Tower of Hanoi are placed in a circle. The monks move the disks one by
+one from one pole to another, but they may only move disks one over in a
+clockwise direction and they may never move a larger disk on top of a smaller
+one. Let $c_n$ be the minimum number of moves needed to transfer a pile of $n$
+disks from one pole to the next adjacent pole in the clockwise direction.
+
+a. Justify the inequality $c_k \leq 4c_{k - 1} + 1$ for each integer $k \geq 2$.
+
+b. The expression $4c_{k - 1} + 1$ is not the minimum number of moves needed to
+transfer a pile of $k$ disks from one pole to another. Explain, for example, why
+$c_3 \neq 4c_2 + 1$.
+
+21. _Double Tower of Hanoi:_
+
+In this variation of the Tower of Hanoi there are three poles in a row and $2n$
+disks, two each of $n$ different sizes, where $n$ is any positive integer.
+Initially one of the poles contains all the disks placed on top of each other in
+pairs of decreasing size. Disks are transferred one by one from one pole to
+another, but at no time may a larger disk be placed on top of a smaller disk.
+However, a disk may be placed on top of one of the same size. Let $t_n$ be the
+minimum number of moves needed to transfer a tower of $2n$ disks from one pole
+to another.
+
+a. Find $t_1$ and $t_2$.
+
+b. Find $t_3$.
+
+c. Find a recurrence relation for $t_1, t_2, t_3, \dots$.
+
+22. _Fibonacci Variation:_
+
+A single pair of rabbits (male and female) is born at the beginning of a year.
+Assume the following conditions (which are somewhat more realistic than
+Fibonacci's):
+
+(1) Rabbit pairs are not fertile during their first months of life but
+thereafter give birth to four new male/female pairs at the end of every month.
+
+(2) No rabbits die.
+
+a. Let $r_n = \text{ the number of rabbits alive at the end of month } n$, for
+each integer $n \geq 1$, and let $r_0 = 1$. Find a recurrence relation for
+$r_0, r_1, r_2, \dots$. Justify your answer.
+
+b. Compute $r_0, r_1, r_2, r_3, r_4, r_5$, and $r_6$.
+
+c. How many rabbits will there be at the end of the year?
+
+23. _Fibonacci Variation:_
+
+A single pair of rabbits (male and female) is born at the beginning of a year.
+Assume the following conditions:
+
+(1) Rabbit pairs are not fertile during their first _two_ months of life but
+thereafter give birth to three new male/female pairs at the end of every month.
+
+(2) No rabbits die.
+
+a. Let
+$s_n = \text{ the number of pairs of rabbits alive at the end of month } n$, for
+each integer $n \geq 1$, and let $s_0 = 1$. Find a recurrence relation for
+$s_0, s_1, s_2, \dots$. Justify your answer.
+
+b. Compute $s_0, s_1, s_2, s_3, s_4$, and $s_5$.
+
+c. How many rabbits will there be at the end of the year?
+
+In 24-34, $F_0, F_1, F_2, \dots$ is the Fibonacci sequence.
+
+24. Use the recurrence relation and values for $F_0, F_1, F_2, \dots$ given in
+    Example 5.6.6 to compute $F_{13}$ and $F_{14}$.
+
+25. The Fibonacci sequence satisfies the recurrence relation
+    $F_k = F_{k - 1} + F_{k - 2}$, for every integer $k \geq 2$.
+
+a. Explain why the following is true:
+
+$$ F_{k + 1} = F_k + F_{k - 1} \text{ for each integer } k \geq 1 $$
+
+b. Write an equation expressing $F_{k + 2}$ in terms of $F_{k + 1}$ and $F_k$.
+
+c. Write an equation expressing $F_{k + 3}$ in terms of $F_{k + 2}$ and
+$F_{k + 1}$.
+
+26. Prove that $F_k = 3F_{k - 3} + 2F_{k - 4}$ for every integer $k \geq 4$.
+
+27. Prove that $F_k^2 - F_{k - 1}^2 = F_kF_{k + 1} - F_{k - 1}F_{k + 1}$, for
+    every integer $k \geq 1$.
+
+28. Prove that $F_{k + 1}^2 - F_k^2 - F_{k - 1}^2 = 2F_kF_{k - 1}$, for each
+    integer $k \geq 1$.
+
+29. Prove that $F_{k + 1}^2 - F_k^2 = F_{k - 1}F_{k + 2}$, for every integer
+    $k \geq 1$.
+
+30. Use mathematical induction to prove that for each integer $n \geq 0$,
+    $F_{n + 2}F_n - F_{n + 1}^2 = (-1)^n$.
+
+31. Use strong mathematical induction to prove that $F_n < 2^n$ for every
+    integer $n \geq 1$.
+
+32. Prove that for each integer $n \geq 0$, $\text{gcd}(F_{n + 1}, F_n) = 1$.
+    (The definition of $\text{gcd}$ is given in Section 4.10.)
+
+33. It turns out that the Fibonacci sequence satisfies the following explicit
+    formula: For every integer $F_n \geq 0$,
+
+$$ F_n = \frac{1}{\sqrt{5}}\left[\left(\frac{1 + \sqrt{5}}{2}\right)^{n + 1} - \left(\frac{1 - \sqrt{5}}{2}\right)^{n + 1}\right] $$
+
+Verify that the sequence defined by this formula satisfies the recurrence
+relation $F_k = F_{k - 1} + F_{k - 2}$ for every integer $k \geq 2$.
+
+34. (For students who have studied calculus) Find
+    $\lim\limits_{n \to \infty}\left(\dfrac{F_{n + 1}}{F_n}\right)$, assuming
+    that the limit exists.
+
+35. (For students who have studied calculus) Prove that
+    $\lim\limits_{n \to \infty}\left(\dfrac{F_{n + 1}}{F_n}\right)$ exists.
+
+36. (For students who have studied calculus) Define $x_0, x_1, x_2, \dots$ as
+    follows:
+
+$$ x_k = \sqrt{2 + x_{k - 1}} \quad \text{ for each integer } k \geq 1 $$
+
+$$ x_0 = 0 $$
+
+Find $\lim\limits_{n \to \infty}x_n$. (Assume that the limit exists.)
+
+37. _Compound Interest:_
+
+Suppose a certain amount of money is deposited in an account paying 4% annual
+interest compounded quarterly. For each positive integer $n$, let
+$R_n = \text{ the amount on deposit at the end of the }$ $n$<sup>th</sup>
+quarter, assuming no additional deposits or withdrawals, and let $R_0$ be the
+initial amount deposited.
+
+a. Find a recurrence relation for $R_0, R_1, R_2, \dots$. Justify your answer.
+
+b. If $R_0 = \$5,000$, find the am,ount of money on deposit at the end of one
+year.
+
+c. Find the APY for the account.
+
+38. _Compound Interest:_
+
+Suppose a certain amount of money is deposited in an account paying 3% annual
+interest compounded monthly. For each positive integer $n$, let
+$S_n  = \text{ the amount on deposit at the end of the }$ $n$<sup>th</sup>
+month, and let $S_0$ be the initial amount deposited.
+
+a. Find a recurrence relation for $S_0, S_1, S_2, \dots$, assuming no additional
+deposits or withdrawals during the year. Justify your answer.
+
+b. If $S_0 = \$10,000$, find the amount of money on deposit at the end of one
+year.
+
+c. Find the APY for the account.
+
+39. With each step you take when climbing a staircase, you can move up either
+    one stair or two stairs. As a result, you can climb the entire staircase
+    taking one stair at a time, taking two at a time, or taking a combination of
+    one-and two-stair increments. For each integer $n \geq 1$, if the staircase
+    conssits of $n$ stairs, let $c_n$ be the number of different ways to climb
+    the staircase. Find a recurrence relation for $c_1, c_2, c_3, \dots$.
+    Justify your answer.
+
+40. A set of blocks contains blocks of heights $1$, $2$, and $4$ centimeters.
+    Imagine constructing towers by piling blocks of different heights directly
+    on top of one another. (A tower of height $6$ cm could be obtained using six
+    $1$-cm blocks, three $2$-cm blocks one $2$-cm block with one $4$-cm block on
+    top, one $4$-cm block with one $2$-cm block on top, and so forth.) Let $t_n$
+    be the number of ways to construct a tower of height $n$ cm using blocks
+    from the set. (Assume an unlimited supply of blocks of each size.) Find a
+    recurrence relation for $t_1, t_2, t_3, \dots$. Justify your answer.
+
+41. Assume the truth of the distributive law (Appendix A, F3), and use the
+    recursive definition of summation, together with mathematical induction, to
+    prove the generalized distributive law that for every positive integer $n$,
+    if $a_1, a_2, \dots, a_n$ and $c$ are real numbers, then
+
+$$ \sum_{i = 1}^{n}{ca_i} = c\left(\sum_{i = 1}^{n}{a_i}\right) $$
+
+42. Assume the truth of the commutative and associative laws (Appendix A, F1 and
+    F2), and use the recursive definition of product, together with mathematical
+    induction, to prove that for every positive integer $n$, if
+    $a_1, a_2, \dots, a_n$ and $b_1, b_2, \dots, b_n$ are real numbers, then
+
+$$ \prod_{i = 1}^{n}{(a_ib_i)} = \left(\prod_{i = 1}^{n}{a_i}\right)\left(\prod_{i = 1}^{n}{b_i}\right) $$
+
+43. Assume the truth of the commutative and associative laws (Appendix A, F1 and
+    F2), and use the recursive definition of product, together with mathematical
+    induction, to prove that for each positive integer $n$, if
+    $a_1, a_2, \dots, a_n$ and $c$ are real numbers, then
+
+$$ \prod_{i = 1}^{n}{(ca_i)} = c^n\left(\prod_{i = 1}^{n}{a_i}\right) $$
+
+44. The triangle inequality for absolute value states that for all real numbers
+    $a$ and $b$, $|a + b| \leq |a| + |b|$. Use the recursive definition of
+    summation, the triangle inequality, the definition of absolute value, and
+    mathematical induction to prove that for each p ositive integer $n$, if
+    $a_1, a_2, \dots, a_n$ are real numbers, then
+
+$$ \left| \sum_{i = 1}^{n}{a_i} \right| \leq \sum_{i = 1}^{n}{|a_i|} $$
+
+45. Prove that any sum of even integers is even.
+
+46. Prove that any sum of an odd number of odd integers is odd.
+
+47. Deduce from exercise 46 that for any positive integer $n$ if there is a sum
+    of $n$ odd integers that is even, then $n$ is even.

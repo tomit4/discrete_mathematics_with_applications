@@ -969,3 +969,34 @@ statement. Since statement IV is true (by assumption) and its hypothesis is true
 (by the argument just given), it follows (by modus ponens) that its conclusion
 is also true. That is, the values of all algorithm variables after execution of
 the loop are as specified in the post-condition for the loop.
+
+---
+
+Page 348
+
+**Definition**
+
+A **recurrence relation** for a sequence $a_0, a_1, a_2, \dots$ is a formula
+that relates each term $a_k$ to certain of its predecessors
+$a_{k - 1}, a_{k - 2}, \dots, a_{k - i}$, where $i$ is an integer with
+$k - i \geq 0$. If $i$ is a fixed integer, the **initial conditions** for such a
+recurrence relation specify the values of $a_0, a_1, a_2, \dots, a_{i - 1}$. If
+$i$ depends on $k$, the initial conditions specify the values of
+$a_0, a_1, \dots, a_m$, where $m$ is an integer with $m \geq 0$.
+
+---
+
+Page 358
+
+**Definition**
+
+Given numbers $a_1, a_2, \dots a_n$, where $n$ is a positive integer, the
+**summation from $i = 1$ to $n$ of the $a_i$**, denoted $\sum_{i = 1}^{n}{a_i}$,
+is defined as follows:
+
+$$ \sum_{i = 1}^{1}{a_i} = a_1 \quad \text{ and } \quad \sum_{i = 1}^{n}{a_i} = \left(\sum_{i = 1}^{n - 1}{a_i}\right) + a_n, \quad \text{ if } n > 1 $$
+
+The **product from $i = 1$ to $n$ of the $a_i$**, denoted
+$\prod_{i = 1}^{n}{a_i}$, is defined by
+
+$$ \prod_{i = 1}^{1}{a_i} = a_1 \quad \text{ and } \quad \prod_{i = 1}^{n}{a_i} = \left(\prod_{i = 1}^{n - 1}{a_i}\right) \cdot a_n, \quad \text{ if } \quad n > 1 $$
