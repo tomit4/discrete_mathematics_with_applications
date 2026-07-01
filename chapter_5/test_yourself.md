@@ -106,12 +106,20 @@ Page 346
 1. A pre-condition for an algorithm is _____ and a post-condition for an
    algorithm is _____.
 
+a predicate that describes the initial state of the input variables of the
+algorithm; a predicate that describes the final state of the output variables
+for the algorithm
+
 2. A loop is defined as correct with respect to its pre- and post-conditions if,
    and only if, whenever the algorithm variables satisfy the pre-condition for
    the loop and the loop terminates after a finite number of steps, then _____.
 
+the algorithm variables satisfy the post-condition for the loop
+
 3. For each iteration of a loop, if a loop invariant is true before iteration of
    the loop, then _____.
+
+it is true after iteration of the loop
 
 4. Given a **while** loop with guard $G$ and a predicate $I(n)$ if the following
    four properties are true, then the loop is correct with respect to its pre-
@@ -120,10 +128,18 @@ Page 346
 (a) The pre-condition for the loop implies that _____ before the first iteration
 of the loop.
 
+$I(0)$ is true
+
 (b) For every integer $k \geq 0$, if the guard $G$ and the predicate $I(k)$ are
 both true before an iteration of the loop, then _____.
 
+$I(k + 1)$ is true after the iteration of the loop
+
 \(c\) After a finite number of iterations of the loop, _____.
+
+the guard $G$ becomes false
 
 (d) If $N$ is the least number of iterations after which $G$ is false and $I(N)$
 is true, then the values of the algorithm variables will be as specified _____.
+
+in the post-condition of the loop.
