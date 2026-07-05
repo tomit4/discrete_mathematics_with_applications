@@ -152,16 +152,26 @@ Page 359
 
 1. A recursive definition for a sequence consists of a _____ and _____.
 
+recurrence relation; initial conditions
+
 2. A recurrence relation is an equation that defines each later term of a
    sequence by reference to _____ in the sequence.
 
+earlier terms
+
 3. Initial conditions for a recursive definition of a sequence consist of one or
    more of the _____ of the sequence.
+
+values of the first few terms
 
 4. To solve a problem recursively means to divide the problem into smaller
    subproblems of the same type as the initial problem, to suppose _____, and to
    figure out how to use the supposition to _____.
 
+that the smaller subproblems have already been solved; solve the initial problem
+
 5. A crucial step for solving a problem recursively is to define a _____ in
    terms of which the recurrence relation and initial conditions can be
    specified.
+
+sequence

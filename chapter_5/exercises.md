@@ -7152,35 +7152,143 @@ Find the first four terms of each of the recursively defined sequences in 1-8.
 
 1. $a_k = 2a_{k - 1} + k$, for every integer $k \geq 2$ $a_1 = 1$
 
-2. $b_k = b_{k - 1} + 3_k$, for every integer $k \geq 2$ $b_1 = 1$
+$$
+a_1 = 1 \\
+a_2 = 2a_1 + 2 = 2(1) + 2 = 2 + 2 = 4 \\
+a_3 = 2a_2 + 3 = 2(4) + 3 = 8 + 3 = 11 \\
+a_4 = 2a_3 + 4 = 2(11) + 4 = 22 + 4 = 26
+$$
+
+2. $b_k = b_{k - 1} + 3k$, for every integer $k \geq 2$ $b_1 = 1$
+
+$$
+b_1 = 1 \\
+b_2 = b_1 + 3(2) = 1 + 6 = 7 \\
+b_3 = b_2 + 3(3) = 7 + 9 = 16 \\
+b_4 = b_3 + 3(4) = 16 + 12 = 28
+$$
 
 3. $c_k = k(c_{k - 1})^2$, for every integer $k \geq 1$ $c_0 = 1$
 
+$$
+c_0 = 1 \\
+c_1 = 1(c_0)^2 = 1(1)^2 = 1(1) = 1 \\
+c_2 = 2(c_1)^2 = 2(1)^2 = 2(1) = 2 \\
+c_3 = 3(c_2)^2 = 3(2)^2 = 3(4) = 12
+$$
+
 4. $d_k = k(d_{k - 1})^2$, for every integer $k \geq 1$ $d_0 = 3$
+
+$$
+d_0 = 3 \\
+d_1 = 1(d_0)^2 = 1(3)^2 = 1(9) = 9 \\
+d_2 = 2(d_1)^2 = 2(9)^2 = 2(81) = 162\\
+d_3 = 3(d_2)^2 = 3(162)^2 = 3(26244) = 78732
+$$
 
 5. $s_k = s_{k - 1} + 2s_{k - 2}$, for every integer $k \geq 2$, $s_0 = 1$,
    $s_1 = 1$
 
+$$
+s_0 = 1 \\
+s_1 = 1 \\
+s_2 = s_1 + 2s_0 = 1 + 2(1) = 1 + 2 = 3 \\
+s_3 = s_2 + 2(s_1) = 3 + 2(1) = 3 + 2 = 5
+$$
+
 6. $t_k = t_{k - 1} + 2t_{k - 2}$, for every integer $k \geq 2$
    $t_0 = -1, t_1 = 2$
+
+$$
+t_0 = -1 \\
+t_1 = 2 \\
+t_2 = t_1 + 2t_0 = 2 + 2(-1) = 2 - 2 = 0 \\
+t_3 = t_2 + 2t_1 = 0 + 2(2) = 0 + 4 = 4
+$$
 
 7. $u_k = ku_{k - 1} - u_{k - 2}$, for every integer $k \geq 3$
    $u_1 = 1, u_2 = 1$
 
+$$
+u_1 = 1 \\
+u_2 = 1 \\
+u_3 = 3(u_2) - u_1 = 3(1) - 1 = 3 - 1 = 2 \\
+u_4 = 4(u_3) - u_2 = 4(2) - 1 = 8 - 1 = 7
+$$
+
 8. $v_k = v_{k - 1} + v_{k - 2} + 1$, for every integer $k \geq 3$
    $v_1 = 1, v_2 = 3$
+
+$$
+v_1 = 1 \\
+v_2 = 3 \\
+v_3 = v_2 + v_1 + 1 = 3 + 1 + 1 = 5 \\
+v_4 = v_3 + v_2 + 1 = 5 + 3 + 1 = 9
+$$
 
 9. Let $a_0, a_1, a_2, \dots$ be defined by the formula $a_n = 3n + 1$, for
    every integer $n \geq 0$. Show that this sequence satisfies the recurrence
    relation $a_k = a_{k - 1} + 3$, for every integer $k \geq 1$.
 
-10. let $b_0, b_1, b_2, \dots$ be defined by the formula $b_n = 4^n$, for every
+By definition of $a_0, a_1, a_2, \dots$ for each integer $k \geq 1$,
+
+$$ \text{(1)} \quad a_k = 3k + 1 $$
+
+and
+
+$$ \text{(2)} \quad a_{k - 1} = 3(k - 1) + 1 $$
+
+Then $a_{k - 1} + 3$:
+
+$$ a_{k - 1} + 3 = (3(k - 1) + 1) + 3 \quad \text{ by substitution of (2)} $$
+
+$$ = 3k - 3 + 1 + 3 $$
+
+$$ = 3k + 1 \quad \text{ by basic algebra} $$
+
+$$  = a_k \quad \text{ by substitution of (1)} $$
+
+10. Let $b_0, b_1, b_2, \dots$ be defined by the formula $b_n = 4^n$, for every
     integer $n \geq 0$. Show that this sequence satisfies the recurrence
     relation $b_k = 4b_{k - 1}$, for every integer $k \geq 1$.
+
+By definition of $b_0, b_1, b_2, \dots$ for each integer $k \geq 1$,
+
+$$ \text{(1)} \quad b_k = 4^k $$
+
+and
+
+$$ \text{(2)} \quad b_{k - 1} = 4^{k - 1} $$
+
+Then $4b_{k - 1}$:
+
+$$ 4b_{k - 1} = 4(4^{k - 1}) \quad \text{ by substitution of (2)} $$
+
+$$ = 4^k \quad \text{ by the laws of exponents} $$
+
+$$ = b_k \quad \text{ by substitution of (1)} $$
 
 11. Let $c_0, c_1, c_2, \dots$ be defined by the formula $c_n = 2^n - 1$ for
     every integer $n \geq 0$. Show that this sequence satisfies the recurrence
     relation $c_k = 2c_{k  - 1} + 1$ for every integer $k \geq 1$.
+
+By the definition of $c_0, c_1, c_2, \dots$ for each integer $k \geq 1$,
+
+$$ \text{(1)} \quad c_k = 2^k - 1 $$
+
+and
+
+$$ \text{(2)} \quad c_{k - 1} = 2^{k - 1} - 1 $$
+
+Then $2c_{k - 1} + 1$:
+
+$$ 2c_{k - 1} + 1 = 2(2^{k - 1} - 1) + 1 \quad \text{ by substitution of (2)} $$
+
+$$ = 2^k - 2 + 1 $$
+
+$$ = 2^k - 1 $$
+
+$$ = c_k \quad \text{ by substitution of (1)} $$
 
 12. Let $s_0, s_1, s_2, \dots$ be defined by the formula
     $s_n = \dfrac{(-1)^n}{n!}$ for every integer $n \geq 0$. Show that this
@@ -7189,11 +7297,53 @@ Find the first four terms of each of the recursively defined sequences in 1-8.
 
 $$ s_k = \frac{-s_{k - 1}}{k} $$
 
+By the definition of $s_0, s_1, s_2, \dots$ for each integer $k \geq 1$,
+
+$$ \text{(1)} \quad s_k = \frac{(-1)^k}{k!} $$
+
+and
+
+$$ \text{(2)} \quad s_{k - 1} = \frac{(-1)^{k - 1}}{(k - 1)!} $$
+
+Then $\dfrac{-s_{k - 1}}{k}$:
+
+$$ \frac{-s_{k - 1}}{k} = \frac{-1\left(\dfrac{(-1)^{k - 1}}{(k - 1)!}\right)}{k} \quad \text{ by substitution of (2)} $$
+
+$$ = \frac{\dfrac{(-1)^k}{(k - 1)!}}{k} $$
+
+$$ = \frac{(-1)^k}{k(k - 1)!} $$
+
+$$ = \frac{(-1)^k}{k!} $$
+
+$$ = s_k \quad \text{ by substitution of (1)} $$
+
 13. Let $t_0, t_1, t_2, \dots$ be defined by the formula $t_n = 2 + n$ for every
     integer $n \geq 0$. Show that this sequence satisfies the following
     recurrence relation for every integer $k \geq 2$:
 
 $$ t_k = 2t_{k - 1} - t_{k - 2} $$
+
+By the definition of $t_0, t_1, t_2, \dots $ for each integer $k \geq 2$,
+
+$$ \text{(1)} \quad t_k = 2 + k $$
+
+and
+
+$$ \text{(2)} \quad t_{k - 1} = 2 + (k - 1) = 1 + k $$
+
+and
+
+$$ \text{(3)} \quad t_{k - 2} = 2 + (k - 2) = k $$
+
+Then $2t_{k - 1} - t_{k - 2}$:
+
+$$ 2t_{k - 1} - t_{k - 2} = 2(1 + k) - k \quad \text{by substitution of (2) and (3)} $$
+
+$$ = 2 + 2k - k $$
+
+$$ = 2 + k $$
+
+$$ = t_k \quad \text{ by substitution of (1)} $$
 
 14. Let $d_0, d_1, d_2, \dots$ be defined by the formula $d_n = 3^n - 2^n$ for
     every integer $n \geq 0$. Show that this sequence satisfies the following
@@ -7201,14 +7351,104 @@ $$ t_k = 2t_{k - 1} - t_{k - 2} $$
 
 $$ d_k = 5d_{k - 1} - 6d_{k - 2} $$
 
+By the definition of $d_0, d_1, d_2, \dots$ for each integer $k \geq 2$,
+
+$$ \text{(1)} \quad d_k = 3^k - 2^k $$
+
+and
+
+$$ \text{(2)} \quad d_{k - 1} = 3^{k - 1} - 2^{k - 1} $$
+
+and
+
+$$ \text{(3)} \quad d_{k - 2} = 3^{k - 2} - 2^{k - 2} $$
+
+Then $5d_{k - 1} - 6d_{k - 2}$:
+
+$$ 5d_{k - 1} - 6d_{k - 2} = 5(3^{k - 1} - 2^{k - 1}) - 6(3^{k - 2} - 2^{k - 2}) \quad \text{ by substitution of (2) and (3)} $$
+
+$$ = 5(3^{k - 1} - 2^{k - 1}) - 6(3^{k - 2} - 2^{k - 2}) $$
+
+$$ = 5 \cdot 3^{k - 1} - 5 \cdot 2^{k - 1} - 6 \cdot 3^{k - 2} + 6 \cdot 2^{k - 2} $$
+
+$$ = 5 \cdot 3^{k - 1} - 5 \cdot 2^{k - 1} - (3 \cdot 2) \cdot 3^{k - 2} + (3 \cdot 2) \cdot 2^{k - 2} $$
+
+$$ = 5 \cdot 3^{k - 1} - 5 \cdot 2^{k - 1} - 2 \cdot 3^{k - 1} + 3 \cdot 2^{k - 1} $$
+
+$$ = 5 \cdot 3^{k - 1} - 2 \cdot 3^{k - 1} - 5 \cdot 2^{k - 1} + 3 \cdot 2^{k - 1} $$
+
+$$ = 3 \cdot 3^{k - 1} - 2 \cdot 2^{k - 1} $$
+
+$$ = 3^k - 2^k $$
+
+$$ = d_k \quad \text{ by substitution of (1)} $$
+
 15. For the sequence of Catalan numbers defined in Example 5.6.4, prove that for
     each integer $n \geq 1$,
 
-$$ C_n = \frac{1}{4n + 2}\binom{2n + 2}{n + 1}$$
+$$ C_n = \frac{1}{4n + 2}\binom{2n + 2}{n + 1} $$
+
+_Hint:_ Mathematical induction is not needed for the proof. Start with the
+right-hand side of the equation and use algebra to transform it into the
+left-hand side of the equation.
+
+Recall that:
+
+$$ C_n = \frac{1}{n + 1}\binom{2n}{n} $$
+
+Then $\dfrac{1}{4n + 2}\binom{2n + 2}{n + 1}$:
+
+$$ \dfrac{1}{4n + 2}\binom{2n + 2}{n + 1} = \frac{1}{2(2n + 1)}\left(\frac{(2n + 2)!}{(n + 1)!((2n + 2) - (n + 1))!}\right) \quad \text{ by definition of binomial} $$
+
+$$ = \frac{1}{2(2n + 1)}\left(\frac{(2n + 2)!}{(n + 1)!(n + 1)!}\right) $$
+
+$$ = \frac{1}{2(2n + 1)}\left(\frac{(2n + 2)(2n + 1)(2n)!}{(n + 1)(n!)(n + 1)(n!)}\right) \quad \text{ by definition of factorial} $$
+
+$$ = \frac{1}{\cancel{2(2n + 1)}}\left(\frac{\cancel{2}(n + 1)\cancel{(2n + 1)}(2n)!}{(n + 1)(n!)(n + 1)(n!)}\right) $$
+
+$$ = \frac{1}{1}\left(\frac{(n + 1)(2n)!}{(n + 1)(n!)(n + 1)(n!)}\right) $$
+
+$$ = \frac{\cancel{(n + 1)}(2n!)}{\cancel{(n + 1)}(n!)(n + 1)(n!)} $$
+
+$$ = \frac{(2n)!}{(n!)(n + 1)(n!)} $$
+
+$$ = \frac{1}{n + 1}\left(\frac{(2n)!}{(n!)(n!)}\right) $$
+
+$$ = \frac{1}{n + 1}\left(\frac{(2n)!}{(n!)(2n - n)!}\right) $$
+
+$$ = \frac{1}{n + 1}\binom{2n}{n} \quad \text{ by definition of binomial} $$
+
+$$ = C_n \quad \text{ by definition of Catalan} $$
 
 16. Use the recurrence relation and values for the Tower of Hanoi sequence
     $m_1, m_2, m_3, \dots$ discussed in Example 5.6.5 to compute $m_7$ and
     $m_8$.
+
+Recall that:
+
+$$ m_k = 2m_{k - 1} + 1 \quad \text{ recurrence relation} $$
+
+and
+
+$$ m_1 = 1 \quad \text{ initial conditions} $$
+
+In Example 5.6.5, we saw that:
+
+$$ m_2 = 2m_1 + 1 = 2 \cdot 1 + 1 = 3 $$
+
+$$ m_3 = 2m_2 + 1 = 2 \cdot 3 + 1 = 7 $$
+
+$$ m_4 = 2m_3 + 1 = 2 \cdot 7 + 1 = 15 $$
+
+$$ m_5 = 2m_4 + 1 = 2 \cdot 15 + 1 = 31 $$
+
+$$ m_6 = 2m_5 + 1 = 2 \cdot 31 + 1 = 63 $$
+
+Therefore, continuing the computations for $m_7$ and $m_8$:
+
+$$ m_7 = 2m_6 + 1 = 2 \cdot 63 + 1 = 127 $$
+
+$$ m_8 = 2m_7 + 1 = 2 \cdot 127 + 1 = 255 $$
 
 17. _Tower of Hanoi with Adjacency Requirement:_
 
@@ -7222,9 +7462,41 @@ $$ a_n = \left[\text{the minimum number of moves needed to transfer a tower of }
 
 a. Find $a_1, a_2$, and $a_3$.
 
+$$ a_1 = 2 $$
+
+$$ a_2 = 2 \text{(moves to move the top disk from pole A to pole C)} $$
+
+$$ +1 \text{(move to move the bottom disk from pole A to pole B)} $$
+
+$$ +2 \text{(moves to move top disk from pole C to pole A)} $$
+
+$$ +1 \text{(move to move the bottom disk from pole B to pole C)} $$
+
+$$ +2 \text{(move to move top disk from pole A to pole C)} $$
+
+$$ = 8 $$
+
+$$ a_3 = 8 + 1 + 8 + 1 + 8 = 26 $$
+
 b. Find $a_4$.
 
+$$ a_4 = 26 + 1 + 26 + 1 + 26 = 80 $$
+
 c. Find a recurrence relation for $a_1, a_2, a_3, \dots$. Justify your answer.
+
+For every integer $k \geq 2$,
+
+$$ a_k = a_{k - 1} \text{(moves to move the top } k - 1 \text{ disks from pole A to pole C)} $$
+
+$$ +1 \text{move to move the bottom disk from pole A to pole B} $$
+
+$$ +a_{k - 1} \text{(moves to move the top disk from pole C to pole A)} $$
+
+$$ +1 \text{(move to move the bottom disks from pole B to pole C)} $$
+
+$$ +a_{k - 1} \text{(moves to move the top disks from pole A to pole C)} $$
+
+$$ = 3a_{k - 1} + 2 $$
 
 18. _Tower of Hanoi with Adjacency Requirement:_
 
@@ -7234,14 +7506,101 @@ $$ b_n = \left[\text{the minimum number of moves needed to transfer a tower of }
 
 a. Find $b_1, b_2$, and $b_3$.
 
+$$ b_1 = 1 $$
+
+$$ b_2 = 4 $$
+
+$$ b_3 = 13 $$
+
 b. Find $b_4$.
+
+$$ b_4 = 40 $$
 
 c. Show that $b_k = a_{k - 1} + 1 + b_{k - 1}$ for each integer $k \geq 2$,
 where $a_1, a_2, a_3, \dots$ is the sequence defined in exercise 17.
 
+First move the top $k - 1$ disks from $A$ to $C$, which takes a minimum of
+$a_{k - 1}$ moves.
+
+Then move the remaining $k$th disk from $A$ to $B$, which takes a minimum of $1$
+move.
+
+Then move the $k - 1$ disks from $C$ to $B$, on top of the $k$th disk, which
+takes a minimum of $b_{k - 1}$ moves. (Moving from $A$ to $B$ is the same as
+moving from $C$ to $B$, the same number of moves).
+
+These moves are minimal because, due to the adjacency requirement, the top
+$k - 1$ disks (have to be) moved to $C$ first.
+
+Therefore:
+
+$$ b_k = a_{k - 1} + 1 + b_{k - 1} $$
+
 d. Show that $b_k \leq 3b_{k - 1} + 1$ for each integer $k \geq 2$.
 
+We need to show $a_{k - 1} \leq 2b_{k - 1}$ by part \(c\). This is true because
+we can first move $k - 1$ disks from $A$ to $B$ which takes a minimum of
+$b_{k - 1}$ moves, and then move them from $B$ to $C$, which takes a minimum of
+another $b_{k - 1}$ moves. Doing this results in $k - 1$ disks being moved from
+$A$ to $C$, which takes a minimum of $a_{k - 1}$ moves.
+
+Therefore:
+
+$$ a_{k - 1} \leq 2b_{k - 1} $$
+
 e. Show that $b_k = 3b_{k - 1} + 1$ for each integer $k \geq 2$.
+
+**Proof (by mathematical induction):**
+
+Let $P(k)$ by the equation $b_k = 3b_{k - 1} + 1$.
+
+_Basis Step:_
+
+Prove $P(2)$. That is:
+
+$$ b_2 = 3b_1 + 1 $$
+
+$$ 4 = 3(1) + 1 \quad \text{ by substitution of part (a)} $$
+
+$$ 4 = 4 $$
+
+Therefore $P(2)$ is true.
+
+_Inductive Step:_
+
+Suppose $P(k)$ is true where $k$ is any integer such that $k \geq 2$. That is:
+
+$$ b_{k} = 3b_{k - 1} + 1 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ b_{k + 1} = 3b_{(k + 1) - 1} + 1 = 3b_k + 1 $$
+
+We know, by part \(c\), that:
+
+$$ b_{k + 1} = a_k + 1 + b_k $$
+
+And we know that $a_k \leq 2b_k$ by part (d).
+
+We need to show $a_k \geq 2b_k$.
+
+When moving $k$ disks from $A$ to $C$, consider the largest disk. Due to the
+adjacency requirement, it has to move to $B$ first. So the top $k- 1$ disks must
+have moved to $C$ before that. Then for the largest disk to finally move from
+$B$ to $C$, the top $k - 1$ disks must have first moved from $C$ to $A$ to get
+out of the way. In the same way, the top $k - 1$ disks, on their way from $C$
+back to $B$, must have been moved to $B$ (on top of the largest disk) first,
+before reaching $A$ (This shows that at some point all the disks are on the
+middle pole.) This takes a minimum of $b_k$ moves. Then moving all the disks
+from $B$ to $C$ takes a minimum of $b_k$ moves. Therefore $a_k \geq 2b_k$.
+
+Thus:
+
+$$ b_{k + 1} = a_k + 1 + b_k = 2b_k + 1 + b_k = 3b_k + 1 $$
+
+Q.E.D.
 
 19. _Four-Pole Tower of Hanoi:_
 
