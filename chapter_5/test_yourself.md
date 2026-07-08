@@ -175,3 +175,32 @@ that the smaller subproblems have already been solved; solve the initial problem
    specified.
 
 sequence
+
+---
+
+Page 372
+
+**Test Yourself**
+
+1. To use iteration to find an explicit formula for a recursively defined
+   sequence, start with the _____ and use successive substitution into the _____
+   to look for a numerical pattern.
+
+2. At every step of the iteration process, it is important to eliminate _____.
+
+3. If a single number, say $a$, is added to itself $k$ times in one of the steps
+   of the iteration, replace the sum by the expression _____.
+
+4. If a single number, say $a$, is multiplied by itself $k$ times in one of the
+   steps of the iteration, replace the product by the expression _____.
+
+5. A general arithmetic sequence $a_0, a_1, a_2, \dots$ with initial value $a_0$
+   and fixed constant summand $d$ satisfies the recurrence relation _____ and
+   has the explicit formula _____.
+
+6. A general geometric sequence $a_0, a_1, a_2, \dots$ with initial value $a_0$
+   and fixed constant multiplier $r$ satisfies the recurrence relation _____ and
+   has the explicit formula _____.
+
+7. When an explicit formula for a recursively defined sequence has been obtained
+   by iteration, its correctness can be checked by _____.

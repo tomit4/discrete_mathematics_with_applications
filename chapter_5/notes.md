@@ -1000,3 +1000,33 @@ The **product from $i = 1$ to $n$ of the $a_i$**, denoted
 $\prod_{i = 1}^{n}{a_i}$, is defined by
 
 $$ \prod_{i = 1}^{1}{a_i} = a_1 \quad \text{ and } \quad \prod_{i = 1}^{n}{a_i} = \left(\prod_{i = 1}^{n - 1}{a_i}\right) \cdot a_n, \quad \text{ if } \quad n > 1 $$
+
+---
+
+Page 365
+
+**Definition**
+
+A sequence $a_0, a_1, a_2, \dots$ is called an **arithmetic sequence** if, and
+only if, there is a constant $d$ such that
+
+$$ a_k = a_{k - 1} + d \quad \text{ for each integer } k \geq 1 $$
+
+It follows that
+
+$$ a_n = a_0 + dn \quad \text{ for every integer } n \geq 0 $$
+
+---
+
+Page 366
+
+**Definition**
+
+A sequence $a_0, a_1, a_2, \dots$ is called a **geometric sequence** if, and
+only if, there is a constant $r$ such that
+
+$$ a_k = ra_{k - 1} \quad \text{ for each integer } k \geq 1 $$
+
+It follows that
+
+$$ a_n = a_0r^n \quad \text{ for each integer } n \geq 0 $$

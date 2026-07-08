@@ -8617,3 +8617,264 @@ Omitted.
     of $n$ odd integers that is even, then $n$ is even.
 
 Omitted.
+
+---
+
+Page 373
+
+**Exercise Set 5.7**
+
+1. The formula
+
+$$ 1 + 2 + 3 + \dots + n = \frac{n(n + 1)}{2} $$
+
+is true for every integer $n \geq 1$. Use this fact to solve each of the
+following problems:
+
+a. If $k$ is an integer and $k \geq 2$, find a formula for the expression
+$1 + 2 + 3 + \dots + (k - 1)$.
+
+b. If $n$ is an integer and $n \geq 1$, find a formula for the expression
+$5 + 2 + 4 + 6 + 8 + \dots + 2n$.
+
+c. If $n$ is an integer and $n \geq 1$, find a formula for the expression
+$3 + 3 \cdot 2 + 3 \cdot 3 + \dots + 3 \cdot n + n$.
+
+2. The formula
+
+$$ 1 + r + r^2 + \dots + r^n = \frac{r^{n + 1} - 1}{r - 1} $$
+
+is true for every real number $r$ except $r = 1$ and for every integer
+$n \geq 0$. Use this fact to solve each of the following problems:
+
+a. If $i$ is an integer and $i \geq 1$, find a formula for the expression
+$1 + 2 + 2^2 + \dots + 2^{i - 1}$.
+
+b. If $n$ is an integer and $n \geq 1$, find a formula for the expression
+$3^{n - 1} + 3^{n - 2} + \dots + 3^2 + 3 + 1$.
+
+c. If $n$ is an integer and $n \geq 2$, find a formula for the expression
+$2^n + 2^{n - 2} \cdot 3 + 2^{n - 3} \cdot 3 + \dots + 2^2 \cdot 3 + 2 \cdot 3 + 3$.
+
+d. If $n$ is an integer and $n \geq 1$, finda formula for the expression
+
+$$ 2^n - 2^{n - 1} + 2^{n - 2} - 2^{n - 3} + \dots + (-1)^{n - 1} \cdot 2 + (-1)^n $$
+
+In each of 3-15 a sequence is defined recursively. Use iteration to guess an
+explicit formula for the sequence. Use formulas from Section 5.2 to simplify
+your answers whenever possible.
+
+3. $a_k = ka_{k - 1}$, for each integer $k \geq 1$ $a_0 = 1$.
+
+4. $b_k = \dfrac{b_{k - 1}}{1 + b_{k - 1}}$, for each integer $k \geq 1$
+   $b_0 = 1$.
+
+5. $c_k = 3c_{k - 1} + 1$, for each integer $k \geq 2$ $c_1 = 1$.
+
+6. $d_k =2d_{k j 1} + 3$, for each integer $k \geq 2$, $d_1 = 2$.
+
+7. $e_k = 4e_{k - 1} + 5$, for each integer $k \geq 1$ $e_0 = 2$.
+
+8. $f_k = f_{k - 1} + 2^k$, for each integer $k \geq 2$ $f_1 = 1$.
+
+9. $g_k = \dfrac{g_{k - 1}}{g_{k - 1} + 2}$, for each integer $k \geq 2$
+   $g_1 = 1$.
+
+10. $h_k = 2^k - h_{k - 1}$, for each integer $k \geq 1$ $h_0 = 1$.
+
+11. $p_k, = p_{k - 1} + 2 \cdot 3^k$, for each integer $k \geq 2$ $p_1 = 2$.
+
+12. $s_k = s_{k - 1} + 2k$, for each integer $k \geq 1$ $s_0 = 3$.
+
+13. $t_k = t_{k - 1} + 3k + 1$, for each integer $k \geq 1$ $t_0 = 0$.
+
+14. $x_k = 3x_{k - 1} + k$, for each integer $k \geq 2$ $x_1 = 1$.
+
+15. $y_k = y_{k - 1} + k^2$, for each integer $k \geq 2$ $y_1 = 1$.
+
+16. Solve the recurrence relation obtained as the answer to exercise 17\(c\) of
+    Section 5.6.
+
+17. Solve the recurrence relation obtained as the answer to exercise 21\(c\) of
+    Section 5.6.
+
+18. Suppose $d$ is a fixed constant and $a_0, a_1, a_2, \dots$ is a sequence
+    that satisfies the recurrence relation $a_k = a_{k - 1} + d$, for each
+    integer $k \geq 1$. Use mathematical induction to prove that
+    $a_n = a_0 + nd$, for every integer $n \geq 0$.
+
+19. A worker is promised a bonus if he can increase his productivity by 2 units
+    a day for a period of 30 days. If on day 0 he produces 170 units, how many
+    units must he produce on day 30 to qualify for the bonus?
+
+20. A runner targets herself to improve her time on a certain course by 3
+    seconds a day. If on day 0 she runs the course in 3 minutes, how fast must
+    she run it on day 14 to stay on target?
+
+21. Suppose $r$ is a fixed constant and $a_0, a_1, a_2, \dots$ is a sequence
+    that satisfies the recurrence 4elation $a_k = ra_{k - 1}$, for each integer
+    $k \geq 1$ and $a_0 = a$. Use mathematical induction to prove that
+    $a_n = ar^n$, for every integer $n \geq 0$.
+
+22. As shown in Example 5.6.8, if a bank pays interest at a rate of $i$
+    compounded $m$ times a year, then the amount of money $P_k$ at the end of
+    $k$ time periods (where one time period = $\dfrac{1}{m}$<sup>th</sup> of a
+    year) satisfies the recurrence relation
+    $P_k = \left[1 + \left(\dfrac{1}{m}\right)\right]P_{k - 1}$ with initial
+    condition $P_0 = \text{ the initial amount deposited}$. Find an explicit
+    formula for $P_n$.
+
+23. Suppose the population of a country increases at a steady rate of 3% per
+    year. If the population is 50 million at a certain time, what will it be 25
+    years later?
+
+24. A chain letter works as follows: One person sends a copy of the letter to
+    five friends, each of whom sends a copy to five friends, each of whom sends
+    a copy to five friends, each of whom sends a copy to five friends, and so
+    forth. How many people will have received copies of the letter after the
+    twentieth reception of this process, assuming no person receives more than
+    one copy?
+
+25. A certain computer algorithm executes twice as many operations when it is
+    run with an input size $k$ as when it is run with an input size $k - 1$
+    (where $k$ is an integer that is greater than $1$). When the algorithm is
+    run with an input size $1$, it executes seven operations. How many
+    operations does it execute when it is run with an input size of $25$?
+
+26. A person saving for retirement makes an initial deposit of $1,000 to a bank
+    account earning interest at a rate of 3% per year compounded monthly, and
+    each month she adds an addition $200 to the account.
+
+a. For each nonnegative integer $n$, let $A_n$ be the amount in the account at
+the end of $n$ months. Find the recurrence relation relating $A_k$ to
+$A_{k - 1}$.
+
+b. Use iteration to find an explicit formula for $A_n$.
+
+c. Use mathematical induction to prove the correctness of the formula you
+obtained in part (b).
+
+d. How much will the account be worth at the end of 20 years? At the end of 40
+years?
+
+e. In how many years will the account be worth $10,000?
+
+27. A person borrows $3,000 on a bank credit card at a nominal rate of 18% per
+    year, which is actually charged at a rate of 1.5% per month.
+
+a. What is the annual percentage yield (APY) for the card? (See Example 5.6.8
+for a definition of APY.)
+
+b. Assume that the person does not place any additional charges on the card and
+pays the bank $150 each month to pay off the loan. Let $B_n$ be the balance owed
+on the card after $n$ months. Find an explicit formula for $B_n$.
+
+c. How long will be required to pay off the debt?
+
+d. What is the total amount of money the person will have paid for the loan?
+
+In 28-42 use mathematical induction to verify the correctness of the formula you
+obtained in the referenced exercise.
+
+28. Exercise 3
+
+29. Exercise 4
+
+30. Exercise 5
+
+31. Exercise 6
+
+32. Exercise 7
+
+33. Exercise 8
+
+34. Exercise 9
+
+35. Exercise 10
+
+36. Exercise 11
+
+37. Exercise 12
+
+38. Exercise 13
+
+39. Exercise 14
+
+40. Exercise 15
+
+41. Exercise 16
+
+42. Exercise 17
+
+In each of 43-49 a sequence is defined recursively. (a) Use iteration to guess
+an explicit formula for the sequence. (b) Use strong mathematical induction to
+verify that the formula of part (a) is correct.
+
+43. $a_k = \dfrac{a_{k - 1}}{2a_{k - 1} - 1}$, for each integer $k \geq 1$
+    $a_0 = 2$.
+
+44. $b_k = \dfrac{2}{b_{k - 1}}$, for each integer $k \geq 2$ $b_1 = 1$.
+
+45. $v_k = v_{\lfloor \dfrac{k}{2} \rfloor} + v_{\lfloor \dfrac{(k + 1)}{2}\rfloor} + 2$,
+    for each integer $k \geq 2$ $v_1 = 1$.
+
+46. $s_k = 2s_{k - 2}$, for each integer $k \geq 2$ $s_0 = 1$, $s_1 = 2$.
+
+47. $t_k = k - t_{k - 1}$, for each integer $k \geq 1$ $t_0 = 0$.
+
+48. $w_k = w_{k - 2} + k$, for each integer $k \geq 3$ $w_1 = 1$, $w_2 = 2$.
+
+49. $u_k = u_{k - 2} \cdot u_{k - 1}$, for each integer $k \geq 2$
+    $u_0 = u_1 = 2$
+
+In 50 and 51 determine whether the given recursively defined sequence satisfies
+the explicit formula $a_n = (n - 1)^2$, for every integer $n \geq 1$.
+
+50. $a_k = 2a_{k - 1} + k - 1$, for each integer $k \geq 2$ $a_1 = 0$.
+
+51. $a_k = 4a_{k - 1} - k + 3$, for each integer $k \geq 2$ $a_1 = 0$.
+
+52. A single line divides a plane into two regions. Two lines (by crossing) can
+    divide a plane into four regions; three lines can divide it into seven
+    regions (see the figure). Let $P_n$ be the maximum number of regions into
+    which $n$ lines divide a plane, where $n$ is a positive integer.
+
+[See Page 375 for image]
+
+a. Derive a recurrence relation for $P_k$ in terms of $P_{k - 1}$, for each
+integer $k \geq 2$.
+
+b. Use iteration to guess an explicit formula for $P_n$.
+
+53. Compute $\left[\begin{array}{cc} 1 & 1 \\ 1 & 0 \\ \end{array}\right]^n$ for
+    small values of $n$ (up to about 5 or 6). Conjecture explicit formulas for
+    the entries in this matrix, and prove your conjecture using mathematical
+    induction.
+
+54. In economics the behavior of an economy from one period to another is often
+    modeled by recurrence relations. Let $Y_k$ be the income in period $k$ and
+    $C_k$ be the consumption in period $k$. In one economic model, income in any
+    period is assumed to be the sum of consumption in that period plus
+    investment and government expenditures (which are assumed to be constant
+    from period to period), and consumption in each period is assumed to be a
+    linear function of the income of the preceding period. That is,
+
+$$ Y_k = C_k + E $$
+
+where $E$ is the sum of investment plus government expenditures.
+
+$$ C_k = c + mY_{k - 1} $$
+
+where $c$ and $m$ are constants.
+
+Substituting the second equation into the first gives
+$Y_k = E + c + mY_{k - 1}$.
+
+a. Use iteration on the above recurrence relation to obtain
+
+$$ Y_n = (E + c)\left(\frac{m^n - 1}{m - 1}\right) + m^nY_0 $$
+
+for every integer $n \geq 1$.
+
+b. (For students who have studied calculus) Show that if $0 < m < 1$, then
+$\lim\limits_{m \to \infty}Y_n = \dfrac{E + c}{1 - m}$.
