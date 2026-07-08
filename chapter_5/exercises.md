@@ -7612,9 +7612,33 @@ from the left-most to the right-most pole.
 
 a. Find $s_1, s_2$, and $s_3$.
 
+$$ s_1 = 1, s_2 = 1 + 1 + 1 = 3, s_3 = s_1 + (1 + 1 + 1) + s_1 = 5 $$
+
 b. Find $s_4$.
 
+$$ s_4 = s_2 + (1 + 1 + 1) + s_2 = 9 $$
+
 c. Show that $s_k \leq 2s_{k - 2} + 3$ for every integer $k \geq 3$.
+
+**Proof:**
+
+Let's label the poles A-B-C-D, from left to right.
+
+First notice that, since there is no adjacency requirement, the number of moves
+to move A to D is equal to the number of moves from any pole to any other pole.
+So, moving $k$ disks from A to, say, B, still takes $s_k$ moves.
+
+First move the top $k - 2$ disks from A to B, in $s_{k - 2}$ moves. Then move
+the second largest disk from A to C. Then move the largest dis to D. Then move
+the second largest disk from C to D, on top of the largest. Finally, move
+$k - 2$ disks from B to D. This takes $s_{k - 2} + 1 + 1 + 1 + s_{k - 2}$ moves.
+
+This procedure gives us the minimum number of moves, because there is no
+adjacency requirement and we are taking advantage of the free space in all 4
+poles. (Notice that this is faster than moving the top $k - 1$ disks somewhere
+else first, then moving the largest disk to D, then moving the $k - 2$ disks.
+Similarly it's faster than moving $k - 3$ disks first, then moving the bottom 3,
+since there are not enough empty poles to make that efficient.)
 
 20. _Tower of Hanoi Poles in a Circle:_
 
@@ -7627,9 +7651,50 @@ disks from one pole to the next adjacent pole in the clockwise direction.
 
 a. Justify the inequality $c_k \leq 4c_{k - 1} + 1$ for each integer $k \geq 2$.
 
+**Proof:**
+
+Label the poles A, B, C, in clockwise order $A \to B \to C \to A$.
+
+To move $k$ disks from $A$ to $B$, first move the top $k - 1$ disks from $A$ to
+$B$ (which takes $c_{k - 1}$), then from $B$ to $C$ (which takes $c_{k - 1}$),
+then move the largest disk from $A$ to $B$ (which takes 1 move), then move the
+$k - 1$ disks from $C$ to $A$ (which takes $c_{k - 1}$), then from $A$ to $B$ on
+top of the largest disk (which takes $c_{k - 1}$).
+
+So the total moves made are $4c_{k - 1} + 1$. This shows that moving $k$ disks
+from $A$ to $B$ can be accomplished in $4c_{k - 1} + 1$ moves, so
+$c_k \leq 4c_{k - 1} + 1$.
+
 b. The expression $4c_{k - 1} + 1$ is not the minimum number of moves needed to
 transfer a pile of $k$ disks from one pole to another. Explain, for example, why
 $c_3 \neq 4c_2 + 1$.
+
+**Proof:**
+
+$$
+c_2 = \\
+1  \text{(move to transfer the top disk from A to B)} \\
++1 \text{(move to transfer the top disk from B to C)} \\
++1 \text{(move to transfer the bottom disk from A to B)} \\
++1 \text{(move to transfer the top disk from C to A)} \\
++1 \text{(move to transfer the top disk from A to B)} \\
+$$
+
+$$
+c_3 = \\
+1  \text{(move to transfer the top disk from A to B)} \\
++1 \text{(move to transfer the top disk from B to C)} \\
++1 \text{(move to transfer the middle disk from A to B)} \\
++1 \text{(move to transfer the top disk from C to A)} \\
++1 \text{(move to transfer the middle disk from B to C)} \\
++1 \text{(move to transfer the top disk from A to B)} \\
++1 \text{(move to transfer the top disk from B to C)} \\
+$$
+
+After these 7 steps have been completed, the bottom disk can be transferred from
+A to B. At that point the top two disks are on C, and a modified version of the
+initial seven steps can be used to transfer them from C to B. Thus the total
+number of steps is $7 + 1 + 7 = 15$, and $15 < 21 = 4c_2 + 1$.
 
 21. _Double Tower of Hanoi:_
 
@@ -7644,9 +7709,72 @@ to another.
 
 a. Find $t_1$ and $t_2$.
 
+Suppose the poles are labeled A, B, and C such that $A \to B \to C$.
+
+Let $s_1 = \text{small disk 1}$, and $s_2 = \text{small disk 2}$.
+
+$$
+t_1 = \\
+1 & s_1 \to B \\
++1 & s_2 \to B \\
+= 2
+$$
+
+Let $m_1 = \text{medium disk 1}$, and $m_2 = \text{medium disk 2}$.
+
+$$
+t_2 =
+1 & s_1 \to B \\
++1 & s_2 \to B \\
++1 & s_1 \to C \\
++1 & s_2 \to C \\
++1 & m_1 \to B \\
++1 & m_2 \to B \\
++1 & s_1 \to B \\
++1 & s_2 \to B \\
+= 8
+$$
+
 b. Find $t_3$.
 
+Let $l_1 = \text{large disk 1}$, and $l_2 = \text{large disk 2}$.
+
+$$
+t_3 =
+1 & s_1 \to B \\
++1 & s_2 \to B \\
++1 & s_2 \to C \\
++1 & s_1 \to C \\
++1 & m_1 \to B \\
++1 & m_2 \to B \\
++1 & s_1 \to B \\
++1 & s_2 \to B \\
++1 & s_2 \to A \\
++1 & s_1 \to A \\
++1 & m_2 \to C \\
++1 & m_1 \to C \\
++1 & s_1 \to B \\
++1 & s_2 \to B \\
++1 & s_2 \to C \\
++1 & s_1 \to C \\
++1 & l_1 \to B \\
++1 & l_2 \to B \\
++1 & s_1 \to B \\
++1 & s_2 \to B \\
++1 & s_2 \to A \\
++1 & s_1 \to A \\
++1 & m_1 \to B \\
++1 & m_2 \to B \\
++1 & s_1 \to B \\
++1 & s_2 \to B \\
+= 26
+$$
+
 c. Find a recurrence relation for $t_1, t_2, t_3, \dots$.
+
+$$ t_1 = 2, t_2 = 8, t_3 = 26 $$
+
+$$ t_n = 3t_{n - 1} + 2 \quad n \geq 2 $$
 
 22. _Fibonacci Variation:_
 
@@ -7659,13 +7787,58 @@ thereafter give birth to four new male/female pairs at the end of every month.
 
 (2) No rabbits die.
 
-a. Let $r_n = \text{ the number of rabbits alive at the end of month } n$, for
+a. Let
+$r_n = \text{ the number of pairs of rabbits alive at the end of month } n$, for
 each integer $n \geq 1$, and let $r_0 = 1$. Find a recurrence relation for
 $r_0, r_1, r_2, \dots$. Justify your answer.
 
+This is similar to example 5.6.6, but instead of giving birth to one new pair,
+each male/female pair of rabbits gives birth to two new pairs after the first
+month of life.
+
+**Proof:**
+
+At $r_0 = 1$, as there is only 1 pair of rabbits and they are not yet fertile.
+$r_1 = 1$, as they are no yet fertile until month 2. At month 2, this pair has
+four pairs, resulting in five pairs of rabbits. $r_2 = 4 + 1 = 5$.
+
+The four new pairs can only come from the fertile pairs, which become fertile at
+$n - 2$ months, where $n \in \mathbb{Z}^+ \wedge n \geq 0$. The total of
+infertile pairs can be calculated simply by looking at $r_{n - 1}$. Therefore
+the total number of pairs of rabbits at $n$ months can be expressed by the
+recurrence relation:
+
+$$ r_n = 4(r_{n - 2}) + r_{n - 1} $$
+
 b. Compute $r_0, r_1, r_2, r_3, r_4, r_5$, and $r_6$.
 
+$$
+r_0 = 1 \\
+r_1 = 1 \\
+r_2 = 4(1) + 1 = 5 \\
+r_3 = 4(1) + 5 = 9 \\
+r_4 = 4(5) + 9 = 29 \\
+r_5 = 4(9) + 29 = 65 \\
+r_6 = 4(29) + 65 = 181 \\
+$$
+
 c. How many rabbits will there be at the end of the year?
+
+$$
+r_0 = 1 \\
+r_1 = 1 \\
+r_2 = 4(1) + 1 = 5 \\
+r_3 = 4(1) + 5 = 9 \\
+r_4 = 4(5) + 9 = 29 \\
+r_5 = 4(9) + 29 = 65 \\
+r_6 = 4(29) + 65 = 181 \\
+r_7 = 4(65) + 181 = 441 \\
+r_8 = 4(181) + 441 = 1165 \\
+r_9 = 4(441) + 1165 = 2929 \\
+r_{10} = 4(1165) + 2929 = 7589 \\
+r_{11} = 4(2929) + 7589 = 19305 \\
+r_{12} = 4(7589) + 19305 = 49661 \\
+$$
 
 23. _Fibonacci Variation:_
 
@@ -7682,14 +7855,78 @@ $s_n = \text{ the number of pairs of rabbits alive at the end of month } n$, for
 each integer $n \geq 1$, and let $s_0 = 1$. Find a recurrence relation for
 $s_0, s_1, s_2, \dots$. Justify your answer.
 
+**Proof:**
+
+We are given that in the beginning, there is only a single pair of rabbits, so
+$s_0 = 1$. Since the rabbits are not fertile for the first _two_ months of life,
+this means that $s_1 = 1$ and $s_2 = 1$. Afterwards which the pair of rabbits is
+fertile and will give birth to three pairs of rabbits. So $s_3 = 3s_0 + s_2$.
+
+The amount of given rabbits at $n$ months would be $3$ times the rabbits that
+are fertile, which are any rabbits that exist at $n - 3$ months ($s_{n - 3}$)
+plus the amount of infertile rabbits, which is just $s_{n - 1}$ rabbits. This
+gives the recurrence relation:
+
+$$ s_n = 3s_{n - 3} + s_{n - 1} $$
+
 b. Compute $s_0, s_1, s_2, s_3, s_4$, and $s_5$.
 
+$$
+s_0 = 1 \\
+s_1 = 1 \\
+s_2 = 1 \\
+s_3 = 3(1) + (1) = 4 \\
+s_4 = 3(1) + (4) = 7 \\
+s_5 = 3(1) + (7) = 10 \\
+$$
+
 c. How many rabbits will there be at the end of the year?
+
+$$
+s_0 = 1 \\
+s_1 = 1 \\
+s_2 = 1 \\
+s_3 = 3(1) + (1) = 4 \\
+s_4 = 3(1) + (4) = 7 \\
+s_5 = 3(1) + (7) = 10 \\
+s_6 = 3(4) + (10) = 22 \\
+s_7 = 3(7) + (22) = 43 \\
+s_8 = 3(10) + (43) = 73 \\
+s_9 = 3(22) + (73) = 139 \\
+s_{10} = 3(43) + (139) = 268 \\
+s_{11} = 3(73) + (268) = 487 \\
+s_{12} = 3(139) + (487) = 904 \\
+$$
 
 In 24-34, $F_0, F_1, F_2, \dots$ is the Fibonacci sequence.
 
 24. Use the recurrence relation and values for $F_0, F_1, F_2, \dots$ given in
     Example 5.6.6 to compute $F_{13}$ and $F_{14}$.
+
+The recurrence relation and values given from Example 5.6.6 are:
+
+$$ F_k = F_{k - 1} + F{k - 2} \quad \text{ recurrence relation} $$
+
+$$ F_0 = 1, F_1 = 1 \quad \text{ initial conditions} $$
+
+Luckily, 5.6.6 also gives us $F_2$ through $F_{12}$, so now to calculate
+$F_{13}$ and $F_{14}$:
+
+$$
+F_2 = F_1 + F_0 = 1 + 1 = 2 \\
+F_3 = F_2 + F_1 = 2 + 1 = 3 \\
+F_4 = F_3 + F_2 = 3 + 2 = 5 \\
+F_5 = F_4 + F_3 = 5 + 3 = 8 \\
+F_6 = F_5 + F_4 = 8 + 5 = 13 \\
+F_7 = F_6 + F_5 = 13 + 8 = 21 \\
+F_8 = F_7 + F_6 = 21 + 13 = 34 \\
+F_9 = F_8 + F_7 = 34 + 21 = 55 \\
+F_{10} = F_9 + F_8 = 55 + 34 = 89 \\
+F_{11} = F_{10} + F_9 = 89 + 55 = 144 \\
+F_{12} = F_{11} + F_{10} = 144 + 89 = 233 \\
+F_{13} = F_{12} + F_{11} = 233 + 144 = 377 \\
+F_{14} = F_{13} + F_{12} = 377 + 233 = 610 \\
+$$
 
 25. The Fibonacci sequence satisfies the recurrence relation
     $F_k = F_{k - 1} + F_{k - 2}$, for every integer $k \geq 2$.
@@ -7698,30 +7935,190 @@ a. Explain why the following is true:
 
 $$ F_{k + 1} = F_k + F_{k - 1} \text{ for each integer } k \geq 1 $$
 
+Each term of the Fibonacci sequence beyond the second equals the sum of the
+previous two. For any integer $k \geq 1$, the two terms previous to $F_{k + 1}$
+are $F_k$ and $F_{k - 1}$. Hence for every integer $k \geq 1$,
+$F_{k + 1} = F_k + F_{k - 1}$.
+
 b. Write an equation expressing $F_{k + 2}$ in terms of $F_{k + 1}$ and $F_k$.
+
+The Fibonacci sequence satisfies the recurrence relation:
+
+$$ F_{k + 2} = F_{k + 1} + F_k $$
+
+for each integer $k \geq 0$.
 
 c. Write an equation expressing $F_{k + 3}$ in terms of $F_{k + 2}$ and
 $F_{k + 1}$.
 
+The Fibonacci sequence satisfies the recurrence relation:
+
+$$ F_{k + 3} = F_{k + 2} + F_{k + 1} $$
+
+for each integer $k \geq -1$.
+
 26. Prove that $F_k = 3F_{k - 3} + 2F_{k - 4}$ for every integer $k \geq 4$.
+
+**Proof:**
+
+Since we are trying to express this in terms of $F_k$, we must look recursively
+at the definitions of it's preceding two terms until we see them as expressions
+of $F_{k - 3}$ and $F_{k - 4}$ instead of $F_{k - 1}$ and $F_{k - 2}$.
+
+$$ F_k = F_{k - 1} + F_{k - 2} $$
+
+$$ = (F_{k - 2} + F_{k - 3}) + (F_{k - 3} + F_{k - 4}) $$
+
+$$ = ((F_{k - 3} + F_{k - 4}) + F_{k - 3}) + (F_{k - 3} + F_{k - 4}) $$
+
+$$ = F_{k - 3} + F_{k - 4} + F_{k - 3} + F_{k - 3} + F_{k - 4} $$
+
+$$ = 3F_{k - 3} + 2F_{k - 4} $$
 
 27. Prove that $F_k^2 - F_{k - 1}^2 = F_kF_{k + 1} - F_{k - 1}F_{k + 1}$, for
     every integer $k \geq 1$.
 
+The standard Fibonacci sequence from 5.6.6 is:
+
+$$ F_k = F_{k - 1} + F_{k - 2} $$
+
+To find the given equation to be true, we must convert the left-hand side to the
+right hand-side. Meaning we must express the given Fibonacci recurrence relation
+in terms of $F_{k}$, $F_{k + 1}$, and $F_{k - 1}$.
+
+$$ F_k^2 - F_{k - 1}^2 = (F_k - F_{k - 1})(F_k + F_{k - 1}) \quad \text{ by algebra of the difference between two squares} $$
+
+$$ = (F_k - F_{k - 1})F_{k + 1} \quad \text{ by the definition of the Fibonacci sequence} $$
+
+$$ = F_kF_{k + 1} - F_{k - 1}F_{k + 1} \quad \text{ by distribution} $$
+
 28. Prove that $F_{k + 1}^2 - F_k^2 - F_{k - 1}^2 = 2F_kF_{k - 1}$, for each
     integer $k \geq 1$.
+
+$$ F_{k + 1} = F_k + F_{k - 1} $$
+
+$$ F_{k + 1}^2 = (F_k + F_{k - 1})^2 $$
+
+$$ = (F_k + F_{k - 1})(F_k + F_{k - 1}) $$
+
+$$ = F_k^2 + 2F_{k}F_{k - 1} + F_{k - 1}^2 $$
+
+$$ (F_{k + 1}^2) - F_k^2 - F_{k - 1}^2 = (F_k^2 + 2F_{k}F_{k - 1} + F_{k - 1}^2) - F_k^2 - F_{k - 1}^2 $$
+
+$$ = 2F_kF_{k - 1} $$
 
 29. Prove that $F_{k + 1}^2 - F_k^2 = F_{k - 1}F_{k + 2}$, for every integer
     $k \geq 1$.
 
+$$ F_{k + 1} = F_k + F_{k - 1} $$
+
+$$ F_{k + 1}^2 = (F_k + F_{k - 1})^2 $$
+
+$$ = (F_k + F_{k - 1})(F_k + F_{k - 1}) $$
+
+$$ = F_k^2 + 2F_kF_{k - 1} + F_{k - 1}^2 $$
+
+$$ (F_{k + 1}^2) - F_k^2 = (F_k^2 + 2F_kF_{k - 1} + F_{k - 1}^2 ) - F_k^2 $$
+
+$$ = 2F_kF_{k - 1} + F_{k - 1}^2 $$
+
+$$ = F_{k - 1}(2F_k + F_{k - 1}) $$
+
+$$ = F_{k - 1}(F_{k - 1} + F_k + F_k) $$
+
+$$ = F_{k - 1}((F_k + F_{k - 1}) + F_k) $$
+
+$$ = F_{k - 1}((F_{k + 1}) + F_k) $$
+
+$$ = F_{k - 1}(F_{k + 1} + F_k) $$
+
+$$ = F_{k - 1}(F_{k + 2}) $$
+
+$$ = F_{k - 1}F_{k + 2} $$
+
 30. Use mathematical induction to prove that for each integer $n \geq 0$,
     $F_{n + 2}F_n - F_{n + 1}^2 = (-1)^n$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation $F_{n + 2}F_n - F_{n + 1}^2 = (-1)^n$ for each
+integer $n \geq 0$.
+
+_Basis Step:_
+
+Prove $P(0)$. That is:
+
+$$ F_{0 + 2}F_0 - F_{0 + 1}^2 = (-1)^0 $$
+
+$$ F_{2}F_0 - F_{1}^2 = 1 $$
+
+$$ (2)(1) - (1)^2 = 1 $$
+
+$$ 2 - 1 = 1 $$
+
+$$ 1 = 1 $$
+
+Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Suppose $P(k)$ for any integer $k \geq 0$. That is:
+
+$$ F_{k + 2}F_k - F_{k + 1}^2 = (-1)^k $$
+
+This is the inductive hypothesis.
+
+Note that we might need the inductive hypothesis in this form:
+
+$$ F_{k + 1}^2 = F_{k + 2}F_k - (-1)^k $$
+
+Prove $P(k + 1)$, that is:
+
+$$ F_{(k + 1) + 2}F_{k + 1} - F_{(k + 1) + 1}^2 = (-1)^{k + 1} $$
+
+Alternatively:
+
+$$ F_{k + 3}F_{k + 1} - F_{k + 2}^2 = (-1)^{k + 1} $$
+
+Let's evaluate the left-hand side of this equality:
+
+$$ F_{k + 3}F_{k + 1} - F_{k + 2}^2 $$
+
+$$ = (F_{k + 2} + F_{k + 1})F_{k + 1} - F_{k + 2}^2 $$
+
+$$ = F_{k + 2}F_{k + 1} + (F_{k + 1}^2) - F_{k + 2}^2 $$
+
+By the inductive hypothesis, we can substitute thus:
+
+$$ = F_{k + 2}F_{k + 1} + (F_{k + 2}F_k - (-1)^k) - F_{k + 2}^2 $$
+
+$$ = F_{k + 1}(F_{k + 1} + F_k - F_{k + 2}) - (-1)^k $$
+
+$$ = F_{k + 1}((F_{k + 1} + F_k) - F_{k + 2}) - (-1)^k $$
+
+$$ = F_{k + 1}((F_{k + 2}) - F_{k + 2}) - (-1)^k $$
+
+$$ = F_{k + 1}(F_{k + 2} - F_{k + 2}) - (-1)^k $$
+
+$$ = F_{k + 1}(0) - (-1)^k $$
+
+$$ = -(-1)^k $$
+
+$$ = (-1) \cdot (-1)^k $$
+
+$$ = (-1)^{k + 1} $$
+
+Q.E.D.
 
 31. Use strong mathematical induction to prove that $F_n < 2^n$ for every
     integer $n \geq 1$.
 
+Omitted.
+
 32. Prove that for each integer $n \geq 0$, $\text{gcd}(F_{n + 1}, F_n) = 1$.
     (The definition of $\text{gcd}$ is given in Section 4.10.)
+
+Omitted.
 
 33. It turns out that the Fibonacci sequence satisfies the following explicit
     formula: For every integer $F_n \geq 0$,
@@ -7731,12 +8128,89 @@ $$ F_n = \frac{1}{\sqrt{5}}\left[\left(\frac{1 + \sqrt{5}}{2}\right)^{n + 1} - \
 Verify that the sequence defined by this formula satisfies the recurrence
 relation $F_k = F_{k - 1} + F_{k - 2}$ for every integer $k \geq 2$.
 
+**Proof:**
+
+Let $x = \left(\dfrac{1 + \sqrt{5}}{2}\right)$ and
+$y = \left(\dfrac{1 - \sqrt{5}}{2}\right)$.
+
+Note that:
+
+$$ x^2 = \left(\frac{1 + \sqrt{5}}{2}\right)^2 $$
+
+$$ = \frac{(1 + \sqrt{5})(1 + \sqrt{5})}{4} $$
+
+$$ = \frac{1 + 2\sqrt{5} + 5 }{4} $$
+
+$$ = \frac{6 + 2\sqrt{5}}{4} $$
+
+Similarly, note that:
+
+$$ y^2 = \left(\frac{1 - \sqrt{5}}{2}\right)^2 $$
+
+$$ y^2 = \frac{(1 - \sqrt{5})(1 - \sqrt{5})}{4} $$
+
+$$ y^2 = \frac{1 - 2\sqrt{5} + 5}{4} $$
+
+$$ y^2 = \frac{6 - 2\sqrt{5}}{4} $$
+
+Also notice that:
+
+$$ x + 1 = \left(\frac{1 + \sqrt{5}}{2}\right) + 1 $$
+
+$$ x + 1 = \frac{1 + \sqrt{5}}{2} + \frac{2}{2} $$
+
+$$ x + 1 = \frac{3 + \sqrt{5}}{2} $$
+
+$$ x + 1 = \left(\frac{3 + \sqrt{5}}{2}\right)\left(\frac{2}{2}\right) $$
+
+$$ x + 1 = \frac{6 + 2\sqrt{5}}{4} $$
+
+$$ x + 1 = \frac{6 + 2\sqrt{5}}{4} = x^2 $$
+
+Similarly:
+
+$$ y + 1 = \left(\frac{1 - \sqrt{5}}{2}\right) + 1 $$
+
+$$ = \left(\frac{1 - \sqrt{5}}{2}\right) + \frac{2}{2} $$
+
+$$ = \frac{3 - \sqrt{5}}{2} $$
+
+$$ = \left(\frac{3 - \sqrt{5}}{2}\right)\left(\frac{2}{2}\right) $$
+
+$$ = \frac{6 - 2\sqrt{5}}{4} = y^2 $$
+
+Suppose $k \in \mathbb{Z}$ and $k \geq 2$.
+
+We are trying to prove that:
+
+$$ \frac{1}{\sqrt{5}}[x^k - y^k] = \frac{1}{\sqrt{5}}(x^{k - 1} - y^{k - 1}) + \frac{1}{\sqrt{5}}(x^{k - 2} - y^{k - 2}) $$
+
+Since we know that $x^2 = x + 1$ and $y^2 = y + 1$, it follows that:
+
+$$ x^k - y^k $$
+
+$$ = x^2x^{k - 2} - y^2y^{k - 2} $$
+
+$$ = (x + 1)x^{k - 2} - (y + 1)y^{k - 2} $$
+
+$$ = ((x \cdot x^{k - 2}) + (1 \cdot x^{k - 2})) - ((y \cdot y^{k - 2}) + (1 \cdot y^{k - 2}))  $$
+
+$$ = x^{k - 1} + x^{k - 2} - y^{k - 1} - y^{k - 2} $$
+
+$$ = x^{k - 1} - y^{k - 1} + x^{k - 2} - y^{k - 2} $$
+
+Q.E.D.
+
 34. (For students who have studied calculus) Find
     $\lim\limits_{n \to \infty}\left(\dfrac{F_{n + 1}}{F_n}\right)$, assuming
     that the limit exists.
 
+Omitted.
+
 35. (For students who have studied calculus) Prove that
     $\lim\limits_{n \to \infty}\left(\dfrac{F_{n + 1}}{F_n}\right)$ exists.
+
+Omitted.
 
 36. (For students who have studied calculus) Define $x_0, x_1, x_2, \dots$ as
     follows:
@@ -7746,6 +8220,8 @@ $$ x_k = \sqrt{2 + x_{k - 1}} \quad \text{ for each integer } k \geq 1 $$
 $$ x_0 = 0 $$
 
 Find $\lim\limits_{n \to \infty}x_n$. (Assume that the limit exists.)
+
+Omitted.
 
 37. _Compound Interest:_
 
@@ -7757,10 +8233,28 @@ initial amount deposited.
 
 a. Find a recurrence relation for $R_0, R_1, R_2, \dots$. Justify your answer.
 
+Since the account pays 4% annual interest compounded quarterly, the total
+interest is $\left(\frac{0.04}{4}\right) = 0.01$ or 1%.
+
+Let $k \in \mathbb{Z}$ such that $k \geq 0$. The recurrence relation can be
+expressed as:
+
+$$ R_k = R_{k - 1}+ 0.01(R_{k - 1}) = 1.01R_{k - 1} $$
+
 b. If $R_0 = \$5,000$, find the am,ount of money on deposit at the end of one
 year.
 
+$$
+R_0 = 5000 \\
+R_1 = 1.01(5000) = 5050 \\
+R_2 = 1.01(5050) = 5100.5 \\
+R_3 = 1.01(5100.5) \approx 5151.51 \\
+R_4 = 1.01(5151.51) \approx 5203.03 \\
+$$
+
 c. Find the APY for the account.
+
+$$ \frac{5203.03 - 5000}{5000} = 0.040606 \text{ or } 4.0606\% $$
 
 38. _Compound Interest:_
 
@@ -7772,10 +8266,36 @@ month, and let $S_0$ be the initial amount deposited.
 a. Find a recurrence relation for $S_0, S_1, S_2, \dots$, assuming no additional
 deposits or withdrawals during the year. Justify your answer.
 
+Since the account pays 3% annual interest compounded monthly, the total interest
+is $\left(\frac{0.03}{12}\right) = 0.0025$ or 0.25%.
+
+Let $k \in \mathbb{Z}$ such that $k \geq 0$. The recurrence relation can be
+expressed as:
+
+$$ S_k = S_{k - 1}+ 0.0025(S_{k - 1}) = 1.0025S_{k - 1} $$
+
 b. If $S_0 = \$10,000$, find the amount of money on deposit at the end of one
 year.
 
+$$
+S_0 = 10000 \\
+S_1 = 1.0025(10000) = 10025 \\
+S_2 = 1.0025(10025) \approx 10050.06 \\
+S_3 = 1.0025(10050.06) \approx 10075.19 \\
+S_4 = 1.0025(10075.19) \approx 10100.38 \\
+S_5 = 1.0025(10100.38) \approx 10125.63 \\
+S_6 = 1.0025(10125.63) \approx 10150.94 \\
+S_7 = 1.0025(10150.94) \approx 10176.32 \\
+S_8 = 1.0025(10176.32) \approx 10201.76 \\
+S_9 = 1.0025(10201.76) \approx 10227.26 \\
+S_{10} = 1.0025(10227.26) \approx 10252.83 \\
+S_{11} = 1.0025(10252.83) \approx 10278.46 \\
+S_{12} = 1.0025(10278.46) \approx 10304.16 \\
+$$
+
 c. Find the APY for the account.
+
+$$ \frac{10304.16 - 10000}{10000} = 0.030416 \text{ or } 3.0416\% $$
 
 39. With each step you take when climbing a staircase, you can move up either
     one stair or two stairs. As a result, you can climb the entire staircase
@@ -7784,6 +8304,13 @@ c. Find the APY for the account.
     conssits of $n$ stairs, let $c_n$ be the number of different ways to climb
     the staircase. Find a recurrence relation for $c_1, c_2, c_3, \dots$.
     Justify your answer.
+
+Since $c_1 = 1$ and $c_2 = 2$, we know that if one climbs to the end of the
+staircase and there is one step left, then that is $n - 1$ stairs climbed. If
+there are two steps left, then that is $n - 2$ steps climbed. Therefore the
+recurrence relation can be expressed as:
+
+$$ c_n = c_{n - 1} + c_{n - 2} $$
 
 40. A set of blocks contains blocks of heights $1$, $2$, and $4$ centimeters.
     Imagine constructing towers by piling blocks of different heights directly
@@ -7794,12 +8321,91 @@ c. Find the APY for the account.
     from the set. (Assume an unlimited supply of blocks of each size.) Find a
     recurrence relation for $t_1, t_2, t_3, \dots$. Justify your answer.
 
+Let's establish some initial conditions:
+
+$$
+t_1 = 1 \text{ 1 1cm block} \\
+t_2 = 2 \text{ 2 1cm blocks or 1 2cm block} \\
+t_3 = 3 \text{ 3 1cm blocks, 1 1cm block and 1 2cm block, or 1 2cm block and 1 1cm block} \\
+$$
+
+The recurrence relation for $n$ cm blocks then is:
+
+$$ t_n = t_{n - 1} + t_{n - 2} + t_{n - 4} $$
+
 41. Assume the truth of the distributive law (Appendix A, F3), and use the
     recursive definition of summation, together with mathematical induction, to
     prove the generalized distributive law that for every positive integer $n$,
     if $a_1, a_2, \dots, a_n$ and $c$ are real numbers, then
 
 $$ \sum_{i = 1}^{n}{ca_i} = c\left(\sum_{i = 1}^{n}{a_i}\right) $$
+
+For reference the distributive law states:
+
+For all real numbers $a$, $b$, and $c$A
+
+$$ a(b + c) = ab + ac \quad \text{ and } \quad (b + c)a = ba + ca $$
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equality:
+
+$$ \sum_{i = 1}^{n}{ca_i} = c\left(\sum_{i = 1}^{n}{a_i}\right) $$
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ \sum_{i = 1}^{1}{ca_i} = c\left(\sum_{i = 1}^{1}{a_i}\right) $$
+
+Evaluating the left-hand side:
+
+$$ \sum_{i = 1}^{1}{ca_i} $$
+
+$$ = ca_1 $$
+
+Evaluating the right-hand side:
+
+$$ c\left(\sum_{i = 1}^{1}{a_i}\right) $$
+
+$$ = ca_1 $$
+
+Therefore, since the left-hand and right-hand sides of the equality hold, $P(1)$
+is true.
+
+_Inductive Step:_
+
+Let $k \in \mathbb{Z}$ such that $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ \sum_{i = 1}^{k}{ca_i} = c\left(\sum_{i = 1}^{k}{a_i}\right) $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ \sum_{i = 1}^{k + 1}{ca_i} = c\left(\sum_{i = 1}^{k + 1}{a_i}\right) $$
+
+By the recursive definition of summation:
+
+$$ \sum_{i = 1}^{k + 1}{ca_i} = \left(\sum_{i = 1}^{k}{ca_i}\right) + ca_{k + 1} $$
+
+Then by the inductive hypothesis, we can substitute the first term:
+
+$$ = c\left(\sum_{i = 1}^{k}{a_i}\right) + ca_{k + 1} $$
+
+By the distributive law:
+
+$$ = c\left(\sum_{i = 1}^{k}{a_i} + a_{k + 1}\right) $$
+
+And then by the recursive definition of summation again:
+
+$$ = c\left(\sum_{i = 1}^{k + 1}{a_i}\right) $$
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 42. Assume the truth of the commutative and associative laws (Appendix A, F1 and
     F2), and use the recursive definition of product, together with mathematical
@@ -7808,12 +8414,186 @@ $$ \sum_{i = 1}^{n}{ca_i} = c\left(\sum_{i = 1}^{n}{a_i}\right) $$
 
 $$ \prod_{i = 1}^{n}{(a_ib_i)} = \left(\prod_{i = 1}^{n}{a_i}\right)\left(\prod_{i = 1}^{n}{b_i}\right) $$
 
+For reference the commutative laws state:
+
+For all real numbers $a$ and $b$,
+
+$$ a + b = b + a \quad \text{ and } ab = ba $$
+
+And the associative laws state:
+
+For all real numbers $a$, $b$, and $c$,
+
+$$ (a + b) + c = a + (b + c) \quad \text{ and } (ab)c = a(bc) $$
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equatility:
+
+$$ \prod_{i = 1}^{n}{(a_ib_i)} = \left(\prod_{i = 1}^{n}{a_i}\right)\left(\prod_{i = 1}^{n}{b_i}\right) $$
+
+where $n \in \mathbb{Z}^+$.
+
+_Basis Step:_
+
+Prove $P(1)$. That is:
+
+$$ \prod_{i = 1}^{1}{(a_ib_i)} = \left(\prod_{i = 1}^{1}{a_i}\right)\left(\prod_{i = 1}^{1}{b_i}\right) $$
+
+Evaluating the left-hand side:
+
+$$ \prod_{i = 1}^{1}{(a_ib_i)} $$
+
+By the definition of product:
+
+$$ = a_1 \cdot b_1 $$
+
+Evaluating the right-hand side:
+
+$$ \left(\prod_{i = 1}^{1}{a_i}\right)\left(\prod_{i = 1}^{1}{b_i}\right) $$
+
+By the recusive definition of product:
+
+$$ \prod_{i = 1}^{1}{a_i} = a_1 \quad \text{ and } \prod_{i = 1}^{1}{b_i} = b_1 $$
+
+Therefore:
+
+$$ = a_1 \cdot b_1 $$
+
+Therefore, since both sides of the equality hold, $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k \in \mathbb{Z}^+$.
+
+Suppose $P(k)$, that is:
+
+$$ \prod_{i = 1}^{k}{(a_ib_i)} = \left(\prod_{i = 1}^{k}{a_i}\right)\left(\prod_{i = 1}^{k}{b_i}\right) $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ \prod_{i = 1}^{k + 1}{(a_ib_i)} = \left(\prod_{i = 1}^{k + 1}{a_i}\right)\left(\prod_{i = 1}^{k + 1}{b_i}\right) $$
+
+Evaluate the left-hand side:
+
+$$ \prod_{i = 1}^{k + 1}{(a_ib_i)} $$
+
+By the recursive definition of product:
+
+$$ = \left(\prod_{i = 1}^{k}{(a_ib_i)}\right) \cdot a_{k + 1}b_{k + 1} $$
+
+By the inductive hypothesis, the first term can be substituted:
+
+$$ = \left(\prod_{i = 1}^{k}{a_i}\right)\left(\prod_{i = 1}^{k}{b_i}\right) \cdot a_{k + 1}b_{k + 1} $$
+
+By the associative laws:
+
+$$ = \left(\prod_{i = 1}^{k}{a_i}\right) \cdot a_{k + 1} \cdot \left(\prod_{i = 1}^{k}{b_i}\right) \cdot b_{k + 1} $$
+
+By the recursive definition of product again:
+
+$$ = \left(\prod_{i = 1}^{k + 1}{a_i}\right)\left(\prod_{i = 1}^{k + 1}{b_i}\right) $$
+
+Which is the right-hand side of the equality. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 43. Assume the truth of the commutative and associative laws (Appendix A, F1 and
     F2), and use the recursive definition of product, together with mathematical
     induction, to prove that for each positive integer $n$, if
     $a_1, a_2, \dots, a_n$ and $c$ are real numbers, then
 
 $$ \prod_{i = 1}^{n}{(ca_i)} = c^n\left(\prod_{i = 1}^{n}{a_i}\right) $$
+
+For reference the commutative laws state:
+
+For all real numbers $a$ and $b$,
+
+$$ a + b = b + a \quad \text{ and } ab = ba $$
+
+And the associative laws state:
+
+For all real numbers $a$, $b$, and $c$,
+
+$$ (a + b) + c = a + (b + c) \quad \text{ and } (ab)c = a(bc) $$
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equality:
+
+$$ \prod_{i = 1}^{n}{(ca_i)} = c^n\left(\prod_{i = 1}^{n}{a_i}\right) $$
+
+where $n \in \mathbb{Z}^+$.
+
+_Basis Step:_
+
+Prove $P(1)$. That is:
+
+$$ \prod_{i = 1}^{1}{(ca_i)} = c^1\left(\prod_{i = 1}^{1}{a_i}\right) $$
+
+Evaluate the left-hand side:
+
+$$ \prod_{i = 1}^{1}{(ca_i)} $$
+
+By the definition of product:
+
+$$ = ca_1 $$
+
+$$ = c^1a_1 $$
+
+Evaluate the right-hand side:
+
+$$ c^1\left(\prod_{i = 1}^{1}{a_i}\right) $$
+
+By the definition of product:
+
+$$ = c^1a_1 $$
+
+Therefore, since the two sides of the equality hold, $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k \in \mathbb{Z}^+$.
+
+Suppose $P(k)$. That is:
+
+$$ \prod_{i = 1}^{k}{(ca_i)} = c^k\left(\prod_{i = 1}^{k}{a_i}\right) $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ \prod_{i = 1}^{k + 1}{(ca_i)} = c^{k + 1}\left(\prod_{i = 1}^{k + 1}{a_i}\right) $$
+
+Evaluating the left-hand side:
+
+$$ \prod_{i = 1}^{k + 1}{(ca_i)} $$
+
+By the definition of recursive product:
+
+$$ = \left(\prod_{i = 1}^{k}{(ca_i)}\right) \cdot ca_{k + 1} $$
+
+By the inductive hypothesis:
+
+$$ = c^k\left(\prod_{i = 1}^{k}{a_i}\right) \cdot ca_{k + 1} $$
+
+By the commutative laws:
+
+$$ = ca_{k + 1} \cdot c^k\left(\prod_{i = 1}^{k}{a_i}\right) $$
+
+By associative laws:
+
+$$ = c \cdot c^k \cdot \left(\prod_{i = 1}^{k}{a_i}\right) \cdot a_{k + 1} $$
+
+By the laws of exponents and by the recursive definition of product:
+
+$$ = c^{k + 1}\left(\prod_{i = 1}^{k + 1}{a_i}\right) $$
+
+This is the right-hand side of our equality. Therefore, $P(k + 1)$ is true.
+
+Q.E.D.
 
 44. The triangle inequality for absolute value states that for all real numbers
     $a$ and $b$, $|a + b| \leq |a| + |b|$. Use the recursive definition of
@@ -7823,9 +8603,17 @@ $$ \prod_{i = 1}^{n}{(ca_i)} = c^n\left(\prod_{i = 1}^{n}{a_i}\right) $$
 
 $$ \left| \sum_{i = 1}^{n}{a_i} \right| \leq \sum_{i = 1}^{n}{|a_i|} $$
 
+Omitted.
+
 45. Prove that any sum of even integers is even.
+
+Omitted.
 
 46. Prove that any sum of an odd number of odd integers is odd.
 
+Omitted.
+
 47. Deduce from exercise 46 that for any positive integer $n$ if there is a sum
     of $n$ odd integers that is even, then $n$ is even.
+
+Omitted.
