@@ -186,21 +186,35 @@ Page 372
    sequence, start with the _____ and use successive substitution into the _____
    to look for a numerical pattern.
 
+initial conditions; recurrence relation
+
 2. At every step of the iteration process, it is important to eliminate _____.
+
+parentheses
 
 3. If a single number, say $a$, is added to itself $k$ times in one of the steps
    of the iteration, replace the sum by the expression _____.
 
+$k \cdot a$
+
 4. If a single number, say $a$, is multiplied by itself $k$ times in one of the
    steps of the iteration, replace the product by the expression _____.
+
+$a^k$
 
 5. A general arithmetic sequence $a_0, a_1, a_2, \dots$ with initial value $a_0$
    and fixed constant summand $d$ satisfies the recurrence relation _____ and
    has the explicit formula _____.
 
+$a_k = a_{k - 1} + d$; $a_n = a_0 + dn$
+
 6. A general geometric sequence $a_0, a_1, a_2, \dots$ with initial value $a_0$
    and fixed constant multiplier $r$ satisfies the recurrence relation _____ and
    has the explicit formula _____.
 
+$a_k = ra_{k - 1}$; $a_n = r^na_0$
+
 7. When an explicit formula for a recursively defined sequence has been obtained
    by iteration, its correctness can be checked by _____.
+
+mathematical induction

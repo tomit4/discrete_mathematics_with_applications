@@ -8634,11 +8634,27 @@ following problems:
 a. If $k$ is an integer and $k \geq 2$, find a formula for the expression
 $1 + 2 + 3 + \dots + (k - 1)$.
 
+$n = k - 1$
+
+$$ 1 + 2 + 3 + \dots + (k - 1) = \frac{(k - 1)((k - 1) + 1)}{2} $$
+
+$$ = \frac{(k - 1)(k)}{2} $$
+
 b. If $n$ is an integer and $n \geq 1$, find a formula for the expression
 $5 + 2 + 4 + 6 + 8 + \dots + 2n$.
 
+$$ 5 + 2 + 4 + 6 + 8 + \dots + 2n = 5 + 2\left(\frac{(n)(n + 1)}{2}\right) $$
+
+$$ = 5 + n^2 + n $$
+
+$$ = n^2 + n + 5 $$
+
 c. If $n$ is an integer and $n \geq 1$, find a formula for the expression
 $3 + 3 \cdot 2 + 3 \cdot 3 + \dots + 3 \cdot n + n$.
+
+$$ 3 + 3 \cdot 2 + 3 \cdot 3 + \dots + 3 \cdot n + n = 3(1 + 2 + 3 + \dots + n) + n $$
+
+$$ = 3\left(\frac{n(n + 1)}{2}\right) + n $$
 
 2. The formula
 
@@ -8650,15 +8666,41 @@ $n \geq 0$. Use this fact to solve each of the following problems:
 a. If $i$ is an integer and $i \geq 1$, find a formula for the expression
 $1 + 2 + 2^2 + \dots + 2^{i - 1}$.
 
+$$ 1 + 2 + 2^2 + \dots + 2^{i - 1} = \frac{2^{i - 1 + 1} - 1}{2 - 1} $$
+
+$$ = \frac{2^i - 1}{1} $$
+
+$$ = 2^i - 1 $$
+
 b. If $n$ is an integer and $n \geq 1$, find a formula for the expression
 $3^{n - 1} + 3^{n - 2} + \dots + 3^2 + 3 + 1$.
+
+$$ 3^{n - 1} + 3^{n - 2} + \dots + 3^2 + 3 + 1 = \frac{3^{n - 1 + 1} - 1}{3 - 1} $$
+
+$$ = \frac{3^n - 1}{2} $$
 
 c. If $n$ is an integer and $n \geq 2$, find a formula for the expression
 $2^n + 2^{n - 2} \cdot 3 + 2^{n - 3} \cdot 3 + \dots + 2^2 \cdot 3 + 2 \cdot 3 + 3$.
 
-d. If $n$ is an integer and $n \geq 1$, finda formula for the expression
+$$ 3 + 3 \cdot 2 + 3 \cdot 2^2 + \dots + 3 \cdot 2^{n - 3} + 3 \cdot 2^{n - 2} + 2^n $$
 
-$$ 2^n - 2^{n - 1} + 2^{n - 2} - 2^{n - 3} + \dots + (-1)^{n - 1} \cdot 2 + (-1)^n $$
+$$ = 3(2^0 + 2^1 + 2^2 + \dots + 2^{n - 3} + 2^{n - 2}) + 2^n $$
+
+$$ = 2^n + 3\left(\frac{2^{(n - 2) + 1} - 1}{2 - 1}\right) $$
+
+$$ = 2^n + 3\left(\frac{2^{n - 1} - 1}{1}\right) $$
+
+$$ = (2^n) + 3(2^{n - 1} - 1) $$
+
+$$ = (2 \cdot 2^{n - 1}) + 3(2^{n - 1} - 1) $$
+
+$$ = 2 \cdot 2^{n - 1} + 3 \cdot 2^{n - 1} - 3 $$
+
+$$ = 5 \cdot 2^{n - 1} - 3 $$
+
+d. If $n$ is an integer and $n \geq 1$, find a formula for the expression
+
+Omitted.
 
 In each of 3-15 a sequence is defined recursively. Use iteration to guess an
 explicit formula for the sequence. Use formulas from Section 5.2 to simplify
@@ -8666,37 +8708,353 @@ your answers whenever possible.
 
 3. $a_k = ka_{k - 1}$, for each integer $k \geq 1$ $a_0 = 1$.
 
+$$ a_0 = 1 $$
+
+$$ a_1 = 1 \cdot a_0 = 1 \cdot 1 = 1 $$
+
+$$ a_2 = 2 \cdot a_1 = 2 \cdot 1 $$
+
+$$ a_3 = 3 \cdot a_2 = 3 \cdot (2 \cdot 1) = 3 \cdot 2 \cdot 1 $$
+
+$$ a_4 = 4 \cdot a_3 = 4 \cdot (3 \cdot 2 \cdot 1) = 4 \cdot 3 \cdot 2 \cdot 1 $$
+
+Guess:
+
+$$ a_n = n! $$
+
 4. $b_k = \dfrac{b_{k - 1}}{1 + b_{k - 1}}$, for each integer $k \geq 1$
    $b_0 = 1$.
 
+$$ b_0 = 1 $$
+
+$$ b_1 = \frac{b_0}{1 + b_0} = \frac{(1)}{1 + (1)} = \frac{1}{1 + 1} = \frac{1}{2} $$
+
+$$ b_2 = \frac{b_1}{1 + b_1} = \frac{\dfrac{1}{2}}{1 + \left(\dfrac{1}{2}\right)} = \frac{1}{3} $$
+
+$$ b_3 = \frac{b_2}{1 + b_2} = \frac{\dfrac{1}{3}}{1 + \left(\dfrac{1}{3}\right)} = \frac{1}{4} $$
+
+$$ b_4 = \frac{b_3}{1 + b_3} = \frac{\dfrac{1}{4}}{1 + \left(\dfrac{1}{4}\right)} = \frac{1}{5} $$
+
+Guess:
+
+$$ b_n = \frac{1}{n + 1} $$
+
 5. $c_k = 3c_{k - 1} + 1$, for each integer $k \geq 2$ $c_1 = 1$.
 
-6. $d_k =2d_{k j 1} + 3$, for each integer $k \geq 2$, $d_1 = 2$.
+$$ c_1 = 1 $$
+
+$$ c_2 = 3c_1 + 1 = 3(1) + 1 = 3 + 1 $$
+
+$$ c_3 = 3c_2 + 1 = 3(3 + 1) + 1 = (3^2 + 3) + 1 $$
+
+$$ c_4 = 3c_3 + 1 = 3(((3^2 + 3) + 1) + 1) + 1 = (3^3 + 3^2 + 3) + 1 $$
+
+Guess:
+
+$$ c_n = 3^{n - 1} + 3^{n - 2} + 3^{n - 3} + \dots + 3^3 + 3^2 + 3 + 1 $$
+
+This is a geometric sequence (Theorem 5.2.2).
+
+$$ = \frac{3^{(n - 1) + 1} - 1}{3 - 1} $$
+
+$$ = \frac{3^n - 1}{2} $$
+
+6. $d_k =2d_{k - 1} + 3$, for each integer $k \geq 2$, $d_1 = 2$.
+
+$$ d_1 = 2 $$
+
+$$ d_2 = 2d_1 + 3 = 2(2) + 3 = 2^2 + 3 $$
+
+$$ d_3 = 2d_2 + 3 = 2(2^2 + 3) + 3 = 2^3 + 2 \cdot 3 + 3 $$
+
+$$ d_4 = 2d_3 + 3 = 2(2^3 + 2 \cdot 3 + 3) + 3 = 2^4 + 2^2 \cdot 3 + 2 \cdot 3 + 3 $$
+
+$$ d_5 = 2d_4 + 3 = 2(2^4 + 2^2 \cdot 3 + 2 \cdot 3 + 3) + 3 = 2^5 + 2^3 \cdot 3 + 2^2 \cdot 3 + 2 \cdot 3 + 3 $$
+
+$$ d_5 = 2^5 + 3(2^3 + 2^2 + 2^1 + 2^0) $$
+
+$$ d_5 = 2^5 + 3\sum_{i = 0}^{3}{2^i} $$
+
+This is a geometric sequence (Theorem 5.2.2).
+
+Guess:
+
+$$ d_n = 2^n + 3\sum_{i = 0}^{n - 2}{2^i} $$
+
+$$ d_n = 2^n + 3\frac{2^{(n - 2) + 1} - 1}{2 - 1} $$
+
+$$ = 2^n + 3\frac{2^{n - 1} - 1}{1} $$
+
+$$ = 2^n + 3(2^{n - 1} - 1) $$
+
+$$ = 2^n + 3(2^{n - 1} - 1) $$
+
+$$ = 2^n + 3 \cdot 2^{n - 1} - 3 $$
+
+$$ = 2 \cdot 2^{n - 1} + 3 \cdot 2^{n - 1} - 3 $$
+
+$$ = 5 \cdot 2^{n - 1} - 3 $$
 
 7. $e_k = 4e_{k - 1} + 5$, for each integer $k \geq 1$ $e_0 = 2$.
 
+$$ e_0 = 2 $$
+
+$$ e_1 = 4e_0 + 5 = 4 \cdot 2 + 5 $$
+
+$$ e_2 = 4e_1 + 5 = 4(4 \cdot 2 + 5) + 5 = 4^2 \cdot 2 + 4 \cdot 5 + 5 $$
+
+$$ e_3 = 4e_2 + 5 = 4(4^2 \cdot 2 + 4 \cdot 5 + 5) + 5 = 4^3 \cdot 2 + 4^2 \cdot 5 + 4 \cdot 5 + 5 $$
+
+$$ e_4 = 4e_3 + 5 = 4(4^3 \cdot 2 + 4^2 \cdot 5 + 4 \cdot 5 + 5) + 5 = 4^4 \cdot 2 + 4^3 \cdot 5 + 4^2 \cdot 5 + 4 \cdot 5 + 5 $$
+
+Guess:
+
+$$ e_n = 4^n \cdot 2 + 4^{n - 1} \cdot 5 + 4^{n - 2} \cdot 5 + \dots + 4 \cdot 5 + 5 $$
+
+$$ = 4^n \cdot 2 + 5(4^{n - 1} + 4^{n - 2} + \dots + 4 + 1) $$
+
+$$ = 4^n \cdot 2 + 5\sum_{i = 0}^{n - 1}{4^i} $$
+
+$$ = 4^n \cdot 2 + 5\left(\frac{4^{(n - 1) + 1} - 1}{4 - 1}\right) $$
+
+$$ = 4^n \cdot 2 + 5\left(\frac{4^n - 1}{3}\right) $$
+
+$$ = \frac{3(4^n \cdot 2)}{3} + \left(\frac{5(4^n - 1)}{3}\right) $$
+
+$$ = \frac{3(4^n \cdot 2) + 5(4^n - 1)}{3} $$
+
+$$ = \frac{(6 \cdot 4^n) + (5 \cdot 4^n - 5)}{3} $$
+
+$$ = \frac{6 \cdot 4^n + 5 \cdot 4^n - 5}{3} $$
+
+$$ = \frac{11 \cdot 4^n - 5}{3} $$
+
 8. $f_k = f_{k - 1} + 2^k$, for each integer $k \geq 2$ $f_1 = 1$.
+
+$$ f_1 = 1 $$
+
+$$ f_2 = f_1 + 2^2 = (1) + 2^2 = 1 + 2^2 $$
+
+$$ f_3 = f_2 + 2^3 = (1 + 2^2) + 2^3 = 1 + 2^2 + 2^3 $$
+
+$$ f_4 = f_3 + 2^4 = (1 + 2^2 + 2^3) + 2^4 = 1 + 2^2 + 2^3 + 2^4 $$
+
+Guess:
+
+$$ f_n = 1 + \sum_{i = 2}^{n}{2^i} $$
+
+$$ = 1 + \left(\sum_{i = 0}^{n}{2^i} - \sum_{i = 0}^{1}{2^i}\right) $$
+
+$$ = 1 + \frac{2^{n + 1} - 1}{2 - 1} - (2^0 + 2^1) $$
+
+$$ = 1 + 2^{n + 1} - 1 - (1 + 2) $$
+
+$$ = 2^{n + 1} - 3 $$
 
 9. $g_k = \dfrac{g_{k - 1}}{g_{k - 1} + 2}$, for each integer $k \geq 2$
    $g_1 = 1$.
 
+$$ g_1 = 1 $$
+
+$$ g_2 = \frac{g_1}{g_1 + 2} = \frac{1}{1 + 2} = \frac{1}{3} = \frac{1}{2^2 - 1} $$
+
+$$ g_3 = \frac{g_2}{g_2 + 2} = \frac{\dfrac{1}{3}}{\dfrac{1}{3} + 2} = \frac{1}{7} = \frac{1}{2^3 - 1} $$
+
+$$ g_4 = \frac{g_3}{g_3 + 2} = \frac{\dfrac{1}{7}}{\dfrac{1}{7} + 2} = \frac{1}{15} = \frac{1}{2^4 - 1} $$
+
+Guess:
+
+$$ g_n = \frac{1}{2^n - 1} $$
+
 10. $h_k = 2^k - h_{k - 1}$, for each integer $k \geq 1$ $h_0 = 1$.
 
-11. $p_k, = p_{k - 1} + 2 \cdot 3^k$, for each integer $k \geq 2$ $p_1 = 2$.
+$$ h_0 = 1 $$
+
+$$ h_1 = 2^1 - h_0 = 2 - 1 = 2^1 - 2^0 $$
+
+$$ h_2 = 2^2 - h_1 = 2^2 - (2^1 - 1) = 2^2 - 2^1 + 2^0 $$
+
+$$ h_3 = 2^3 - h_2 = 2^3 - (2^2 - 2^2 + 2^0) = 2^3 - 2^2 + 2^1 - 2^0 $$
+
+$$ h_4 = 2^4 - h_3 = 2^4 - (2^3 - 2^2 + 2^1 - 2^0) = 2^4 - 2^3 + 2^2 - 2^1 + 2^0 $$
+
+Guess:
+
+$$ h_n = 2^n - 2^{n - 1} + \dots + (-1)^{n - 2} \cdot 2^2 + (-1)^{n - 1} \cdot 2^1 + (-1)^n \cdot 2^0 $$
+
+$$ = (-1)^n[(-1)^n \cdot 2^n + \dots + (-1)^2 \cdot 2^2 + (-1)^1 \cdot 2^1 + (-1)^n \cdot 2^0] $$
+
+$$  = (-1)^n[(-2)^n + (-2)^{n - 1} + \dots + (-2)^2 + (-2)^1 + (-2)^0] $$
+
+By the definition of a geometric sequence:
+
+$$ = (-1)^n\left(\frac{(-2)^{n + 1} - 1}{(-2) - 1}\right) $$
+
+$$ = (-1)^n\left(\frac{(-2)^{n + 1} - 1}{-3}\right) $$
+
+$$ = \frac{(-1)^{n + 1}((-2)^{n + 1} - 1)}{(-1)(-3)} $$
+
+$$ = \frac{2^{n + 1} - (-1)^{n + 1}}{3} $$
+
+11. $p_k = p_{k - 1} + 2 \cdot 3^k$, for each integer $k \geq 2$ $p_1 = 2$.
+
+$$ p_1 = 2 $$
+
+$$ p_2 = p_1 + 2 \cdot 3^2 = 2 + 2 \cdot 3^2 $$
+
+$$ p_3 = p_2 + 2 \cdot 3^3 = (2 + 2 \cdot 3^2) + 2 \cdot 3^3 =  2 + 2 \cdot 3^2 + 2 \cdot 3^3 $$
+
+Guess:
+
+$$ p_n = 2 + 2(3^2 + 3^3 + \dots + 3^n) $$
+
+$$ = 2 + 2(3^0 + 3^1 + 3^2 + 3^3 + \dots + 3^n - 1 - 3^1) $$
+
+$$ = 2 + 2\left(\sum_{i = 0}^{n}{3^i} - 1 - 3\right) $$
+
+$$ = 2 + 2\left(\frac{3^{n + 1} - 1}{3 - 1} - 1 - 3\right) $$
+
+$$ = 2 + 2\left(\frac{3^{n + 1} - 1}{2} - 4\right) $$
+
+$$ = 2 + 3^{n + 1} - 1 - 8 $$
+
+$$ = 2 + 3^{n + 1} - 9 $$
+
+$$ = 3^{n + 1} - 7 $$
 
 12. $s_k = s_{k - 1} + 2k$, for each integer $k \geq 1$ $s_0 = 3$.
 
+$$ s_0 = 3 $$
+
+$$ s_1 = s_0 + 2(1) = 3 + 2 = 5 $$
+
+$$ s_2 = s_1 + 2(2) = (3 + 2) + 2(2) = 3 + 2 + 4 = 9 $$
+
+$$ s_3 = s_2 + 2(3) = (3 + 2 + 4) + 2(3) = 3 + 2 + 4 + 6 = 15 $$
+
+$$ s_4 = s_3 + 2(4) = (3 + 2 + 4 + 6) + 2(4) = 3 + 2 + 4 + 6 + 8 = 23  $$
+
+Guess:
+
+$$ s_n = 3 + 2(1 + 2 + 3 + 4 + \dots + n) $$
+
+By Theorem 5.2.1:
+
+$$ = 3 + 2\left(\frac{n(n + 1)}{2}\right) $$
+
+$$ = 3 + n(n + 1) $$
+
+$$ = 3 + n^2 + n $$
+
+$$ = n^2 + n + 3 $$
+
 13. $t_k = t_{k - 1} + 3k + 1$, for each integer $k \geq 1$ $t_0 = 0$.
+
+$$ t_0 = 0 $$
+
+$$ t_1 = t_0 + 3(1) + 1 = 0 + 3 + 1 = 3 + 1 = 3 \cdot 1 + 1 $$
+
+$$ t_2 = t_1 + 3(2) + 1 = (3 \cdot 1 + 1) + 3 \cdot 2 + 1 = 3 \cdot 1 + 1 + 3 \cdot 2 + 1 $$
+
+$$ t_3 = t_2 + 3(3) + 1 = (3 \cdot 1 + 1 + 3 \cdot 2 + 1) + 3 \cdot 3 + 1 = 3 \cdot 1 + 1 + 3 \cdot 2 + 1 + 3 \cdot 3 + 1 $$
+
+$$ t_4 = t_3 + 3(4) + 1 = (3 \cdot 1 + 1 + 3 \cdot 2 + 1 + 3 \cdot 3 + 1) + 3 \cdot 4 + 1 $$
+
+Guess:
+
+$$ t_n = 3(1 + 2 + 3 + \dots + n) + n $$
+
+$$ = 3\left(\frac{n(n + 1)}{2}\right) + n $$
+
+$$ = \frac{3(n^2 + n)}{2} + \frac{2n}{2} $$
+
+$$ = \frac{3n^2 + 3n + 2n}{2} $$
+
+$$ = \frac{3n^2 + 5n}{2} $$
 
 14. $x_k = 3x_{k - 1} + k$, for each integer $k \geq 2$ $x_1 = 1$.
 
+Omitted.
+
 15. $y_k = y_{k - 1} + k^2$, for each integer $k \geq 2$ $y_1 = 1$.
+
+$$ y_1 = 1 $$
+
+$$ y_2 = y_1 + (2)^2 = 1 + 2^2 $$
+
+$$ y_3 = y_2 + (3)^2 = (1 + 2^2) + 3^2 = 1 + 2^2 + 3^2 $$
+
+$$ y_4 = y_3 + (4)^2 = (1 + 2^2 + 3^2) + 4^2 = 1 + 2^2 + 3^2 + 4^2 $$
+
+Guess:
+
+$$ y_n = 1^2 + 2^2 + 3^2 + \dots + n^2 $$
+
+By Exercise 5.2.10:
+
+$$ = \frac{n(n + 1)(2n + 1)}{6} $$
 
 16. Solve the recurrence relation obtained as the answer to exercise 17\(c\) of
     Section 5.6.
 
+The recurrence relation in question is:
+
+$$ 3a_{k - 1} + 2 $$
+
+For reference:
+
+$$ a_1 = 2 $$
+
+Solving:
+
+$$ a_1 = 2 $$
+
+$$ a_2 = 3a_1 + 2 = 3 \cdot 2 + 2 $$
+
+$$ a_3 = 3a_2 + 2 = 3 \cdot (3 \cdot 2 + 2) + 2 = 3^2 \cdot 2 + 3 \cdot 2 + 2 $$
+
+$$ a_4 = 3a_3 + 2 = 3 \cdot (3^2 \cdot 2 + 3 \cdot 2 + 2) + 2 = 3^3 \cdot 2 + 3^2 \cdot 2 + 3 \cdot 2 + 2 $$
+
+Guess:
+
+$$ a_n = 2(3^n + 3^{n - 1} + 3^{n - 2} + \dots + 3^1 + 3^0) $$
+
+By the definition of a geometric sequence:
+
+$$ = 2\left(\frac{3^n - 1}{3 - 1}\right) $$
+
+$$ = 2\left(\frac{3^n - 1}{2}\right) $$
+
+$$ = 3^n - 1 $$
+
 17. Solve the recurrence relation obtained as the answer to exercise 21\(c\) of
     Section 5.6.
+
+The recurrence relation in question is:
+
+$$ t_n = 3t_{n - 1} + 2 \quad n \geq 2 $$
+
+For reference:
+
+$$ t_1 = 2 $$
+
+$$ t_2 = 3t_1 + 2 = 3 \cdot 2 + 2 $$
+
+$$ t_3 = 3t_2 + 2 = 3 \cdot (3 \cdot 2 + 2) + 2 = 3^2 \cdot 2 + 3 \cdot 2 + 2 $$
+
+$$ t_4 = 3t_3 + 2 = 3 \cdot (3^2 \cdot 2 + 3 \cdot 2 + 2) + 2 = 3^3 \cdot 2 + 3^2 \cdot 2 + 3 \cdot 2 + 2 $$
+
+Guess:
+
+$$ t_n = 2(3^{n - 1} + 3^{n - 2} + \dots + 3^1 + 3^0) $$
+
+By the definition of a geometric sequence (Theorem 5.2.2):
+
+$$ = 2\left(\frac{3^{(n - 1) + 1} - 1}{3 - 1}\right) $$
+
+$$ = 2\left(\frac{3^n - 1}{2}\right) $$
+
+$$ = 3^n - 1 $$
 
 18. Suppose $d$ is a fixed constant and $a_0, a_1, a_2, \dots$ is a sequence
     that satisfies the recurrence relation $a_k = a_{k - 1} + d$, for each
