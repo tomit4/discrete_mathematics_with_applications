@@ -9061,18 +9061,159 @@ $$ = 3^n - 1 $$
     integer $k \geq 1$. Use mathematical induction to prove that
     $a_n = a_0 + nd$, for every integer $n \geq 0$.
 
+**Proof (by mathematical induction):**
+
+Let $d$ be any fixed constant, and let $a_0, a_1, a_2, \dots$ be the sequence
+defined recursively by $a_k = a_{k - 1} + d$ for each integer $k \geq 1$.
+
+Let $P(n)$ be the equation:
+
+$$ a_n = a_0 + nd $$
+
+We must show by mathematical induction that $P(n)$ is true for every integer
+$n \geq 0$.
+
+_Basis Step:_
+
+Prove that $P(0)$ is true. That is:
+
+$$ a_0 = a_0 + (0)d $$
+
+$$ a_0 = a_0 $$
+
+This equality holds, and therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 0$.
+
+Suppose $P(k)$. That is:
+
+$$ a_k = a_0 + kd $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ a_{k + 1} = a_0 + (k + 1)d $$
+
+By the definition of the given sequence:
+
+$$ a_{k + 1} = a_k + d $$
+
+By substitution of the inductive hypothesis:
+
+$$ a_{k + 1} = (a_0 + kd) + d $$
+
+By algebra:
+
+$$ a_{k + 1} = a_0 + (k + 1)d $$
+
+Which is the equality that was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 19. A worker is promised a bonus if he can increase his productivity by 2 units
     a day for a period of 30 days. If on day 0 he produces 170 units, how many
     units must he produce on day 30 to qualify for the bonus?
+
+Let $U_n$ be the number of units produced on day $n$. Then:
+
+$$ U_k = U_{k - 1} + 2 $$
+
+for every integer $k \geq 1$, and:
+
+$$ U_0 = 170 $$
+
+Hence $U_0, U_1, U_2, \dots$ is an arithmetic sequence with a fixed constant
+$2$. It then follows that when $n = 30$:
+
+$$ U_n = U_0 + n \cdot 2 $$
+
+$$ U_{30} = 170 + (30) \cdot 2 = 170 + 60 = 230 \text{ units} $$
+
+Thus, in order to qualify for the bonus, the worker must produce 230 units on
+day 30.
 
 20. A runner targets herself to improve her time on a certain course by 3
     seconds a day. If on day 0 she runs the course in 3 minutes, how fast must
     she run it on day 14 to stay on target?
 
+First, let's convert 3 minutes to seconds for ease of evaluation:
+
+$$ 3 \text{ minutes } \cdot 60 \frac{\text{seconds}}{\text{minute}} = 180 \text{ seconds} $$
+
+Let $R_n$ be the number of seconds the runner ran on day $n$. Then:
+
+$$ R_k = R_{k - 1} - 3 $$
+
+for every integer $k \geq 1$, and:
+
+$$ R_0 = 180 $$
+
+Hence $R_0, R_1, R_2, \dots$ is an arithmetic sequence with a fixed constant
+$3$. It follows then that when $n = 14$:
+
+$$ U_n = U_0 - n \cdot 3 $$
+
+$$ U_{14} = (180) - 14 \cdot 3 = 180 - 42 = 138 \text{ seconds} $$
+
+Therefore, the runner must run the certain course in 138 seconds (approximately
+2.3 minutes) on day 14 in order to stay on target.
+
 21. Suppose $r$ is a fixed constant and $a_0, a_1, a_2, \dots$ is a sequence
-    that satisfies the recurrence 4elation $a_k = ra_{k - 1}$, for each integer
+    that satisfies the recurrence relation $a_k = ra_{k - 1}$, for each integer
     $k \geq 1$ and $a_0 = a$. Use mathematical induction to prove that
     $a_n = ar^n$, for every integer $n \geq 0$.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ a_n = ar^n $$
+
+_Basis Step:_
+
+Prove $P(0)$, that is:
+
+$$ a_0 = ar^0 $$
+
+$$ a_0 = a(1) $$
+
+$$ a_0 = a $$
+
+The given problem statement tells us that $a_0 = a$. Since this matches the
+equality found for $P(0)$, we can conclude therefore that $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ a_k = ar^k $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ a_{k + 1} = ar^{k + 1} $$
+
+By the given recurrence relation:
+
+$$ a_{k + 1} = r \cdot a_k $$
+
+By substitution with the inductive hypothesis:
+
+$$ a_{k + 1} = r \cdot (a \cdot r^k) $$
+
+By algebra:
+
+$$ a_{k + 1} = ar^{k + 1} $$
+
+This equality is what was to be shown, therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 22. As shown in Example 5.6.8, if a bank pays interest at a rate of $i$
     compounded $m$ times a year, then the amount of money $P_k$ at the end of
@@ -9082,9 +9223,40 @@ $$ = 3^n - 1 $$
     condition $P_0 = \text{ the initial amount deposited}$. Find an explicit
     formula for $P_n$.
 
+$$ P_0 = P_0 $$
+
+$$ P_1 = \left[1 + \frac{i}{m}\right] \cdot P_0 = \left[1 + \frac{i}{m}\right]^1 \cdot P_0 $$
+
+$$ P_2 = \left[1 + \frac{i}{m}\right] \cdot P_1 = \left[1 + \frac{i}{m}\right] \cdot \left[1 + \frac{i}{m}\right] \cdot P_0 = \left[1 + \frac{i}{m}\right]^2 + P_0 $$
+
+Guess:
+
+$$ P_n = \left[1 + \frac{i}{m}\right]^n \cdot P_0 $$
+
 23. Suppose the population of a country increases at a steady rate of 3% per
     year. If the population is 50 million at a certain time, what will it be 25
     years later?
+
+Let $P_n$ be the population of the country at year $n$. Then:
+
+$$ P_{k + 1} = 1.03 \cdot P_k $$
+
+for every integer $k \geq 1$, and:
+
+$$ P_0 = 50000000 $$
+
+The explicit formula then is:
+
+$$ P_n = (1.03)^n \cdot P_0 $$
+
+Then:
+
+$$ P_{25} = (1.03)^{25} \cdot 50000000 $$
+
+$$ \approx 104688896 $$
+
+Therefore, the population of the country 25 years later will be approximately
+104,688896.
 
 24. A chain letter works as follows: One person sends a copy of the letter to
     five friends, each of whom sends a copy to five friends, each of whom sends
@@ -9093,11 +9265,31 @@ $$ = 3^n - 1 $$
     twentieth reception of this process, assuming no person receives more than
     one copy?
 
+$$ \sum_{k = 0}^{20}{5^k} = \frac{5^{21} - 1}{4} $$
+
+$$ \approx 1.192092896 \cdot 10^{14} \text{ people} $$
+
 25. A certain computer algorithm executes twice as many operations when it is
     run with an input size $k$ as when it is run with an input size $k - 1$
     (where $k$ is an integer that is greater than $1$). When the algorithm is
     run with an input size $1$, it executes seven operations. How many
     operations does it execute when it is run with an input size of $25$?
+
+Let $P_k$ be the number of operations the algorithm when the input size is $k$,
+and $P_0 = 7$. The recurrence relation is:
+
+$$ P_k = 2P_{k - 1} $$
+
+So:
+
+$$ P_n = 2^n \cdot P_0 $$
+
+$$ P_{25} = 2^{25} \cdot 7 $$
+
+$$ = 234881024 $$
+
+So the algorithm executes 234881024 operations when it is run with an input size
+of 25.
 
 26. A person saving for retirement makes an initial deposit of $1,000 to a bank
     account earning interest at a rate of 3% per year compounded monthly, and
@@ -9107,15 +9299,134 @@ a. For each nonnegative integer $n$, let $A_n$ be the amount in the account at
 the end of $n$ months. Find the recurrence relation relating $A_k$ to
 $A_{k - 1}$.
 
+$$ A_k = \left[1 + \left(\frac{1}{12}\right)\left(\frac{3}{100}\right)\right] \cdot A_{k - 1} + 200 $$
+
+$$ = \left[1 + \left(\frac{3}{1200}\right)\right] \cdot A_{k - 1} + 200 $$
+
+$$ = \left[1 + \left(\frac{1}{400}\right)\right] \cdot A_{k - 1} + 200 $$
+
+$$ = \frac{401}{400} \cdot A_{k - 1} + 200 $$
+
+$$ = 1.0025 \cdot A_{k - 1} + 200 $$
+
 b. Use iteration to find an explicit formula for $A_n$.
+
+$$ A_0 = 1000 $$
+
+$$ A_1 = 1.0025 \cdot A_0 + 200 = 1.0025 \cdot (1000) + 200 $$
+
+$$ A_2 = 1.0025 \cdot A_1 + 200 = 1.0025 \cdot (1.0025 \cdot (1000) + 200) + 200 $$
+
+$$ A_3 = 1.0025 \cdot A_3 + 200 = 1.0025 \cdot (1.0025 \cdot (1.0025 \cdot (1000) + 200) + 200) + 200 $$
+
+Guess:
+
+$$ A_n = 200 + 200(1.0025) + 200(1.0025)^2 + \cdots + 200(1.0025)^{n - 1} + 1000(1.0025)^n $$
+
+Explicit formula:
+
+$$ A_n = 200 \cdot \left(\frac{1.0025^n - 1}{1.0025 - 1}\right) + 1000(1.0025)^n $$
 
 c. Use mathematical induction to prove the correctness of the formula you
 obtained in part (b).
 
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the equation:
+
+$$ A_n = 200 \cdot \left(\frac{1.0025^n - 1}{1.0025 - 1}\right) + 1000(1.0025)^n $$
+
+_Basis Step:_
+
+Prove $P(0)$, that is:
+
+$$ A_0 = 200 \cdot \left(\frac{1.0025^0 - 1}{1.0025 - 1}\right) + 1000(1.0025)^0 $$
+
+$$ A_0 = 200 \cdot \left(\frac{1 - 1}{0.0025}\right) + 1000(1) $$
+
+$$ A_0 = 200 \cdot 0 + 1000 $$
+
+$$ A_0 = 0 + 1000 $$
+
+$$ A_0 = 1000 $$
+
+This equality holds as $A_0$ was established as being equal to $1000$ in the
+given problem statement. Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 0$.
+
+Suppose $P(k)$, that is:
+
+$$ A_k = 200 \cdot \left(\frac{1.0025^k - 1}{1.0025 - 1}\right) + 1000(1.0025)^k $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ A_{k + 1} = 200 \cdot \left(\frac{1.0025^{k + 1} - 1}{1.0025 - 1}\right) + 1000(1.0025)^{k + 1} $$
+
+By the recurrence relation in part (a), we have:
+
+$$ A_{k + 1} = 1.0025 \cdot A_k + 200 $$
+
+By substitution with the inductive hypothesis:
+
+$$ = 1.0025 \cdot (200 \cdot \left(\frac{1.0025^k - 1}{1.0025 - 1}\right) + 1000(1.0025)^k) + 200 $$
+
+$$ = 200 \cdot \left(\frac{1.0025^{k + 1} - 1.0025}{1.0025 - 1}\right) + 1000(1.0025)^{k + 1} + 200 $$
+
+$$ = 200 \cdot \left(\frac{1.0025^{k + 1} - 1.0025}{0.0025}\right) + 1000(1.0025)^{k + 1} + \frac{0.5}{0.0025} $$
+
+$$ = 200 \cdot \left(\frac{1.0025^{k + 1} - 1.0025 + 0.0025}{0.0025}\right) + 1000(1.0025)^{k + 1} $$
+
+$$ = 200 \cdot \left(\frac{1.0025^{k + 1} - 1}{0.0025}\right) + 1000(1.0025)^{k + 1} $$
+
+Q.E.D.
+
 d. How much will the account be worth at the end of 20 years? At the end of 40
 years?
 
+We can just use the explicit formula:
+
+$$ A_n = 200 \cdot \left(\frac{1.0025^n - 1}{1.0025 - 1}\right) + 1000(1.0025)^n $$
+
+$$ A_{20} = 200 \cdot \left(\frac{1.0025^{20} - 1}{1.0025 - 1}\right) + 1000(1.0025)^{20} $$
+
+$$ \approx \$5147.65 $$
+
+$$ A_{40} = 200 \cdot \left(\frac{1.0025^{40} - 1}{1.0025 - 1}\right) + 1000(1.0025)^{40} $$
+
+$$ \approx \$9507.67  $$
+
 e. In how many years will the account be worth $10,000?
+
+$$ A_n = 200 \cdot \left(\frac{1.0025^n - 1}{1.0025 - 1}\right) + 1000(1.0025)^n $$
+
+$$ 10000 = 200 \cdot \left(\frac{1.0025^n - 1}{0.0025}\right) + 1000(1.0025)^n $$
+
+$$ 10000 = \left(\frac{200 \cdot (1.0025^n - 1)}{0.0025}\right) + 1000(1.0025)^n $$
+
+$$ 10000 = 80000(1.0025^n - 1) + 1000(1.0025)^n $$
+
+$$ 10000 = 80000(1.0025^n) - 80000 + 1000(1.0025)^n $$
+
+$$ 10000 = 81000(1.0025^n) - 80000 $$
+
+$$ 90000 = 81000(1.0025^n) $$
+
+$$ \frac{10}{9} = 1.0025^n $$
+
+$$ \ln\left(\frac{10}{9}\right) = \ln(1.0025^n) $$
+
+$$ \ln\left(\frac{10}{9}\right) = n\ln(1.0025) $$
+
+$$ \frac{\ln\left(\frac{10}{9}\right)}{\ln(1.0025)} = n $$
+
+$$ n \approx 42 \text{ months} $$
+
+$$ \frac{42}{12} = 3.5 \text{ years}  $$
 
 27. A person borrows $3,000 on a bank credit card at a nominal rate of 18% per
     year, which is actually charged at a rate of 1.5% per month.
@@ -9123,13 +9434,61 @@ e. In how many years will the account be worth $10,000?
 a. What is the annual percentage yield (APY) for the card? (See Example 5.6.8
 for a definition of APY.)
 
+$$ \text{APY} = \left(1 + \frac{r}{n}\right)^n - 1 $$
+
+$$ = \left(1 + \frac{0.18}{12}\right)^{12} - 1 $$
+
+$$ \approx 0.1956181715 $$
+
+$$ \approx 19.6\% $$
+
 b. Assume that the person does not place any additional charges on the card and
 pays the bank $150 each month to pay off the loan. Let $B_n$ be the balance owed
 on the card after $n$ months. Find an explicit formula for $B_n$.
 
+$$ B_0 = 3000 $$
+
+$$ B_n = 1.015 \cdot B_{n - 1} - 150 \quad n \geq 1 $$
+
+$$ B_1 = 1.015 \cdot B_0 - 150 = 1.015 \cdot 3000 - 150 $$
+
+$$ B_2 = 1.015 \cdot B_1 - 150 = 1.015 \cdot (1.015 \cdot 3000 - 150) - 150 $$
+
+$$ B_3 = 1.015 \cdot B_2 - 150 = 1.015 \cdot (1.015 \cdot (1.015 \cdot 3000 - 150) - 150) - 150 $$
+
+Guess:
+
+$$ B_n = 1.015^n \cdot B_0 - 150 \cdot \left(\frac{1.015^n - 1}{1.015 - 1}\right) $$
+
+$$ = 1.015^n \cdot 3000 - 150 \cdot \left(\frac{1.015^n - 1}{0.015}\right) $$
+
+$$ = 1.015^n \cdot 3000 - 10000(1.015^n - 1) $$
+
+$$ = 1.015^n \cdot 3000 - 10000(1.015^n) + 10000 $$
+
+$$ = 10000 - 7000(1.015^n) $$
+
 c. How long will be required to pay off the debt?
 
+$$ 0 = 10000 - 7000(1.015^n) $$
+
+$$ 7000(1.015^n) = 10000 $$
+
+$$ 1.015^n = \frac{10000}{7000} $$
+
+$$ 1.015^n = \frac{10}{7} $$
+
+$$ \ln(1.015^n) = \ln\left(\frac{10}{7}\right) $$
+
+$$ n\ln(1.015) = \ln\left(\frac{10}{7}\right) $$
+
+$$ n = \frac{\ln\left(\frac{10}{7}\right)}{\ln(1.015)} $$
+
+$$ n \approx 24 \text{ months } = 2 \text{ years} $$
+
 d. What is the total amount of money the person will have paid for the loan?
+
+$$ 24 \cdot 150 = \$3600 $$
 
 In 28-42 use mathematical induction to verify the correctness of the formula you
 obtained in the referenced exercise.
