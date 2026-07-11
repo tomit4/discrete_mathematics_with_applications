@@ -9495,33 +9495,960 @@ obtained in the referenced exercise.
 
 28. Exercise 3
 
+Let $a_0, a_1, a_2, \dots$ be the sequence defined recursively by $a_0 = 1$ and
+$a_k = ka_{k - 1}$ for each integer $k \geq 1$.
+
+Let the property $P(n)$ be the equation $a_n = n!$.
+
+**Proof by mathematical induction:**
+
+Prove $P(n)$ for every integer $n \geq 0$.
+
+_Basis Step:_
+
+Prove $P(0)$, that is:
+
+$$ a_0 = 0! $$
+
+$$ a_0 = 1 $$
+
+Since $0! = 1$, and since by definition of the given sequence, $a_0 = 1$, the
+equality holds and therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ a_k = k! $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$. That is:
+
+$$ a_{k + 1} = (k + 1)! $$
+
+By the definition of the given sequence:
+
+$$ a_k = ka_{k - 1} $$
+
+Then:
+
+$$ a_{k + 1} = (k + 1) \cdot a_k $$
+
+By substitution of the inductive hypothesis:
+
+$$ a_{k + 1} = (k + 1) \cdot k! $$
+
+By definition of factorial:
+
+$$ a_{k + 1} = (k + 1)! $$
+
+This is what was to be shown, therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 29. Exercise 4
+
+Let $b_0, b_1, b_2, \dots$ be the sequence defined recursively by $b_0 = 1$ and
+$b_k = \dfrac{b_{k - 1}}{1 + b_{k - 1}}$ for each integer $k \geq 1$.
+
+Let the property $P(n)$ be the equation $b_n = \dfrac{1}{n + 1}$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(0)$, that is:
+
+$$ b_0 = \frac{1}{0 + 1} $$
+
+$$ = \frac{1}{1} $$
+
+$$ = 1 $$
+
+This equality matches the given value of $b_0 = 1$, therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ b_k = \dfrac{1}{k + 1} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ b_{k + 1} = \dfrac{1}{(k + 1) + 1} $$
+
+Alternatively:
+
+$$ b_{k + 1} = \dfrac{1}{k + 2} $$
+
+By the definition of the given sequence:
+
+$$ b_k = \dfrac{b_{k - 1}}{1 + b_{k - 1}} $$
+
+Then:
+
+$$ b_{k + 1} = \dfrac{b_k}{1 + b_k} $$
+
+By substitution of the inductive hypothesis:
+
+$$ b_{k + 1} = \frac{\dfrac{1}{k + 1}}{1 + \dfrac{1}{k + 1}} $$
+
+$$ b_{k + 1} = \frac{1}{(k + 1)\left(1 + \dfrac{1}{k + 1}\right)} $$
+
+$$ b_{k + 1} = \frac{1}{k + 1 + 1} $$
+
+$$ b_{k + 1} = \frac{1}{k + 2} $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 30. Exercise 5
 
+Let $c_1, c_2, c_3, \dots$ be the sequence defined recursively by $c_1 = 1$ and
+$c_k = 3c_{k - 1} + 1$ for each integer $k \geq 2$.
+
+Let the property $P(n)$ be the equation $c_n = \frac{3^n - 1}{2}$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ c_1 = \frac{3^1 - 1}{2} $$
+
+$$ = \frac{3 - 1}{2} $$
+
+$$ = \frac{2}{2} $$
+
+$$ = 1 $$
+
+This matches the definition of the given sequence with $c_1 = 1$. Therefore
+$P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 2$.
+
+Suppose $P(k)$, that is:
+
+$$ c_k = \frac{3^k - 1}{2} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ c_{k + 1} = \frac{3^{k + 1} - 1}{2} $$
+
+By the given sequence:
+
+$$ c_k = 3c_{k - 1} + 1 $$
+
+Then:
+
+$$ c_{k + 1} = 3c_k + 1 $$
+
+By substitution of the inductive hypothesis:
+
+$$ = 3\left(\frac{3^k - 1}{2}\right) + 1 $$
+
+$$ = \frac{3(3^k - 1)}{2} + 1 $$
+
+$$ = \frac{3^{k + 1} - 3)}{2} + 1 $$
+
+$$ = \frac{3^{k + 1} - 3}{2} + \frac{2}{2} $$
+
+$$ = \frac{3^{k + 1} - 3 + 2}{2} $$
+
+$$ = \frac{3^{k + 1} - 1}{2} $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 31. Exercise 6
+
+Let $d_1, d_2, d_3, \dots$ be the sequence defined recursively by $d_1 = 2$ and
+$d_k = 2d_{k - 1} + 3$ for each integer $k \geq 2$.
+
+Let the property $P(n)$ be the equation $d_n = 5 \cdot 2^{n - 1} - 3$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ d_1 = 5 \cdot 2^{1 - 1} - 3 $$
+
+$$ = 5 \cdot 2^0 - 3 $$
+
+$$ = 5 \cdot 1 - 3 $$
+
+$$ = 5 - 3 $$
+
+$$ = 2 $$
+
+This equality matches the given value of $d_1 = 2$, therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 2$.
+
+Suppose $P(k)$, that is:
+
+$$ d_k = 5 \cdot 2^{k - 1} - 3 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ d_{k + 1} = 5 \cdot 2^k - 3 $$
+
+By the definition of the given sequence:
+
+$$ d_k = 2d_{k - 1} + 3 $$
+
+Then:
+
+$$ d_{k + 1} = 2d_k + 3 $$
+
+By substitution of the inductive hypothesis:
+
+$$ = 2(5 \cdot 2^{k - 1} - 3) + 3 $$
+
+$$ = 10 \cdot 2^{k - 1} - 6 + 3 $$
+
+$$ = 5 \cdot 2 \cdot 2^{k - 1} - 3 $$
+
+$$ = 5 \cdot 2^k - 3 $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 32. Exercise 7
 
+Let $e_0, e_1, e_2, \dots$ be the sequence defined recursively by $e_0 = 2$ and
+$e_k = 4e_{k - 1} + 5$ for each integer $k \geq 1$.
+
+Let the property $P(n)$ be the equation $e_n = \dfrac{11 \cdot 4^n - 5}{3}$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(0)$, that is:
+
+$$ e_0 = \dfrac{11 \cdot 4^0 - 5}{3} $$
+
+$$ = \dfrac{11 \cdot 1 - 5}{3} $$
+
+$$ = \dfrac{11 - 5}{3} $$
+
+$$ = \dfrac{6}{3} $$
+
+$$ = 2 $$
+
+This equality matches the given value of $e_0 = 2$, therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ e_k = \frac{11 \cdot 4^k - 5}{3} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ e_{k + 1} = \frac{11 \cdot 4^{k + 1} - 5}{3} $$
+
+By the given sequence:
+
+$$ e_k = 4e_{k - 1} + 5 $$
+
+It follows that:
+
+$$ e_{k + 1} = 4e_k + 5 $$
+
+By substitution of the inductive hypothesis:
+
+$$ = 4\left(\frac{11 \cdot 4^k - 5}{3}\right) + 5 $$
+
+$$ = \frac{4(11 \cdot 4^k - 5)}{3} + 5 $$
+
+$$ = \frac{44 \cdot 4^k - 20}{3} + 5 $$
+
+$$ = \frac{11 \cdot 4 \cdot 4^k - 20}{3} + 5 $$
+
+$$ = \frac{11 \cdot 4^{k + 1} - 20}{3} + 5 $$
+
+$$ = \frac{11 \cdot 4^{k + 1} - 20}{3} + \frac{15}{3} $$
+
+$$ = \frac{11 \cdot 4^{k + 1} - 20 + 15}{3} $$
+
+$$ = \frac{11 \cdot 4^{k + 1} - 5}{3} $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 33. Exercise 8
+
+Let $f_1, f_2, f_3, \dots$ be the sequence defined recursively by $f_1 = 1$ and
+$f_k = f_{k - 1} + 2^k$ for each integer $k \geq 2$.
+
+Let the property $P(n)$ be the equation $f_n = 2^{n + 1} - 3$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ f_1 = 2^{1 + 1} - 3 $$
+
+$$ = 2^2 - 3 $$
+
+$$ = 4 - 3 $$
+
+$$ = 1 $$
+
+This equality matches the give value of $f_1 = 1$, therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 2$.
+
+Suppose $P(k)$, that is:
+
+$$ f_k = 2^{k + 1} - 3 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ f_{k + 1} = 2^{k + 2} - 3 $$
+
+By the given sequence:
+
+$$ f_k = f_{k - 1} + 2^k $$
+
+It follows that:
+
+$$ f_{k + 1} = f_k + 2^{k + 1} $$
+
+By substitution of the inductive hypothesis:
+
+$$ = (2^{k + 1} - 3) + 2^{k + 1} $$
+
+$$ = 2^{k + 2} - 3 $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 34. Exercise 9
 
+Let $g_1, g_2, g_3, \dots$ be the sequence defined recursively by $g_1 = 1$ and
+$g_k = \dfrac{g_{k - 1}}{g_{k - 1} + 2}$ for each integer $k \geq 2$.
+
+Let the property $P(n)$ be the equation $g_n = \frac{1}{2^n - 1}$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ g_1 = \frac{1}{2^1 - 1} $$
+
+$$ = \frac{1}{2 - 1} $$
+
+$$ = \frac{1}{1} $$
+
+$$ = 1 $$
+
+This equality matches the given value of $g_1 = 1$. Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 2$.
+
+Suppose $P(k)$, that is:
+
+$$ g_k = \frac{1}{2^k - 1} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ g_{k + 1} = \frac{1}{2^{k + 1} - 1} $$
+
+By the given sequence:
+
+$$ g_k = \dfrac{g_{k - 1}}{g_{k - 1} + 2} $$
+
+It follows that:
+
+$$ g_{k + 1} = \dfrac{g_k}{g_k + 2} $$
+
+By substitution of the inductive hypothesis:
+
+$$ = \dfrac{\dfrac{1}{2^k - 1}}{\left(\dfrac{1}{2^k - 1}\right) + 2} $$
+
+$$ = \dfrac{1}{(2^k - 1)\left(\dfrac{1}{2^k - 1} + 2\right)} $$
+
+$$ = \dfrac{1}{1 + 2(2^k - 1)} $$
+
+$$ = \dfrac{1}{1 + 2^{k + 1} - 2} $$
+
+$$ = \dfrac{1}{2^{k + 1} - 1} $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 35. Exercise 10
+
+Let $h_0, h_1, h_2, \dots$ be the sequence defined recursively by $h_0 = 1$ and
+$h_k = 2^k - h_{k - 1}$ for each integer $k \geq 1$.
+
+Let the property $P(n)$ be the equation
+$h_n = \dfrac{2^{n + 1} - (-1)^{n + 1}}{3}$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(0)$, that is:
+
+$$ h_0 = \frac{2^{0 + 1} - (-1)^{0 + 1}}{3} $$
+
+$$ = \frac{2^1 - (-1)^1}{3} $$
+
+$$ = \frac{2 - (-1)}{3} $$
+
+$$ = \frac{2 + 1}{3} $$
+
+$$ = \frac{3}{3} $$
+
+$$ = 1 $$
+
+This equality matches the given value of $h_0 = 1$. Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ h_k = \frac{2^{k + 1} - (-1)^{k + 1}}{3} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ h_{k + 1} = \frac{2^{k + 2} - (-1)^{k + 2}}{3} $$
+
+By the given sequence:
+
+$$ h_k = 2^k - h_{k - 1} $$
+
+It follows that:
+
+$$ h_{k + 1} = 2^{k + 1} - h_k $$
+
+By substitution of the inductive hypothesis:
+
+$$ = 2^{k + 1} - \left(\frac{2^{k + 1} - (-1)^{k + 1}}{3}\right) $$
+
+$$ = 2^{k + 1} - \frac{2^{k + 1} - (-1)^{k + 1}}{3} $$
+
+$$ = \frac{3 \cdot 2^{k + 1}}{3} - \frac{2^{k + 1} - (-1)^{k + 1}}{3} $$
+
+$$ = \frac{3 \cdot 2^{k + 1} - (2^{k + 1} - (-1)^{k + 1})}{3} $$
+
+$$ = \frac{3 \cdot 2^{k + 1} - 2^{k + 1} + (-1)^{k + 1}}{3} $$
+
+$$ = \frac{2 \cdot 2^{k + 1} + (-1)^{k + 1}}{3} $$
+
+$$ = \frac{2^{k + 2} + (-1)^{k + 1}}{3} $$
+
+$$ = \frac{2^{k + 2} + (-1)(-1)^{k + 2}}{3} $$
+
+$$ = \frac{2^{k + 2} - (-1)^{k + 2}}{3} $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 36. Exercise 11
 
+Let $p_1, p_2, p_3, \dots$ be the sequence defined recursively by $p_1 = 2$ and
+$p_k = p_{k - 1} + 2 \cdot 3^k$ for each integer $k \geq 2$.
+
+Let the property $P(n)$ be the equation $p_n = 3^{n + 1} - 7$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ p_1 = 3^{1 + 1} - 7 $$
+
+$$ = 3^2 - 7 $$
+
+$$ = 9 - 7 $$
+
+$$ = 2 $$
+
+This equality matches the given value of $p_1 = 2$. Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 2$.
+
+Suppose $P(k)$, that is:
+
+$$ p_k = 3^{k + 1} - 7 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ p_{k + 1} = 3^{k + 2} - 7 $$
+
+By the given sequence:
+
+$$ p_k = p_{k - 1} + 2 \cdot 3^k $$
+
+It follows that:
+
+$$ p_{k + 1} = p_k + 2 \cdot 3^{k + 1} $$
+
+By substitution of the inductive hypothesis:
+
+$$ = (3^{k + 1} - 7) + 2 \cdot 3^{k + 1} $$
+
+$$ = -7 + 3 \cdot 3^{k + 1} $$
+
+$$ = -7 + 3^{k + 2} $$
+
+$$ = 3^{k + 2} - 7 $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 37. Exercise 12
+
+Let $s_0, s_1, s_2, \dots$ be the sequence defined recursively by $s_0 = 3$ and
+$s_k = s_{k - 1} + 2k$ for each integer $k \geq 1$.
+
+Let the property $P(n)$ be the equation $s_n = n^2 + n + 3$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(0)$, that is:
+
+$$ s_0 = 0^2 + 0 + 3 $$
+
+$$ = 0 + 0 + 3 $$
+
+$$ = 3 $$
+
+This equality matches the given value of $s_0 = 3$. Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ s_k = k^2 + k + 3 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ s_{k + 1} = (k + 1)^2 + (k + 1) + 3 $$
+
+Alternatively:
+
+$$ s_{k + 1} = (k + 1)(k + 1) + k + 4 $$
+
+$$ s_{k + 1} = k^2 + 2k + 1 + k + 4 $$
+
+$$ s_{k + 1} = k^2 + 3k + 5 $$
+
+By the given sequence:
+
+$$ s_k = s_{k - 1} + 2k $$
+
+It follows that:
+
+$$ s_{k + 1} = s_k + 2(k + 1) $$
+
+$$ s_{k + 1} = s_k + 2k + 2 $$
+
+By substitution of the inductive hypothesis:
+
+$$ = (k^2 + k + 3) + 2k + 2 $$
+
+$$ = k^2 + 3k + 5 $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 38. Exercise 13
 
+Let $t_0, t_1, t_2, \dots$ be the sequence defined recursively by $t_0 = 0$ and
+$t_k = t_{k - 1} + 3k + 1$ for each integer $k \geq 1$.
+
+Let the property $P(n)$ be the equation $t_n = \frac{3n^2 + 5n}{2}$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(0)$, that is:
+
+$$ t_0 = \frac{3(0)^2 + 5(0)}{2} $$
+
+$$ = \frac{3(0) + 0}{2} $$
+
+$$ = \frac{0 + 0}{2} $$
+
+$$ = \frac{0}{2} $$
+
+$$ = 0 $$
+
+This equality matches the given value of $t_0 = 0$. Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ t_k = \frac{3k^2 + 5k}{2} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ t_{k + 1} = \frac{3(k + 1)^2 + 5(k + 1)}{2} $$
+
+Alternatively:
+
+$$ t_{k + 1} = \frac{3(k + 1)(k + 1) + 5k + 5}{2} $$
+
+$$ t_{k + 1} = \frac{3(k^2 + 2k + 1) + 5k + 5}{2} $$
+
+$$ t_{k + 1} = \frac{3k^2 + 6k + 3 + 5k + 5}{2} $$
+
+$$ t_{k + 1} = \frac{3k^2 + 11k + 8}{2} $$
+
+By the given sequence:
+
+$$ t_k = t_{k - 1} + 3k + 1 $$
+
+It follows that:
+
+$$ t_{k + 1} = t_k + 3(k + 1) + 1 $$
+
+$$ t_{k + 1} = t_k + 3k + 3 + 1 $$
+
+$$ t_{k + 1} = t_k + 3k + 4 $$
+
+By substitution of the inductive hypothesis:
+
+$$ = \left(\frac{3k^2 + 5k}{2}\right) + 3k + 4 $$
+
+$$ = \frac{3k^2 + 5k}{2} + \frac{6k}{2} + \frac{8}{2} $$
+
+$$ = \frac{3k^2 + 5k + 6k + 8}{2} $$
+
+$$ = \frac{3k^2 + 11k + 8}{2} $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 39. Exercise 14
+
+Let $x_1, x_2, x_3, \dots$ be the sequence defined recursively by $x_1 = 1$ and
+$x_k = 3x_{k - 1} + k$ for each integer $k \geq 2$.
+
+Let the property $P(n)$ be the equation
+$x_n = \frac{1}{4}\left[3^{n + 1} - 3 - 2n\right]$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ x_1 = \frac{1}{4}\left[3^{1 + 1} - 3 - 2(1)\right] $$
+
+$$ = \frac{1}{4}\left[3^2 - 3 - 2\right] $$
+
+$$ = \frac{1}{4}\left[9 - 5\right] $$
+
+$$ = \frac{1}{4}(4) $$
+
+$$ = 1 $$
+
+This equality matches the given value of $x_1 = 1$. Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 2$.
+
+Suppose $P(k)$, that is:
+
+$$ x_k = \frac{1}{4}\left[3^{k + 1} - 3 - 2k\right] $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ x_{k + 1} = \frac{1}{4}\left[3^{k + 2} - 3 - 2(k + 1)\right] $$
+
+Alternatively:
+
+$$ x_{k + 1} = \frac{1}{4}\left[3^{k + 2} - 3 - 2k - 2\right] $$
+
+$$ x_{k + 1} = \frac{1}{4}\left[3^{k + 2} - 2k - 5\right] $$
+
+By the given sequence:
+
+$$ x_k = 3x_{k - 1} + k $$
+
+It follows that:
+
+$$ x_{k + 1} = 3x_k + k + 1 $$
+
+By substitution of the inductive hypothesis:
+
+$$ = 3\left[\frac{1}{4}\left(3^{k + 1} - 3 - 2k\right)\right] + k + 1 $$
+
+$$ = \frac{1}{4}\left(3(3^{k + 1} - 3 - 2k)\right) + k + 1 $$
+
+$$ = \frac{1}{4}(3^{k + 2} - 9 - 6k) + k + 1 $$
+
+$$ = \frac{1}{4}(3^{k + 2} - 9 - 6k) + \frac{4k}{4} + \frac{4}{4} $$
+
+$$ = \frac{1}{4}(3^{k + 2} - 9 - 6k + 4k + 4) $$
+
+$$ = \frac{1}{4}(3^{k + 2} - 5 - 2k) $$
+
+$$ = \frac{1}{4}(3^{k + 2} - 2k - 5) $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 40. Exercise 15
 
+Let $y_1, y_2, y_3, \dots$ be the sequence defined recursively by $y_1 = 1$ and
+$y_k = y_{k - 1} + k^2$ for each integer $k \geq 2$.
+
+Let the property $P(n)$ be the equation $y_n = \frac{n(n + 1)(2n + 1)}{6}$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ y_1 = \frac{1(1 + 1)(2(1) + 1)}{6} $$
+
+$$ = \frac{1(2)(2 + 1)}{6} $$
+
+$$ = \frac{(2)(3)}{6} $$
+
+$$ = \frac{6}{6} $$
+
+$$ = 1 $$
+
+This equality matches the given value of $y_1 = 1$. Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 2$.
+
+Suppose $P(k)$, that is:
+
+$$ y_k = \frac{k(k + 1)(2k + 1)}{6} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ y_{k + 1} = \frac{(k + 1)(k + 2)(2(k + 1) + 1)}{6} $$
+
+Alternatively:
+
+$$ y_{k + 1} = \frac{(k^2 + 3k + 2)(2k + 2 + 1)}{6} $$
+
+$$ y_{k + 1} = \frac{(k^2 + 3k + 2)(2k + 3)}{6} $$
+
+$$ y_{k + 1} = \frac{k^2(2k + 3) + 3k(2k + 3) + 2(2k + 3)}{6} $$
+
+$$ y_{k + 1} = \frac{2k^3 + 3k^2 + 6k^2 + 9k + 4k + 6}{6} $$
+
+$$ y_{k + 1} = \frac{2k^3 + 9k^2 + 13k + 6}{6} $$
+
+By the given sequence:
+
+$$ y_k = y_{k - 1} + k^2 $$
+
+It follows that:
+
+$$ y_{k + 1} = y_k + (k + 1)^2 $$
+
+By substitution of the inductive hypothesis:
+
+$$ = \left(\frac{k(k + 1)(2k + 1)}{6}\right) + (k + 1)^2 $$
+
+$$ = \frac{k(k + 1)(2k + 1)}{6} + \frac{6(k + 1)^2}{6} $$
+
+$$ = \frac{k(k + 1)(2k + 1) + 6(k + 1)^2}{6} $$
+
+$$ = \frac{k(2k^2 + 3k + 1) + 6(k^2 + 2k + 1)}{6} $$
+
+$$ = \frac{2k^3 + 3k^2 + k + 6k^2 + 12k + 6}{6} $$
+
+$$ = \frac{2k^3 + 9k^2 + 13k + 6}{6} $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
 41. Exercise 16
 
+Let $a_1, a_2, a_3, \dots$ be the sequence defined recursively by $a_1 = 2$ and
+$a_k = 3a_{k - 1} + 2$ for each integer $k \geq 2$.
+
+Let the property $P(n)$ be the equation $a_n = 3^n - 1$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ a_1 = 3^1 - 1 $$
+
+$$ = 3 - 1 $$
+
+$$ = 2 $$
+
+This equality matches the given value of $a_1 = 2$. Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 2$.
+
+Suppose $P(k)$, that is:
+
+$$ a_k = 3^k - 1 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ a_{k + 1} = 3^{k + 1} - 1 $$
+
+By the given sequence:
+
+$$ a_k = 3a_{k - 1} + 2 $$
+
+It follows that:
+
+$$ a_{k + 1} = 3a_k + 2 $$
+
+By substitution of the inductive hypothesis:
+
+$$ = 3(3^k - 1) + 2 $$
+
+$$ = 3^{k + 1} - 3 + 2 $$
+
+$$ = 3^{k + 1} - 1 $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 42. Exercise 17
+
+Let $t_1, t_2, t_3, \dots$ be the sequence defined recursively by $t_1 = 2$ and
+$t_k = 3t_{k - 1} + 2$ for each integer $k \geq 2$.
+
+Let the property $P(n)$ be the equation $t_n = 3^n - 1$.
+
+**Proof by mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ t_1 = 3^1 - 1 $$
+
+$$ = 3 - 1 $$
+
+$$ = 2 $$
+
+This equality matches the given value of $t_1 = 2$. Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 2$.
+
+Suppose $P(k)$, that is:
+
+$$ t_k = 3^k - 1 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ t_{k + 1} = 3^{k + 1} - 1 $$
+
+By the given sequence:
+
+$$ t_k = 3t_{k - 1} + 2 $$
+
+It follows that:
+
+$$ t_{k + 1} = 3t_k + 2 $$
+
+By substitution of the inductive hypothesis:
+
+$$ = 3(3^k - 1) + 2 $$
+
+$$ = 3^{k + 1} - 3 + 2 $$
+
+$$ = 3^{k + 1} - 1 $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 In each of 43-49 a sequence is defined recursively. (a) Use iteration to guess
 an explicit formula for the sequence. (b) Use strong mathematical induction to
