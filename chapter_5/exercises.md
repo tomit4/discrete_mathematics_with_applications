@@ -10457,26 +10457,384 @@ verify that the formula of part (a) is correct.
 43. $a_k = \dfrac{a_{k - 1}}{2a_{k - 1} - 1}$, for each integer $k \geq 1$
     $a_0 = 2$.
 
+a.
+
+$$ a_0 = 2 $$
+
+$$ a_1 = \frac{a_0}{2a_0 - 1} = \frac{2}{2(2) - 1} = \frac{2}{3} $$
+
+$$ a_2 = \frac{a_1}{2a_1 - 1} = \frac{\dfrac{2}{3}}{2\left(\dfrac{2}{3}\right) - 1} = \frac{2}{4 - 3} = 2 $$
+
+$$ a_3 = \frac{a_2}{2a_2 - 1} = \frac{2}{2(2) - 1} = \frac{2}{3} $$
+
+Guess:
+
+$$
+a_n =
+\begin{cases}
+2 & \text{if } n \text{ is even} \\
+\dfrac{2}{3} & n \text{ is odd}
+\end{cases}
+$$
+
+b.
+
+Let $a_0, a_1, a_2, \dots$ be the sequence defined recursively by $a_0 = 2$ and
+$a_k = \dfrac{a_{k - 1}}{2a_{k - 1} - 1}$ for each integer $k \geq 1$.
+
+Let the property $P(n)$ be the equation:
+
+$$
+a_n =
+\begin{cases}
+2 & \text{if } n \text{ is even} \\
+\dfrac{2}{3} & \text{if } n \text{ is odd}
+\end{cases}
+$$
+
+**Proof by strong mathematical induction:**
+
+_Basis Step:_
+
+Prove $P(0)$ and $P(1)$, that is:
+
+$$
+a_0 =
+\begin{cases}
+2 & \text{if } 0 \text{ is even} \\
+\dfrac{2}{3} & \text{if } 0 \text{ is odd}
+\end{cases}
+$$
+
+and:
+
+$$
+a_1 =
+\begin{cases}
+2 & \text{if } 1 \text{ is even} \\
+\dfrac{2}{3} & \text{if } 1 \text{ is odd}
+\end{cases}
+$$
+
+$P(0)$ is true since the piecewise function tells us that $a_0 = 2$ since $0$ is
+even and this matches the given value of $a_0 = 2$.
+
+$P(1)$ is true given the evaluation of $a_1$ in part (a).
+
+Therefore both $P(0)$ and $P(1)$ are true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 0$. Let $i$ be some integer such that
+$0 \leq i \leq k$.
+
+Suppose $P(i)$, that is:
+
+$$
+a_i =
+\begin{cases}
+2 & \text{if } i \text{ is even} \\
+\dfrac{2}{3} & \text{if } i \text{ is odd}
+\end{cases}
+$$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$
+a_{k + 1} =
+\begin{cases}
+2 & \text{if } k + 1 \text{ is even} \\
+\dfrac{2}{3} & \text{if } k + 1 \text{ is odd}
+\end{cases}
+$$
+
+By the definition of the sequence:
+
+$$ a_k = \dfrac{a_{k - 1}}{2a_{k - 1} - 1} $$
+
+It follows that:
+
+$$ a_{k + 1} = \dfrac{a_k}{2a_k - 1} $$
+
+By the inductive hypothesis:
+
+$$
+a_{k + 1} =
+\begin{cases}
+\dfrac{2}{2(2) - 1} & \text{if } k \text{ is even} \\
+\dfrac{\dfrac{2}{3}}{2\left(\dfrac{2}{3}\right) - 1} & \text{if } k \text{ is odd}
+\end{cases}
+$$
+
+$$
+= \\
+\begin{cases}
+\dfrac{2}{3} & \text{if } k \text{ is even} \\
+2 & \text{if } k \text{ is odd}
+\end{cases}
+$$
+
+It follows that:
+
+$$
+= \\
+\begin{cases}
+\dfrac{2}{3} & \text{if } k + 1 \text{ is odd} \\
+2 & \text{if } k + 1 \text{ is even}
+\end{cases}
+$$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 44. $b_k = \dfrac{2}{b_{k - 1}}$, for each integer $k \geq 2$ $b_1 = 1$.
+
+a.
+
+$$ b_1 = 1 $$
+
+$$ b_2 = \frac{2}{b_1} = \frac{2}{1} = 2 $$
+
+$$ b_3 = \frac{2}{b_2} = \frac{2}{2} = 1 $$
+
+Guess:
+
+$$
+b_n =
+\begin{cases}
+1 & \text{if } n \text{ is odd} \\
+2 & \text{if } n \text{ is even}
+\end{cases}
+$$
+
+b.
+
+Let $b_1, b_2, b_3, \dots$ be the sequence defined recursively by $b_1 = 1$ and
+$b_k = \dfrac{2}{b_{k - 1}}$ for each integer $k \geq 2$.
+
+**Proof by strong mathematical induction:**
+
+Let the property $P(n)$ be the equation:
+
+$$
+b_n =
+\begin{cases}
+1 & \text{if } n \text{ is odd} \\
+2 & \text{if } n \text{ is even}
+\end{cases}
+$$
+
+_Basis Step:_
+
+Prove $P(1)$ and $P(2)$.
+
+Both $P(1)$ and $P(2)$ are proven true in part (a).
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 2$, and let $i$ be some integer such
+that $1 \leq i \leq k$.
+
+Suppose $P(i)$, that is:
+
+$$
+b_i =
+\begin{cases}
+1 & \text{if } i \text{ is odd} \\
+2 & \text{if } i \text{ is even}
+\end{cases}
+$$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$
+b_{k + 1} =
+\begin{cases}
+1 & \text{if } k + 1 \text{ is odd} \\
+2 & \text{if } k + 1 \text{ is even}
+\end{cases}
+$$
+
+By the definition of the given sequence:
+
+$$ b_k = \dfrac{2}{b_{k - 1}} $$
+
+It follows that:
+
+$$ b_{k + 1} = \dfrac{2}{b_k} $$
+
+By the inductive hypothesis:
+
+$$
+b_{k + 1} =
+\begin{cases}
+\dfrac{2}{1} & \text{if } k \text{ is odd} \\
+\dfrac{2}{2} & \text{if } k \text{ is even}
+\end{cases}
+$$
+
+$$
+= \\
+\begin{cases}
+2 & \text{if } k \text{ is odd} \\
+1 & \text{if } k \text{ is even}
+\end{cases}
+$$
+
+$$
+= \\
+\begin{cases}
+2 & \text{if } k + 1 \text{ is even} \\
+1 & \text{if } k + 1 \text{ is odd}
+\end{cases}
+$$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
 
 45. $v_k = v_{\lfloor \dfrac{k}{2} \rfloor} + v_{\lfloor \dfrac{(k + 1)}{2}\rfloor} + 2$,
     for each integer $k \geq 2$ $v_1 = 1$.
 
+a.
+
+$$ v_1 = 1 $$
+
+$$ v_2 = v_{\lfloor \dfrac{2}{2} \rfloor} + v_{\lfloor \dfrac{(2 + 1)}{2} \rfloor} + 2 $$
+
+$$ = v_1 + v_1 + 2 = 1 + 1 + 2 $$
+
+$$ v_3 = v_{\lfloor \dfrac{3}{2} \rfloor} + v_{\lfloor \dfrac{(3 + 1)}{2} \rfloor} + 2 $$
+
+$$ = v_1 + v_2 + 2 = 1 + (1 + 1 + 2) + 2 $$
+
+$$ = 3 + 2 \cdot 2 $$
+
+$$ v_4 = v_{\lfloor \dfrac{4}{2} \rfloor} + v_{\lfloor \dfrac{(4 + 1)}{2} \rfloor} + 2 $$
+
+$$ = v_2 + v_2 + 2 = (1 + 1 + 2) + (1 + 1 + 2) + 2 $$
+
+$$ = 4 + 3 \cdot 2 $$
+
+$$ v_5 = v_{\lfloor \dfrac{5}{2} \rfloor} + v_{\lfloor \dfrac{(5 + 1)}{2} \rfloor} + 2 $$
+
+$$ = v_2 + v_3 + 2 = (1 + 1 + 2) + (3 + 2 \cdot 2) + 2 $$
+
+$$ = 5 + 4 \cdot 2 $$
+
+Guess:
+
+$$ v_n = n + 2(n - 1) = n + 2n - 2 $$
+
+$$ = 3n - 2 $$
+
+b.
+
+Let $v_1, v_2, v_3, \dots$ be the sequence defined recursively by $v_1 = 1$ and
+$v_k = v_{\lfloor \frac{k}{2} \rfloor} + v_{\lfloor \frac{(k + 1)}{2} \rfloor} + 2$
+for each integer $k \geq 2$.
+
+**Proof by strong mathematical induction:**
+
+Let the property $P(n)$ be the equation $v_n = 3n - 2$.
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ v_1 = 3(1) - 2 $$
+
+$$ = 3 - 2 $$
+
+$$ = 1 $$
+
+This equality matches the given value of $v_1 = 1$. Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 2$, and let $i$ be some integer such
+that $1 \leq i \leq k$.
+
+Suppose $P(i)$, that is:
+
+$$ v_i = 3i - 2 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ v_{k + 1} = 3(k + 1) - 2 $$
+
+Alternatively:
+
+$$ v_{k + 1} = 3k + 1 $$
+
+By the definition of the given sequence:
+
+$$ v_k = v_{\lfloor \frac{k}{2} \rfloor} + v_{\lfloor \frac{(k + 1)}{2} \rfloor} + 2 $$
+
+It follows that:
+
+$$ v_{k + 1} = v_{\lfloor \frac{(k + 1)}{2} \rfloor} + v_{\lfloor \frac{(k + 2)}{2} \rfloor} + 2 $$
+
+By the inductive hypothesis:
+
+$$ = \left(3\lfloor \frac{k + 1}{2} \rfloor - 2\right) + \left(3\lfloor \frac{k + 2}{2}\rfloor - 2\right) + 2 $$
+
+$$ = 3\left(\lfloor \frac{k + 1}{2} \rfloor + \lfloor \frac{k + 2}{2} \rfloor \right) - 2 $$
+
+$$
+= \\
+\begin{cases}
+3\left(\frac{k}{2} + \frac{k + 2}{2}\right) - 2 & \text{if } k \text{ is even} \\
+3\left(\frac{k + 1}{2} + \frac{k + 1}{2}\right) - 2 & \text{if } k \text{ is odd}
+\end{cases}
+$$
+
+$$ = 3\left(\frac{2k + 2}{2}\right) - 2 $$
+
+$$ = 3(k + 1) - 2 $$
+
+$$ = 3k + 3 - 2 $$
+
+$$ = 3k + 1 $$
+
+This is what was to be shown. Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 46. $s_k = 2s_{k - 2}$, for each integer $k \geq 2$ $s_0 = 1$, $s_1 = 2$.
+
+Omitted.
 
 47. $t_k = k - t_{k - 1}$, for each integer $k \geq 1$ $t_0 = 0$.
 
+Omitted.
+
 48. $w_k = w_{k - 2} + k$, for each integer $k \geq 3$ $w_1 = 1$, $w_2 = 2$.
+
+Omitted.
 
 49. $u_k = u_{k - 2} \cdot u_{k - 1}$, for each integer $k \geq 2$
     $u_0 = u_1 = 2$
+
+Omitted.
 
 In 50 and 51 determine whether the given recursively defined sequence satisfies
 the explicit formula $a_n = (n - 1)^2$, for every integer $n \geq 1$.
 
 50. $a_k = 2a_{k - 1} + k - 1$, for each integer $k \geq 2$ $a_1 = 0$.
 
+Omitted.
+
 51. $a_k = 4a_{k - 1} - k + 3$, for each integer $k \geq 2$ $a_1 = 0$.
+
+Omitted.
 
 52. A single line divides a plane into two regions. Two lines (by crossing) can
     divide a plane into four regions; three lines can divide it into seven
@@ -10488,12 +10846,18 @@ the explicit formula $a_n = (n - 1)^2$, for every integer $n \geq 1$.
 a. Derive a recurrence relation for $P_k$ in terms of $P_{k - 1}$, for each
 integer $k \geq 2$.
 
+Omitted.
+
 b. Use iteration to guess an explicit formula for $P_n$.
+
+Omitted.
 
 53. Compute $\left[\begin{array}{cc} 1 & 1 \\ 1 & 0 \\ \end{array}\right]^n$ for
     small values of $n$ (up to about 5 or 6). Conjecture explicit formulas for
     the entries in this matrix, and prove your conjecture using mathematical
     induction.
+
+Omitted.
 
 54. In economics the behavior of an economy from one period to another is often
     modeled by recurrence relations. Let $Y_k$ be the income in period $k$ and
@@ -10516,9 +10880,13 @@ $Y_k = E + c + mY_{k - 1}$.
 
 a. Use iteration on the above recurrence relation to obtain
 
+Omitted.
+
 $$ Y_n = (E + c)\left(\frac{m^n - 1}{m - 1}\right) + m^nY_0 $$
 
 for every integer $n \geq 1$.
 
 b. (For students who have studied calculus) Show that if $0 < m < 1$, then
 $\lim\limits_{m \to \infty}Y_n = \dfrac{E + c}{1 - m}$.
+
+Omitted.
