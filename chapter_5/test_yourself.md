@@ -218,3 +218,28 @@ $a_k = ra_{k - 1}$; $a_n = r^na_0$
    by iteration, its correctness can be checked by _____.
 
 mathematical induction
+
+---
+
+Page 385
+
+**Test Yourself**
+
+1. A second-order linear homogeneous recurrence relation with constant
+   coefficients is a recurrence relation of the form _____ for every integer
+   $k \geq$ _____, where _____.
+
+2. Given a recurrence relation of the form $a_k = Aa_{k - 1} + Ba_{k - 2}$ for
+   every integer $k \geq 2$, the characteristic equation of the relation is
+   _____.
+
+3. If a sequence $a_1, a_2, a_3, \dots$ is defined by a second-order linear
+   homogeneous recurrence relation with constant coefficients and the
+   characteristic equation for the relation has two distinct roots $r$ and $s$
+   (which could be complex numbers), then the sequence is given by an explicit
+   formula of the form _____.
+
+4. If a sequence $a_1, a_2, a_3, \dots$ is defined by a second-order linear
+   homogeneous recurrence relation with constant coefficients and the
+   characteristic equation for the relation has only a single root $r$, then the
+   sequence is given by an explicit formula of the form _____.

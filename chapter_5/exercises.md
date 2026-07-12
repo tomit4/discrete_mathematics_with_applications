@@ -10890,3 +10890,192 @@ b. (For students who have studied calculus) Show that if $0 < m < 1$, then
 $\lim\limits_{m \to \infty}Y_n = \dfrac{E + c}{1 - m}$.
 
 Omitted.
+
+---
+
+Page 385
+
+**Exercise Set 5.8**
+
+1. Which of the following are second-order linear homogeneous recurrence
+   relations with constant coefficients?
+
+a. $a_k = 2a_{k - 1} - 5a_{k - 2}$
+
+b. $b_k = kb_{k - 1} + b_{k - 2}$
+
+c. $c_k = 3c_{k - 1} \cdot c_{k - 2}^2$
+
+d. $d_k = 3d_{k - 1} + d_{k - 2}$
+
+e. $r_k = r_{k - 1} - r_{k - 2} - 2$
+
+f. $s_k = 10s_{k - 2}$
+
+2. Which of the following are second-order linear homogeneous recurrence
+   relations with constant coefficients?
+
+a. $a_k = (k - 1)a_{k - 1} + 2ka_{k - 2}$
+
+b. $b_k = -b_{k - 1} + 7b_{k - 2}$
+
+c. $c_k = 3c_{k - 1} + 1$
+
+d. $d_k = 3d_{k - 1}^2 + d_{k - 2}$
+
+e. $r_k = r_{k - 1} + 6r_{k - 3}$
+
+f. $s_k = s_{k - 1} + 10s_{k - 2}$
+
+3. Let $a_0, a_1, a_2, \dots$ be the sequence defined by the explicit formula
+
+$$ a_n = C \cdot 2^n + D \quad \text{ for every integer } n \geq 0 $$
+
+where $C$ and $D$ are real numbers.
+
+a. Find $C$ and $D$ so that $a_0 = 1$ and $a_1 = 3$. What is $a_2$ in this case?
+
+b. Find $C$ and $D$ so that $a_0 = 0$ and $a_1 = 2$. What is $a_2$ in this case?
+
+4. Let $b_0, b_1, b_2, \dots$ be the sequence defined by the explicit formula
+
+$$ b_n = C \cdot 3^n + D(-2)^n \quad \text{ for each integer } n \geq 0 $$
+
+where $C$ and $D$ are real numbers.
+
+a. Find $C$ and $D$ so that $b_0 = 0$ and $b_1 = 5$. What is $b_2$ in this case?
+
+b. Find $C$ and $D$ so that $b_0 = 3$ and $b_1 = 4$. What is $b_2$ in this case?
+
+5. Let $a_0, a_1, a_2, \dots$ be the sequence defined by the explicit formula
+
+$$ a_n = C \cdot 2^n + D \quad \text{ for each integer } n \geq 0 $$
+
+where $C$ and $D$ are real numbers. Show that for any choice of $C$ and $D$,
+
+$$ a_k = 3a_{k - 1} - 2a_{k - 2} \quad \text{ for every integer } k \geq 2 $$
+
+6. Let $b_0, b_1, b_2, \dots$ be the sequence defined by the explicit formula
+
+$$ b_n = C \cdot 3^n + D(-2)^n \quad \text{ for every integer } n \geq 0 $$
+
+where $C$ and $D$ are real numbers. Show that for any choice of $C$ and $D$,
+
+$$ b_k = b_{k - 1} + 6b_{k - 2} \quad \text{ for each integer } k \geq 2 $$
+
+7. Solve the system of equations in Example 5.8.4 to obtain
+
+$$ C = \frac{1 + \sqrt{5}}{2\sqrt{5}} \quad \text{ and } \quad D = \frac{-(1 - \sqrt{5})}{2\sqrt{5}} $$
+
+In each of 8-10: (a) suppose a sequence of the form
+$1, t, t^2, t^3, \dots, t^n, \dots$ where $t \neq 0$, satisfies the given
+recurrence relation (but not necessarily the initial conditions), and find all
+possible values of $t$: (b) suppose a sequence satisfies the given initial
+conditions as well as the recurrence relation, and find an explicit formula for
+the sequence.
+
+8. $a_k = 2a_{k - 1} + 3a_{k - 2}$, for every integer $k \geq 2$
+   $a_0 = 1, a_1 = 2$
+
+9. $b_k = 7b_{k - 1} - 10b_{k - 2}$, for every integer $k \geq 2$
+   $b_0 = 2, b_1, = 2$
+
+10. $c_k = c_{k - 1} + 6c_{k - 2}$, for every integer $k \geq 2$
+    $c_0 = 0, c_1 = 3$
+
+In each of 11-16 suppose a sequence satisfies the given recurrence relation and
+initial conditions. Find an explicit formula for the sequence.
+
+11. $d_k = 4d_{k - 2}$ , for each integer $k \geq 2$ $d_0 = 1, d_1 = -1$
+
+12. $e_k = 9e_{k - 1}$, for each integer $k \geq 2$ $e_0 = 0, e_1 = 2$
+
+13. $r_k = 2r^{k - 1} - r^{k - 2}$, for each integer $k \geq 2$
+    $r_0 = 1, r_1 = 4$
+
+14. $s_k = -4s_{k - 1} - 4s_{k - 2}$, for every integer $k \geq 2$
+    $s_0 = 0, s_1 = -1$
+
+15. $t_k = 6t_{k - 1} - 9t_{k - 2}$, for each integer $k \geq 2$
+    $t_0 = 1, t_1= 3$
+
+16. $s_k = 2s_{k - 1} + 2s_{k - 2}$, for every integer $k \geq 2$
+    $s_0 = 1, s_1 = 3$
+
+17. Find an explicit formula for the sequence of exercise 39 in Section 5.6.
+
+18. Suppose that the sequences $s_0, s_1, s_2, \dots$ and $t_0, t_1, t_2, \dots$
+    both satisfy the same second-order linear homogeneous recurrence relation
+    with constant coefficients:
+
+$$ s_k = 5s_{k - 1} - 4s_{k - 2} \quad \text{ for each integer } k \geq 2 $$
+
+$$ t_k = 5t_{k - 1} - 4t_{k - 2} \quad \text{ for each integer } k \geq 2 $$
+
+Show that the sequence $2s_0 + 3t_0, 2s_1 + 3t_1, 2s_2 + 3t_2, \dots$ also
+satisfies the same relation. In other words, show that
+
+$$ 2s_k + 3t_k = 5(2s_{k - 1} + 3t_{k - 1}) - 4(2s_{k - 2} + 3t_{k - 2}) $$
+
+for each integer $k \geq 2$. Do _not_ use Lemma 5.8.2.
+
+19. Show that if $r, s, a_0$, and $a_1$ are numbers with $r \neq s$, then there
+    exist unique numbers $C$ and $D$ so that
+
+$$ C + D = a_0 $$
+
+$$ Cr + Ds = a_1 $$
+
+20. Show that if $r$ is a nonzero real number, $k$ and $m$ are distinct
+    integers, and $a_k$ and $a_m$ are any real numbers, then there exist unique
+    real numbers $C$ and $D$ so that
+
+$$ Cr^k + kDr^k = a_k $$
+
+$$ Cr^m + mDr^m = a_m $$
+
+21. Prove Theorem 5.8.5 for the case where the values of $C$ and $D$ are
+    determined by $a_0$ and $a_1$.
+
+Exercises 22 and 23 are intended for students who are familiar with complex
+numbers.
+
+22. Find an explicit formula for a sequence $a_0, a_1, a_2, \dots$ that
+    satisfies
+
+$$ a_k = 2a_{k - 1} - 2a_{k - 1} \quad \text{ for every integer } k \geq 2 $$
+
+with initial conditions $a_0 = 1$ and $a_1 = 2$.
+
+23. Find an explicit formula for a sequence $b_0, b_1, b_2, \dots$ that
+    satisfies
+
+$$ b_k = 2b_{k - 1} - 5b_{k - 2} \quad \text{ for each integer } k \geq 2 $$
+
+with initial conditions $b_0 = 1$ and $b_1 = 1$.
+
+24. The numbers $\dfrac{1 + \sqrt{5}}{2}$ and $\dfrac{1 - \sqrt{5}}{2}$ that
+    appear in the explicit formula for the Fibonacci sequence are related to a
+    quantity called the _golden ratio_ in Greek mathematics. Consider a
+    rectangle of length $\phi$ units and height $1$, where $\phi > 1$.
+
+See page 387 for picture.
+
+Divide the rectangle into a rectangle and a square as shown in the preceding
+diagram. The square is $1$ unit on each side, and the rectangle has sides of
+length $1$ and $\phi - 1$. The ancient Greeks considered the outer rectangle to
+be perfectly proportioned (saying that the lengths of its sides are in a _golden
+ratio_ to each other) if the ratio of the length to the width of the outer
+rectangle equals the ratio of the length to the width of the inner rectangle.
+That is, if the number $\phi$ satisfies the equation
+
+$$ \frac{\phi}{1} = \frac{1}{\phi - 1} $$
+
+a. Show that if $\phi$ satisfies the equation above, then it also satisfies the
+quadratic equation: $t^2 - t - 1 = 0$.
+
+b. Find the two solutions of $t^2 - t - 1 = 0$ and call them $\phi_1$ and
+$\phi_2$.
+
+c. Express the explicit formula for the Fibonacci sequence in terms of $\phi_1$
+and $\phi_2$.

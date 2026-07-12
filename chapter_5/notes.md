@@ -1030,3 +1030,217 @@ $$ a_k = ra_{k - 1} \quad \text{ for each integer } k \geq 1 $$
 It follows that
 
 $$ a_n = a_0r^n \quad \text{ for each integer } n \geq 0 $$
+
+---
+
+Page 376
+
+**Definition**
+
+A **second-order linear homogeneous recurrence relation with constant
+coefficients** is a recurrence relation of the form
+
+$$ a_k = Aa_{k - 1} + Ba_{k - 2} \quad \text{ for every integer } k \geq \text{ some fixed integer} $$
+
+where $A$ and $b$ are fixed real numbers with $B \neq 0$.
+
+---
+
+Page 377
+
+**Lemma 5.8.1**
+
+Let $A$ and $B$ be real numbers. A recurrence relation of the form
+
+$$ a_k = Aa_{k - 1} + Ba_{k - 2} \quad \text{ for every integer } k \geq 2 $$
+
+is satisfied by the sequence
+
+$$ 1, t, t^2, t^3, \dots, t^n, \dots , $$
+
+where $t$ is a nonzero real number, if, and only if, $t$ satisfies the equation
+
+$$ t^2 - At - B = 0 $$
+
+---
+
+Page 377
+
+**Definition**
+
+Given a second-order linear homogeneous recurrence relation with constant
+coefficients
+
+$$ a_k = Aa_{k - 1} + Ba_{k - 2} \quad \text{ for every integer } k \geq 2 $$
+
+the **characteristic equation of the relation** is
+
+$$ t^2 - At - B = 0 $$
+
+---
+
+Page 378
+
+**Lemma 5.8.2**
+
+If $r_0, r_1, r_2, \dots$ and $s_0, s_1, s_2, \dots$ are sequences that satisfy
+the same second-order linear homogeneous recurrence relation with constant
+coefficients, and if $C$ and $D$ are _any_ numbers, then the sequence
+$a_0, a_1, a_2, \dots$ defined by the formula
+
+$$ a_n = Cr_n +Ds_n \quad \text{ for every integer } n \geq 0 $$
+
+also satisfies the same recurrence relation.
+
+**Proof:**
+
+Suppose $r_0, r_1, r_2, \dots$, and $s_0, s_1, s_2, \dots$ are sequences that
+satisfy the same second-order linear homogeneous recurrence relation with
+constant coefficients. In other words, suppose that for some real numbers $A$
+and $B$,
+
+$$ r_k = Ar_{k - 1} + Br_{k - 2} \quad \text{ and } \quad s_k = As_{k - 1} + Bs_{k - 2} $$
+
+for every integer $k \geq 2$. Suppose also that $C$ and $D$ are any numbers. Let
+$a_0, a_1, a_2, \dots$ be the sequence defined by
+
+$$ a_n = Cr_n + Ds_n \quad \text{ for every integer } n \geq 0 $$
+
+_[We must show that $a_0, a_1, a_2, \dots$ satisfies the same recurrence
+relation as $r_0, r_1, r_2, \dots$ and $s_0, s_1, s_2, \dots$. That is we must
+show that $a_k = Aa_{k - 1} + Ba_{k - 2}$, for every integer $k \geq 2$.]_
+
+For every integer $k \geq 2$,
+
+$$ Aa_{k - 1} + Ba_{k - 2} = A(Cr_{k - 1} + Ds_{k - 1}) + B(Cr_{k - 2} + Ds_{k - 2}) $$
+
+$$ = C(Ar_{k - 1} + Br{k - 2}) + D(As_{k - 1} + Bs_{k - 2}) $$
+
+$$ = Cr_k + Ds_k $$
+
+$$ = a_k $$
+
+Hence $a_0, a_1, a_2, \dots$ satisfies the same recurrence relation as
+$r_0, r_1, r_2, \dots$ and $s_0, s_1, s_2, \dots$ _[as was to be shown]._
+
+---
+
+Page 380
+
+**Theorem 5.8.3 Distinct-Roots Theorem**
+
+Suppose a sequence $a_0, a_1, a_2, \dots$ satisfies a recurrence relation
+
+$$ a_k = Aa_{k - 1} + Ba_{k - 2} $$
+
+for some real numbers $A$ and $B$ with $B \neq 0$ and every integer $k \geq 2$.
+If the characteristic equation
+
+$$ t^2 - At - B = 0 $$
+
+has two distinct roots $r$ and $s$, then $a_0, a_1, a_2, \dots$ is given by the
+explicit formula
+
+$$ a_n = Cr^n + Ds^n $$
+
+where $C$ and $D$ are the numbers whose values are determined by the values
+$a_0$ and $a_1$.
+
+**Proof:**
+
+Suppose that for some real numbers $A$ and $B$, a sequence
+$a_0, a_1, a_2, \dots$ satisfies the recurrence relation
+$a_k = Aa_{k - 1} + Ba_{k - 2}$, for every integer $k \geq 2$, and suppose the
+characteristic equation $t^2 - At - B = 0$ has two distinct roots $r$ and $s$.
+We will show that
+
+$$ \text{for every integer } n \geq 0, \quad a_n = Cr^n + Ds^n $$
+
+where $C$ and $D$ are numbers such that
+
+$$ a_0 = Cr^0 + Ds^0 \quad \text{ and } \quad a_1 = Cr^1 + Ds^1 $$
+
+Let $P(n)$ be the equation
+
+$$ a_n = Cr^n + Ds^n $$
+
+We use strong mathematical induction to prove that $P(n)$ is true for each
+integer $n \geq 0$. In the basis step, we prove that $P(0)$ and $P(1)$ are true.
+We do this because in the inductive step we need the equation to hold for
+$n = 0$ and $n = 1$ in order to prove that it holds for $n = 2$.
+
+_Show that $P(0)$ and $P(1)$ are true:_
+
+The truth of $P(0)$ and $P(1)$ is automatic because $C$ and $D$ are exactly
+those numbers that make the following equations true:
+
+$$ a_0 = Cr^0 + Ds^0 \quad \text{ and } \quad a_1 = Cr^1 + Ds^1 $$
+
+_Show that for every integer $k \geq 1$, if $P(i)$ is true for each integer $i$
+from $0$ through $k$, then $P(k + 1)$ is also true:_
+
+Suppose that $k$ is any integer with $k \geq 1$ and for each integer $i$ from
+$0$ through $k$,
+
+$$ a_i = Cr^i + Ds^i $$
+
+We must show that
+
+$$ a_{k + 1} = Cr^{k + 1} + Ds^{k + 1} $$
+
+Now by the inductive hypothesis,
+
+$$ a_k = Cr^k + Ds^k \quad \text{ and } \quad a_{k - 1} = Cr^{k - 1} + Ds^{k - 1} $$
+
+so
+
+$$ a_{k + 1} = Aa_k + Ba_{k - 1} $$
+
+$$ = A(Cr^k + Ds^k) + B(Cr^{k - 1} + Ds^{k - 1}) $$
+
+$$ = C(Ar^k + Br^{k - 1}) + D(As^k + Bs^{k - 1}) $$
+
+$$ = Cr^{k + 1} + Ds^{k + 1} $$
+
+This is what was to be shown.
+
+_[The reason the last equality follows from Lemma 5.8.1 is that since $r$ and
+$s$ satisfy the characteristic equation (5.8.2), the sequences
+$r^0, r^1, r^2, \dots$ and $s^0, s^1, s^2, \dots$ satisfy the recurrence
+relation (5.8.1).]_
+
+---
+
+Page 384
+
+**Lemma 5.8.4**
+
+Let $A$ and $B$ be real numbers and suppose the characteristic equation
+
+$$ t^2 - At - B = 0 $$
+
+has a single root $r$. Then the sequences $1, r^1, r^2, r^3, \dots, r^n, \dots$
+and $0, r, 2r^2, 3r^3, \dots, nr^n, \dots$ both satisfy the recurrence relation
+
+$$ a_k = Aa_{k - 1} + Ba_{k - 2} $$
+
+for each integer $k \geq 2$.
+
+---
+
+Page 384
+
+**Theorem 5.8.5 Single-Root Theorem**
+
+Suppose a sequence $a_0, a_1, a_2, \dots$ satisfies a recurrence relation
+
+$$ a_k = Aa_{k - 1} + Ba_{k - 2} $$
+
+for some real numbers $A$ and $B$ with $B \neq 0$ and for every integer
+$k \geq 2$. If the characteristic equation $t^2 - At - B = 0$ has a single
+(real) root $r$, then $a_0, a_1, a_2, \dots$ is given by the explicit formula
+
+$$ a_n = Cr^n + Dnr^n $$
+
+where $C$ and $D$ are the real numbers whose values are determined by the values
+of $a_0$ and any other known value of the sequence.
