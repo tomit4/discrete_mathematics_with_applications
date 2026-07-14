@@ -229,9 +229,14 @@ Page 385
    coefficients is a recurrence relation of the form _____ for every integer
    $k \geq$ _____, where _____.
 
+$a_k = Aa_{k - 1} + Ba_{k - }$; 2; $A$ and $B$ are fixed real numbers with
+$B \neq 0$.
+
 2. Given a recurrence relation of the form $a_k = Aa_{k - 1} + Ba_{k - 2}$ for
    every integer $k \geq 2$, the characteristic equation of the relation is
    _____.
+
+$t^2 - At - B = 0$
 
 3. If a sequence $a_1, a_2, a_3, \dots$ is defined by a second-order linear
    homogeneous recurrence relation with constant coefficients and the
@@ -239,7 +244,12 @@ Page 385
    (which could be complex numbers), then the sequence is given by an explicit
    formula of the form _____.
 
+$a_n = Cr_n + Ds_n$ for every integer $n \geq 0$ where $C$ and $D$ are real or
+complex numbers.
+
 4. If a sequence $a_1, a_2, a_3, \dots$ is defined by a second-order linear
    homogeneous recurrence relation with constant coefficients and the
    characteristic equation for the relation has only a single root $r$, then the
    sequence is given by an explicit formula of the form _____.
+
+$a_n = Cr^n + Dnr^n$ where $C$ and $D$ are real numbers.

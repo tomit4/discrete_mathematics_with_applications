@@ -10902,30 +10902,59 @@ Page 385
 
 a. $a_k = 2a_{k - 1} - 5a_{k - 2}$
 
+Yes, $A = 2$ and $B = -5$
+
 b. $b_k = kb_{k - 1} + b_{k - 2}$
+
+No, $A = k$, which is not a constant coefficient.
 
 c. $c_k = 3c_{k - 1} \cdot c_{k - 2}^2$
 
+No, this does not take the form of a linear homogeneous recurrence relation with
+constant coefficients. The first term $3c_{k - 1}$ is fine, but then there is
+multiplication instead of addition/subtraction, and $c_{k - 2}^2$ violates the
+homogeneous rule (each term must have the same total degree).
+
 d. $d_k = 3d_{k - 1} + d_{k - 2}$
+
+Yes, $A = 3$, $B = 1$.
 
 e. $r_k = r_{k - 1} - r_{k - 2} - 2$
 
+No, this violates the "second-order" definition, as $r_k$ must only contain the
+two previous terms $r_{k - 1}$ and $r_{k - 2}$, the $-2$ at the end of the
+equation violates this definition.
+
 f. $s_k = 10s_{k - 2}$
+
+Yes.
 
 2. Which of the following are second-order linear homogeneous recurrence
    relations with constant coefficients?
 
 a. $a_k = (k - 1)a_{k - 1} + 2ka_{k - 2}$
 
+No.
+
 b. $b_k = -b_{k - 1} + 7b_{k - 2}$
+
+Yes.
 
 c. $c_k = 3c_{k - 1} + 1$
 
+No.
+
 d. $d_k = 3d_{k - 1}^2 + d_{k - 2}$
+
+No.
 
 e. $r_k = r_{k - 1} + 6r_{k - 3}$
 
+Yes.
+
 f. $s_k = s_{k - 1} + 10s_{k - 2}$
+
+Yes.
 
 3. Let $a_0, a_1, a_2, \dots$ be the sequence defined by the explicit formula
 
@@ -10935,7 +10964,91 @@ where $C$ and $D$ are real numbers.
 
 a. Find $C$ and $D$ so that $a_0 = 1$ and $a_1 = 3$. What is $a_2$ in this case?
 
+$$ a_0 = 1 = C \cdot 2^0 + D = C(1) + D = C + D $$
+
+$$ a_1 = 3 = C \cdot 2^1 + D = 2C + D $$
+
+So we have:
+
+$$ C + D = 1 \quad \text{ and } 2C + D = 3 $$
+
+Let's solve:
+
+$$ C = 1 - D $$
+
+$$ 2(1 - D) + D = 3 $$
+
+$$ 2 - 2D + D = 3 $$
+
+$$ 2 - D = 3 $$
+
+$$ 2 = 3 + D $$
+
+$$ -1 = D $$
+
+$$ C = 1 - (-1) $$
+
+$$ C = 2 $$
+
+So:
+
+$$ a_n = C \cdot 2^n + D $$
+
+$$ a_n = 2 \cdot 2^n + (-1) $$
+
+$$ a_n = 2^{n + 1} - 1 $$
+
+And:
+
+$$ a_2 = 2^{2 + 1} - 1 $$
+
+$$ a_2 = 2^{3} - 1 $$
+
+$$ a_2 = 8 - 1 $$
+
+$$ a_2 = 7 $$
+
 b. Find $C$ and $D$ so that $a_0 = 0$ and $a_1 = 2$. What is $a_2$ in this case?
+
+$$ a_0 = 0 = C \cdot 2^0 + D = C + D $$
+
+$$ a_1 = 2 = C \cdot 2^1 + D = 2C + D $$
+
+So we have:
+
+$$ C + D = 0 \quad \text{ and } \quad 2C + D = 2 $$
+
+Let's solve:
+
+$$ C = -D $$
+
+$$ 2(-D) + D = 2 $$
+
+$$ -2D + D = 2 $$
+
+$$ -D = 2 $$
+
+$$ D = -2 $$
+
+$$ C = -(-2) $$
+
+$$ C = 2 $$
+
+Then:
+
+$$ a_n = 2 \cdot 2^n + (-2) $$
+
+$$ a_n = 2^{n + 1} - 2 $$
+
+Then:
+
+$$ a_2 = 2^{2 + 1} - 2 $$
+
+$$ a_2 = 2^3 - 2 $$
+
+$$ a_2 = 8 - 2 $$
+
+$$ a_2 = 6 $$
 
 4. Let $b_0, b_1, b_2, \dots$ be the sequence defined by the explicit formula
 
@@ -10945,7 +11058,89 @@ where $C$ and $D$ are real numbers.
 
 a. Find $C$ and $D$ so that $b_0 = 0$ and $b_1 = 5$. What is $b_2$ in this case?
 
+$$ b_0 = 0 = C \cdot 3^0 + D(-2)^0 = C + D $$
+
+$$ b_1 = 5 = C \cdot 3^1 + D(-2)^1 = 3C - 2D $$
+
+So we have:
+
+$$ C + D = 0 \quad \text{ and } \quad 3C - 2D = 5 $$
+
+Let's solve:
+
+$$ C = -D $$
+
+$$ 3(-D) - 2D = 5 $$
+
+$$ -3D - 2D = 5 $$
+
+$$ -5D = 5 $$
+
+$$ D = -1 $$
+
+$$ C = -(-1) $$
+
+$$ C = 1 $$
+
+So we have:
+
+$$ b_n = 1 \cdot 3^n + (-1)(-2)^n $$
+
+$$ b_n = 3^n - (-2)^n $$
+
+Then:
+
+$$ b_2 = 3^2 - (-2)^2 $$
+
+$$ b_2 = 9 - (4) $$
+
+$$ b_2 = 5 $$
+
 b. Find $C$ and $D$ so that $b_0 = 3$ and $b_1 = 4$. What is $b_2$ in this case?
+
+$$ b_0 = 3 = C \cdot 3^0 + D(-2)^0 = C + D $$
+
+$$ b_1 = 4 = C \cdot 3^1 + D(-2)^1 = 3C - 2D $$
+
+So we have:
+
+$$ C + D = 3 \quad \text{ and } \quad 3C - 2D = 4 $$
+
+Let's solve:
+
+$$ C = 3 - D $$
+
+$$ 3(3 - D) - 2D = 4 $$
+
+$$ 9 - 3D - 2D = 4 $$
+
+$$ 9 - 5D = 4 $$
+
+$$ 9 = 4 + 5D $$
+
+$$ 5 = 5D $$
+
+$$ 1 = D $$
+
+$$ C = 3 - 1 $$
+
+$$ C = 2 $$
+
+Then we have:
+
+$$ b_n = 2 \cdot 3^n + (1)(-2)^n $$
+
+$$ b_n = 2 \cdot 3^n + (-2)^n $$
+
+Then we have:
+
+$$ b_2 = 2 \cdot 3^2 + (-2)^2 $$
+
+$$ b_2 = 2 \cdot 9 + (4) $$
+
+$$ b_2 = 18 + 4 $$
+
+$$ b_2 = 22 $$
 
 5. Let $a_0, a_1, a_2, \dots$ be the sequence defined by the explicit formula
 
@@ -10955,6 +11150,52 @@ where $C$ and $D$ are real numbers. Show that for any choice of $C$ and $D$,
 
 $$ a_k = 3a_{k - 1} - 2a_{k - 2} \quad \text{ for every integer } k \geq 2 $$
 
+**Proof:**
+
+Let $a_0, a_1, a_2, \dots$ be the sequence defined by the explicit formula
+$a_n = C \cdot 2^n + D$ for each integer $n \geq 0$, where $C$ and $D$ are real
+numbers.
+
+Let $k$ be any integer such that $k \geq 2$. It follows that:
+
+$$ a_k = C \cdot 2^k + D $$
+
+$$ a_{k - 1} = C \cdot 2^{k - 1} + D $$
+
+$$ a_{k - 2} = C \cdot 2^{k - 2} + D $$
+
+We must show that for any choice of $C$ and $D$, that:
+
+$$ a_k = 3a_{k - 1} - 2a_{k - 2} $$
+
+By substitution:
+
+$$ = 3(C \cdot 2^{k - 1} + D) - 2(C \cdot 2^{k - 2} + D) $$
+
+Then, by algebra:
+
+$$ = 3C \cdot 2^{k - 1} + 3D - 2C \cdot 2^{k - 2} - 2D $$
+
+$$ = 3C \cdot 2^{k - 1} - 2C \cdot 2^{k - 2} + D $$
+
+$$ = 3C \cdot 2^{k - 1} - C \cdot 2 \cdot 2^{k - 2} + D $$
+
+$$ = 3C \cdot 2^{k - 1} - C \cdot 2^{k - 1} + D $$
+
+$$ = 2C \cdot 2^{k - 1} + D $$
+
+$$ = C \cdot 2 \cdot 2^{k - 1} + D $$
+
+$$ = C \cdot 2^k + D $$
+
+By the definition of the given equation:
+
+$$ = a_k $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 6. Let $b_0, b_1, b_2, \dots$ be the sequence defined by the explicit formula
 
 $$ b_n = C \cdot 3^n + D(-2)^n \quad \text{ for every integer } n \geq 0 $$
@@ -10963,9 +11204,135 @@ where $C$ and $D$ are real numbers. Show that for any choice of $C$ and $D$,
 
 $$ b_k = b_{k - 1} + 6b_{k - 2} \quad \text{ for each integer } k \geq 2 $$
 
+**Proof:**
+
+Let $b_0, b_1, b_2, \dots$ be the sequence defined by the explicit formula
+$b_n = C \cdot 3^n + D(-2)^n$ for every integer $n \geq 0$, where $C$ and $D$
+are real numbers.
+
+Let $k$ be any integer where $k \geq 2$. It then follows that:
+
+$$ b_k = C \cdot 3^k + D(-2)^k $$
+
+$$ b_{k - 1} = C \cdot 3^{k - 1} + D(-2)^{k - 1} $$
+
+$$ b_{k - 2} = C \cdot 3^{k - 2} + D(-2)^{k - 2} $$
+
+We must show that for any choice $C$ and $D$:
+
+$$ b_k = b_{k - 1} + 6b_{k - 2} $$
+
+By substitution:
+
+$$ b_{k - 1} + 6b_{k - 2} = (C \cdot 3^{k - 1} + D(-2)^{k - 1}) + 6(C \cdot 3^{k - 2} + D(-2)^{k - 2}) $$
+
+By algebra:
+
+$$ = C \cdot 3^{k - 1} + D(-2)^{k - 1} + 6C \cdot 3^{k - 2} + 6D(-2)^{k - 2} $$
+
+$$ = C \cdot 3^{k - 1} + D(-2)^{k - 1} + 2C \cdot 3 \cdot 3^{k - 2} + (-3)D \cdot (-2) \cdot (-2)^{k - 2} $$
+
+$$ = C \cdot 3^{k - 1} + D(-2)^{k - 1} + 2C \cdot 3^{k - 1} + (-3)D \cdot (-2)^{k - 1} $$
+
+$$ = 3C \cdot 3^{k - 1} + (-2)D(-2)^{k - 1} $$
+
+$$ = C \cdot 3 \cdot 3^{k - 1} + D \cdot (-2) \cdot (-2)^{k - 1} $$
+
+$$ = C \cdot 3^k + D(-2)^k $$
+
+$$ = b_k $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 7. Solve the system of equations in Example 5.8.4 to obtain
 
 $$ C = \frac{1 + \sqrt{5}}{2\sqrt{5}} \quad \text{ and } \quad D = \frac{-(1 - \sqrt{5})}{2\sqrt{5}} $$
+
+**Proof:**
+
+The initial conditions are:
+
+$$ F_0 = F_1 = 1 $$
+
+5.8.4 has established that the Fibonacci relation is a second-order linear
+homogeneous recurrence relation with constant coefficients. It also established
+that the explicit formula for the Fibonacci sequence is:
+
+$$ F_n = C\left(\frac{1 + \sqrt{5}}{2}\right)^n + D\left(\frac{1 - \sqrt{5}}{2}\right)^n $$
+
+It follows then that:
+
+$$ F_0 = 1 = C\left(\frac{1 + \sqrt{5}}{2}\right)^0 + D\left(\frac{1 - \sqrt{5}}{2}\right)^0 $$
+
+$$ F_0 = 1 = C + D $$
+
+$$ F_1 = 1 = C\left(\frac{1 + \sqrt{5}}{2}\right)^1 + D\left(\frac{1 - \sqrt{5}}{2}\right)^1 $$
+
+$$ F_1 = 1 = C\left(\frac{1 + \sqrt{5}}{2}\right) + D\left(\frac{1 - \sqrt{5}}{2}\right) $$
+
+So we have:
+
+$$ C + D = 1 $$
+
+$$ C\left(\frac{1 + \sqrt{5}}{2}\right) + D\left(\frac{1 - \sqrt{5}}{2}\right) = 1 $$
+
+Evaluating for both $C$ and $D$:
+
+$$ C = 1 - D $$
+
+$$ (1 - D)\left(\frac{1 + \sqrt{5}}{2}\right) + D\left(\frac{1 - \sqrt{5}}{2}\right) = 1 $$
+
+$$ (1 - D)\left(\frac{1 + \sqrt{5}}{2}\right) = 1 - D\left(\frac{1 - \sqrt{5}}{2}\right) $$
+
+$$ \frac{(1 - D)(1 + \sqrt{5})}{2} = \frac{2}{2} - \left(\frac{D(1 - \sqrt{5})}{2}\right) $$
+
+$$ \frac{(1 - D)(1 + \sqrt{5})}{2} = \left(\frac{2 - D(1 - \sqrt{5})}{2}\right) $$
+
+$$ (1 - D)(1 + \sqrt{5}) = 2 - D(1 - \sqrt{5}) $$
+
+$$ (1 \cdot 1) + (-D)(1) + (1)(\sqrt{5}) + (-D)(\sqrt{5}) = 2 - D(1 - \sqrt{5}) $$
+
+$$ 1 - D + \sqrt{5} - D\sqrt{5} = 2 - D(1 - \sqrt{5}) $$
+
+$$ (1 + \sqrt{5}) - D(1 + \sqrt{5}) = 2 - D(1 - \sqrt{5}) $$
+
+$$ -D(1 + \sqrt{5}) + D(1 - \sqrt{5}) = 2 - (1 + \sqrt{5}) $$
+
+$$ D(-1(1 + \sqrt{5}) + (1 - \sqrt{5})) = 2 - 1 - \sqrt{5} $$
+
+$$ D((1 - \sqrt{5}) - (1 + \sqrt{5})) = 1 - \sqrt{5} $$
+
+$$ D(1 - \sqrt{5} - 1 - \sqrt{5}) = 1 - \sqrt{5} $$
+
+$$ D(-\sqrt{5} - \sqrt{5}) = 1 - \sqrt{5} $$
+
+$$ D(-2\sqrt{5}) = 1 - \sqrt{5} $$
+
+$$ D = \frac{1 - \sqrt{5}}{-2\sqrt{5}} $$
+
+$$ D = \frac{\sqrt{5} - 1}{2\sqrt{5}} $$
+
+$$ D = \frac{5 - \sqrt{5}}{2 \cdot 5} $$
+
+$$ D = \frac{5 - \sqrt{5}}{10} $$
+
+Then:
+
+$$ C = 1 - \left(\frac{5 - \sqrt{5}}{10}\right) $$
+
+$$ C = \frac{10}{10} - \left(\frac{5 - \sqrt{5}}{10}\right) $$
+
+$$ C = \frac{10 - (5 - \sqrt{5})}{10} $$
+
+$$ C = \frac{10 - 5 + \sqrt{5}}{10} $$
+
+$$ C = \frac{5 + \sqrt{5}}{10} $$
+
+The closed form solution then is:
+
+$$ F_n = \left(\frac{5 + \sqrt{5}}{10}\right)\left(\frac{1 + \sqrt{5}}{2}\right)^n + \left(\frac{5 - \sqrt{5}}{10}\right)\left(\frac{1 - \sqrt{5}}{2}\right)^n $$
 
 In each of 8-10: (a) suppose a sequence of the form
 $1, t, t^2, t^3, \dots, t^n, \dots$ where $t \neq 0$, satisfies the given
@@ -10977,32 +11344,642 @@ the sequence.
 8. $a_k = 2a_{k - 1} + 3a_{k - 2}$, for every integer $k \geq 2$
    $a_0 = 1, a_1 = 2$
 
+a.
+
+Since the given second-order homogeneous recurrence relation with constant
+coefficient, $a_k$, is satisfied by the sequence
+$1, t, t^2, t^3, \dots t^n, \dots$. $t^k$ can be expressed as:
+
+$$ t^k = 2t^{k - 1} + 3t^{k - 2} $$
+
+It follows that:
+
+$$ t^2 = 2t^{2 - 1} + 3t^{2 - 2} $$
+
+$$ t^2 = 2t^1 + 3t^0 $$
+
+$$ t^2 = 2t + 3 $$
+
+By algebra then:
+
+$$ t^2 - 2t - 3 = 0 $$
+
+$$ (t - 3)(t + 1) = 0 $$
+
+Therefore the possible values of $t$ are:
+
+$$ t = -1 \quad \text{ and } \quad t = 3 $$
+
+b.
+
+It follows from (a) and the distinct roots theorem that the explicit formula for
+the given sequence follows the form of:
+
+$$ a_n = Cr^n + Ds^n $$
+
+where $r$ and $s$ are the roots found in part (a):
+
+$$ a_n = C \cdot 3^n + D \cdot (-1)^n $$
+
+for every integer $n \geq 0$.
+
+By the Distinct roots theorem we can find $C$ and $D$ by looking at the values
+of $a_0$ and $a_1$ and evaluating for them:
+
+$$ a_0 = 1 = C \cdot 3^0 + D \cdot (-1)^0 = C + D $$
+
+$$ a_1 = 2 = C \cdot 3^1 + D \cdot (-1)^1 = 3C - D $$
+
+So we have:
+
+$$ C + D = 1 \quad \text{ and } \quad 3C - D = 2 $$
+
+Evaluating:
+
+$$ C = 1 - D $$
+
+$$ 3(1 - D) - D = 2 $$
+
+$$ 3 - 3D - D = 2 $$
+
+$$ 3 - 4D = 2 $$
+
+$$ 3 = 2 + 4D $$
+
+$$ 1 = 4D $$
+
+$$ \frac{1}{4} = D $$
+
+$$ C = 1 - \frac{1}{4} $$
+
+$$ C = \frac{4}{4} - \frac{1}{4} $$
+
+$$ C = \frac{3}{4} $$
+
+So, our explicit formula for the given sequence is:
+
+$$ a_n = \frac{3}{4} \cdot 3^n + \frac{1}{4} \cdot (-1)^n $$
+
 9. $b_k = 7b_{k - 1} - 10b_{k - 2}$, for every integer $k \geq 2$
    $b_0 = 2, b_1, = 2$
 
+a.
+
+Since the given second-order homogeneous recurrence relation with constant
+coefficient, $b_k$, is satisfied by the sequence
+$1, t, t^2, t^3, \dots t^n, \dots$. $t^k$ can be expressed as:
+
+$$ t^k = 7t^{k - 1} - 10t^{k - 2} $$
+
+It follows that:
+
+$$ t^2 = 7t^{2 - 1} - 10t^{2 - 2} $$
+
+$$ t^2 = 7t^1 - 10t^0 $$
+
+$$ t^2 = 7t - 10 $$
+
+By algebra:
+
+$$ t^2 - 7t + 10 = 0 $$
+
+$$ (t - 5)(t - 2) = 0 $$
+
+The possible values of $t$ then are:
+
+$$ t = 2 \quad \text{ and } \quad t = 5 $$
+
+b.
+
+It follows from (a) and the distinct roots theorem that the explicit formula for
+the given sequence follows the form of:
+
+$$ b_n = Cr^n + Ds^n $$
+
+where $r$ and $s$ are the roots found in part (a):
+
+$$ b_n = C \cdot 2^n + D \cdot 5^n $$
+
+for every integer $n \geq 0$.
+
+By the Distinct roots theorem we can find $C$ and $D$ by looking at the values
+of $b_0$ and $b_1$ and evaluating for them:
+
+$$ b_0 = 2 = C \cdot 2^0 + D \cdot 5^0 = C + D $$
+
+$$ b_1 = 2 = C \cdot 2^1 + D \cdot 5^1 = 2C + 5D $$
+
+So we have:
+
+$$ C + D = 2 \quad \text{ and } \quad 2C + 5D = 2 $$
+
+Evaluating:
+
+$$ C = 2 - D $$
+
+$$ 2(2 - D)  + 5D = 2 $$
+
+$$ 4 - 2D  + 5D = 2 $$
+
+$$ 4 + 3D = 2 $$
+
+$$ 3D = 2 - 4 $$
+
+$$ 3D = -2 $$
+
+$$ D = -\frac{2}{3} $$
+
+$$ C = 2 - \left(-\frac{2}{3}\right) $$
+
+$$ C = \frac{6}{3} + \frac{2}{3} $$
+
+$$ C = \frac{8}{3} $$
+
+So the explicit formula for the given sequence is:
+
+$$ b_n = \frac{8}{3} \cdot 2^n + \left(-\frac{2}{3}\right) \cdot 5^n $$
+
 10. $c_k = c_{k - 1} + 6c_{k - 2}$, for every integer $k \geq 2$
     $c_0 = 0, c_1 = 3$
+
+a.
+
+Since the given second-order homogeneous recurrence relation with constant
+coefficient, $c_k$, is satisfied by the sequence
+$1, t, t^2, t^3, \dots t^n, \dots$. $t^k$ can be expressed as:
+
+$$ t^k = t^{k - 1} + 6t^{k - 2} $$
+
+It follows that:
+
+$$ t^2 = t^{2 - 1} + 6t^{2 - 2} $$
+
+$$ t^2 = t^1 + 6t^0 $$
+
+$$ t^2 = t + 6 $$
+
+By algebra:
+
+$$ t^2 - t - 6 = 0 $$
+
+$$ (t - 3)(t + 2) = 0 $$
+
+So the possible values of $t$ are:
+
+$$ t = -2 \quad \text{ and } \quad t = 3 $$
+
+b.
+
+It follows from (a) and the distinct roots theorem that the explicit formula for
+the given sequence follows the form of:
+
+$$ c_n = Cr^n + Ds^n $$
+
+where $r$ and $s$ are the roots found in part (a):
+
+$$ c_n = C \cdot 3^n + D \cdot (-2)^n $$
+
+for every integer $n \geq 0$.
+
+By the Distinct roots theorem we can find $C$ and $D$ by looking at the values
+of $c_0$ and $c_1$ and evaluating for them:
+
+$$ c_0 = 0 = C \cdot 3^0 + D \cdot (-2)^0 = C + D $$
+
+$$ c_1 = 3 = C \cdot 3^1 + D \cdot (-2)^1 = 3C - 2D $$
+
+So we have:
+
+$$ C + D = 0 \quad \text{ and } \quad 3C - 2D = 3 $$
+
+Evaluating:
+
+$$ C = -D $$
+
+$$ 3(-D) - 2D = 3 $$
+
+$$ -3D - 2D = 3 $$
+
+$$ -5D = 3 $$
+
+$$ D = -\frac{3}{5} $$
+
+$$ C = -\left(-\frac{3}{5}\right) $$
+
+$$ C = \frac{3}{5} $$
+
+So our explicit formula for the given sequence is:
+
+$$ c_n = \frac{3}{5} \cdot 3^n + \left(-\frac{3}{5}\right) \cdot (-2)^n $$
 
 In each of 11-16 suppose a sequence satisfies the given recurrence relation and
 initial conditions. Find an explicit formula for the sequence.
 
 11. $d_k = 4d_{k - 2}$ , for each integer $k \geq 2$ $d_0 = 1, d_1 = -1$
 
+A lot of this is similar to 8-10. Let's streamline it:
+
+$$ t^k = 4t^{k - 2} $$
+
+$$ t^2 = 4t^{2 - 2} $$
+
+$$ t^2 = 4t^0 $$
+
+$$ t^2 = 4 $$
+
+$$ t = \pm 2 $$
+
+$$ d_n = C \cdot r^n + D \cdot s^n $$
+
+$$ d_n = C \cdot 2^n + D \cdot (-2)^n $$
+
+$$ d_0 = 1 = C \cdot 2^0 + D \cdot (-2)^0 = C + D $$
+
+$$ d_1 = -1 = C \cdot 2^1 + D \cdot (-2)^1 = 2C - 2D $$
+
+$$ C + D = 1 \quad \text{ and } \quad 2C - 2D = -1 $$
+
+$$ C = 1 - D $$
+
+$$ 2(1 - D) - 2D = -1 $$
+
+$$ 2 - 2D - 2D = -1 $$
+
+$$ 2 - 4D = -1 $$
+
+$$ 2 = -1 + 4D $$
+
+$$ 3 = 4D $$
+
+$$ \frac{3}{4} = D $$
+
+$$ C = 1 - \frac{3}{4} $$
+
+$$ C = \frac{4}{4} - \frac{3}{4} $$
+
+$$ C = \frac{1}{4} $$
+
+$$ \boxed{d_n = \frac{1}{4} \cdot 2^n + \frac{3}{4} \cdot (-2)^n} $$
+
 12. $e_k = 9e_{k - 1}$, for each integer $k \geq 2$ $e_0 = 0, e_1 = 2$
+
+$$ t^k = 9t^{k - 1} $$
+
+$$ t^2 = 9t^{2 - 1} $$
+
+$$ t^2 = 9t^1 $$
+
+$$ t^2 = 9t $$
+
+$$ t^2 - 9t = 0 $$
+
+$$ t(t - 9) = 0 $$
+
+This is a single root: $t = 9$. And so takes the form:
+
+$$ e_n = Cr^n + Dnr^n $$
+
+$$ e_n = C \cdot 9^n + Dn \cdot 9^n $$
+
+$$ e_0 = 0 = C \cdot 9^0 + D(0) \cdot 9^0 = C $$
+
+$$ e_1 = 2 = C \cdot 9^1 + D(1) \cdot 9^1 = 9C + 9D $$
+
+$$ C = 0 \quad \text{ and } 9C + 9D = 2 $$
+
+$$ 9(0) + 9D = 2 $$
+
+$$ 0 + 9D = 2 $$
+
+$$ 9D = 2 $$
+
+$$ D = \frac{2}{9} $$
+
+$$ e_n = 0 \cdot 9^n + \left(\frac{2}{9}\right)n \cdot 9^n $$
+
+$$ \boxed{e_n = \frac{2}{9}n \cdot 9^n} $$
 
 13. $r_k = 2r^{k - 1} - r^{k - 2}$, for each integer $k \geq 2$
     $r_0 = 1, r_1 = 4$
 
+$$ t^k = 2t^{k - 1} - t^{k - 2} $$
+
+$$ t^2 = 2t^{2 - 1} - t^{2 - 2} $$
+
+$$ t^2 = 2t^1 - t^0 $$
+
+$$ t^2 = 2t - 1 $$
+
+$$ t^2 - 2t + 1 = 0 $$
+
+$$ (t - 1)(t - 1) = 0 $$
+
+$$ t = 1 $$
+
+$$ r_n = Cs^n + Dns^n $$
+
+$$ r_n = C \cdot 1^n + D(n) \cdot 1^n $$
+
+$$ r_0 = 1 = C \cdot 1^0 + D(0) \cdot 1^0 = C $$
+
+$$ r_1 = 4 = C \cdot 1^1 + D(1) \cdot 1^1 = C + D $$
+
+$$ C = 1 \quad \text{ and } \quad C + D = 4 $$
+
+$$ 1 + D = 4 $$
+
+$$ D = 3 $$
+
+$$ r_n = 1 \cdot 1^n + 3(n) \cdot 1^n $$
+
+$$ r_n = 1^n + 3n \cdot 1^n $$
+
+$$ \boxed{r_n = 1 + 3n} $$
+
 14. $s_k = -4s_{k - 1} - 4s_{k - 2}$, for every integer $k \geq 2$
     $s_0 = 0, s_1 = -1$
+
+$$ t^k = -4t^{k - 1} - 4t^{k - 2} $$
+
+$$ t^2 = -4t^{2 - 1} - 4t^{2 - 2} $$
+
+$$ t^2 = -4t^1 - 4t^0 $$
+
+$$ t^2 = -4t - 4 $$
+
+$$ t^2 + 4t + 4 = 0 $$
+
+$$ (t + 2)(t + 2) = 0 $$
+
+$$ t = -2 $$
+
+$$ s_n = Cr^n + Dnr^n $$
+
+$$ s_n = C \cdot (-2)^n + Dn \cdot (-2)^n $$
+
+$$ s_0 = 0 = C \cdot (-2)^0 + D(0) \cdot (-2)^0 = C $$
+
+$$ s_1 = -1 = C \cdot (-2)^1 + D(1) \cdot (-2)^1 = -2C - 2D $$
+
+$$ C = 0 \quad \text{ and } \quad -2C - 2D = -1 $$
+
+$$ -2(0) - 2D = -1 $$
+
+$$ -2D = -1 $$
+
+$$ D = \frac{1}{2} $$
+
+$$ s_n = 0 \cdot (-2)^n + \frac{1}{2}n \cdot (-2)^n $$
+
+$$ \boxed{s_n = \frac{1}{2}n \cdot (-2)^n} $$
 
 15. $t_k = 6t_{k - 1} - 9t_{k - 2}$, for each integer $k \geq 2$
     $t_0 = 1, t_1= 3$
 
+$$ x^k = 6x^{k - 1} - 9x^{k - 2} $$
+
+$$ x^2 = 6x^{2 - 1} - 9x^{2 - 2} $$
+
+$$ x^2 = 6x^1 - 9x^0 $$
+
+$$ x^2 = 6x - 9 $$
+
+$$ x^2 - 6x + 9 = 0 $$
+
+$$ (x - 3)(x - 3) = 0 $$
+
+$$ x = 3 $$
+
+$$ t_n = Cr^n + Dnr^n $$
+
+$$ t_n = C \cdot 3^n + Dn \cdot 3^n $$
+
+$$ t_0 = 1 = C \cdot 3^0 + D(0) \cdot 3^0 = C $$
+
+$$ t_1 = 3 = C \cdot 3^1 + D(1) \cdot 3^1 = 3C + 3D $$
+
+$$ C = 1 \quad \text{ and } \quad 3C + 3D = 3 $$
+
+$$ 3(1) + 3D = 3 $$
+
+$$ 3 + 3D = 3 $$
+
+$$ 3D = 0 $$
+
+$$ D = 0 $$
+
+$$ t_n = 1 \cdot 3^n + (0)n \cdot 3^n $$
+
+$$ \boxed{t_n = 3^n} $$
+
 16. $s_k = 2s_{k - 1} + 2s_{k - 2}$, for every integer $k \geq 2$
     $s_0 = 1, s_1 = 3$
 
+$$ t^k = 2t^{k - 1} + 2t^{k - 2} $$
+
+$$ t^2 = 2t^{2 - 1} + 2t^{2 - 2} $$
+
+$$ t^2 = 2t^1 + 2t^0 $$
+
+$$ t^2 = 2t + 2 $$
+
+$$ t^2 - 2t - 2 = 0 $$
+
+$$ t = \frac{-(-2) \pm \sqrt{(-2)^2 - 4(1)(-2)}}{2(1)} $$
+
+$$ t = \frac{2 \pm \sqrt{12}}{2} $$
+
+$$ t = \frac{2 \pm 2\sqrt{3}}{2} $$
+
+$$ t = 1 \pm \sqrt{3} $$
+
+$$ s_n = Cx^n + Dy^n $$
+
+$$ s_n = C \cdot \left(1 + \sqrt{3}\right)^n + D \cdot \left(1 - \sqrt{3}\right)^n $$
+
+$$ s_0 = 1 = C \cdot \left(1 + \sqrt{3}\right)^0 + D \cdot \left(1 - \sqrt{3}\right)^0 = C + D $$
+
+$$ s_1 = 3 = C \cdot \left(1 + \sqrt{3}\right)^1 + D \cdot \left(1 - \sqrt{3}\right)^1 = C \cdot \left(1 + \sqrt{3}\right) + D \cdot \left(1 - \sqrt{3}\right)  $$
+
+$$ C + D = 1 \quad \text{ and } \quad C \cdot \left(1 + \sqrt{3}\right) + D \cdot \left(1 - \sqrt{3}\right) = 3 $$
+
+$$ C = 1 - D $$
+
+$$ (1 - D) \cdot \left(1 + \sqrt{3}\right) + D \cdot \left(1 - \sqrt{3}\right) = 3 $$
+
+$$ (1 - D) \cdot \left(1 + \sqrt{3}\right) = 3 - \left[D \cdot \left(1 - \sqrt{3}\right)\right] $$
+
+$$ (1 - D) \cdot \left(1 + \sqrt{3}\right) = 3 - \left[D \cdot \left(1 - \sqrt{3}\right)\right] $$
+
+$$ (1)(1) + (-D)(1) + (1)(\sqrt{3}) + (-D)(\sqrt{3}) = 3 - \left[D \cdot \left(1 - \sqrt{3}\right)\right] $$
+
+$$ 1 + (-D)(1) + \sqrt{3} + (-D)(\sqrt{3}) = 3 - \left[D \cdot \left(1 - \sqrt{3}\right)\right] $$
+
+$$ (1 + \sqrt{3}) + (-D)(1) + (-D)(\sqrt{3}) = 3 - \left[D \cdot \left(1 - \sqrt{3}\right)\right] $$
+
+$$ (1 + \sqrt{3}) + (-D)(1 + \sqrt{3}) = 3 - \left[D \cdot \left(1 - \sqrt{3}\right)\right] $$
+
+$$ (1 + \sqrt{3}) + D(-1 - \sqrt{3}) = 3 - \left[D \cdot \left(1 - \sqrt{3}\right)\right] $$
+
+$$ D(-1 - \sqrt{3}) + D \cdot \left(1 - \sqrt{3}\right) = 3 - (1 - \sqrt{3}) $$
+
+$$ D\left[(-1 - \sqrt{3}) + \left(1 - \sqrt{3}\right)\right] = 3 - 1 + \sqrt{3} $$
+
+$$ D\left[-1 - \sqrt{3} + 1 - \sqrt{3}\right] = 2 + \sqrt{3} $$
+
+$$ D\left[-\sqrt{3} - \sqrt{3}\right] = 2 + \sqrt{3} $$
+
+$$ D(-2\sqrt{3}) = 2 + \sqrt{3} $$
+
+$$ D = \frac{2 + \sqrt{3}}{-2\sqrt{3}} $$
+
+$$ D = \frac{2\sqrt{3} + 3}{-2 \cdot 3} $$
+
+$$ D = \frac{2\sqrt{3} + 3}{-6} $$
+
+$$ C = 1 - \left(\frac{2\sqrt{3} + 3}{-6}\right) $$
+
+$$ C = \frac{-6}{-6} - \left(\frac{2\sqrt{3} + 3}{-6}\right) $$
+
+$$ C = \frac{-6 - (2\sqrt{3} + 3)}{-6} $$
+
+$$ C = \frac{-6 - 2\sqrt{3} - 3}{-6} $$
+
+$$ C = \frac{-9 - 2\sqrt{3}}{-6} $$
+
+$$ C = \frac{9 + 2\sqrt{3}}{6} $$
+
+$$ s_n = \frac{9 + 2\sqrt{3}}{6} \cdot \left(1 + \sqrt{3}\right)^n + \frac{2\sqrt{3} + 3}{-6} \cdot \left(1 - \sqrt{3}\right)^n $$
+
 17. Find an explicit formula for the sequence of exercise 39 in Section 5.6.
+
+The recurrence relation found in exercise 39 is:
+
+$$ c_k = c_{k - 1} + c_{k - 2} $$
+
+$$ t^k = t^{k - 1} + t^{k - 2} $$
+
+$$ t^2 = t^{2 - 1} + t^{2 - 2} $$
+
+$$ t^2 = t^1 + t^0 $$
+
+$$ t^2 = t + 1 $$
+
+$$ t^2 - t - 1 = 0 $$
+
+$$ t = \frac{-(-1) \pm \sqrt{(-1)^2 - 4(1)(-1)}}{2(1)} $$
+
+$$ t = \frac{1 \pm \sqrt{5}}{2} $$
+
+$$ c_n = Cr^n + Ds^n $$
+
+$$ c_n = C \cdot \left(\frac{1 + \sqrt{5}}{2}\right)^n + D \cdot \left(\frac{1 - \sqrt{5}}{2}\right)^n $$
+
+$$ c_1 = 1 = C \cdot \left(\frac{1 + \sqrt{5}}{2}\right)^1 + D \cdot \left(\frac{1 - \sqrt{5}}{2}\right)^1 $$
+
+$$ c_2 = 2 = C \cdot \left(\frac{1 + \sqrt{5}}{2}\right)^2 + D \cdot \left(\frac{1 - \sqrt{5}}{2}\right)^2 $$
+
+Let $\phi = \dfrac{1 + \sqrt{5}}{2}$ and $\psi = \dfrac{1 - \sqrt{5}}{2}$. Then:
+
+$$ c_1 = 1 = C \cdot \phi + D \cdot \psi $$
+
+$$ c_2 = 2 = C \cdot \phi^2 + D \cdot \psi^2 $$
+
+$$ C \cdot \phi + D \cdot \psi = 1 $$
+
+$$ C\phi = 1 - D\psi $$
+
+$$ C = \frac{1 - D\psi}{\phi} $$
+
+$$ C \cdot \phi^2 + D \cdot \psi^2 = 2 $$
+
+$$ \frac{1 - D\psi}{\phi} \cdot \phi^2 + D \cdot \psi^2 = 2 $$
+
+$$ (1 - D\psi) \cdot \phi + D \cdot \psi^2 = 2 $$
+
+$$ \phi - D\psi\phi + D\psi^2 = 2 $$
+
+$$ -D\psi\phi + D\psi^2 = 2 - \phi $$
+
+$$ D(-\psi\phi + \psi^2) = 2 - \phi $$
+
+$$ D = \frac{2 - \phi}{-\psi\phi + \psi^2} $$
+
+$$ D = \frac{1}{\psi}\frac{2 - \phi}{-\phi + \psi} $$
+
+Now back-substitution yields:
+
+$$ D = \frac{1}{\dfrac{1 - \sqrt{5}}{2}} \cdot \frac{2 - \dfrac{1 + \sqrt{5}}{2}}{-\dfrac{1 + \sqrt{5}}{2} + \left(\dfrac{1 - \sqrt{5}}{2}\right)} $$
+
+$$ D = \frac{2}{1 - \sqrt{5}} \cdot \frac{\dfrac{4 - (1 + \sqrt{5})}{2}}{\dfrac{-(1 + \sqrt{5}) + (1 - \sqrt{5})}{2}} $$
+
+$$ D = \frac{2}{1 - \sqrt{5}} \cdot \frac{3 - \sqrt{5}}{-1 - \sqrt{5} + 1 - \sqrt{5}} $$
+
+$$ D = \frac{2}{1 - \sqrt{5}} \cdot \frac{3 - \sqrt{5}}{-2\sqrt{5}} $$
+
+$$ D = \frac{2(3 - \sqrt{5})}{(1 - \sqrt{5})(-2\sqrt{5})} $$
+
+$$ D = \frac{6 - 2\sqrt{5}}{-2\sqrt{5} + (-2\sqrt{5})(-\sqrt{5})} $$
+
+$$ D = \frac{6 - 2\sqrt{5}}{-2\sqrt{5} + (2 \cdot 5)} $$
+
+$$ D = \frac{6 - 2\sqrt{5}}{-2\sqrt{5} + 10} $$
+
+$$ D = \frac{3 - \sqrt{5}}{-\sqrt{5} + 10} $$
+
+$$ D = \frac{3 - \sqrt{5}}{10 - \sqrt{5}} $$
+
+$$ D = \frac{3 - \sqrt{5}}{10 - \sqrt{5}} \cdot \frac{10 + \sqrt{5}}{10 + \sqrt{5}} $$
+
+$$ D = \frac{(3 - \sqrt{5})(10 + \sqrt{5})}{(10 - \sqrt{5})(10 + \sqrt{5})} $$
+
+$$ D = \frac{(3)(10) + (-\sqrt{5})(10) + (3)(\sqrt{5}) + (-\sqrt{5})(\sqrt{5})}{(10)(10) + (-\sqrt{5})(10) + (10)(\sqrt{5}) + (-\sqrt{5})(\sqrt{5})} $$
+
+$$ D = \frac{30 - 10\sqrt{5} + 3\sqrt{5} - 5}{100 - 10\sqrt{5} + 10\sqrt{5} - 5} $$
+
+$$ D = \frac{25 - 7\sqrt{5}}{95} $$
+
+$$ C = \frac{1 - \left(\dfrac{25 - 7\sqrt{5}}{95}\right)\left(\dfrac{1 - \sqrt{5}}{2}\right)}{\dfrac{1 + \sqrt{5}}{2}} $$
+
+$$ C = \frac{1 - \left(\dfrac{(25 - 7\sqrt{5})(1 - \sqrt{5})}{190}\right)}{\dfrac{1 + \sqrt{5}}{2}} $$
+
+$$ C = \frac{\dfrac{190 - (25 - 7\sqrt{5})(1 - \sqrt{5})}{190}}{\dfrac{1 + \sqrt{5}}{2}} $$
+
+$$ C = \frac{\dfrac{190 - ((25)(1) + (-7\sqrt{5})(1) + (25)(-\sqrt{5}) + (-7\sqrt{5})(-\sqrt{5}))}{190}}{\dfrac{1 + \sqrt{5}}{2}} $$
+
+$$ C = \frac{\dfrac{190 - (25 - 7\sqrt{5} - 25\sqrt{5} + 35)}{190}}{\dfrac{1 + \sqrt{5}}{2}} $$
+
+$$ C = \frac{\dfrac{190 - (60 - 32\sqrt{5})}{190}}{\dfrac{1 + \sqrt{5}}{2}} $$
+
+$$ C = \frac{\dfrac{190 - 60 + 32\sqrt{5}}{190}}{\dfrac{1 + \sqrt{5}}{2}} $$
+
+$$ C = \frac{\dfrac{130 + 32\sqrt{5}}{190}}{\dfrac{1 + \sqrt{5}}{2}} $$
+
+$$ C = \frac{130 + 32\sqrt{5}}{190} \cdot \frac{2}{1 + \sqrt{5}} $$
+
+$$ C = \frac{(130 + 32\sqrt{5})(2)}{(190)(1 + \sqrt{5})} $$
+
+$$ C = \frac{(130 + 32\sqrt{5})(2)}{2(95)(1 + \sqrt{5})} $$
+
+$$ C = \frac{130 + 32\sqrt{5}}{95(1 + \sqrt{5})} $$
+
+$$ C = \frac{130 + 32\sqrt{5}}{95 + 95\sqrt{5}} $$
+
+$$ C = \frac{130 + 32\sqrt{5}}{95 + 95\sqrt{5}} \cdot \frac{1 - \sqrt{5}}{1 - \sqrt{5}} $$
+
+$$ C = \frac{(130 + 32\sqrt{5})(1 - \sqrt{5})}{(95 + 95\sqrt{5})(1 - \sqrt{5})} $$
+
+$$ C = \frac{(130)(1) + (32\sqrt{5})(1) + (130)(-\sqrt{5}) + (32\sqrt{5})(-\sqrt{5})}{(95)(1) + (95\sqrt{5})(1) + (95)(-\sqrt{5}) + (95\sqrt{5})(-\sqrt{5})} $$
+
+$$ C = \frac{130 + 32\sqrt{5} - 130\sqrt{5} - 160}{95 + 95\sqrt{5} - 95\sqrt{5} - 475} $$
+
+$$ C = \frac{98\sqrt{5} - 30}{-380} $$
+
+$$ C = \frac{30 - 98\sqrt{5}}{380} $$
+
+$$ C = \frac{15 - 49\sqrt{5}}{190} $$
+
+$$ c_n = \frac{15 - 49\sqrt{5}}{190} \cdot \left(\frac{1 + \sqrt{5}}{2}\right)^n + \frac{25 - 7\sqrt{5}}{95} \cdot \left(\frac{1 - \sqrt{5}}{2}\right)^n $$
 
 18. Suppose that the sequences $s_0, s_1, s_2, \dots$ and $t_0, t_1, t_2, \dots$
     both satisfy the same second-order linear homogeneous recurrence relation
@@ -11019,12 +11996,71 @@ $$ 2s_k + 3t_k = 5(2s_{k - 1} + 3t_{k - 1}) - 4(2s_{k - 2} + 3t_{k - 2}) $$
 
 for each integer $k \geq 2$. Do _not_ use Lemma 5.8.2.
 
+**Proof:**
+
+$$ 2s_k + 3t_k $$
+
+By substitution of the given recurrence relations:
+
+$$ 2s_k + 3t_k = 2(5s_{k - 1} - 4s_{k - 2}) + 3(5t_{k - 1} - 4t_{k - 2}) $$
+
+$$ = 10s_{k - 1} - 8s_{k - 2} + 15t_{k - 1} - 12t_{k - 2} $$
+
+$$ = 10s_{k - 1} + 15t_{k - 1} - 8s_{k - 2} - 12t_{k - 2} $$
+
+$$ = 5(2s_{k - 1} + 3t_{k - 1}) - 4(2s_{k - 2} + 3t_{k - 2}) $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 19. Show that if $r, s, a_0$, and $a_1$ are numbers with $r \neq s$, then there
     exist unique numbers $C$ and $D$ so that
 
 $$ C + D = a_0 $$
 
 $$ Cr + Ds = a_1 $$
+
+**Proof:**
+
+Suppose $r$, $s$, $a_0$, and $a_1$ are numbers with $r \neq s$.
+
+Consider the system of equations:
+
+$$ C + D = a_0 $$
+
+$$ Cr + Ds = a_1 $$
+
+By solving for $D$ and substituting:
+
+$$ D = a_0 - C $$
+
+$$ Cr + (a_0 - C)s = a_1 $$
+
+$$ Cr + a_0s - Cs = a_1 $$
+
+$$ Cr - Cs = a_1 - a_0s $$
+
+$$ C(r - s) = a_1 - a_0s $$
+
+Since $r \neq s$, both sides can be divided by $(r - s)$:
+
+$$ C = \frac{a_1 - a_0s}{r - s} $$
+
+Then:
+
+$$ D = a_0 - \frac{a_1 - a_0s}{r - s} $$
+
+$$ D = \frac{a_0(r - s) - (a_1 - a_0s)}{r - s} $$
+
+$$ D = \frac{a_0r - a_0s - a_1 + a_0s}{r - s} $$
+
+$$ D = \frac{a_0r - a_1}{r - s} $$
+
+Since $r \neq s$, division by $r - s$ is valid, yielding a unique value for $C$,
+which in turn yields a unique value for $D$.
+
+Q.E.D.
 
 20. Show that if $r$ is a nonzero real number, $k$ and $m$ are distinct
     integers, and $a_k$ and $a_m$ are any real numbers, then there exist unique
@@ -11034,8 +12070,175 @@ $$ Cr^k + kDr^k = a_k $$
 
 $$ Cr^m + mDr^m = a_m $$
 
+**Proof:**
+
+Suppose $r$ is a nonzero real number, $k$ and $m$ are distinct integers, and
+$a_k$ and $a_m$ are any real numbers.
+
+Consider the system of equations:
+
+$$ Cr^k + kDr^k = a_k $$
+
+$$ Cr^m + mDr^m = a_m $$
+
+By solving for $D$ and substituting:
+
+$$ kDr^k = a_k - Cr^k $$
+
+Since $r$ is a nonzero real number, we can divide by $r^k$:
+
+$$ D = \frac{a_k - Cr^k}{kr^k} $$
+
+Then:
+
+$$ Cr^m + m \cdot \frac{a_k - Cr^k}{kr^k} \cdot r^m = a_m $$
+
+$$ Cr^m + \frac{mr^m(a_k - Cr^k)}{kr^k} = a_m $$
+
+$$ \frac{Cr^m(kr^k) + mr^m(a_k - Cr^k)}{kr^k} = a_m $$
+
+$$ \frac{Ckr^{k + m} + mr^ma_k - mr^mCr^k}{kr^k} = a_m $$
+
+$$ \frac{Ckr^{k + m} - Cmr^mr^k + mr^ma_k}{kr^k} = a_m $$
+
+$$ \frac{Ckr^{k + m} - Cmr^{k + m} + mr^ma_k}{kr^k} = a_m $$
+
+$$ \frac{Cr^{k + m}(k - m) + mr^ma_k}{kr^k} = a_m $$
+
+$$ Cr^{k + m}(k - m) + mr^ma_k = a_m(kr^k) $$
+
+$$ Cr^{k + m}(k - m) = a_m(kr^k) - mr^ma_k $$
+
+$$ C = \frac{a_m(kr^k) - mr^ma_k}{r^{k + m}(k - m)} $$
+
+Now we solve for $D$:
+
+$$ D = \frac{a_k - \left(\frac{a_m(kr^k) - mr^ma_k}{r^{k + m}(k - m)}\right)r^k}{kr^k} $$
+
+$$ D = \frac{a_k - \left(\frac{(a_m(kr^k) - mr^ma_k)r^k}{r^{k + m}(k - m)}\right)}{kr^k} $$
+
+$$ D = \frac{a_k - \left(\frac{a_m(kr^k)r^k - mr^ma_kr^k}{r^{k + m}(k - m)}\right)}{kr^k} $$
+
+$$ D = \frac{a_k - \left(\frac{a_mkr^{2k} - mr^{k + m}a_k}{r^{k + m}(k - m)}\right)}{kr^k} $$
+
+$$ D = \frac{\frac{a_k(r^{k + m}(k - m)) - (a_mkr^{2k} - mr^{k + m}a_k)}{r^{k + m}(k - m)}}{kr^k} $$
+
+$$ D = \frac{r^k(a_kr^k(k - m) - a_mkr^k + mr^ma_k)}{r^{k + m}(k - m)kr^k} $$
+
+$$ D = \frac{a_kr^k(k - m) - a_mkr^k + mr^ma_k}{r^{k + m}(k - m)k} $$
+
+$$ D = \frac{r^k(a_k(k - m) - a_mk) + mr^ma_k}{r^{k + m}(k - m)k} $$
+
+$$ D = \frac{r^k(a_k(k - m) - a_mk)}{r^{k + m}(k - m)k} + \frac{mr^ma_k}{r^{k + m}(k - m)k} $$
+
+$$ D = \frac{r^k(a_k(k - m) - a_mk)}{r^k(r^m(k - m)k)} + \frac{mr^ma_k}{r^m(r^k(k - m)k)} $$
+
+$$ D = \frac{a_k(k - m) - a_mk}{r^m(k - m)k} + \frac{ma_k}{r^k(k - m)k} $$
+
+$$ D = \frac{(a_k(k - m) - a_mk)(r^k) + (ma_k)(r^m)}{r^{m + k}(k - m)k} $$
+
+$$ D = \frac{a_k(k - m)r^k - a_mk(r^k) + ma_kr^m}{r^{m + k}(k - m)k} $$
+
+$$ D = \frac{a_k[(k - m)r^k + mr^m] - a_mk(r^k)}{r^{m + k}(k - m)k} $$
+
+Since $r \neq 0$ and $k$ and $m$ are distinct integers, division by
+$r^{m + k}(k - m)$ is valid, yielding a unique value for $C$, which in turn
+yields a unique value for $D$.
+
+Q.E.D.
+
 21. Prove Theorem 5.8.5 for the case where the values of $C$ and $D$ are
     determined by $a_0$ and $a_1$.
+
+**Theorem 5.8.5 Single-Root Theorem**
+
+Suppose a sequence $a_0, a_1, a_2, \dots$ satisfies a recurrence relation
+
+$$ a_k = Aa_{k - 1} + Ba_{k - 2} $$
+
+for some real numbers $A$ and $B$ with $B \neq 0$ and for every integer
+$k \geq 2$. If the characteristic equation $t^2 - At - B = 0$ has a single
+(real) root $r$, then $a_0, a_1, a_2, \dots$ is given by the explicit formula
+
+$$ a_n = Cr^n + Dnr^n $$
+
+where $C$ and $D$ are the real numbers whose values are determined by the values
+of $a_0$ and any other known value of the sequence.
+
+**Proof (by strong mathematical induction):**
+
+Suppose a sequence $a_0, a_1, a_2, \dots$ satisfies a recurrence relation
+
+$$ a_k = Aa_{k - 1} + Ba_{k - 2} $$
+
+for some real numbers $A$ and $B$ with $B \neq 0$ and for every integer
+$k \geq 2$. Assume the characteristic equation $t^2 - At - B = 0$ has a single
+(real) root $r$.
+
+It follows then that the sequence $a_0, a_1, a_2, \dots$ is given by the
+explicit formula
+
+$$ a_n = Cr^n + Dnr^n $$
+
+where $C$ and $D$ are the real numbers whose values are determined by the values
+of $a_0$ and any other known value of the sequence.
+
+Let $P(n)$ be the recurrence relation:
+
+$$ a_n = Cr^n + Dnr^n $$
+
+_Basis Step:_
+
+Prove $P(0)$ and $P(1)$, that is:
+
+$$ a_0 = Cr^0 + D(0)r^0 = C $$
+
+$$ a_1 = Cr^1 + D(1)r^1 = Cr + Dr $$
+
+Therefore $P(0)$ and $P(1)$ are true by the assumption that $C$ and $D$ are
+determined by the values of $a_0$ and $a_1$.
+
+_Inductive Step:_
+
+Let $k$ be any integer where $k \geq 2$. Let $i$ be some integer such that
+$0 \leq i \leq k$.
+
+Suppose $P(i)$, that is:
+
+$$ a_i = Cr^i + Dir^i $$
+
+Prove $P(k + 1)$, that is:
+
+$$ a_{k + 1} = Cr^{k + 1} + D(k + 1)r^{k + 1} $$
+
+By the definition of a recurrence relation:
+
+$$ a_{k + 1} = Aa_k + Ba_{k - 1} $$
+
+By the inductive hypothesis:
+
+$$ = A(Cr^k + Dkr^k) + B(Cr^{k - 1} + D(k - 1)r^{k - 1}) $$
+
+By algebra:
+
+$$ = ACr^k + ADkr^k + BCr^{k - 1} + BD(k - 1)r^{k - 1} $$
+
+$$ = ACr^k + BCr^{k - 1} + ADkr^k + BD(k - 1)r^{k - 1} $$
+
+$$ = C(Ar^k + Br^{k - 1}) + D(Akr^k + B(k - 1)r^{k - 1}) $$
+
+By Lemma 5.8.4, we know that because $r$ satisfies the characteristic equation,
+it follows that $1, r, r^2, \dots, r^n, \dots$ and
+$0, r, 2r^2, \dots, nr^n, \dots$ also satisfy the same recurrence relation as
+$a_k$.
+
+Therefore:
+
+$$ = Cr^{k + 1} + D(k + 1)r^{k + 1} $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 Exercises 22 and 23 are intended for students who are familiar with complex
 numbers.
@@ -11047,12 +12250,16 @@ $$ a_k = 2a_{k - 1} - 2a_{k - 1} \quad \text{ for every integer } k \geq 2 $$
 
 with initial conditions $a_0 = 1$ and $a_1 = 2$.
 
+Omitted.
+
 23. Find an explicit formula for a sequence $b_0, b_1, b_2, \dots$ that
     satisfies
 
 $$ b_k = 2b_{k - 1} - 5b_{k - 2} \quad \text{ for each integer } k \geq 2 $$
 
 with initial conditions $b_0 = 1$ and $b_1 = 1$.
+
+Omitted.
 
 24. The numbers $\dfrac{1 + \sqrt{5}}{2}$ and $\dfrac{1 - \sqrt{5}}{2}$ that
     appear in the explicit formula for the Fibonacci sequence are related to a
@@ -11074,8 +12281,14 @@ $$ \frac{\phi}{1} = \frac{1}{\phi - 1} $$
 a. Show that if $\phi$ satisfies the equation above, then it also satisfies the
 quadratic equation: $t^2 - t - 1 = 0$.
 
+Omitted.
+
 b. Find the two solutions of $t^2 - t - 1 = 0$ and call them $\phi_1$ and
 $\phi_2$.
 
+Omitted.
+
 c. Express the explicit formula for the Fibonacci sequence in terms of $\phi_1$
 and $\phi_2$.
+
+Omitted.
