@@ -253,3 +253,25 @@ complex numbers.
    sequence is given by an explicit formula of the form _____.
 
 $a_n = Cr^n + Dnr^n$ where $C$ and $D$ are real numbers.
+
+---
+
+Page 397
+
+**Test Yourself**
+
+1. The base for a recursive definition of a set is _____.
+
+2. The recursion for a recursive definition of a set is _____.
+
+3. The restriction for a recursive definition of a set is _____.
+
+4. One way to show that a given element is in a recursively defined set is to
+   start with an element or elements in the _____ and apply the rules from the
+   _____ until you obtain the given element.
+
+5. To use structural induction to prove that every element in a recursively
+   defined set $S$ satisfies a certain property, you show that _____ and that,
+   for each rule in the recursion, if _____ then _____.
+
+6. A function is said to be defined recursively if, and only if, _____.

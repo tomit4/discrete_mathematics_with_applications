@@ -12292,3 +12292,320 @@ c. Express the explicit formula for the Fibonacci sequence in terms of $\phi_1$
 and $\phi_2$.
 
 Omitted.
+
+---
+
+Page 397
+
+**Exercise Set 5.9**
+
+1. Consider the set of Boolean expressions defined in Example 5.9.1. Give
+   derivations showing that each of the following is a Boolean expression over
+   the English alphabet $\{a, b, c, \dots, x, y, z\}$.
+
+a. $\neg p \vee (q \wedge (r \vee \neg s))$
+
+b. $(p \vee q) \vee \neg((p \wedge \neg s) \wedge r)$
+
+2. Consider the set $C$ of parenthesis structures defined in Example 5.9.2. Give
+   derivations showing that each of the following is in $C$.
+
+a. $()(())$
+
+b. $(())(())$
+
+3. Let $S$ be the set of all strings over a finite set $A$ and let $a$, $b$, and
+   $c$ be any characters in $A$.
+
+a. Using Theorem 5.9.1 but not Theorem 5.9.3 or 5.9.4, show that
+$(ab)c = a(bc)$.
+
+b. Show that $ab$ is a string in $S$. Then use the result of part (a) to
+conclude that $a(bc)$ is a string in $S$.
+
+(This exercise shows that parentheses are not needed when writing the string
+$abc$.)
+
+4. Consider the _MIU_-system discussed in Example 5.9.4. Give derivations
+   showing that each of the following is in the _MIU_-system.
+
+a. MIUI
+
+b. MUIIU
+
+5. The set of arithmetic expressions over the real numbers can be defined
+   recursively as follows:
+
+I. Base: Each real number $r$ is an arithmetic expression.
+
+II. Recursion: If $u$ and $v$ are arithmetic expressions, then the following are
+also arithmetic expressions:
+
+(a) $(+u)$
+
+(b) $(-u)$
+
+\(c\) $(u + v)$
+
+(d) $(u - v)$
+
+(e) $(u \cdot v)$
+
+(f) $\left(\frac{u}{v}\right)$
+
+III. Restriction: There are no arithmetic expressions over the real numbers
+other than those obtained from I and II.
+
+(Note that the _expression $\left(\dfrac{u}{v}\right)$ is allowed to be an
+arithmetic expression even though the value of $v$ may be $0$.) Give the
+derivations showing that each of the following is an arithmetic expression.
+
+a. $((2 \cdot (0.3 - 4.2)) + (-7))$
+
+b. $\left(\frac{(9 \cdot(6 \cdot 1 + 2))}{((4 - 7) \cdot 6)}\right)$
+
+6. Let $S$ be a set of integers defined recursively as follows:
+
+I. Base: $5$ is in $S$.
+
+II. Recursion: Given any integer $n$ in $S$, $n + 4$ is in $S$.
+
+III. Restriction: No integers are in $S$ other than those derived from rules I
+and II above.
+
+Use structural induction to prove that for every integer $n$ in $S$,
+$n \mod 2 = 1$.
+
+7. Define a set $S$ of strings over the set $\{0, 1\}$ recursively as follows:
+
+I. Base: $1 \in S$
+
+II. Recursion: If $s \in S$, then
+
+(a) $0s \in S$
+
+(b) $1s \in S$
+
+III. Restriction: Nothing is in $S$ other than objects defined in I and II
+above.
+
+Use structural induction to prove that every string in $S$ ends in a $1$.
+
+8. Define a set $S$ of strings over the set $\{a, b\}$ recursively as follows:
+
+I. Base $a \in S$
+
+II. Recursion: If $s \in S$, then
+
+(a) $sa \in S$
+
+(b) $sb \in S$
+
+III. Restriction: Nothing is in $S$ other than objects defined in I and II
+above.
+
+Use structural induction to prove that every string in $S$ begins with an $a$.
+
+9. Define a set $S$ of strings over the set $\{a, b\}$ recursively as follows:
+
+I. Base: $\lambda \in S$
+
+II. Recursion: If $s \in S$, then
+
+(a) $bs \in S$
+
+(b) $sb \in S$
+
+\(c\) $saa \in S$
+
+(d) $aas \in S$
+
+III. Restriction: Nothing is in $S$ other than objects defined in I and II
+above.
+
+Use structural induction to prove that every string in $S$ contains an even
+number of $a$'s.
+
+10. Define a set $S$ of strings over the set of all integers recursively as
+    follows:
+
+I. Base
+$1 \in S, 2 \in S, 3 \in S, 4 \in S, 5 \in S, 6 \in S, 7 \in S, 8 \in S, 9 \in S$
+
+II. Recursion: If $s \in S$ and $t \in S$, then
+
+(a) $s0 \in S$
+
+(b) $st \in S$
+
+III. Restriction: Nothing is in $S$ other than objects defined in I and II
+above.
+
+Use structural induction to prove that no string in $S$ represents an integer
+with a leading zero.
+
+11. Define a set $S$ of strings over the set of all integers recursively as
+    follows:
+
+I. Base: $1 \in S, 3 \in S, 5 \in S, 7 \in S, 9 \in S$
+
+II. Recursion: If $s \in S$ and $t \in S$, then
+
+(a) $st \in S$
+
+(b) $2s \in S$
+
+\(c\) $4s \in S$
+
+(d) $6s \in S$
+
+(e) $8s \in S$
+
+III. Restriction: Nothing is in $S$ other than objects defined in I and II
+above.
+
+Use structural induction to prove that every string in $S$ represents an odd
+integer when written in decimal notation.
+
+12. Define a set $S$ of integers recursively as follows:
+
+I. Base: $0 \in S, 5 \in S$
+
+II. Recursion: If $k \in S$ and $p \in S$, then
+
+(a) $k + p \in S$
+
+(b) $k - p \in S$
+
+III. Restriction: Nothing is in $S$ other than objects defined in I and II
+above.
+
+Use structural induction to prove that every integer in $S$ is divisible by $5$.
+
+13. Define a set $S$ of integers recursively as follows:
+
+I. Base: $0 \in S$
+
+II. Recursion: If $k \in S$, then
+
+(a) $k + 3 \in S$
+
+(b) $k - 3 \in S$
+
+III. Restriction: Nothing is in $S$ other than objects defined in I and II
+above.
+
+Use structural induction to prove that every integer in $S$ is divisible by $3$.
+
+14. Is the string _MU_ in the _MIU_-system? Use structural induction to prove
+    your answer.
+
+15. Determine whether either of the following parenthesis configuration is in
+    the set $c$ defined in Example 5.9.2. Use structural induction to prove your
+    answers.
+
+a. $()(()$
+
+b. $(()()))(()$
+
+16. Give a recursive definition for the set of all strings of $0$'s and $1$'s
+    that have the same number of $0$'s and $1$'s.
+
+17. Give a recursive definition for the set of all strings of $0$'s and $1$'s
+    for which all the $0$'s precede all the $1$'s.
+
+18. Give a recursive definition for the set of all strings of $a$'s and $b$'s
+    that contain an odd number of $a$'s.
+
+19. Give a recursive definition for the set of all strings of $a$'s and $b$'s
+    that contain exactly one $a$.
+
+20.
+
+a. Let $A$ be any finite set and let $L$ be the length function on the set of
+all strings over $A$. Prove that for every character $a$ in $A$, $L(a) = 1$.
+
+b. If $A$ is a finite set, define a set $S$ of strings over $A$ as follows:
+
+I. Base: Every character in $A$ is a string in $S$.
+
+II. Recursion: If $s$ is any string in $S$, then for every character $c$ in $A$,
+$csc$ is a string in $S$.
+
+III. Restriction Nothing is in $S$ except strings obtained from the base and the
+recursion.
+
+Use structural induction to prove that given any string $s$ in $S$, the length
+of $S$, $L(s)$, is an odd integer.
+
+21. Write a complete proof for Theorem 5.9.4.
+
+22. If $S$ is the set of all strings over a finite set $A$ and if $u$ is any
+    string in $S$, define the _string reversal function_, $\text{Rev}$, as
+    follows:
+
+a. $\text{Rev}(\lambda) = \lambda$
+
+b. For every string $u$ in $S$ and for every character $a$ in $A$,
+$\text{Rev}(ua) = a\text{Rev}(u)$.
+
+Use structural induction to prove that for all strings $u$ and $v$ in $S$,
+$\text{Rev}(uv) = \text{Rev}(v)\text{Rev}(u)$.
+
+23. Use the definition of McCarthy's 91 function in Example 5.9.7 to show the
+    following:
+
+a. $M(86) = M(91)$
+
+b. $M(91) = 91$
+
+24. Prove that McCarthy's 91 function equals $91$ for all positive integers less
+    than or equal to $101$.
+
+25. Use the definition of the Ackermann function in Example 5.9.8 to compute the
+    following:
+
+a. $A(1, 1)$
+
+b. $A(2, 1)$
+
+26. Use the definition of the Ackermann function to show the following:
+
+a. $A(1, n) = n + 2$, for each nonnegative integer $n$
+
+b. $A(2, n) = 3 + 2n$, for each nonnegative integer $n$
+
+c. $A(3, n) = 8 \cdot 2^n - 3$, for each nonnegative integer $n$
+
+27. Compute $T(2), T(3), T(4), T(5), T(6)$, and $T(7)$ for the "function" $T$
+    defined after Example 5.9.9.
+
+28. Student $A$ tries to define a function: $F: \mathbb{Z}^+ \to \mathbb{Z}$ by
+    the rule
+
+$$
+F(n) =
+\begin{cases}
+1 & \text{if } n \text{ is } 1 \\
+F\left(\dfrac{n}{2}\right) & \text{if } n \text{ is even} \\
+1 + F(5n - 9) & \text{if } n \text{ is odd and } n > 1
+\end{cases}
+$$
+
+for each integer $n \geq 1$. Student $B$ claims that $F$ is not well defined.
+Justify student $B$'s claim.
+
+29. Student $C$ tries to define a function $G: \mathbb{Z}^+ \to \mathbb{Z}$ by
+    the rule
+
+$$
+G(n) =
+\begin{cases}
+1 & \text{if } n \text{ is } 1 \\
+G\left(\dfrac{n}{2}\right) & \text{if } n \text{ is even} \\
+2 + G(3n - 5) & \text{if } n \text{ is odd and } n > 1
+\end{cases}
+$$
+
+for each integer $n \geq 1$. Student $D$ claims that $G$ is not well defined.
+Justify student $D$'s claim.

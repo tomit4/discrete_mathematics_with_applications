@@ -1244,3 +1244,249 @@ $$ a_n = Cr^n + Dnr^n $$
 
 where $C$ and $D$ are the real numbers whose values are determined by the values
 of $a_0$ and any other known value of the sequence.
+
+---
+
+Page 389
+
+**Recursive Definition for the Set of All Strings over a Finite Set**
+
+Let $A$ be any finite set. Call the elements of $A$ characters, and define the
+set $S$ **of all strings over** $A$ as follows:
+
+I. Base: $\lambda$ is a string in $S$, where $\lambda$ denotes the **null
+string**, the "string" with no characters.
+
+II. Recursion: New strings are formed according to the following rules:
+
+(a) If $u$ is any string in $S$ and if $c$ is any character in $A$, then
+
+$$ uc \text{ is a string in } S $$
+
+where $uc$ is called the **concatenation of $u$ and $c$**, and is obtained by
+appending $c$ on the right of $u$.
+
+(b) If $u$ is a string in $S$, then both the concatenation of $\lambda$ and $u$,
+denoted $\lambda u$, and the concatenation of $u$ and $\lambda$, denoted
+$u\lambda$, are defined to equal $u$. Symbolically:
+
+$$ \lambda u = u\lambda = u $$
+
+\(c\) If $u$ and $v$ are any strings in $S$, and if $c$ is any character in $A$,
+then the concatenation of $u$ and $vc$ is defined to equal the concatenation of
+$uv$ and $c$. Symbolically:
+
+$$ u(vc) = (uv)c $$
+
+III. Restriction: Nothing is a string in $S$ other than objects obtained from
+the base and the recursion.
+
+---
+
+Page 389
+
+**Theorem 5.9.1 Characters are Strings**
+
+If $A$ is a finite set and $S$ is the set of all strings over $A$, then every
+character in $A$ is a string in $S$.
+
+**Proof:**
+
+(1) Suppose $c$ is any character in $A$.
+
+(2) By part I of the definition of string, $\lambda$ is a string in $S$.
+
+(3) By part II(a) of the definition of string, $\lambda c$ is a string in $S$.
+
+(4) By part I of the definition of string, $\lambda c = c$.
+
+(5) Thus $c$ is a string in $S$.
+
+---
+
+Page 391
+
+**Structural Induction for a Recursively Defined Set**
+
+Let $S$ be a set that has been defined recursively, and let $P(x)$ be a property
+that objects in $S$ may or may not satisfy. To prove that every object in $S$
+satisfies $P(x)$, perform the following two steps:
+
+**Step 1 (basis step):**
+
+Show that $P(a)$ is true for each object $a$ in the base for $S$.
+
+**Step 2 (inductive step):**
+
+Show that for each $x$ in $S$, if $P(x)$ is true and if $y$ is obtained from $x$
+by applying a rule from the recursion, then $P(y)$ is true. To perform this
+step,
+
+**suppose** that $x$ is an arbitrarily chosen element of $S$ for which $P(x)$ is
+true.
+
+_[This supposition is the **inductive hypothesis**.]_
+
+Then
+
+**show** that if $y$ is obtained from $x$ by applying a rule from the recursion
+for $S$, then $P(y)$ is true.
+
+**Conclusion:** Because no objects other than those obtained from the base and
+recursion are contained in $S$, steps 1 and 2 prove that $P(x)$ is true for
+every object $x$ in $S$.
+
+---
+
+Page 392
+
+**Definition Length of a String**
+
+Given the set of all strings $S$ over a finite set $A$, the **length $L$ of a
+string in $S$** is defined as follows:
+
+1. $L(\lambda) = 0$.
+
+2. For every string $u$ in $S$ and for every character $a$ in $A$, the length of
+   $ua$ is one more than the length of $u$. Symbolically:
+
+$$ L(ua) = L(u) + 1 \quad \text{ where } \quad u \in S \text{ and } a \in A $$
+
+---
+
+Page 393
+
+**Theorem 5.9.2 Additive Property of String Length**
+
+If $S$ is the set of all strings over a finite set $A$, then for all strings $u$
+and $v$ in $S$, $L(uv) = L(u) + L(v)$.
+
+**Proof (by structural induction):**
+
+Let $S$ be the set of all strings over a finite set $A$. Given any string $v$ in
+$S$, let the property $P(v)$ be the sentence
+
+For every string $u$ in $S$, $L(uv) = L(u) + L(v)$.
+
+We will show that $P(v)$ is true for every string $v$ in $S$.
+
+_Show that $P(a)$ is true for each string $a$ in the base for $S$:_
+
+The only string in the base for $S$ is $\lambda$, and if $u$ is any string in
+$S$, then
+
+$$ L(u\lambda) = L(u) $$
+
+$$ = L(u) + 0 $$
+
+$$ = L(u) + L(\lambda) $$
+
+This shows that $P(\lambda)$ is true.
+
+_Show that for each string $x$ in $S$, if $P(x)$ is true and if $y$ is obtained
+from $x$ by applying a rule from the recursion for $S$, then $P(y)$ is true:_
+
+The recursion for $S$ consists of three rules denoted II(a), II(b), II\(c\), but
+rule II(a) is the only one that generates new strings in $S$. Suppose $v$ is any
+string in $S$ such that $P(v)$ is true. In other words, suppose that
+$L(uv) = L(u) + L(v)$. _[This is the inductive hypothesis.]_
+
+When rule II(a) is applied to $v$, the result is $vc$, where $c$ is a character
+in $A$. So, to complete the inductive step, we must show that $P(vc)$ is true.
+Now
+
+$$ L(u(vc)) = L((uv)c) $$
+
+$$ = L(uv) + 1 $$
+
+$$ = (L(u) + L(v)) + 1 $$
+
+$$ = L(u) + (L(v) + 1) $$
+
+$$ = L(u) + L(vc) $$
+
+Hence $P(vc)$ is true _[as was to be shown]_.
+
+_Conclusion:_
+
+Because there are no strings in $S$ other than those obtained through the base
+and the recursion for $S$, we conclude that every string in $S$ satisfies the
+additive property for string length.
+
+---
+
+Page 394
+
+**Theorem 5.9.3 The Concatenation of Any Two Strings is a String**
+
+If $S$ is the set of all strings over a finite set $A$ and $u$ and $v$ are any
+strings in $S$, then $uv$ is a string in $S$.
+
+**Proof (by structural induction):**
+
+Let $S$ be the set of all strings over a finite set $A$. Given any string $v$ in
+$S$, let the property $P(v)$ be the sentence
+
+For every string $u$ in $S$, $uv$ is a string in $S$.
+
+We will show that $P(v)$ is true for every string $v$ in $S$.
+
+_Show that $P(a)$ is true for each string $a$ in the base for $S$:_
+
+The only string in the base for $S$ is $\lambda$, and if $u$ is any string in
+$S$, then by rule II(b) in the definition of string, $u\lambda = u$. Hence the
+concatenation of $u$ and $\lambda$ is a string in $S$, and so $P(\lambda)$ is
+true.
+
+_Show that for each string $x$ in $S$, if $P(x)$ is true and if $y$ is obtained
+from $x$ by applying a rule from the recursion for $S$, then $P(y)$ is true:_
+
+The recursive definition for $S$ consists of three rules denoted II(a), II(b),
+and II(c\), but rule II(a) is the only one that generates new strings in $S$.
+Suppose $v$ is any string in $S$ such that $P(v)$ is true. In other words,
+suppose that for every string $u$ in $S$, $uv$ is a string in $S$. _[This is the
+inductive hypothesis.]_
+
+Then rule II(a) is applied to $v$, the result is $vc$, where $c$ is a character
+in $A$. To complete the inductive step, we must show that $P(vc)$ is true. To do
+so, we will show that $u(vc)$ is a string in $S$.
+
+Now because $uv$ is a string in $S$, it follows from rule II(a) that $(uv)c$ is
+also a string in $S$. In addition, by rule II\(c\),
+
+$$ (uv)c = u(vc) $$
+
+Therefore, $u(vc)$ is a string in $S$, which means that $P(vc)$ is true _[as was
+to be shown]_.
+
+_Conclusion:_
+
+Because there are no strings in $S$ other than those obtained from 5he base and
+the recursion for $S$, we conclude that the concatenation of any two strings in
+$S$ is a string in $S$.
+
+---
+
+Page 394
+
+**Theorem 5.9.4 Concatenation of Strings is Associative**
+
+If $S$ is the set of all strings over a finite set $A$ and $u$, $v$, and $w$ are
+any strings in $S$, then $u(vw) = (uv)w$.
+
+**Idea of a proof by structural induction:** Let $S$ be the set of all strings
+over a finite set $A$. Given any string $w$ in $S$, let the property $P(w)$ be
+the sentence
+
+For all strings $u$ and $v$ in $S$, $u(vw) = (uv)w$.
+
+The proof must show (1) that $P(\lambda)$ is true, and (2) that if $w$ is any
+string in $S$ such that $P(w)$ is true and if $y$ is obtained from $w$ by
+applying a rule from the recursion for $S$, then $P(y)$ is true. Now when rule
+II(a) is applied to $w$ the result is $wc$ for some character $c$ in $A$. A
+crucial step is to show that $u((vw)c) = (u(vw))c$. This follows from the
+definition of string because $u$ and $vw$ are in $S$ and $c$ is in $A$.
+
+Exercise 21 at the end of this section asks you to write a complete proof.
+
+---
