@@ -13228,19 +13228,114 @@ Omitted.
 16. Give a recursive definition for the set of all strings of $0$'s and $1$'s
     that have the same number of $0$'s and $1$'s.
 
+Let $S$ be the set of all strings of $0$'s and $1$'s with the same number of
+$0$'s and $1$'s. The following is a recursive definition for $S$.
+
+I. Base: The null string $\lambda \in S$.
+
+II. Recursion: If $s \in S$, then
+
+a. $01s \in S$
+
+b. $s01 \in S$
+
+c. $10s \in S$
+
+d. $s10 \in S$
+
+e. $0s1 \in S$
+
+f. $1s0 \8n S$
+
+III. Restriction: There are no elements of $S$ other than those obtained from
+the base and recursion for $S$.
+
 17. Give a recursive definition for the set of all strings of $0$'s and $1$'s
     for which all the $0$'s precede all the $1$'s.
+
+Let $S$ be the set of all strings of $0$'s and $1$'s where all the $0$'s precede
+all the $1$'s. The following is a recursive definition of $S$.
+
+I. Base: The null string $\lambda \in S$.
+
+II. Recursion: If $s \in S$, then
+
+a. $0s \in S$
+
+b. $01s \in S$
+
+c. $00s \in S$
+
+III. Restriction: There are no elements of $S$ other than those obtained from
+the base and recursion for $S$.
 
 18. Give a recursive definition for the set of all strings of $a$'s and $b$'s
     that contain an odd number of $a$'s.
 
+Let $S$ be the set of all strings of $a$'s and $b$'s such that they contain an
+odd number of $a$'s. The following is a recursive definition of $S$.
+
+I. Base: The null string $\lambda \in S$.
+
+II. Recursion: If $s \in S$, then
+
+a. $sb \in S$
+
+b. $bs \in S$
+
+c. $aas \in S$
+
+d. $asa \in S$
+
+e. $saa \in S$
+
+III. Restriction: There are no elements of $S$ other than those obtained from
+the base and recursion for $S$.
+
 19. Give a recursive definition for the set of all strings of $a$'s and $b$'s
     that contain exactly one $a$.
+
+Let $S$ be the set of all strings of $a$'s and $b$'s such that they exactly one
+$a$. The following is a recursive definition of $S$.
+
+I. Base: The null string $\lambda \in S$.
+
+II. Recursion: If $s \in S$, then
+
+a. $bs \in S$
+
+b. $sb \in S$
+
+III. Restriction: There are no elements of $S$ other than those obtained from
+the base and recursion for $S$.
 
 20.
 
 a. Let $A$ be any finite set and let $L$ be the length function on the set of
 all strings over $A$. Prove that for every character $a$ in $A$, $L(a) = 1$.
+
+**Proof:**
+
+Suppose $a$ is any character in $A$.
+
+By II(b) of the definition of a string:
+
+$$ L(a) = L(\lambda a) $$
+
+By part 2 of the definition of the length of a string:
+
+$$ = L(\lambda) + L(a) $$
+
+By part 1 of the definition of the length of a string:
+
+$$ = 0 + 1 $$
+
+$$ = 1 $$
+
+Therefore for every character $a$ in $A$, $L(a) = 1$. This is what was to be
+shown.
+
+Q.E.D.
 
 b. If $A$ is a finite set, define a set $S$ of strings over $A$ as follows:
 
@@ -13255,7 +13350,145 @@ recursion.
 Use structural induction to prove that given any string $s$ in $S$, the length
 of $S$, $L(s)$, is an odd integer.
 
+**Proof (by structural induction):**
+
+Let $P(s)$ be the sentence:
+
+The length of $s$ is an odd integer.
+
+_Basis Step:_
+
+Prove the base definition, $P(a)$, that is:
+
+Every character in $A$ is a string in $S$.
+
+The only strings in the base definition of $S$ are the characters in $A$. By
+part (a), we know that the length of all strings in $S$ is equal to $1$
+($L(s) = 1$).
+
+$1$ is an odd integer since $1 = 2(0) + 1$.
+
+Therefore $P(a)$ is true.
+
+_Inductive Step:_
+
+Let $s$ be any string, and suppose that $P(s)$ is true, that is:
+
+The length of $s$ is an odd integer.
+
+This is the inductive hypothesis.
+
+We must prove the recursion definition. That is we must prove II:
+
+II. Recursion: If $s$ is any string in $S$, then for every character $c$ in $A$,
+$csc$ is a string in $S$.
+
+By the inductive hypothesis, we know that the length of $s$ is odd. By the
+definition of odd, it follows that:
+
+$$ L(s) = 2k + 1 $$
+
+for some integer $k$.
+
+By part 2 of the definition of the length of a string:
+
+$$ L(csc) = L(c) + L(s) + L(c) $$
+
+$$ = 1 + L(s) + 1 $$
+
+By substitution:
+
+$$ = 1 + (2k + 1) + 1 $$
+
+$$ = 2k + 1 + 1 + 1 $$
+
+$$ = 2k + 2 + 1 $$
+
+$$ = 2(k + 1) + 1 $$
+
+By the sum of integers and by the definition of odd, $L(csc)$ is odd, and
+therefore the recursion definition is true. This is what was to be shown.
+
+_Conclusion:_
+
+Since all strings in the set $S$ are only obtained by the base and recursion
+definitions for $S$, we conclude that every character in $A$ is a string in $S$.
+
 21. Write a complete proof for Theorem 5.9.4.
+
+**Proof (by structural induction):**
+
+Let $S$ be the set of all strings over a finite set $A$. Given any string $w$ in
+$S$, let the property $P(w)$ be the sentence:
+
+For all strings $u$ and $v$ in $S$, $u(vw) = (uv)w$.
+
+_Basis Step:_
+
+Prove $P(\lambda)$, that is:
+
+For all strings $u$ and $v$ in $S$, $u(v\lambda) = (uv)\lambda$.
+
+By the definition of a string:
+
+$$ u(v\lambda) = u(v) = uv $$
+
+and
+
+$$ (uv)\lambda = (uv) = uv $$
+
+Hence $u(v\lambda) = (uv)\lambda$. Therefore $P(\lambda)$ is true.
+
+_Inductive Step:_
+
+Let $w$ be any string, and suppose $P(w)$, that is:
+
+For all strings $u$ and $v$ in $S$, $u(vw) = (uv)w$.
+
+Let $y$ be a string, and suppose that $y$ is obtained from $w$ by applying a
+rule from the recursion for $S$.
+
+This is the inductive hypothesis.
+
+We must prove $P(y)$, that is:
+
+For all strings $u$ and $v$ in $S$, $u(vy) = (uv)y$.
+
+By part II(a) of the definition of a string:
+
+$$ wc \in S $$
+
+for some character $c$ in $A$.
+
+By II(c) of the definition of a string:
+
+$$ u(vy) = u(vwc) $$
+
+By part II(c) of the definition of a string:
+
+$$ = u(vw)c $$
+
+By substitution of the inductive hypothesis:
+
+$$ = ((uv)w)c $$
+
+By part II(c) of the definition of a string:
+
+$$ = (uv)(wc) $$
+
+By substitution of the inductive hypothesis:
+
+$$ = (uv)y $$
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since there is no string in $S$ other than objects obtained from the base and
+the recursion, we conclude that if $u$, $v$, and $w$ are strings in $S$, then
+$u(vw) = (uv)w$.
+
+Q.E.D.
 
 22. If $S$ is the set of all strings over a finite set $A$ and if $u$ is any
     string in $S$, define the _string reversal function_, $\text{Rev}$, as
@@ -13269,33 +13502,120 @@ $\text{Rev}(ua) = a\text{Rev}(u)$.
 Use structural induction to prove that for all strings $u$ and $v$ in $S$,
 $\text{Rev}(uv) = \text{Rev}(v)\text{Rev}(u)$.
 
+**Proof (by structural induction):**
+
+Let $P(v)$ be the sentence:
+
+$\text{Rev}(uv) = \text{Rev}(v)\text{Rev}(u)$.
+
+_Basis Step:_
+
+Prove $P(\lambda)$, that is:
+
+$\text{Rev}(u\lambda) = \text{Rev}(\lambda)\text{Rev}(u)$.
+
+By part (b) we know that:
+
+$$ = \lambda\text{Rev}(u) $$
+
+By part (a) we know that:
+
+$$ \text{Rev}(\lambda) = \lambda $$
+
+By substitution:
+
+$$ = \text{Rev}(\lambda)\text{Rev}(u) $$
+
+This is what was to be shown, therefore $P(\lambda)$ is true.
+
+_Inductive Step:_
+
+Let $v$ is any string, and suppose $P(v)$, that is:
+
+$\text{Rev}(uv) = \text{Rev}(v)\text{Rev}(u)$.
+
+This is the inductive hypothesis.
+
+Let $y$ be some string obtained by the recursive definition for $v$.
+
+We must prove $P(y)$, that is:
+
+$\text{Rev}(uy) = \text{Rev}(y)\text{Rev}(u)$.
+
+By substitution of the inductive hypothesis and II(a) of the definition of a
+string:
+
+$$ \text{Rev}(uy) = \text{Rev}(u(vc)) $$
+
+for some character $c$ in $A$.
+
+By part (b):
+
+$$ = (vc)\text{Rev}(u) $$
+
+By substitution of part (a)
+
+$$ = \text{Rev}(vc)\text{Rev}(u) $$
+
+BY substitution of the inductive hypothesis:
+
+$$ = \text{Rev}(y)\text{Rev}(u) $$
+
+This is what was to be shown. Therefore $P(y)$ is true.
+
+_Conclusion:_
+
+Since all strings in $S$ are obtained by the base and recursion definitions for
+$S$, we conclude that for all strings $u$ and $v$ in $S$,
+$\text{Rev}(uv) = \text{Rev}(v)\text{Rev}(u)$.
+
+Q.E.D.
+
 23. Use the definition of McCarthy's 91 function in Example 5.9.7 to show the
     following:
 
 a. $M(86) = M(91)$
 
+Omitted.
+
 b. $M(91) = 91$
+
+Omitted.
 
 24. Prove that McCarthy's 91 function equals $91$ for all positive integers less
     than or equal to $101$.
+
+Omitted.
 
 25. Use the definition of the Ackermann function in Example 5.9.8 to compute the
     following:
 
 a. $A(1, 1)$
 
+Omitted.
+
 b. $A(2, 1)$
+
+Omitted.
 
 26. Use the definition of the Ackermann function to show the following:
 
 a. $A(1, n) = n + 2$, for each nonnegative integer $n$
 
+Omitted.
+
 b. $A(2, n) = 3 + 2n$, for each nonnegative integer $n$
+
+Omitted.
 
 c. $A(3, n) = 8 \cdot 2^n - 3$, for each nonnegative integer $n$
 
+Omitted.
+
 27. Compute $T(2), T(3), T(4), T(5), T(6)$, and $T(7)$ for the "function" $T$
     defined after Example 5.9.9.
+
+Omitted.
 
 28. Student $A$ tries to define a function: $F: \mathbb{Z}^+ \to \mathbb{Z}$ by
     the rule
@@ -13312,6 +13632,8 @@ $$
 for each integer $n \geq 1$. Student $B$ claims that $F$ is not well defined.
 Justify student $B$'s claim.
 
+Omitted.
+
 29. Student $C$ tries to define a function $G: \mathbb{Z}^+ \to \mathbb{Z}$ by
     the rule
 
@@ -13326,3 +13648,5 @@ $$
 
 for each integer $n \geq 1$. Student $D$ claims that $G$ is not well defined.
 Justify student $D$'s claim.
+
+Omitted.
