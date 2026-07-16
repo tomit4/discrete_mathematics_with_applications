@@ -12305,20 +12305,75 @@ Page 397
 
 a. $\neg p \vee (q \wedge (r \vee \neg s))$
 
+(1) By I, $p$, $q$, $r$, and $s$ are Boolean expressions.
+
+(2) By 1 and II(c), $\neg s$ is a Boolean expression.
+
+(3) By 1, 2, and II(b), $r \vee \neg s$ is a Boolean expression.
+
+(4) By 3 and II(d), $(r \vee \neg s)$ is a Boolean expression.
+
+(5) By 1, 4 and II(a), $q \wedge (r \vee \neg s)$ is a Boolean expression.
+
+(6) By 5 and II(d), $(q \wedge (r \vee \neg s))$ is a Boolean expression.
+
+(7) By 1 and II(c), $\neg p$ is a Boolean expression.
+
+(8) By 6, 7 and II(b), $\neg p \vee (q \wedge (r \vee neg s))$ is a Boolean
+expression.
+
 b. $(p \vee q) \vee \neg((p \wedge \neg s) \wedge r)$
 
-2. Consider the set $C$ of parenthesis structures defined in Example 5.9.2. Give
+(1) By I, $p$, $q$, $s$, and $r$ are Boolean expressions.
+
+(2) By 1 and II(c), $\neg s$ is a Boolean expression.
+
+(3) By 1, 2, and II(a), $p \wedge \neg s$ is a Boolean expression.
+
+(4) By 3 and II(d), $(p \wedge \neg s)$ is a Boolean expression.
+
+(5) By 1, 4 and II(a), $(p \wedge \neg s) \wedge r$ is a Boolean expression.
+
+(6) By 5 and II(d), $((p \wedge \neg s) \wedge r)$ is a Boolean expression.
+
+(7) By 6 and II(c), $\neg((p \wedge \neg s) \wedge r)$ is a Boolean expression.
+
+(8) By 1 and II(b), $p \vee q$ is a Boolean expression.
+
+(9) By 8 and II(d), $(p \vee q)$ is a Boolean expression.
+
+(10) By 7, 9, and II(b), $(p \vee q) \vee \neg((p \wedge \neg s) \wedge r)$ is a
+Boolean expression.
+
+5. Consider the set $C$ of parenthesis structures defined in Example 5.9.2. Give
    derivations showing that each of the following is in $C$.
 
 a. $()(())$
 
+(1) By I, $()$ is in $C$.
+
+(2) By 1 and II(a), $(())$ is in $C$.
+
+(3) By 1, 2, and II(b), $()(())$ is in $C$.
+
 b. $(())(())$
+
+(1) By I, $()$ is in $C$.
+
+(2) By 1 and II(a), $(())$ is in $C$.
+
+(3) By 1, 2, and II(b), $(())(())$ is in $C$.
 
 3. Let $S$ be the set of all strings over a finite set $A$ and let $a$, $b$, and
    $c$ be any characters in $A$.
 
 a. Using Theorem 5.9.1 but not Theorem 5.9.3 or 5.9.4, show that
 $(ab)c = a(bc)$.
+
+(1) By Theorem 5.9.1, $a$ and $b$ are strings because $a$ and $b$ are in $A$.
+
+(2) By (1) and II(c) of the definition of a string, $a(bc) = (ab)c$ because $a$
+and $b$ are strings in $S$ and $c$ is in $A$.
 
 b. Show that $ab$ is a string in $S$. Then use the result of part (a) to
 conclude that $a(bc)$ is a string in $S$.
@@ -12331,7 +12386,37 @@ $abc$.)
 
 a. MIUI
 
+(1) By I, _MI_ is in the _MIU_-system.
+
+(2) By 1 and II(b), _MIU_ is in the _MIU_-system.
+
+(3) By 2 and II(b), _MIIII_ is in the _MIU_-system._
+
+(4) By 3 and II(b), _MIIIIIIII_ is in the _MIU_-system._
+
+(5) By 4 and II(c), _MIUIIII_ is in the _MIU_-system.
+
+(6) By 5 and II(c), _MIUUI_ is in the _MIU_-system._
+
+(7) By 6 and II(d), _MIUI_ is in the _MIU_-system.
+
 b. MUIIU
+
+(1) By I, _MI_ is in the _MIU_-system.
+
+(2) By 1 and II(b), _MII_ is in the _MIU_-system.
+
+(3) By 2 and II(b), _MIIII_ is in the _MIU_-system.
+
+(4) By 3 and II(b), _MIIIIIIII_ is in the _MIU_-system.
+
+(5) By 4 and II(c), _MUIIIII_ is in the _MIU_-system.
+
+(6) By 5 and II(c), _MUUII_ is in the _MIU_-system.
+
+(7) By 6 and II(d), _MUII_ is in the _MIU_-system.
+
+(8) By 7 and II(a), _MUIIU_ is in the _MIU_-system.
 
 5. The set of arithmetic expressions over the real numbers can be defined
    recursively as follows:
@@ -12362,7 +12447,34 @@ derivations showing that each of the following is an arithmetic expression.
 
 a. $((2 \cdot (0.3 - 4.2)) + (-7))$
 
+(1) By I, $2$, $0.3$, $4.2$, and $7$ are arithmetic expressions.
+
+(2) By 1 and II(d), $(0.3 - 4.2)$ is an arithmetic expression.
+
+(3) By 2 and II(e) , $(2 \cdot (0.3 - 4.2))$ is an arithmetic expression.
+
+(4) By 1 and II(b), $(-7)$ is an arithmetic expression.
+
+(5) By 3, 4, and II(c), $((2 \cdot (0.3 - 4.2))) + (-7))$ is an arithmetic
+expression.
+
 b. $\left(\frac{(9 \cdot(6 \cdot 1 + 2))}{((4 - 7) \cdot 6)}\right)$
+
+(1) By I, $9$, $6$, $1$, $2$, $4$, $7$, and $6$ are arithmetic expressions.
+
+(2) By 1 and II(d), $(4 - 7)$ is an arithmetic expression.
+
+(3) By 1, 2, and II(e), $((4 - 7) \cdot 6)$ is an arithmetic expression.
+
+(4) By 1 and II(e), $(6 \cdot 1)$ is an arithmetic expression.
+
+(5) By 1, 4, and II(c), $(6 \cdot 1 + 2)$ is an arithmetic expression.
+
+(6) By 1, 5, and II(e), $(9 \cdot (6 \cdot 1 + 2))$ is an arithmetic expression.
+
+(7) By 3, 6, and II(f),
+$\left(\frac{(9 \cdot (6 \cdot 1 + 2))}{(4 - 7) \cdot 6}\right)$ is an
+arithmetic expression.
 
 6. Let $S$ be a set of integers defined recursively as follows:
 
@@ -12375,6 +12487,68 @@ and II above.
 
 Use structural induction to prove that for every integer $n$ in $S$,
 $n \mod 2 = 1$.
+
+**Proof (by structural induction):**
+
+Given any integer $n$ in $S$, let $P(n)$ be the equality:
+
+$$ n \mod 2 = 1 $$
+
+_Basis Step:_
+
+Prove $P(n)$ is true for each integer $n$ in the base for $S$.
+
+The only object in $S$ is $5$, and $P(5)$ is true because $5 \mod 2 = 1$ since
+$5 = 2 \cdot 2 + 1$.
+
+Therefore $P(n)$ is true.
+
+_Inductive Step:_
+
+Suppose $n$ is any integer in $S$ such that $P(n)$ is true. That is:
+
+$$ n \mod 2 = 1 $$
+
+This is the inductive hypothesis.
+
+Prove that the recursive definition is true. In other words, we must prove
+$P(n + 4)$, that is:
+
+$$ (n + 4) \mod 2 = 1 $$
+
+By the inductive hypothesis:
+
+$$ n \mod 2 = 1 $$
+
+This means that, by the definition of divisibility:
+
+$$ n = 2k + 1 $$
+
+for some integer $k$.
+
+It follows, by substitution:
+
+$$ (n + 4) \mod 2 = [(2k + 1) + 4] \mod 2 $$
+
+$$ = [2k + 4 + 1] mod 2 $$
+
+$$ = [2k + 2(2) + 1] \mod 2 $$
+
+$$ = [2(k + 1) + 1] \mod 2 $$
+
+By the definition of $\mod$:
+
+$$ = 1 $$
+
+Therefore $P(n + 4)$ is true.
+
+_Conclusion:_
+
+Since there are no integers in $S$ other than those obtained from the base and
+recursion definitions for $S$, we conclude that every integer $n$ in $S$
+satisfies the equation $n \mod 2 = 1$.
+
+Q.E.D.
 
 7. Define a set $S$ of strings over the set $\{0, 1\}$ recursively as follows:
 
@@ -12391,6 +12565,53 @@ above.
 
 Use structural induction to prove that every string in $S$ ends in a $1$.
 
+**Proof (by structural induction):**
+
+Let $P(n)$ be the sentence: "every string in $S$ ends in a $1$."
+
+_Basis Step:_
+
+Prove the base definition is true. In other words, prove that $P(a)$ is true.
+
+Since $1$ is the only string in $S$, $P(1)$ is true since $1$ ends in a $1$.
+
+Therefore $P(a)$ is true.
+
+_Inductive Step:_
+
+Suppose $s$ is any string in $S$ such that $P(s)$ is true, that is:
+
+"$s$ ends in a $1$."
+
+This is the inductive hypothesis.
+
+Prove the recursive definition. That is, we must prove both II(a), and II(b):
+
+(a) $0s \in S$
+
+(b) $1s \in S$
+
+_Case (a):_
+
+When rule II(a) is applied to $s$, $0$ is concatenated with $s$. Since $s$ ends
+in a $1$ by the inductive hypothesis, it follows that $0s$ also ends with a $1$.
+
+_Case (b):_
+
+When rule II(b) is applied to $s$, $1$ is concatenated with $s$. Since $s$ ends
+in a $1$ by the inductive hypothesis, it follows that $1s$ also ends with a $1$.
+
+Therefore in both cases, $0s$ and $1s$ end in a $1$, and the recursive
+definition is true, which is what was to be shown.
+
+_Conclusion:_
+
+Since there are no strings in $S$ other than those obtained from the base and
+recursion definitions for $s$, we conclude that every string in $S$ ends in a
+$1$.
+
+Q.E.D.
+
 8. Define a set $S$ of strings over the set $\{a, b\}$ recursively as follows:
 
 I. Base $a \in S$
@@ -12405,6 +12626,52 @@ III. Restriction: Nothing is in $S$ other than objects defined in I and II
 above.
 
 Use structural induction to prove that every string in $S$ begins with an $a$.
+
+**Proof (by structural induction):**
+
+Let $P(s)$ be the sentence "$s$ begins with an $a$."
+
+_Basis Step:_
+
+Prove the base definition, $P(a)$.
+
+$a$ is the only string in $S$, and $a$ does begin with an $a$.
+
+Therefore $P(a)$ is true.
+
+_Inductive Step:_
+
+Suppose $s$ is a string in $S$ such that $P(s)$ is true, that is:
+
+"$s$ begins with an $a$."
+
+This is the inductive hypothesis.
+
+Prove the recursion definition. That is, we must prove both II(a) and II(b):
+
+(a) $sa \in S$
+
+(b) $sb \in S$
+
+_Case (a):_
+
+$sa$ appends $a$ to $s$. By the inductive hypothesis, $s$ begins with an $a$.
+Thus $sa$ begins with an $a$.
+
+_Case (b):_
+
+$sb$ appends $b$ to $s$. By the inductive hypothesis, $s$ begins with an $a$.
+Thus $sb$ begins with an $a$.
+
+Therefore in both cases, $sa$ and $sb$ begin with an $a$, therefore the
+recursion definition is true, which is what was to be shown.
+
+_Conclusion:_
+
+Since there are no strings in $S$ other than those obtained from the base and
+recursion for $S$, we conclude that every string in $S$ begins with an $a$.
+
+Q.E.D.
 
 9. Define a set $S$ of strings over the set $\{a, b\}$ recursively as follows:
 
@@ -12426,6 +12693,109 @@ above.
 Use structural induction to prove that every string in $S$ contains an even
 number of $a$'s.
 
+**Proof (by structural induction):**
+
+Let $P(s)$ be the sentence "$s$ contains an even number of $a$'s."
+
+_Basis Step:_
+
+Prove the base definition, $P(\lambda)$, that is:
+
+"$\lambda$ contains an even number of $a$'s."
+
+$\lambda$ is the null string, which contains $0$ characters. It follows that
+$\lambda$ contains $0$ $a$'s. By the definition of even, $0$ is even.
+
+Therefore $P(\lambda)$ is true.
+
+_Inductive Step:_
+
+Suppose $s$ is a string in $S$ such that $P(s)$ is true, that is:
+
+"$s$ contains an even number of $a$'s"
+
+This is the inductive hypothesis.
+
+We must prove the recursion definition. That is we must prove II(a), II(b),
+II(c), and II(d):
+
+(a) $bs \in S$
+
+(b) $sb \in S$
+
+\(c\) $saa \in S$
+
+(d) $aas \in S$
+
+_Case (a):_
+
+$bs$ prepends $b$ to $s$. There are $0$ $a$'s in the string $b$, and $s$ has an
+even number of $a$'s by the inductive hypothesis. Therefore, $bs$ contains:
+
+$$ 2k + 0 $$
+
+$$ = 2k $$
+
+$a$'s for some integer $k$.
+
+Thus, by the product of integers and the definition of even, $bs$ has an even
+number of $a$'s.
+
+_Case (b):_
+
+$sb$ appends $b$ to $s$. There are $0$ $a$'s in the string $b$, and $s$ has an
+even number of $a$'s by the inductive hypothesis. Therefore, $sb$ contains:
+
+$$ 0 + 2k $$
+
+$$ = 2k $$
+
+$a$'s for some integer $k$.
+
+Thus, by the product of integers and the definition of even, $sb$ has an even
+number of $a$'s.
+
+_Case \(c\):_
+
+$saa$ appends $aa$ to $s$. There are $2$ $a$'s in the string $aa$, and $s$ has
+an even number of $a$'s by the inductive hypothesis. Therefore, $saa$ contains:
+
+$$ 2 + 2k $$
+
+$$ = 2(k + 1) $$
+
+$a$'s for some integer $k$.
+
+Thus, by the sum of integers and the definition of even, $saa$ has an even
+number of $a$'s.
+
+_Case (d):_
+
+(d) $aas \in S$
+
+$aas$ prepends $aa$ to $s$. There are $2$ $a$'s in the string $aa$, and $s$ has
+an even number of $a$'s by the inductive hypothesis. Therefore, $aas$ contains:
+
+$$ 2k + 2 $$
+
+$$ = 2(k + 1) $$
+
+$a$'s for some integer $k$.
+
+Thus, by the sum of integers and the definition of even, $aas$ has an even
+number of $a$'s.
+
+Therefore, in all four cases, each string has an even number of $a$'s. Therefore
+the recursive definition is true.
+
+_Conclusion:_
+
+Since there are no strings in $S$ other than those obtained from the base and
+recursion definitions for $S$, we conclude that every string in $S$ has an even
+number of $a$'s.
+
+Q.E.D.
+
 10. Define a set $S$ of strings over the set of all integers recursively as
     follows:
 
@@ -12443,6 +12813,60 @@ above.
 
 Use structural induction to prove that no string in $S$ represents an integer
 with a leading zero.
+
+**Proof (by structural induction):**
+
+Let $P(s)$ be the sentence "$s$ does not represents an integer with a leading
+zero."
+
+_Basis Step:_
+
+Prove the base definition. In other words prove $P(a)$, where $a$ is a string
+defined in the base:
+
+The base defines the following strings as being in $S$:
+
+$$ 1, 2, 3, 4, 5, 6, 7, 8, 9 $$
+
+None of these strings represent an integer with a leading zero. Therefore $P(a)$
+is true.
+
+_Inductive Step:_
+
+Let $s$ be a string in $S$ such that P(s) is true, that is:
+
+"$s$ does not represents an integer with a leading zero."
+
+This is the inductive hypothesis.
+
+We must prove the recursion definition. That is we must prove II(a) and II(b):
+
+(a) $s0 \in S$
+
+(b) $st \in S$
+
+_Case (a):_
+
+$s0$ appends a $0$ to $s$. By the inductive hypothesis, $s$ does not represent
+an integer with a leading zero. Appending $0$ to $s$ does not change this fact.
+Thus $s0$ does not represent an integer with a leading zero.
+
+_Case (b):_
+
+$st$ appends a $t$ to $s$. By the inductive hypothesis, $s$ does not represent
+an integer with a leading zero. Appending $t$ to $s$ does not change this fact
+($t$ is also in $S$, and thus does not represent an integer with a leading zero,
+but appending $t$ to $s$ still does not change this fact). Thus $st$ does not
+represent an integer with a leading zero.
+
+In both cases, the strings do not represent an integer with a leading zero.
+Therefore the recursion definition is true, which is what was to be shown.
+
+_Conclusion:_
+
+Since there are no strings in $S$ other than those obtained from the base and
+recursion definitions for $S$, we conclude that every string in $S$ do not
+represent an integer with a leading zero.
 
 11. Define a set $S$ of strings over the set of all integers recursively as
     follows:
@@ -12467,6 +12891,135 @@ above.
 Use structural induction to prove that every string in $S$ represents an odd
 integer when written in decimal notation.
 
+**Proof (by structural induction):**
+
+Let $P(s)$ be the sentence:
+
+"$s$ represents an odd integer when written in decimal notation."
+
+_Basis Step:_
+
+Prove the base definition. In other words, prove $P(a)$.
+
+The base definition defines $S$ as being:
+
+$$ \{1, 3, 5, 7, 9\} $$
+
+$1$ represents an odd integer since $1 = 2(0) + 1$.
+
+$3$ represents an odd integer since $3 = 2(1) + 1$.
+
+$5$ represents an odd integer since $5 = 2(2) + 1$.
+
+$7$ represents an odd integer since $7 = 2(3) + 1$.
+
+$9$ represents an odd integer since $9 = 2(4) + 1$.
+
+Therefore for all strings in $S$ obtained from the base definition, $a$
+represents an odd integer when written in decimal notation, and $P(a)$ is true.
+
+_Inductive Step:_
+
+Suppose $s$ and $t$ are strings in $S$ such that $P(s)$ and $P(t)$ are true,
+that is:
+
+"$s$ represents an odd integer when written in decimal notation."
+
+"$t$ represents an odd integer when written in decimal notation."
+
+This is the inductive hypothesis.
+
+We must prove the recursion definition. That is we must prove II(a), II(b),
+II\(c\), II(d), and II(e):
+
+(a) $st \in S$
+
+(b) $2s \in S$
+
+\(c\) $4s \in S$
+
+(d) $6s \in S$
+
+(e) $8s \in S$
+
+_Case (a):_
+
+By the inductive hypothesis, $s$ represents an odd integer when written in
+decimal notation, and $t$ represents and odd integer when written in decimal
+notation.
+
+By the definition of odd, odd integers always end with an odd integer in the
+$1$'s place.
+
+Since $t$ appends $s$, and since $t$ is an odd integer when written in decimal
+notation, it follows that $t$'s $1$'s place contains a representation of an odd
+integer when written in decimal notation. Thus $st$ also contains an odd integer
+in it's $1$'s place and $st$ is an odd integer when written in decimal notation.
+
+_Case (b):_
+
+By the inductive hypothesis, $s$ represents an odd integer when written in
+decimal notation.
+
+By the definition of odd, odd integers always end with an odd integer in the
+$1$'s place.
+
+Since $s$ is an odd integer when written in decimal notation, it follows that
+$s$'s $1$'s place contains a representation of an odd integer when written in
+decimal notation. Thus $2s$ also contains an odd integer in it's $1$'s place and
+$2s$ is an odd integer when written in decimal notation.
+
+_Case \(c\):_
+
+By the inductive hypothesis, $s$ represents an odd integer when written in
+decimal notation.
+
+By the definition of odd, odd integers always end with an odd integer in the
+$1$'s place.
+
+Since $s$ is an odd integer when written in decimal notation, it follows that
+$s$'s $1$'s place contains a representation of an odd integer when written in
+decimal notation. Thus $4s$ also contains an odd integer in it's $1$'s place and
+$4s$ is an odd integer when written in decimal notation.
+
+_Case (d):_
+
+By the inductive hypothesis, $s$ represents an odd integer when written in
+decimal notation.
+
+By the definition of odd, odd integers always end with an odd integer in the
+$1$'s place.
+
+Since $s$ is an odd integer when written in decimal notation, it follows that
+$s$'s $1$'s place contains a representation of an odd integer when written in
+decimal notation. Thus $6s$ also contains an odd integer in it's $1$'s place and
+$6s$ is an odd integer when written in decimal notation.
+
+_Case (e):_
+
+By the inductive hypothesis, $s$ represents an odd integer when written in
+decimal notation.
+
+By the definition of odd, odd integers always end with an odd integer in the
+$1$'s place.
+
+Since $s$ is an odd integer when written in decimal notation, it follows that
+$s$'s $1$'s place contains a representation of an odd integer when written in
+decimal notation. Thus $8s$ also contains an odd integer in it's $1$'s place and
+$8s$ is an odd integer when written in decimal notation.
+
+In all cases, the obtained string is an odd integer when written in decimal
+notation. Therefore the recursion definition is true, which is what was to be
+shown.
+
+_Conclusion:_
+
+Since there are no strings in $S$ other than those obtained from the base and
+recursion definitions for $S$, we conclude that every string in $S$ represents
+an odd integer when written in decimal notation.
+
+Q.E.D.
+
 12. Define a set $S$ of integers recursively as follows:
 
 I. Base: $0 \in S, 5 \in S$
@@ -12481,6 +13034,89 @@ III. Restriction: Nothing is in $S$ other than objects defined in I and II
 above.
 
 Use structural induction to prove that every integer in $S$ is divisible by $5$.
+
+**Proof (by structural induction):**
+
+Let $P(n)$ be the sentence:
+
+"$n$ is divisible by $5$."
+
+_Basis Step:_
+
+Prove the base definition. In other words, prove $P(a)$.
+
+By the base definition, $S$ is defined as only containing $0$ and $5$.
+
+Both $0$ and $5$ are divisible by $5$ by the definition of divisibility.
+
+Therefore $P(a)$ is true.
+
+_Inductive Step:_
+
+Let $k$ and $p$ be any integers such that $P(k)$ and $P(p)$ is true, that is:
+
+"$k$ is divisible by $5$."
+
+and
+
+"$p$ is divisible by $5$."
+
+This is the inductive hypothesis.
+
+We must prove the recursion definition. That is we must prove II(a) and II(b):
+
+(a) $k + p \in S$
+
+(b) $k - p \in S$
+
+_Case (a):_
+
+By the inductive hypothesis, $k$ and $p$ are both divisible by $5$. It follows
+that:
+
+$$ k = 5m $$
+
+$$ p = 5q $$
+
+for some integers $m$ and $q$.
+
+By substitution:
+
+$$ k + p = 5m + 5q $$
+
+$$ = 5(m + q) $$
+
+Thus, by the sum of integers and the definition of divisibility, $k + p$ is
+divisible by $5$.
+
+_Case (b):_
+
+By the inductive hypothesis, $k$ and $p$ are both divisible by $5$. It follows
+that:
+
+$$ k = 5m $$
+
+$$ p = 5q $$
+
+for some integers $m$ and $q$.
+
+By substitution:
+
+$$ k + p = 5m - 5q $$
+
+$$ = 5(m - q) $$
+
+Thus, by the difference of integers and the definition of divisibility, $k - p$
+is divisible by $5$.
+
+In both cases, the obtained integers are divisible by $5$. Therefore the
+recursion definition is true, which is what was to be shown.
+
+_Conclusion:_
+
+Since there are no integers in $S$ other than those obtained from the base and
+recursion definitions for $S$, we conclude that every integer in $S$ is
+divisible by $5$.
 
 13. Define a set $S$ of integers recursively as follows:
 
@@ -12497,8 +13133,85 @@ above.
 
 Use structural induction to prove that every integer in $S$ is divisible by $3$.
 
+**Proof (by structural induction):**
+
+Let $P(n)$ be the sentence:
+
+"$n$ is divisible by $3$."
+
+_Basis Step:_
+
+Prove the base definition. In other words prove $P(a)$.
+
+$0$ is the only integer in $S$ by the base definition.
+
+$0$ is divisible by $3$ by the definition of divisibility.
+
+Therefore $P(a)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $P(k)$ is true, that is:
+
+"$k$ is divisible by $3$."
+
+This is the inductive hypothesis.
+
+We must prove the recursion definition. That is we must prove II(a) and II(b):
+
+(a) $k + 3 \in S$
+
+(b) $k - 3 \in S$
+
+_Case (a):_
+
+By the inductive hypothesis, $k$ is divisible by $3$. By the definition of
+divisibility, it follows that:
+
+$$ k = 3p $$
+
+for some integer $p$.
+
+By substitution:
+
+$$ k + 3 = 3p + 3 $$
+
+$$ = 3(p + 1) $$
+
+Thus, by the sum of integers and by the definition of divisibility, $k + 3$ is
+divisible by $3$.
+
+_Case (b):_
+
+By the inductive hypothesis, $k$ is divisible by $3$. By the definition of
+divisibility, it follows that:
+
+$$ k = 3p $$
+
+for some integer $p$.
+
+By substitution:
+
+$$ k - 3 = 3p - 3 $$
+
+$$ = 3(p - 1) $$
+
+Thus, by the sum of integers and by the definition of divisibility, $k - 3$ is
+divisible by $3$.
+
+In both cases, the integers obtained are divisible by $3$. Therefore, the
+recursion definition is true, which is what was to be shown.
+
+_Conclusion:_
+
+Since there are no integers in $S$ other than those obtained from the base and
+recursion definitions for $S$, we conclude that every integer in $S$ is
+divisible by $3$.
+
 14. Is the string _MU_ in the _MIU_-system? Use structural induction to prove
     your answer.
+
+Omitted.
 
 15. Determine whether either of the following parenthesis configuration is in
     the set $c$ defined in Example 5.9.2. Use structural induction to prove your
@@ -12506,7 +13219,11 @@ Use structural induction to prove that every integer in $S$ is divisible by $3$.
 
 a. $()(()$
 
+Omitted.
+
 b. $(()()))(()$
+
+Omitted.
 
 16. Give a recursive definition for the set of all strings of $0$'s and $1$'s
     that have the same number of $0$'s and $1$'s.

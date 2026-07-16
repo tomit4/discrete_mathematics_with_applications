@@ -262,16 +262,31 @@ Page 397
 
 1. The base for a recursive definition of a set is _____.
 
+a statement that certain objects belong to the set
+
 2. The recursion for a recursive definition of a set is _____.
 
+a collection of rules indicating how to form new set objects from those already
+known to be in the set
+
 3. The restriction for a recursive definition of a set is _____.
+
+a statement that no objects belong to the set other than those coming from the
+base and the recursion
 
 4. One way to show that a given element is in a recursively defined set is to
    start with an element or elements in the _____ and apply the rules from the
    _____ until you obtain the given element.
 
+base; recursion
+
 5. To use structural induction to prove that every element in a recursively
    defined set $S$ satisfies a certain property, you show that _____ and that,
    for each rule in the recursion, if _____ then _____.
 
+each object in the base satisfies the property; the rule is applied to the
+objects in the base; the objects defined by the rule also satisfy the property
+
 6. A function is said to be defined recursively if, and only if, _____.
+
+its rule of definition refers to itself
