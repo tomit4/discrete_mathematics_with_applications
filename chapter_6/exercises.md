@@ -1,0 +1,454 @@
+Page 411
+
+**Exercise Set 6.1**
+
+1. In each of (a) -(f), answer the following questions: Is $A \subseteq B$? Is
+   $B \subseteq A$? Is either $A$ or $B$ a proper subset of the other?
+
+a. $A = \{2, \{2\}, (\sqrt{2})^2\}$, $B = \{2, \{2\}, \{\{2\}\}\}$
+
+b. $A = \{3, \sqrt{5^2 - 4^2}, 24 \mod 7\}$, $B = \{8 \mod 5\}$
+
+c. $A = \{\{1, 2\}, \{2, 3\}\}$, $B = \{1, 2, 3\}$
+
+d. $A = \{a, b, c\}$, $B = \{\{a\}, \{b\}, \{c\}\}$
+
+e. $A = \{\sqrt{16}, \{4\}\}$, $B = \{4\}$
+
+f. $A = \{x \in \mathbb{R} | \cos x \in \mathbb{Z}\}$,
+$B = \{x \in \mathbb{R} | \sin x \in \mathbb{Z}\}$
+
+2. Complete the proof from Example 6.1.3: Prove that $B \subseteq A$ where
+
+$$ A = \{m \in \mathbb{Z} | m, = 2a \text{ for some integer } a\} $$
+
+and
+
+$$ B = \{n \in \mathbb{Z} | n = 2b - 2 \text{ for some integer } b\} $$
+
+3. Let sets $R$, $S$, and $T$ be defined as follows:
+
+$$ R = \{x \in \mathbb{Z} | x \text{ is divisible by } 2\}  $$
+
+$$ S = \{y \in \mathbb{Z} | y \text{ is divisible by } 3\}  $$
+
+$$ T = \{z \in \mathbb{Z} | z \text{ is divisible by } 6\}  $$
+
+Prove or disprove each of the following statements.
+
+a. $R \subseteq T$
+
+b. $T \subseteq R$
+
+c. $T \subseteq S$
+
+4. Let $A = \{n \in \mathbb{Z} | n = 5r \text{ for some integer } r\}$ and
+   $B = \{m \in \mathbb{Z} | m = 20s \text{ for some integer } s\}$. Prove or
+   disprove each of the following statements.
+
+a. $A \subseteq B$
+
+b. $B \subseteq A$
+
+5. Let $C = \{n \in \mathbb{Z} | n = 6r - 5 \text{ for some integer } r\}$ and
+   $D = \{m \in \mathbb{Z} | m = 3s + 1 \text{ for some integer } s\}$. Prove or
+   disprove each of the following statements.
+
+a. $C \subseteq D$
+
+b. $D \subseteq C$
+
+6. Let $A = \{x \in \mathbb{Z} | x = 5a + 2 \text{ for some integer } a\}$,
+   $B = \{y \in \mathbb{Z} | y = 10b - 3 \text{ for some integer } b\}$, and
+   $C = \{z \in \mathbb{Z} | z = 10c + 7 \text{ for some integer } c\}$.
+
+Prove or disprove each of the following statements.
+
+a. $A \subseteq B$
+
+b. $B \subseteq A$
+
+c. $B = C$
+
+7. Let $A = \{x \in \mathbb{Z} | x = 6a + 4 \text{ for some integer } a\}$,
+   $B = \{y \in \mathbb{Z} | y = 18b - 2 \text{ for some integer } b\}$, and
+   $C = \{z \in \mathbb{Z} | z = 18c + 16 \text{ for some integer } c\}$.
+
+Prove or disprove each of the following statements.
+
+a. $A \subseteq B$
+
+b. $B \subseteq A$
+
+c. $B = C$
+
+8. Write in words to read each of the following out loud. Then write each set
+   using the symbols for union, intersection, set difference, or set complement.
+
+a. $\{x \in U | x \in A \text{ and } x \in B\}$
+
+b. $\{x \in U | x \in A \text{ or } x \in B\}$
+
+c. $\{x \in U | x \in A \text{ and } x \notin B\}$
+
+d. $\{x \in U | x \notin A\}$
+
+9. Complete the following sentences without using the symbols $\cup$, $\cap$, or
+   $-$.
+
+a. $x \notin A \cup B$ if, and only if, _____.
+
+b. $x \notin A \cap B$ if, and only if, _____.
+
+c. $x \notin A - B$ if, and only if, _____.
+
+10. Let $A = \{1, 3, 5, 7, 9\}$, $b = \{3, 6, 9\}$, and $C = \{2, 4, 6, 8\}$.
+    Find each of the following:
+
+a. $A \cup B$
+
+b. $A \cap B$
+
+c. $A \cup C$
+
+d. $A \cap C$
+
+e. $A - B$
+
+f. $B - A$
+
+g. $B \cup C$
+
+h. $B \cap C$
+
+11. Let the universal set $\mathbb{R}$, the set of all real numbers, and let
+    $A = \{x \in \mathbb{R} | 0 < x \leq 2\}$,
+    $B = \{x \in \mathbb{R} | 1 \leq x < 4\}$, and
+    $C = \{x \in \mathbb{R} | 3 \leq x < 9\}$. Find each of the following:
+
+a. $A \cup B$
+
+b. $A \cap B$
+
+c. $A^c$
+
+d. $A \cup C$
+
+e. $A \cap C$
+
+f. $B^c$
+
+g. $A^c \cap B^c$
+
+h. $A^c \cup B^c$
+
+i. $(A \cap B)^c$
+
+j. $(A \cup B)^c$
+
+12. Let the universal set be $\mathbb{R}$, the set of all real numbers, and let
+    $A = \{x \in \mathbb{R} | -3 \leq x \leq 0\}$,
+    $B = \{x \in \mathbb{R} | -1 < x < 2\}$, and
+    $C = \{x \in \mathbb{R} | 6 < x \leq 8\}$. Find each of the following:
+
+a. $A \cup B$
+
+b. $A \cap B$
+
+c. $A^c$
+
+d. $A \cup C$
+
+e. $A \cap C$
+
+f. $B^c$
+
+g. $A^c \cap B^c$
+
+h. $A^c \cup B^c$
+
+i. $(A \cap B)^c$
+
+j. $(A \cup B)^c$
+
+13. Let $S$ be the set of all strings of $0$'s and $1$'s of length $4$, and let
+    $A$ and $B$ be the following subsets of $S$:
+    $A = \{1110, 1111, 1000, 1001\}$ and $B = \{1100, 0100, 1111, 0111\}$. Find
+    each of the following:
+
+a. $A \cap B$
+
+b. $A \cup B$
+
+c. $A - B$
+
+d. $B - A$
+
+14. In each of the following, draw a Venn diagram for sets $A$, $B$, and $C$
+    that satisfy the given conditions.
+
+a. $A \subseteq B$, $C \subseteq B$, $A \cap C = \emptyset$
+
+b. $C \subseteq A$, $B \cap C = \emptyset$
+
+15. In each of the following, draw a Venn diagram for sets $A$, $B$, and $C$
+    that satisfy the given conditions.
+
+a. $A \cap B = \emptyset$, $A \subseteq C$, $C \cap B \neq \emptyset$
+
+b. $A \subseteq B$, $C \subseteq B$, $A \cap C \neq \emptyset$
+
+c. $A \cap B \neq \emptyset$, $B \cap C \neq \emptyset$, $A \cap C = \emptyset$,
+$A \nsubseteq B$, $C \nsubseteq B$
+
+16. Let $A = \{a, b, c\}$, $B = \{b, c, d\}$, and $C = \{b, c, e\}$.
+
+a. Find $A \cup (B \cap C)$, $(A \cup B) \cap C$, and
+$(A \cup B) \cap (A \cup C)$. Which of these sets are equal?
+
+b. Find $A \cap (B \cup C)$, $(A \cap B) \cup C$, and
+$(A \cap B) \cup (A \cap C)$. Which of these sets are equal?
+
+c. Find $(A - B) - C$ and $A - (B - C)$. Are these sets equal?
+
+17. Consider the following Venn diagram. For each of (a)-(f), copy the diagram
+    and shade the region corresponding to the indicated set.
+
+a. $A \cap B$
+
+b. $B \cup C$
+
+c. $A^c$
+
+d. $A - (B \cup C)$
+
+e. $(A \cup B)^c$
+
+f. $A^c \cap B^c$
+
+(See page 412 for image)
+
+18.
+
+a. Is the number $0$ in $\emptyset$? Why?
+
+b. Is $\emptyset = \{\emptyset\}$? Why?
+
+c. Is $\emptyset \in \{\emptyset\}$ Why?
+
+d. Is $\emptyset \in \emptyset$? Why?
+
+19. Let $A_i = \{i, i^2\}$ for each integer $i = 1, 2, 3, 4$.
+
+a. $A_1 \cup A_2 \cup A_3 \cup A_4 = \text{ ?}$
+
+b. $A_1 \cap A_2 \cap A_3 \cap A_4 = \text{ ?}$
+
+c. Are $A_1, A_2, A_3$, and $A_4$ mutually disjoint? Explain.
+
+20. Let $B_i = \{x \in \mathbb{R} | 0 \leq x\leq i\}$ for each integer
+    $i = 1, 2, 3, 4$.
+
+a. $B_1 \cup B_2 \cup B_3 \cup B_4 = \text{ ?}$
+
+b. $B_1 \cap B_2 \cap B_3 \cap B_4 = \text{ ?}$
+
+c. Are $B_1, B_2, B_3$, and $B_4$ mutually disjoint? Explain.
+
+21. Let $C_i = \{i, -i\}$ for each nonnegative integer $i$.
+
+a. $\bigcup_{i = 0}^{4}C_i = \text{ ?}$
+
+b. $\bigcap_{i = 0}^{4}C_i = \text{ ?}$
+
+c. Are $C_0, C_1, C_2, \dots$ mutually disjoint? Explain.
+
+d. $\bigcup_{i = 0}^{n}C_i = \text{ ?}$
+
+e. $\bigcap_{i = 0}^{n}C_i = \text{ ?}$
+
+f. $\bigcup_{i = 0}^{\infty}C_i = \text{ ?}$
+
+g. $\bigcap_{i = 0}^{\infty}C_i = \text{ ?}$
+
+22. Let $D_i = \{x \in \mathbb{R} | -i \leq x \leq i\} = [-i, i]$ for each
+    nonnegative integer $i$.
+
+a. $\bigcup_{i = 0}^{4}D_i = \text{ ?}$
+
+b. $\bigcap_{i = 0}^{4}D_i = \text{ ?}$
+
+c. Are $D_0, D_1, D_2, \dots$ mutually disjoint? Explain.
+
+d. $\bigcup_{i = 0}^{n}D_i = \text{ ?}$
+
+e. $\bigcap_{i = 0}^{n}D_i = \text{ ?}$
+
+f. $\bigcup_{i = 0}^{\infty}D_i = \text{ ?}$
+
+g. $\bigcap_{i = 0}^{\infty}D_i = \text{ ?}$
+
+23. Let
+    $V_i = \{x \in \mathbb{R} | -\dfrac{1}{i} \leq x \leq \dfrac{1}{i}\} = \left[-\dfrac{1}{i}, \dfrac{1}{i}\right]$
+    for each positive integer $i$.
+
+a. $\bigcup_{i = 0}^{4}V_i = \text{ ?}$
+
+b. $\bigcap_{i = 0}^{4}V_i = \text{ ?}$
+
+c. Are $V_1, V_2, V_3, \dots$ mutually disjoint? Explain.
+
+d. $\bigcup_{i = 0}^{n}V_i = \text{ ?}$
+
+e. $\bigcap_{i = 0}^{n}V_i = \text{ ?}$
+
+f. $\bigcup_{i = 0}^{\infty} = \text{ ?}$
+
+g. $\bigcap_{i = 0}^{\infty} = \text{ ?}$
+
+24. Let $W_i = \{x \in \mathbb{R} | x > i\} = (i, \infty)$ for each nonnegative
+    integer $i$.
+
+a. $\bigcup_{i = 0}^{4}W_i = \text{ ?}$
+
+b. $\bigcap_{i = 0}^{4}W_i = \text{ ?}$
+
+c. Are $W_0, W_1, W_2, \dots$ mutually disjoint? Explain.
+
+d. $\bigcup_{i = 0}^{n}W_i = \text{ ?}$
+
+e. $\bigcap_{i = 0}^{n}W_i = \text{ ?}$
+
+f. $\bigcup_{i = 0}^{\infty}W_i = \text{ ?}$
+
+g. $\bigcap_{i = 0}^{\infty}W_i = \text{ ?}$
+
+25. Let
+    $R_i = \{x \in \mathbb{R} | 1 \leq x \leq 1 + \dfrac{1}{i}\} = \left[1, 1 + \dfrac{1}{i}\right]$
+    for each positive integer $i$.
+
+a. $\bigcup_{i = 0}^{4}R_i = \text{ ?}$
+
+b. $\bigcap_{i = 0}^{4}R_i = \text{ ?}$
+
+c. Are $R_1, R_2, R_3, \dots$ mutually disjoint? Explain.
+
+d. $\bigcup_{i = 0}^{n}R_i = \text{ ?}$
+
+e. $\bigcap_{i = 0}^{n}R_i = \text{ ?}$
+
+f. $\bigcup_{i = 0}^{\infty}R_i = \text{ ?}$
+
+g. $\bigcap_{i = 0}^{\infty}R_i = \text{ ?}$
+
+26. Let
+    $S_i = \{x \in \mathbb{R} | 1 < x < 1 + \dfrac{1}{i}\} = \left(1, 1 + \dfrac{1}{i}\right)$
+    for each positive integer $i$.
+
+a. $\bigcup_{i = 0}^{4}S_i = \text{ ?}$
+
+b. $\bigcap_{i = 0}^{4}S_i = \text{ ?}$
+
+c. Are $S_1, S_2, S_3, \dots$ mutually disjoint? Explain.
+
+d. $\bigcup_{i = 0}^{n}S_i = \text{ ?}$
+
+e. $\bigcap_{i = 0}^{n}S_i = \text{ ?}$
+
+f. $\bigcup_{i = 0}^{\infty}S_i = \text{ ?}$
+
+g. $\bigcap_{i = 0}^{\infty}S_i = \text{ ?}$
+
+27.
+
+a. Is $\{\{a, d, e\}, \{b, c\}, \{d, f\}\}$ a partition of
+$\{a, b, c, d, e, f\}$?
+
+b. Is $\{\{w, x, v\}, \{u, y, q\}, \{p, z\}\}$ a partition of
+$\{p, q, u, v, w, x, y, z\}$?
+
+c. Is $\{\{5, 4\}, \{7, 2\}, \{1, 3, 4\}, \{6, 8\}\}$ a partition of
+$\{1, 2, 3, 4, 5, 6, 7, 8\}$?
+
+d. Is $\{\{3, 7, 8\}, \{2, 9\}, \{1, 4, 5\}\}$ a partition of
+$\{1, 2, 3, 4, 5, 6, 7, 8, 9\}$?
+
+e. Is $\{\{1, 5\}, \{4, 7\}, \{2, 8, 6, 3\}\}$ a partition of
+$\{1, 2, 3, 4, 5, 6, 7, 8\}$?
+
+28. Let $E$ be the set of all even integers and $O$ the set of all odd integers.
+    Is $\{E, O\}$ a partition of $\mathbb{Z}$, the set of all integers? Explain
+    your answer.
+
+29. Let $\mathbb{R}$ be the set of all real numbers. Is
+    $\{\mathbb{R}^+, \mathbb{R}^-, \{0\}\}$ a partition of $\mathbb{R}$? Explain
+    your answer.
+
+30. Let $\mathbb{Z}$ be the set of all integers and let
+
+$$ A_0 = \{n \in \mathbb{Z} | n = 4k, \text{ for some integer } k\} $$
+
+$$ A_1 = \{n \in \mathbb{Z} | n = 4k + 1, \text{ for some integer } k\} $$
+
+$$ A_2 = \{n \in \mathbb{Z} | n = 4k + 2, \text{ for some integer } k\} $$
+
+and
+
+$$ A_3 = \{n \in \mathbb{Z} | n = 4k + 3, \text{ for some integer } k\} $$
+
+Is $\{A_0, A_1, A_2, A_3\}$ a partition of $\mathbb{Z}$? Explain your answer.
+
+31. Suppose $A = \{1, 2\}$ and $B = \{2, 3\}$. Find each of the following:
+
+a. $\mathscr{P}(A \cap B)$
+
+b. $\mathscr{P}(A)$
+
+c. $\mathscr{P}(A \cup B)$
+
+d. $\mathscr{P}(A \times B)$
+
+32.
+
+a. Suppose $A = \{1\}$ and $B = \{u, v\}$. Find $\mathscr{P}(A \times B)$.
+
+b. Suppose $X = \{a, b\}$ and $Y = \{x, y\}$. Find $\mathscr{P}(X \times Y)$.
+
+33.
+
+a. Find $\mathscr{P}(\emptyset)$.
+
+b. Find $\mathscr{P}(\mathscr{P}(\emptyset))$.
+
+b. Find $\mathscr{P}(\mathscr{P}(\mathscr{P}(\emptyset)))$.
+
+34. let $A_1 = \{1\}$, $A_2 = \{u, v\}$, and $A_3 = \{m, n\}$. Find each of the
+    following sets:
+
+a. $A_1 \cup (A_2 \times A_3)$
+
+b. $(A_1 \cup A_2) \times A_3$
+
+35. let $A = \{a, b\}$, $B = \{1, 2\}$, and $C = \{2, 3\}$. Find each of the
+    following sets:
+
+a. $A \times (B \cup C)$
+
+b. $(A \times B) \cup (A \times C)$
+
+c. $A \times (B \cap C)$
+
+d. $(A \times B) \cap (A \times C)$
+
+36. Trace the action of Algorithm 6.1.1 on the variables $i$, $j$,
+    $\text{found}$, and $\text{answer}$ for $m = 3$, $n = 3$, and sets $A$ and
+    $B$ represented as the arrays
+    $a[1] = u, a[2] = v, a[3] = w, b[1] = w, b[2] = u,$ and $b[3] = v$.
+
+37. Trace the action of Algorithm 6.1.1 on the variables $i$, $j$,
+    $\text{found}$, and $\text{answer}$ for $m = 4$, $n = 4$ and sets $A$ and
+    $B$ represented as the arrays
+    $a[1] = u, a[2] = v, a[3] = w, a[4] = x, b[1] = r, b[2] = u, b[3] = y, b[4] = z$.
+
+38. Write an algorithm to determine whether a given element $x$ belongs to a
+    given set that is represented as the array $a[1], a[2], \dots, a[n]$.
