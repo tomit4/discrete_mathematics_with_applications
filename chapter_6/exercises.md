@@ -926,147 +926,335 @@ $\emptyset$ cannot contain itself. $\emptyset \notin \emptyset$.
 
 a. $A_1 \cup A_2 \cup A_3 \cup A_4 = \text{ ?}$
 
+$$
+A_1 = \{1, 1^2\} = \{1, 1\} = \{1\} \\
+A_2 = \{2, 2^2\} = \{2, 4\} \\
+A_3 = \{3, 3^2\} = \{3, 9\} \\
+A_4 = \{4, 4^2\} = \{4, 16\} \\
+$$
+
+$$ A_1 \cup A_2 \cup A_3 \cup A_4 = \{1, 2, 3, 4, 9, 16\} $$
+
 b. $A_1 \cap A_2 \cap A_3 \cap A_4 = \text{ ?}$
 
+$$ A_1 \cap A_2 \cap A_3 \cap A_4 = \emptyset $$
+
 c. Are $A_1, A_2, A_3$, and $A_4$ mutually disjoint? Explain.
+
+No, since $A_2$ and $A_4$ both contain the element $4$, they are not mutually
+disjoint.
 
 20. Let $B_i = \{x \in \mathbb{R} | 0 \leq x\leq i\}$ for each integer
     $i = 1, 2, 3, 4$.
 
 a. $B_1 \cup B_2 \cup B_3 \cup B_4 = \text{ ?}$
 
+$$ B_1 \cup B_2 \cup B_3 \cup B_4 = \{x \in \mathbb{R} | 0 \leq x \leq 4\} $$
+
 b. $B_1 \cap B_2 \cap B_3 \cap B_4 = \text{ ?}$
+
+$$ B_1 \cap B_2 \cap B_3 \cap B_4 = \{x \in \mathbb{R} | 0 \leq x \leq 1\} $$
 
 c. Are $B_1, B_2, B_3$, and $B_4$ mutually disjoint? Explain.
 
+No, since all sets include all real numbers within the range $0 \leq x \leq 1$,
+they are not mutually disjoint.
+
 21. Let $C_i = \{i, -i\}$ for each nonnegative integer $i$.
+
+$$
+C_0 = \{0, -0\} = \{0\} \\
+C_1 = \{1, -1\} \\
+C_2 = \{2, -2\} \\
+C_3 = \{3, -3\} \\
+C_4 = \{4, -4\} \\
+$$
 
 a. $\bigcup_{i = 0}^{4}C_i = \text{ ?}$
 
+$$ \bigcup_{i = 0}^{4}C_i = C_0 \cup C_1 \cup C_2 \cup C_3 \cup C_4 $$
+
+$$ \bigcup_{i = 0}^{4}C_i = \{-4, -3, -2, -1, 0, 1, 2, 3, 4\} $$
+
 b. $\bigcap_{i = 0}^{4}C_i = \text{ ?}$
+
+$$ \bigcap_{i = 0}^{4}C_i = \emptyset $$
 
 c. Are $C_0, C_1, C_2, \dots$ mutually disjoint? Explain.
 
+Yes, since none of the sets have any elements in common, they are mutually
+disjoint.
+
 d. $\bigcup_{i = 0}^{n}C_i = \text{ ?}$
+
+$$ \bigcup_{i = 0}^{n}C_i = \{-n, -(n - 1), \dots -2, -1, 0, 1, 2, \dots (n - 1), n\} $$
 
 e. $\bigcap_{i = 0}^{n}C_i = \text{ ?}$
 
+$$ \bigcap_{i = 0}^{n}C_i = \emptyset $$
+
 f. $\bigcup_{i = 0}^{\infty}C_i = \text{ ?}$
 
+$$ \bigcup_{i = 0}^{\infty}C_i = \{-\infty, \dots, -2, -1, 0, 1, 2, \dots, \infty\} = \mathbb{Z} $$
+
 g. $\bigcap_{i = 0}^{\infty}C_i = \text{ ?}$
+
+$$ \bigcap_{i = 0}^{\infty}C_i = \emptyset $$
 
 22. Let $D_i = \{x \in \mathbb{R} | -i \leq x \leq i\} = [-i, i]$ for each
     nonnegative integer $i$.
 
+$$
+D_0 = [-0, 0] = \{0\} \\
+D_1 = [-1, 1] \\
+D_2 = [-2, 2] \\
+D_3 = [-3, 3] \\
+D_4 = [-4, 4] \\
+$$
+
 a. $\bigcup_{i = 0}^{4}D_i = \text{ ?}$
+
+$$ \bigcup_{i = 0}^{4}D_i = \{x \in \mathbb{R} | -4 \leq x \leq 4\} = [-4, 4] $$
 
 b. $\bigcap_{i = 0}^{4}D_i = \text{ ?}$
 
+$$ \bigcap_{i = 0}^{4}D_i = \{0\} $$
+
 c. Are $D_0, D_1, D_2, \dots$ mutually disjoint? Explain.
+
+No, in fact all sets have at least $\{0}$ in common , as $i$ increases, so does
+the amount of elements all sets have in common, or $D_k \subseteq D_{k + 1}$.
 
 d. $\bigcup_{i = 0}^{n}D_i = \text{ ?}$
 
+$$ \bigcup_{i = 0}^{n}D_i = \{x \in \mathbb{R} | -n \leq x \leq n\} = [-n, n] $$
+
 e. $\bigcap_{i = 0}^{n}D_i = \text{ ?}$
+
+$$ \bigcap_{i = 0}^{n}D_i = \{0\} $$
 
 f. $\bigcup_{i = 0}^{\infty}D_i = \text{ ?}$
 
+$$ \bigcup_{i = 0}^{\infty}D_i = (-\infty, \infty) = \mathbb{R} $$
+
 g. $\bigcap_{i = 0}^{\infty}D_i = \text{ ?}$
+
+$$ \bigcap_{i = 0}^{\infty}D_i = \{0\} $$
 
 23. Let
     $V_i = \{x \in \mathbb{R} | -\dfrac{1}{i} \leq x \leq \dfrac{1}{i}\} = \left[-\dfrac{1}{i}, \dfrac{1}{i}\right]$
     for each positive integer $i$.
 
-a. $\bigcup_{i = 0}^{4}V_i = \text{ ?}$
+$$
+V_1 = \left[-\frac{1}{1}, \frac{1}{1}\right] = [-1, 1] \\
+V_2 = \left[-\frac{1}{2}, \frac{1}{2}\right] \\
+V_3 = \left[-\frac{1}{3}, \frac{1}{3}\right] \\
+V_4 = \left[-\frac{1}{4}, \frac{1}{4}\right] \\
+$$
 
-b. $\bigcap_{i = 0}^{4}V_i = \text{ ?}$
+a. $\bigcup_{i = 1}^{4}V_i = \text{ ?}$
+
+$$ \bigcup_{i = 1}^{4}V_i = [-1, 1] $$
+
+b. $\bigcap_{i = 1}^{4}V_i = \text{ ?}$
+
+$$ \bigcap_{i = 1}^{4}V_i = \left[-\frac{1}{4}, \frac{1}{4}\right] $$
 
 c. Are $V_1, V_2, V_3, \dots$ mutually disjoint? Explain.
 
-d. $\bigcup_{i = 0}^{n}V_i = \text{ ?}$
+No, every set includes $0$.
 
-e. $\bigcap_{i = 0}^{n}V_i = \text{ ?}$
+d. $\bigcup_{i = 1}^{n}V_i = \text{ ?}$
 
-f. $\bigcup_{i = 0}^{\infty} = \text{ ?}$
+$$ \bigcup_{i = 1}^{n}V_i = [-1, 1] $$
 
-g. $\bigcap_{i = 0}^{\infty} = \text{ ?}$
+e. $\bigcap_{i = 1}^{n}V_i = \text{ ?}$
+
+$$ \bigcap_{i = 1}^{n}V_i = \left[-\frac{1}{n}, \frac{1}{n}\right] $$
+
+f. $\bigcup_{i = 1}^{\infty} = \text{ ?}$
+
+$$ \bigcup_{i = 1}^{\infty} = [-1, 1] $$
+
+g. $\bigcap_{i = 1}^{\infty} = \text{ ?}$
+
+$$ \bigcap_{i = 1}^{\infty} = \{0\} \text{ because as } i \to \infty \text{ then } \frac{1}{i} \to 0 $$
 
 24. Let $W_i = \{x \in \mathbb{R} | x > i\} = (i, \infty)$ for each nonnegative
     integer $i$.
 
+$$
+W_0 = (0, \infty) \\
+W_1 = (1, \infty) \\
+W_2 = (2, \infty) \\
+W_3 = (3, \infty) \\
+W_4 = (4, \infty) \\
+$$
+
 a. $\bigcup_{i = 0}^{4}W_i = \text{ ?}$
+
+$$ \bigcup_{i = 0}^{4}W_i = (0, \infty) $$
 
 b. $\bigcap_{i = 0}^{4}W_i = \text{ ?}$
 
+$$ \bigcap_{i = 0}^{4}W_i = (4, \infty) $$
+
 c. Are $W_0, W_1, W_2, \dots$ mutually disjoint? Explain.
+
+No, because they all have $(i, \infty)$ in common, or $W_{i + 1} \subseteq W_i$.
 
 d. $\bigcup_{i = 0}^{n}W_i = \text{ ?}$
 
+$$ \bigcup_{i = 0}^{n}W_i = (0, \infty) $$
+
 e. $\bigcap_{i = 0}^{n}W_i = \text{ ?}$
+
+$$ \bigcap_{i = 0}^{n}W_i = (n, \infty) $$
 
 f. $\bigcup_{i = 0}^{\infty}W_i = \text{ ?}$
 
+$$ \bigcup_{i = 0}^{\infty}W_i = (0, \infty) $$
+
 g. $\bigcap_{i = 0}^{\infty}W_i = \text{ ?}$
+
+$$ \bigcap_{i = 0}^{\infty}W_i = \emptyset $$
+
+There is no real number greater than every positive integer, so no element
+belongs to all $W_i$.
 
 25. Let
     $R_i = \{x \in \mathbb{R} | 1 \leq x \leq 1 + \dfrac{1}{i}\} = \left[1, 1 + \dfrac{1}{i}\right]$
     for each positive integer $i$.
 
-a. $\bigcup_{i = 0}^{4}R_i = \text{ ?}$
+$$
+R_1 = \left[1, 1 + \frac{1}{1}\right] = [1, 2] \\
+R_2 = \left[1, 1 + \frac{1}{2}\right] = \left[1, \frac{3}{2}\right] \\
+R_3 = \left[1, 1 + \frac{1}{3}\right] = \left[1, \frac{4}{3}\right] \\
+R_4 = \left[1, 1 + \frac{1}{4}\right] = \left[1, \frac{5}{4}\right] \\
+$$
 
-b. $\bigcap_{i = 0}^{4}R_i = \text{ ?}$
+a. $\bigcup_{i = 1}^{4}R_i = \text{ ?}$
+
+$$ \bigcup_{i = 1}^{4}R_i = [1, 2] $$
+
+b. $\bigcap_{i = 1}^{4}R_i = \text{ ?}$
+
+$$ \bigcap_{i = 1}^{4}R_i = \left[1, \frac{5}{4}\right] $$
 
 c. Are $R_1, R_2, R_3, \dots$ mutually disjoint? Explain.
 
-d. $\bigcup_{i = 0}^{n}R_i = \text{ ?}$
+No, they all include the element $1$.
 
-e. $\bigcap_{i = 0}^{n}R_i = \text{ ?}$
+d. $\bigcup_{i = 1}^{n}R_i = \text{ ?}$
 
-f. $\bigcup_{i = 0}^{\infty}R_i = \text{ ?}$
+$$ \bigcup_{i = 1}^{n}R_i = [1, 2] $$
 
-g. $\bigcap_{i = 0}^{\infty}R_i = \text{ ?}$
+e. $\bigcap_{i = 1}^{n}R_i = \text{ ?}$
+
+$$ \bigcap_{i = 1}^{n}R_i = \left[1, 1 + \frac{1}{n}\right]$$
+
+f. $\bigcup_{i = 1}^{\infty}R_i = \text{ ?}$
+
+$$ \bigcup_{i = 1}^{\infty}R_i = [1, 2] $$
+
+g. $\bigcap_{i = 1}^{\infty}R_i = \text{ ?}$
+
+$$ \bigcap_{i = 1}^{\infty}R_i = \{1\} $$
+
+Because $\dfrac{1}{\infty} \to 0$ and
+$\left(1 + \dfrac{1}{\infty}\right) \to 1$.
 
 26. Let
     $S_i = \{x \in \mathbb{R} | 1 < x < 1 + \dfrac{1}{i}\} = \left(1, 1 + \dfrac{1}{i}\right)$
     for each positive integer $i$.
 
-a. $\bigcup_{i = 0}^{4}S_i = \text{ ?}$
+$$
+S_1 = \left(1, 1 + \frac{1}{1}\right) = (1, 2) \\
+S_2 = \left(1, 1 + \frac{1}{2}\right) = \left(1, \frac{3}{2}\right) \\
+S_3 = \left(1, 1 + \frac{1}{3}\right) = \left(1, \frac{4}{3}\right) \\
+S_4 = \left(1, 1 + \frac{1}{4}\right) = \left(1, \frac{5}{4}\right) \\
+$$
 
-b. $\bigcap_{i = 0}^{4}S_i = \text{ ?}$
+a. $\bigcup_{i = 1}^{4}S_i = \text{ ?}$
+
+$$ \bigcup_{i = 1}^{4}S_i = (1, 2) $$
+
+b. $\bigcap_{i = 1}^{4}S_i = \text{ ?}$
+
+$$ \bigcap_{i = 1}^{4}S_i = \left(1, \frac{5}{4}\right) $$
 
 c. Are $S_1, S_2, S_3, \dots$ mutually disjoint? Explain.
 
-d. $\bigcup_{i = 0}^{n}S_i = \text{ ?}$
+No, any element sufficiently close to $1$ are in all the sets.
 
-e. $\bigcap_{i = 0}^{n}S_i = \text{ ?}$
+d. $\bigcup_{i = 1}^{n}S_i = \text{ ?}$
 
-f. $\bigcup_{i = 0}^{\infty}S_i = \text{ ?}$
+$$ \bigcup_{i = 1}^{n}S_i = (1, 2) $$
 
-g. $\bigcap_{i = 0}^{\infty}S_i = \text{ ?}$
+e. $\bigcap_{i = 1}^{n}S_i = \text{ ?}$
+
+$$ \bigcap_{i = 1}^{n}S_i = \left(1, 1 + \frac{1}{n}\right) $$
+
+f. $\bigcup_{i = 1}^{\infty}S_i = \text{ ?}$
+
+$$ \bigcup_{i = 1}^{\infty}S_i = (1, 2) $$
+
+g. $\bigcap_{i = 1}^{\infty}S_i = \text{ ?}$
+
+$$ \bigcap_{i = 1}^{\infty}S_i = \emptyset $$
+
+Because the range converges on $1$, but cannot include $1$, the set is empty.
 
 27.
 
 a. Is $\{\{a, d, e\}, \{b, c\}, \{d, f\}\}$ a partition of
 $\{a, b, c, d, e, f\}$?
 
+No, since $d$ is an element in two sets, the sets are not mutually disjoint, and
+so therefore is not a partition.
+
 b. Is $\{\{w, x, v\}, \{u, y, q\}, \{p, z\}\}$ a partition of
 $\{p, q, u, v, w, x, y, z\}$?
+
+$$ \{w, x, v\} \cup \{u, y, q\} \cup \{p, z\} = \{p, q, u, v, w, x, y, z\} $$
+
+and:
+
+$$ \{w, x, v\} \cap \{u, y, q\} \cap \{p, z\} = \emptyset $$
+
+So yes, the given sets are a partition of the overall set.
 
 c. Is $\{\{5, 4\}, \{7, 2\}, \{1, 3, 4\}, \{6, 8\}\}$ a partition of
 $\{1, 2, 3, 4, 5, 6, 7, 8\}$?
 
+No, as $4$ is an element in two of the given sets, and so the given sets are not
+a partition of the overall set.
+
 d. Is $\{\{3, 7, 8\}, \{2, 9\}, \{1, 4, 5\}\}$ a partition of
 $\{1, 2, 3, 4, 5, 6, 7, 8, 9\}$?
 
+No, since none of the sets contain $6$.
+
 e. Is $\{\{1, 5\}, \{4, 7\}, \{2, 8, 6, 3\}\}$ a partition of
 $\{1, 2, 3, 4, 5, 6, 7, 8\}$?
+
+Yes, since none of the elements in each of the given sets are in any other of
+the given sets and all of the elements make up the overall set.
 
 28. Let $E$ be the set of all even integers and $O$ the set of all odd integers.
     Is $\{E, O\}$ a partition of $\mathbb{Z}$, the set of all integers? Explain
     your answer.
 
+Yes, since no integer is both even and odd, and all integers are either even or
+odd, $\{E, O\}$ is a partition of $\mathbb{Z}$.
+
 29. Let $\mathbb{R}$ be the set of all real numbers. Is
     $\{\mathbb{R}^+, \mathbb{R}^-, \{0\}\}$ a partition of $\mathbb{R}$? Explain
     your answer.
+
+Yes, since all real numbers are either positive, negative, or $0$, and
+$\mathbb{R}^+$, $\mathbb{R}^-$ and $\{0\}$ do not have any elements in common,
+these subsets all form a partition of $\mathbb{R}$.
 
 30. Let $\mathbb{Z}$ be the set of all integers and let
 
@@ -1082,57 +1270,123 @@ $$ A_3 = \{n \in \mathbb{Z} | n = 4k + 3, \text{ for some integer } k\} $$
 
 Is $\{A_0, A_1, A_2, A_3\}$ a partition of $\mathbb{Z}$? Explain your answer.
 
+Yes. These sets are mutually disjoint, and by the quotient-remainder theorem,
+every integer has exactly one of the forms $n = 4k$, $n = 4k + 1$, $n = 4k + 2$,
+$n = 4k + 3$.
+
 31. Suppose $A = \{1, 2\}$ and $B = \{2, 3\}$. Find each of the following:
 
 a. $\mathscr{P}(A \cap B)$
 
+$$ A \cap B = \{2\} $$
+
+$$ \mathscr{P}(A \cap B) = \{\emptyset, \{2\}\} $$
+
 b. $\mathscr{P}(A)$
+
+$$ \mathscr{P}(A) = \{\emptyset, \{1\}, \{2\}, \{1, 2\}} $$
 
 c. $\mathscr{P}(A \cup B)$
 
+$$ A \cup B = \{1, 2, 3\} $$
+
+$$ \mathscr{P}(A \cup B) = \{\emptyset, \{1\}, \{2\}, \{3\}, \{1, 2\}, \{1, 3\}, \{2, 3\}, \{1, 2, 3\}\} $$
+
 d. $\mathscr{P}(A \times B)$
+
+$$ A \times B = \{(1, 2), (1, 3), (2, 2), (2, 3)\} $$
+
+$$ \mathscr{P}(A \times B) = \{\emptyset, \{(1, 2)\}, \{(1, 3)\}, \{(2, 2)\}, \{(2, 3)\}, \{(1, 2), (1, 3)\}, \{(1, 2), (2, 2)\}, \{(1, 2,), (2, 3)\}, \{(1, 3), (2, 2)\}, \{(1, 3), (2, 3)\}, \{(2, 2), (2, 3)\}, \{(1, 2), (1, 3), (2, 2)\}, \{(1, 2), (1, 3), (2, 3)\}, \{(1, 2), (2, 2), (2, 3)\}, \{(1, 3), (2, 2), (2, 3)\}, \{(1, 2), (1, 3), (2, 2), (2, 3)\}\} $$
 
 32.
 
 a. Suppose $A = \{1\}$ and $B = \{u, v\}$. Find $\mathscr{P}(A \times B)$.
 
+$$ A \times B = \{(1, u), (1, v)\} $$
+
+$$ \mathscr{P}(A \times B) = \{\emptyset, \{(1, u)\}, \{(1, v)\}, \{(1, u), (1, v)\}\} $$
+
 b. Suppose $X = \{a, b\}$ and $Y = \{x, y\}$. Find $\mathscr{P}(X \times Y)$.
+
+$$ X \times Y = \{(a, x), (a, y), (b, x), (b, y)\} $$
+
+$$ \mathscr{P}(X \times Y) = \{\emptyset, \{(a, x)\}, \{(a, y)\}, \{(b, x)\}, \{(b, y)\}, \{(a, x), (a, y)\}, \{(a, x), (b, x)\}, \{(a, x), (b, y)\}, \{(a, y), (b, x)\}, \{(a, y), (b, y)\}, \{(b, x), (b, y)\}, \{(a, x), (a, y), (b, x)\}, \{(a, x), (a, y), (b, y)\}, \{(a, x), (b, x), (b, y)\}, \{(a, y), (b, x), (b, y)\} \{(a, x), (a, y), (b, x), (b, y)\}\} $$
 
 33.
 
 a. Find $\mathscr{P}(\emptyset)$.
 
+$$ \mathscr{P}(\emptyset) = \{\emptyset\} $$
+
 b. Find $\mathscr{P}(\mathscr{P}(\emptyset))$.
 
+$$ \mathscr{P}(\mathscr{P}(\emptyset)) = \{\emptyset, \{\emptyset\}\} $$
+
 b. Find $\mathscr{P}(\mathscr{P}(\mathscr{P}(\emptyset)))$.
+
+$$ \mathscr{P}(\mathscr{P}(\mathscr{P}(\emptyset))) = \{\emptyset, \{\emptyset\}, \{\emptyset, \{\emptyset\}\}, \{\{\emptyset\}\}\} $$
 
 34. let $A_1 = \{1\}$, $A_2 = \{u, v\}$, and $A_3 = \{m, n\}$. Find each of the
     following sets:
 
 a. $A_1 \cup (A_2 \times A_3)$
 
+$$ A_2 \times A_3 = \{(u, m), (u, n), (v, m), (v, n)\} $$
+
+$$ A_1 \cup (A_2 \times A_3) = \{1, (u, m), (u, n), (v, m), (v, n)\} $$
+
 b. $(A_1 \cup A_2) \times A_3$
+
+$$ A_1 \cup A_2 = \{1, u, v\} $$
+
+$$ (A_1 \cup A_2) \times A_3 = \{(1, m), (1, n), (u, m), (u, n), (v, m), (v, n)\} $$
 
 35. let $A = \{a, b\}$, $B = \{1, 2\}$, and $C = \{2, 3\}$. Find each of the
     following sets:
 
 a. $A \times (B \cup C)$
 
+$$ B \cup C = \{1, 2, 3\} $$
+
+$$ A \times (B \cup C) = \{(a, 1), (a, 2), (a, 3), (b, 1), (b, 2), (b, 3)\} $$
+
 b. $(A \times B) \cup (A \times C)$
+
+$$ A \times B = \{(a, 1), (a, 2), (b, 1), (b, 2)\} $$
+
+$$ A \times C = \{(a, 2), (a, 3), (b, 2), (b, 3)\} $$
+
+$$ (A \times B) \cup (A \times C) = \{(a, 1), (a, 2), (a, 3), (b, 1), (b, 2), (b, 3)\} $$
 
 c. $A \times (B \cap C)$
 
+$$ B \cap C = \{2\} $$
+
+$$ A \times (B \cap C) = \{(a, 2), (b, 2)\} $$
+
 d. $(A \times B) \cap (A \times C)$
+
+$$ A \times B = \{(a, 1), (a, 2), (b, 1), (b, 2)\} $$
+
+$$ A \times C = \{(a, 2), (a, 3), (b, 2), (b, 3)\} $$
+
+$$ (A \times B) \cap (A \times C) = \{(a, 2), (b, 2)\} $$
 
 36. Trace the action of Algorithm 6.1.1 on the variables $i$, $j$,
     $\text{found}$, and $\text{answer}$ for $m = 3$, $n = 3$, and sets $A$ and
     $B$ represented as the arrays
     $a[1] = u, a[2] = v, a[3] = w, b[1] = w, b[2] = u,$ and $b[3] = v$.
 
+Omitted.
+
 37. Trace the action of Algorithm 6.1.1 on the variables $i$, $j$,
     $\text{found}$, and $\text{answer}$ for $m = 4$, $n = 4$ and sets $A$ and
     $B$ represented as the arrays
     $a[1] = u, a[2] = v, a[3] = w, a[4] = x, b[1] = r, b[2] = u, b[3] = y, b[4] = z$.
 
+Omitted.
+
 38. Write an algorithm to determine whether a given element $x$ belongs to a
     given set that is represented as the array $a[1], a[2], \dots, a[n]$.
+
+Omitted.
