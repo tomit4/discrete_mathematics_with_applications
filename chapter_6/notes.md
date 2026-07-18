@@ -170,3 +170,265 @@ $b[1], b[2], \dots, b[n]$ [a one-dimensional array representing the set $B$]_
 $i := 1, \text{answer} := A \subseteq B\\ \text{\textbf{while}} (i \leq m \text{ and answer } = A \subseteq B )\\ \ \ j := 1, \text{found} := \text{"no"}\\ \ \ \text{\textbf{while }} (j \neq n \text{ and } \text{found}= \text{"no"})\\ \ \ \ \ \text{\textbf{if }} a[i] = b[j] \text{\textbf{ then }} \text{found} := \text{"yes"}\\ \ \ \ \ j := j + 1\\ \ \ \text{\textbf{end while}}\\ \ \ \text{[If found has not been given the value "yes" when execution reaches this point, then } a[i] \neq B\text{ .]}\\ \ \ \text{\textbf{if }} \text{found} = \text{"no"} \text{\textbf{ then }} \text{answer} := A \nsubseteq B\\ \ \  i := i + 1\\ \text{\textbf{end while}}$
 
 **Output:** _answer [a string]_
+
+---
+
+Page 414
+
+**Theorem 6.2.1 Some Subset Relations**
+
+1. _Inclusion of Intersection:_ For all sets $A$ and $B$,
+
+$$ \text{(a) } A \cap B \subseteq A \quad \text{ and } \quad \text{ (b) } A \cap B \subseteq B $$
+
+2. _Inclusion in Union:_ For all sets $A$ and $B$,
+
+$$ \text{(a) } A \subseteq A \cup B \quad \text{ and } \quad \text{ (b) } B \subseteq A \cup B $$
+
+3. _Transitive Property of Subsets:_ For all sets $A$, $B$, $C$,
+
+$$ \text{if } A \subseteq B \text{ and } B \subseteq C \text{, then } A \subseteq C $$
+
+---
+
+Page 415
+
+**Procedural Versions of Set Definitions**
+
+Let $X$ and $Y$ be subsets of a universal set $U$ and suppose $x$ and $y$ are
+elements of $U$.
+
+1. $x \in X \cup Y \Leftrightarrow x \in X \text{ or } x \in Y$
+
+2. $x \in X \cap Y \Leftrightarrow x \in X \text{ and } x \in Y$
+
+3. $x \in X - Y \Leftrightarrow x \in X \text{ and } x \notin Y$
+
+4. $x \in X^c \Leftrightarrow x \notin X$
+
+5. $(x, y) \in X \times Y \Leftrightarrow x \in X \text{ and } y \in Y$
+
+---
+
+Page 417
+
+**Theorem 6.2.2 Set Identities**
+
+Let all sets referred to below be subsets of a universal set $U$.
+
+1. _Commutative Laws:_ For all sets $A$ and $B$,
+
+$$ \text{(a) } A \cup B = B \cup A \quad \text{ and } \quad \text{ (b) } A \cap B = B \cap A $$
+
+2. _Associative Laws:_ For all sets $A$, $B$, and $C$,
+
+$$ \text{(a) } (A \cup B) \cup C = A \cup (B \cup C) \quad \text{ and } \quad \text{ (b) } (A \cap B) \cap C = A \cap (B \cap C) $$
+
+3. _Distributive Laws:_ For all sets $A$, $B$, and $C$,
+
+$$ \text{(a) } A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \quad \text{ and } \quad \text{ (b) } A \cap (B \cup C) = (A \cap B) \cup (A \cap C) $$
+
+4. _Identity Laws:_ For every set $A$,
+
+$$ \text{(a) } A \cup \emptyset = A \quad \text{ and } \quad \text{ (b) } A \cap U = A $$
+
+5. _Complement Laws:_ For every set $A$,
+
+$$ \text{(a) } A \cup A^c = U \quad \text{ and } \quad A \cap A^c = \emptyset $$
+
+6. _Double Complement Law:_ For every set $A$,
+
+$$ (A^c)^c = A $$
+
+7. _Idempotent Laws:_ For every set $A$,
+
+$$ \text{(a) } A \cup A = A \quad \text{ and } \quad \text{ (b) } A \cap A = A $$
+
+8. _Universal Bound Laws:_ For every set $A$,
+
+$$ \text{(a) } A \cup U = U \quad \text{ and } \quad \text{ (b) } A \cap \emptyset = \emptyset $$
+
+9. _De Morgan's Laws:_ For all sets $A$ and $B$,
+
+$$ \text{(a) } (A \cup B)^c = A^c \cap B^c \quad \text{ and } \quad \text{ (b) } (A \cap B)^c = A^c \cup B^c $$
+
+10. _Absorption Laws:_ For all sets $A$ and $B$,
+
+$$ \text{(a) } A \cup (A \cap B) = A \quad \text{ and } \quad \text{ (b) } A \cap (A \cup B) = A $$
+
+11. _Complements of $U$ and $\emptyset$:_
+
+$$ \text{(a) } U^c = \emptyset \quad \text{ and } \quad \text{ (b) } \emptyset^c = U $$
+
+12. _Set Difference Law:_ For all sets $A$ and $B$,
+
+$$ A - B = A \cap B^c $$
+
+---
+
+Page 418
+
+**Basic Method for Proving That Sets Are Equal**
+
+Let sets $X$ and $Y$ be given. To prove that $X = Y$:
+
+1. Prove that $X \subseteq Y$.
+
+2. Prove that $Y \subseteq X$.
+
+---
+
+Page 420
+
+**Theorem 6.2.2(3)(a) A Distributive Law for Sets**
+
+(Too lengthy, see page 420)
+
+---
+
+Page 422
+
+**Theorem 6.2.2(9)(a) A De Morgan's Law for Sets**
+
+For all sets $A$ and $B$, $(A \cup B)^c = A^c \cap B^c$.
+
+**Proof:** Suppose $A$ and $B$ are sets.
+
+_Proof that $(A \cup B)^c \subseteq A^c \cap B^c$:_
+
+_[We must show that
+$\forall x, \text{ if } x \in (A \cup B)^c \text{ then } x \in A^c \cap B^c$.]_
+
+Suppose $x \in (A \cup B)^c$. _[We must show that $x \in A^c \cap B^c$.]_ By
+definition of complement,
+
+$$ x \notin A \cup B $$
+
+Now to say that $x \notin A \cup B$ means that
+
+it is false that ($x$ is in $A$ or $x$ is in $B$).
+
+By De Morgan's laws of logic, this implies that
+
+$x$ is not in $A$ and $x$ is not in $B$,
+
+which can be written
+
+$$ x \notin A \quad \text{ and } \quad x \notin B $$
+
+Hence $x \in A^c$ and $x \in B^c$ by definition of complement. It follows, by
+definition of intersection, that $x \in A^c \cap B^c$ _[as was to be shown]._ So
+$(A \cup B)^c \subseteq A^c \cap B^c$ by definition of subset.
+
+_Proof that $A^c \cap B^c \subseteq (A \cup B)^c$:_
+
+_[We must show that
+$\forall x, \text{ if } x \in A^c \cap B^c \text{ then } x \in (A \cup B)^c$.]_
+
+Suppose $x \in A^c \cap B^c$. _[We must show that $x \in (A \cup B)^c$.]_ By
+definition of intersection, $x \in A^c$ and $x \in B^c$, and by definition of
+complement,
+
+$$ x \notin A \quad \text{ and } \quad x \notin B $$
+
+In other words,
+
+$x$ is not in $A$ and $x$ is not in $B$.
+
+By De Morgan's laws of logic this implies that
+
+it is false that ($x$ is in $A$ or $x$ is in $B$),
+
+which can be written
+
+$$ x \notin A \cup B $$
+
+by definition of union. Hence, by definition of complement, $x \in (A \cup B)^c$
+_[as was to be shown]._ It follows that $A^c \cap B^c \subseteq (A \cup B)^c$ by
+definition of subset.
+
+_Conclusion:_ Since both set containments have been proved,
+$(A \cup B)^c = A^c \cap B^c$ by definition of set equality.
+
+---
+
+Page 423
+
+**Theorem 6.2.3 Intersection and Union with a Subset**
+
+For any sets $A$ and $B$, if $A \subseteq B$, then
+
+$$ \text{(a) } A \cap B = A \quad \text{ and } \quad \text{ (b) } A \cup B = B $$
+
+**Proof:**
+
+_Part (a):_ Suppose $A$ and $B$ are sets with $A \subseteq B$. To show part (a)
+we must show both that $A \cap B \subseteq A$ and that $A \subseteq A \cap B$.
+We already know that $A \cap B \subseteq A$ by the inclusion of intersection
+property. To show that $A \subseteq A \cap B$, let $x$ be any element in $A$.
+_[We must show that $x$ is in $A \cap B$.]_ But, because of the hypothesis that
+$A \subseteq B$, we can conclude that $x$ is also in $B$ by definition of
+subset. Hence
+
+$$ x \in A \quad \text{ and } x \in B $$
+
+and thus
+
+$$ x \in A \cap B $$
+
+by definition of intersection _[as was to be shown]._
+
+**Proof:**
+
+_Part (b):_ The proof of part (b) is left as an exercise.
+
+---
+
+Page 424
+
+**Theorem 6.2.4 A Set with No Elements Is a Subset of Every Set**
+
+If $E$ is a set with no elements and $A$ is any set, then $E \subseteq A$.
+
+**Proof (by contradiction):**
+
+Suppose not. _[We take the negation of the theorem and suppose it to be true.]_
+Suppose there exists a set $E$ with no elements and a set $A$ such that
+$E \nsubseteq A$. _[We must deduce a contradiction.]_ Then there would be an
+element of $E$ that is not an element of $A$ _[by definition of subset]_. But
+there can be no such element since $E$ has no elements. This is a contradiction.
+_[Hence the supposition that there are sets $E$ and $A$, where $E$ has no
+elements and $E \nsubseteq A$, is false, and so the theorem is true.]_
+
+---
+
+Page 424
+
+**Corollary 6.2.5 Uniqueness of the Empty Set**
+
+There is only one set with no elements.
+
+**Proof:** Suppose $E_1$ and $E_2$ are both sets with no elements. By Theorem
+6.2.4, $E_1 \subseteq E_2$ since $E_1$ has no elements. Also $E_2 \subseteq E_1$
+since $E_2$ has no elements. Thus $E_1 = E_2$ by definition of set equality.
+
+---
+
+Page 425
+
+**Proposition 6.2.6**
+
+For all sets $A$, $B$, and $C$, if $A \subseteq B$ and $B \subseteq C^c$, then
+$A \cap C = \emptyset$.
+
+**Proof:**
+
+Suppose $A$, $B$, and $C$ are sets such that $A \subseteq B$ and
+$B \subseteq C^c$. We must show that $A \cap C = \emptyset$. Suppose not. That
+is, suppose there is an element $x$ in $A \cap C$. By definition of
+intersection, $x \in A$ and $x \in C$. Then, since $A \subseteq B$, $x \in B$ by
+definition of subset. Also, since $B \subseteq C^c$, then $x \in C^c$ by
+definition of subset again. It follows by definition of complement that
+$x \notin C$. Thus $x \in C$ and $x \notin C$, which is a contradiction. So the
+supposition that there is an element $x$ in $A \cap C$ is false, and thus
+$A \cap C = \emptyset$ _[as was to be shown]_.

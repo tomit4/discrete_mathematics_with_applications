@@ -52,3 +52,28 @@ all $A_i$ are a subset of $A$, but are also disjoint.
 
 $A$ is the union of all the sets $A_1, A_2, A_3, \dots$ and
 $A_i \cap A_j = \emptyset$ whenever $i \neq j$.
+
+---
+
+Page 426
+
+**Test Yourself**
+
+1. To prove that a set $X$ is a subset of a set $A \cap B$, you suppose that $x$
+   is any element of $X$ and you show that $x \in A$ _____ $x \in B$.
+
+2. To prove that a set $X$ is a subset of a set $A \cup B$, you suppose that $x$
+   is any element of $X$ and you show that $x \in A$ _____ $x \in B$.
+
+3. To prove that a set $A \cup B$ is a subset of a set $X$, you start with any
+   element $x$ in $A \cup B$ and consider the two cases _____ and _____. You
+   then show that in either case _____.
+
+4. To prove that a set $A \cap B$ is a subset of $X$, you suppose that _____ and
+   you show that _____.
+
+5. To prove that a set $X$ equals a set $Y$, you prove that _____ and that
+   _____.
+
+6. To prove that a set $X$ does not equal a set $Y$, you need to find an element
+   that is in _____ and not _____ or that is in _____ and not _____.

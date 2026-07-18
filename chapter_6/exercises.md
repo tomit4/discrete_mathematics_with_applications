@@ -1390,3 +1390,309 @@ Omitted.
     given set that is represented as the array $a[1], a[2], \dots, a[n]$.
 
 Omitted.
+
+---
+
+Page 427
+
+**Exercise Set 6.2**
+
+1.
+
+a. To say that an element is in $A \cap (B \cup C)$ means that it is in __ (1)
+__ and in __ (2) __.
+
+b. To say that an element is in $(A \cap B) \cup C$ means that it is in __ (1)
+__ or in __ (2) __.
+
+c. To say that an element is in $A - (B \cap C)$ means that it is in __ (1) __
+and not in __ (2)__.
+
+d. To prove that $(A \cup B) \cap C \subseteq A \cup (B \cap C)$, we suppose
+that $x$ is any element in __ (1) __. Then we must show that __ (2) __.
+
+e. If $A$, $B$, and $C$ are any sets such that $B \subseteq C$, to prove that
+$A \cap B \subseteq A \cap C$, we suppose that $x$ is any element in __ (1) __.
+Then we must show that __ (2) __.
+
+2. The following are two proofs that for all sets $A$ and $B$,
+   $A - B \subseteq A$. The first is less formal, and the second is more formal.
+   Fill in the blanks.
+
+a. **Proof:** Suppose $A$ and $B$ are any sets. To show that
+$A - B \subseteq A$, we must show that every element in __ (1) __ is in __ (2)
+__. But any element in $A - B$ is in __ (3) __ and not in __ (4) __ (by
+definition of $A - B$). In particular, such an element is in $A$.
+
+b. **Proof:** Suppose $A$ and $B$ are any sets and $x \in A - B$. _[We must show
+that __ (1) __.]_ By definition of set difference, $x \in$ __ ( 2 ) __ and
+$x \notin$ __ (3) __. In particular, $x \in$ __ (4) __ _[which is what was to be
+shown]._
+
+In 3 and 4, supply explanations of the stesp in the given proofs.
+
+3. **Theorem:** For all sets $A$, $B$, and $C$, if $A \subseteq C$,
+   $B \subseteq C$, then $A \subseteq C$.
+
+**Proof:**
+
+| Statement                                                                            | Explanation                           |
+| ------------------------------------------------------------------------------------ | ------------------------------------- |
+| Suppose $A$, $B$, and $C$ are any sets such that $A \subseteq B$ and $B \subseteq C$ | starting point                        |
+| We must show that $A \subseteq C$.                                                   | conclusion to be shown                |
+| Let $x$ be any element in $A$.                                                       | start of an element proof             |
+| Then $x$ is in $B$.                                                                  | __ (a) __                             |
+| It follows that $x$ is in $C$.                                                       | __ (b) __                             |
+| Thus every element in $A$ is in $C$                                                  | since $x$ could be any element of $A$ |
+| Therefore, $A \subseteq C$ _[as was to be shown]._                                   | __ \(c\) __                           |
+
+4. **Theorem:** For all sets $A$ and $B$, if $A \subseteq B$, then
+   $A \cup B \subseteq B$.
+
+**Proof:**
+
+| Statement                                                         | Explanation                                  |
+| ----------------------------------------------------------------- | -------------------------------------------- |
+| Suppose $A$, $B$, and $C$ are any sets such that $A \subseteq B$. | starting point                               |
+| We must show that $A \cup B \subseteq B$                          | conclusion to be shown                       |
+| Let $x$ be any element in $A \cup B$.                             | start of an element proof                    |
+| Then $x$ is in $A$ or $x$ is in $B$.                              | __ (a) __                                    |
+| In case $x$ is in $A$, then $x$ is in $B$                         | __ (b) __                                    |
+| In case $x$ is in $B$, then $x$ is in $B$.                        | tautology ($p \to p$)                        |
+| So in either case $x$ is in $B$.                                  | proof by division into cases                 |
+| Thus every element in $A \cup B$ is in $B$                        | since $x$ could be any element of $A \cup B$ |
+| Therefore, $A \cup B \subseteq B$ _[as was to be shown]._         | __ \(c\) __                                  |
+
+5. Prove that for all sets $A$ and $B$, $(B - A) = B \cap A^c$.
+
+6. Let $\cap$ and $\cup$ stand for the words "intersection" and "union",
+   respectively. Fill in the blanks in the following proof that for all sets
+   $A$, $B$, and $C$, $A \cap (B \cup C) = (A \cap C) \cup (A \cap C)$.
+
+**Proof:** Suppose $A$, $B$, and $C$ are any sets.
+
+(1) Proof that $A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C)$:
+
+Let $x \in A \cap (B \cup C)$. _[We must show that $x \in$ __ (a) __ ]._
+
+By definition of $\cap$, $x \in$ __ (b) __ and $x \in B \cup C$.
+
+Thus $x \in A$ and, by definition of $\cup$, $x \in B$ or __ \(c\) __.
+
+_Case 1 $(x \in A \text{ and } x \in B)$:_ In this case, $x \in A \cap B$ by
+definition of $\cap$.
+
+_Case 2 $(x \in A \text{ and } x \in C)$:_ IN this case, $x \in A \cap C$ by
+definition of $\cap$.
+
+By cases 1 and 2, $x \in A \cap B$ or $x \in A \cap C$, and so, by definition of
+$\cup$, __ (d) __.
+
+_[So $A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C)$ by definition of
+subset.]_
+
+(2) Proof that $(A \cap B) \cup (A \cap C) \subseteq A \cap (B \cup C)$:
+
+Let $x \in (A \cap B) \cup (A \cap C)$. _[We must show that
+$x \in A \cap (B \cup C)$.]_
+
+By definition of $\cup$, $x \in A \cap B$ __ (a) __ $x \in A \cap C$.
+
+_Case 1 $(x \in A \cap B)$:_ In this case, by definition of $\cap$, $x \in A$
+and $x \in B$$.
+
+Since $x \in B$, then $x \in B \cup C$ by definition of $\cup$.
+
+_Case 2 $(x \in A \cap C)$:_ In this case, by definition of $\cap$, $x \in A$ __
+(b) __ $x \in C$.
+
+Since $x \in C$, then $x \in B \cup C$ by definition of $\cup$.
+
+In both cases $x \in A$ and $$ix \in B \cup C, and so, by definition of $\cap$,
+__ \(c\) __.
+
+_[So $(A \cap B) \cup (A \cap C) \subseteq A \cap (B \cup C)$ by definition of
+__ (d) __ .]_
+
+(3) Conclusion: _[Since both subset relations have been proved, it follows, by
+definition of set equality, that __ (a) __.]_
+
+Use an element argument to prove each statement in 7-22. Assume that all sets
+are subsets of a universal set $U$.
+
+7. For all sets $A$ and $B$, $(A \cap B)^c = A^c \cup B^c$.
+
+8. For all sets $A$ and $B$, $(A \cap B) \cup (A \cap B^c) = A$.
+
+(This property is used in Section 9.9.)
+
+9. For all sets $A$, $B$, and $C$,
+
+$$ (A - B) \cup (C - B) = (A \cup C) - B $$
+
+10. For all sets $A$, $B$, and $C$,
+
+$$ (A \cup B) \cap C \subseteq A \cup (B \cap C) $$
+
+11. For all sets $A$, $B$, and $C$,
+
+$$ A \cap (B - C) \subseteq (A \cap B) - (A \cap C) $$
+
+12. For all sets $A$, $B$, and $C$,
+
+$$ (A \cup B) - C \subseteq (A - C) \cup (B - C) $$
+
+13. For all sets $A$, $B$, and $C$,
+
+$$ (A - B) \cap (C - B) = (A \cap C) - B $$
+
+14. For all sets $A$ and $B$, $A \cup (A \cap B) = A$.
+
+15. For every set $A$, $A \cup \emptyset = A$.
+
+16. For all sets $A$, $B$, and $C$, if $A \subseteq B$ then
+    $A \cap C \subseteq B \cap C$.
+
+17. For all sets $A$, $B$, and $C$, if $A \subseteq B$ then
+    $A \cup C \subseteq B \cup C$.
+
+18. For all sets $A$ and $B$, if $A \subseteq B$ then $B^c \subseteq A^c$.
+
+19. For all sets $A$, $B$, and $C$, if $A \subseteq B$ and $A \subseteq C$ then
+    $A \subseteq B \cap C$.
+
+20. For all sets $A$, $B$, and $C$, if $A \subseteq C$ and $B \subseteq C$ then
+    $A \cup B \subseteq C$.
+
+21. For all sets $A$, $B$, and $C$,
+
+$$ A \times (B \cup C) = (A \times B) \cup (A \times C) $$
+
+22. For all sets $A$, $B$, and $C$,
+
+$$ A \times (B \cap C) = (A \times B) \cap (A \times C) $$
+
+23. Find the mistake in the following "proof" that for all sets $A$, $B$, and
+    $C$, if $A \subseteq B$ and $B \subseteq C$ then $A \subseteq C$.
+
+**Proof:** Suppose $A$, $B$, and $C$ are any sets such that $A \subseteq B$ and
+$B \subseteq C$. Since $A \subseteq B$, there is an element $x$ such that
+$x \in A$ and $x \in B$, and since $B \subseteq C$, there is an element $x$ such
+that $x \in B$ and $x \in C$. Hence there is an element $x$ such that $x \in A$
+and $x \in C$ and so $A \subseteq C$.
+
+24. Find the mistake in the following "proof."
+
+**Theorem:** For all sets $A$ and $B$, $A^c \cup B^c \subseteq (A \cup B)^c^c$
+
+**Proof:** Suppose $A$ and $B$ are any sets, and $x \in A^c \cup B^c$. Then
+$x \in A^c$ or $x \in B^c$ by definition of union. It follows that $x \notin A$
+or $x \notin B$ by definition of complement, and so $x \notin A \cup B$ by
+definition of union. Thus $x \in (A \cup B)^c$ by definition of complement, and
+hence $A^c \cup B^c \subseteq (A \cup B)^c$.
+
+25. Find the mistake in the following "proof" that for all sets $A$ and $B$,
+    $(A - B) \cup (A \cap B) \subseteq A$.
+
+**Proof:** Suppose $A$ and $B$ are any sets, and suppose
+$x \in (A - B) \cup (A \cap B)$. If $x \in A$ then $x \in A - B$, and so, by
+definition of difference, $x \in A$ and $x \notin B$. In particular, $x \in A$,
+and, therefore, $(A - B) \cup (A \cap B) \subseteq A$ by definition of subset.
+
+26. Consider the Venn diagram below.
+
+(See page 429 for image.)
+
+a. Illustrate one of the distributive laws by shading in the region
+corresponding to $A \cup (B \cap C)$ on one copy of the diagram and
+$(A \cup B) \cap (A \cup C)$ on another.
+
+b. Illustrate the other distributive law by shading in the region corresponding
+to $A \cap (B \cup C)$ on one copy of the diagram and
+$(A \cap B) \cup (A \cap C)$ on another.
+
+c. Illustrate one of De Morgan's laws by shading in the region corresponding to
+$(A \cup B)^c$ on one copy of the diagram and $A^c \cap B^c$ on the other.
+(Leave the set $C$ out of your diagrams.)
+
+d. Illustrate the other De Morgan's law by shading in the region corresponding
+to $(A \cap B)^c$ on one copy of the diagram and $A^c \cup B^c$ on the other.
+(Leave the set $C$ out of your diagrams.)
+
+27. Fill in the blanks in the following proof that for all sets $A$ and $B$,
+    $(A - B) \cap (B - A) = \emptyset$.
+
+**Proof:**
+
+Let $A$ and $B$ be any sets and suppose $(A - B) \cap (B - A) \neq \emptyset$.
+That is, suppose there is an element $x$ in __ (a) __. BY definition of __ (b)
+__, $x \in A - B$ and $x \in$ __ \(c\) __. Then by definition of set difference,
+$x \in A$ and $x \notin B$ and $x \in$ __ (d) __ and $x \notin$ __ (e) __. IN
+particular $x \in A$ and $x \notin$ __ (f) __, which is a contradiction. Hence
+_[the supposition that $(A - B) \cap (B - A) \neq \emptyset$ is false, and so]_
+__ (g) __.
+
+Use the element method for proving a set equals the empty set to prove each
+statement in 28-38. Assume that all sets are subsets of a universal set $U$.
+
+28. For all sets $A$ and $B$, $(A \cap B) \cap (A \cap B^c) = \emptyset$. (This
+    property is used in Section 9.9.)
+
+29. For all sets $A$, $B$, and $C$,
+
+$$ (A - C) \cap (B - C) \cap (A - B) = \emptyset $$
+
+30. For every subset $A$ of a universal set $U$, $A \cap A^c = \emptyset$.
+
+31. If $U$ denotes a universal set, then $U^c = \emptyset$.
+
+32. For every set $A$, $A \times \emptyset = \emptyset$.
+
+33. For all sets $A$ and $B$, if $A \subseteq B$ then $A \cap B^c = \emptyset$.
+
+34. For all sets $A$ and $B$, if $B \subseteq A^c$ then $A \cap B = \emptyset$.
+
+35. For all sets $A$, $B$, and $C$, if $A \subseteq B$ and
+    $B \cap C = \emptyset$ then $A \cap C = \emptyset$.
+
+36. For all sets $A$, $B$, and $C$, if $C \subseteq B - A$, then
+    $A \cap C = \emptyset$.
+
+37. For all sets $A$, $B$, and $C$, if $B \cap C \subseteq A$, then
+    $(C - A) \cap (B - A) = \emptyset$.
+
+38. For all sets $A$, $B$, $C$, and $D$, if $A \cap C = \emptyset$ then
+    $(A \times B) \cap (C \times D) = \emptyset$.
+
+Prove each statement in 39-44.
+
+39. For all sets $A$ and $B$,
+
+a. $(A - B) \cup (B - A) \cup (A \cap B) = A \cup B$
+
+b. The sets $(A - B)$, $(B - A)$, and $(A \cap B)$ are mutually disjoint.
+
+40. For every positive integer $n$, if $A$ and $B_1, B_2, B_3, \dots$ are any
+    sets, then
+
+$$ A \cap \left(\bigcup_{i = 1}^{n}B_i\right) = \bigcup_{i = 1}^{n}(A \cap B_i) $$
+
+41. For every positive integer $n$, if $A_1, A_2, A_3, \dots$ and $B$ are any
+    sets, then
+
+$$ \bigcap_{i = 1}^{n}(A_i - B) = \left(\bigcup_{i = 1}^{n}A_i\right) - B $$
+
+42. For every positive integer $n$, if $A_1, A_2, A_3, \dots$ and $B$ are any
+    sets, then
+
+$$ \bigcap_{i = 1}^{n}(A_i - B) = \left(\bigcap_{i = 1}^{n}A_i\right) - B $$
+
+43. For every positive integer $n$, if $A$ and $B_1, B_2, B_3, \dots$ are any
+    sets, then
+
+$$ \bigcup_{i = 1}^{n}(A \times B_i) = A \times \left(\bigcup_{i = 1}^{n}B_i\right) $$
+
+44. For every positive integer $n$, if $A$ and $B_1, B_2, B_3, \dots$ are any
+    sets, then
+
+$$ \bigcap_{i = 1}^{n}(A \times B_i) = A \times \left(\bigcap_{i = 1}^{n}B_i\right) $$
