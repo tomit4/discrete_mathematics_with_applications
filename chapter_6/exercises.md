@@ -1402,18 +1402,38 @@ Page 427
 a. To say that an element is in $A \cap (B \cup C)$ means that it is in __ (1)
 __ and in __ (2) __.
 
+(1) $A$
+
+(2) $B \cup C$
+
 b. To say that an element is in $(A \cap B) \cup C$ means that it is in __ (1)
 __ or in __ (2) __.
+
+(1) $A \cap B$
+
+(2) $C$
 
 c. To say that an element is in $A - (B \cap C)$ means that it is in __ (1) __
 and not in __ (2)__.
 
+(1) $A$
+
+(2) $B \cap C$
+
 d. To prove that $(A \cup B) \cap C \subseteq A \cup (B \cap C)$, we suppose
 that $x$ is any element in __ (1) __. Then we must show that __ (2) __.
+
+(1) $(A \cup B) \cap C$
+
+(2) $x \in A \cup (B \cap C)$
 
 e. If $A$, $B$, and $C$ are any sets such that $B \subseteq C$, to prove that
 $A \cap B \subseteq A \cap C$, we suppose that $x$ is any element in __ (1) __.
 Then we must show that __ (2) __.
+
+(1) $A \cap B$
+
+(2) $A \cap C$
 
 2. The following are two proofs that for all sets $A$ and $B$,
    $A - B \subseteq A$. The first is less formal, and the second is more formal.
@@ -1424,12 +1444,28 @@ $A - B \subseteq A$, we must show that every element in __ (1) __ is in __ (2)
 __. But any element in $A - B$ is in __ (3) __ and not in __ (4) __ (by
 definition of $A - B$). In particular, such an element is in $A$.
 
+(1) $A - B$
+
+(2) $A$
+
+(3) $A$
+
+(4) $B$
+
 b. **Proof:** Suppose $A$ and $B$ are any sets and $x \in A - B$. _[We must show
 that __ (1) __.]_ By definition of set difference, $x \in$ __ ( 2 ) __ and
 $x \notin$ __ (3) __. In particular, $x \in$ __ (4) __ _[which is what was to be
 shown]._
 
-In 3 and 4, supply explanations of the stesp in the given proofs.
+(1) $x \in A$
+
+(2) $A$
+
+(3) $B$
+
+(4) $A$
+
+In 3 and 4, supply explanations of the steps in the given proofs.
 
 3. **Theorem:** For all sets $A$, $B$, and $C$, if $A \subseteq C$,
    $B \subseteq C$, then $A \subseteq C$.
@@ -1445,6 +1481,12 @@ In 3 and 4, supply explanations of the stesp in the given proofs.
 | It follows that $x$ is in $C$.                                                       | __ (b) __                             |
 | Thus every element in $A$ is in $C$                                                  | since $x$ could be any element of $A$ |
 | Therefore, $A \subseteq C$ _[as was to be shown]._                                   | __ \(c\) __                           |
+
+a. by definition of a subset (because $A$ is a subset of $B$)
+
+b. by definition of a subset (because $B$ is a subset of $C$)
+
+c. by definition of a subset
 
 4. **Theorem:** For all sets $A$ and $B$, if $A \subseteq B$, then
    $A \cup B \subseteq B$.
@@ -1463,7 +1505,53 @@ In 3 and 4, supply explanations of the stesp in the given proofs.
 | Thus every element in $A \cup B$ is in $B$                        | since $x$ could be any element of $A \cup B$ |
 | Therefore, $A \cup B \subseteq B$ _[as was to be shown]._         | __ \(c\) __                                  |
 
+a. by the definition of a union (because $A \cup B$)
+
+b. by definition of a subset (because $A \subseteq B$)
+
+c. by definition of a subset
+
 5. Prove that for all sets $A$ and $B$, $(B - A) = B \cap A^c$.
+
+**Proof:**
+
+Let $A$ and $B$ be any sets.
+
+To prove that $(B - A) = B \cap A^c$, we must first prove
+$(B - A) \subseteq B \cap A^c$ and then prove $B \cap A^c \subseteq (B - A)$.
+
+_Proof ($(B - A) \subseteq B \cap A^c$):_
+
+Suppose $x$ is some element such that $x \in (B - A)$.
+
+By the definition of the difference of sets, this means that $x \in B$ and
+$x \notin A$. It then follows by the definition of the complement of sets that
+$x \in B$ and $x \in A^c$.
+
+By definition of an intersection, it then follows further that
+$x \in B \cap A^c$.
+
+Therefore every element that is in $(B - A)$ is also in $B \cap A^c$. This is
+what was to be shown.
+
+_Proof ($B \cap A^c \subseteq (B - A)$):_
+
+Suppose $x$ is some element such that $x \in B \cap A^c$.
+
+By definition of the intersection of sets, this means that $x \in B$ and
+$x \in A^c$. By definition of the complement of sets, this means that $x \in B$
+and $x \notin A$.
+
+It follows that if $x \in B$ and $x \notin A$, then by the definition of the
+difference of sets $x \in (B - A)$.
+
+Therefore every element that is in $B \cap A^c$ is in $(B - A)$. This is what
+was to be shown.
+
+Since both relations have been proved, it is concluded that
+$(B - A) = B \cap A^c$, by definition of set equality.
+
+Q.E.D.
 
 6. Let $\cap$ and $\cup$ stand for the words "intersection" and "union",
    respectively. Fill in the blanks in the following proof that for all sets
@@ -1520,57 +1608,723 @@ definition of set equality, that __ (a) __.]_
 Use an element argument to prove each statement in 7-22. Assume that all sets
 are subsets of a universal set $U$.
 
+(1a) $x \in (A \cap B) \cup (A \cap C)$
+
+(1b) $A$
+
+(1c) $x \in C$
+
+(1d) $x \in (A \cap B) \cup (A \cap C)$
+
+(2a) or
+
+(2b) and
+
+(2c) $x \in A \cap (B \cup C)$
+
+(2d) subset
+
+(3a) for all sets $A$, $B$, and $C$,
+$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
+
 7. For all sets $A$ and $B$, $(A \cap B)^c = A^c \cup B^c$.
+
+**Proof:**
+
+Let $A$ and $B$ be any sets.
+
+To prove that $(A \cap B)^c = A^c \cup B^c$, we must show that
+$(A \cap B)^c \subseteq A^c \cup B^c$ and also show that
+$A^c \cup B^c \subseteq (A \cap B)^c$.
+
+_Proof ($(A \cap B)^c \subseteq A^c \cup B^c$):_
+
+Suppose $x$ is some element such that $x \in (A \cap B)^c$.
+
+By the definition of complement, this means that $x \notin (A \cap B)$.
+
+By the definition of intersection of sets (and by De Morgan's Laws of negation
+of sets), this means that $x \notin A$ or $x \notin B$. It follows by the
+definition of complement of sets that $x \in A^c$ or $x \in B^c$.
+
+Thus, by definition of the union of sets, $x \in A^c \cup B^c$.
+
+Therefore all elements in $(A \cap B)^c$ are in $A^c \cup B^c$. Specifically,
+$(A \cap B)^c \subseteq A^c \cup B^c$.
+
+This is what was to be shown.
+
+_Proof ($A^c \cup B^c \subseteq (A \cap B)^c$):_
+
+Suppose $x$ is some element such that $x \in A^c \cup B^c$. By the definition of
+the union of sets, $x \in A^c$ or $x \in B^c$. By the definition of complement
+of sets, this means that $x \notin A$ or $x \notin B$.
+
+By definition of the union of sets, it follows that $x \in A^c \cup B^c$. Then
+by De Morgan's Laws of Sets, $x \in (A \cap B)^c$.
+
+Therefore all elements in $A^c \cup B^c$ are in $(A \cap B)^c$. Specifically,
+$A^c \cup B^c \subseteq (A \cap B)^c$.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since both sets have been shown to be subsets of the other, it is concluded that
+$A^c \cup B^c = (A \cap B)^c$, by definition of set equality.
+
+Q.E.D.
 
 8. For all sets $A$ and $B$, $(A \cap B) \cup (A \cap B^c) = A$.
 
 (This property is used in Section 9.9.)
 
+**Proof:**
+
+Let $A$ and $B$ be any sets.
+
+To prove that $(A \cap B) \cup (A \cap B^c) = A$, it must be shown that
+$(A \cap B) \cup (A \cap B^c) \subseteq A$ and also that
+$A \subseteq (A \cap B) \cup (A \cap B^c)$.
+
+_Proof ($(A \cap B) \cup (A \cap B^c) \subseteq A$):_
+
+Suppose $x$ is any element such that $x \in (A \cap B) \cup (A \cap B^c)$.
+
+By definition of $\cup$, this means that $x \in A \cap B$ or $x \in A \cap B^c$
+
+_Case $x \in A \cap B$:_
+
+By definition of $\cap$, this means that $x \in A$ and $x \in B$. By definition
+of $\subseteq$, if $x \in A$ and $x \in B$, then $A \cap B \subseteq A$.
+
+_Case $x \in A \cap B^c$:_
+
+By definition of $\cap$, this means that $x \in A$ and $x \in B^c$. By
+definition of complement, this means that $x \in A$ and $x \notin B$. By
+tautology and by definition of $\subseteq$, if $x \in A$ and $x \notin B$, then
+$x \in A \cap B^c \subseteq A$.
+
+Thus in both cases, it has been shown that any element in $A \cap B$ or
+$A \cap B^c$ is in $A$. Specifically $(A \cap B) \cup (A \cap B^c) \subseteq A$.
+
+This is what was to be shown.
+
+_Proof ($A \subseteq (A \cap B) \cup (A \cap B^c)$):_
+
+Suppose $x$ is any element such that $x \in A$.
+
+To prove $x \in A \subseteq (A \cap B) \cup (A \cap B^c)$, we must prove that
+either $x \in B$ or $x \in B^c$ (by definition of $\cup$ and the complement of
+sets.)
+
+_Case $x \in B$:_
+
+By the supposition, it is known that $x \in A$ and $x \in B$. By the definition
+of $\cap$, this means that $x \in A \cap B$.
+
+_Case $x \notin B$:_
+
+By the supposition, it is known that $x \in A$ and $x \notin B$. By the
+definition of $\cap$ and the complement of sets, this means that
+$x \in A \cap B^c$.
+
+In the case that $x \in B$, it has been shown that then $x \in A \cap B$. In the
+case that $x \notin B$, it has been shown that $x \in A \cap B^c$. Thus it can
+be stated that $x \in A \cap B$ or $x \in A \cap B^c$. By the definition of
+$\cup$, it follows that $x \in (A \cap B) \cup (A \cap B^c)$.
+
+Therefore it can be said that every element in $A$ is in
+$(A \cap B) \cup (A \cap B^c)$. Specifically,
+$A \subseteq (A \cap B) \cup (A \cap B^c)$.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+It has been shown that $(A \cap B) \cup (A \cap B^c) \subseteq A$ and
+$A \subseteq (A \cap B) \cup (A \cap B^c)$. By the definition of the equality of
+sets, this means that $(A \cap B) \cup (A \cap B^c) = A$.
+
+Q.E.D.
+
 9. For all sets $A$, $B$, and $C$,
 
 $$ (A - B) \cup (C - B) = (A \cup C) - B $$
+
+**Proof:**
+
+Let $A$, $B$, and $C$ be any sets.
+
+To prove $(A - B) \cup (C - B) = (A \cup C) - B$, it must be shown that
+$(A - B) \cup (C - B) \subseteq (A \cup C) - B$ and that
+$(A \cup C) - B \subseteq (A - B) \cup (C - B)$.
+
+_Proof ($(A - B) \cup (C - B) \subseteq (A \cup C) - B$):_
+
+Suppose $x$ is some element such that $x \in (A - B) \cup (C - B)$.
+
+By the definition of $\cup$, this means that $x \in (A - B)$ or $x \in (C - B)$.
+
+In the case that $x \in (A - B)$, $x \in A$ and $x \notin B$. In the case that
+$x \in (C - B)$, $x \in C$ and $x \notin B$. In both cases $x \notin B$.
+
+It follows that $x \in A$ or $x \in C$. Specifically $x \in (A \cup C)$. In
+either case, $x \notin B$. Hence, by the definition of difference of sets,
+$x \in (A \cup C) - B$.
+
+Therefore every element in $(A - B) \cup (C - B)$ is in $(A \cup C) - B$.
+Specifically, $(A - B) \cup (C - B) \subseteq (A \cup C) - B$.
+
+This is what was to be shown.
+
+_Proof ($(A \cup C) - B \subseteq (A - B) \cup (C - B)$):_
+
+Suppose $x$ is some element such that $x \in (A \cup C) - B$.
+
+By the definition of difference of sets, this means that $x \in (A \cup C)$ and
+$x \notin B$. By the definition of $\cup$, this means that $x \in A$ or
+$x \in C$.
+
+In the case that $x \in A$, then $x \in A$ and $x \notin B$. By the definition
+of complements, this means that $x \in A \cap B^c$. It follows by the set
+difference law, that $x \in A - B$.
+
+In the case that $x \in C$, then $x \in A$ and $x \notin B$. By the definition
+of complements, this means that $x \in C \cap B^c$. It follows by the set
+difference law, that $x \in C - B$.
+
+Thus it can be said that $x \in A - B$ or $x \in C - B$. By the definition of
+$\cup$, it follows that $x \in (A - B) \cup (C - B)$.
+
+Therefore every element in $(A \cup C) - B$ is in $(A - B) \cup (C - B)$.
+Specifically, $A \cup C - B \subseteq (A - B) \cup (C - B)$.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since both subset relations have been proved, it is concluded that
+$(A - B) \cup (C - B) = (A \cup C) - B$ by definition of set equality.
+
+Q.E.D.
 
 10. For all sets $A$, $B$, and $C$,
 
 $$ (A \cup B) \cap C \subseteq A \cup (B \cap C) $$
 
+**Proof:**
+
+Let $A$, $B$, and $C$ be any sets.
+
+Suppose $x$ is some element such that $x \in (A \cup B) \cap C$.
+
+By the definition of $\cap$, this means that $x \in (A \cup B)$ and $x \in C$.
+By the definition of $\cup$, this means that $x \in A$ or $x \in B$.
+
+_Case $x \in A$:_
+
+Since $x \in A$ and $x \in C$, it follows that $x \in A \cup (B \cap C)$, since
+$x \in A$.
+
+_Case $x \in B$:_
+
+Since $x \in A$ and $x \in C$, this means that $x \in B \cap C$. It follows that
+$x \in A \cup (B \cap C)$, since $x \in B \cap C$.
+
+Thus in both cases $x \in A \cup (B \cap C)$.
+
+Therefore every element in $(A \cup B) \cap C$ is in $A \cup (B \cap C)$. By the
+definition of a subset, this means that
+$(A \cup B) \cap C \subseteq A \cup (B \cap C)$.
+
+This is what was to be shown.
+
+Q.E.D.
+
 11. For all sets $A$, $B$, and $C$,
 
 $$ A \cap (B - C) \subseteq (A \cap B) - (A \cap C) $$
+
+**Proof:**
+
+Let $A$, $B$, and $C$ be any sets.
+
+Suppose $x$ is some element such that $x \in A \cap (B - C)$.
+
+By definition of $\cap$, this means that $x \in A$ and $x \in (B - C)$. By the
+definition of difference of sets, this means that $x \in A$ and $x \in B$ and
+$x \notin C$.
+
+Since $x \in A$ and $x \in B$, it follows that $x \in A \cap B$.
+
+Since $x \in A$ and $x \notin C$, by the definition of complement, it can be
+said that $x \in A \cap C^c$, or $x \notin A \cap C$.
+
+Thus $x \in A \cap B$ and $x \notin A \cap C$. Hence, by the difference of sets,
+$x \in (A \cap B) - (A \cap C)$.
+
+Therefore it can be said that every element in $A \cap (B - C)$ is in
+$(A \cap B) - (A \cap C)$. Specifically
+$A \cap (B - C) \subseteq (A \cap B) - (A \cap C)$.
+
+This is what was to be shown.
+
+Q.E.D.
 
 12. For all sets $A$, $B$, and $C$,
 
 $$ (A \cup B) - C \subseteq (A - C) \cup (B - C) $$
 
+**Proof:**
+
+Let $A$, $B$, and $C$ be any sets.
+
+Suppose $x$ is some element such that $x \in (A \cup B) - C$.
+
+By the definition of difference, this means that $x \in A \cup B$ and
+$x \notin C$.
+
+By the definition of $\cup$, it follows that $x \in A$ or $x \in B$.
+
+_Case $x \in A$:_
+
+Since $x \in A$ and $x \notin C$, by the definition of difference, it can be
+said that $x \in A - C$.
+
+_Case $x \in B$:_
+
+Since $x \in B$ and $x \notin C$, by the definition of difference, it can be
+said that $x \in B - C$.
+
+Hence it can be said that $x \in A - C$ or $x \in B - C$. By the definition of
+$\cup$, it follows that $x \in (A - C) \cup (B - C)$.
+
+Therefore it can said that any element in $(A \cup B) - C$ is also in
+$(A - C) \cup (B - C)$. Specifically, by definition of a subset,
+$(A \cup B) - C \subseteq (A - C) \cup (B - C)$.
+
+This is what was to be shown.
+
+Q.E.D.
+
 13. For all sets $A$, $B$, and $C$,
 
 $$ (A - B) \cap (C - B) = (A \cap C) - B $$
 
+Let $A$, $B$, and $C$ be any sets.
+
+To prove $(A - B) \cap (C - B) = (A \cap C) - B$, it must be shown that
+$(A - B) \cap (C - B) \subseteq (A \cap C) - B$ and that
+$(A \cap C) - B \subseteq (A - B) \cap (C - B)$.
+
+_Proof ($(A - B) \cap (C - B) \subseteq (A \cap C) - B$):_
+
+Suppose $x$ is some element such that $x \in (A - B) \cap (C - B)$.
+
+By the definition of $\cap$, this means that $x \in A - B$ and $x \in C - B$.
+
+By the definition of difference, this means that $x \in A$ and $x \notin B$ and
+$x \in C$ and $x \notin B$.
+
+Thus $x$ is in $A$ and $C$, or (by definition of $\cap$), $x \in A \cap C$.
+Since $x \notin B$, it follows then that $x \in (A \cap C) \cap B^c$, by the
+definition of complement.
+
+By the set difference law, it follows that $x \in (A \cap C) - B$.
+
+Thus every element in $(A - B) \cap (C - B)$ is in $(A \cap C) - B$. By the
+definition of subset, it follows that
+$(A - B) \cap (C - B) \subseteq (A \cap C) - B$.
+
+This is what was to be shown.
+
+_Proof ($(A \cap C) - B \subseteq (A - B) \cap (C - B)$):_
+
+Suppose $x$ is some element such that $x \in (A \cap C) - B$.
+
+By the definition of difference this means that $x \in A \cap C$ and
+$x \notin B$. By the definition of $\cap$, this means that $x \in A$ or
+$x \in C$ and $x \notin B$.
+
+_Case $x \in A$:_
+
+Since $x \in A$ and $x \notin B$, this means that $x \in A \cap B^c$. By the set
+difference law, this means that $x \in A - B$.
+
+_Case $x \in C$:_
+
+Since $x \in C$ and $x \notin B$, this means that $x \in C \cap B^c$. By the set
+difference law, this means that $x \in C - B$.
+
+It follows that $x \in A - B$ or $x \in C - B$. By the definition of $\cap$,
+this means that $x \in (A - B) \cap (C - B)$.
+
+Thus every element in $(A \cap C) - B$ is in $(A - B) \cap (C - B)$. By the
+definition of subset, this means that
+$(A \cap C) - B \subseteq (A - B) \cap (C - B)$.
+
+This is what was to be shown.
+
+Q.E.D.
+
 14. For all sets $A$ and $B$, $A \cup (A \cap B) = A$.
 
+**Proof:**
+
+Let $A$ and $B$ be any sets.
+
+To prove $A \cup (A \cap B) = A$, it must be shown that
+$A \cup (A \cap B) \subseteq A$ and $A \subseteq A \cup (A \cap B)$.
+
+_Proof ($A \cup (A \cap B) \subseteq A$):_
+
+Suppose $x$ is some element such that $x \in A \cup (A \cap B)$.
+
+By the definition of $\cup$, this means that $x \in A$ or $x \in A \cap B$.
+
+_Case $x \in A$:_
+
+Since $x \in A$, by tautology, $x \in A$.
+
+_Case $x \in A \cap B$:_
+
+By the definition of $\cap$, $x \in A$ and $x \in B$.
+
+In either case $x \in A$. By the definition of subset, this means that
+$x \subseteq A$.
+
+Thus every element in $A \cup (A \cap B)$ is in $A$. By the definition of
+subset, this means that $A \cup (A \cap B) \subseteq A$.
+
+This is what was to be shown.
+
+_Proof ($A \subseteq A \cup (A \cap B)$):_
+
+Suppose $x$ is some element such that $x \in A$.
+
+By tautology, $x \in A \to x \in A$.
+
+Since $x \in A$, $x \in A \cap B$, by virtue of $x \in A$.
+
+It follows that $x \in A$ or $x \in A \cap B$.
+
+Thus it can be said that every element in $A$ is in $A \cup (A \cap B)$. By
+definition of subset, this means that $A \subseteq A \cup (A \cap B)$.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since both subset relations have been proved, it has been shown that
+$A \cup (A \cap B) = A$.
+
+Q.E.D.
+
 15. For every set $A$, $A \cup \emptyset = A$.
+
+**Proof:**
+
+Let $A$ be any set.
+
+To prove that $A \cup \emptyset = A$, it must be shown that
+$A \cup \emptyset \subseteq A$, and that $A \subseteq A \cup \emptyset$.
+
+_Proof ($A \cup \emptyset \subseteq A$):_
+
+Suppose $x$ is some element such that $x \in A \cup \emptyset$.
+
+By the definition of $\cup$, this means that $x \in A$ or $x \in emptyset$. But
+$x \notin \emptyset$, as $\emptyset$ can have no elements.
+
+Hence $x \in A$, and therefore $A \cup \emptyset \subseteq A$.
+
+_Proof ($A \subseteq A \cup \emptyset$):_
+
+Suppose $x$ is some element such that $x \in A$. It follows that $x \in A$ or
+$x \in \emptyset$. By definition of $\cup$, this means that
+$x \in A \cup \emptyset$.
+
+Therefore $A \subseteq A \cup \emptyset$.
+
+Since both subset relations have been proved, it can be said that
+$A \cup \emptyset = A$ by the definition of set equality.
+
+This is what was to be proved.
+
+Q.E.D.
 
 16. For all sets $A$, $B$, and $C$, if $A \subseteq B$ then
     $A \cap C \subseteq B \cap C$.
 
+**Proof:**
+
+Let $A$, $B$, and $C$ be any sets such that $A \subseteq B$.
+
+Suppose $x$ is some element such that $x \in A \cap C$.
+
+By the definition of $\cap$, this means that $x \in A$ and $x \in C$.
+
+Since $x \in A$ and $A \subseteq B$, then $x \in B$ by definition of subset.
+
+Since $x \in B$ and $x \in C$, by the definition of $\cap$, it can be said that
+$x \in B \cap C$.
+
+Thus it has been shown that any element in $A \cap C$ is in $B \cap C$.
+Specifically $A \cap C \subseteq B \cap C$ by the definition of subset.
+
+This is what was to be shown.
+
+Q.E.D.
+
 17. For all sets $A$, $B$, and $C$, if $A \subseteq B$ then
     $A \cup C \subseteq B \cup C$.
 
+**Proof:**
+
+Let $A$, $B$, and $C$ be any sets such that $A \subseteq B$.
+
+Suppose $x$ is some element such that $x \in A \cup C$.
+
+By definition of $\cup$, this means that $x \in A$ or $x \in C$.
+
+_Case $x \in A$:_
+
+Since $x \in A$ and since $A \subseteq B$, this means that $x \in B$.
+
+_Case $x \in C$:_
+
+By tautology, $x \in C$.
+
+It follows that $x \in B$ or $x \in C$. By the definition of $\cup$, this is
+$x \in B \cup C$.
+
+Thus it can be said that any element in $A \cup C$ is in $B \cup C$, or
+$A \cup C \subseteq B \cup C$ by the definition of subset.
+
+This is what was to be shown.
+
+Q.E.D.
+
 18. For all sets $A$ and $B$, if $A \subseteq B$ then $B^c \subseteq A^c$.
+
+**Proof:**
+
+Let $A$ and $B$ be any sets such that $A \subseteq B$.
+
+Suppose $x$ is some element such that $x \in B^c$.
+
+By the definition of complement, this means that $x \notin B$.
+
+Since $A \subseteq B$, it follows that any element not in $B$ is not in $A$,
+thus $x \notin A$. By the definition of complement, this means that $x \in A^c$
+
+Hence it can said that any element in $B^c$ is in $A^c$, or $B^c \subseteq A^c$
+by the definition of subset.
+
+This is what was to be shown.
+
+Q.E.D.
 
 19. For all sets $A$, $B$, and $C$, if $A \subseteq B$ and $A \subseteq C$ then
     $A \subseteq B \cap C$.
 
+**Proof:**
+
+Let $A$, $B$, and $C$ be any sets such that $A \subseteq B$ and $A \subseteq C$.
+
+Suppose $x$ is some element such that $x \in A$.
+
+Since $x \in A$ and $A \subseteq B$, it follows by the definition of subset that
+$x \in B$.
+
+Since $x \in A$ and $A \subseteq C$, it follows by the definition of subset that
+$x \in C$.
+
+Thus it can be said that $x \in B$ and $x \in C. By the definition of $\cap$,
+this is $x \in B \cap C$.
+
+Therefore it has been shown that any element in $A$ is in $B \cap C$, or
+$A \subseteq B \cap C$, by the definition of subset.
+
+This is what was to be shown.
+
+Q.E.D.
+
 20. For all sets $A$, $B$, and $C$, if $A \subseteq C$ and $B \subseteq C$ then
     $A \cup B \subseteq C$.
+
+**Proof:**
+
+Let $A$, $B$, and $C$ be any sets such that $A \subseteq C$ and $B \subseteq C$.
+
+Suppose $x$ is some element such that $x \in A \cup B$.
+
+By the definition of $\cup$, this means that $x \in A$ or $x \in B$.
+
+_Case $x \in A$:_
+
+Since $x \in A$ and $A \subseteq C$, this means, by definition of subset, that
+$x \in C$.
+
+_Case $x \in B$:_
+
+Since $x \in B$ and $B \subseteq C$, this means, by definition of subset, that
+$x \in C$.
+
+In either case, $x \in C$.
+
+Therefore it can be said that any element in $A \cup B$ is in $C$, or
+$A \cup B \subseteq C$, by definition of subset.
+
+This is what was to be shown.
+
+Q.E.D.
 
 21. For all sets $A$, $B$, and $C$,
 
 $$ A \times (B \cup C) = (A \times B) \cup (A \times C) $$
 
+**Proof:**
+
+Let $A$, $B$, and $C$ be any set.
+
+To prove $A \times (B \cup C) = (A \times B) \cup (A \times C)$, it must be
+shown that $A \times (B \cup C) \subseteq (A \times B) \cup (A \times C)$ and
+$(A \times B) \cup (A \times C) \subseteq A \times (B \cup C)$.
+
+_Proof ($A \times (B \cup C) \subseteq (A \times B) \cup (A \times C)$):_
+
+Suppose $(x, y)$ are any Cartesian pair such that
+$(x, y) \in A \times (B \cup C)$.
+
+By the definition of a Cartesian pair, this means that $x \in A$ and
+$y \in B \cup C$.
+
+By definition of $\cup$, this means that $y \in B$ or $y \in C$.
+
+_Case $y \in B$:_
+
+Since $x \in A$ and $y \in B$, by definition of Cartesian product,
+$(x, y) \in A \times B$.
+
+_Case $y \in C$:_
+
+Since $x \in A$ and $y \in C$, by definition of Cartesian product,
+$(x, y) \in A \times C$.
+
+Thus it can be said that $(x, y) \in A \times B$ or $(x, y) \in A \times C$. By
+definition of $\cup$, this is $(x, y) \in (A \times B) \cup (A \times C)$.
+
+Thus it can be said that any Cartesian pair of elements in $A \times (B \cup C)$
+are in $(A \times B) \cup (A \times C)$, or
+$A \times (B \cup C) \subseteq (A \times B) \cup (A \times C)$.
+
+This is what was to be shown.
+
+_Proof ($(A \times B) \cup (A \times C) \subseteq A \times (B \cup C)$):_
+
+Suppose $(x, y)$ are some Cartesian pair such that
+$(x, y) \in (A \times B) \cup (A \times C)$.
+
+By the definition of $\cup$, this means that $(x, y) \in (A \times B)$ or
+$(x, y) \in (A \times C)$.
+
+_Case $(x, y) \in (A \times B)$:_
+
+This means that $x \in A$ and $y \in B$. Since $y \in B$, it follows that
+$y \in B \cup C$, by virtue of $y \in B$.
+
+Thus it can be said, by the definition of Cartesian product, that
+$(x, y) \in A \times (B \cup C)$.
+
+_Case $(x, y) \in (A \times C)$:_
+
+This means that $x \in A$ and $y \in C$. Since $y \in C$, it follows that
+$y \in B \cup C$, by virtue of $y \in C$.
+
+Thus it can be said, by the definition of Cartesian product, that
+$(x, y) \in A \times (B \cup C)$.
+
+Hence in both cases $(x, y) \in A \times (B \cup C)$.
+
+Thus it has been shown that every Cartesian pair in
+$(A \times B) \cup (A \times C)$ is in $A \times (B \cup C)$, or
+$(A \times B) \cup (A \times C) \subseteq A \times (B \cup C)$.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since both subset relations have been proven, it can be concluded that
+$A \times (B \cup C) = (A \times B) \cup (A \times C)$ by the definition of set
+equality.
+
+This is what was to be shown.
+
+Q.E.D.
+
 22. For all sets $A$, $B$, and $C$,
 
 $$ A \times (B \cap C) = (A \times B) \cap (A \times C) $$
+
+**Proof:**
+
+Let $A$, $B$, and $C$ be any sets.
+
+To prove $A \times (B \cap C) = (A \times B) \cap (A \times C)$, it must be
+shown that $A \times (B \cap C) \subseteq (A \times B) \cap (A \times C)$ and
+that $(A \times B) \cap (A \times C) \subseteq A \times (B \cap C)$.
+
+_Proof ($A \times (B \cap C) \subseteq (A \times B) \cap (A \times C)$):_
+
+Suppose $(x, y)$ be some elements such that $(x, y) \in A \times (B \cap C)$.
+
+This means that $x \in A$ and $y \in B \cap C$.
+
+By the definition of $\cap$, this means that $y \in B$ and $y \in C$.
+
+Since $x \in A$ and $y \in B$, this means that $(x, y) \in A \times B$ (by the
+definition of Cartesian product).
+
+Furthermore, since $x \in A$ and $y \in C$, this means that
+$(x, y) \in A \times C$ (by the definition of Cartesian product).
+
+Thus $(x, y) \in A \times B$ and $(x, y) \in A \times C$ or
+$(x, y) \in (A \times B) \cap (A \times C)$ (by the definition of $\cap$).
+
+Hence it has been shown that
+$A \times (B \cap C) \subseteq (A \times B) \cap (A \times C)$.
+
+_Proof ($(A \times B) \cap (A \times C) \subseteq A \times (B \cap C)$):_
+
+Suppose $(x, y)$ be some elements such that
+$(x, y) \in (A \times B) \cap (A \times C)$.
+
+By the definition of $\cap$, this means that $(x, y) \in A \times B$ and
+$(x, y) \in A \times C$.
+
+Since $(x, y) \in A \times B$, $x \in A$ and $y \in B$.
+
+Since $(x, y) \in A \times C$, this means that $x \in A$ and $y \in C$.
+
+Since $y \in B$ and $y \in C$, $y \in B \cap C$ (by the definition of $\cap$).
+
+Since $x \in A$ and $y \in B \cap C$, by the definition of Cartesian product,
+$(x, y) \in A \times (B \cap C)$.
+
+Hence it has been shown that
+$(A \times B) \cap (A \times C) \subseteq A \times (B \cap C)$.
+
+_Conclusion:_
+
+Since both subset relations have been proven, it is concluded that
+$A \times (B \cap C) = (A \times B) \cap (A \times C)$ by the definition of set
+equality.
+
+This is what was to be shown.
+
+Q.E.D.
 
 23. Find the mistake in the following "proof" that for all sets $A$, $B$, and
     $C$, if $A \subseteq B$ and $B \subseteq C$ then $A \subseteq C$.
@@ -1580,6 +2334,19 @@ $B \subseteq C$. Since $A \subseteq B$, there is an element $x$ such that
 $x \in A$ and $x \in B$, and since $B \subseteq C$, there is an element $x$ such
 that $x \in B$ and $x \in C$. Hence there is an element $x$ such that $x \in A$
 and $x \in C$ and so $A \subseteq C$.
+
+There is more than one error in this "proof." The most serious is the misuse of
+the definition of subset. To say that $A$ is a subset of $B$ means that for
+every $x$, **if** $x \in A$ **then** $x \in B$. It does not mean that there
+exists an element of $A$ that is also an element of $B$. The second error in the
+proof occurs in the last sentence. Even if there is an element in $A$ that is in
+$B$ and an element in $B$ that is in $C$, it does not follow that there is an
+element in $A$ that is in $C$.
+
+For instance, suppose $A = \{1, 2\}$, $B = \{2, 3\}$, and $C = \{3, 4\}$. Then
+there is an element in $A$ that is in $B$ (namely $2$) and there is an element
+in $B$ that is in $C$ (namely, $3$), but there is no element in $A$ that is in
+$C$.
 
 24. Find the mistake in the following "proof."
 
@@ -1591,6 +2358,13 @@ or $x \notin B$ by definition of complement, and so $x \notin A \cup B$ by
 definition of union. Thus $x \in (A \cup B)^c$ by definition of complement, and
 hence $A^c \cup B^c \subseteq (A \cup B)^c$.
 
+The mistake in this "proof" occurs when the author misuses the definition of
+union in the sentence "and so $x \notin A \cup B$ by definition of union."
+
+For example, take $x = 1$, $A = \{1\}$ and $B = \{2\}$, then $A^c \cup B^c$ is
+true since $B^c$ is true, but $x \notin A \cup B$ ($x \in (A \cup B)^c$) is
+false since $1 \in \{1, 2\}$.
+
 25. Find the mistake in the following "proof" that for all sets $A$ and $B$,
     $(A - B) \cup (A \cap B) \subseteq A$.
 
@@ -1598,6 +2372,14 @@ hence $A^c \cup B^c \subseteq (A \cup B)^c$.
 $x \in (A - B) \cup (A \cap B)$. If $x \in A$ then $x \in A - B$, and so, by
 definition of difference, $x \in A$ and $x \notin B$. In particular, $x \in A$,
 and, therefore, $(A - B) \cup (A \cap B) \subseteq A$ by definition of subset.
+
+The author of this "proof" makes a mistake when they assume the conclusion, "If
+$x \in A$." The supposition should be "Suppose $x$ is some element such that
+$x \in (A - B) \cup (A \cap B)$" and follow from there.
+
+Furthermore it does not follow that if $x \in A$, then $x \in A - B$. Suppose
+$A = B = \{x\}$, then $x \in A$, but $A - B = \emptyset$, and by definition of
+$\emptyset$, $x \notin \emptyset$, so $x \notin A - B$.
 
 26. Consider the Venn diagram below.
 
@@ -1607,17 +2389,25 @@ a. Illustrate one of the distributive laws by shading in the region
 corresponding to $A \cup (B \cap C)$ on one copy of the diagram and
 $(A \cup B) \cap (A \cup C)$ on another.
 
+Omitted.
+
 b. Illustrate the other distributive law by shading in the region corresponding
 to $A \cap (B \cup C)$ on one copy of the diagram and
 $(A \cap B) \cup (A \cap C)$ on another.
+
+Omitted.
 
 c. Illustrate one of De Morgan's laws by shading in the region corresponding to
 $(A \cup B)^c$ on one copy of the diagram and $A^c \cap B^c$ on the other.
 (Leave the set $C$ out of your diagrams.)
 
+Omitted.
+
 d. Illustrate the other De Morgan's law by shading in the region corresponding
 to $(A \cap B)^c$ on one copy of the diagram and $A^c \cup B^c$ on the other.
 (Leave the set $C$ out of your diagrams.)
+
+Omitted.
 
 27. Fill in the blanks in the following proof that for all sets $A$ and $B$,
     $(A - B) \cap (B - A) = \emptyset$.
@@ -1632,37 +2422,242 @@ particular $x \in A$ and $x \notin$ __ (f) __, which is a contradiction. Hence
 _[the supposition that $(A - B) \cap (B - A) \neq \emptyset$ is false, and so]_
 __ (g) __.
 
+a. $(A - B) \cap (B - A)$
+
+b. intersection
+
+c. $B - A$
+
+d. $B$
+
+e. $A$
+
+f. $A$
+
+g. $(A - B) \cap (B - A) = \emptyset$
+
 Use the element method for proving a set equals the empty set to prove each
 statement in 28-38. Assume that all sets are subsets of a universal set $U$.
 
 28. For all sets $A$ and $B$, $(A \cap B) \cap (A \cap B^c) = \emptyset$. (This
     property is used in Section 9.9.)
 
+**Proof (by contradiction):**
+
+Let $A$ and $B$ be any sets and suppose
+$(A \cap B) \cap (A \cap B^c) \neq \emptyset$.
+
+Suppose $x$ is some element such that $x \in (A \cap B) \cap (A \cap B^c)$.
+
+By the definition of $\cap$, this means that $x \in (A \cap B)$ and
+$x \in (A \cap B^c)$.
+
+Since $x \in (A \cap B)$, this means that $x \in A$ and $x \in B$.
+
+Since $x \in (A \cap B^c)$, this means that $x \in A$ and $x \notin B$.
+
+So $x \in B$ and $x \notin B$, which is a contradiction.
+
+Hence the supposition is false, and therefore
+$(A \cap B) \cap (A \cap B^c) = \emptyset$.
+
+Q.E.D.
+
 29. For all sets $A$, $B$, and $C$,
 
 $$ (A - C) \cap (B - C) \cap (A - B) = \emptyset $$
 
+**Proof (by contradiction):**
+
+Let $A$, $B$, and $C$ be any sets, and suppose
+$(A - C) \cap (B - C) \cap (A - B) \neq \emptyset$.
+
+Suppose $x$ is some element such that $x \in (A - C) \cap (B - C) \cap (A - B)$.
+
+By the definition of $\cap$, this means that $x \in (A - C)$ and $x \in (B - C)$
+and $x \in (A - B)$.
+
+By the definition of difference, this means that $x \in A$ and $x \notin C$ and
+$x \in B$ and $x \notin C$ and $x \in A$ and $x \notin B$.
+
+So $x \in B$ and $x \notin B$, which is a contradiction.
+
+Hence the supposition is false, and therefore
+$(A - C) \cap (B - C) \cap (A - B) = \emptyset$.
+
+Q.E.D.
+
 30. For every subset $A$ of a universal set $U$, $A \cap A^c = \emptyset$.
+
+**Proof (by contradiction):**
+
+Let $A$ be any set and suppose $A \cap A^c \neq \emptyset$.
+
+Suppose $x$ is some element such that $x \in A \cap A^c$.
+
+By the definition of $\cap$, this means that $x \in A$ and $x \in A^c$.
+
+By the definition of complement, this means that $x \in A$ and $x \notin A$,
+which is a contradiction.
+
+Hence the supposition is false, and therefore $A \cap A^c = \emptyset$.
+
+Q.E.D.
 
 31. If $U$ denotes a universal set, then $U^c = \emptyset$.
 
+**Proof (by contradiction):**
+
+Let $U$ be the universal set of all elements, and suppose $U^c \neq \emptyset$.
+
+Suppose $x$ is some element such that $x \in U^c$.
+
+By definition of complement, this means that $x \notin U$.
+
+Since $U$ is the universal set of all elements, it follows that $x \in U$.
+
+So $x \notin U$ and $x \in U$, which is a contradiction.
+
+Hence the supposition is false, and therefore $U^c = \emptyset$.
+
+Q.E.D.
+
 32. For every set $A$, $A \times \emptyset = \emptyset$.
+
+**Proof (by contradiction):**
+
+Let $A$ be any set and suppose $A \times \emptyset \neq \emptyset$.
+
+Suppose $(x, y)$ are any element pair such that $(x, y) \in A \times \emptyset$.
+
+By the definition of Cartesian product, this means that $x \in A$ and
+$y \in emptyset$. By the definition of $\emptyset$, $y \notin \emptyset$.
+
+So $y \in \emptyset$ and $y \notin \emptyset$, which is a contradiction.
+
+Hence the supposition is false, and therefore $A \times \emptyset = \emptyset$.
+
+Q.E.D.
 
 33. For all sets $A$ and $B$, if $A \subseteq B$ then $A \cap B^c = \emptyset$.
 
+**Proof (by contradiction):**
+
+Let $A$ and $B$ be any sets such that $A \subseteq B$.
+
+Suppose $A \cap B^c \neq \emptyset$. Then let $x$ be some element such that
+$x \in A \cap B^c$.
+
+By the definition of $\cap$, this means that $x \in A$ and $x \in B^c$. By the
+definition of complement, this means that $x \in A$ and $x \notin B$.
+
+Since $x \in A$ and $A \subseteq B$, it follows that $x \in B$ by definition of
+subset.
+
+So $x \notin B$ and $x \in B$, which is a contradiction.
+
+Hence the supposition is false, therefore $A \cap B^c = \emptyset$.
+
+Q.E.D.
+
 34. For all sets $A$ and $B$, if $B \subseteq A^c$ then $A \cap B = \emptyset$.
+
+**Proof (by contradiction):**
+
+Let $A$ and $B$ be any sets such that $B \subseteq A^c$.
+
+Suppose $A \cap B \neq \emptyset$. Then let $x$ be some element such that
+$x \in A \cap B$.
+
+By the definition of $\cap$, this means that $x \in A$ and $x \in B$.
+
+Since $x \in B$ and $B \subseteq A^c$, it follows that $x \notin A$.
+
+So $x \in A$ and $x \notin A$, which is a contradiction.
+
+Hence the supposition is false, and therefore $A \cap B = \emptyset$.
+
+Q.E.D.
 
 35. For all sets $A$, $B$, and $C$, if $A \subseteq B$ and
     $B \cap C = \emptyset$ then $A \cap C = \emptyset$.
 
+**Proof (by contradiction):**
+
+Let $A$, $B$, and $C$ be any sets such that $A \subseteq B$ and
+$B \cap C = \emptyset$.
+
+Suppose $A \cap C \neq \emptyset$, then let $x$ be some element such that
+$x \in A \cap C$.
+
+By the definition of $\cap$, this means that $x \in A$ and $x \in C$.
+
+Since $x \in A$ and $A \subseteq B$, then $x \in B$ by definition of subset.
+
+Thus $x \in B$ and $x \in C$, which is, by definition of $\cap$,
+$x \in B \cap C$.
+
+$B \cap C = \emptyset$, so $x \in emptyset$.
+
+But by the definition of $\emptyset$, $x \notin \emptyset$.
+
+So $x \in \emptyset$ and $x \notin \emptyset$, which is a contradiction.
+
+Hence the supposition is false, and therefore $A \cap C = \emptyset$.
+
+Q.E.D.
+
 36. For all sets $A$, $B$, and $C$, if $C \subseteq B - A$, then
     $A \cap C = \emptyset$.
+
+**Proof (by contradiction):**
+
+Let $A$, $B$, and $C$ be any sets such that $C \subseteq B - A$.
+
+Suppose $A \cap C \neq \emptyset$, then let $x$ be some element such that
+$x \in A \cap C$.
+
+By the definition of $\cap$, this means that $x \in A$ and $x \in C$.
+
+Since $x \in C$, and $C \subseteq B - A$, this means that $x \in B - A$.
+Furthermore, by the definition of difference, this means that $x \in B$ and
+$x \notin A$.
+
+So $x \in A$ and $x \notin A$, which is a contradiction.
+
+Hence the supposition is false, and therefore $A \cap C = \emptyset$.
+
+Q.E.D.
 
 37. For all sets $A$, $B$, and $C$, if $B \cap C \subseteq A$, then
     $(C - A) \cap (B - A) = \emptyset$.
 
+**Proof (by contradiction):**
+
+Let $A$, $B$, and $C$ be any sets such that $B \cap C \subseteq A$.
+
+Suppose $(C - A) \cap (B - A) \neq \emptyset$, then let $x$ be some element such
+that $x \in (C - A) \cap (B - A)$.
+
+By the definition of $\cap$, this means that $x \in (C - A)$ and
+$x \in (B - A)$.
+
+By the definition of difference, this means that $x \in C$ and $x \notin A$ and
+$x \in B$ and $x \notin A$.
+
+Since $x \in B$ and $x \in C$, this means that $x \in B \cap C$.
+
+$B \cap C \subseteq A$, so $x \in A$, by definition of subset.
+
+So $x \notin A$ and $x \in A$, which is a contradiction.
+
+Hence the supposition is false, and therefore
+$(C - A) \cap (B - A) = \emptyset$.
+
 38. For all sets $A$, $B$, $C$, and $D$, if $A \cap C = \emptyset$ then
     $(A \times B) \cap (C \times D) = \emptyset$.
+
+Omitted.
 
 Prove each statement in 39-44.
 
