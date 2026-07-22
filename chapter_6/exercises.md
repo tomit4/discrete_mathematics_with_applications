@@ -2665,29 +2665,43 @@ Prove each statement in 39-44.
 
 a. $(A - B) \cup (B - A) \cup (A \cap B) = A \cup B$
 
+Omitted.
+
 b. The sets $(A - B)$, $(B - A)$, and $(A \cap B)$ are mutually disjoint.
+
+Omitted.
 
 40. For every positive integer $n$, if $A$ and $B_1, B_2, B_3, \dots$ are any
     sets, then
 
 $$ A \cap \left(\bigcup_{i = 1}^{n}B_i\right) = \bigcup_{i = 1}^{n}(A \cap B_i) $$
 
+Omitted.
+
 41. For every positive integer $n$, if $A_1, A_2, A_3, \dots$ and $B$ are any
     sets, then
 
 $$ \bigcap_{i = 1}^{n}(A_i - B) = \left(\bigcup_{i = 1}^{n}A_i\right) - B $$
+
+Omitted.
 
 42. For every positive integer $n$, if $A_1, A_2, A_3, \dots$ and $B$ are any
     sets, then
 
 $$ \bigcap_{i = 1}^{n}(A_i - B) = \left(\bigcap_{i = 1}^{n}A_i\right) - B $$
 
+Omitted.
+
 43. For every positive integer $n$, if $A$ and $B_1, B_2, B_3, \dots$ are any
     sets, then
 
 $$ \bigcup_{i = 1}^{n}(A \times B_i) = A \times \left(\bigcup_{i = 1}^{n}B_i\right) $$
 
+Omitted.
+
 44. For every positive integer $n$, if $A$ and $B_1, B_2, B_3, \dots$ are any
     sets, then
 
 $$ \bigcap_{i = 1}^{n}(A \times B_i) = A \times \left(\bigcap_{i = 1}^{n}B_i\right) $$
+
+Omitted.
