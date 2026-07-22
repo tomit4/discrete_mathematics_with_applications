@@ -497,3 +497,213 @@ _[This is what was to be shown.]_
 
 _[Since we have proved both the basis step and the inductive step, we conclude
 that the theorem is true.]_
+
+---
+
+Page 439
+
+**Definition and Axioms for a Boolean Algebra**
+
+A **Boolean algebra** is a set $B$ together with two operations, generally
+denoted $+$ and $\cdot$, such that for all $a$ and $b$ in $B$ both $a + b$ and
+$a \cdot b$ are in $B$ and the following axioms are assumed to hold:
+
+1. _Commutative Laws:_ For all $a$ and $b$ in $B$,
+
+$$ \text{(a) } a + b = b + a \quad \text{ and } \quad \text{(b) } a \cdot b = b \cdot a $$
+
+2. _Associative Laws:_ For all $a$, $b$, and $c$ in $B$,
+
+$$ \text{(a) } (a + b) + c = a + (b + c) \quad \text{ and } \quad \text{(b) } (a \cdot b) \cdot c = a \cdot (b \cdot c) $$
+
+3. _Distributive Laws:_ For all $a$, $b$, and $c$ in $B$,
+
+$$ \text{(a) } a + (b \cdot c) = (a + b) \cdot (a + c) \quad \text{ and } \quad \text{(b) } a \cdot (b + c) = (a \cdot b) + (a \cdot c) $$
+
+4. _Identity Laws:_ There exist distinct elements $0$ and $1$ in $B$ such that
+   for each $a$ in $B$,
+
+$$ \text{(a) } a + 0 = a \quad \text{ and } \quad \text{(b) } a \cdot 1 = a $$
+
+5. _Complement Laws:_ For each $a$ in $B$, there exists an element in $B$,
+   denoted $\overline{a}$ and called the **complement** or **negation** of $a$,
+   such that
+
+$$ \text{(a) } a + \overline{a} = 1 \quad \text{ and } \quad \text{(b) } a \cdot \overline{a} = 0 $$
+
+---
+
+Page 439
+
+**Theorem 6.4.1 Properties of a Boolean Algebra**
+
+Let $B$ be any Boolean algebra.
+
+1. _Uniqueness of the Complement Laws:_ For all $a$ and $x$ in $B$, if
+   $a + x = 1$ and $a \cdot x = 0$ then $x = \overline{a}$.
+
+2. _Uniqueness of $0$ and $1$:_ If there exists $x$ in $B$ such that $a + x = a$
+   for every $a$ in $B$, then $x = 0$, and if there exists $y$ in $B$ such that
+   $a \cdot y = a$ for every $a$ in $B$, then $y = 1$.
+
+3. _Double Complement Law:_ For every $a \in B, \overline{(\overline{a})} = a$.
+
+4. _Idempotent Laws:_ For every $a \in B$ ,
+
+$$ \text{(a) } a + a = a \quad \text{ and } \quad \text{(b) } a \cdot a = a $$
+
+5. _Universal Bound Laws:_ For every $a \in B$,
+
+$$ \text{(a) } a + 1 = 1 \quad \text{ and } \quad \text{(b) } a \cdot 0 = 0 $$
+
+6. _De Morgan's Laws:_ For all $a$ and $b \in B$,
+
+$$ \text{(a) } \overline{a + b} = \oveline{a} \cdot \overline{b} \quad \text{ and } \quad \text{(b) } \overline{a \cdot b} = \overline{a} + \overline{b}  $$
+
+7. _Absorption Laws:_ For all $a$ and $b \in B$,
+
+$$ \text{(a) } (a + b) \cdot a = a \quad \text{ and } \quad \text{(b) } (a \cdot b) + a = a $$
+
+8. _Complements of $0$ and $1$:_
+
+$$ \text{(a) } \overline{0} = 1 \quad \text{ and } \quad \text{(b) } \overline{1} = 0 $$
+
+**Proof:**
+
+_Part 1: Uniqueness of the Complement Law_
+
+Suppose $a$ and $x$ are particular, but arbitrarily chosen, elements of $B$ that
+satisfy the following hypothesis: $a + x = 1$ and $a \cdot x = 0$. Then
+
+$$ x = x \cdot 1 $$
+
+because $1$ is an identity for $\cdot$
+
+$$ = x \cdot (a + \overline{a}) $$
+
+by the complement law for $+$
+
+$$ = x \cdot a + x \cdot \overline{a} $$
+
+by the distributive law for $\cdot$ over $+$
+
+$$ =  a \cdot x + x \cdot \overline{a} $$
+
+by the commutative law for $\cdot$
+
+$$ = 0 + x \cdot \overline{a} $$
+
+by hypothesis
+
+$$ = a \cdot \overline{a} + x \cdot \overline{a} $$
+
+by the complement law for $\cdot$
+
+$$ = (\overline{a} \cdot a) + (\overline{a} \cdot x) $$
+
+by the commutative law for $\cdot$
+
+$$ = \overline{a} \cdot (a + x) $$
+
+by the distributive law for $\cdot$ over $+$
+
+$$ = \overline{a} \cdot 1 $$
+
+by hypothesis
+
+$$ = \overline{a} $$
+
+because $1$ is an identity for $\cdot$.
+
+Proofs of the other parts of the theorem are discussed in the examples that
+follow and in the exercises.
+
+---
+
+Page 441
+
+**Theorem 6.4.1(3) Double Complement Law**
+
+For every element $a$ in a Boolean algebra $B$, $\overline{(\overline{a})} = a$.
+
+**Proof:**
+
+Suppose $B$ is a Boolean algebra and $a$ is any element of $B$. Then
+
+$$ \overline{a} + a = a + \overline{a} $$
+
+by the commutative law for $+$
+
+$$ = 1 $$
+
+by the complement law for $1$
+
+and
+
+$$ \overline{a} \cdot a = a \cdot \overline{a} $$
+
+by the commutative law for $\cdot$
+
+$$ = 0 $$
+
+by the complement law for $0$
+
+Thus $a$ satisfies the two equations with respect to $\overline{a}$ that are
+satisfied by the complement of $\overline{a}$. From the fact that the complement
+of $a$ is unique, we conclude that $\overline{(\overline{a})} = a$.
+
+---
+
+Page 444
+
+**Theorem 6.4.2**
+
+There is no computer algorithm that will accept any algorithm $X$ and data set
+$D$ as input and then will output "halts" or "loops forever" to indicate whether
+or not $X$ terminates in a finite number of steps when $X$ is run with data set
+$D$.
+
+**Proof (by contradiction):**
+
+Suppose there is an algorithm, CheckHalt, such that if an algorithm $X$ and a
+data set $D$ are input, then
+
+$\text{CheckHalt}(X, D)$ prints
+
+"halts" if $X$ terminates in a finite number of steps when run with data set $D$
+
+or
+
+"loops forever" if $X$ does not terminate in a finite number of steps when run
+with data set $D$.
+
+_[To show that no algorithm such as CheckHalt can exist, we will deduce a
+contradiction.]_
+
+Observe that the sequence of characters making up an algorithm $X$ can be
+regarded as a data set itself. Thus it is possible to consider running CheckHalt
+with input $(X, X)$. Define a new algorithm, Test, as follows: For any input
+algorithm $X$,
+
+$\text{Test}(X)$
+
+loops forever if $\text{CheckHalt}(X, X)$ prints "halts"
+
+or
+
+stops if $\text{CheckHalt}(X, X)$ prints "loops forever".
+
+Now run algorithm Test with input Test. If $\text{Test}(\text{Test})$ terminates
+after a finite number of steps, then the value of
+$\text{Checkhalt}(\text{Test}, \text{Test})$ is "halts" and so
+$\text{Test}(\text{Test})$ loops forever.
+
+On the other hand, if $\text{Test}(\text{Test})$ does not terminate after a
+finite number of steps, then $\text{CheckHalt}(\text{Test}, \text{Test})$ prints
+"loops forever" and so $\text{Test}(\text{Test})$ terminates.
+
+The two paragraphs above show that $\text{Test}(\text{Test})$ loops forever and
+also that it terminates. This is a contradiction. But the existence of Test
+follows logically from the supposition of the existence of an algorithm
+CheckHalt that can check any algorithm and data set for termination. _[Hence the
+supposition must be false, and there is no such algorithm.]_

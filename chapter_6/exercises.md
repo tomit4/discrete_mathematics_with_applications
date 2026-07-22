@@ -4184,3 +4184,261 @@ Omitted.
     both sides with $A$ and deduce the identity.
 
 Omitted.
+
+---
+
+Page 445
+
+**Exercise Set 6.4**
+
+In 1-3 assume that $B$ is a Boolean algebra with operations $+$ and $\cdot$.
+Give the reasons needed to fill in the blanks in the proofs using only the
+axioms for a Boolean algebra.
+
+1. _Idempotent law for $\cdot$:_ For every $a$ in $B$, $a \cdot a = a$.
+
+**Proof:**
+
+Let $a$ be any element of $B$. Then
+
+$$ a = a \cdot 1 $$
+
+__ (a) __
+
+$$ = a \cdot (a + \overline{a}) $$
+
+__ (b) __
+
+$$ = (a \cdot a) + (a \cdot \overline{a}) $$
+
+__ \(c\) __
+
+$$ = (a \cdot a) + 0 $$
+
+__ (d) __
+
+$$ = a \cdot a $$
+
+__ (e) __
+
+2. _Universal bound law for $+$:_ For every $a$ in $B$, $a + 1 = 1$.
+
+**Proof:**
+
+Let $a$ be any element in $B$. Then
+
+$$ a + 1 = a + (a + \overline{a}) $$
+
+__ (a) __
+
+$$ = (a + a) + \overline{a} $$
+
+__ (b) __
+
+$$ = a + \overline{a} $$
+
+by Example 6.4.2
+
+$$ = 1 $$
+
+__ \(c\) __
+
+3. _Absorption law for $\cdot$ over $+$:_ For all $a$ and $b$ in $B$,
+   $(a + b) \cdot a = a$.
+
+**Proof:** Let $a$ be any element of $B$. Then
+
+$$ (a + b) \cdot a = a \cdot (a + b) $$
+
+__ (a) __
+
+$$ = a \cdot a + a \cdot b $$
+
+__ (b) __
+
+$$ = a + a \cdot b $$
+
+by exercise 1
+
+$$ = a \cdot 1 + a \cdot b $$
+
+__ \(c\) __
+
+$$  = a \cdot (1 + b) $$
+
+__ (d) __
+
+$$  = a \cdot (b + 1) $$
+
+__ (e) __
+
+$$ = a \cdot 1 $$
+
+by exercise 2
+
+$$  = a $$
+
+__ (f) __
+
+In 4-10 assume that $B$ is a Boolean algebra with operations $+$ and $\cdot$.
+Prove each statement using only the axioms for a Boolean algebra and statements
+proved in the text or in lower-numbered exercises.
+
+4. _Universal bound for $0$:_ For every $a$ in $B$, $a \cdot 0 = 0$.
+
+5. _Complements of $0$ and $1$:_
+
+a. $\overline{0} = 1$
+
+b. $\overline{1} = 0$
+
+6. _Uniqueness of $0$:_ There is only one element of $B$ that is an identity for
+   $+$.
+
+7. _Uniqueness of $1$:_ There is only one element of $B$ that 8s an identity for
+   $\cdot$.
+
+8. _De Morgan's law for $\cdot$:_ For all $a$ and $b$ in $B$,
+   $\overline{a \cdot b} = \overline{a} + \overline{b}$. (_Hint:_ Prove that
+   $(a \cdot b) + (\overline{a} + \overline{b}) = 1$ and that
+   $(a \cdot b) + (\overline{a} + \overline{b}) = 0$, and use the fact that
+   $a \cdot b$ has a unique complement.)
+
+9. _De Morgan's law for $+$:_ For all $a$ and $b$ in $B$,
+   $\overline{a + b} = \overline{a} \cdot \overline{b}$.
+
+10. _Cancellation law:_ For all $x$, $y$, and $z$ in $B$, if $x + y = x + z$ and
+    $x \cdot y = x \cdot z$, then $y = z$.
+
+11. Let $S = \{0, 1\}$, and define operations $+$ and $\cdot$ on $S$ by the
+    following tables:
+
+| $+$ | $0$ | $1$ |
+| --- | --- | --- |
+| $0$ | $0$ | $1$ |
+| $1$ | $1$ | $1$ |
+
+| $\cdot$ | $0$ | $1$ |
+| ------- | --- | --- |
+| $0$     | $0$ | $0$ |
+| $1$     | $0$ | $1$ |
+
+a. Show that the elements of $S$ satisfy the following properties:
+
+    i. the commutative law for $+$.
+    ii. the commutative law for $\cdot$.
+    iii. the associative law for $+$.
+    iv. the associative law for $\cdot$.
+    v. the distributive law for $+$ over $\cdot$.
+    vi. the distributive law for $\cdot$ over $+$.
+
+b. Show that $0$ is an identity element for $+$ and that $1$ is an identity
+element for $\cdot$.
+
+c. Define $\overline{0} = 1$ and $\overline{1} = 0$. Show that for every $a$ in
+$S$, $a + \overline{a} = 1$ and $a \cdot \overline{a} = 0$. It follows from
+parts (a)-\(c\) that $S$ is a Boolean algebra witgh the operations $+$ and
+$\cdot$.
+
+Exercises 12-15 provide an outline for a proof that the associative laws, which
+were included as an axiom for a Boolean algebra, can be derived from the other
+four axioms. The outline is from _Introduction to Boolean Algebra_ by S. Givant
+and P. Halmos, Springer, 2009. In order to avoid unneeded parentheses, assume
+that $\cdot$ takes precedence over $+$.
+
+12. The universal bound law for $+$ states that for every element $a$ in a
+    Boolean algebra, $a + 1 = 1$. The proof shown in exercise 2 used the
+    associative law for $+$. Rederive the law without using the associative law
+    and using only the other four axioms for a Boolean algebra.
+
+13. The absorption law for $+$ states that for all elements $a$ and $b$ in a
+    Boolean algebra, $a \cdot b + a = a$. Prove this law without using the
+    associative law and using only the other four axioms for a Boolean algebra
+    plus the result of exercise 12.
+
+14. _Test for equality law:_ For all elements $a$, $b$, and $c$ in a Boolean
+    algebra,
+
+If $b \cdot a = c \cdot a$ and $b \cdot \overline{a} = c \cdot \overline{a}$,
+then $b = c$.
+
+Without using the associative law, derive this law from the other four laws in
+the axioms for a Boolean algebra plus the result of exercise 12.
+
+15. The associative law for $+$ states that for all elements $a$, $b$, and $c$
+    in a Boolean algebra, $a + (b + c) = (a + b) + c$. Show that this law, as
+    well as the associative law for $\cdot$, can be derived from the other four
+    axioms in the definition and axioms for a Boolean algebra. Then explain how
+    to use your work to obtain a derivation for the associative law for $\cdot$.
+
+_Hints:_ To prove this theorem, suppose $a$, $b$, and $c$ are any elements in a
+Boolean algebra $B$, and divide the proof into three parts. _Part 1:_ Prove that
+$(a + (b + c)) \cdot a = ((a + b) + c) \cdot a$. _Part 2:_ Prove that
+$(a + (b + c)) \cdot \overline{a} = ((a + b) + c) \cdot \overline{a}$. _Part 3:_
+Use the results of parts 1 and 2 to prove that $a + (b + c) = (a + b) + c$. You
+may use the universal bound law for $+$, the absorption law for $+$, and the
+test for equality law from exercises 12, 13, and 14 because the associative laws
+were not used to derive these properties.
+
+In 16-21 determine whether each sentence is a statement. Explain your answers.
+
+16. This sentence is false.
+
+17. If $1 + 1 = 3$, then $1 = 0$.
+
+18. $\boxed{\text{The sentence in this box is a lie.}}$
+
+19. All positive integers with negative squares are prime.
+
+20. This sentence is false or $1 + 1 = 3$.
+
+21. This sentence is false and $1 + 1 = 2$.
+
+22.
+
+a. Assuming that the following sentence is a statement, prove that $1 + 1 = 3$:
+
+If this sentence is true, then $1 + 1 = 3$.
+
+b. What can you deduce from part (a) about the status of "This sentence is
+true"? Why? (This example is known as Lob's paradox.)
+
+23. The following two sentences were devised by the logician Saul Kripke. While
+    not intrinsically paradoxical, they could be paradoxical under certain
+    circumstances. Describe such circumstances.
+
+    i. Most of Nixon's assertions about Watergate are false.
+
+    ii. Everything Jones says about Watergate is true.
+
+(_Hint:_ Suppose Nixon says (ii) and the only utterance Jones makes about
+Watergate is (i).)
+
+24. Can there exist a computer program that has as output a list of all the
+    computer programs that do not list themselves in their output? Explain your
+    answer.
+
+25. Can there exist a book that refers to all those books and only those books
+    that do not refer to themselves? Explain your answer.
+
+26. Some English adjectives are descriptive of themselves (for instance, the
+    word _polysyllabic_ is polysyllabic) whereas others are not (for instance,
+    the word _monosyllabic_ is not monosyllabic). The word _heterological_
+    refers to an adjective that does not describe itself. Is _heterological_
+    heterological? Explain your answer.
+
+27. As strange as it may seem, it is possible to give a precise-looking verbal
+    definition of an integer that, in fact, is not a definition at all. The
+    following was devised by an English librarian, G.G. Berry, and reported by
+    Bertrand Russell. Explain how it leads to a contradiction. Let $n$ be "the
+    smallest integer not describable in fewer than 12 English words." (Note that
+    the total number of strings consisting of 11 or fewer English words is
+    finite.)
+
+28. Is there an algorithm which, for a fixed quantity $a$ and any input
+    algorithm $X$ and data set $D$, can determine whether $X$ prints $a$ when
+    run with data set $D$? Explain. (This problem is called the **printing
+    problem**.)
+
+29. Use a technique similar to that used to derive Russell's paradox to prove
+    that for any set $A$, $\mathscr{P}(A) \nsubseteq A$.

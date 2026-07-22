@@ -114,3 +114,23 @@ cite the property from 6.2.2 used
    stated.
 
 exactly
+
+---
+
+Page 445
+
+**Test Yourself**
+
+1. In the comparison between the structure of the set of statement forms and the
+   set of subsets of a universal set, the _or_ operation $\vee$ corresponds to
+   _____, the _and_ operation $\wedge$ corresponds to _____, a tautology
+   $\mathbf{t}$ corresponds to _____, a contradiction $\mathbf{c}$ corresponds
+   to _____, and the negation operation, denoted $\neg$, corresponds to _____.
+
+2. The operations of $+$ and $\cdot$ in a Boolean algebra are generalizations of
+   the operations of _____ and _____ in the set of all statement forms in a
+   given finite number of variables and the operations of _____ and _____ in the
+   set of all subsets of a given set.
+
+3. Russell showed that the following proposed "set definition" could not
+   actually define a set: _____.
