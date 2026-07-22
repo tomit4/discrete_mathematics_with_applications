@@ -2719,14 +2719,118 @@ Assume all sets are subsets of a universal set $U$.
 
 $$ (A \cup B) \cap C = A \cup (B \cap C) $$
 
+**Disproof (by counterexample):**
+
+Let $A$, $B$, and $C$ be any sets where $A$ has an element not in $C$. For
+example:
+
+$$ A = \{1, 2\}, B = \{2\}, C = \{2\} $$
+
+Then, the left-hand side of the given equation becomes:
+
+$$ A \cup B = \{1, 2\} $$
+
+$$ (A \cup B) \cap C = \{\2\} $$
+
+Then, the right-hand side of the given equation becomes:
+
+$$ B \cap C = \{2\} $$
+
+$$ A \cup (B \cap C) = \{1, 2\} $$
+
+Thus we can see that:
+
+$$ (A \cup B) \cap C = \{2\} \neq \{1, 2\} = A \cup (B \cap C) $$
+
+as $1 \in $A \cup (B \cap C)$, but $1 \notin (A \cup B) \cap C$.
+
+Hence it has been shown that $(A \cup B) \cap C \neq A \cup (B \cap C)$ by
+definition of subset.
+
+Q.E.D.
+
 2. For all sets $A$ and $B$, $(A \cup B)^c = A^c \cup B^c$.
+
+**Disproof (by counterexample):**
+
+Let $U = \{1, 2\}, A = \{1\}, B = \{2\}$.
+
+Then, left-hand side:
+
+$$ A \cup B = \{1, 2\} $$
+
+$$ (A \cup B)^c = U - \{1, 2\} $$
+
+$$ = \emptyset $$
+
+Then, right-hand side:
+
+$$ A^c = U - \{1\} $$
+
+$$ B^c = U - \{2\} $$
+
+$$ A^c \cup B^c = (U - \{1\}) \cup (U - \{2\}) $$
+
+$$ = \{2\} \cup \{1\} $$
+
+$$ = \{1, 2\} $$
+
+Thus the given equality does not hold.
+
+$$ (A \cup B)^c = \emptyset \neq \{1, 2\} = A^c \cup B^c $$
+
+Therefore it has been shown that $(A \cup B)^c \neq A^c \cup B^c$ by the
+definition of subset.
+
+Q.E.D.
 
 3. For all sets $A$, $B$, and $C$, if $A \nsubseteq B$ and $B \nsubseteq C$ then
    $A \nsubseteq C$.
 
+**Disproof (by counterexample):**
+
+Suppose $A$, $B$, and $C$ are any sets such that $A \nsubseteq B$ and
+$B \nsubseteq C$, but $A$ has an element that is in $C$. For example:
+
+Let $A = \{1\}, B = \{2\}, C = \{1, 3\}$.
+
+It is trivially true that $A \nsubsteq B$ and $B \nsubseteq C$ (since $B$ does
+not have any elements that are in $A$), but notice that $A \subseteq C$ since
+$\{1\} \in \{1, 3\}$.
+
+Therefore the supposition is false by the definition of subset.
+
+Q.E.D.
+
 4. For all sets $A$, $B$, and $C$, if $B \cup C \subseteq A$ then
 
 $$ (A - B) \cap (A - C) = \emptyset $$
+
+**Disproof (by counterexample):**
+
+Suppose $A$, $B$, and $C$ are any sets such that $B \cup C \subseteq A$. For
+example:
+
+Let $A, = \{1, 2, 3\}, B = \{2\}, C =\{3\}$.
+
+It is trivially true that $B \cup C \subseteq A$, since
+$\{2\} \cup \{3\} = \{2, 3\} \subseteq \{1, 2, 3\}$.
+
+Then evaluating the left-hand side of the given equality:
+
+$$ (A - B) \cap (A - C) = (\{1, 2, 3\} - \{2\} ) \cap (\{1, 2, 3\} - \{3\}) $$
+
+$$ = \{1, 3\} \cap \{1, 2\} $$
+
+$$ = \{1\} $$
+
+And note by the definition of $\emptyset$ that:
+
+$$ \{1\} \neq \emptyset $$
+
+Therefore the supposition is false since $(A - B) \cap (A - C) \neq \emptyset$.
+
+Q.E.D.
 
 For each of 5-21 prove each statement that is true and find a counterexample for
 each statement that is false. Assume all sets are subsets of a universal set
@@ -2736,64 +2840,666 @@ $U$.
 
 $$ A - (B - C) = (A - B) - C $$
 
+**Disproof (by counterexample):**
+
+Let $A = \{1, 2, 3\}, B = \{2, 3\}, C = \{3\}$.
+
+Then, evaluating the left-hand side of the given equality:
+
+$$ A - (B - C) = \{1, 2, 3\} - (\{2, 3\} - \{3\}) $$
+
+$$ = \{1, 2, 3\} - \{2\} $$
+
+$$ = \{1, 3\} $$
+
+Then, evaluating the right-hand side of the given equality:
+
+$$ (A - B) - C = (\{1, 2, 3\} - \{2, 3\}) - \{3\} $$
+
+= \{1\} - \{3\} $$
+
+= \{1\} $$
+
+Notice that:
+
+$$ A - (B - C) = \{1, 3\} \neq \{1\} = (A - B) - C $$
+
+Therefore the supposition is false since $A - (B - C) \neq (A - B) - C$.
+
+Q.E.D.
+
 6. For all sets $A$ and $B$, $A \cap (A \cup B) = A$.
+
+**Proof:**
+
+Let $A$ and $B$ be any sets.
+
+To prove $A \cap (A \cup B) = A$, it must be shown that
+$A \cap (A \cup B) \subseteq A$ and also $A \subseteq A \cap (A \cup B)$.
+
+_Proof $A \cap (A \cup B) \subseteq A$:_
+
+Suppose $x$ is any element such that $x \in A \cap (A \cup B)$.
+
+By the definition of $\cap$, this means that $x \in A$ and $x \in A \cup B$.
+Furthermore, by the definition of $\cup$, this means that $x \in A$ and
+$x \in A$ or $x \in B$. In particular, it is known in either case that
+$x \in A$.
+
+Therefore, by definition of a subset, $A \cap (A \cup B) \subseteq A$.
+
+This is what was to be shown.
+
+_Proof $A \subseteq A \cap (A \cup B)$:_
+
+Suppose $x$ is any element such that $x \in A$. By definition of $\cup$, this
+means that $x \in A \cup B$. Furthermore, by definition of $\cap$, it follows
+that $x \in A \cap (A \cup B)$.
+
+Therefore, by definition of subset, $A \subseteq A \cap (A \cup B)$.
+
+This is what was to be shown.
+
+Therefore, since both subset relations have been proved, it can be concluded
+that $A \cap (A \cup B) = A$.
+
+Q.E.D.
 
 7. For all sets $A$, $B$, and $C$,
 
 $$ (A - B) \cap (C - B) = A - (B \cup C) $$
 
+**Disproof (by counterexample):**
+
+Suppose $A$, $B$, and $C$ are any sets such that they are disjoint. For example:
+
+Let $A = \{1\}, B = \{2\}, C = \{3\}$.
+
+Then evaluating the left-hand side of the given equality:
+
+$$ (A - B) \cap (C - B) = (\{1\} - \{2\}) \cap (\{3\} - \{2\}) $$
+
+$$ = \{1\} \cap \{3\} $$
+
+$$ = \emptyset $$
+
+Then evaluating the right-hand side of the given equality:
+
+$$ A - (B \cup C) = \{1\} - (\{2\} \cup \{3\}) $$
+
+$$ = \{1\} - {2, 3\} $$
+
+$$ = \{1\} $$
+
+Notice that:
+
+$$ (A - B) \cap (C - B) = \emptyset \neq \{1\} = A - (B \cup C) $$
+
+Therefore, the supposition is false since
+$(A - B) \cap (C - B) \neq A - (B \cup C)$.
+
+Q.E.D.
+
 8. For all sets $A$ and $B$, if $A^c \subseteq B$ then $A \cup B = U$.
+
+**Proof:**
+
+Let $A$ and $B$ be any sets such that $A^c \subseteq B$.
+
+In order to prove that $A \cup B = U$, it must be shown that
+$A \cup B \subseteq U$ and $U \subseteq A \cup B$.
+
+_Proof $A \cup B \substeq U$:_
+
+Suppose $x$ is any element such that $x \in A \cup B$.
+
+By definition of $\cup$, this means that $x \in A$ or $x \in B$. Regardless of
+whether $x \in A$ or $x \in B$, $x \in U$, by definition of the universal set.
+
+Therefore it has been shown that $A \cup B \subseteq U$.
+
+_Proof $U \subseteq A \cup B$:_
+
+Suppose $x$ is any element. Since $x$ is any element, by definition of the
+universal set $U$, $x \in U$.
+
+It follows then that either $x \in A$ or $x \in A^c$.
+
+_Case $x \in A$:_
+
+Since $x \in A$, by the definition of $\cup$, $x \in A \cup B$.
+
+_Case $x \in A^c$:_
+
+Since $x \in A^c$, by the supposition, this means that $x \in B$ since
+$A^c \subseteq B$.
+
+Since $x \in B$, by definition of $\cup$, $x \in A \cup B$.
+
+In either case $x \in A \cup B$. This is what was to be shown.
+
+_Conclusion:_
+
+Since both subset relations have been proved, it can be concluded that
+$A \cup B = U$.
+
+Q.E.D.
 
 9. For all sets $A$ ,$B$, and $C$, if $A \subseteq C$ and $B \subseteq C$ then
    $A \cup B \subseteq C$.
 
+**Proof:**
+
+Suppose $A$, $B$, and $C$ are any sets such that $A \subseteq C$ and
+$B \subseteq C$.
+
+Let $x$ be any element such that $x \in A \cup B$.
+
+By definition of $\cup$, this means that $x \in A$ or $x \in B$.
+
+_Case $x \in A$:_
+
+Since $x \in A$, $x \in C$ since $A \subseteq C$ (by the supposition and the
+definition of subset).
+
+_Case $x \in B$:_
+
+Since $x \in B$, $x \in C$ since $B \subseteq C$ (by the supposition and the
+definition of subset).
+
+_Conclusion:_
+
+In either case, $x \in C$, so by definition of subset, it can be concluded that
+$A \cup B \subseteq C$.
+
+Q.E.D.
+
 10. For all sets $A$ and $B$, if $A \subseteq B$ then $A \cap B^c = \emptyset$.
+
+**Proof (by contradiction):**
+
+Let $A$ and $B$ be any sets such that $A \subseteq B$ and
+$A \cap B^c \neq \emptyset$.
+
+Let $x$ be any element such that $x \in A \cap B^c$
+
+By definition of $\cap$, this means that $x \in A$ and $x \in B^c$. By
+definition of complement, it follows that this means that $x \in A$ and
+$x \notin B$.
+
+Since $x \in A$, $x \in B$ since $A \subseteq B$ (by the supposition and by the
+definition of subset).
+
+Thus $x \in B$ and $x \notin B$. This is a contradiction.
+
+Hence the supposition is false, and $A \cap B^c = \emptyset$.
+
+Q.E.D.
 
 11. For all sets $A$, $B$, and $C$, if $A \subseteq B$ then
     $A \cap (B \cap C)^c = \emptyset$.
+
+**Disproof (by counterexample):**
+
+Suppose $A$, $B$, $C$, are any sets and $U$ is the universal set such that
+$A \subseteq B$ and $C \subseteq A$ and $C \subseteq B$. For example:
+
+Let $U = \{1, 2, 3, 4\}, A = \{1, 2\}, B = \{1, 2, 3\}, C = \{2\}$.
+
+Then, the left-hand side of the given equality becomes:
+
+$$ A \cap (B \cap C)^c = \{1, 2\} \cap (\{1, 2, 3\} \cap \{2\})^c $$
+
+$$ = \{1, 2\} \cap (\{2\})^c $$
+
+$$ = \{1, 2\} \cap (U - \{2\}) $$
+
+$$ = \{1, 2\} \cap (\{1, 2, 3, 4\} - \{2\}) $$
+
+$$ = \{1, 2\} \cap \{1, 3, 4\} $$
+
+$$ = \{1\} $$
+
+Thus $A \cap (B \cap C)^c \neq \emptyset$ since $\{1\} \neq \emptyset$.
+
+Q.E.D.
 
 12. For all sets $A$, $B$, and $C$,
 
 $$ A \cap (B - C) = (A \cap B) - (A \cap C) $$
 
+**Proof:**
+
+Suppose $A$, $B$, and $C$ are any sets.
+
+To prove $A \cap (B - C) = (A \cap B) - (A \cap C)$, it must be shown that
+$A \cap (B - C) \subseteq (A \cap B) - (A \cap C)$ and that
+$(A \cap B) - (A \cap C) \subseteq A \cap (B - C)$.
+
+_Proof $A \cap (B - C) \subseteq (A \cap B) - (A \cap C)$:_
+
+Let $x$ be any element such that $x \in A \cap (B - C)$.
+
+By the definition of $\cap$, this means that $x \in A$ and $x \in (B - C)$. By
+the definition of difference, this means $x \in A$ and $x \in B$ and
+$x \notin C$.
+
+Since $x \in A$ and $x \in B$, it follows that $x \in A \cap B$ (by the
+definition of $\cap$).
+
+Since $x \in A$ and $x \notin C$, it follows that $x \notin A \cap C$ (by the
+definition of $\cap$.)
+
+Hence $x \in (A \cap B) - (A \cap C)$, by the definition of difference.
+
+Therefore it has been shown that
+$A \cap (B - C) \subseteq (A \cap B) - (A \cap C)$, which is what was to be
+shown.
+
+_Proof $(A \cap B) - (A \cap C) \subseteq A \cap (B - C)$:_
+
+Let $x$ is any element such that $x \in (A \cap B) - (A \cap C)$.
+
+This can be rewritten as $x \in (A \cap B) \cap (A \cap C)^c$, by the set
+difference law.
+
+Furthermore, this can be written as $x \in (A \cap B) \cap (A^c \cup C^c)$ by De
+Morgan's Laws of sets.
+
+This means that $x \in A$ and $x \in B$ and $x \notin A$ or $x \notin C$.
+
+Since we know that $x \in A$, then $x \notin C$ must be true.
+
+Hence $x \in A$ and $x \in B$ and $x \notin C$, or:
+
+$$ x \in A \cap (B - C) $$
+
+Therefore it has been shown that
+$(A \cap B) - (A \cap C) \subseteq A \cap (B - C)$.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since both subset relations have been proved, it can be concluded that
+$A \cap (B - C) = (A \cap B) - (A \cap C)$.
+
+Q.E.D.
+
 13. For all sets $A$, $B$, and $C$,
 
 $$ A \cup (B - C) = (A \cup B) - (A \cup C) $$
 
+**Disproof (by counterexample):**
+
+Suppose $A$, $B$, and $C$ are any sets such that they are disjoint. For example:
+
+Let $A = \{1}, B = \{2\}, C = \{3\}$.
+
+The left-hand side of the equality is:
+
+$$ A \cup (B - C) = \{1\} \cup (\{2\} - \{3\}) $$
+
+$$ = \{1\} \cup \{2\} $$
+
+$$ = \{1, 2\} $$
+
+The right-hand side of the equality is:
+
+$$ (A \cup B) - (A \cup C) = (\{1\} \cup \{2\}) - (\{1\} \cup \{3\}) $$
+
+$$ = \{1, 2\} - \{1, 3\} $$
+
+$$ = \{2\} $$
+
+Note that:
+
+$$ A \cup (B - C) = \{1, 2\} \neq \{2\} = (A \cup B) - (A \cup C) $$
+
+Therefore the supposition has been disproven.
+
+Q.E.D.
+
 14. For all sets $A$, $B$, and $C$, if $A \cap C = B \cap C$ and
     $A \cup C = B \cup C$, then $A = B$.
 
+**Proof:**
+
+Let $A$, $B$, and $C$ be any sets such that $A \cap C = B \cap C$ and
+$A \cup C = B \cup C$.
+
+To prove $A = B$, it must be shown that $A \subseteq B$, and $B \subseteq A$.
+
+_Proof $A \buseteq B$:_
+
+Suppose $x is any element such that $x \in A$.
+
+By the supposition, we know that $A \cap C \subseteq B \cap C$ since
+$A \cap C = B \cap C$.
+
+Therefore since $x \in A$, we must determine if $x \in C$ to determine if
+$A \cap C$ is true.
+
+_Case $x \in C$:_
+
+If $x \in C$, then, since $x \in A$ also, it follows that $A \cap C$ is true,
+and thus by the supposition $A \cap C = B \cap C$ is true.
+
+It follows that $x \in B \cap C$, and thus $x \in B$.
+
+_Case $x \notin C$:_
+
+If $x \notin C$, then $A \cup C$ is true (by virtue of $x \in A$). Then, by
+supposition, $A \cup C = B \cup C$. It follows that $x \in B \cup C$. Since
+$x\notin C$, this means that $x \in B$.
+
+In either case $x \in B$. Therefore it has been shown that $A \subseteq B$.
+
+_Proof $B \buseteq A$:_
+
+Suppose $x is any element such that $x \in B$.
+
+By the supposition, we know that $B \cap C \subseteq A \cap C$ since
+$A \cap C = B \cap C$.
+
+Therefore since $x \in B$, we must determine if $x \in C$ to determine if
+$B \cap C$ is true.
+
+_Case $x \in C$:_
+
+If $x \in C$, then, since $x \in B$ also, it follows that $B \cap C$ is true,
+and thus by the supposition $B \cap C = A \cap C$ is true.
+
+It follows that $x \in A \cap C$, and thus $x \in A$.
+
+_Case $x \notin C$:_
+
+If $x \notin C$, then $B \cup C$ is true (by virtue of $x \in B$). Then, by
+supposition, $B \cup C = A \cup C$. It follows that $x \in A \cup C$. Since
+$x\notin C$, this means that $x \in A$.
+
+In either case $x \in A$. Therefore it has been shown that $B \subseteq A$.
+
+_Conclusion:_
+
+Since both subset relations have been proved, it can be concluded that $A = B$.
+
+Q.E.D.
+
 15. For all sets $A$, $B$, and $C$, $(A - B) \cup C \subseteq A \cup (C - B)$.
+
+**Disproof (by counterexample):**
+
+Suppose $A$, $B$, and $C$ are any sets such that $A \cap B \neq \emptyset$, and
+$B \cap C \neq \emptyset$, but $A \cap C = \emptyset$. For example:
+
+Let $A = \{1, 2\}, B = \{2, 3\}, C = \{3, 4\}$.
+
+Then, evaluating the left-hand side of the given equality:
+
+$$ (A - B) \cup C = (\{1, 2\} - \{2, 3\}) \cup \{3, 4\} $$
+
+$$ = \{1\} \cup \{3, 4\} $$
+
+$$ = \{1, 3, 4\} $$
+
+Then, evaluating the right-hand side of the given equality:
+
+$$ A \cup (C - B) = \{1, 2\} \cup (\{3, 4\} - \{2, 3\}) $$
+
+$$ = \{1, 2\} \cup \{4\} $$
+
+$$ = \{1, 2, 4\} $$
+
+Note that:
+
+$(A - B) \cup C = \{1, 3, 4\} \nsubseteq \{1, 2, 4\} = A \cup (C - B)$
+
+Hence the given supposition is false since $3 \in (A - B) \cup C$ and
+$3 \notin A \cup (C - B)$.
+
+Q.E.D.
 
 16. For all sets $A$ and $B$, if $A \cap B = \emptyset$ then
     $A \times B = \emptyset$.
 
+**Disproof (by counterexample):**
+
+Suppose $A$ and $B$ are any sets such that $A \cap B = \emptyset$. For example:
+
+Let $A = \{1\}, B = \{2\}$.
+
+Note that the supposition is true given the example since:
+
+$$ A \cap B = \{1\} \cap \{2\} = \emptyset $$
+
+By the definition of $\cap$.
+
+Note, though, that:
+
+$$ A \times B = \{1\} \times \{2\} = (1, 2) \neq \emptyset $$
+
+Hence the given supposition is false since $\{1\} \cap \{2\} = \emptyset$, but
+$(1, 2) \neq \emptyset$.
+
+Q.E.D.
+
 17. For all sets $A$ and $B$, if $A \subseteq B$ then
     $\mathscr{P}(A) \subseteq \mathscr{P}(B)$.
+
+**Proof:**
+
+Let $A$ and $B$ be any sets such that $A \subseteq B$.
+
+Suppose $X$ is any set such that $X \in \mathscr{P}(A)$. By the definition of
+power set, it follows that $X \subseteq A$.
+
+Since $X \subseteq A$, $X \subseteq B$ by the supposition/definition of subset
+($A \subseteq B$).
+
+Since $X \subseteq B$, this means that $X \in \mathscr{P}(B)$, by definition of
+power set.
+
+Hence $\mathscr{P}(A) \subseteq \mathscr{P}(B)$.
+
+Q.E.D.
 
 18. For all sets $A$ and $B$,
     $\mathscr{P}(A \cup B) \subseteq \mathscr{P}(A) \cup \mathscr{P}(B)$.
 
+**Disproof (by counterexample):**
+
+Let $A$ and $B$ be any two disjoint sets. For example:
+
+$$ A = \{1\}, B = \{2\} $$
+
+Then, the left-hand side of the given subset relation is:
+
+$$ \mathscr{P}(A \cup B) = \mathscr{P}(\{1\} \cup \{2\}) $$
+
+$$ = \mathscr{P}(\{1, 2\}) $$
+
+$$ = \{\emptyset, \{1\}, \{2\}, \{1, 2\}\} $$
+
+Then, the right-hand side of the given subset relation is:
+
+$$ \mathscr{P}(A) \cup \mathscr{P}(B) = \mathscr{P}(\{1\}) \cup \mathscr{P}(\{2\}) $$
+
+$$ = \{\emptyset, \{1\}\} \cup \{\emptyset, \{2\}\} $$
+
+$$ = \{\emptyset, \{1\}, \{2\}\} $$
+
+Now, note that:
+
+$$ \mathscr{P}(A \cup B) = \{\emptyset, \{1\}, \{2\}, \{1, 2\}\} \nsubseteq \{\emptyset, \{1\}, \{2\}\} = \mathscr{P}(A) \cup \mathscr{P}(B) $$
+
+Hence it has been shown that the supposition is false since $\{1, 2\}$ is not in
+$\{\emptyset, \{1\}, \{2\}\}$.
+
+Q.E.D.
+
 19. For all sets $A$ and $B$,
     $\mathscr{P}(A) \cup \mathscr{P}(B) \subseteq \mathscr{P}(A \cup B)$.
+
+**Proof:**
+
+Suppose $A$ and $B$ are any sets.
+
+Let $X$ be some set such that $X \in \mathscr{P}(A) \cup \mathscr{P}(B)$.
+
+By the definition of $\cup$, this means that $X \in \mathscr{P}(A)$ or
+$X \in \mathscr{P}(B)$.
+
+_Case $X \in \mathscr{P}(A)$:_
+
+By the definition of power set, $X \subseteq A$.
+
+Since $X \subseteq A$, it follows that $X \subseteq A \cup B$, by definition of
+$\cup$.
+
+_Case $X \in \mathscr{P}(B)$:_
+
+By the definition of power set, $X \subseteq B$.
+
+Since $X \subseteq B$, it follows that $X \subseteq A \cup B$, by definition of
+$\cup$.
+
+In either case $X \subseteq A \cup B$. By the definition of power set, this
+means that $X \in \mathscr{P}(A \cup B)$.
+
+This is what was to be shown.
+
+Q.E.D.
 
 20. For all sets $A$ and $B$,
     $\mathscr{P}(A \cap B) = \mathscr{P}(A) \cap \mathscr{P}(B)$.
 
+**Proof:**
+
+Let $A$ and $B$ be any sets.
+
+To prove that $\mathscr{P}(A \cap B) = \mathscr{P}(A) \cap \mathscr{P}(B)$, it
+must be shown that
+$\mathscr{P}(A \cap B) \subseteq \mathscr{P}(A) \cap \mathscr{P}(B)$ and that
+$\mathscr{P}(A) \cap \mathscr{P}(B) \subseteq \mathscr{P}(A \cap B)$.
+
+_Proof $\mathscr{P}(A \cap B) \subseteq \mathscr{P}(A) \cap \mathscr{P}(B)$:_
+
+Suppose $X$ is some set such that $X \in \mathscr{P}(A \cap B)$.
+
+By the definition of power set, this means that $X \subseteq A \cap B$.
+
+By definition of $\cap$, this means that $X \subseteq A$ and $X \subseteq B$.
+
+By the definition of power set, since $X \subseteq A$, this means that
+$X \in \mathscr{P}(A)$.
+
+By the definition of power set, since $X \subseteq B$, this means that
+$X \in \mathscr{P}(B)$.
+
+Hence $X \in \mathscr{P}(A) \cap \mathscr{P}(B)$.
+
+Thus it has been shown that
+$\mathscr{P}(A \cap B) \subseteq \mathscr{P}(A) \cap \mathscr{P}(B)$.
+
+_Proof $\mathscr{P}(A) \cap \mathscr{P}(B) \subseteq \mathscr{P}(A \cap B)$:_
+
+Suppose $X$ is some set such that $X \in \mathscr{P}(A) \cap \mathscr{P}(B)$.
+
+By the definition of $\cap$, this means that $X \in \mathscr{P}(A)$ and
+$X \in \mathscr{P}(B)$.
+
+Since $X \in \mathscr{P}(A)$, by the definition of power set, $X \subseteq A$.
+
+Since $X \in \mathscr{P}(B)$, by the definition of power set, $X \subseteq B$.
+
+Since $X \subseteq A$ and $X \subseteq B$, it follows that
+$X \subseteq A \cap B$, by the definition of subset and $\cap$.
+
+By the definition of power set, since $X \subseteq A \cap B$, this means that
+$X \in \mathscr{P}(A \cap B)$.
+
+Thus it has been shown that
+$\mathscr{P}(A) \cap \mathscr{P}(B) \subseteq \mathscr{P}(A \cap B)$.
+
+_Conclusion:_
+
+Since both subset relations have been proved, it can be concluded that
+$\mathscr{P}(A \cap B) = \mathscr{P}(A) \cap \mathscr{P}(B)$.
+
+Q.E.D.
+
 21. For all sets $A$ and $B$,
     $\mathscr{P}(A \times B) = \mathscr{P}(A) \times \mathscr{P}(B)$.
+
+**Disproof (by counterexample):**
+
+Suppose $A$ and $B$ are any sets such that they are disjoint. For example:
+
+Let $A = \{1\}$ and $B = \{2\}$.
+
+Then, the left-hand side of the given equality is:
+
+$$ \mathscr{P}(A \times B) = \mathscr{P}(\{1\} \times \{2\}) $$
+
+$$ = \mathscr{P}(\{(1, 2)\}) $$
+
+$$ = \{\emptyset, \{(1, 2)\}\} $$
+
+Then, the right-hand side of the given equality is:
+
+$$ \mathscr{P}(A) \times \mathscr{P}(B) = \mathscr{P}(\{1\}) \times \mathscr{P}(\{2\}) $$
+
+$$ = \{\emptyset, \{1\}\} \times \{\emptyset, \{2\}\} $$
+
+$$ = \{(\emptyset, \emptyset), (\emptyset, \{2\}), (\{1\}, \emptyset), (\{1\}, \{2\})\} $$
+
+Note that:
+
+$$ \mathscr{P}(A \times B) = \{\emptyset, \{(1, 2)\}\} \neq \{(\emptyset, \emptyset), (\emptyset, \{2\}), (\{1\}, \emptyset), (\{1\}, \{2\})\} = \mathscr{P}(A) \times \mathscr{P}(B) $$
+
+Hence, the supposition is false since
+$\{\emptyset, \{(1, 2)\}\} \neq \{(\emptyset, \emptyset), (\emptyset, \{2\}), (\{1\}, \emptyset), (\{1\}, \{2\})\}$.
+
+Q.E.D.
 
 22. Write a negation for each of the following statements. Indicate which is
     true, the statement or its negation. Justify your answers.
 
 a. $\forall$ sets $S$, $\exists$ a set $T$ such that $S \cap T = \emptyset$.
 
+Negation:
+
+$\exists$ a set $S$ such that $\forall$ sets $T$, $S \cap T \neq \emptyset$.
+
+The original statement is true, consider if $T = S^c$, then
+$S \cap T = S \cap S^c = \emptyset$.
+
 b. $\exists$ a set $S$ such that $\forall$ sets $T$, $S \cup T = \emptyset$.
+
+Negation:
+
+$\forall$ sets $S$, $\exists$ a set $T$ such that $S \cup T \neq \emptyset$.
+
+The negation is true. Consider $T \neq \emptyset$, then no matter whether
+$S = \emptyset$ or $S \neq \emptyset$, $S \cup T \neq \emptyset$ will always be
+true since $T \neq \emptyset$.
 
 23. Let $S =\{a, b, c\}$, and for each integer $i = 0, 1, 2, 3$, let $S_i$ be
     the set of all subsets of $S$ that have $i$ elements. List the elements in
     $S_0, S_1, S_2$, and $S_3$. Is $\{S_0, S_1, S_2, S_3\}$ a partition of
     $\mathscr{P}(S)$?
+
+$$ S_0 = \{\emptyset\} $$
+
+$$ S_1 = \{\{a\}, \{b\}, \{c\}\} $$
+
+$$ S_2 = \{\{a, b\}, \{a, c\}, \{b, c\}\} $$
+
+$$ S_3 = \{\{a, b, c\}\} $$
+
+Since all $S_i$ are mutually disjoint, nonempty, and their union is all of
+$\mathscr{P}(S)$, the elements in all $S_i$ are a partition of $\mathscr{P}(S)$.
 
 24. Let $A = \{t, u, v, w\}$, and let $S_1$ be the set of all subsets of $A$
     that do not contain $w$ and $S_2$ the set of all subsets of $A$ that contain
@@ -2801,20 +3507,97 @@ b. $\exists$ a set $S$ such that $\forall$ sets $T$, $S \cup T = \emptyset$.
 
 a. Find $S_1$.
 
+$$ S_1 = \{\emptyset, \{t\}, \{u\}, \{v\}, \{t, u\}, \{t, v\}, \{u, v\}, \{t, u, v\}\} $$
+
 b. Find $S_2$.
+
+$$ S_2 = \{\{w\}, \{t, w\}, \{u, w\}, \{v, w\}, \{t, u, w\}, \{t, v, w\}, \{u, v, w\}, \{t, u, v, w\}\} $$
 
 c. Are $S_1$ and $S_2$ disjoint?
 
+Yes.
+
 d. Compare the sizes of $S_1$ and $S_2$.
+
+Their sizes are equal (8).
 
 e. How many elements are in $S_1 \cup S_2$?
 
+16.
+
 f. What is the relation between $S_1 \cup S_2$ and $\mathscr{P}(A)$?
+
+$$ S_1 \cup S_2 = \mathscr{P}(A) $$
 
 25. Use mathematical induction to prove that for every integer $n \geq 2$, if a
     set $S$ has $n$ elements, then the number of subsets of $S$ with an even
     number of elements equals the number of subsets of $S$ with an odd number of
     elements.
+
+**Proof (by mathematical induction):**
+
+Let $P(n)$ be the sentence:
+
+If a set $S$ has $n$ elements, then the number of subsets of $S$ with an even
+number of elements equals the number of subsets of $S$ with an odd number of
+elements.
+
+_Basis Step:_
+
+Prove $P(2)$, that is:
+
+If a set $S$ has $2$ elements, then the number of subsets of $S$ with an even
+number of elements equals the number of subsets of $S$ with an odd number of
+elements.
+
+Consider $S = \{1, 2\}$. Then the subsets of $S$, or the power set of $S$, would
+be: $\mathscr{P}(S) = \{\emptyset, \{1\}, \{2\}, \{1, 2\}\}$.
+
+The number of subsets with an even number of elements is $2$
+($\emptyset, \{1, 2\}$).
+
+The number of subsets with an odd number of elements is $2$ ($\{1\}, \{2\}$).
+
+The number of subsets with an even number of elements is equal to the number of
+subsets with an odd number of elements. Therefore $P(2)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 2$.
+
+Suppose $P(k)$, that is:
+
+If a set $S$ has $k$ elements, then the number of subsets of $S$ with an even
+number of elements equals the number of subsets of $S$ with an odd number of
+elements.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+If a set $S$ has $k + 1$ elements, then the number of subsets of $S$ with an
+even number of elements equals the number of subsets of $S$ with an odd number
+of elements.
+
+Let $X$ be some set such that $X$ has $k + 1$ elements, and let $x$ be some
+element such that $x \in X$.
+
+Then, let $Y$ be some set such that $Y = X - \{x\}$. This means that $Y$ has $k$
+elements.
+
+Every subset of $X$ either contains $x$ or doesn't. The subsets of $X$ that do
+not contain $x$ are the subsets of $Y$, and, by the inductive hypothesis, have
+an equal number of subsets containing even and odd amounts of elements.
+
+The subsets containing $x$ are each of the form $Z \cup \{x\}$, where
+$Z \subseteq Y$. Adding $x$ flips the parity of each subset (_i.e._ even number
+of subsets now becomes odd and odd number of subsets become even.) Note, though,
+that the number of subsets with even number of elements and the number of
+subsets with odd number of elements remain equal.
+
+Therefore, $P(k + 1)$ is true.
+
+Q.E.D.
 
 26. The following problem, devised by Ginger Bolton, appeared in the January
     1989 issue of the _College Mathematics Journal_ (Vol. 20, No. 1, p. 68):
@@ -2823,6 +3606,8 @@ f. What is the relation between $S_1 \cup S_2$ and $\mathscr{P}(A)$?
     product of the elements of $S_i$. Prove or disprove that
 
 $$ \sum_{i = 1}^{]2^{n - 1} - 1}{P_i} = \frac{(n + 1)!}{2} - 1 $$
+
+Omitted.
 
 In 27 and 28 supply a reason for each step in the derivationl.l
 
@@ -2845,6 +3630,12 @@ by __ (b) __
 $$ = (A \cap C) \cup (B \cap C) $$
 
 by __ \(c\) __
+
+a. by commutative law for $\cap$
+
+b. by distributive law
+
+c. by commutative law for $\cap$
 
 28. For all sets $A$, $B$, and $C$,
 
@@ -2882,6 +3673,20 @@ $$ = A \cup (B - C) $$
 
 by __ (g) __
 
+a. by the set difference law
+
+b. by the set difference law
+
+c. by the commutative law for $\cap$
+
+d. by De Morgan's Law
+
+e. by the double complement law
+
+f. by the distributive law
+
+g. by the set difference law
+
 29. Some steps are missing from the following proof that for all sets $A$ and
     $B$, $(A \cup B^c) - B = (A - B) \cup B^c$. Indicate what they are, and then
     write the proof correctly.
@@ -2906,6 +3711,34 @@ $$ (A - B) \cup B^c $$
 
 by the set difference law.
 
+**Proof:**
+
+Let any sets $A$ and $B$ be given. Then
+
+$$ (A \cup B^c) - B = (A \cup B^c) \cap B^c $$
+
+by the set difference law
+
+$$ = B^c \cap (A \cup B^c) $$
+
+by the commutative law
+
+$$ = (B^c \cap A) \cup (B^c \cap B^c) $$
+
+by the distributive law
+
+$$ = (B^c \cap A) \cup B^c $$
+
+by the idempotent law for $\cap$.r
+
+$$ = (A \cap B^c) \cup B^c $$
+
+by the commutative law
+
+$$ = (A - B) \cup B^c $$
+
+Q.E.D.
+
 In 30-40, construct an algebraic proof for the given statement. Cite a property
 from Theorem 6.2.2 for every step.
 
@@ -2913,50 +3746,360 @@ from Theorem 6.2.2 for every step.
 
 $$ (A \cap B) \cup C = (A \cup C) \cap (B \cup C) $$
 
+$$ (A \cap B) \cup C = C \cup (A \cap B) $$
+
+by commutative law for $\cup$
+
+$$ = (C \cup A) \cap (C \cup B) $$
+
+by distributive laws
+
+$$ = (A \cup C) \cap (B \cup C) $$
+
+by commutative laws for $\cup$
+
 31. For all sets $A$ and $B$, $A \cup (B - A) = A \cup B$.
+
+$$ A \cup (B - A) = A \cup (B \cap A^c) $$
+
+by set difference law
+
+$$ = (A \cup B) \cap (A \cup A^c) $$
+
+by distributive laws
+
+$$ = (A \cup B) \cap U $$
+
+by complement laws for $\cup$
+
+$$ = A \cup B $$
+
+by identity laws for $\cap$
 
 32. For all sets $A$ and $B$, $(A - B) \cup (A \cap B) = A$.
 
-33. Fora ll sets $A$ and $B$, $(A - B) \cap (A \cap B) = \emptyset$.
+$$ (A - B) \cup (A \cap B) = (A \cap B^c) \cup (A \cap B) $$
+
+by set difference law
+
+$$ = A \cap (B^c \cup B) $$
+
+by distributive laws
+
+$$ = A \cap U $$
+
+by complement laws
+
+$$ = A $$
+
+by identity laws
+
+33. For all sets $A$ and $B$, $(A - B) \cap (A \cap B) = \emptyset$.
+
+$$ (A - B) \cap (A \cap B) = (A \cap B^c) \cap (A \cap B) $$
+
+by set difference law
+
+$$ = A \cap A \cap B^c \cap B $$
+
+by associative laws for $\cap$
+
+$$ = A \cap B^c \cap B $$
+
+by idempotent laws for $\cap$
+
+$$ = A \cap \emptyset $$
+
+by complement laws for $\cap$.
+
+$$ = \emptyset $$
+
+by universal bound laws for $\cap$
 
 34. For all sets $A$, $B$, and $C$,
 
 $$ (A - B) - C = A - (B \cup C) $$
 
+$$ (A - B) - C = (A - B) \cap C^c $$
+
+by set difference law
+
+$$ = (A \cap B^c) \cap C^c $$
+
+by set difference law
+
+$$ = A \cap (B^c \cap C^c) $$
+
+by associative laws for $\cap$
+
+$$ = A \cap (B \cup C)^c $$
+
+by De Morgan's laws
+
+$$ = A - (B \cup C) $$
+
+by set difference law
+
 35. For all sets $A$ and $B$, $A - (A - B) = A \cap B$.
+
+$$ A - (A - B) = A - (A \cap B^c) $$
+
+by set difference law
+
+$$ = A \cap (A \cap B^c)^c $$
+
+by set difference law
+
+$$ = A \cap (A^c \cup (B^c)^c) $$
+
+by De Morgan's laws
+
+$$ = A \cap (A^c \cup B) $$
+
+by double complement law
+
+$$ = (A \cap A^c) \cup (A \cap B) $$
+
+by the distributive laws for $\cap$
+
+$$ = \emptyset \cup (A \cap B) $$
+
+by complement laws
+
+$$ = (A \cap B) \cup \emptyset $$
+
+by commutative laws for $\cup$
+
+$$ = A \cap B $$
+
+by identity laws
 
 36. For all sets $A$ and $B$, $((A^c \cup B^c) - A)^c = A$.
 
+$$ ((A^c \cup B^c) - A)^c $$
+
+$$ = ((A^c \cup B^c) \cap A^c)^c   $$
+
+by set difference law
+
+$$ = (A^c \cup B^c)^c \cup (A^c)^c $$
+
+by De Morgan's laws
+
+$$ = (A^c \cup B^c)^c \cup A $$
+
+by double complement law
+
+$$ = ((A^c)^c \cap (B^c)^c) \cup A $$
+
+by De Morgan's laws
+
+$$ = (A \cap B) \cup A $$
+
+by double complement law
+
+$$ = A \cup (A \cap B) $$
+
+by commutative laws for $\cup$
+
+$$ = (A \cup A) \cap (A \cup B) $$
+
+by distributive laws
+
+$$ = A \cap (A \cup B) $$
+
+by idempotent laws
+
+$$ = A $$
+
+by absorption laws for $\cap$
+
 37. For all sets $A$ and $B$, $(B^c \cup (B^c - A))^c = B$.
 
+$$ (B^c \cup (B^c - A))^c $
+
+$$ = (B^c \cup (B^c \cap A^c))^c $
+
+by set difference law
+
+$$ = ((B^c)^c \cap (B^c \cap A^c)^c) $
+
+by De Morgan's laws
+
+$$ = (B \cap (B^c \cap A^c)^c) $
+
+by double complement law
+
+$$ = B \cap ((B^c)^c \cup (A^c)^c) $
+
+by De Morgan's laws
+
+$$ = B \cap (B \cup A) $
+
+by double complement law
+
+$$ = (B \cap B) \cup (B \cap A) $$
+
+by distributive laws
+
+$$ = B \cup (B \cap A) $$
+
+by idempotent laws
+
+$$ = B $$
+
+by absorption laws for $\cup$
+
 38. For all sets $A$ and $B$, $(A \cap B)^c \cap A = A - B$.
+
+$$ (A \cap B)^c \cap A $$
+
+$$ = (A^c \cup B^c) \cap A $$
+
+by De Morgan's laws
+
+$$ = A \cap (A^c \cup B^c) $$
+
+by commutative laws for $\cap$
+
+$$ = (A \cap A^c) \cup (A \cap B^c) $$
+
+by distributive laws
+
+$$ = \emptyset \cup (A \cap B^c) $$
+
+by complement laws
+
+$$ = (A \cap B^c) \cup \emptyset $$
+
+by commutative laws
+
+$$ = A \cap B^c $$
+
+by identity laws
+
+$$ = A - B $$
+
+by set difference law
 
 39. For all sets $A$ and $B$,
 
 $$ (A - B) \cup (B - A) = (A \cup B) - (A \cap B) $$
 
+$$ (A - B) \cup (B - A) $$
+
+$$ = (A \cap B^c) \cup (B \cap A^c) $$
+
+by set difference law
+
+$$ = [(A \cap B^c) \cup B] \cap [(A \cap B^c) \cup A^c] $$
+
+by distributive laws
+
+$$ = [B \cup (A \cap B^c)] \cap [A^c \cup (A \cap B^c)] $$
+
+by commutative laws
+
+$$ = [(B \cup A) \cap (B \cup B^c)] \cap [(A^c \cup A) \cap (A^c \cup B^c)] $$
+
+by distributive laws
+
+$$ = [(A \cup B) \cap (B \cup B^c)] \cap [(A \cup A^c) \cap (A^c \cup B^c)] $$
+
+by commutative laws
+
+$$ = [(A \cup B) \cap U] \cap [U \cap (A^c \cup B^c)] $$
+
+by complement laws
+
+$$ = [(A \cup B) \cap U] \cap [(A^c \cup B^c) \cap U] $$
+
+by commutative laws
+
+$$ = (A \cup B) \cap (A^c \cup B^c) $$
+
+by identity laws
+
+$$ = (A \cup B) \cap (A \cap B)^c $$
+
+by De Morgan's laws
+
+$$ = (A \cup B) - (A \cap B) $$
+
+by set difference law
+
 40. For all sets $A$, $B$, and $C$,
 
 $$ (A - B) - (B - C) = A - B $$
+
+$$ (A - B) - (B - C) $$
+
+$$ = (A - B) \cap (B - C)^c $$
+
+by set difference law
+
+$$ = (A \cap B^c) \cap (B \cap C^c)^c $$
+
+by set difference law
+
+$$ = (A \cap B^c) \cap (B^c \cup (C^c)^c) $$
+
+by De Morgan's laws
+
+$$ = (A \cap B^c) \cap (B^c \cup C) $$
+
+by double complement law
+
+$$ = A \cap (B^c \cap (B^c \cup C)) $$
+
+by associative laws
+
+$$ = A \cap ((B^c \cap B^c) \cup (B^c \cap C)) $$
+
+by distributive laws
+
+$$ = A \cap (B^c \cup (B^c \cap C)) $$
+
+By idempotent laws
+
+$$ = A \cap B^c $$
+
+by absorption laws
+
+$$ = A - B $$
+
+by set difference law
 
 In 41-43 simplify the given expression. Cite a property from Theorem 6.2.2 for
 every step.
 
 41. $A \cap ((B \cup A^c) \cap B^c)$
 
+Omitted.
+
 42. $(A - (A \cap B)) \cap (B - (A \cap B))$
 
+Omitted.
+
 43. $((A \cap (B \cup C)) \cap (A - B)) \cap (B \cup C^c)$
+
+Omitted.
 
 44. Consider the following set property: For all sets $A$ and $B$, $A - B$ and
     $B$ are disjoint.
 
 a. Use an element argument to derive the property.
 
+Omitted.
+
 b. Use an algebraic argument to derive the property (by applying properties from
 Theorem 6.2.2).
 
+Omitted.
+
 c. Comment on which method you found easier.
+
+Omitted.
 
 35. Consider the following set property: For all sets $A$, $B$, and $C$,
 
@@ -2964,10 +4107,16 @@ $$ (A - B) \cup (B - C) = (A \cup B) - (B \cap C) $$
 
 a. Use an element argument to derive the property.
 
+Omitted.
+
 b. Use an algebraic argument to derive the property (by applying properties from
 Theorem 6.2.2).
 
+Omitted.
+
 c. Comment on which method you found easier.
+
+Omitted.
 
 **Definition:**
 
@@ -2981,33 +4130,57 @@ $$ A \Delta B = (A - B) \cup (B - A) $$
 
 a. $A \Delta B$
 
+Omitted.
+
 b. $B \Delta C$
+
+Omitted.
 
 c. $A \Delta C$
 
+Omitted.
+
 d. $(A \Delta B) \Delta C$
+
+Omitted.
 
 Refer to the definition of symmetric difference given above. Prove each of
 47-52, assuming that $A$, $B$, and $C$ are all subsets of a universal set $U$.
 
 47. $A \Delta B = B \Delta A$
 
+Omitted.
+
 48. $A \Delta \emptyset = A$
+
+Omitted.
 
 49. $A \Delta A^c = U$
 
+Omitted.
+
 50. $A \Delta A = \emptyset$
+
+Omitted.
 
 51. If $A \Delta C = B \Dcelta C$, then $A = B$.
 
+Omitted.
+
 52. $(A \Delta B) \Delta C = A \Delta (B \Delta C)$
+
+Omitted.
 
 53. Derive the set identity $A \cup (A \cap B) = A$ from the properties listed
     8n Theorem 6.2.2(1)-(9). Start by showing that for every subset $B$ of a
     universal set $U$, $U \cup B = U$. Then intersect both sides with $A$ and
     deduce the identity.
 
+Omitted.
+
 54. Derive the set identity $A \cap (A \cup B) = A$ from the properties listed
     in Theorem 6.2.2(1)-(9). Start by showing that for every subset $B$ of a
     universal set $U$, $\emptyset = \emptyset \cap B$. Then take the union of
     both sides with $A$ and deduce the identity.
+
+Omitted.

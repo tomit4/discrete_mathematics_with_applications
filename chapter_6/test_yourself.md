@@ -101,8 +101,16 @@ Page 435
    concrete sets $A$, $B$, and $C$ that, when substituted for the set variables
    in the equation, _____.
 
+the equation does not hold.
+
+make the left-hand side unequal to the right-hand side
+
 2. When using the algebraic method for proving a set identity, it is important
    to _____ for every step.
 
+cite the property from 6.2.2 used
+
 3. When applying a property from Theorem 6.2.2, it must be used _____ as it is
    stated.
+
+exactly
