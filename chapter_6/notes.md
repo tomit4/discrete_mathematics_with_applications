@@ -432,3 +432,68 @@ definition of subset again. It follows by definition of complement that
 $x \notin C$. Thus $x \in C$ and $x \notin C$, which is a contradiction. So the
 supposition that there is an element $x$ in $A \cap C$ is false, and thus
 $A \cap C = \emptyset$ _[as was to be shown]_.
+
+---
+
+Page 433
+
+**Theorem 6.3.1**
+
+For every integer $n \geq 0$, if a set $X$ has $n$ elements, then
+$\mathscr{P}(X)$ has $2^n$ elements.
+
+**Proof (by mathematical induction):**
+
+Let the property $P(n)$ be the sentence
+
+Any set with $n$ elements has $2^n$ subsets.
+
+_Show that $P(0)$ is true:_
+
+To establish $P(0)$, we must show that
+
+Any set with $0$ elements has $2^0$ subsets.
+
+Now the only set with zero elements is the empty set, and the only subset of the
+empty set is itself. Thus a set with zero elements has one subset. Since
+$1 = 2^0$, we have that $P(0)$ is true.
+
+_Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is
+also true:_
+
+_[Suppose that $P(k)$ is true for a particular but arbitrarily chosen integer
+$k \geq 0$. That is:]_
+
+Suppose that $k$ is any integer with $k \geq 0$ such that
+
+Any set with $k$ elements has $2^k$ subsets.
+
+_[We must show that $P(k + 1)$ is true. That is:]_
+
+We must show that
+
+Any set with $k + 1$ elements has $2^{k + 1}$ subsets.
+
+Let $X$ be a set with $k + 1$ elements. Since $k + 1 \geq 1$, we may pick an
+element $z$ in $X$. Observe that any subset of $X$ either contains $z$ or does
+not. Furthermore, any subset of $X$ that does not contain $z$ is a subset of
+$X - \{z\}$. And any subset $A$ of $X - \{z\}$ can be matched up with a subset
+$B$, equal to $A \cup \{z\}$, of $X$ that contains $z$. Consequently, there are
+as many subsets of $X$ that contain $z$ as do not, and thus there are twice as
+many subsets of $X$ as there are subsets of $X - \{z\}$. It follows that since
+$X - \{z\}$ has $k$ elements, then, by inductive hypothesis,
+
+the number of subsets of $X - \{z\} = 2^k$
+
+Therefore,
+
+the number of subsets $X = 2 \cdot (\text{the number of subsets of } X - \{z\})$
+
+$$ = 2 \cdot (2^k) $$
+
+$$ = 2^{k + 1} $$
+
+_[This is what was to be shown.]_
+
+_[Since we have proved both the basis step and the inductive step, we conclude
+that the theorem is true.]_

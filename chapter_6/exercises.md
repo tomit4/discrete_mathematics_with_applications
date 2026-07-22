@@ -2705,3 +2705,309 @@ Omitted.
 $$ \bigcap_{i = 1}^{n}(A \times B_i) = A \times \left(\bigcap_{i = 1}^{n}B_i\right) $$
 
 Omitted.
+
+---
+
+Page 435
+
+**Exercise Set 6.3**
+
+For each of 1-4 find a counterexample to show that the statement is false.
+Assume all sets are subsets of a universal set $U$.
+
+1. For all sets $A$, $B$, and $C$,
+
+$$ (A \cup B) \cap C = A \cup (B \cap C) $$
+
+2. For all sets $A$ and $B$, $(A \cup B)^c = A^c \cup B^c$.
+
+3. For all sets $A$, $B$, and $C$, if $A \nsubseteq B$ and $B \nsubseteq C$ then
+   $A \nsubseteq C$.
+
+4. For all sets $A$, $B$, and $C$, if $B \cup C \subseteq A$ then
+
+$$ (A - B) \cap (A - C) = \emptyset $$
+
+For each of 5-21 prove each statement that is true and find a counterexample for
+each statement that is false. Assume all sets are subsets of a universal set
+$U$.
+
+5. For all sets $A$, $B$, and $C$,
+
+$$ A - (B - C) = (A - B) - C $$
+
+6. For all sets $A$ and $B$, $A \cap (A \cup B) = A$.
+
+7. For all sets $A$, $B$, and $C$,
+
+$$ (A - B) \cap (C - B) = A - (B \cup C) $$
+
+8. For all sets $A$ and $B$, if $A^c \subseteq B$ then $A \cup B = U$.
+
+9. For all sets $A$ ,$B$, and $C$, if $A \subseteq C$ and $B \subseteq C$ then
+   $A \cup B \subseteq C$.
+
+10. For all sets $A$ and $B$, if $A \subseteq B$ then $A \cap B^c = \emptyset$.
+
+11. For all sets $A$, $B$, and $C$, if $A \subseteq B$ then
+    $A \cap (B \cap C)^c = \emptyset$.
+
+12. For all sets $A$, $B$, and $C$,
+
+$$ A \cap (B - C) = (A \cap B) - (A \cap C) $$
+
+13. For all sets $A$, $B$, and $C$,
+
+$$ A \cup (B - C) = (A \cup B) - (A \cup C) $$
+
+14. For all sets $A$, $B$, and $C$, if $A \cap C = B \cap C$ and
+    $A \cup C = B \cup C$, then $A = B$.
+
+15. For all sets $A$, $B$, and $C$, $(A - B) \cup C \subseteq A \cup (C - B)$.
+
+16. For all sets $A$ and $B$, if $A \cap B = \emptyset$ then
+    $A \times B = \emptyset$.
+
+17. For all sets $A$ and $B$, if $A \subseteq B$ then
+    $\mathscr{P}(A) \subseteq \mathscr{P}(B)$.
+
+18. For all sets $A$ and $B$,
+    $\mathscr{P}(A \cup B) \subseteq \mathscr{P}(A) \cup \mathscr{P}(B)$.
+
+19. For all sets $A$ and $B$,
+    $\mathscr{P}(A) \cup \mathscr{P}(B) \subseteq \mathscr{P}(A \cup B)$.
+
+20. For all sets $A$ and $B$,
+    $\mathscr{P}(A \cap B) = \mathscr{P}(A) \cap \mathscr{P}(B)$.
+
+21. For all sets $A$ and $B$,
+    $\mathscr{P}(A \times B) = \mathscr{P}(A) \times \mathscr{P}(B)$.
+
+22. Write a negation for each of the following statements. Indicate which is
+    true, the statement or its negation. Justify your answers.
+
+a. $\forall$ sets $S$, $\exists$ a set $T$ such that $S \cap T = \emptyset$.
+
+b. $\exists$ a set $S$ such that $\forall$ sets $T$, $S \cup T = \emptyset$.
+
+23. Let $S =\{a, b, c\}$, and for each integer $i = 0, 1, 2, 3$, let $S_i$ be
+    the set of all subsets of $S$ that have $i$ elements. List the elements in
+    $S_0, S_1, S_2$, and $S_3$. Is $\{S_0, S_1, S_2, S_3\}$ a partition of
+    $\mathscr{P}(S)$?
+
+24. Let $A = \{t, u, v, w\}$, and let $S_1$ be the set of all subsets of $A$
+    that do not contain $w$ and $S_2$ the set of all subsets of $A$ that contain
+    $w$.
+
+a. Find $S_1$.
+
+b. Find $S_2$.
+
+c. Are $S_1$ and $S_2$ disjoint?
+
+d. Compare the sizes of $S_1$ and $S_2$.
+
+e. How many elements are in $S_1 \cup S_2$?
+
+f. What is the relation between $S_1 \cup S_2$ and $\mathscr{P}(A)$?
+
+25. Use mathematical induction to prove that for every integer $n \geq 2$, if a
+    set $S$ has $n$ elements, then the number of subsets of $S$ with an even
+    number of elements equals the number of subsets of $S$ with an odd number of
+    elements.
+
+26. The following problem, devised by Ginger Bolton, appeared in the January
+    1989 issue of the _College Mathematics Journal_ (Vol. 20, No. 1, p. 68):
+    Given a positive integer $n \geq 2$, let $S$ be the set of all nonempty
+    subsets of $\{2, 3, \dots, n\}$. For each $S_i \in S$, let $P_i$ be the
+    product of the elements of $S_i$. Prove or disprove that
+
+$$ \sum_{i = 1}^{]2^{n - 1} - 1}{P_i} = \frac{(n + 1)!}{2} - 1 $$
+
+In 27 and 28 supply a reason for each step in the derivationl.l
+
+27. For all sets $A$, $B$, and $C$,
+
+$$ (A \cup B) \cap C = (A \cap C) \cup (B \cap C) $
+
+_Proof:_
+
+Suppose $A$, $B$, and $C$ are any sets. Then
+
+$$ (A \cup B) \cap C = C \cup (A \cup B) $$
+
+by __ (a) __
+
+$$ = (C \cap A) \cup (C \cap B) $$
+
+by __ (b) __
+
+$$ = (A \cap C) \cup (B \cap C) $$
+
+by __ \(c\) __
+
+28. For all sets $A$, $B$, and $C$,
+
+$$ (A \cup B) - (C - A) = A \cup (B - C) $$
+
+_Proof:_
+
+Suppose $A$, $B$, and $C$ are any sets. Then
+
+$$ (A \cup B) - (C - A) = (A \cup B) \cap (C - A)^c $$
+
+by __ (a) __
+
+$$ = (A \cup B) \cap (C \cap A^c)^c $$
+
+by __ (b) __
+
+$$ = (A \cup B) \cap (A^c \cap C)^c $$
+
+by __ \(c\) __
+
+$$ = (A \cup B) \cap ((A^c)^c \cup C^c) $$
+
+by __ (d) __
+
+$$ = (A \cup B) \cap (A \cup C^c) $$
+
+by __ (e) __
+
+$$ = A \cup (B \cap C^c) $$
+
+by __ (f) __
+
+$$ = A \cup (B - C) $$
+
+by __ (g) __
+
+29. Some steps are missing from the following proof that for all sets $A$ and
+    $B$, $(A \cup B^c) - B = (A - B) \cup B^c$. Indicate what they are, and then
+    write the proof correctly.
+
+**Proof:**
+
+Let any sets $A$ and $B$ be given. Then
+
+$$ (A \cup C^c) - B = (A \cup B^c) \cap B^c $$
+
+by the set difference law
+
+$$ = (B^c \cap A) \cup (B^c \cap B^c) $$
+
+by the distributive law
+
+$$ = (B^c \cap A) \cup B^c $$
+
+by the idempotent law for $\cup$
+
+$$ (A - B) \cup B^c $$
+
+by the set difference law.
+
+In 30-40, construct an algebraic proof for the given statement. Cite a property
+from Theorem 6.2.2 for every step.
+
+30. For all sets $A$, $B$, and $C$,
+
+$$ (A \cap B) \cup C = (A \cup C) \cap (B \cup C) $$
+
+31. For all sets $A$ and $B$, $A \cup (B - A) = A \cup B$.
+
+32. For all sets $A$ and $B$, $(A - B) \cup (A \cap B) = A$.
+
+33. Fora ll sets $A$ and $B$, $(A - B) \cap (A \cap B) = \emptyset$.
+
+34. For all sets $A$, $B$, and $C$,
+
+$$ (A - B) - C = A - (B \cup C) $$
+
+35. For all sets $A$ and $B$, $A - (A - B) = A \cap B$.
+
+36. For all sets $A$ and $B$, $((A^c \cup B^c) - A)^c = A$.
+
+37. For all sets $A$ and $B$, $(B^c \cup (B^c - A))^c = B$.
+
+38. For all sets $A$ and $B$, $(A \cap B)^c \cap A = A - B$.
+
+39. For all sets $A$ and $B$,
+
+$$ (A - B) \cup (B - A) = (A \cup B) - (A \cap B) $$
+
+40. For all sets $A$, $B$, and $C$,
+
+$$ (A - B) - (B - C) = A - B $$
+
+In 41-43 simplify the given expression. Cite a property from Theorem 6.2.2 for
+every step.
+
+41. $A \cap ((B \cup A^c) \cap B^c)$
+
+42. $(A - (A \cap B)) \cap (B - (A \cap B))$
+
+43. $((A \cap (B \cup C)) \cap (A - B)) \cap (B \cup C^c)$
+
+44. Consider the following set property: For all sets $A$ and $B$, $A - B$ and
+    $B$ are disjoint.
+
+a. Use an element argument to derive the property.
+
+b. Use an algebraic argument to derive the property (by applying properties from
+Theorem 6.2.2).
+
+c. Comment on which method you found easier.
+
+35. Consider the following set property: For all sets $A$, $B$, and $C$,
+
+$$ (A - B) \cup (B - C) = (A \cup B) - (B \cap C) $$
+
+a. Use an element argument to derive the property.
+
+b. Use an algebraic argument to derive the property (by applying properties from
+Theorem 6.2.2).
+
+c. Comment on which method you found easier.
+
+**Definition:**
+
+Given sets $A$ and $B$, the **symmetric difference of $A$ and $B$**, denoted
+$A \Delta B$, is, is
+
+$$ A \Delta B = (A - B) \cup (B - A) $$
+
+46. Let $A = \{1, 2, 3, 4\}$, $B = \{3, 4, 5, 6\}$, and $C = \{5, 6, 7, 8\}$.
+    Find each of the following sets:
+
+a. $A \Delta B$
+
+b. $B \Delta C$
+
+c. $A \Delta C$
+
+d. $(A \Delta B) \Delta C$
+
+Refer to the definition of symmetric difference given above. Prove each of
+47-52, assuming that $A$, $B$, and $C$ are all subsets of a universal set $U$.
+
+47. $A \Delta B = B \Delta A$
+
+48. $A \Delta \emptyset = A$
+
+49. $A \Delta A^c = U$
+
+50. $A \Delta A = \emptyset$
+
+51. If $A \Delta C = B \Dcelta C$, then $A = B$.
+
+52. $(A \Delta B) \Delta C = A \Delta (B \Delta C)$
+
+53. Derive the set identity $A \cup (A \cap B) = A$ from the properties listed
+    8n Theorem 6.2.2(1)-(9). Start by showing that for every subset $B$ of a
+    universal set $U$, $U \cup B = U$. Then intersect both sides with $A$ and
+    deduce the identity.
+
+54. Derive the set identity $A \cap (A \cup B) = A$ from the properties listed
+    in Theorem 6.2.2(1)-(9). Start by showing that for every subset $B$ of a
+    universal set $U$, $\emptyset = \emptyset \cap B$. Then take the union of
+    both sides with $A$ and deduce the identity.

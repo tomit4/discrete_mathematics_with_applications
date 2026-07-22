@@ -89,3 +89,20 @@ $X \subseteq Y$; $Y \subseteq X$
    that is in _____ and not _____ or that is in _____ and not _____.
 
 $X$; in $Y$; $Y$; in $X$
+
+---
+
+Page 435
+
+**Test Yourself**
+
+1. Given a proposed set identity involving set variables $A$, $B$, and $C$, the
+   most common way to show that the equation does not hold in general is to find
+   concrete sets $A$, $B$, and $C$ that, when substituted for the set variables
+   in the equation, _____.
+
+2. When using the algebraic method for proving a set identity, it is important
+   to _____ for every step.
+
+3. When applying a property from Theorem 6.2.2, it must be used _____ as it is
+   stated.
