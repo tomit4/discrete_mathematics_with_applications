@@ -558,7 +558,7 @@ $$ \text{(a) } a + 1 = 1 \quad \text{ and } \quad \text{(b) } a \cdot 0 = 0 $$
 
 6. _De Morgan's Laws:_ For all $a$ and $b \in B$,
 
-$$ \text{(a) } \overline{a + b} = \oveline{a} \cdot \overline{b} \quad \text{ and } \quad \text{(b) } \overline{a \cdot b} = \overline{a} + \overline{b}  $$
+$$ \text{(a) } \overline{a + b} = \overline{a} \cdot \overline{b} \quad \text{ and } \quad \text{(b) } \overline{a \cdot b} = \overline{a} + \overline{b}  $$
 
 7. _Absorption Laws:_ For all $a$ and $b \in B$,
 

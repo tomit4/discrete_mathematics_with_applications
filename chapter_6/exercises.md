@@ -4221,6 +4221,16 @@ $$ = a \cdot a $$
 
 __ (e) __
 
+a. by the identity law for $\cdot$
+
+b. by the complement law for $+$
+
+c. by the distributive law for $+$ over $\cdot$
+
+d. by the complement law for $\cdot$
+
+e. by the identity law for $+$
+
 2. _Universal bound law for $+$:_ For every $a$ in $B$, $a + 1 = 1$.
 
 **Proof:**
@@ -4242,6 +4252,12 @@ by Example 6.4.2
 $$ = 1 $$
 
 __ \(c\) __
+
+a. by the complement law for $+$
+
+b. by the associative law for $+$
+
+c. by the complement law for $+$
 
 3. _Absorption law for $\cdot$ over $+$:_ For all $a$ and $b$ in $B$,
    $(a + b) \cdot a = a$.
@@ -4280,23 +4296,132 @@ $$  = a $$
 
 __ (f) __
 
+a. by the commutative law for $\cdot$
+
+b. by the distributive law of $\cdot$ over $+$
+
+c. because $1$ is an identity for $\cdot$
+
+d. by the distributive law of $\cdot$ over $+$
+
+e. by the commutative law for $+$
+
+f. because $1$ is an identity for $\cdot$
+
 In 4-10 assume that $B$ is a Boolean algebra with operations $+$ and $\cdot$.
 Prove each statement using only the axioms for a Boolean algebra and statements
 proved in the text or in lower-numbered exercises.
 
 4. _Universal bound for $0$:_ For every $a$ in $B$, $a \cdot 0 = 0$.
 
+**Proof:**
+
+$$ a \cdot 0 = a \cdot (a \cdot \overline{a}) $$
+
+by the complement law for $\cdot$
+
+$$ = (a \cdot a) \cdot \overline{a} $$
+
+by the associative law for $\cdot$
+
+$$ = a \cdot \overline{a} $$
+
+by exercise 1
+
+$$ = 0 $$
+
+by the complement law for $\cdot$
+
 5. _Complements of $0$ and $1$:_
 
 a. $\overline{0} = 1$
 
+**Proof:**
+
+$$ 0 = 0 \cdot 1 $$
+
+because $1$ is an identity for $\cdot$, and
+
+$$ 0 + 1 = 1 + 0 $$
+
+because $+$ is commutative and $0$ is an identity for $+$.
+
+Since $0 = 0 \cdot 1$ and $0 + 1 = 1 + 0$, $1 = \overline{0}$ by the uniqueness
+of the complement laws.
+
 b. $\overline{1} = 0$
+
+$$ 1 = 1 + 0 $$
+
+$$ 1 = 1 + \overline{1} $$
+
+by the complement law for $+$
+
+$$ 0 = \overline{1} $$
+
+by the uniquness of $0$ law.
 
 6. _Uniqueness of $0$:_ There is only one element of $B$ that is an identity for
    $+$.
 
+**Proof:**
+
+Suppose $0$ and $0'$ are elements of $B$ both of which are identities for $+$.
+Then both $0$ and $0'$ satisfy the identity, complement, and universal bound
+laws.
+
+_[We will show that $0 = 0'$.]_
+
+By the identity law for $+$, for every $a \in B$,
+
+$$ a + 0 = a(*) \quad \text{ and } \quad a + 0' = a(**) $$
+
+It follows that
+
+$$ 0' = 0' + 0 $$
+
+by (*) with $a = 0'$
+
+$$ = 0 + 0' $$
+
+by the commutative law for $+$
+
+$$ = 0 $$
+
+by (**) with $a = 0$.
+
+_[This is what was to be shown.]_
+
 7. _Uniqueness of $1$:_ There is only one element of $B$ that 8s an identity for
    $\cdot$.
+
+**Proof:**
+
+Suppose $1$ and $1'$ are elements of $B$ both of which are identities for
+$\cdot$. Then both $1$ and $1'$ satisfy the identity, complement, and universal
+bound laws.
+
+_[We will show that $1 = 1'$.]_
+
+By the identity law for $\cdot$, for every $a \in B$,
+
+$$ a \cdot 1 = a(*) \quad \text{ and } \quad a \cdot 1' = a(**) $$
+
+It follows that
+
+$$ 1' = 1' \cdot 1 $$
+
+by (*) with $a = 1'$
+
+$$ = 1 \cdot 1' $$
+
+by the commutative law for $\cdot$
+
+$$ = 1 $$
+
+by (**) with $a = 1$.
+
+_[This is what was to be shown.]_
 
 8. _De Morgan's law for $\cdot$:_ For all $a$ and $b$ in $B$,
    $\overline{a \cdot b} = \overline{a} + \overline{b}$. (_Hint:_ Prove that

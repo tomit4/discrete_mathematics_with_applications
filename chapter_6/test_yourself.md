@@ -127,10 +127,16 @@ Page 445
    $\mathbf{t}$ corresponds to _____, a contradiction $\mathbf{c}$ corresponds
    to _____, and the negation operation, denoted $\neg$, corresponds to _____.
 
+$\cup$;$\cap$,$U$,$\emptyset$,$^c$
+
 2. The operations of $+$ and $\cdot$ in a Boolean algebra are generalizations of
    the operations of _____ and _____ in the set of all statement forms in a
    given finite number of variables and the operations of _____ and _____ in the
    set of all subsets of a given set.
 
+$\vee$;$\wedge$;$\cup$;$\cap$
+
 3. Russell showed that the following proposed "set definition" could not
    actually define a set: _____.
+
+the set of all sets that are not elements of themselves
