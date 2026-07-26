@@ -4426,14 +4426,217 @@ _[This is what was to be shown.]_
 8. _De Morgan's law for $\cdot$:_ For all $a$ and $b$ in $B$,
    $\overline{a \cdot b} = \overline{a} + \overline{b}$. (_Hint:_ Prove that
    $(a \cdot b) + (\overline{a} + \overline{b}) = 1$ and that
-   $(a \cdot b) + (\overline{a} + \overline{b}) = 0$, and use the fact that
+   $(a \cdot b) \cdot (\overline{a} + \overline{b}) = 0$, and use the fact that
    $a \cdot b$ has a unique complement.)
+
+**Proof:**
+
+Suppose $B$ is a Boolean algebra, and that $a$ and $b$ are elements of $B$.
+
+Prove that $(a \cdot b) + (\overline{a} + \overline{b}) = 1$:
+
+$$ (a \cdot b) + (\overline{a} + \overline{b}) $$
+
+$$ = ((a \cdot b) + \overline{a}) + \overline{b} $$
+
+by the associative law for $+$
+
+$$ = ((b \cdot a) + \overline{a}) + \overline{b} $$
+
+by the commutative law for $+$
+
+$$ = ((b + \overline{a}) \cdot (a + \overline{a})) + \overline{b} $$
+
+by the distributive law for $+$ over $\cdot$
+
+$$ = ((b + \overline{a}) \cdot 1) + \overline{b} $$
+
+by the complement law for $+$
+
+$$ = (b + \overline{a}) + \overline{b} $$
+
+by the identity law for $\cdot$
+
+$$ = b + (\overline{b} + \overline{a}) $$
+
+by the commutative law for $+$
+
+$$ = (b + \overline{b}) + \overline{a} $$
+
+by the associative law for $+$
+
+$$ = 1 + \overline{a} $$
+
+by the complement law for $+$
+
+$$ = 1 $$
+
+by the universal bound law for $+$
+
+Prove that $(a \cdot b) \cdot (\overline{a} + \overline{b}) = 0$:
+
+$$ (a \cdot b) \cdot (\overline{a} + \overline{b}) $$
+
+$$ = ((a \cdot b) \cdot \overline{a}) + ((a \cdot b) \cdot \overline{b}) $$
+
+by the distributive law of $\cdot$ over $+$
+
+$$ = ((a \cdot \overline{a}) \cdot b) + (a \cdot (b \cdot \overline{b})) $$
+
+by the commutative and associative laws
+
+$$ = (0 \cdot b) + (a \cdot 0) $$
+
+by the complement laws
+
+$$ = 0 + 0 $$
+
+by the universal bound laws
+
+$$ = 0 $$
+
+by the identity laws
+
+_Conclusion:_
+
+Since $(a \cdot b) + (\overline{a} + \overline{b}) = 1$ and
+$(a \cdot b) \cdot (\overline{a} + \overline{b}) = 0$, it can be concluded, by
+the uniqueness of complement laws, that
+$\overline{a \cdot b} = \overline{a} + \overline{b}$. This is what was to be
+shown.
+
+Q.E.D.
 
 9. _De Morgan's law for $+$:_ For all $a$ and $b$ in $B$,
    $\overline{a + b} = \overline{a} \cdot \overline{b}$.
 
+**Proof:**
+
+Suppose $B$ is a Boolean algebra, and that $a$ and $b$ are elements of $B$.
+
+Prove that $(a + b) + (\overline{a} \cdot \overline{b}) = 1$:
+
+$$ (a + b) + (\overline{a} \cdot \overline{b}) $$
+
+$$ = ((a + b) + \overline{a}) \cdot ((a + b) + \overline{b}) $$
+
+by the distributive laws for $+$ over $\cdot$
+
+$$ = ((a + \overline{a}) + b) \cdot (a + (b + \overline{b})) $$
+
+by the associative and commutative laws
+
+$$ = (1 + b) \cdot (a + 1) $$
+
+by the complement laws for $+$
+
+$$ = 1 \cdot 1 $$
+
+by the universal bound laws for $+$
+
+$$ = 1 $$
+
+by the identity laws for $\cdot$
+
+Prove that $(a + b) \cdot (\overline{a} \cdot \overline{b}) = 0$:
+
+$$ (a + b) \cdot (\overline{a} \cdot \overline{b}) $$
+
+$$ = (a \cdot \overline{a}) \cdot (b \cdot \overline{b}) $$
+
+by the commutative and associative laws for $\cdot$
+
+$$ = 0 \cdot 0 $$
+
+by the complement laws for $\cdot$
+
+$$ = 0 $$
+
+by the universal bound laws for $\cdot$
+
+_Conclusion:
+
+Since $(a + b) + (\overline{a} \cdot \overline{b}) = 1$ and
+$(a + b) \cdot (\overline{a} \cdot \overline{b}) = 0$, it can be concluded, by
+the uniqueness of complement laws, that
+$\overline{a + b} = \overline{a} \cdot \overline{b}$. This is what was to be
+shown.
+
+Q.E.D.
+
 10. _Cancellation law:_ For all $x$, $y$, and $z$ in $B$, if $x + y = x + z$ and
     $x \cdot y = x \cdot z$, then $y = z$.
+
+**Proof:**
+
+Suppose $B$ is a Boolean Algebra, and that $x$, $y$, and $z$ are elements in $B$
+such that $x + y =  x + z$ and $x \cdot y = x \cdot z$.
+
+$$ y = (y + x) \cdot y $$
+
+by exercise 3
+
+$$ = y \cdot (y + x) $$
+
+by the commutative laws
+
+$$ = y \cdot (x + y) $$
+
+by the commutative laws
+
+$$ = y \cdot (x + z) $$
+
+by the supposition
+
+$$ = (y \cdot x) + (y \cdot z) $$
+
+by the distributive laws for $\cdot$ over $+$
+
+$$ = (x \cdot y) + (y \cdot z) $$
+
+by the commutative laws
+
+$$ = (x \cdot z) + (y \cdot z) $$
+
+by the supposition
+
+$$ = (z \cdot x) + (z \cdot y) $$
+
+by the commutative laws
+
+$$ = z \cdot (x + y) $$
+
+by the distributive laws of $\cdot$ over $+$
+
+$$ = z \cdot (x + z) $$
+
+by the supposition
+
+$$ = (z \cdot x) + (z \cdot z) $$
+
+by the distributive laws of $\cdot$ over $+$
+
+$$ = (z \cdot x) + z $$
+
+by the idempotent laws
+
+$$ = (z \cdot x) + (z \cdot 1) $$
+
+by the identity laws
+
+$$ = z \cdot (x + 1) $$
+
+by the distributive laws of $\cdot$ over $+$
+
+$$ = z \cdot 1 $$
+
+by the universal bound laws
+
+$$ = z $$
+
+by the identity laws
+
+Q.E.D.
 
 11. Let $S = \{0, 1\}$, and define operations $+$ and $\cdot$ on $S$ by the
     following tables:
@@ -4457,13 +4660,76 @@ a. Show that the elements of $S$ satisfy the following properties:
     v. the distributive law for $+$ over $\cdot$.
     vi. the distributive law for $\cdot$ over $+$.
 
+    i.
+
+$$ 0 + 1 = 1 + 0 $$
+
+$$ 1 = 1 $$
+
+    ii.
+
+$$ 0 \cdot 1 = 1 \cdot 0 $$
+
+$$ 0 = 0 $$
+
+    iii.
+
+$$ (0 + 0) + 1 = 0 + (0 + 1) $$
+
+$$ 1 = 1 $$
+
+    iv.
+
+$$ (0 \cdot 0) \cdot 1 = 0 \cdot (0 \cdot 1) $$
+
+$$ 0 \cdot 1 = 0 \cdot 0 $$
+
+$$ 0 = 0 $$
+
+    v.
+
+$$ 0 + (0 \cdot 1) = (0 + 0) \cdot (0 + 1) $$
+
+$$ 0 + 0 = 0 \cdot 1 $$
+
+$$ 0 = 0 $$
+
+    vi.
+
+$$ 0 \cdot (0 + 1) = (0 \cdot 0) + (0 \cdot 1) $$
+
+$$ 0 \cdot 1 = 0 + 0 $$
+
+$$ 0 = 0 $$
+
+NOTE: part a many cases are omitted as you have to explore each case (2 for both
+commutative and associative, 8 for distributive).
+
 b. Show that $0$ is an identity element for $+$ and that $1$ is an identity
 element for $\cdot$.
 
+_Hint:_ Verify that $0 + x = x$ and that $1 \cdot x = x$ for every $x \in S$.
+
+$0 + 0 = 0$ and $0 + 1 = 1$, so $0$ is an identity for $+$.
+
+$1 \cdot 0 k 0$ and $1 \cdot 1 = 1$, so $1$ is an identity for $\cdot$.
+
 c. Define $\overline{0} = 1$ and $\overline{1} = 0$. Show that for every $a$ in
 $S$, $a + \overline{a} = 1$ and $a \cdot \overline{a} = 0$. It follows from
-parts (a)-\(c\) that $S$ is a Boolean algebra witgh the operations $+$ and
+parts (a)-\(c\) that $S$ is a Boolean algebra with the operations $+$ and
 $\cdot$.
+
+$a = 0$:
+
+$$ 0 + \overline{0} = 0 + 1 = 1 $$
+
+$$ 0 \cdot \overline{0} = 0 \cdot 1 = 0 $$
+
+$a = 1$:
+
+$$ 1 + \overline{1} = 1 + 0 = 1 $$
+
+$$ 1 \cdot \overline{1} = 1 \cdot 0 = 0 $$
 
 Exercises 12-15 provide an outline for a proof that the associative laws, which
 were included as an axiom for a Boolean algebra, can be derived from the other
@@ -4476,10 +4742,14 @@ that $\cdot$ takes precedence over $+$.
     associative law for $+$. Rederive the law without using the associative law
     and using only the other four axioms for a Boolean algebra.
 
+Omitted.
+
 13. The absorption law for $+$ states that for all elements $a$ and $b$ in a
     Boolean algebra, $a \cdot b + a = a$. Prove this law without using the
     associative law and using only the other four axioms for a Boolean algebra
     plus the result of exercise 12.
+
+Omitted.
 
 14. _Test for equality law:_ For all elements $a$, $b$, and $c$ in a Boolean
     algebra,
@@ -4489,6 +4759,8 @@ then $b = c$.
 
 Without using the associative law, derive this law from the other four laws in
 the axioms for a Boolean algebra plus the result of exercise 12.
+
+Omitted.
 
 15. The associative law for $+$ states that for all elements $a$, $b$, and $c$
     in a Boolean algebra, $a + (b + c) = (a + b) + c$. Show that this law, as
@@ -4505,19 +4777,49 @@ may use the universal bound law for $+$, the absorption law for $+$, and the
 test for equality law from exercises 12, 13, and 14 because the associative laws
 were not used to derive these properties.
 
+Omitted.
+
 In 16-21 determine whether each sentence is a statement. Explain your answers.
 
 16. This sentence is false.
 
+In order for a sentence to be a statement, it must be either true or false.
+
+The sentence, "This sentence is false.", is not a statement. If the sentence is
+false, then "This sentence is false", is false and therefore the sentence is
+true. On the other hand, if the sentence is true, then "This sentence is false."
+is true and therefore the sentence is false. Consequently, the sentence is both
+true and false and not a statement.
+
 17. If $1 + 1 = 3$, then $1 = 0$.
+
+This sentence is a statement. By logical deduction, if $1 + 1 = 3$, which is a
+false hypothesis, then $1 = 0$, which is a false conclusion. Thus the sentence
+is vacuously true.
 
 18. $\boxed{\text{The sentence in this box is a lie.}}$
 
+This sentence is not a statement. Since the sentence is in the box, the
+hypothesis is true. The conclusion however can be either true or false for much
+the same reasons as given in problem 16.
+
 19. All positive integers with negative squares are prime.
+
+This sentence is a statement. The hypothesis is that for all positive integers
+with negative squares, but there are no such integers. This hypothesis is false,
+therefore the conclusion that they are all prime is vacuously true.
 
 20. This sentence is false or $1 + 1 = 3$.
 
+This is not a statement. Since the conditional starts with the paradoxical
+statement from problem 16, the addition of an "or" conditional does not change
+the fact that this is not a statement.
+
 21. This sentence is false and $1 + 1 = 2$.
+
+This is not a statement. For reasons similar to 20. Think on the wording "true
+and false" and "true." This is what this sentence is saying. It is not a
+statement.
 
 22.
 
@@ -4525,8 +4827,31 @@ a. Assuming that the following sentence is a statement, prove that $1 + 1 = 3$:
 
 If this sentence is true, then $1 + 1 = 3$.
 
+**Proof (by contradiction):**
+
+Suppose that the sentence "If this sentence is true, then $1 + 1 = 3$" is false.
+
+Since the sentence is false, then the hypothesis "If this sentence is true,"
+must be true, and the conclusion, "$1 + 1 = 3$", must be false.
+
+So the sentence is true (by the hypothesis), and false (by the conclusion). This
+is a contradiction.
+
+Therefore the supposition that the sentence is false is false. Therefore, the
+supposition must be true, and its conclusion that $1 + 1 = 3$ must follow.
+
+Q.E.D.
+
 b. What can you deduce from part (a) about the status of "This sentence is
 true"? Why? (This example is known as Lob's paradox.)
+
+We can deduce that "This sentence is true" is paradoxical, _i.e._ it is both
+true and not true. As such, "This sentence is true" is a sentence, but not a
+statement.
+
+It is worth noting that any conclusion that follows it is true by logical
+deduction. This makes any conclusion following the hypothesis true, and thereby
+any sentence true.
 
 23. The following two sentences were devised by the logician Saul Kripke. While
     not intrinsically paradoxical, they could be paradoxical under certain
@@ -4539,18 +4864,47 @@ true"? Why? (This example is known as Lob's paradox.)
 (_Hint:_ Suppose Nixon says (ii) and the only utterance Jones makes about
 Watergate is (i).)
 
+Omitted.
+
 24. Can there exist a computer program that has as output a list of all the
     computer programs that do not list themselves in their output? Explain your
     answer.
 
+No. Suppose there exists a computer program $P$ that has as output a list of all
+computer programs that do not list themselves in their output. If $P$ lists
+itself as output, then it would be on the output list of $P$, which consists of
+all computer programs that do not list themselves in their output. Hence $P$
+would not list itself as output. But if $P$ does not list itself as output, then
+$P$ would be a member of the list of all computer programs that do not list
+themselves in their output, and this list is exactly the output of $P$. Hence
+$P$ would list itself as output. This analysis shows that the assumption of the
+existence of such a program $P$ is contradictory, and so no such program exists.
+
 25. Can there exist a book that refers to all those books and only those books
     that do not refer to themselves? Explain your answer.
+
+This is the same as number 24.
+
+Say there is a book $B$ that refers to all books that do not refer to
+themselves. If $B$ refers to itself, then by the definition of $B$, $B$ would
+not refer to itself. On the other hand, if $B$ does not refer to itself, then by
+definition of $B$, $B$ would refer to itself. This is a paradox and therefore no
+such book can exist.
 
 26. Some English adjectives are descriptive of themselves (for instance, the
     word _polysyllabic_ is polysyllabic) whereas others are not (for instance,
     the word _monosyllabic_ is not monosyllabic). The word _heterological_
     refers to an adjective that does not describe itself. Is _heterological_
     heterological? Explain your answer.
+
+If _heterological_ is heterological, then _heterological_ does not describe
+itself. But since _heterological_ is heterological, it is describing itself by
+the supposition. This is a contradiction.
+
+If _heterological_ is not heterological, then _heterological_ does describe
+itself, which contradicts its own definition.
+
+It is paradoxical, _heterological_ is both heterological and not heterological.
 
 27. As strange as it may seem, it is possible to give a precise-looking verbal
     definition of an integer that, in fact, is not a definition at all. The
@@ -4560,10 +4914,16 @@ Watergate is (i).)
     the total number of strings consisting of 11 or fewer English words is
     finite.)
 
+Omitted.
+
 28. Is there an algorithm which, for a fixed quantity $a$ and any input
     algorithm $X$ and data set $D$, can determine whether $X$ prints $a$ when
     run with data set $D$? Explain. (This problem is called the **printing
     problem**.)
 
+Omitted.
+
 29. Use a technique similar to that used to derive Russell's paradox to prove
     that for any set $A$, $\mathscr{P}(A) \nsubseteq A$.
+
+Omitted.
