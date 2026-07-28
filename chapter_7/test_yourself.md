@@ -45,3 +45,44 @@ $\{y \in Y | y = f(x) \text{ for some } x \in A\}$
    $f^{-1}(C) =$ _____.
 
 $\{x \in X | f(x) \in C\}$
+
+---
+
+Page 480
+
+**Test Yourself**
+
+1. If $F$ is a function from a set $X$ to a set $Y$, then $F$ is one-to-one if,
+   and only if, _____.
+
+2. If $F$ is a function from a set $X$ to a set $Y$, then $F$ is not one-to-one
+   if, and only if, _____.
+
+3. If $F$ is a function from a set $X$ to a set $Y$, then $F$ is onto if, and
+   only if, _____.
+
+4. If $F$ is a function from a set $X$ to a set $Y$, then $F$ is not onto if,
+   and only if, _____.
+
+5. The following two statements are _____:
+
+$$ \forall u, v \in U, \text{ if } H(u) = H(v) \text{ then } u = v $$
+
+$$ \forall u, v \in U, \text{ if } u \neq v \text{ then } H(u) \neq H(v) $$
+
+6. Given a function $F: X \to Y$ where $X$ is an infinite set, to prove that $F$
+   is one-to-one, you suppose that _____ and then you show that _____.
+
+7. Given a function $F: X \to Y$ where $X$ is an infinite set, to prove that $F$
+   is onto, you suppose that _____ and then you show that _____.
+
+8. Given a function $F: X \to Y$, to prove that $F$ is not one-to-one, you
+   _____.
+
+9. Given a function $F: X \to Y$, to prove that $F$ is not onto, you _____.
+
+10. A one-to-one correspondence from a set $X$ to a st $Y$ is a _____ that is
+    _____.
+
+11. If $F$ is a one-to-one correspondence from a set $X$ to a set $Y$ and $y$ is
+    in $Y$, then $F^{-1}(y)$ is _____.

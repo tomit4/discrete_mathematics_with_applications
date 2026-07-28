@@ -1330,3 +1330,405 @@ Omitted.
     perfect square.
 
 Omitted.
+
+---
+
+Page 480
+
+**Exercise Set 7.2**
+
+1. The definition of one-to-one is stated in two ways:
+
+$$ \forall x_1, x_2 \in X, \text{ if } F(x_1) = F(x_2) \tex{ then } x_1 = x_2 $$
+
+and
+
+$$ \forall x_1, x_2 \in X, \text{ if } x_1 \neq x_2 \tex{ then } F(x_1) \neq F(x_2) $$
+
+Why are these two statements logically equivalent?
+
+2. Fill in each blank with the word _most_ or _least_.
+
+a. A function $F$ is one-to-one if, and only if, each element in the co-domain
+of $F$ is the image of at _____ one element in the domain of $F$.
+
+b. A function $F$ is onto if, and only if, each element in the co-domain of $F$
+is the image of at _____ one element in the domain of $F$.
+
+3. When asked to state the definition of one-to-one, a student replies, "A
+   function $f$ is one-to-one if, and only if, every element of $X$ is sent by
+   $f$ to exactly one element of $Y$." Give a counterexample to show that the
+   student's reply is incorrect.
+
+4. Let $f: X \to Y$ be a function. True or false? A sufficient condition for $f$
+   to be one-to-one is that for every element $y$ in $Y$, there is at most one
+   $x$ in $X$ with $f(x) = y$. Explain your answer.
+
+5. All but two of the following statements are correct ways to express the fact
+   that a function $f$ is onto. Find the two that are incorrect.
+
+a. $f$ is onto $\Leftrightarrow$ every element in its co-domain is the image of
+some element in its domain.
+
+b. $f$ is onto $\Leftrightarrow$ every element in its domain has a corresponding
+image in its co-domain.
+
+c. $f$ is onto $\Leftrightarrow \forall y \in Y, \exists x \in X$ such that
+$f(x) = y$.
+
+d. $f$ is onto $\Leftrightarrow \forall x \in X, \exists y \in Y$ such that
+$f(x) = y$.
+
+e. $f$ is onto $\Leftrightarrow$ the range of $f$ is the same as the co-domain
+of $f$.
+
+6. Let $X = \{1, 5, 9\}$ and $Y = \{3, 4, 7\}$.
+
+a. Define $f: X \to Y$ by specifying that
+
+$$ f(1) = 4, f(5) = 7, f(9) = 4 $$
+
+Is $f$ one-to-one? Is $f$ onto? Explain your answers.
+
+b. Define $g: X \to Y$ by specifying that
+
+$$ g(1) = 7, g(5) = 3, g(9) = 4 $$
+
+Is $g$ one-to-one? Is $g$ onto? Explain your answers.
+
+7. Let $X = \{a, b, c, d\}$ and $Y = \{e, f, g\}$. Define functions $F$ and $G$
+   by the arrow diagrams below.
+
+(See page 481) for images.
+
+a. Is $F$ one-to-one? Why or why not? Is it onto? Why or why not?
+
+b. Is $G$ one-to-one? Why or why not? Is it onto? Why or why not?
+
+8. Let $X = \{a, b, c\}$ and $Y = \{d, e, f, g\}$. Define functions $H$ and $K$
+   by the arrow diagrams below.
+
+(See page 481) for images.
+
+a. Is $H$ one-to-one? Why or why not? Is it onto? Why or why not?
+
+b. Is $K$ one-to-one? Why or why not? Is it onto? Why or why not?
+
+9. Let $X = \{1, 2, 3\}$, $Y = \{1, 2, 3, 4\}$, and $Z = \{1, 2\}$.
+
+a. Define a function $f: X \to Y$ that is one-to-one but not onto.
+
+b. Define a function $g: X \to Z$ that is onto but not one-to-one.
+
+c. Define a function $h: X \to X$ that is neither one-to-one nor onto.
+
+d. Define a function $k: X \to X$ that is one-to-one and onto but is not the
+identity function on $X$.
+
+10.
+
+a. Define $f: \mathbb{Z} \to \mathbb{Z}$ by the rule $f(n) = 2n$, for every
+integer $n$.
+
+    i. Is $f$ one-to-one? Prove or give a counterexample.
+
+    ii. Is $f$ onto? prove or give a counterexample.
+
+b. Let $2\mathbb{Z}$ denote the set of all even integers. That is,
+$2\mathbb{Z} = \{n \in \mathbb{Z} | n = 2k \text{, for some integer } k\}$.
+Define $h: \mathbb{Z} \to 2\mathbb{Z}$ by the rule $h(n) = 2n$, for each integer
+$n$. Is $h$ onto? Prove or give a counterexample.
+
+11.
+
+a. Define $g: \mathbb{Z} \to \mathbb{Z}$ by the rule $g(n) = 4n - 5$, for each
+integer $n$.
+
+    i. Is $g$ one-to-one? Prove or give a counterexample.
+
+    ii. Is $g$ onto? Prove or give a counterexample.
+
+b. Define $G: \mathbb{R} \to \mathbb{R}$ by the rule $G(x) = 4x - 5$ for every
+real number $x$. Is $G$ onto? Prove or give a counterexample.
+
+12.
+
+a. Define $F: \mathbb{Z} \to \mathbb{Z}$ by the rule $F(n) = 2 - 3n$, for each
+integer $n$.
+
+    i. Is $F$ one-to-one? Prove or give a counterexample.
+
+    ii. Is $F$ onto? Prove or give a counterexample.
+
+b. Define $G: \mathbb{R} \to \mathbb{R}$ by the rule $G(x) = 2 - 3x$ for each
+real number $x$. Is $G$ onto? Prove or give a counterexample.
+
+13.
+
+a. Define $H: \mathbb{R} \to \mathbb{R}$ by the rule $H(x) = x^2$, for each real
+number $x$.
+
+    i. Is $H$ one-to-one? Prove or give a counterexample.
+
+    ii. Is $H$ onto? Prove or give a counterexample.
+
+b. Define $K: \mathbb{R}^{\text{nonneg}} \to \mathbb{R}^{\text{nonneg}}$ by the
+rule $K(x) = x^2$, for each nonnegative real number $x$. Is $K$ onto? Prove or
+give a counterexample.
+
+14. Explain the mistake in the following "proof."
+
+**Theorem:** The function $f: \mathbb{Z} \to \mathbb{Z}$ defined by the formula
+$f(n) = 4n + 3$, for each integer $n$, is one-to-one.
+
+"**Proof:** Suppose any integer $n$ is given. Then by definition of $f$, there
+is only one possible value for $f(n)$ - namely, $4n + 3$. Hence $f$ is
+one-to-one."
+
+In each of 15-18 a function $f$ is defined on a set of real numbers. Determine
+whether or not $f$ is one-to-one and justify your answer.
+
+15. $f(x) = \dfrac{x + 1}{x}$, for each number $x \neq 0$
+
+16. $f(x) = \dfrac{x}{x^2 + 1}$, for each real number $x$
+
+17. $f(x) = \dfrac{3x - 1}{x}$, for each real number $x \neq 0$
+
+18. $f(x) = \dfrac{x + 1}{x - 1}$, for each real number $x \neq 1$
+
+19. Referring to Example 7.2.3, assume that records with the following ID
+    numbers are to be placed in sequence into Table 7.2.1. Find the position
+    into which each record is placed.
+
+a. $417302072$
+
+b. $364981703$
+
+c. $283090787$
+
+20. Define $\text{Floor}: \mathbb{R} \to \mathbb{Z}$ by the formula
+    $\text{Floor}(x) = \lfloor x \rfloor$, for every real number $x$.
+
+a. Is $\text{Floor}$ one-to-one? Prove or give a counterexample.
+
+b. Is $\text{Floor}$ onto? Prove or give a counterexample.
+
+21. Let $S$ be the set of all strings of $0$'s and $1$'s, and define
+    $L: S \to \mathbb{Z}^{\text{nonneg}}$ by
+
+$$ L(s) = \text{ the length of } s \text{, for every string } s \text{ in } S $$
+
+a. Is $L$ one-to-one? Prove or give a counterexample.
+
+b. Is $L$ onto? Prove or give a counterexample.
+
+22. Let $S$ be the set of all strings of $0$'s and $1$'s, and define
+    $D: S \to \mathbb{Z}$ as follows: For every $s \in S$,
+
+$$ D(s) = \text{ the number of 1's in } s \text{ minus the number of 0's in } s $$
+
+a. Is $D$ one-to-one? Prove or give a counterexample.
+
+b. Is $D$ onto? Prove or give a counterexample.
+
+23. Define $F: \mathscr{P}(\{a, b, c\}) \to \mathbb{Z}$ as follows: For every
+    $A$ in $\mathscr{P}(\{a, b, c\})$,
+
+$$ F(A) = \text{ the number of elements in } A $$
+
+a. Is $F$ one-to-one? Prove or give a counterexample.
+
+b. Is $F$ onto? Prove or give a counterexample.
+
+24. Let $S$ be the set of all strings of $a$'s and $b$'s, and define
+    $N: S \to \mathbb{Z}$ by
+
+$$ N(s) = \text{ the number of a's in } s \text{, for each } s \in S $$
+
+a. Is $N$ one-to-one? Prove or give a counterexample.
+
+b. Is $N$ onto? Prove or give a counterexample.
+
+25. Let $S$ be the set of all strings in $a$'s and $b$'s, and define
+    $C: S \to S$ by
+
+$$ C(s) = as \text{, for each } s \in S $$
+
+($C$ is called **concatenation** by $a$ on the left.)
+
+a. Is $C$ one-to-one? Prove or give a counterexample.
+
+b. Is $C$ onto? Prove or give a counterexample.
+
+26. Define $S: \mathbb{Z}^+ \to \mathbb{Z}^+$ by the rule: For each integer $n$,
+
+$$ S(n) = \text{ the sum of the positive divisors of } n $$
+
+a. Is $S$ one-to-one? Prove or give a counterexample.
+
+b. Is $S$ onto? Prove or give a counterexample.
+
+27. Let $D$ be the set of all finite subsets of positive integers, and define
+    $T: \mathbb{Z}^+ \to D$ by the following rule:
+
+For every integer $n$,
+$T(n) = \text{ the set of all of the positive divisors of } n$.
+
+a. Is $T$ one-to-one? Prove or give a counterexample.
+
+b. Is $T$ onto? Prove or give a counterexample.
+
+28. Define $G: \mathbb{R} \times \mathbb{R} \to \mathbb{R} \times \mathbb{R}$ as
+    follows:
+
+$$ G(x, y) = (2y, -x) \text{ for every } (x, y) \in \mathbb{R} \times \mathbb{R} $$
+
+a. Is $G$ one-to-one? Prove or give a counterexample.
+
+b. Is $G$ onto? Prove or give a counterexample.
+
+29. Define $H: \mathbb{R} \times \mathbb{R} \to \mathbb{R} \times \mathbb{R}$ as
+    follows:
+
+$$ H(x, y) = (x + 1, 2 - y) \text{ for every } (x, y) \in \mathbb{R} \times \mathbb{R} $$
+
+a. Is $H$ one-to-one? Prove or give a counterexample.
+
+b. Is $H$ onto? Prove or give a counterexample.
+
+30. Define $J: \mathbb{Q} \times \mathbb{Q} \to \mathbb{R}$ by the rule
+
+$$ J(r, s) = r + \sqrt{2}s \text{ for each } (r, s) \in \mathbb{Q} \times \mathbb{Q} $$
+
+a. Is $J$ one-to-one? Prove or give a counterexample.
+
+b. Is $J$ onto? Prove or give a counterexample.
+
+31. Define $F: \mathbb{Z}^+ \times \mathbb{Z}^+ \to \mathbb{Z}^+$ and
+    $G: \mathbb{Z}^+ \times \mathbb{Z}^+ \to \mathbb{Z}^+$ as follows:
+
+For each $(n, m) \in \mathbb{Z}^+ \times \mathbb{Z}^+$,
+
+$$ F(n, m) = 3^n5^m \text{ and } G(n, m) = 3^n6^m $$
+
+a. Is $F$ one-to-one? Prove or give a counterexample.
+
+b. Is $G$ one-to-one? Prove or give a counterexample.
+
+32.
+
+a. Is $\log_{8}27 = \log_{2}3$? Why or why not?
+
+a. Is $\log_{16}9 = \log_{4}3$? Why or why not?
+
+The properties of logarithm established in 33-35 are used in Sections 11.4 and
+11.5.
+
+33. Prove that for all positive real numbers $b$, $x$, and $y$ with $b \neq 1$,
+
+$$ \log_{b}\left(\frac{x}{y}\right) = \log_{b}x - \log_{b}y $$
+
+34. Prove that for all positive real numbers $b$, $x$, and $y$ with $b \neq 1$,
+
+$$ \log_{b}(xy) = \log_{b}x + \log_{b}y $$
+
+35. Prove that for all real numbers $a$, $b$, and $x$ with $b$ and $x$ positive
+    and $b \neq 1$,
+
+$$ \log_{b}(x^a) = a\log_{b}x $$
+
+Exercises 36 and 37 use the following definition: If
+$f: \mathbb{R} \to \mathbb{R}$ and $g: \mathbb{R} \to \mathbb{R}$ are functions,
+then the function $(f + g): \mathbb{R} \to \mathbb{R}$ is defined by the formula
+$(f + g)(x) = f(x) + g(x)$ for every real number $x$.
+
+36. If $f: \mathbb{R} \to \mathbb{R}$ and $g: \mathbb{R} \to \mathbb{R}$ are
+    both one-to-one, is $f + g$ also one-to-one? Justify your answer.
+
+37. If $f: \mathbb{R} \to \mathbb{R}$ and $g: \mathbb{R} \to \mathbb{R}$ are
+    both onto, is $f + g$ also onto? Justify your answer.
+
+Exercises 38 and 39 use the following definition: If
+$f: \mathbb{R} \to \mathbb{R}$ and $c$ is a nonzero real number, the function
+$(c \cdot f): \mathbb{R} \to \mathbb{R}$ is defined by the formula
+$(c \cdot f)(x) = c \cdot (f(x))$ for every real number $x$.
+
+38. Let $f: \mathbb{R} \to \mathbb{R}$ be a function and $c$ a nonzero real
+    number. If $f$ is one-to-one, is $c \cdot f$ also one-to-one? Justify your
+    answer.
+
+39. Let $f: \mathbb{R} \to \mathbb{R}$ be a function and $c$ a nonzero real
+    number. If $f$ is onto, is $c \cdot f$ also onto? Justify your answer.
+
+40. Suppose $F: X \to Y$ is one-to-one.
+
+a. Prove that for every subset $A \subseteq X$, $F^{-1}(F(A)) = A$.
+
+b. Prove that for all subsets $A_1$ and $A_2$ in $X$,
+$F(A_1 \cap A_2) = F(A_1) \cap F(A_2)$.
+
+Let $X = \{a, b, c, d, e\}$ and $Y = \{s, t, u, v, w\}$. In each of 42 and 43 a
+one-to-one correspondence $F: X \to Y$ is defined by an arrow diagram. In each
+case draw an arrow diagram for $F^{-1}$.
+
+42.
+
+(See page 483 for image.)
+
+43.
+
+(See page 483 for image.)
+
+In 44-55 indicate which of the functions in the referenced exercise are
+one-to-one correspondences. For each function that is a one-to-one
+correspondence, find the inverse function.
+
+44. Exercise 10a
+
+45. Exercise 10b
+
+46. Exercise 11a
+
+47. Exercise 11b
+
+48. Exercise 12a
+
+49. Exercise 12b
+
+50. Exercise 21
+
+51. Exercise 22
+
+52. Exercise 15 with the co-domain taken to be the set of all real numbers not
+    equal to $1$.
+
+53. Exercise 16 with the co-domain taken to be the set of all real numbers.
+
+54. Exercise 17 with the co-domain taken to be the set of all real numbers not
+    equal to $3$
+
+55. Exercise 18 with the co-domain taken to be the set of all real numbers not
+    equal to 1.
+
+56. In Example 7.2.8 a one-to-one correspondence was defined from the power set
+    of $\{a, b\}$ to the set of all strings of $0$'s and $1$'s that have length
+    $2$. Thus the elements of these two sets can be matched up exactly, and so
+    the two sets have the same number of elements.
+
+a. Let $X = \{x_1, x_2, \dots, x_n\}$ be a set with $n$ elements. Use Example
+7.2.8 as a model to define a one-to-one correspondence from $\mathscr{P}(X)$,
+the set of all subsets of $X$, to the set of all strings of $0$'s and $1$'s that
+have length $n$.
+
+b. In Section 9.2 we show that there are $2^n$ strings of $0's$ and $1$'s that
+have length $n$. What does this allow you to conclude about the number of
+subsets of $\mathscr{P}(X)$? (This provides an alternative proof of Theorem
+6.3.1.)
+
+57. Write a computer algorithm to check whether a function from one finite set
+    to another is one-to-one. Assume the existence of an independent algorithm
+    to compute values of the function.
+
+58. Write a computer algorithm to check whether a function from one finite set
+    to another is onto. Assume the existence of an independent algorithm to
+    compute values of the function.

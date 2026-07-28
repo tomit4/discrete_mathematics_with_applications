@@ -106,3 +106,155 @@ $$ f^{-1}(C) = \{x \in X | f(x) \in C\} $$
 
 $f(A)$ is called the **image of $A$**, and $f^{-1}(C)$ is called the **inverse
 image of $C$**.
+
+---
+
+Page 463
+
+**Definition**
+
+Let $F$ be a function from a set $X$ to a set $Y$. $F$ is **one-to-one** (or
+**injective**) if, and only if, for all elements $x_1$ and $x_2$ in $X$,
+
+$$ \text{if } F(x_1) = F(x_2) \text{, then } x_1 = x_2 $$
+
+or, equivalently,
+
+$$ \text{if } x_1 \neq x_2 \text{, then } F(x_1) \neq F(x_2) $$
+
+Symbolically:
+
+$$ F: X \to Y \text{ is one-to-one } \Leftrightarrow \forall x_1, x_2 \in X \text{, if } F(x_1) = F(x_2) \text{ then } x_1 = x_2 $$
+
+---
+
+Page 466
+
+**Definition: Hash Function**
+
+A **hash function** is a function defined from a larger, possibly infinite, set
+of data to a smaller fixed-size set of integers.
+
+---
+
+Page 469
+
+**Definition**
+
+Let $F$ be a function from a set $X$ to a set $Y$. $F$ is **onto** (or
+**surjective**) if, and only if, given any element $y$ in $Y$, it is possible to
+find an element $x$ in $X$ with the property that $y = F(x)$.
+
+Symbolically:
+
+$$ F:X \to Y \text{ is onto } \Leftrightarrow \forall y \in Y, \exists x \in X \text{ such that } F(x) = y $$
+
+---
+
+Page 472
+
+**Laws of Exponents**
+
+If $b$ and $c$ are any positive real numbers and $u$ and $v$ are any real
+numbers, the following laws of exponents hold true:
+
+7.2.1
+
+$$ b^ub^v = b^{u + v} $$
+
+7.2.2
+
+$$ (b^u)^v = b^{uv} $$
+
+7.2.3
+
+$$ \frac{b^u}{b^v} = b^{u - v} $$
+
+7.2.4
+
+$$ (bc)^u = b^uc^u $$
+
+---
+
+Page 473
+
+**Theorem 7.2.1 Properties of Logarithms**
+
+For any positive real numbers $b$, $c$, $x$ and $y$ with $b \neq 1$ and
+$c \neq 1$ and for every real number $a$:
+
+a. $\log_b(xy) = \log_bx + \log_by$
+
+b. $\log_b\left(\dfrac{x}{y}\right) = \log_bx - \log_by$
+
+c. $\log_b(x^a) = a\log_bx$
+
+d. $\log_cx = \dfrac{\log_bx}{\log_bc}$
+
+---
+
+Page 475
+
+**Definition**
+
+A **one-to-one correspondence** (or **bijection**) from a set $X$ to a set $Y$
+is a function $F: X \to Y$ that is both one-to-one and onto.
+
+---
+
+Page 478
+
+**Theorem 7.2.2**
+
+Suppose $F: X \to Y$ is a one-to-one correspondence; in other words, suppose $F$
+is one-to-one and onto. Then there is a function $F^{-1}: Y \to X$ that is
+defined as follows:
+
+Given any element $y$ in $Y$,
+
+$$ F^{-1}(y) = \text{ that unique element } x \text{ in } X \text{ such that } F(x) \text{ equals } y $$
+
+Or, equivalently,
+
+$$ F^{-1}(y) = x \Leftrightarrow y = F(x) $$
+
+---
+
+Page 478
+
+**Definition**
+
+The function $F^{-1}$ of Theorem 7.2.2 is called the **inverse function** for
+$F$.
+
+---
+
+Page 479
+
+**Theorem 7.2.3**
+
+If $X$ and $Y$ are sets and $F: X \to Y$ is one-to-one and onto, then
+$F^{-1}:Y \to X$ is also one-to-one and onto.
+
+**Proof:**
+
+**$F^{-1}$ is one-to-one:**
+
+Suppose $y_1$ and $y_2$ are elements of $Y$ such that
+$F^{-1}(y_1) = F^{-1}(y_2)$. _[We must show that $y_1 = y_2$.]_ Let
+$x = F^{-1}(y_1) = F^{-1}(y_2)$. Then $x \in X$, and by definition of $F^{-1}$,
+
+$$ F(x) = y_1 \text{ since } x = F^{-1}(y_1) $$
+
+and
+
+$$ F(x) = y^2 \text{ since } x = F^{-1}(y_2) $$
+
+Consequently, $y_1 = y_2$ because each is equal to $F(x)$. _[This is what was to
+be shown.]_
+
+**$F^{-1}$ is onto:**
+
+Suppose $x \in X$. _[We must show that there exists an element $y$ in $Y$ such
+that $F^{-1}(y) = x$.]_ Let $y = F(x)$. Then $y \in Y$, and by definition of
+$F^{-1}$, $F^{-1}(y) = x$ _[as was to be shown.]_
