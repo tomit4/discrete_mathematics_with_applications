@@ -55,14 +55,24 @@ Page 480
 1. If $F$ is a function from a set $X$ to a set $Y$, then $F$ is one-to-one if,
    and only if, _____.
 
+for all $x_1$ and $x_2$ in $X$, if $F(x_1) = F(x_2)$ then $x_1 = x_2$
+
 2. If $F$ is a function from a set $X$ to a set $Y$, then $F$ is not one-to-one
    if, and only if, _____.
+
+for all $x_1$ and $x_2$ in $X$, if $F(x_1) = F(x_2)$ then $x_1 \neq x_2$
 
 3. If $F$ is a function from a set $X$ to a set $Y$, then $F$ is onto if, and
    only if, _____.
 
+for every element $y$ in $Y$, there exists at least one element $x$ in $X$ such
+that $f(x) = y$
+
 4. If $F$ is a function from a set $X$ to a set $Y$, then $F$ is not onto if,
    and only if, _____.
+
+for every element $y$ in $Y$, there exists at least one element $x$ in $X$ such
+that $f(x) \neq y$
 
 5. The following two statements are _____:
 
@@ -70,19 +80,39 @@ $$ \forall u, v \in U, \text{ if } H(u) = H(v) \text{ then } u = v $$
 
 $$ \forall u, v \in U, \text{ if } u \neq v \text{ then } H(u) \neq H(v) $$
 
+logically equivalent ways of expressing what it means for a function $H$ to be
+one-to-one (The second is the contrapositive of the first.)
+
 6. Given a function $F: X \to Y$ where $X$ is an infinite set, to prove that $F$
    is one-to-one, you suppose that _____ and then you show that _____.
+
+$x_1$ and $x_2$ are any _[particular but arbitrarily chosen]_ elements in $X$
+with the property that $F(x_1) = F(x_2)$; $x_1 = x_2$
 
 7. Given a function $F: X \to Y$ where $X$ is an infinite set, to prove that $F$
    is onto, you suppose that _____ and then you show that _____.
 
+$y$ is any _[particular but arbitrarily chosen]_ element in $Y$; there exists at
+least one element $x$ in $X$ such that $F(x) = y$
+
 8. Given a function $F: X \to Y$, to prove that $F$ is not one-to-one, you
    _____.
 
+show that there are concrete elements $x_1$ and $x_2$ in $X$ with the property
+that $F(x_1) = F(x_2)$ and $x_1 \neq x_2$
+
 9. Given a function $F: X \to Y$, to prove that $F$ is not onto, you _____.
+
+show that there is a concrete element $y$ in $Y$ with the property that
+$F(x) \neq y$ for any element $x$ in $X$
 
 10. A one-to-one correspondence from a set $X$ to a st $Y$ is a _____ that is
     _____.
 
+function from $X$ to $Y$; both one-to-one and onto
+
 11. If $F$ is a one-to-one correspondence from a set $X$ to a set $Y$ and $y$ is
     in $Y$, then $F^{-1}(y)$ is _____.
+
+the unique element $x$ in $X$ such that $F(x) = y$ (in other words, $F^{-1}(y)$
+is the unique preimage of $y$ in $X$)

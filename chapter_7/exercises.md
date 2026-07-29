@@ -1339,30 +1339,46 @@ Page 480
 
 1. The definition of one-to-one is stated in two ways:
 
-$$ \forall x_1, x_2 \in X, \text{ if } F(x_1) = F(x_2) \tex{ then } x_1 = x_2 $$
+$$ \forall x_1, x_2 \in X, \text{ if } F(x_1) = F(x_2) \text{ then } x_1 = x_2 $$
 
 and
 
-$$ \forall x_1, x_2 \in X, \text{ if } x_1 \neq x_2 \tex{ then } F(x_1) \neq F(x_2) $$
+$$ \forall x_1, x_2 \in X, \text{ if } x_1 \neq x_2 \text{ then } F(x_1) \neq F(x_2) $$
 
 Why are these two statements logically equivalent?
+
+Because the second statement is the contrapositive of the first.
 
 2. Fill in each blank with the word _most_ or _least_.
 
 a. A function $F$ is one-to-one if, and only if, each element in the co-domain
 of $F$ is the image of at _____ one element in the domain of $F$.
 
+most
+
 b. A function $F$ is onto if, and only if, each element in the co-domain of $F$
 is the image of at _____ one element in the domain of $F$.
+
+least
 
 3. When asked to state the definition of one-to-one, a student replies, "A
    function $f$ is one-to-one if, and only if, every element of $X$ is sent by
    $f$ to exactly one element of $Y$." Give a counterexample to show that the
    student's reply is incorrect.
 
+Suppose $X = \{a, b\}$ and $Y = \{1, 2\}$, and that $f: X \to Y$ such that
+$f(a) = 1$ and $f(b) = 1$. This fulfills the students definition as every
+element in $X$ is sent by $f$ to exactly one element of $Y$. Note that $f$ is
+not one-to-one though, as $f(a) = f(b)$, but $a \neq b$.
+
 4. Let $f: X \to Y$ be a function. True or false? A sufficient condition for $f$
    to be one-to-one is that for every element $y$ in $Y$, there is at most one
    $x$ in $X$ with $f(x) = y$. Explain your answer.
+
+This is true. This is the definition for one-to-one, since every element $y$ in
+$Y$ has at most one element $x$ in $X$, this means that, given any $x_1$ and
+$x_2$ in $X$, if $x_1 \neq x_2$, then $F(x_1) \neq F(x_2)$. The key wording that
+makes this true is "at most one."
 
 5. All but two of the following statements are correct ways to express the fact
    that a function $f$ is onto. Find the two that are incorrect.
@@ -1370,17 +1386,27 @@ is the image of at _____ one element in the domain of $F$.
 a. $f$ is onto $\Leftrightarrow$ every element in its co-domain is the image of
 some element in its domain.
 
+true.
+
 b. $f$ is onto $\Leftrightarrow$ every element in its domain has a corresponding
 image in its co-domain.
+
+false.
 
 c. $f$ is onto $\Leftrightarrow \forall y \in Y, \exists x \in X$ such that
 $f(x) = y$.
 
+true.
+
 d. $f$ is onto $\Leftrightarrow \forall x \in X, \exists y \in Y$ such that
 $f(x) = y$.
 
+false.
+
 e. $f$ is onto $\Leftrightarrow$ the range of $f$ is the same as the co-domain
 of $f$.
+
+true.
 
 6. Let $X = \{1, 5, 9\}$ and $Y = \{3, 4, 7\}$.
 
@@ -1390,11 +1416,19 @@ $$ f(1) = 4, f(5) = 7, f(9) = 4 $$
 
 Is $f$ one-to-one? Is $f$ onto? Explain your answers.
 
+$f$ is not one-to-one, as $f(1) = 4$ and $f(9) = 4$, but $1 \neq 9$.
+
+$f$ is not onto, as there is no $x \in X$ such that $f(x) = 3$
+
 b. Define $g: X \to Y$ by specifying that
 
 $$ g(1) = 7, g(5) = 3, g(9) = 4 $$
 
 Is $g$ one-to-one? Is $g$ onto? Explain your answers.
+
+$g$ is one-to-one, as $g(1) \neq g(5) \neq g(9)$.
+
+$g$ is onto, as every $y$ in $Y$ is an image of at least one $x$ in $X$.
 
 7. Let $X = \{a, b, c, d\}$ and $Y = \{e, f, g\}$. Define functions $F$ and $G$
    by the arrow diagrams below.
@@ -1403,7 +1437,16 @@ Is $g$ one-to-one? Is $g$ onto? Explain your answers.
 
 a. Is $F$ one-to-one? Why or why not? Is it onto? Why or why not?
 
+$F$ is not one-to-one, as $F(c) = e$ and $F(d) = e$, but $c \neq d$.
+
+$F$ is onto, as every $y$ in $Y$ is an image of at least one $x$ in $X$.
+
 b. Is $G$ one-to-one? Why or why not? Is it onto? Why or why not?
+
+$G$ is not one-to-one, as $G(a) = f$, $G(b) = f$, and $G(d) = f$, but
+$a \neq b \neq d$.
+
+$G$ is not onto, as $g \in Y$, but there is no $x$ in $X$ such that $G(x) = g$.
 
 8. Let $X = \{a, b, c\}$ and $Y = \{d, e, f, g\}$. Define functions $H$ and $K$
    by the arrow diagrams below.
@@ -1412,18 +1455,35 @@ b. Is $G$ one-to-one? Why or why not? Is it onto? Why or why not?
 
 a. Is $H$ one-to-one? Why or why not? Is it onto? Why or why not?
 
+$H$ is not one-to-one, as $H(b) = f$ and $H(c) = f$, but $b \neq a$.
+
+$H$ is not onto, as both $e$ and $g$ are in $Y$, but there is no $x$ in $X$ such
+that $H(x) = e$ nor $H(x) = g$.
+
 b. Is $K$ one-to-one? Why or why not? Is it onto? Why or why not?
+
+$K$ is one-to-one, as $K(a) \neq K(b) \neq K(c)$.
+
+$K$ is not onto, as $g \in Y$, but $\nexists x \in X$ such that $K(x) = g$.
 
 9. Let $X = \{1, 2, 3\}$, $Y = \{1, 2, 3, 4\}$, and $Z = \{1, 2\}$.
 
 a. Define a function $f: X \to Y$ that is one-to-one but not onto.
 
+Let $f: X \to Y$ such that $f(1) = 1$, $f(2) = 2$, and $f(3) = 3$.
+
 b. Define a function $g: X \to Z$ that is onto but not one-to-one.
+
+Let $g: X \to Z$ such that $g(1) = 1$, $g(2) = 2$, and $g(3) = 2$.
 
 c. Define a function $h: X \to X$ that is neither one-to-one nor onto.
 
+Let $h: X \to X$ such that $h(1) = 1$, $h(2) = 1$, and $h(3) = 1$.
+
 d. Define a function $k: X \to X$ that is one-to-one and onto but is not the
 identity function on $X$.
+
+Let $k: X \to X$, such that $k(1) = 3$, $k(2) =1$, $k(3) = 2$.
 
 10.
 
@@ -1432,12 +1492,75 @@ integer $n$.
 
     i. Is $f$ one-to-one? Prove or give a counterexample.
 
+$f$ is one-to-one.
+
+**Proof:**
+
+Suppose $f(n_1) = f(n_2)$.
+
+To prove $f$ is one-to-one, it must be shown that $n_1 = n_2$.
+
+By definition of $f$, $f(n_1) = f(n_2)$ can be substituted with:
+
+$$ 2n_1 = 2n_2 $$
+
+Then, by algebra:
+
+$$ n_1 = n_2 $$
+
+This is what was to be shown.
+
+Q.E.D.
+
     ii. Is $f$ onto? prove or give a counterexample.
+
+**Disproof (by counterexample):**
+
+Consider $1 \in \mathbb{Z}$. It is claimed that $1 \neq f(n)$ for any integer
+$n$.
+
+For if there were an integer $n$ such that $1 = f(n)$, then, by definition of
+$f$, $1 = 2n$.
+
+Then, by division:
+
+$$ n = \frac{1}{2} $$
+
+.
+
+Note then that $n$ is not an integer. Hence $1 \neq f(n)$ for any integer $n$.
+
+Therefore, it can be concluded that $f$ is not onto.
+
+Q.E.D.
 
 b. Let $2\mathbb{Z}$ denote the set of all even integers. That is,
 $2\mathbb{Z} = \{n \in \mathbb{Z} | n = 2k \text{, for some integer } k\}$.
 Define $h: \mathbb{Z} \to 2\mathbb{Z}$ by the rule $h(n) = 2n$, for each integer
 $n$. Is $h$ onto? Prove or give a counterexample.
+
+$h$ is onto.
+
+**Proof:**
+
+Suppose $m$ is an integer such that $m \in 2\mathbb{Z}$.
+
+To prove that $h$ is onto, it must be shown that there is some integer which
+when passed through $h$ equals $m$.
+
+By definition of $2\mathbb{Z}$, this means that:
+
+$$ m = 2k $$
+
+for some integer $k$.
+
+Then:
+
+$$ h(k) = 2k = m $$
+
+Hence there is an integer, namely $k$, such that $h(k) = m$.
+
+Q.E.D.
 
 11.
 
@@ -1446,10 +1569,96 @@ integer $n$.
 
     i. Is $g$ one-to-one? Prove or give a counterexample.
 
+$g$ is one-to-one.
+
+**Proof:**
+
+Suppose $n_1, n_2 \in \mathbb{Z}$ such that $g(n_1) = g(n_2)$.
+
+To prove $g$ is one-to-one, it must be shown that $n_1 = n_2$.
+
+By definition of $g$, $g(n_1) = g(n_2)$ can be expressed by substitution as:
+
+$$ 4n_1 - 5 = 4n_2 - 5 $$
+
+Then, by algebra:
+
+$$ 4n_1 = 4n_2 $$
+
+$$ n_1 = n_2 $$
+
+This is what was to be shown, and it can therefore be concluded that $g$ is
+one-to-one.
+
+Q.E.D.
+
     ii. Is $g$ onto? Prove or give a counterexample.
+
+$g$ is not onto.
+
+**Disproof (by counterexample):**
+
+Suppose $m \in \mathbb{Z}$.
+
+To prove that $g$ is onto, it must be shown that there exists some integer $n$
+such that $g(n) = m$.
+
+By the definition of $g$, $g(n) = m$ can be expressed by substitution as:
+
+$$ 4n - 5 = m $$
+
+Then, by algebra:
+
+$$ 4n = m + 5 $$
+
+$$ n = \frac{m + 5}{4} $$
+
+But then $n$ is not necessarily an integer, say in the case of $m = 0$. Note
+that $0 \in \mathbb{Z}$, but if $m = 0$, then $n = \dfrac{5}{4}$, and
+$\dfrac{5}{4}$ is not an integer.
+
+Hence there is no $n$, such that $g(n) = 0$.
+
+Therefore it can be concluded that $g$ is not onto.
+
+Q.E.D.
 
 b. Define $G: \mathbb{R} \to \mathbb{R}$ by the rule $G(x) = 4x - 5$ for every
 real number $x$. Is $G$ onto? Prove or give a counterexample.
+
+$G$ is onto.
+
+**Proof:**
+
+Suppose there exists some $y \in \mathbb{R}$.
+
+To prove $G$ is onto, it must be shown that there exists some $x \in \mathbb{R}$
+such that $G(x) = y$.
+
+By the given definition for $G$, $G(x) = y$ can be expressed by substitution as:
+
+$$ 4x - 5 = y $$
+
+$$ 4x = y + 5 $$
+
+$$ x = \frac{y + 5}{4} $$
+
+Now, $\dfrac{y + 5}{4}$ is a real number by the addition and division of real
+numbers. Hence $x = \dfrac{y + 5}{4} \in \mathbb{R}$.
+
+Then, evaluate $G\left(\dfrac{y + 5}{4}\right)$:
+
+$$ G\left(\frac{y + 5}{4}\right) = 4\left(\frac{y + 5}{4}\right) - 5 $$
+
+$$ = y + 5 - 5 $$
+
+$$ = y $$
+
+Hence, it has been shown that $G(x) = y$ for some $x$.
+
+This is what was to be shown. Therefore it can be concluded that $G$ is onto.
+
+Q.E.D.
 
 12.
 
@@ -1458,10 +1667,77 @@ integer $n$.
 
     i. Is $F$ one-to-one? Prove or give a counterexample.
 
+$F$ is one-to-one.
+
+**Proof:**
+
+Suppose $n_1, n_2 \in \mathbb{Z}$ such that $F(n_1) = F(n_2)$.
+
+To prove $F$ is one-to-one, it must be shown that $n_1 = n_2$.
+
+By the given definition of $F$, $F(n_1) = F(n_2)$ can be expressed by
+substitution as:
+
+$$ 2 - 3n_1 = 2 - 3n_2 $$
+
+Then, by algebra:
+
+$$ -3n_1 = -3n_2 $$
+
+$$ n_1 = n_2 $$
+
+Hence it has been shown that $n_1 = n_2$ when $F(n_1) = F(n_2)$.
+
+This is what was to be shown. Therefore it can be concluded that $F$ is
+one-to-one.
+
+Q.E.D.
+
     ii. Is $F$ onto? Prove or give a counterexample.
 
 b. Define $G: \mathbb{R} \to \mathbb{R}$ by the rule $G(x) = 2 - 3x$ for each
 real number $x$. Is $G$ onto? Prove or give a counterexample.
+
+$G$ is onto.
+
+**Proof:**
+
+Suppose $y \in \mathbb{R}$.
+
+To prove that $G$ is onto, it must be shown that $G(x) = y$ for some
+$x \in \mathbb{R}$.
+
+By the given definition for $G$, $G(x) = y$ can be expressed by substitution as:
+
+$$ 2 - 3x = y $$
+
+Then, by algebra:
+
+$$ -3x = y - 2 $$
+
+$$ x = -\left(\frac{y - 2}{3}\right) $$
+
+$$ x = \frac{2 - y}{3} $$
+
+Now, $\dfrac{2 - y}{3}$ by the product, division, and addition of real numbers.
+It follows that $x \in \mathbb{R}$ since $x = \dfrac{2 - y}{3}$.
+
+Now, evaluating $G\left(\dfrac{2 - y}{3}\right)$:
+
+$$ G\left(\frac{2 - y}{3}\right) = 2 - 3\left(\frac{2 - y}{3}\right) $$
+
+$$ = 2 - (2 - y) $$
+
+$$ = 2 - 2 + y $$
+
+$$ = y $$
+
+Hence it has been shown that $G(x) = y$ for some $x \in \mathbb{R}$.
+
+This is what was to be shown, and therefore it can be concluded that $G$ is
+onto.
+
+Q.E.D.
 
 13.
 
@@ -1470,11 +1746,109 @@ number $x$.
 
     i. Is $H$ one-to-one? Prove or give a counterexample.
 
+$H$ is not one-to-one.
+
+**Disproof (by counterexample):**
+
+Suppose $x_1, x_2 \in \mathbb{R}$ such that $H(x_1) = H(x_2)$.
+
+To prove that $H$ is one-to-one, it must be shown that $x_1 = x_2$.
+
+Substituting $H(x_1) = H(x_2)$ by the given definition for $H$:
+
+$$ (x_1)^2 = (x_2)^2 $$
+
+$$ \sqrt{(x_1)^2} = \sqrt{(x_2)^2} $$
+
+$$ \pm x_1 = \pm x_2 $$
+
+But $\pm x_1 = x_1$ or $\pm x_1 = -x_1$. Similarly, $\pm x_2 = x_2$ or
+$\pm x_2 = -x_2$. It follows then that there exists some $-x_1 = x_2$ or
+$x_1 = -x_2$, but this cannot be the case when $H(x_1) = H(x_2)$.
+
+Consider $x_1 = -2$,and $x_2 = 2$. Note that $x_1, x_2 \in \mathbb{R}$.
+
+Then:
+
+$$ H(x_1) = (-2)^2 = 4 = (2)^2 = H(x_2) $$
+
+So, $H(-2) = H(2)$, but $-2 \neq 2$. Therefore, by the definition of one-to-one,
+it can be concluded that $H$ is not one-to-one.
+
+Q.E.D.
+
     ii. Is $H$ onto? Prove or give a counterexample.
+
+$H$ is not onto.
+
+**Disproof (by counterexample):**
+
+Suppose there is some $y$ such that $y \in \mathbb{R}$.
+
+To prove that $H$ is onto, it must be shown that $H(x) = y$ for some
+$x \in \mathbb{R}$.
+
+By substitution of the given definition for $H$:
+
+$$ x^2 = y $$
+
+$$ x = \sqrt{y} $$
+
+Now, $\sqrt{y} \in \mathbb{R}$, but only if $y \geq 0$. If $y < 0$, then
+$\sqrt{y}$ is a complex or imaginary number.
+
+Consider $y = -1$. Note that $-1 \in \mathbb{R}$.
+
+Then, by substitution into $H(x)$:
+
+$$ x^2 = -1 $$
+
+$$ x = \sqrt{-1} $$
+
+$$ x = i \notin \mathbb{R} $$
+
+Thus it has been shown that there is no such $x \in \mathbb{R}$ such that
+$H(x) = -1$.
+
+By the definition of onto, it can be concluded that $H$ is not onto.
+
+Q.E.D.
 
 b. Define $K: \mathbb{R}^{\text{nonneg}} \to \mathbb{R}^{\text{nonneg}}$ by the
 rule $K(x) = x^2$, for each nonnegative real number $x$. Is $K$ onto? Prove or
 give a counterexample.
+
+$K$ is onto.
+
+**Proof:**
+
+Suppose there exists some $y$ such that $y \in \mathbb{R}^{\text{nonneg}}$.
+
+To prove that $K$ is onto, it must be shown that $K(x) = y$ for some
+$x \in \mathbb{R}^{\text{nonneg}}$.
+
+By substitution of the given definition for $K$:
+
+$$ x^2 = y $$
+
+$$ x = \sqrt{y} $$
+
+Now, $\sqrt{y} \in \mathbb{R}^{\text{nonneg}}$ by the square root of positive
+real numbers.
+
+Evaluating for $K(\sqrt{y})$:
+
+$$ K(\sqrt{y}) = (\sqrt{y})^2 $$
+
+$$ = y $$
+
+Thus it has been shown that $K(x) = y$ for some
+$x \in \mathbb{R}^{\text{nonneg}}$.
+
+This is what was to be shown, and therefore it can be concluded that $K$ is
+onto.
+
+Q.E.D.
 
 14. Explain the mistake in the following "proof."
 
@@ -1485,16 +1859,88 @@ $f(n) = 4n + 3$, for each integer $n$, is one-to-one.
 is only one possible value for $f(n)$ - namely, $4n + 3$. Hence $f$ is
 one-to-one."
 
+This "proof" makes the mistake of assuming the conclusion. In order to prove
+that a function is one-to-one, it must be shown that given any two inputs, say
+$n_1, n_2 \in \mathbb{Z}$ such that $f(n_1) = f(n_2)$, then $n_1 = n_2$.
+
+Alternatively, one could show that given any two outputs, say
+$f(n_1), f(n_2) \in \mathbb{Z}$, that if $f(n_1) \neq f(n_2)$, then
+$n_1 \neq n_2$.
+
 In each of 15-18 a function $f$ is defined on a set of real numbers. Determine
 whether or not $f$ is one-to-one and justify your answer.
 
 15. $f(x) = \dfrac{x + 1}{x}$, for each number $x \neq 0$
 
+Scratch Proof:
+
+$$ \frac{x_1 + 1}{x_1} = \frac{x_2 + 1}{x_2} $$
+
+$$ (x_2)(x_1 + 1) = (x_1)(x_2 + 1) $$
+
+$$ x_2x_1 + x_2 = x_2x_1 + x_1 $$
+
+$$ x_2 = x_1 $$
+
+$f$ is one-to-one.
+
 16. $f(x) = \dfrac{x}{x^2 + 1}$, for each real number $x$
+
+$$ \frac{x_1}{x_1^2 + 1} = \frac{x_2}{x_2^2 + 1}  $$
+
+$$ (x_2^2 + 1)x_1 = (x_1^2 + 1)x_2 $$
+
+$$ x_2^2x_1 + x_1 = x_1^2x_2 + x_2 $$
+
+$f$ is not one-to-one since $x_1 \neq x_2$. Take $x_1 = 2$ and
+$x_2 = \dfrac{1}{2}$:
+
+$$ \frac{2}{2^2 + 1} = \frac{\dfrac{1}{2}}{\left(\dfrac{1}{2}\right)^2 + 1} $$
+
+$$ \frac{2}{4 + 1} = \frac{\dfrac{1}{2}}{\dfrac{1}{4} + 1} $$
+
+$$ \frac{2}{5} = \frac{\dfrac{1}{2}}{\dfrac{5}{4}} $$
+
+$$ \frac{2}{5} = \frac{1}{2} \cdot \frac{4}{5} $$
+
+$$ \frac{2}{5} = \frac{4}{10} $$
+
+$$ \frac{2}{5} = \frac{2}{5} $$
+
+Since $f(2) = f\left(\dfrac{1}{2}\right)$, but $2 \neq \dfrac{1}{2}$, it can be
+concluded that $f$ is not one-to-one.
 
 17. $f(x) = \dfrac{3x - 1}{x}$, for each real number $x \neq 0$
 
+$$ \frac{3x_1 - 1}{x_1} = \frac{3x_2 - 1}{x_2} $$
+
+$$ x_2(3x_1 - 1) = x_1(3x_2 - 1) $$
+
+$$ 3x_1x_2 - x_2 = 3x_1x_2 - x_1 $$
+
+$$ -x_2 = -x_1 $$
+
+$$ x_2 = x_1 $$
+
+Since $x_1 = x_2$, $f$ is one-to-one.
+
 18. $f(x) = \dfrac{x + 1}{x - 1}$, for each real number $x \neq 1$
+
+$$ \frac{x_1 + 1}{x_1 - 1} = \frac{x_2 + 1}{x_2 - 1}  $$
+
+$$ (x_1 + 1)(x_2 - 1) = (x_2 + 1)(x_1 - 1) $$
+
+$$ x_1x_2 + x_2 - x_1 - 1 = x_1x_2 + x_1 - x_2 - 1 $$
+
+$$ x_1x_2 + x_2 - x_1 - 1 = x_1x_2 + x_1 - x_2 - 1 $$
+
+$$ x_2 - x_1 = x_1 - x_2 $$
+
+$$ 2x_2 = 2x_1 $$
+
+$$ x_2 = x_1 $$
+
+$f$ is one-to-one.
 
 19. Referring to Example 7.2.3, assume that records with the following ID
     numbers are to be placed in sequence into Table 7.2.1. Find the position
@@ -1502,16 +1948,80 @@ whether or not $f$ is one-to-one and justify your answer.
 
 a. $417302072$
 
+$$ 417302072 \mod 11 = 0 $$
+
+Since position $0$ is empty, $417302072$ is placed in position $0$.
+
 b. $364981703$
 
+$$ 364981703 \mod 11 = 9 $$
+
+Since position $9$ is empty, $364981703$ is placed in position $9$.
+
 c. $283090787$
+
+$$ 283090787 \mod 11 = 1 $$
+
+Since position $1$ is not empty, position $2$ is checked. Since position $2$ is
+not empty, position $3$ is checked. Since position $3$ is empty, $283090787$ is
+placed in position $3$.
 
 20. Define $\text{Floor}: \mathbb{R} \to \mathbb{Z}$ by the formula
     $\text{Floor}(x) = \lfloor x \rfloor$, for every real number $x$.
 
 a. Is $\text{Floor}$ one-to-one? Prove or give a counterexample.
 
+$\text{Floor}$ is not one-to-one.
+
+**Disproof (by counterexample):**
+
+Consider $x_1, x_2 \in \mathbb{R}$ such that $x_1 = 1.1$ and $x_2 = 1.2$.
+
+By the definition of $\text{Floor}$:
+
+$$ \text{Floor}(1.1) = \lfloor 1.1 \rfloor = 1 $$
+
+and
+
+$$ \text{Floor}(1.2) = \lfloor 1.2 \rfloor = 1 $$
+
+Thus $\text{Floor}(1.1) = \text{Floor}(1.2)$, but $1.1 \neq 1.2$.
+
+By the definition of one-to-one, it can be concluded that $\text{Floor}$ is not
+one-to-one.
+
+Q.E.D.
+
 b. Is $\text{Floor}$ onto? Prove or give a counterexample.
+
+$\text{Floor}$ is onto.
+
+**Proof:**
+
+Suppose there exists some $y$ such that $y \in \mathbb{Z}$.
+
+To prove that $\text{Floor}$ is onto, it must be shown that
+$\text{Floor}(x) = y$ for some $x \in \mathbb{R}$.
+
+Now, let $x = y$.
+
+By substitution of the given definition for $\text{Floor}$, and the supposition
+that $x = y$:
+
+$$ \lfloor x \rfloor = y $$
+
+By substitution for $x$:
+
+$$ \lfloor y \rfloor = y $$
+
+$$ y = y $$
+
+Thus it has been shown that $\text{Floor}(x) = y$ for some $x \in \mathbb{R}$.
+
+This is what was to be shown, and therefore, by the definition of onto, it can
+be concluded that $\text{Floor}$ is onto.
+
+Q.E.D.
 
 21. Let $S$ be the set of all strings of $0$'s and $1$'s, and define
     $L: S \to \mathbb{Z}^{\text{nonneg}}$ by
@@ -1520,7 +2030,44 @@ $$ L(s) = \text{ the length of } s \text{, for every string } s \text{ in } S $$
 
 a. Is $L$ one-to-one? Prove or give a counterexample.
 
+$L$ is not one-to-one.
+
+**Disproof (by counterexample):**
+
+Suppose $s_1, s_2 \in S$ such that $s_1 = 10$ and $s_2 = 01$.
+
+Then, by definition of $L$:
+
+$$ L(s_1) = 2 = L(s_2) $$
+
+Hence $L(s_1) = L(s_2)$ and $s_1 \neq s_2$.
+
+Therefore it can be concluded, by the definition of one-to-one, that $L$ is not
+one-to-one.
+
 b. Is $L$ onto? Prove or give a counterexample.
+
+$L$ is onto.
+
+**Proof:**
+
+Suppose $n$ is some integer such that $n \in \mathbb{Z}^{\text{nonneg}}$.
+
+To prove that $L$ is onto, it must be shown that $L(s) = n$ for some string
+$s \in S$.
+
+Let $s$ be some string such that $s \in S$.
+
+Since $s \in S$, this means that the $s$ is either $\lambda$ (where $\lambda$ is
+the null string), or some combination of all strings of $0$'s and $1$'s.
+
+This means that the length of $s$ is at least $0$ (when $s = \lambda$), and
+otherwise is an ever increasing integer. Therefore for every $s$ passed through
+$L$, there will always be a corresponding nonnegative integer $n$.
+
+By the definition of onto, it can therefore be concluded that $L$ is onto.
+
+Q.E.D.
 
 22. Let $S$ be the set of all strings of $0$'s and $1$'s, and define
     $D: S \to \mathbb{Z}$ as follows: For every $s \in S$,
@@ -1529,7 +2076,52 @@ $$ D(s) = \text{ the number of 1's in } s \text{ minus the number of 0's in } s 
 
 a. Is $D$ one-to-one? Prove or give a counterexample.
 
+$D$ is not one-to-one.
+
+**Disproof (by counterexample):**
+
+Suppose $s_1, s_2 \in S$ such that $s_1 = 01$ and $s_2 = 10$.
+
+By definition of $D$:
+
+$$ D(s_1) = 0 = D(s_2) $$
+
+So $D(s_1) = D(s_2)$, but $s_1 \neq s_2$.
+
+Therefore, by the definition of one-to-one, $D$ is not one-to-one.
+
+Q.E.D.
+
 b. Is $D$ onto? Prove or give a counterexample.
+
+$D$ is onto.
+
+**Proof:**
+
+Suppose $n \in \mathbb{Z}$.
+
+To prove $D$ is onto, it must be shown that $D(s) = n$ for some string
+$s \in S$.
+
+Consider three cases:
+
+_Case $n = 0$:_
+
+Let $s = \lambda$. Then $D(s) = 0 = n$.
+
+_Case $n > 0$:_
+
+Let $s$ be a string of $n$ ones. Then $D(s) = n - 0 = n$.
+
+_Case $n < 0$:_
+
+Let $s$ be a string of $|n|$ ones. Then $D(s) = 0 - |n| = n$.
+
+In all cases, there exists some $s \in S$ such that $D(s) = n$.
+
+Therefore, by definition of onto, $D$ is onto.
+
+Q.E.D.
 
 23. Define $F: \mathscr{P}(\{a, b, c\}) \to \mathbb{Z}$ as follows: For every
     $A$ in $\mathscr{P}(\{a, b, c\})$,
@@ -1538,7 +2130,41 @@ $$ F(A) = \text{ the number of elements in } A $$
 
 a. Is $F$ one-to-one? Prove or give a counterexample.
 
+$F$ is not one-to-one.
+
+**Disproof (by counterexample):**
+
+Suppose $A_1 = \{a\}$, and $A_2 = \{b\}$.
+
+Then, by the definition of $F$:
+
+$$ F(A_1) = 1 = F(A_2) $$
+
+So $F(A_1) = F(A_2)$, but $A_1 \neq A_2$.
+
+By the definition of one-to-one, it can be concluded that $F$ is not one-to-one.
+
+Q.E.D.
+
 b. Is $F$ onto? Prove or give a counterexample.
+
+$F$ is not onto.
+
+**Disproof (by counterexample):**
+
+Consider $-1 \in \mathbb{Z}$.
+
+To prove that $F$ is onto, it would have to be shown that $F(A) = -1$ for some
+$A \in \mathscr{P}(\{a, b, c\})$, but:
+
+$$ \mathscr{P}(\{a, b, c\}) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{a, b\}, \{a, c\}, \{b, c\}, \{a, b, c\}\} $$
+
+This shows that there is no element in $\mathscr{P}(\{a, b, c\})$ such that
+$F(A) = -1$ even though $-1 \in \mathbb{Z}$.
+
+Therefore, $F$ is not onto.
+
+Q.E.D.
 
 24. Let $S$ be the set of all strings of $a$'s and $b$'s, and define
     $N: S \to \mathbb{Z}$ by
@@ -1547,7 +2173,37 @@ $$ N(s) = \text{ the number of a's in } s \text{, for each } s \in S $$
 
 a. Is $N$ one-to-one? Prove or give a counterexample.
 
+$N$ is not one-to-one.
+
+**Disproof (by counterexample):**
+
+Consider $s_1, s_2 \in S$ such that $s_1 = ab$ and $s_2 = ba$.
+
+By the given definition for $N$:
+
+$$ N(s_1) = 1 = N(s_2) $$
+
+Thus $N(s_1) = N(s_2)$, but $s_1 \neq s_2$.
+
+By the definition of one-to-one, $N$ is not one-to-one.
+
+Q.E.D.
+
 b. Is $N$ onto? Prove or give a counterexample.
+
+$N$ is not onto.
+
+**Disproof (by counterexample):**
+
+Consider $-1 \in \mathbb{Z}$.
+
+To prove that $N$ is onto, it would have to be shown that $N(s) = -1$ for some
+$s \in S$, but by definition of string, and by the definition of $s \in S$, $s$
+can have at a minimum $0$ $a$'s in it.
+
+Therefore, $N$ is not onto.
+
+Q.E.D.
 
 25. Let $S$ be the set of all strings in $a$'s and $b$'s, and define
     $C: S \to S$ by
@@ -1558,7 +2214,46 @@ $$ C(s) = as \text{, for each } s \in S $$
 
 a. Is $C$ one-to-one? Prove or give a counterexample.
 
+$C$ is one-to-one.
+
+**Proof:**
+
+Suppose $s_1, s_2 \in S$ such that $C(s_1) = C(s_2)$.
+
+To prove $C$ is one to one, it must be shown that $s_1 = s_2$.
+
+By the given definition of $C$:
+
+$$ as_1 = as_2 $$
+
+Since the strings $as_1$ and $as_2$ are equal and share the same first character
+$a$, the remaining portions $s_1$ and $s_2$ must also be equal.
+
+$$ s_1 = s_2 $$
+
+Since $C(s_1) = C(s_2)$ and $s_1 = s_2$, by the definition of one-to-one, it can
+be concluded that $C$ is one-to-one.
+
+This is what was to be shown.
+
+Q.E.D.
+
 b. Is $C$ onto? Prove or give a counterexample.
+
+$C$ is not onto.
+
+**Disproof (by counterexample):**
+
+Consider some string $t \in S$ such that $t = b$.
+
+To prove that $C$ is onto, it must be shown that $C(s) = b$ for some $s \in S$.
+
+But, by definition of $C$, $C(s) = as$ for each $s \in S$, but $b$ does not have
+a concatenated $a$ on the left.
+
+Therefore, by definition of onto, it can be concluded that $C$ is not onto.
+
+Q.E.D.
 
 26. Define $S: \mathbb{Z}^+ \to \mathbb{Z}^+$ by the rule: For each integer $n$,
 
@@ -1566,7 +2261,40 @@ $$ S(n) = \text{ the sum of the positive divisors of } n $$
 
 a. Is $S$ one-to-one? Prove or give a counterexample.
 
+$S$ is not one-to-one.
+
+**Disproof (by counterexample):**
+
+Consider $n_1, n_2 \in \mathbb{Z}^+$ where $n_1 = 6$ and $n_2 = 11$.
+
+By definition of $S$:
+
+$$ S(n_1) = 6 + 3 + 2 + 1 = 12 = 11 + 1 = S(n_2) $$
+
+So $S(n_1) = S(n_2)$, but $n_1 \neq n_2$.
+
+By the definition of one-to-one, $S$ is not one-to-one.
+
+Q.E.D.
+
 b. Is $S$ onto? Prove or give a counterexample.
+
+$S$ is not onto.
+
+**Disproof (by counterexample):**
+
+Consider $5 \in \mathbb{Z}^+$.
+
+To prove $S$ is onto, it would have to be shown that $S(n) = 5$ for some
+$n \in \mathbb{Z}^+$.
+
+In order for $S(n) = 5$, note that it must be the case that $n < 5$.
+
+But $S(1) = 1$, $S(2) = 3$, $S(3) = 4$, and $S(4) = 7$.
+
+Hence there is no positive integer $n$ such that $S(n) = 5$.
+
+Q.E.D.
 
 27. Let $D$ be the set of all finite subsets of positive integers, and define
     $T: \mathbb{Z}^+ \to D$ by the following rule:
@@ -1576,7 +2304,55 @@ $T(n) = \text{ the set of all of the positive divisors of } n$.
 
 a. Is $T$ one-to-one? Prove or give a counterexample.
 
+$T$ is one-to-one.
+
+**Proof (by contradiction):**
+
+Suppose $n_1, n_2 \in \mathbb{Z}^+$ such that $n_1 \neq n_2$ and
+$T(n_1) = T(n_2)$.
+
+Since $n_1 \neq n_2$, it follows that $n_1 < n_2$ or $n_1 > n_2$.
+
+_Case $n_1 < n_2$:_
+
+By the definition of $T$, $n_2$ is a positive divisor of $n_2$, so
+$n_2 \in T(n_2)$.
+
+But, since $T(n_1) = T(n_2)$, this means that $n_2 \in T(n_1)$.
+
+This means that $n_2$ is a positive divisor of $n_1$, or $n_1 = n_2$. This is a
+contradiction.
+
+_Case $n_1 > n_2$:_
+
+By the definition of $T$, $n_1$ is a positive divisor of $n_1$, so
+$n_1 \in T(n_1)$.
+
+But, since $T(n_1) = T(n_2)$, this means that $n_1 \in T(n_2)$.
+
+This means that $n_1$ is a positive divisor of $n_2$, or $n_1 = n_2$. This is a
+contradiction.
+
+In both cases, it has been shown that $n_1 = n_2$, which contradicts the
+supposition.
+
+Therefore it can be concluded that $T$ is one-to-one.
+
 b. Is $T$ onto? Prove or give a counterexample.
+
+$T$ is not onto.
+
+**Disproof (by counterexample):**
+
+Consider the set $\{1, 2, 3\}$. Note that $\{1, 2, 3\} \in D$.
+
+To prove that $T$ is onto, it must be shown that $T(n) = \{1, 2, 3\}$, but the
+set $\{1, 2, 3\}$ would also include $6$ since any such $n$ would also be
+divisible by $6$ (by the given definition of $T$).
+
+Since $6 \notin \{1, 2, 3\}$, it can be concluded that $T$ is not onto.
+
+Q.E.D.
 
 28. Define $G: \mathbb{R} \times \mathbb{R} \to \mathbb{R} \times \mathbb{R}$ as
     follows:
@@ -1585,7 +2361,82 @@ $$ G(x, y) = (2y, -x) \text{ for every } (x, y) \in \mathbb{R} \times \mathbb{R}
 
 a. Is $G$ one-to-one? Prove or give a counterexample.
 
+$G$ is one-to-one.
+
+**Proof:**
+
+Suppose $(x_1, y_1), (x_2, y_2) \in \mathbb{R} \times \mathbb{R}$ such that
+$G(x_1, y_1) = G(x_2, y_2)$.
+
+To prove that $G$ is one-to-one, it must be shown that
+$(x_1, y_1) = (x_2, y_2)$.
+
+By the definition for $G$:
+
+$$ (2(y_1), -(x_1)) = (2(y_2), -(x_2)) $$
+
+$$ (2y_1, -x_1) = (2y_2, -x_2) $$
+
+By the definition of ordered pair (and algebra), this means that:
+
+$$ 2y_1 = 2y_2 $$
+
+$$ y_1 = y_2 $$
+
+and:
+
+$$ -x_1 = -x_2 $$
+
+$$ x_1 = x_2 $$
+
+Thus it has been shown that $(x_1, y_1) = (x_2) = y_2$.
+
+By the definition of one-to-one, it can be concluded that $G$ is one-to-one.
+
+Q.E.D.
+
 b. Is $G$ onto? Prove or give a counterexample.
+
+$G$ is onto.
+
+**Proof:**
+
+Suppose $(t, w) \in \mathbb{R} \times \mathbb{R}$.
+
+To prove that $G$ is onto, it must be shown that $G(x, y) = (t, w)$ for some
+$(x, y) \in \mathbb{R} \times \mathbb{R}$.
+
+By the definition for $G$:
+
+$$ (2y, -x) = (t, w) $$
+
+By the definition of ordered pairs (and algebra), this means that:
+
+$$ 2y = t $$
+
+$$ y = \frac{t}{2} $$
+
+and:
+
+$$ -x = w $$
+
+$$ x = -w $$
+
+Now, note that $\dfrac{t}{2} \in \mathbb{R}$, and $-w \in \mathbb{R}$. It
+follows that $\left(\dfrac{t}{2}, -w\right) \in \mathbb{R} \times \mathbb{R}$.
+
+Now, evaluating for $G\left(-w, \dfrac{t}{2}\right)$:
+
+$$ G\left(-w, \frac{t}{2}\right) = \left(2\left(\frac{t}{2}, -(-w)\right)\right) $$
+
+$$ = (t, w) $$
+
+Hence it has been shown that $G(x, y) = (t, w)$ for some
+$(x, y) \in \mathbb{R} \times \mathbb{R}$.
+
+Therefore, by the definition of onto, it can be concluded that $G$ is onto.
+
+Q.E.D.
 
 29. Define $H: \mathbb{R} \times \mathbb{R} \to \mathbb{R} \times \mathbb{R}$ as
     follows:
@@ -1594,7 +2445,87 @@ $$ H(x, y) = (x + 1, 2 - y) \text{ for every } (x, y) \in \mathbb{R} \times \mat
 
 a. Is $H$ one-to-one? Prove or give a counterexample.
 
+$H$ is one-to-one.
+
+**Proof:
+
+Suppose $(x_1, y_1), (x_2, y_2) \in \mathbb{R} \times \mathbb{R}$ such that
+$H(x_1, y_1) = H(x_2, y_2)$.
+
+To prove $H$ is one-to-one. It must be shown that $(x_1, y_1) = (x_2, y_2)$.
+
+By the given definition of $H$:
+
+$$ (x_1 + 1, 2 - y_1) = (x_2 + 1, 2 - y_2) $$
+
+By the definition of ordered pair (and algebra):
+
+$$ x_1 + 1 = x_2 + 1 $$
+
+$$ x_1 = x_2 $$
+
+and:
+
+$$ 2 - y_1 = 2 - y_2 $$
+
+$$ -y_1 = -y_2 $$
+
+$$ y_1 = y_2 $$
+
+It follows then that $(x_1, y_1) = (x_2, y_2)$.
+
+Therefore, by the definition of one-to-one, it can be concluded that $H$ is
+one-to-one.
+
+Q.E.D.
+
 b. Is $H$ onto? Prove or give a counterexample.
+
+$H$ is onto.
+
+**Proof:
+
+Suppose $(u, v) \in \mathbb{R} \times \mathbb{R}$.
+
+To prove $H$ is onto, it must be shown that $H(x, y) = (u, v)$ for some
+$(x, y) \in \mathbb{R} \times \mathbb{R}$.
+
+By the given definition of $H$:
+
+$$ (x + 1, 2 - y) = (u, v) $$
+
+By the definition of ordered pair (and algebra):
+
+$$ x + 1 = u $$
+
+$$ x = u - 1 $$
+
+and:
+
+$$ 2 - y = v $$
+
+$$ -y = v - 2 $$
+
+$$ y = 2 - v $$
+
+Now, $u - 1 \in \mathbb{R}$ by the difference of real numbers, and
+$2 - v \in \mathbb{R}$ by the difference of real numbers. It follows that
+$(u - 1, 2 - v) \in \mathbb{R} \times \mathbb{R}$.
+
+Evaluating for $H(u - 1, 2 - v)$:
+
+$$ H(u - 1, 2 - v) = ((u - 1) + 1, 2 - (2 - v)) $$
+
+$$ = (u - 1 + 1, 2 - 2 + v) $$
+
+$$ = (u, v) $$
+
+Thus it has been shown that $H(x, y) = (u, v)$ for some
+$(x, y) \in \mathbb{R} \times \mathbb{R}$.
+
+Therefore, by the definition of onto, it can be concluded that $H$ is onto.
+
+Q.E.D.
 
 30. Define $J: \mathbb{Q} \times \mathbb{Q} \to \mathbb{R}$ by the rule
 
@@ -1602,7 +2533,11 @@ $$ J(r, s) = r + \sqrt{2}s \text{ for each } (r, s) \in \mathbb{Q} \times \mathb
 
 a. Is $J$ one-to-one? Prove or give a counterexample.
 
+Omitted.
+
 b. Is $J$ onto? Prove or give a counterexample.
+
+Omitted.
 
 31. Define $F: \mathbb{Z}^+ \times \mathbb{Z}^+ \to \mathbb{Z}^+$ and
     $G: \mathbb{Z}^+ \times \mathbb{Z}^+ \to \mathbb{Z}^+$ as follows:
@@ -1613,7 +2548,11 @@ $$ F(n, m) = 3^n5^m \text{ and } G(n, m) = 3^n6^m $$
 
 a. Is $F$ one-to-one? Prove or give a counterexample.
 
+Omitted.
+
 b. Is $G$ one-to-one? Prove or give a counterexample.
+
+Omitted.
 
 32.
 
