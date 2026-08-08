@@ -2389,7 +2389,7 @@ $$ -x_1 = -x_2 $$
 
 $$ x_1 = x_2 $$
 
-Thus it has been shown that $(x_1, y_1) = (x_2) = y_2$.
+Thus it has been shown that $(x_1, y_1) = (x_2, y_2)$.
 
 By the definition of one-to-one, it can be concluded that $G$ is one-to-one.
 
@@ -2425,7 +2425,7 @@ $$ x = -w $$
 Now, note that $\dfrac{t}{2} \in \mathbb{R}$, and $-w \in \mathbb{R}$. It
 follows that $\left(\dfrac{t}{2}, -w\right) \in \mathbb{R} \times \mathbb{R}$.
 
-Now, evaluating for $G\left(-w, \dfrac{t}{2}\right)$:
+Now, evaluating for $G(x, y)$, which is $G\left(-w, \dfrac{t}{2}\right)$:
 
 $$ G\left(-w, \frac{t}{2}\right) = \left(2\left(\frac{t}{2}, -(-w)\right)\right) $$
 
@@ -2447,7 +2447,7 @@ a. Is $H$ one-to-one? Prove or give a counterexample.
 
 $H$ is one-to-one.
 
-**Proof:
+**Proof:**
 
 Suppose $(x_1, y_1), (x_2, y_2) \in \mathbb{R} \times \mathbb{R}$ such that
 $H(x_1, y_1) = H(x_2, y_2)$.
@@ -2558,7 +2558,73 @@ Omitted.
 
 a. Is $\log_{8}27 = \log_{2}3$? Why or why not?
 
-a. Is $\log_{16}9 = \log_{4}3$? Why or why not?
+Let $x = \log_{8}27$, and let $y = \log_{2}3$. By definition of logarithms:
+
+$$ 8^x = 27  \text{ and } 2^y = 3 $$
+
+Now, $8 = 2^3$, so:
+
+$$ 8^x = (2^3)^x = 2^{3x} $$
+
+Also, $27 = 3^3, so:$
+
+$$ 27 = 3^3 = (2^y)^3 = 2^{3y}$$
+
+Hence, since $8^x = 27$:
+
+$$ 8^x = 2^{3x} = 27 = 2^{3y} $$
+
+Since:
+
+$$ 2^{3x} = 2^{3y} $$
+
+By the laws of exponents:
+
+$$ 3x = 3y $$
+
+Then, by algebra:
+
+$$ x = y $$
+
+Now, we back-substitute our original definitions of $x$ and $y$, and find that:
+
+$$ \log_{8}27 = \log_{2}3 $$
+
+It can therefore be concluded that the answer to the query is yes.
+
+b. Is $\log_{16}9 = \log_{4}3$? Why or why not?
+
+Let $x = \log_{16}9$ and $y = \log_{4}3$. Then by definition of log:
+
+$$ 16^x = 9 \text{ and } 4^y = 3 $$
+
+Note that $16 = 4^2$, so:
+
+$$ 9 = (4^2)^x = 4^{2x} $$
+
+Note that $9 = 3^2$, so:
+
+$$ 9 = 3^2 = (4^y)^2 = 4^{2y} $$
+
+So, by the laws of equivalency:
+
+$$ 4^{2x} = 9 = 4^{2y} $$
+
+$$ 4^{2x} = 4^{2y} $$
+
+By the laws of exponents then:
+
+$$ 2x = 2y $$
+
+Then, by algebra:
+
+$$ x = y $$
+
+Back-substituting in the definitions for $x$ and $y$:
+
+$$ \log_{16}9 = \log_{4}3 $$
+
+Therefore the answer to the given question is yes.
 
 The properties of logarithm established in 33-35 are used in Sections 11.4 and
 11.5.
@@ -2567,14 +2633,111 @@ The properties of logarithm established in 33-35 are used in Sections 11.4 and
 
 $$ \log_{b}\left(\frac{x}{y}\right) = \log_{b}x - \log_{b}y $$
 
+**Proof:**
+
+Suppose that $b$, $x$, and $y$ are any positive real numbers with $b \neq 1$.
+
+Let $u = \log_{b}x$ and $v = \log_{b}y$. By definition of logarithm then:
+
+$$ b^u = x \text{ and } b^v = y $$
+
+By substitution:
+
+$$ \frac{x}{y} = \frac{b^u}{b^v} $$
+
+By the laws of exponents:
+
+$$ = b^{u - v} $$
+
+Taking the logarithm base $b$ of both sides now gives:
+
+$$ \log_{b}\left(\frac{x}{y}\right) = \log_{b}(b^{u - v}) $$
+
+$$ = u - v $$
+
+Back-substituting the definitions of $u$ and $v$ yields:
+
+$$ = \log_{b}x - \log_{b}y $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 34. Prove that for all positive real numbers $b$, $x$, and $y$ with $b \neq 1$,
 
 $$ \log_{b}(xy) = \log_{b}x + \log_{b}y $$
+
+**Proof:**
+
+Suppose $b$, $x$, and $y$ are any positive real numbers with $b \neq 1$.
+
+Let $u = \log_{b}x$, and $v = \log_{b}y$.
+
+By definition of logarithms, this means that:
+
+$$ b^u = x \text{ and } b^v = y $$
+
+By substitution, this means that:
+
+$$ xy = b^u \cdot b^v $$
+
+$$ = b^{u + v} $$
+
+Taking the logarithm of base $b$ of both sides yields:
+
+$$ \log_{b}(xy) = \log_{b}(b^{u + v}) $$
+
+$$ = u + v $$
+
+Back-substituting in the values for $u$ and $v$ shows:
+
+$$ \log_{b}(xy) = \log_{b}x + \log_{b}y $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 35. Prove that for all real numbers $a$, $b$, and $x$ with $b$ and $x$ positive
     and $b \neq 1$,
 
 $$ \log_{b}(x^a) = a\log_{b}x $$
+
+**Proof:**
+
+Suppose $a$, $b$, and $x$ are any real numbers with $x$ and $b$ being positive
+and $b \neq 1$.
+
+Let $r = \log_{b}(x^a)$ and $s = \log_{b}x$.
+
+By definition of logarithms, this means that:
+
+$$ b^r = x^a \text{ and } b^s = x $$
+
+Since $b^s = x$, by substitution:
+
+$$ b^r = x^a = (b^s)^a = b^{sa} $$
+
+So:
+
+$$ x^a = b^{sa} $$
+
+Now, applying $\log_{b}$ to both sides:
+
+$$ \log_{b}(x^a) = \log_{b}(b^{sa}) $$
+
+$$ = sa $$
+
+Back-substituting in the definition for $s$, this yields:
+
+$$ \log_{b}(x^a) = \log_{b}x \cdot a $$
+
+Or:
+
+$$ \log_{b}(x^a) = a\log_{b}x $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 Exercises 36 and 37 use the following definition: If
 $f: \mathbb{R} \to \mathbb{R}$ and $g: \mathbb{R} \to \mathbb{R}$ are functions,
@@ -2584,8 +2747,60 @@ $(f + g)(x) = f(x) + g(x)$ for every real number $x$.
 36. If $f: \mathbb{R} \to \mathbb{R}$ and $g: \mathbb{R} \to \mathbb{R}$ are
     both one-to-one, is $f + g$ also one-to-one? Justify your answer.
 
+No.
+
+**Disproof (by counterexample):**
+
+Suppose $f$ and $g$ are functions such that $f: \mathbb{R} \to \mathbb{R}$ and
+$g: \mathbb{R} \to \mathbb{R}$ and both $f$ and $g$ are one-to-one functions.
+Furthermore, suppose $(f + g)$ is a function where
+$(f + g): \mathbb{R} \to \mathbb{R}$ such that $(f + g)(x) = f(x) + g(x)$.
+
+Consider $f(x) = x$ and $g(x) = -x$. Note that $f$ and $g$ are one-to-one
+functions still follow the definitions of $f$ and $g$ in the supposition.
+
+Then, by definition of $(f + g)$, $(f + g)(x) = f(x) + g(x) = x + (-x) = 0$.
+
+Then consider $x_1 = 1$, and $x_2 = 2$, then:
+
+$$ f(x_1) = 1 \text{ and } g(x_1) = -1 \text{ and } (f + g)(x_1) = 1 + (-1) = 0 $$
+
+$$ f(x_2) = 2 \text{ and } g(x_2) = -2 \text{ and } (f + g)(x_2) = 2 + (-2) = 0 $$
+
+So $(f + g)(x_1) = (f + g)(x_2)$, but $x_1 \neq x_2$.
+
+By the definition of one-to-one, it can therefore be concluded that $(f + g)$ is
+not one-to-one.
+
+Q.E.D.
+
 37. If $f: \mathbb{R} \to \mathbb{R}$ and $g: \mathbb{R} \to \mathbb{R}$ are
     both onto, is $f + g$ also onto? Justify your answer.
+
+**Disproof (by counterexample):**
+
+Suppose $f$ and $g$ are both functions where $f: \mathbb{R} \to \mathbb{R}$, and
+$g: \mathbb{R} \to \mathbb{R}$. Furthermore, suppose
+$(f + g): \mathbb{R} \to \mathbb{R}$ where $(f + g)(x) = f(x) + g(x)$ for some
+$x \in \mathbb{R}$.
+
+Consider $f(x) = x$ and $g(x) = -x$. Note that both $f$ and $g$ are still onto
+based off the definition of onto as required by the supposition.
+
+Then by definition of $(f + g)$:
+
+$$ (f + g)(x) = x + (-x) = 0 $$
+
+Since no matter what the value for $x$ will always output $0$, while
+$0 \in \mathbb{R}$, by the definition of onto, every element in the co-domain of
+$\mathbb{R}$ must have a corresponding input image.
+
+Consider that $1 \in \mathbb{R}$, but there is no input image $x$ such that
+$(f + g)(x) = 1$.
+
+Therefore, by the definition of onto, $(f + g)$ is not onto.
+
+Q.E.D.
 
 Exercises 38 and 39 use the following definition: If
 $f: \mathbb{R} \to \mathbb{R}$ and $c$ is a nonzero real number, the function
@@ -2596,15 +2811,283 @@ $(c \cdot f)(x) = c \cdot (f(x))$ for every real number $x$.
     number. If $f$ is one-to-one, is $c \cdot f$ also one-to-one? Justify your
     answer.
 
+Yes, $(c \cdot f)$ is one-to-one.
+
+**Proof:**
+
+Suppose $f: \mathbb{R} \to \mathbb{R}$ is a one-to-one function, and that $c$ is
+a nonzero real number such that $(c \cdot f): \mathbb{R} \to \mathbb{R}$ is
+defined as $(c \cdot f)(x) = c \cdot (f(x))$ for any real number $x$.
+
+To prove $(c \cdot f)$ is one-to-one, it must be shown that there are some
+$x_1, x_2 \in \mathbb{R}$ such that if $(c \cdot f)(x_1) = (c \cdot f)(x_2)$,
+then $x_1 = x_2$.
+
+By definition of $(c \cdot f)$:
+
+$$ (c \cdot f)(x_1) = c \cdot (f(x_1)) = c \cdot (f(x_2)) = (c \cdot f)(x_2) $$
+
+$$ c \cdot (f(x_1)) = c \cdot (f(x_2)) $$
+
+By arithmetic:
+
+$$ f(x_1) = f(x_2) $$
+
+By the supposition, $f$ is a one-to-one function, so therefore, by definition of
+one-to-one:
+
+$$ x_1 = x_2 $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 39. Let $f: \mathbb{R} \to \mathbb{R}$ be a function and $c$ a nonzero real
     number. If $f$ is onto, is $c \cdot f$ also onto? Justify your answer.
+
+$c \cdot f$ is onto.
+
+**Proof:**
+
+Suppose $f: \mathbb{R} \to \mathbb{R}$ such that $f$ is onto. Furthermore,
+suppose $c$ is a nonzero real number, where
+$(c \cdot f): \mathbb{R} \to \mathbb{R}$ is defined as
+$(c \cdot f)(x) = c \cdot (f(x))$ for any real number $x$.
+
+To prove that $(c \cdot f)(x)$ is onto, it must be shown that there exists some
+$y \in \mathbb{R}$, such that $(c \cdot f)(x) = y$.
+
+By definition for $c \cdot f$:
+
+$$ (c \cdot f)(x) = c \cdot (f(x)) = y $$
+
+$$ c \cdot (f(x)) = y $$
+
+By algebra:
+
+$$ f(x) = \frac{y}{c} $$
+
+Since $f$ is onto (by the supposition), this means that there exists some
+$z \in \mathbb{R}$ such that $f(z) = \dfrac{y}{c}$.
+
+Let $x = z$, then:
+
+$$ (c \cdot f)(x) = c \cdot (f(x)) $$
+
+$$ = c \cdot (f(z)) $$
+
+$$ = c \cdot \left(\frac{y}{c}\right) $$
+
+$$ = y $$
+
+This is what was to be shown. Therefore it can be concluded that $(c \cdot f)$
+is onto.
+
+Q.E.D.
 
 40. Suppose $F: X \to Y$ is one-to-one.
 
 a. Prove that for every subset $A \subseteq X$, $F^{-1}(F(A)) = A$.
 
+**Proof:**
+
+Suppose $A \subseteq X$.
+
+To prove that $F^{-1}(F(A)) = A$, it must be shown that:
+
+$$ F^{-1}(F(A)) \subseteq A $$
+
+and also that:
+
+$$ A \subseteq F^{-1}(F(A)) $$
+
+_Proof ($F^{-1}(F(A)) \subseteq A$):_
+
+Let $x \in F^{-1}(F(A))$.
+
+By the definition of inverse image:
+
+$$ F^{-1}(F(A)) = \{x \in X | F(x) \in F(A)\} $$
+
+By the definition for $F(A)$, there exists $r \in A$ such that $F(r) = F(x)$.
+
+Since $F(r) = F(x)$, and since $F$ is one-to-one, it follows that $x \in A$
+
+Since $x \in F^{-1}(F(A))$ and $x \in A$, it can be concluded that
+$F^{-1}(F(A)) \subseteq A$.
+
+This is what was to be shown.
+
+_Proof ($A \subseteq F^{-1}(F(A))$):_
+
+Let $x \in A$.
+
+Since $x \in A$, then $F(x) \in F(A)$, by the definition of $F(A)$.
+
+By the definition of inverse image:
+
+$$ x \in F^{-1}(F(A)) $$
+
+Since $x \in A$ and $x \in F^{-1}(F(A))$, it can be concluded that
+$A \subseteq F^{-1}(F(A))$.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since both subset definitions have been shown, it can be concluded that
+$F^{-1}(F(A)) = A$.
+
+Q.E.D.
+
 b. Prove that for all subsets $A_1$ and $A_2$ in $X$,
 $F(A_1 \cap A_2) = F(A_1) \cap F(A_2)$.
+
+**Proof:**
+
+Suppose $A_1, A_2 \in X$.
+
+To prove $F(A_1 \cap A_2) = F(A_1) \cap F(A_2)$, it must be shown that:
+
+$$ F(A_1 \cap A_2) \subseteq F(A_1) \cap F(A_2) $$
+
+and that:
+
+$$ F(A_1) \cap F(A_2) \subseteq F(A_1 \cap A_2) $$
+
+_Proof ($F(A_1 \cap A_2) \subseteq F(A_1) \cap F(A_2)$):_
+
+Suppose $y \in F(A_1 \cap A_2)$.
+
+It must be shown that $y \in F(A_1) \cap F(A_2)$.
+
+By the definition of $F(A_1 \cap A_2)$, there exists some $x \in A_1 \cap A_2$
+such that $F(x) = y$.
+
+By the definition of intersection:
+
+$$ x \in A_1 \text{ and } x \in A_2 $$
+
+Since $x \in A_1$ and $x \in A_2$, it follows that:
+
+$$ y \in F(A_1) \text{ and } y \in F(A_2) $$
+
+By the definition of intersection, this means that:
+
+$$ y \in F(A_1) \cap F(A_2) $$
+
+Since $y \in F(A_1 \cap A_2)$ and $y \in F(A_1) \cap F(A_2)$, it can be
+concluded that $F(A_1 \cap A_2) \subseteq F(A_1) \cap F(A_2)$.
+
+This is what was to be shown.
+
+_Proof ($F(A_1) \cap F(A_2) \subseteq F(A_1 \cap A_2)$):_
+
+Suppose $y \in F(A_1) \cap F(A_2)$.
+
+It must be shown that $y \in F(A_1 \cap A_2)$.
+
+By the definition of intersection:
+
+$$ y \in F(A_1) \text{ and } y \in F(A_2) $$
+
+By the definition of $F(A_1)$, there exists some $x_1 \in A_1$ such that:
+
+$$ F(x_1) = y $$
+
+Similarly, by definition of $F(A_2)$, there exists some $x_2 \in A_2$ such that:
+
+$$ F(x_2) = y $$
+
+Since $F$ is one-to-one (by the supposition), and since $F(x_1) = y = F(x_2)$,
+or $F(x_1) = F(x_2)$, this means that:
+
+$$ x_1 = x_2 $$
+
+By the definition of intersection:
+
+$$ x_1 \in A_1 \cap A_2 $$
+
+It follows then that since $y = F(x_1)$, that:
+
+$$ y \in F(A_1) \cap F(A_2) $$
+
+Since $y \in F(A_1) \cap F(A_2)$ and $y \in F(A_1) \cap F(A_2)$, it can be
+concluded that $F(A_1) \cap F(A_2) \subseteq F(A_1 \cap A_2)$.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since both subset relations have been shown, it can be concluded that
+$F(A_1 \cap A_2) = F(A_1) \cap F(A_2)$.
+
+Q.E.D.
+
+41. Suppose $F: X \to Y$ is onto. Prove that for every subset $B \subseteq Y$,
+    $F(F^{-1}(B)) = B$.
+
+**Proof:**
+
+Suppose $F: X \to Y$ such that $F$ is onto.
+
+Let $B \subseteq Y$.
+
+To prove that $F(F^{-1}(B)) = B$, it must be shown that:
+
+$$ F(F^{-1}(B)) \subseteq B $$
+
+and that:
+
+$$ B \subseteq F(F^{-1}(B)) $$
+
+_Proof ($F(F^{-1}(B)) \subseteq B$):_
+
+Suppose $y \in F(F^{-1}(B))$.
+
+It must be shown that $y \in B$.
+
+By definition of $F$, there exists some $x \in F^{-1}(B)$ such that $F(x) = y$.
+
+By definition of inverse image, since $x \in F^{-1}(B)$, this means that:
+
+$$ F(x) \in B $$
+
+Since $F(x) = y$, it follows then that:
+
+$$ y \in B $$
+
+Since $y \in F(F^{-1}(B))$ and $y \in B$, it can be concluded that
+$F(F^{-1}(B)) \subseteq B$.
+
+_Proof ($B \subseteq F(F^{-1}(B))$):_
+
+Suppose $y \in B$.
+
+It must be shown that $y \in F(F^{-1}(B))$.
+
+Since $y \in B$, and since $B \subseteq Y$, it follows that $y \in Y$.
+
+By the supposition, $F$ is onto. It follows that since $y \in Y$, there exists
+some $x \in X$ such that $F(x) = y$.
+
+Since $F(x) = y$ and $y \in B$, by the definition of inverse function:
+
+$$ x \in F^{-1}(B) $$
+
+It follows then that:
+
+$$ y \in F(F^{-1}(B)) $$
+
+Since $y \in B$ and $y \in F(F^{-1}(B))$, it can be concluded that
+$B \subseteq F(F^{-1}(B))$.
+
+_Conclusion:_
+
+Since both subset relations have been shown, it can be concluded that
+$F(F^{-1}(B)) = B$.
+
+Q.E.D.
 
 Let $X = \{a, b, c, d, e\}$ and $Y = \{s, t, u, v, w\}$. In each of 42 and 43 a
 one-to-one correspondence $F: X \to Y$ is defined by an arrow diagram. In each
