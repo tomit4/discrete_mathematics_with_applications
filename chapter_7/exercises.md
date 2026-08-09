@@ -3330,3 +3330,182 @@ Omitted.
     compute values of the function.
 
 Omitted.
+
+---
+
+Page 494
+
+**Exercise Set 7.3**
+
+In each of 1 and 2, functions $f$ and $g$ are defined by arrow diagrams. Find
+$g \circ f$ and $f \circ g$ and determine whether $g \circ f$ equals
+$f \circ g$.
+
+1. (See page 494 for image)
+
+2. (See page 494 for image)
+
+In 3 and 4, functions $F$ and $G$ are defined by formulas. Find $G \circ F$ and
+$F \circ G$ and determine whether $G \circ F$ equals $F \circ G$.
+
+3. $F(x) = x^3$ and $G(x) = x - 1$, for each real number $x$.
+
+4. $F(x) = x^5$ and $G(x) = x^{\frac{1}{5}}$ for each real number $x$.
+
+5. Define $f: \mathbb{R} \to \mathbb{R}$ by the rule $f(x) = -x$ for every real
+   number $x$. Find $(f \circ f)(x)$.
+
+6. Define $F: \mathbb{Z} \to \mathbb{Z}$ and $G: \mathbb{Z} \to \mathbb{Z}$ by
+   the rules $F(a) = 7a$ and $G(a) = a \mod 5$ for each integer $a$. Find
+   $(G \circ F)(0)$, $(G \circ F)(1)$, $(G \circ F)(2)$, $(G \circ F)(3)$, and
+   $(G \circ F)(4)$.
+
+7. Define $L: \mathbb{Z} \to \mathbb{Z}$ and $M: \mathbb{Z} \to \mathbb{Z}$ by
+   the rules $L(a) = a^2$ and $M(a) = a \mod 5$ for each integer $a$.
+
+a. Find $(L \circ M)(12)$, $(M \circ L)(12)$, $(L \circ M)(9)$, and
+$(M \circ L)(9)$.
+
+b. Is $L \circ M = M \circ L$?
+
+8. Let $S$ be the set of all strings in _a_'s and _b_'s and let
+   $L: S \to \mathbb{Z}$ be the length function:
+
+For all strings $s \in S$ ,
+
+$$ L(s) = \text{ the number of characters in } s $$
+
+Let $T: \mathbb{Z} \to \{0, 1, 2\}$ be the $\mod 3$ function:
+
+$$ \text{For every integer } n, \quad T(n) = n \mod 3 $$
+
+a. $(T \circ L)(abaa) = \text{ ?}$
+
+b. $(T \circ L)(baaab) = \text{ ?}$
+
+c. $(T \circ L)(aaa) = \text{ ?}$
+
+9. Define $F: \mathbb{R} \to \mathbb{R}$ and $G: \mathbb{R} \to \mathbb{Z}$ by
+   the following formulas: $F(x) = \dfrac{x^2}{3}$ and
+   $G(x) = \lfloor x \rfloor$ for every $x \in \mathbb{R}$.
+
+a. $(G \circ F)(2) = \text{ ?}$
+
+b. $(G \circ F)(-3) = \text{ ?}$
+
+c. $(G \circ F)(5) = \text{ ?}$
+
+10. Define $F: \mathbb{Z} \to \mathbb{Z}$ and $G: \mathbb{Z} \to \mathbb{Z}$ by
+    the rules $F(n) = 2n$ and $G(n) = \left\lfloor \dfrac{n}{2} \right\rfloor$
+    for every integer $n$.
+
+a. Find $(G \circ F)(8)$, $(F \circ G)(8)$, $(G \circ F)(3)$, and
+$(F \circ G)(3)$.
+
+b. Is $G \circ F = F \circ G$? Explain.
+
+11. Define $F: \mathbb{R} \to \mathbb{R}$ and $G : \mathbb{R} \to \mathbb{R}$ by
+    the rules $F(n) = 3x$ and $G(n) = \left\lceil \dfrac{x}{3} \right\rceil$ for
+    every real number $x$.
+
+a. Find $(G \circ F)(6)$, $(F \circ G)(6)$, $(G \circ F)(1)$, and
+$(F \circ G)(1)$.
+
+b. Is $G \circ F = F \circ G$? Explain.
+
+The functions of each pair in 12-14 are inverse to each other. For each pair,
+check that both compositions give the identity function.
+
+12. $F: \mathbb{R} \to \mathbb{R}$ and $F^{-1}: \mathbb{R} \to \mathbb{R}$ are
+    defined by
+
+$$ F(x) = 3x + 2 \quad \text{ and } \quad F^{-1}(y) = \frac{y - 2}{3} $$
+
+for every $y \in \mathbb{R}$.
+
+13. $G: \mathbb{R}^+ \to \mathbb{R}^+$ and
+    $G^{-1}: \mathbb{R}^+ \to \mathbb{R}^+$ are defined by
+
+$$ G(x) = x^2 \quad \text{ and } \quad G^{-1}(x) = \sqrt{x} $$
+
+for every $x \in \mathbb{R}^+$.
+
+14. $H$ and $H^{-1}$ are both defined from $\mathbb{R} - \{1\}$ to
+    $\mathbb{R} - \{1\}$ by the formula
+
+$$ H(x) = H^{-1}(x) = \frac{x + 1}{x - 1}, \quad \text{ for each } x \in \mathbb{R} - \{1\} $$
+
+15. Explain how it follows from the definition of logarithm that
+
+a. $\log_{b}(b^x) = x$, for every real number $x$.
+
+b. $b^{\log_{b}x} = x$, for every positive real number $x$.
+
+16. Prove Theorem 7.3.1(b): If $f$ is any function from a set $X$ to a set $Y$,
+    then $I_y \circ f = f$, where $I_y$ is the identity function on $Y$.
+
+17. Prove Theorem 7.3.2(b): If $f: X \to Y$ is a one-to-one and onto function
+    with inverse function $f^{-1}: Y \to X$, then $f \circ f^{-1} = I_y$, where
+    $I_y$ is the identity function on $Y$.
+
+18. Suppose $Y$ and $Z$ are sets and $g: Y \to Z$ is a one-to-one function. This
+    means that if $g$ takes the same value on any two elements of $Y$, then
+    those elements are equal. Thus, for example, if $a$ and $b$ are elements of
+    $Y$ and $g(a) = g(b)$, then it can be inferred that $a = b$. What can be
+    inferred in the following situations?
+
+a. $s_k$ and $s_m$ are elements of $Y$ and $g(s_k) = g(s_m)$.
+
+b. $\dfrac{z}{2}$ and $\dfrac{t}{2}$ are elements of $Y$ and
+$g\left(\dfrac{z}{2}\right) = g\left(\dfrac{t}{2}\right)$.
+
+c. $f(x_1)$ and $f(x_2)$ are elements of $Y$ and $g(f(x_1)) = g(f(x_2))$.
+
+19. If $f: X \to Y$ and $g: Y \to Z$ are functions and $g \circ f$ is
+    one-to-one, must $g$ be one-to-one? Prove or give a counterexample.
+
+20. If $f: X \to Y$ and $g: Y \to Z$ are functions and $g \circ f$ is onto, must
+    $f$ be onto? Prove or give a counterexample.
+
+21. If $f: X \to Y$ and $g: Y \to Z$ are functions and $g \circ f$ is
+    one-to-one, must $f$ be one? Prove or give a counterexample.
+
+22. If $f: X \to Y$ and $g: Y \to Z$ are functions and $g \circ f$ is onto, must
+    $g$ be onto? Prove or give a counterexample.
+
+23. Let $f: W \to X$, $g: X \to Y$, and $h: Y \to Z$ be functions. Must
+    $h \circ (g \circ f) = (h \circ g) \circ f$? Prove or give a counterexample.
+
+24. True or False? Given any set $X$ and given any functions $f: X \to X$,
+    $g: X \to X$, and $h: X \to X$, if $h$ is one-to-one and
+    $h \circ f = h \circ g$, then $f = g$. Justify your answer.
+
+25. True or False? Given any set $X$ and given any functions $f: X \to X$,
+    $g: X \to X$, and $h: X \to X$, if $h$ is one-to-one and
+    $f \circ h = g \circ h$, then $f = g$. Justify your answer.
+
+In 26 and 27 find $(g \circ f)^{-1}$, $g^{-1}$, $f^{-1}$, and
+$f^{-1} \circ g^{-1}$, and state how $(g \circ f)^{-1}$ and
+$f^{-1} \circ g^{-1}$ are related.
+
+26. Let $X = \{a, b, c\}$, $Y = \{x, y, z\}$, and $Z = \{u, v, w\}$. Define
+    $f: X \to Y$ and $g: Y \to Z$ by the arrow diagrams below.
+
+(See page 495 for image.)
+
+27. Define $f: \mathbb{R} \to \mathbb{R}$ and $g: \mathbb{R} \to \mathbb{R}$ by
+    the formulas
+
+$$ f(x) = x + 3 \quad \text{ and } \quad g(x) = -x \quad \text{ for each } x \in \mathbb{R} $$
+
+28. Prove or give a counterexample: If $f: X \to Y$ and $g: Y \to X$ are
+    functions such that $g \circ f = I_x$ and $f \circ g = I_y$, then $f$ and
+    $g$ are both one-to-one and onto and $g = f^{-1}$.
+
+29. Suppose $f: X \to Y$ and $g: Y \to Z$ are both one-to-one and onto. Prove
+    that $(g \circ f)^{-1}$ exists and that
+    $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$.
+
+30. Let $f: X \to Y$ and $g: Y \to Z$. Is the following property true or false?
+    For every subset $C$ in $Z$, $(g \circ f)^{-1}(C) = f^{-1}(g^{-1}(C))$.
+    Justify your answer.

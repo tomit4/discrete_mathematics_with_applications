@@ -258,3 +258,158 @@ be shown.]_
 Suppose $x \in X$. _[We must show that there exists an element $y$ in $Y$ such
 that $F^{-1}(y) = x$.]_ Let $y = F(x)$. Then $y \in Y$, and by definition of
 $F^{-1}$, $F^{-1}(y) = x$ _[as was to be shown.]_
+
+---
+
+Page 485
+
+**Definition**
+
+Let $f: X \to Y$ and $g: Y' \to Z$ be functions with the property that the range
+of $f$ is a subset of the domain of $g$. Define a new function
+$g \circ f: X \to Z$ as follows:
+
+$$ (g \circ f)(x) = g(f(x)) \quad \text{ for each } x \in X $$
+
+where $g \circ f$ is read "$g$ circle $f$" and $g(f(x))$ is read "$g$ of $f$ of
+$x$." The function $g \circ f$ is called the **composition of $f$ and $g$**.
+
+---
+
+Page 487
+
+**Theorem 7.3.1 Composition with an Identity Function**
+
+If $f$ is a function from a set $X$ to a set $Y$, and $I_x$ is the identity
+function on $X$, and $I_y$ is the identity function on $Y$, then
+
+$$ \text{(a) } f \circ I_x = f \quad \text{ and } \quad \text{(b) } I_y \circ f = f $$
+
+**Proof:**
+
+_Part (a):_
+
+Suppose $f$ is a function from a set $X$ to a set $Y$ and $I_x$ is the identity
+function on $X$. Then, for each $x$ in $X$,
+
+$$ (f \circ I_x)(x) = f(I_x(x)) = f(x) $$
+
+Hence, by the definition of equality of functions, $f \circ I_x = f$, as was to
+be shown.
+
+_Part (b):_
+
+This is exercise 16 at the end of this section.
+
+---
+
+Page 488
+
+**Theorem 7.3.2 Composition of a Function with Its Inverse**
+
+If $f: X \to Y$ is a one-to-one and onto function with inverse function
+$f^{-1}: Y \to X$, then
+
+$$ \text{(a) } f^{-1} \circ f = I_x \quad \text{ and } \quad \text{(b) } f \circ f^{-1} = I_y $$
+
+**Proof:**
+
+_Part (a):_
+
+Suppose $f: X \to Y$ is a one-to-one and onto function with inverse function
+$f^{-1}: Y \to X$. _[To show that $f^{-1} \circ f = I_x$, we must show that for
+each $x \in X$, $(f^{-1} \circ f)(x) = x$.]_ Let $x$ be any element in $X$.
+Then, by definition of composition of functions,
+
+$$ (f^{-1} \circ f)(x) = f^{-1}(f(x)) $$
+
+Let
+
+$$ z = f^{-1}(f(x)) $$
+
+By the definition of inverse function,
+
+$$ f(z) = f(x) $$
+
+and, because $f$ is one-to-one, this implies that
+
+$$ z = x $$
+
+Now $z = f^{-1}(f(x))$ also, and so, by substitution,
+
+$$ f^{-1}(f(x)) = x $$
+
+Or, equivalently,
+
+$$ (f^{-1} \circ f)(x) = x $$
+
+_[as was to be shown]._
+
+Since $x$ is any element of $X$ and since $I_x(x) = x$, this proves that
+$f^{-1} \circ f = I_x$.
+
+_Part (b):_
+
+This is exercise 17 at the end of this section.
+
+---
+
+Page 490
+
+**Theorem 7.3.3**
+
+If $f: X \to Y$ and $g: Y \to Z$ are both one-to-one functions, then $g \circ f$
+is one-to-one.
+
+---
+
+Page 491
+
+**Proof of Theorem 7.3.3:**
+
+Suppose $f: X \to Y$ and $g: Y \to Z$ are both one-to-one functions. _[We must
+show that $g \circ f$ is one-to-one.]_ Suppose $x_1$ and $x_2$ are elements of
+$X$ such that
+
+$$ (g \circ f)(x_1) = (g \circ f)(x_2) $$
+
+_[We must show that $x_1 = x_2$.]_ By definition of composition of functions,
+
+$$ g(f(x_1)) = g(f(x_2)) $$
+
+Since $g$ is one-to-one,
+
+$$ f(x_1) = f(x_2) $$
+
+And since $f$ is one-to-one,
+
+$$ x_1 = x_2 $$
+
+_[as was to be shown]._ Hence $g \circ f$ is one-to-one.
+
+---
+
+Page 491
+
+**Theorem 7.3.4**
+
+If $f: X \to Y$ and $g: Y \to Z$ are both onto functions, then $g \circ f$ is
+onto.
+
+---
+
+Page 493
+
+**Proof of Theorem 7.3.4**
+
+Suppose $f: X \to Y$ and $g: Y \to Z$ are both onto functions. _[We must show
+that $g \circ f$ is onto.]_ Let $z$ be any _[particular but arbitrarily chosen]_
+element of $Z$. _[We must show the existence of an element in $X$ such that
+$g \circ f$ of that element equals $z$.]_ Since $g$ is onto, there is an
+element, say $y$, in $Y$ such that $g(y) = z$. And since $f$ is onto, there is
+an element, say $x$, in $X$ such that $f(x) = y$. Hence there is an element $x$
+in $X$ such that
+
+$$ (g \circ f)(x) = g(f(x)) = g(y) = z $$
+
+_[as was to be shown]._ It follows that $g \circ f$ is onto.

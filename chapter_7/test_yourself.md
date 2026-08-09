@@ -116,3 +116,28 @@ function from $X$ to $Y$; both one-to-one and onto
 
 the unique element $x$ in $X$ such that $F(x) = y$ (in other words, $F^{-1}(y)$
 is the unique preimage of $y$ in $X$)
+
+---
+
+Page 494
+
+**Test Yourself**
+
+1. If $f$ is a function from $X$ to $Y'$, $g$ is a function from $Y \to Z$, and
+   $Y' \subseteq Y$, then $g \circ f$ is a function from _____ to _____, and
+   $(g \circ f)(x) =$ _____ for every $x$ in $X$.
+
+2. If $f$ is a function from $X$ to $Y$ and $I_x$ and $I_y$ are the identity
+   functions from $X$ to $X$ and $Y$ to $Y$, respectively, then $f \circ I_x =$
+   _____ and $I_y \circ f =$ _____.
+
+3. If $f$ is a one-to-one correspondence from $X$ to $Y$, then
+   $f^{-1} \circ f =$ _____ and $f \circ f^{-1} =$ _____.
+
+4. If $f$ is a one-to-one function from $X$ to $Y$ and $g$ is a one-to-one
+   function from $Y$ to $Z$, you prove that $g \circ f is one-to-one by
+   supposing that _____ and then showing that _____.
+
+5. If $f$ is an onto function from $X$ to $Y$ and $g$ is an onto function from
+   $Y$ to $Z$, you prove that $g \circ f$ is onto by supposing that _____ and
+   then showing that _____.
