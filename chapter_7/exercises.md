@@ -1695,6 +1695,32 @@ Q.E.D.
 
     ii. Is $F$ onto? Prove or give a counterexample.
 
+$F$ is not onto.
+
+**Disproof (by counterexample):**
+
+To prove that $F$ is onto, it must be shown that there exists some
+$m \in \mathbb{Z}$ such that $m = 2 - 3n$.
+
+Evaluating for $n$ shows:
+
+$$ m = 2 - 3n $$
+
+$$ 3n = 2 - m $$
+
+$$ n = \dfrac{2 - m}{3} $$
+
+But since $n$ must be an integer by the definition for $F$, this evaluation
+shows that there exists at least one $m \in \mathbb{Z}$ that is not in the
+co-domain of $F$.
+
+Take $m = 1$, for example, note that $1 \in \mathbb{Z}$. But, when $m = 1$, then
+$n = \dfrac{1}{3}$, which is not an integer.
+
+Therefore, it can be concluded that $F$ is not onto.
+
+Q.E.D.
+
 b. Define $G: \mathbb{R} \to \mathbb{R}$ by the rule $G(x) = 2 - 3x$ for each
 real number $x$. Is $G$ onto? Prove or give a counterexample.
 
@@ -3097,9 +3123,13 @@ case draw an arrow diagram for $F^{-1}$.
 
 (See page 483 for image.)
 
+Omitted.
+
 43.
 
 (See page 483 for image.)
+
+Omitted.
 
 In 44-55 indicate which of the functions in the referenced exercise are
 one-to-one correspondences. For each function that is a one-to-one
@@ -3107,30 +3137,168 @@ correspondence, find the inverse function.
 
 44. Exercise 10a
 
+The exercise is not a one-to-one correspondence because it is not onto.
+
 45. Exercise 10b
+
+Exercise 10b shows that the function $h$ is onto.
+
+To prove that $h$ is one-to-one, it must be shown that there exists some
+$n_1, n_2 \in \mathbb{Z}$ such that if $h(n_1) = h(n_2)$, then $n_1 = n_2$.
+
+By definition of $h$, this implies that:
+
+$$ 2n_1 = 2n_2 $$
+
+Then, by algebra:
+
+$$ n_1 = n_2 $$
+
+This is what was to be shown, and therefore it can be concluded that $h$ is a
+one-to-one correspondence.
+
+Now, to find the inverse function.
+
+Given any integer $m \in 2\mathbb{Z}$ (where $2\mathbb{Z}$ is the set of all
+even integers) such that $h(n) = m$, by the definition of $h$, it follows that:
+
+$$ h(n) = m = 2n $$
+
+The inverse can be found by evaluating for $n$ as it relates to $m$.
+
+$$ m = 2n $$
+
+$$ n = \frac{m}{2} $$
+
+Thus:
+
+$$ h^{-1}(m) = \frac{m}{2} $$
+
+for some $m \in 2\mathbb{Z}$.
 
 46. Exercise 11a
 
+The exercise is not a one-to-one correspondence because it is not onto.
+
 47. Exercise 11b
+
+Exercise 11b shows that $G$ is onto.
+
+To prove that $G$ is one-to-one, it must be shown that there exists some
+$x_1, x_2 \in \mathbb{R}$ such that when $G(x_1) = G(x_2)$, then $x_1 = x_2$.
+
+By the definition of $G$:
+
+$$ 4x_1 - 5 = 4x_2 - 5 $$
+
+By algebra:
+
+$$ 4x_1 = 4x_2 $$
+
+$$ x_1 = x_2 $$
+
+This is what was to be shown. Therefore it can be concluded that $G$ is
+one-to-one.
+
+Now to find the inverse.
+
+Suppose there is some $y \in \mathbb{R}$ such that $y = 4x - 5$, then evaluating
+for $x$:
+
+$$ x = \frac{y + 5}{4} $$
+
+Replacing $x$ with $G^{-1}(y)$:
+
+$$ G^{-1}(y) = \frac{y + 5}{4} $$
+
+By definition of inverse, this is true if and only if
+$G\left(\dfrac{y + 5}{4}\right) = y$. By the definition for $G$:
+
+$$ G\left(\frac{y + 5}{4}\right) = 4\left(\frac{y + 5}{4}\right) - 5 $$
+
+$$ = (y + 5) - 5 $$
+
+$$ = y $$
+
+Therefore, it can be concluded that $G^{-1}(y) = \dfrac{y + 5}{4}$ for every
+$y \in \mathbb{R}$.
 
 48. Exercise 12a
 
+The function $F$ is not a one-to-one correspondence, because $F$ is not onto.
+
 49. Exercise 12b
+
+Exercise 12b shows that $G$ is onto. To prove that $G$ is one-to-one, it must be
+shown that there exists some $x_1, x_2 \in \mathbb{R}$ such that when
+$G(x_1) = G(x_2)$, then $x_1 = x_2$.
+
+By the definition of $G$, this means that:
+
+$$ 2 - 3x_1 = 2 - 3x_2 $$
+
+$$ -3x_1 = -3x_2 $$
+
+$$ x_1 = x_2 $$
+
+This is what was to be shown. Therefore, it can be concluded that $G$ is
+one-to-one.
+
+Now, to find the inverse. Suppose there is some $y = 2 - 3x$. Solving for $x$:
+
+$$ 3x = 2 - y $$
+
+$$ x = \frac{2 - y}{3} $$
+
+Then substituting for $x$ with $G^{-1}(y)$:
+
+$$ G^{-1}(y) = \dfrac{2 - y}{3} $$
+
+By the definition of inverse, this can only be true if
+$G\left(\dfrac{2 - y}{3}\right) = y$. By the definition for $G$:
+
+$$ G\left(\frac{2 - y}{3}\right) = 2 - 3\left(\frac{2 - y}{3}\right) $$
+
+$$ = 2 - (2 - y) $$
+
+$$ = 2 - 2 + y $$
+
+$$ = y $$
+
+Therefore, it can be concluded that:
+
+$$ G^{-1}(y) = \frac{2 - y}{3} $$
+
+for any $y \in \mathbb{R}$.
 
 50. Exercise 21
 
+The function $L$ is not a one-to-one correspondence, because $L$ is not
+one-to-one.
+
 51. Exercise 22
+
+The function $D$ is not a one-to-one correspondence, because $D$ is not
+one-to-one.
 
 52. Exercise 15 with the co-domain taken to be the set of all real numbers not
     equal to $1$.
 
+Omitted.
+
 53. Exercise 16 with the co-domain taken to be the set of all real numbers.
+
+Omitted.
 
 54. Exercise 17 with the co-domain taken to be the set of all real numbers not
     equal to $3$
 
+Omitted.
+
 55. Exercise 18 with the co-domain taken to be the set of all real numbers not
     equal to 1.
+
+Omitted.
 
 56. In Example 7.2.8 a one-to-one correspondence was defined from the power set
     of $\{a, b\}$ to the set of all strings of $0$'s and $1$'s that have length
@@ -3142,15 +3310,23 @@ a. Let $X = \{x_1, x_2, \dots, x_n\}$ be a set with $n$ elements. Use Example
 the set of all subsets of $X$, to the set of all strings of $0$'s and $1$'s that
 have length $n$.
 
+Omitted.
+
 b. In Section 9.2 we show that there are $2^n$ strings of $0's$ and $1$'s that
 have length $n$. What does this allow you to conclude about the number of
 subsets of $\mathscr{P}(X)$? (This provides an alternative proof of Theorem
 6.3.1.)
 
+Omitted.
+
 57. Write a computer algorithm to check whether a function from one finite set
     to another is one-to-one. Assume the existence of an independent algorithm
     to compute values of the function.
 
+Omitted.
+
 58. Write a computer algorithm to check whether a function from one finite set
     to another is onto. Assume the existence of an independent algorithm to
     compute values of the function.
+
+Omitted.
