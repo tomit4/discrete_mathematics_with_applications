@@ -3343,22 +3343,101 @@ $f \circ g$.
 
 1. (See page 494 for image)
 
+$$ f(1) = 5, f(3) = 3, f(5) = 1 $$
+
+$$ g(1) = 3, g(3) = 5, g(5) = 1 $$
+
+$$ g(f(1)) = g(5) = 1, g(f(3)) = g(3) = 5, g(f(5)) = g(1) = 3 $$
+
+$$ f(g(1)) = f(3) = 3, f(g(3)) = f(5) = 1, f(g(5)) = f(1) = 5 $$
+
+Since not all elements of $g(f(x))$ do not equal $f(g(x))$ (such as
+$g(f(1)) = 1 \neq 3 = f(g(1))$), it can be concluded that:
+
+$$ g \circ f \neq f \circ g $$
+
 2. (See page 494 for image)
+
+$$ f(1) = 3, f(3) = 1, f(5) = 5 $$
+
+$$ g(1) = 1, g(3) = 1, g(5) = 1 $$
+
+$$ g(f(1)) = g(3) = 1, g(f(3)) = g(1) = 1, g(f(5)) = g(5) = 1 $$
+
+$$ f(g(1)) = f(1) = 3, f(g(3)) = f(1) = 3, f(g(5)) = f(1) = 3 $$
+
+Since not all elements of $g(f(x))$ do not equal $f(g(x))$ (such as
+$g(f(1)) = 1 \neq 3 = f(g(1))$), it can be concluded that:
+
+$$ g \circ f \neq f \circ g $$
 
 In 3 and 4, functions $F$ and $G$ are defined by formulas. Find $G \circ F$ and
 $F \circ G$ and determine whether $G \circ F$ equals $F \circ G$.
 
 3. $F(x) = x^3$ and $G(x) = x - 1$, for each real number $x$.
 
+$$ (G \circ F)(x) = G(F(x)) = G(x^3) = x^3 - 1 $$
+
+$$ (F \circ G)(x) = F(G(x)) = F(x - 1) = (x - 1)^3 $$
+
+$$ = (x - 1)(x - 1)(x - 1) $$
+
+$$ = (x^2 - 2x + 1)(x - 1) $$
+
+$$ = x^2(x - 1) - 2x(x - 1) + 1(x - 1) $$
+
+$$ = x^3 - x^2 - 2x^2 - 2x + x - 1 $$
+
+$$ = x^3 - 3x^2 - x - 1 $$
+
+As $x^3 - 1 \neq x^3 - 3x^2 - x - 1 \forall x \in \mathbb{R}$
+
+Consider $x = 2$, then:
+
+$$ (G \circ F)(2) = (2)^3 - 1 = 8 - 1 = 7 $$
+
+$$ (F \circ G)(2) = (2 - 1)^3 = (2 - 1)(2 - 1)(2 - 1) = (1)(1)(1) = 1 $$
+
+Note that:
+
+$$ 7 \neq 1 $$
+
+So $(G \circ F)(2) \neq (F \circ G)(2)$.
+
+Hence it can be concluded then that, for all real numbers:
+
+$$ G \circ F \neq F \circ G $$
+
 4. $F(x) = x^5$ and $G(x) = x^{\frac{1}{5}}$ for each real number $x$.
+
+$$ (G \circ F)(x) = G(F(x)) = G(x^5) = (x^5)^{\frac{1}{5}} = x^{5 \cdot \frac{1}{5}} = x $$
+
+$$ (F \circ G)(x) = F(G(x)) = F(x^{\frac{1}{5}}) = (x^{\frac{1}{5}})^5 = x^{\frac{1}{5} \cdot 5} = x $$
+
+Since both $(G \circ F)(x) = x = (F \circ G)(x)$, it can be concluded that for
+all $x \in \mathbb{R}$:
+
+$$ G \circ F = F \circ G $$
 
 5. Define $f: \mathbb{R} \to \mathbb{R}$ by the rule $f(x) = -x$ for every real
    number $x$. Find $(f \circ f)(x)$.
+
+$$ (f \circ f)(x) = f(f(x)) = f(-x) = -(-x) = x $$
 
 6. Define $F: \mathbb{Z} \to \mathbb{Z}$ and $G: \mathbb{Z} \to \mathbb{Z}$ by
    the rules $F(a) = 7a$ and $G(a) = a \mod 5$ for each integer $a$. Find
    $(G \circ F)(0)$, $(G \circ F)(1)$, $(G \circ F)(2)$, $(G \circ F)(3)$, and
    $(G \circ F)(4)$.
+
+$$ (G \circ F)(0) = G(F(0)) = G(7(0)) = G(0) = 0 \mod 5 = 0 $$
+
+$$ (G \circ F)(1) = G(F(1)) = G(7(1)) = G(7) = 7 \mod 5 = 2 $$
+
+$$ (G \circ F)(2) = G(F(2)) = G(7(2)) = G(14) = 14 \mod 5 = 4 $$
+
+$$ (G \circ F)(3) = G(F(3)) = G(7(3)) = G(21) = 21 \mod 5 = 1 $$
+
+$$ (G \circ F)(4) = G(F(4)) = G(7(4)) = G(28) = 28 \mod 5 = 3 $$
 
 7. Define $L: \mathbb{Z} \to \mathbb{Z}$ and $M: \mathbb{Z} \to \mathbb{Z}$ by
    the rules $L(a) = a^2$ and $M(a) = a \mod 5$ for each integer $a$.
@@ -3366,7 +3445,18 @@ $F \circ G$ and determine whether $G \circ F$ equals $F \circ G$.
 a. Find $(L \circ M)(12)$, $(M \circ L)(12)$, $(L \circ M)(9)$, and
 $(M \circ L)(9)$.
 
+$$ (L \circ M)(12) = L(M(12)) = L(12 \mod 5) = L(2) = 2^2 = 4 $$
+
+$$ (M \circ L)(12) = M(L(12)) = M(12^2) = M(144) = 144 \mod 5 = 4 $$
+
+$$ (L \circ M)(9) = L(M(9)) = L(9 \mod 5) = L(4) = 4^2 = 16 $$
+
+$$ (M \circ L)(9) = M(L(9)) = M(9^2) = M(81) = 81 \mod 5 = 1 $$
+
 b. Is $L \circ M = M \circ L$?
+
+No, since $(L \circ M)(9) = 16 \neq 1 = (M \circ L)(9)$, it can be concluded
+that $L \circ M \neq M \circ L$ for all integers.
 
 8. Let $S$ be the set of all strings in _a_'s and _b_'s and let
    $L: S \to \mathbb{Z}$ be the length function:
@@ -3381,9 +3471,15 @@ $$ \text{For every integer } n, \quad T(n) = n \mod 3 $$
 
 a. $(T \circ L)(abaa) = \text{ ?}$
 
+$$ (T \circ L)(abaa) = T(L(abaa)) = T(4) = 4 \mod 3 = 1 $$
+
 b. $(T \circ L)(baaab) = \text{ ?}$
 
+$$ (T \circ L)(baaab) = T(L(baaab)) = T(5) = 5 \mod 3 = 2 $$
+
 c. $(T \circ L)(aaa) = \text{ ?}$
+
+$$ (T \circ L)(aaa) = T(L(aaa)) = T(3) = 3 \mod 3 = 0 $$
 
 9. Define $F: \mathbb{R} \to \mathbb{R}$ and $G: \mathbb{R} \to \mathbb{Z}$ by
    the following formulas: $F(x) = \dfrac{x^2}{3}$ and
@@ -3391,9 +3487,15 @@ c. $(T \circ L)(aaa) = \text{ ?}$
 
 a. $(G \circ F)(2) = \text{ ?}$
 
+$$ (G \circ F)(2) = G(F(2)) = G\left(\frac{(2)^2}{3}\right) = G\left(\frac{4}{3}\right) = \left\lfloor v\frac{4}{3} \right\rfloor = 1 $$
+
 b. $(G \circ F)(-3) = \text{ ?}$
 
+$$ (G \circ F)(-3) = G(F(-3)) = G\left(\frac{(-3)^2}{3}\right) = G\left(\frac{9}{3}\right) = G(3) = \lfloor 3 \rfloor = 3 $$
+
 c. $(G \circ F)(5) = \text{ ?}$
+
+$$ (G \circ F)(5) = G(F(5)) = G\left(\frac{(5)^2}{3}\right) = G\left(\frac{25}{3}\right) = \left\lfloor \frac{25}{3} \right\rfloor = 8  $$
 
 10. Define $F: \mathbb{Z} \to \mathbb{Z}$ and $G: \mathbb{Z} \to \mathbb{Z}$ by
     the rules $F(n) = 2n$ and $G(n) = \left\lfloor \dfrac{n}{2} \right\rfloor$
@@ -3402,7 +3504,18 @@ c. $(G \circ F)(5) = \text{ ?}$
 a. Find $(G \circ F)(8)$, $(F \circ G)(8)$, $(G \circ F)(3)$, and
 $(F \circ G)(3)$.
 
+$$ (G \circ F)(8) = G(F(8)) = G(2(8)) = G(16) = \left\lfloor \frac{(16)}{2} \right\rfloor = \lfloor 8 \rfloor = 8 $$
+
+$$ (F \circ G)(8) = F(G(8)) = F\left(\left\lfloor \frac{(8)}{2} \right\rfloor\right) = F(\lfloor 4 \rfloor) = F(4) = 2(4) = 8 $$
+
+$$ (G \circ F)(3) = G(F(3)) = G(2(3)) = G(6) = \left \lfloor \frac{(6)}{2} \right\rfloor = \lfloor 3 \rfloor = 3 $$
+
+$$ (F \circ G)(3) = F(G(3)) = F\left(\left\lfloor \frac{(3)}{2} \right\rfloor\right) = F(1) = 2(1) = 2 $$
+
 b. Is $G \circ F = F \circ G$? Explain.
+
+No, since $(G \circ F)(3) = 3 \neq 2 = (F \circ G)(3)$, it can be concluded that
+$G \circ F \neq F \circ G$ for all integers.
 
 11. Define $F: \mathbb{R} \to \mathbb{R}$ and $G : \mathbb{R} \to \mathbb{R}$ by
     the rules $F(n) = 3x$ and $G(n) = \left\lceil \dfrac{x}{3} \right\rceil$ for
@@ -3411,7 +3524,18 @@ b. Is $G \circ F = F \circ G$? Explain.
 a. Find $(G \circ F)(6)$, $(F \circ G)(6)$, $(G \circ F)(1)$, and
 $(F \circ G)(1)$.
 
+$$ (G \circ F)(6) = G(F(6)) = G(3(6)) = G(18) = \left\lceil \frac{(18)}{3} \right\rceil = \lceil 6 \rceil = 6 $$
+
+$$ (F \circ G)(6) = F(G(6)) = F\left(\left\lceil \frac{(6)}{3} \right\rceil \right) = F(\lceil 2 \rceil) = F(2) = 3(2) = 6 $$
+
+$$ (G \circ F)(1) = G(F(1)) = G(3(1)) = G(3) = \left\lceil \frac{(3)}{3} \right\rceil = \lceil 1 \rceil = 1 $$
+
+$$ (F \circ G)(1) = F(G(1)) = F\left(\left\lceil \frac{(1)}{3} \right\rceil \right) = F(1) = 3(1) = 3 $$
+
 b. Is $G \circ F = F \circ G$? Explain.
+
+No, since $(G \circ F)(1) = 1 \neq 3 = (F \circ G)(1)$, it can be concluded that
+$G \circ F \neq F \circ G$ for all real numbers.
 
 The functions of each pair in 12-14 are inverse to each other. For each pair,
 check that both compositions give the identity function.
@@ -3423,6 +3547,16 @@ $$ F(x) = 3x + 2 \quad \text{ and } \quad F^{-1}(y) = \frac{y - 2}{3} $$
 
 for every $y \in \mathbb{R}$.
 
+$$ (F^{-1} \circ F)(x) = F^{-1}(F(x)) = F^{-1}(3x + 2) = \frac{(3x + 2) - 2}{3} = \frac{3x}{3} = x = I_{\mathbb{R}}(x) $$
+
+Hence, for every $x \in \mathbb{R}$, $F^{-1} \circ F = I_{\mathbb{R}}$ by
+definition of the equality of functions.
+
+$$ (F \circ F^{-1})(y) = F(F^{-1}(y)) = F\left(\frac{y - 2}{3}\right) = 3\left(\frac{y - 2}{3}\right) + 2 = y - 2 + 2 = y = I_{\mathbb{R}(y)} $$
+
+Hence, for every $y \in \mathbb{R}$, $F \circ F^{-1} = I_{\mathbb{R}}$ by
+definition of the equality of functions.
+
 13. $G: \mathbb{R}^+ \to \mathbb{R}^+$ and
     $G^{-1}: \mathbb{R}^+ \to \mathbb{R}^+$ are defined by
 
@@ -3430,23 +3564,129 @@ $$ G(x) = x^2 \quad \text{ and } \quad G^{-1}(x) = \sqrt{x} $$
 
 for every $x \in \mathbb{R}^+$.
 
+$$ (G^{-1} \circ G)(x) = G^{-1}(G(x)) = G^{-1}(x^2) = \sqrt{(x^2)} = x = I_{\mathbb{R}^+}(x) $$
+
+Hence, for every $x \in \mathbb{R}^+$, $G^{-1} \circ G = I_{\mathbb{R}^+}$ by
+definition of the equality of functions.
+
+$$ (G \circ G^{-1})(y) = G(G^{-1}(y)) = G\left(\sqrt{y}\right) = \left(\sqrt{y}\right)^2 = y = I_{\mathbb{R}^+}(y) $$
+
+Hence, for every $y \in \mathbb{R}^+$, $G \circ G^{-1} = I_{\mathbb{R}^+}$ by
+definition of the equality of functions.
+
 14. $H$ and $H^{-1}$ are both defined from $\mathbb{R} - \{1\}$ to
     $\mathbb{R} - \{1\}$ by the formula
 
 $$ H(x) = H^{-1}(x) = \frac{x + 1}{x - 1}, \quad \text{ for each } x \in \mathbb{R} - \{1\} $$
 
+$$ (H^{-1} \circ H)(x) = H^{-1}(H(x)) = H^{-1}\left(\frac{x + 1}{x - 1}\right) $$
+
+$$ = \frac{\dfrac{x + 1}{x - 1} + 1}{\dfrac{x + 1}{x - 1} - 1} $$
+
+$$ = \frac{\dfrac{x + 1 + (x - 1)}{x - 1}}{\dfrac{x + 1 - (x - 1)}{x - 1}} $$
+
+$$ = \frac{x + 1 + (x - 1)}{x + 1 - (x - 1)}$$
+
+$$ = \frac{x + 1 + x - 1}{x + 1 - x + 1}$$
+
+$$ = \frac{2x}{2} $$
+
+$$ = x = I_{\mathbb{R} - \{1\}}(x) $$
+
+Hence, for every $x \in \mathbb{R} - \{1\}$,
+$H^{-1} \circ H = I_{\mathbb{R} - \{1\}}$ by definition of the equality of
+functions.
+
+$$ (H \circ H^{-1})(y) = H(H^{-1}(y)) = H\left(\frac{y + 1}{y - 1}\right) $$
+
+$$ = \frac{\dfrac{y + 1}{y - 1} + 1}{\dfrac{y + 1}{y - 1} - 1} $$
+
+$$ = \frac{\dfrac{y + 1 + (y - 1)}{y - 1}}{\dfrac{y + 1 - (y - 1)}{y - 1}} $$
+
+$$ = \frac{y + 1 + (y - 1)}{y + 1 - (y - 1)}$$
+
+$$ = \frac{y + 1 + y - 1}{y + 1 - y + 1}$$
+
+$$ = \frac{2y}{2} $$
+
+$$ = y = I_{\mathbb{R} - \{1\}}(y) $$
+
+Hence, for every $y \in \mathbb{R} - \{1\}$,
+$H \circ H^{-1} = I_{\mathbb{R} - \{1\}}$ by definition of the equality of
+functions.
+
 15. Explain how it follows from the definition of logarithm that
 
 a. $\log_{b}(b^x) = x$, for every real number $x$.
 
+By definition of logarithm with base $b$, for each real number $x$,
+$\log_{b}(b^x)$ is the exponent to which $b$ must be raised to obtain $b^x$. But
+this exponent is just $x$. So $\log_{b}(b^x) = x$.
+
 b. $b^{\log_{b}x} = x$, for every positive real number $x$.
+
+By definition of logarithm with base $b$, for each real number r$x$, $\log_{b}x$
+is the exponent to which $b$ must be raised to obtain $x$. So
+$b^{\log_{b}x} = x$.
 
 16. Prove Theorem 7.3.1(b): If $f$ is any function from a set $X$ to a set $Y$,
     then $I_y \circ f = f$, where $I_y$ is the identity function on $Y$.
 
+_Hint:_ Suppose $f$ is any function from a set $X$ to a set $Y$, and show that
+for every $x$ in $X$, $(I_Y \circ f)(x) = f(x)$.
+
+**Proof:**
+
+_Part (b):_
+
+Suppose $f$ is any function from a set $X$ to a set $Y$.
+
+To prove that $I_Y \circ f = f$, it must be shown that for every $x \in X$,
+$(I_Y \circ f)(x) = f(x)$.
+
+By the definition of the composition of functions:
+
+$$ (I_Y \circ f)(x) = I_Y(f(x)) $$
+
+By the definition of the Identity function, since $f(x) = y$:
+
+$$ I_Y(f(x)) = I_Y(y) = y = f(x) $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 17. Prove Theorem 7.3.2(b): If $f: X \to Y$ is a one-to-one and onto function
-    with inverse function $f^{-1}: Y \to X$, then $f \circ f^{-1} = I_y$, where
-    $I_y$ is the identity function on $Y$.
+    with inverse function $f^{-1}: Y \to X$, then $f \circ f^{-1} = I_Y$, where
+    $I_Y$ is the identity function on $Y$.
+
+**Proof:**
+
+_Part (b):_
+
+Suppose $f: X \to Y$ is a one-to-one and onto function with inverse function
+$f^{-1}: Y \to X$.
+
+To prove that $f \circ f^{-1} = I_Y$, we must show that for each $y \in Y$,
+$(f \circ f^{-1})(y) = y$.
+
+By the definition of the composition of functions:
+
+$$ (f \circ f^{-1})(y) = f(f^{-1}(y)) $$
+
+Since $f$ is one-to-one and onto, this implies that there exists a unique
+$x \in X$ such that $f(x) = y$. Therefore, by the definition of inverse
+functions:
+
+$$ f^{-1}(y) = x $$
+
+Substituting this in to our composition of functions:
+
+$$ (f \circ f^{-1})(y) = f(x) = y = I_Y $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 18. Suppose $Y$ and $Z$ are sets and $g: Y \to Z$ is a one-to-one function. This
     means that if $g$ takes the same value on any two elements of $Y$, then
@@ -3456,33 +3696,206 @@ b. $b^{\log_{b}x} = x$, for every positive real number $x$.
 
 a. $s_k$ and $s_m$ are elements of $Y$ and $g(s_k) = g(s_m)$.
 
+It can be inferred that $s_k = s_m$.
+
 b. $\dfrac{z}{2}$ and $\dfrac{t}{2}$ are elements of $Y$ and
 $g\left(\dfrac{z}{2}\right) = g\left(\dfrac{t}{2}\right)$.
 
+It can be inferred that $\dfrac{z}{2} = \dfrac{t}{2}$, and furthermore, by
+algebra, that $z = t$.
+
 c. $f(x_1)$ and $f(x_2)$ are elements of $Y$ and $g(f(x_1)) = g(f(x_2))$.
+
+We can infer that $f(x_1) = f(x_2)$. Of note here is that we cannot infer that
+$x_1 = x_2$ since we do not know if $f$ is one-to-one.
 
 19. If $f: X \to Y$ and $g: Y \to Z$ are functions and $g \circ f$ is
     one-to-one, must $g$ be one-to-one? Prove or give a counterexample.
 
+No, $g$ is not necessarily one-to-one.
+
+**Disproof (by counterexample):**
+
+Suppose $X = \{a, b\}$, $Y = \{1, 2, 3\}$, and $Z = \{x, y\}$. Then suppose:
+
+$$ f(a) = 2, f(b) = 3, g(1) = x, g(2) = x, and g(3) = y $$
+
+So $g \circ f$ is one-to-one since $(g \circ f)(a) = g(f(a)) = g(2) = x$ and
+$(g \circ f)(b) = g(f(b)) = g(3) = y$.
+
+Thus it has been shown that for some sets $X$, $Y$, and $Z$, there are functions
+$f: X \to Y$ and $g: Y \to Z$ such that $g \circ f$ is one-to-one, but $g$ is
+not one-to-one.
+
+Q.E.D.
+
 20. If $f: X \to Y$ and $g: Y \to Z$ are functions and $g \circ f$ is onto, must
     $f$ be onto? Prove or give a counterexample.
+
+No, $f$ is not necessarily onto.
+
+**Disproof (by counterexample):**
+
+Suppose $X = \{a, b, c, d\}$, $Y = \{1, 2, 3, 4, 5\}$, and $Z = \{x, y, z\}$.
+Then, define $f$ and $g$ as:
+
+$$ f(a) = 1, f(b) = 2, f(c) = 3, f(d) = 4, g(1) = x, g(2) = y, g(3) = z, g(4) = z $$
+
+Then, $g\circ f$ is onto, as
+$(g \circ f)(a) = x, (g \circ f)(b) = y, (g \circ f)(c) = z, (g \circ f)(d) = z$.
+
+But, notice that $f$ is not onto, as the element $5$ is in the co-domain of $f$,
+but is not in the range of $f$.
+
+Hence $f$ is not onto.
+
+Q.E.D.
 
 21. If $f: X \to Y$ and $g: Y \to Z$ are functions and $g \circ f$ is
     one-to-one, must $f$ be one? Prove or give a counterexample.
 
+_Hint:_
+
+Suppose $f: X \to Y$ and $g: Y \to Z$ are functions and $g \circ f$ is
+one-to-one. Given $x_1$ and $x_2$ in $X$, if $f(x_1) = f(x_2)$ then
+$(g \circ f)(x_1) = (g \circ f)(x_2)$. (Why?) Then use the fact that $g \circ f$
+is one-to-one.
+
+Yes, $f$ is one-to-one.
+
+**Proof:**
+
+Suppose $f: X \to Y$ and $g: Y \to Z$ are functions and that $g \circ f$ is
+one-to-one.
+
+Let $x_1, x_2 \in X$ such that $f(x_1) = f(x_2)$. To prove that $f$ is
+one-to-one, it must be shown that $x_1 = x_2$.
+
+By the definition of the composition of functions:
+
+$$ (g \circ f)(x_1) = g(f(x_1)) $$
+
+And also by the definition of the composition of functions:
+
+$$ (g \circ f)(x_2) = g(f(x_2)) $$
+
+Now, since $f(x_1) = f(x_2)$, it follows that:
+
+$$ g(f(x_1)) = g(f(x_2)) $$
+
+Furthermore, since $g \circ f$ is one-to-one, it also follows that:
+
+$$ x_1 = x_2 $$
+
+This is what was to be shown. Therefore it can be concluded that $f$ is
+one-to-one.
+
+Q.E.D.
+
 22. If $f: X \to Y$ and $g: Y \to Z$ are functions and $g \circ f$ is onto, must
     $g$ be onto? Prove or give a counterexample.
 
+_Hint:_
+
+Suppose $f: X \to Y$ and $g: Y \to Z$ are functions and $g \circ f$ is onto.
+Given $z \in Z$, there is an element $x$ in $X$ such that $(g \circ f)(x) = z$.
+(Why?) If $y = f(x)$, what can you deduce about $g(y)$?
+
+Yes, $g$ is onto.
+
+**Proof:**
+
+Suppose $f: X \to Y$ and $g: Y \to Z$ are functions and $g \circ f$ is onto.
+
+Let $z \in Z$.
+
+To prove that $g$ is onto, it must be shown that there exists some $y \in Y$
+such that $g(y) = z$.
+
+Since $g \circ f$ is onto, this implies that there exists some $x \in X$ such
+that $(g \circ f)(x) = z$. By the definition of the composition of functions,
+this can be expressed as:
+
+$$ (g \circ f)(x) = g(f(x)) = z $$
+
+Now, let $f(x) = y$ where $y \in Y$. Then, it follows that:
+
+$$ g(y) = z $$
+
+This is what was to be shown. Therefore it can be concluded that $g$ is onto.
+
+Q.E.D.
+
 23. Let $f: W \to X$, $g: X \to Y$, and $h: Y \to Z$ be functions. Must
     $h \circ (g \circ f) = (h \circ g) \circ f$? Prove or give a counterexample.
+
+The stated equality is true.
+
+**Proof:**
+
+Suppose $f: W \to X$, $g: X \to Y$, and $h: Y \to Z$ are functions.
+
+Let $w \in W$.
+
+To prove $h \circ (g \circ f) = (h \circ g) \circ f$, it must be shown that
+$(h \circ (g \circ f))(w) = ((h \circ g) \circ f)(w)$.
+
+By the definition of the composition of functions:
+
+$$ (h \circ (g \circ f))(w) = h((g \circ f)(w)) = h(g(f(w))) $$
+
+Also by the definition of the composition of functions:
+
+$$ ((h \circ g) \circ f)(w) = (h \circ g)(f(w)) = h(g(f(w))) $$
+
+Thus it has been shown that the two sides of the given proposed equality are
+indeed equal since $h(g(f(w))) = h(g(f(w)))$.
+
+Therefore $h \circ (g \circ f) = (h \circ g) \circ f$.
+
+Q.E.D.
 
 24. True or False? Given any set $X$ and given any functions $f: X \to X$,
     $g: X \to X$, and $h: X \to X$, if $h$ is one-to-one and
     $h \circ f = h \circ g$, then $f = g$. Justify your answer.
 
+True.
+
+**Proof:**
+
+Suppose given any set $X$ such that $f: X \to X$, $g: X \to X$, and $h: X \to X$
+are functions. Furthermore, suppose $h$ is one-to-one and
+$h \circ f = h \circ g$.
+
+Let $x \in X$.
+
+To prove $f = g$, it must be shown that $f(x) = g(x)$.
+
+By the definition of the composition of functions:
+
+$$ (h \circ f)(x) = h(f(x)) $$
+
+And also by the definition of the composition of functions:
+
+$$ (h \circ g)(x) = h(g(x)) $$
+
+By the supposition, this means that:
+
+$$ h(f(x)) = h(g(x)) $$
+
+Now, since $h$ is one-to-one, and since $h(f(x)) = h(g(x))$, it follows that:
+
+$$ f(x) = g(x) $$
+
+This is what was to be shown. Therefore $f = g$.
+
+Q.E.D.
+
 25. True or False? Given any set $X$ and given any functions $f: X \to X$,
     $g: X \to X$, and $h: X \to X$, if $h$ is one-to-one and
     $f \circ h = g \circ h$, then $f = g$. Justify your answer.
+
+Omitted.
 
 In 26 and 27 find $(g \circ f)^{-1}$, $g^{-1}$, $f^{-1}$, and
 $f^{-1} \circ g^{-1}$, and state how $(g \circ f)^{-1}$ and
@@ -3493,19 +3906,29 @@ $f^{-1} \circ g^{-1}$ are related.
 
 (See page 495 for image.)
 
+Omitted.
+
 27. Define $f: \mathbb{R} \to \mathbb{R}$ and $g: \mathbb{R} \to \mathbb{R}$ by
     the formulas
 
 $$ f(x) = x + 3 \quad \text{ and } \quad g(x) = -x \quad \text{ for each } x \in \mathbb{R} $$
 
+Omitted.
+
 28. Prove or give a counterexample: If $f: X \to Y$ and $g: Y \to X$ are
     functions such that $g \circ f = I_x$ and $f \circ g = I_y$, then $f$ and
     $g$ are both one-to-one and onto and $g = f^{-1}$.
+
+Omitted.
 
 29. Suppose $f: X \to Y$ and $g: Y \to Z$ are both one-to-one and onto. Prove
     that $(g \circ f)^{-1}$ exists and that
     $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$.
 
+Omitted.
+
 30. Let $f: X \to Y$ and $g: Y \to Z$. Is the following property true or false?
     For every subset $C$ in $Z$, $(g \circ f)^{-1}(C) = f^{-1}(g^{-1}(C))$.
     Justify your answer.
+
+Omitted.

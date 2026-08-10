@@ -127,17 +127,27 @@ Page 494
    $Y' \subseteq Y$, then $g \circ f$ is a function from _____ to _____, and
    $(g \circ f)(x) =$ _____ for every $x$ in $X$.
 
+$X$; $Z$, $g(f(x))$
+
 2. If $f$ is a function from $X$ to $Y$ and $I_x$ and $I_y$ are the identity
    functions from $X$ to $X$ and $Y$ to $Y$, respectively, then $f \circ I_x =$
    _____ and $I_y \circ f =$ _____.
 
+$f$; $f$
+
 3. If $f$ is a one-to-one correspondence from $X$ to $Y$, then
    $f^{-1} \circ f =$ _____ and $f \circ f^{-1} =$ _____.
 
+$I_X$; $I_Y$
+
 4. If $f$ is a one-to-one function from $X$ to $Y$ and $g$ is a one-to-one
-   function from $Y$ to $Z$, you prove that $g \circ f is one-to-one by
+   function from $Y$ to $Z$, you prove that $g \circ f$ is one-to-one by
    supposing that _____ and then showing that _____.
+
+for some $x_1, x_2 \in X$, $(g \circ f)(x_1) = (g \circ f)(x_2)$; $x_1 = x_2$
 
 5. If $f$ is an onto function from $X$ to $Y$ and $g$ is an onto function from
    $Y$ to $Z$, you prove that $g \circ f$ is onto by supposing that _____ and
    then showing that _____.
+
+for some $z \in Z$, there exists some $x \in X$, such that $(g \circ f)(x) = z$
