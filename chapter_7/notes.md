@@ -413,3 +413,218 @@ in $X$ such that
 $$ (g \circ f)(x) = g(f(x)) = g(y) = z $$
 
 _[as was to be shown]._ It follows that $g \circ f$ is onto.
+
+---
+
+Page 496
+
+**Definition**
+
+Let $A$ and $B$ be any sets. **$A$ has the same cardinality as $B$** if, and
+only if, there is a one-to-one correspondence from $A$ to $B$. In other words,
+$A$ has the same cardinality as $B$ if, and only if, there is a function $f$
+from $A$ to $B$ that is one-to-one and onto.
+
+---
+
+**Theorem 7.4.1 Properties of Cardinality**
+
+For all sets $A$, $B$, and $C$:
+
+a. **Reflexive property of cardinality:** $A$ has the same cardinality as $A$.
+
+b. **Symmetric property of cardinality:** If $A$ has the same cardinality as
+$B$, then $B$ has the same cardinality as $A$.
+
+c. **Transitive property of cardinality:** If $A$ has the same cardinality as
+$B$ and $B$ has the same cardinality as $C$, then $A$ has the same cardinality
+as $C$.
+
+**Proof:**
+
+_Part (a), Reflexivity:_
+
+Suppose $A$ is any set. _[To show that $A$ has the same cardinality as $A$, we
+must show there is a one-to-one correspondence from $A$ to $A$.]_ Consider the
+identity function $I_A$ from $A$ to $A$. This function is one-to-one because if
+$x_1$ and $x_2$ are any elements in $A$ with $I_A(x_1) = I_A(x_2)$, then, by
+definition of $I_A$, $x_1 = x_2$. The identity function is also onto because if
+$y$ is any element of $A$, then $y = I_A(y)$ by definition of $I_A$. Hence $I_A$
+is a one-to-one correspondence from $A$ to $A$. _[So there exists a one-to-one
+correspondence from $A$ to $A$, as was to be shown.]_
+
+_Part (b), Symmetry:_
+
+Suppose $A$ and $B$ are any sets and $A$ has the same cardinality as $B$. _[We
+must show that $B$ has the same cardinality as $A$.]_ Since $A$ has the same
+cardinality as $B$, there is a function $f$ from $A$ to $B$ that is one-to-one
+and onto. But then, by Theorems 7.2.2 and 7.2.3, there is a function $f^{-1}$
+from $B$ to $A$ that is also one-to-one and onto. Hence $B$ has the same
+cardinality as $A$ _[as was to be shown]._
+
+_Part \(c\), Transitivity:_
+
+Suppose $A$, $B$, and $C$ are any sets and $A$ has the same cardinality as $B$
+and $B$ has the same cardinality as $C$. _[We must show that $A$ has the same
+cardinality as $C$.]_ Since $A$ has the same cardinality as $B$, there is a
+function $f$ from $A$ to $B$ that is one-to-one and onto, and since $B$ has the
+same cardinality as $C$, there is a function $g$ from $B$ to $C$ that is
+one-to-one and onto. But then, by Theorems 7.3.3 and 7.3.4, $g \circ f$ is a
+function from $A$ to $C$ that is one-to-one and onto. Hence $A$ has the same
+cardinality as $C$ _[as was to be shown]._
+
+---
+
+Page 497
+
+**Definition**
+
+$A$ and $B$ **have the same cardinality** if, and only if, $A$ has the same
+cardinality as $B$ or $B$ has the same cardinality as $A$.
+
+---
+
+Page 499
+
+**Definition**
+
+A set is **finite** if, and only if, it is the empty set or can be put into
+one-to-one correspondence with a set of the form $\{1, 2, \dots, n\}$ for some
+positive integer $n$. A set is **countably infinite** if, and only if, it has
+the same cardinality as the set of positive integers $\mathbb{Z}^+$. A set is
+**countable** if, and only if, it is finite or countably infinite. A set that is
+not countable is called **uncountable**.
+
+---
+
+Page 502
+
+**Theorem 7.4.2 (Cantor)**
+
+The set of all real numbers between $0$ and $1$ is uncountable.
+
+**Proof (by contradiction):**
+
+Suppose the set of all real numbers between $0$ and $1$ is countable. Then the
+decimal representations of these numbers can be written in a list as follows:
+
+$$ 0.a_{11}a_{12}a_{13}\cdots a_{1n}\cdots $$
+
+$$ 0.a_{21}a_{22}a_{23}\cdots a_{2n}\cdots $$
+
+$$ 0.a_{31}a_{32}a_{33}\cdots a_{3n}\cdots $$
+
+$$ \vdots $$
+
+$$ 0.a_{n1}a_{n2}a_{n3}\cdots a_{nn}\cdots $$
+
+$$ \vdots $$
+
+_[We will derive a contradiction by showing that there is a number between $0$
+and $1$ that does not appear on this list.]_
+
+For each pair of positive integers $i$ and $j$, the $j$th decimal digit of the
+$i$th number on the list is $a_{ij}$. In particular, the first decimal digit of
+the first number on the list is $a_{11}$, the second decimal digit of the second
+number on the list is $a_{22}$, and so forth. As an example, suppose the list of
+real numbers between $0$ and $1$ starts out as follows:
+
+$$
+0. \ \boxed{2} \ 0 \ 1 \ 4 \ 8 \ 8 \ 0 \ 2 \ \dots \\
+0. \ 1 \ \boxed{1} \ 6 \ 6 \ 6 \ 0 \ 2 \ 1 \ \dots \\
+0. \ 0 \ 3 \ \boxed{3} \ 5 \ 3 \ 3 \ 2 \ 0 \ \dots \\
+0. \ 9 \ 6 \ 7 \ \boxed{7} \ 6 \ 8 \ 0 \ 9 \ \dots \\
+0. \ 0 \ 0 \ 0 \ 3 \ \boxed{1} \ 0 \ 0 \ 2 \ \dots
+$$
+
+The diagonal elements are boxed: $a_{11}$ is $2$, $a_{22}$ is $1$, $a_{33}$ is
+$3$, $a_{44}$ is $7$, $a_{55}$ is $1$, and so forth.
+
+Construct a new decimal number $d = 0.d_1d_2d_3\cdots d_n \cdots$ as follows:
+
+$$
+d_n =
+\begin{cases}
+1 & \text{if } a_{nn} \neq 1 \\
+2 & \text{if } a_{nn} = 1
+\end{cases}
+$$
+
+In the previous example,
+
+$$
+d_1 \text{ is } 1 \text{ because } a_{11} = 2 \neq 1,\\
+d_2 \text{ is } 2 \text{ because } a_{22} = 1,\\
+d_3 \text{ is } 1 \text{ because } a_{33} = 3 \neq 1,\\
+d_4 \text{ is } 1 \text{ because } a_{44} = 7 \neq 1,\\
+d_5 \text{ is } 2 \text{ because } a_{55} = 1,
+$$
+
+and so forth. Hence $d$ would equal $0.12112\dots$.
+
+The crucial observation is that for _each integer $n$, $d$ differs in the $n$th
+decimal position from the $n$th number on the list._ But this implies that $d$
+is not on the list! In other words, $d$ is a real number between $0$ and $1$
+that is not on the list of _all_ real numbers between $0$ and $1$. This
+contradiction shows the falseness of the supposition that the set of all numbers
+between $0$ and $1$ is countable. Hence the set of all real numbers between $0$
+and $1$ is uncountable _[as was to be shown]._
+
+---
+
+Page 503
+
+**Theorem 7.4.3**
+
+Any subset of any countable set is countable.
+
+**Proof:**
+
+Let $A$ be a particular but arbitrarily chosen countable set and let $B$ be any
+subset of $A$. _[We must show that $B$ is countable.]_ Either $B$ is finite or
+it is infinite. If $B$ is finite, then $B$ is countable by the definition of
+countable, and we are done. So suppose $B$ is infinite. Since $A$ is countable,
+the distinct elements of $A$ can be represented as a sequence
+
+$$ a_1, a_2, a_3, \dots $$
+
+Define a function $g: \mathbb{Z}^+ \to B$ inductively as follows:
+
+1. Search sequentially through elements of $a_1, a_2, a_3, \dots$ until an
+   element of $B$ is found _[This must happen eventually since $B \subseteq A$
+   and $B \neq \emptyset$.]_ Call that element $g(1)$.
+
+2. For each integer $k \geq 2$, suppose $g(k - 1)$ has been defined. Then
+   $g(k - 1) = a_i$ form some $a_i$ in $\{a_1, a_2, a_3, \dots\}$. Starting with
+   $a_i + 1$, search sequentially through $a_i + 1, a_i + 2, a_i + 3, \dots$
+   trying to find an element of $B$. One must be found eventually because $B$ is
+   infinite, and $\{g(1), g(2), \dots, g(k - 1)\}$ is a finite set. When an
+   element of $B$ is found, define it to be $g(k)$.
+
+By (1) and (2) above, the function $g$ is defined for each positive integer.
+
+Since the elements of $a_1, a_2, a_3, \dots$ are all distinct, $g$ is
+one-to-one. Furthermore, the searches for elements of $B$ are sequential: Each
+picks up where the previous one left off. Thus every element of $A$ is reached
+during some search. Moreover, all the elements of $B$ are located somewhere in
+the sequence $a_1, a_2, a_3, \dots$, and so every element of $B$ is eventually
+found and made the image of some integer. Hence $g$ is onto. These remarks show
+that $g$ is a one-to-one correspondence from $\mathbb{Z}^+$ to $B$. So $B$ is
+countably infinite and thus countable _[as was to be shown]._
+
+---
+
+Page 504
+
+**Corollary 7.4.4**
+
+Any set with an uncountable subset is uncountable.
+
+**Proof:**
+
+Consider the following equivalent phrasing of Theorem 7.4.3: For every set $S$
+and for every subset $A$ of $S$, if $S$ is countable, then $A$ is countable. The
+contrapositive of this statement is logically equivalent to it and states: For
+every set $S$ and for every subset $A$ of $S$, if $A$ is uncountable then $S$ is
+uncountable. Since this is an equivalent phrasing for the corollary, the
+corollary is proved.

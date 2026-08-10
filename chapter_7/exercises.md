@@ -3932,3 +3932,185 @@ Omitted.
     Justify your answer.
 
 Omitted.
+
+---
+
+Page 507
+
+**Exercise Set 7.4**
+
+1. When asked what it means to say that set $A$ has the same cardinality as set
+   $B$, a student replies, "$A$ and $B$ are one-to-one and onto." What _should_
+   the student have replied? Why?
+
+2. Show that "there are as many squares as there are numbers" by exhibiting a
+   one-to-one correspondence from the positive integers, $\mathbb{Z}^+$, to the
+   set $S$ of all squares of positive integers:
+
+$$ S = \{n \in \mathbb{Z}^+ | n = k^2, \text{ for some positive integer } k\} $$
+
+3. Let
+   $3\mathbb{Z} = \{n \in \mathbb{Z} | n = 3k, \text{ for some integer } k\}$.
+   Prove that $\mathbb{Z}$ and $3\mathbb{Z}$ have the same cardinality.
+
+4. Let $\mathbb{O}$ be the set of all odd integers. Prove that $\mathbb{O}$ has
+   the same cardinality as $2\mathbb{Z}$, the set of all even integers.
+
+5. Let $25\mathbb{Z}$ be the set of all integers that are multiples of $25$.
+   Prove that $25\mathbb{Z}$ has the same cardinality as $2\mathbb{Z}$, the set
+   of all even integers.
+
+6. Use the functions $I$ and $J$ defined in the paragraph following Example
+   7.4.1 to show that even though there is a one-to-one correspondence, $H$,
+   from $2\mathbb{Z}$ to $\mathbb{Z}$, there is also a function from
+   $2\mathbb{Z}$ to $\mathbb{Z}$ that is one-to-one but not onto and a function
+   from $\mathbb{Z}$ to $2\mathbb{Z}$ that is onto but not one-to-one. In other
+   words, show that $I$ is one-to-one but not onto, and show that $J$ is onto
+   but not one-to-one.
+
+7.
+
+a. Check that the formula for $F$ given at the end of Example 7.4.2 produces the
+correct values for $n = 1, 2, 3, \text{ and } 4$.
+
+b. Use the floor function to write a formula for $F$ as a single algebraic
+expression for each positive integer $n$.
+
+8. Use the result of exercise 3 to prove that $3\mathbb{Z}$ is countable.
+
+9. Show that the set of all nonnegative integers is countable by exhibiting a
+   one-to-one correspondence between $\mathbb{Z}^+$ and
+   $\mathbb{Z}^{\text{nonneg}}$.
+
+In 10-14 $S$ denotes the set of real numbers strictly between $0$ and $1$. That
+is, $s = \{x \in \mathbb{R} | 0 < x < 1\}$.
+
+10. Let $U = \{x \in \mathbb{R} | 0 < x < 2\}$. Prove that $S$ and $U$ have the
+    same cardinality.
+
+11. Let $V = \{x \in \mathbb{R} | 2 < x < 5\}$. Prove that $S$ and $V$ have the
+    same cardinality.
+
+12. Let $a$ and $b$ be real numbers with $a < b$, and suppose that
+    $W = \{x \in \mathbb{R} | a < x < b\}$. Prove that $S$ and $W$ have the same
+    cardinality.
+
+13. Draw the graph of the function $f$ defined by the following formula:
+
+For each real number $x$ with $0 < x < 1$,
+
+$$ f(x) = \tan\left(\pi x - \frac{\pi}{2}\right) $$
+
+Use the graph to explain why $S$ and $\mathbb{R}$ have the same cardinality.
+
+14. Define a function $g$ from the set of real numbers to $S$ by the following
+    formula:
+
+For each real number $x$,
+
+$$ g(x) = \frac{1}{2} \cdot \left(\frac{x}{1 + |x|}\right) + \frac{1}{2} $$
+
+Prove that $g$ is a one-to-one correspondence. (It is possible to prove this
+statement either with calculus or without it.) What conclusion can you draw from
+this fact?
+
+15. Show that the set of all bit strings (strings of $0$'s and $1$'s) is
+    countable.
+
+16. Show that $\mathbb{Q}$, the set of all rational numbers, is countable.
+
+17. Show that $\mathbb{Q}$, the set of all rational numbers, is dense along the
+    number line by showing that given any two rational numbers $r_1$ and $r_2$
+    with $r_2 < r_2$, there exists a rational number $x$ such that
+    $r_1 < x < r_2$.
+
+18. Must the average of two irrational numbers always be irrational? Prove or
+    give a counterexample.
+
+19. Show that the set of all irrational numbers is dense along the number line
+    by showing that given any two real numbers, there is an irrational number in
+    between.
+
+20. Give two examples of functions from $\mathbb{Z}$ to $\mathbb{Z}$ that are
+    one-to-one but not onto.
+
+21. Give two examples of functions from $\mathbb{Z}$ to $\mathbb{Z}$ that are
+    onto but not one-to-one.
+
+22. Define a function: $g: \mathbb{Z}^+ \times \mathbb{Z}y+ \to \mathbb{Z}^+$ by
+    the formula $g(m, n) = 2^m3^n$ for all
+    $(m, n) \in \mathbb{Z}^+ \times \mathbb{Z}^+$. Show that $g$ is one-to-one
+    and use this result to prove that $\mathbb{Z}^+ \times \mathbb{Z}^+$ is
+    countable.
+
+23.
+
+a. Explain how to use the following diagram to show that
+$\mathbb{Z}^{\text{nonneg}} \times \mathbb{Z}^{\text{nonneg}}$ and
+$\mathbb{Z}^{\text{nonneg}}$ have the same cardinality.
+
+(See Page 508 for image.)
+
+b. Define a function
+$H: \mathbb{Z}^{\text{nonneg}} \times \mathbb{Z}^{\text{nonneg}} \to \mathbb{Z}^{\text{nonneg}}$
+by the formula
+
+$$ H(m, n) = n + \frac{(m + n)(m + n + 1)}{2} $$
+
+for all nonnegative integers $m$ and $n$. Interpret the action of $H$
+geometrically using the diagram of part (a).
+
+24. Prove that the function $H$ defined analytically in exercise 23b is a
+    one-to-one correspondence.
+
+25. Prove that $0.1999 \dots = 0.2$.
+
+26. Prove that any infinite set contains a countably infinite subset.
+
+27. Prove that if $A$ is any countably infinite set, $B$ is any set, and
+    $g: A \to B$ is onto, then $B$ is countable.
+
+28. Prove that a disjoint union of any finite set and any countably infinite set
+    is countably infinite.
+
+29. Prove that a union of any two countably infinite sets is countably infinite.
+
+30. Use the result of exercise 29 to prove that the set of all irrational
+    numbers is uncountable.
+
+31. Use the results of exercises 28 and 29 to prove that a union of any two
+    countable sets is countable.
+
+32. Prove that $\mathbb{Z} \times \mathbb{Z}$, the Cartesian product of the set
+    of integers with itself, is countably infinite.
+
+33. Use the results of exercises 27, 31, and 32 to prove the following: If $R$
+    is the set of all solutions to all equations of the form $x^2 + bx + c = 0$,
+    where $b$ and $c$ are integers, then $R$ is countable.
+
+34. Let $\mathscr{P}(S)$ be the set of all subsets of set $S$, and let $T$ be
+    the set of all functions from $S$ to $\{0, 1\}$. Show that $\mathscr{P}(S)$
+    and $T$ have the same cardinality.
+
+35. Let $S$ be a set and let $\mathscr{P}(S)$ be the set of all subsets of $S$.
+    Show that $S$ is "smaller than" $\mathscr{P}(S)$ in the sense that there is
+    a one-to-one function from $S$ to $\mathscr{P}(S)$ but there is no onto
+    function from $S$ to $\mathscr{P}(S)$.
+
+36. The Schroeder-Bernstein theorem states the following: if $A$ and $B$ are any
+    sets with the property that there is a one-to-one function from $A$ to $B$
+    and a one-to-one function from $B$ to $A$, then $A$ and $B$ have the same
+    cardinality. Use this theorem to prove that there are as many functions from
+    $\mathbb{Z}^+$ to $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}$ as there functions from
+    $\mathbb{Z}^+$ to $\{0, 1\}$.
+
+37. Prove that if $A$ and $B$ are any countably infinite sets, then $A \times B$
+    is countably infinite.
+
+38. Suppose $A_1, A_2, A_3, \dots$ is an infinite sequence of countable sets.
+    Recall that
+
+$$ \bigcup_{i = 1}^{\infty}A_i = \{x | x \in A_i \text{ for some positive integer } i\} $$
+
+Prove that $\bigcup_{i = 1}^{\infty}A_i$ is countable. (In other words, prove
+that a countably infinite union of countable sets is countable.)

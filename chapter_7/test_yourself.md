@@ -151,3 +151,38 @@ for some $x_1, x_2 \in X$, $(g \circ f)(x_1) = (g \circ f)(x_2)$; $x_1 = x_2$
    then showing that _____.
 
 for some $z \in Z$, there exists some $x \in X$, such that $(g \circ f)(x) = z$
+
+---
+
+Page 507
+
+**Test Yourself**
+
+1. A set is finite if, and only if, _____.
+
+2. To prove that a set $A$ has the same cardinality as a set $B$ you must _____.
+
+3. The reflexive property of cardinality says that given any set $A$, _____.
+
+4. The symmetric property of cardinality says that given any sets $A$ and $B$,
+   _____.
+
+5. The transitive property of cardinality says that given any sets $A$, $B$, and
+   $C$, _____.
+
+6. A set is called countably infinite if, and only if, _____.
+
+7. A set is called countable if, and only if, _____.
+
+8. In each of the following, fill in the blank with the word _countable_ or the
+   word _uncountable_.
+
+a. The set of all integers is _____.
+
+b. The set of all rational numbers is _____.
+
+c. The set of all real numbers between $0$ and $1$ is _____.
+
+d. The set of all real numbers is _____.
+
+9. The Cantor diagonalization process is used to prove that _____.
