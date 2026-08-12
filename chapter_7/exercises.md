@@ -3943,22 +3943,249 @@ Page 507
    $B$, a student replies, "$A$ and $B$ are one-to-one and onto." What _should_
    the student have replied? Why?
 
+Since $A$ and $B$ are sets and not functions, the student's statement is
+incorrect, since sets cannot have the properties of being one-to-one and onto,
+only a function can have these properties. Instead, the student have claimed
+that $A$ and $B$ have the same cardinality if, and only if, there is a function
+from $A$ to $B$ that is both one-to-one and onto (a one-to-one correspondence).
+
 2. Show that "there are as many squares as there are numbers" by exhibiting a
    one-to-one correspondence from the positive integers, $\mathbb{Z}^+$, to the
    set $S$ of all squares of positive integers:
 
 $$ S = \{n \in \mathbb{Z}^+ | n = k^2, \text{ for some positive integer } k\} $$
 
+**Proof:**
+
+Suppose there is a set $S$ that is the set of all squares:
+
+$$ S = \{n \in \mathbb{Z}^+ | n = k^2, \text{ for some positive integer } k\} $$
+
+To prove that $S$ and the set of all positive integers, $\mathbb{Z}^+$, have the
+same cardinality, it must be shown that there exists some function, $f$, such
+that $f$ is a one-to-one correspondence from $\mathbb{Z}^+$ to $S$. In other
+words, it must be shown that there exists some function $f: \mathbb{Z}^+ \to S$
+such that $f$ is one-to-one and onto.
+
+_Proof ($f$ is one-to-one):_
+
+Suppose $k_1, k_2 \in \mathbb{Z}^+$ such that $f(k_1) = f(k_2)$.
+
+To prove that $f$ is one-to-one, it must be shown that $k_1 = k_2$.
+
+By definition of $f$:
+
+$$ k_1^2 = k_2^2 $$
+
+By algebra:
+
+$$ \sqrt{k_1^2} = \sqrt{k_2^2} $$
+
+$$ \pm k_1 = \pm k_2 $$
+
+Recall that $k_1, k_2 \in \mathbb{Z}^+$, so it follows that:
+
+$$ k_1 = k_2 $$
+
+This is what was to be shown. Therefore, it can be concluded that $f$ is
+one-to-one.
+
+_Proof ($f$ is onto):_
+
+Suppose there is some $m \in S$.
+
+To prove that $f$ is onto, it must be shown that there exists some
+$k \in \mathbb{Z}^+$ such that $f(k) = m$.
+
+By definition of $S$:
+
+$$ m = k^2 $$
+
+for some integer $k$.
+
+Then, by definition of $f$:
+
+$$ f(k) = k^2 = m $$
+
+This is what was to be shown. Therefore it can be concluded that $f$ is onto.
+
+_Conclusion:_
+
+Since it has been shown that $f$ is both one-to-one and onto, it follows by the
+properties of cardinality that the sets $S$ and $\mathbb{Z}^+$ have the same
+cardinality (the same number of elements in them).
+
+Q.E.D.
+
 3. Let
    $3\mathbb{Z} = \{n \in \mathbb{Z} | n = 3k, \text{ for some integer } k\}$.
    Prove that $\mathbb{Z}$ and $3\mathbb{Z}$ have the same cardinality.
 
+**Proof:**
+
+Suppose there is a set $3\mathbb{Z}$ that represents the set of all integers
+divisible by $3$:
+
+$$ 3\mathbb{Z} = \{n \in \mathbb{Z} | n = 3k, \text{ for some integer } k\} $$
+
+Define $f: \mathbb{Z} \to 3\mathbb{Z}$ as $f(n) = 3n$ for some integer $n$.
+
+To prove that $\mathbb{Z}$ and $3\mathbb{Z}$ have the same cardinality, it must
+shown that $f$ is a one-to-one correspondence from $\mathbb{Z}$ to 3\mathbb{Z}.
+
+_Proof ($f$ is one-to-one):_
+
+Suppose there exists some $x_1, x_2 \in 3\mathbb{Z}$ such that
+$f(x_1) = f(x_2)$.
+
+To prove that $f$ is one-to-one, it must be shown that $x_1 = x_2$.
+
+By definition of $f$:
+
+$$ 3x_1 = 3x_2 $$
+
+By algebra:
+
+$$ x_1 = x_2 $$
+
+This is what was to be shown. Therefore, it can be concluded that $f$ is
+one-to-one.
+
+_Proof ($f$ is onto):_
+
+Suppose there is some $m \in 3\mathbb{Z}$.
+
+To prove that $f$ is onto, it must be shown that $f(k) = m$ for some integer
+$k$.
+
+By definition of $3\mathbb{Z}$:
+
+$$ f(k) = 3k = m $$
+
+for some integer $k$.
+
+This is what was to be shown. Therefore, it can be concluded that $f$ is onto.
+
+_Conclusion:_
+
+Since it has been shown that $f$ is a one-to-one correspondence from
+$\mathbb{Z}$ to $3\mathbb{Z}$, it can be concluded that $\mathbb{Z}$ and
+$3\mathbb{Z}$ have the same cardinality.
+
+Q.E.D.
+
 4. Let $\mathbb{O}$ be the set of all odd integers. Prove that $\mathbb{O}$ has
    the same cardinality as $2\mathbb{Z}$, the set of all even integers.
+
+**Proof:**
+
+Suppose there is a set $\mathbb{O}$ that represents the set of all odd integers:
+
+$$ \mathbb{O} = \{n \in \mathbb{Z} | n = 2k + 1 \text{ for some integer } k\} $$
+
+Let $f: \mathbb{O} \to 2\mathbb{Z}$ (where $2\mathbb{Z}$ is the set of all even
+integers) such that $f(n) = n - 1$ for some integer $n$.
+
+To prove that $\mathbb{O}$ has the same cardinality as $2\mathbb{Z}$, it must be
+shown that $f$ is a one-to-one correspondence from $\mathbb{O}$ to
+$2\mathbb{Z}$.
+
+_Proof ($f$ is one-to-one):_
+
+Suppose $x_1, x_2 \in \mathbb{O}$ such that $f(x_1) = f(x_2)$.
+
+To prove that $f$ is one-to-one, it must be shown that $x_1 = x_2$.
+
+By the definition of $f$:
+
+$$ x_1 - 1 = x_2 - 1 $$
+
+By algebra:
+
+$$ x_1 = x_2 $$
+
+This is what was to be shown. Therefore, it can be concluded that $f$ is
+one-to-one.
+
+_Proof ($f$ is onto):_
+
+Suppose $m \in 2\mathbb{Z}$.
+
+To prove that $f$ is onto, it must be shown that $f(k) = m$ for some integer
+$k \in \mathbb{O}$.
+
+Let $k = m + 1$. Since $m \in 2\mathbb{Z}$, $m + 1$ is odd (by definition of
+odd). This means that $k$ is odd, so $k \in \mathbb{O}$. Then:
+
+$$ f(k) = k - 1 = (m + 1) - 1 = m $$
+
+This is what was to be shown. Therefore it can be concluded that $f$ is onto.
+
+_Conclusion:_
+
+Since it has been shown that $f$ is a one-to-one correspondence from
+$\mathbb{O}$ to $2\mathbb{Z}$, it can be concluded that $\mathbb{O}$ and
+$2\mathbb{Z}$ have the same cardinality.
 
 5. Let $25\mathbb{Z}$ be the set of all integers that are multiples of $25$.
    Prove that $25\mathbb{Z}$ has the same cardinality as $2\mathbb{Z}$, the set
    of all even integers.
+
+**Proof:**
+
+Suppose $25\mathbb{Z}$ represents the set of all integers that are multiples of
+$25$.
+
+$$ 25\mathbb{Z} = \{n \in \mathbb{Z} | n = 25k \text{ for some integer } k\} $$
+
+Let $f: 25\mathbb{Z} \to 2\mathbb{Z}$ (where $2\mathbb{Z}$ represents the set of
+all even integers), and define $f$ as $f(n) = \dfrac{2}{25}n$ for some integer
+$n$.
+
+To prove that $25\mathbb{Z}$ has the same cardinality as $2\mathbb{Z}$, it must
+be shown that $f$ is a one-to-one correspondence from
+$25\mathbb{Z} \to 2\mathbb{Z}$.
+
+_Proof ($f$ is one-to-one):_
+
+Suppose $x_1, x_2 \in 25\mathbb{Z}$ such that $f(x_1) = f(x_2)$.
+
+To prove that $f$ is one-to-one, it must be shown that $x_1 = x_2$.
+
+By the definition for $f$:
+
+$$ \frac{2}{25}x_1 = \frac{2}{25}x_2 $$
+
+By algebra:
+
+$$ x_1 = x_2 $$
+
+This is what was to be shown. Therefore, it can be concluded that $f$ is
+one-to-one.
+
+_Proof ($f$ is onto):_
+
+Let $m \in 2\mathbb{Z}.
+
+To show that $f$ is onto, it must be shown that $f(k) = m$ for some
+$k \in 25\mathbb{Z}$.
+
+Let $k = \dfrac{25m}{2}$.
+
+Since $m$ is even, $\dfrac{m}{2}$ is an integer, so $k = 25 \cdot \dfrac{m}{2}$,
+which is a multiple of $25$. It follows that $k \in 25\mathbb{Z}$.
+
+Then:
+
+$$ f(k) = \frac{2}{25}\left(\frac{25m}{2}\right) = m $$
+
+This is what was to be shown. Therefore, it can be concluded that $f$ is onto.
+
+_Conclusion:_
+
+Since it has been shown that $f$ is a one-to-one correspondence from
+$25\mathbb{Z} \to 2\mathbb{Z}$, it can be concluded that $25\mathbb{Z}$ and
+$2\mathbb{Z}$ have the same cardinality.
 
 6. Use the functions $I$ and $J$ defined in the paragraph following Example
    7.4.1 to show that even though there is a one-to-one correspondence, $H$,
@@ -3968,32 +4195,475 @@ $$ S = \{n \in \mathbb{Z}^+ | n = k^2, \text{ for some positive integer } k\} $$
    words, show that $I$ is one-to-one but not onto, and show that $J$ is onto
    but not one-to-one.
 
+_Hint:_ If $m \in 2\mathbb{Z}$, show that $J(m) = J(m + 1) = m$.
+
+Suppose $I: 2\mathbb{Z} \to \mathbb{Z}$, and define $I$ as $I(n) = n$ for some
+even integer $n$.
+
+Furthermore, suppose $J: \mathbb{Z} \to 2\mathbb{Z}$, and define $J$ as $J(m) =
+2\left\lfloor \dfrac{m}{2} \right\rfloor$ for some integer $m$.
+
+**Proof ($I$ is one-to-one, but not onto):**
+
+_Proof ($I$ is one-to-one):_
+
+Suppose $x_1, x_2 \in 2\mathbb{Z}$ such that $I(x_1) = I(x_2)$. To prove that
+$I$ is one-to-one, it must be shown that $x_1 = x_2$.
+
+By definition for $I$:
+
+$$ x_1 = x_2 $$
+
+This is what was to be shown. Therefore it can be concluded that $I$ is
+one-to-one.
+
+_Proof ($I$ is not onto):_
+
+Suppose $m \in \mathbb{Z}$.
+
+To prove that $I$ is onto, it would need to be shown that $I(k) = m$, for some
+$k \in \mathbb{Z}$.
+
+But since $m \in \mathbb{Z}$, $m$ could be an odd integer. If $m$ is odd, then
+$m = 2k + 1$ for some integer $k$, and so $I$ is not onto.
+
+Consider $m = 3$, then there would exist no $k$ for which $I(k) = 3$, since $I$.
+
+Therefore $I$ is not onto.
+
+**Proof ($J$ is onto, but not one-to-one):**
+
+_Proof ($J$ is onto):_
+
+Suppose $m \in 2\mathbb{Z}$.
+
+To prove that $J$ is onto, it must be shown that $J(k) = m$ for some
+$k \in \mathbb{Z}$.
+
+Let $k = m$.
+
+By the definition for $J$:
+
+$$ J(k) = 2\lfloor \frac{k}{2} \rfloor $$
+
+Since $k$ is even (since $k = m$ and $m \in 2\mathbb{Z}$), $k = 2p$ for some
+integer $p$. By substitution:
+
+$$ J(k) = 2\lfloor \frac{2p}{2} \rfloor $$
+
+$$ = 2\lfloor p \rfloor $$
+
+Then, by definition of floor:
+
+$$ = 2p $$
+
+Since $p$ is an integer, $2p \in 2\mathbb{Z}$, by the definition of even. It
+follows that:
+
+$$ J(k) = 2p = k = m $$
+
+This is what was to be shown. Therefore it can be concluded that $J$ is onto.
+
+_Proof ($J$ is not one-to-one):_
+
+Were it to be proven that $J$ is one-to-one, it would have to assumed that for
+some $x_1, x_2 \in \mathbb{Z}$, such that $J(x_1) = J(x_2)$, and then shown that
+$x_1 = x_2$.
+
+By the definition for $J$:
+
+$$ 2\lfloor \frac{x_1}{2} \rfloor = 2\lfloor \frac{x_2}{2} \rfloor $$
+
+But the floor function does not necessarily have to take the same image to
+generate the same elements of its co-domain.
+
+Consider $x_1 = 2$ and $x_2 = 3$, then by definition for $J$:
+
+$$ J(x_1) = 2\lfloor \frac{2}{2} \rfloor = 2\lfloor 1 \rfloor = 2(1) = 2 $$
+
+$$ J(x_2) = 2\lfloor \frac{3}{2} \rfloor = 2(1) = 2 $$
+
+So, $J(x_1) = J(x_2)$, but $x_1 \neq x_2$. Therefore $J$ is not one-to-one.
+
 7.
 
 a. Check that the formula for $F$ given at the end of Example 7.4.2 produces the
 correct values for $n = 1, 2, 3, \text{ and } 4$.
 
+The formula for $F$ is as follows:
+
+$$
+F(n) =
+\begin{cases}
+\dfrac{n}{2} & \text{if } n \text{ is an even positive integer} \\
+-\dfrac{n - 1}{2} & \text{if } n \text{ is an odd positive integer}
+\end{cases}
+$$
+
+_Case $n = 1$:_
+
+$$ F(1) = -\frac{(1) - 1}{2} = -\frac{0}{2} = (-1)0 = 0 $$
+
+_Case $n = 2$:_
+
+$$ F(2) = \frac{(2)}{2} = 1 $$
+
+_Case $n = 3$:_
+
+$$ F(3) = -\frac{(3) - 1}{2} = (-1)\left(\frac{2}{2}\right) = (-1)(1) = -1 $$
+
+_Case $n = 4$:_
+
+$$ F(4) = \frac{(4)}{2} = 2 $$
+
 b. Use the floor function to write a formula for $F$ as a single algebraic
 expression for each positive integer $n$.
 
+$$ F(n) = (-1)^n\lfloor \frac{n}{2} \rfloor $$
+
 8. Use the result of exercise 3 to prove that $3\mathbb{Z}$ is countable.
+
+Recall that a set is countable if, and only if, it is finite or countably
+infinite.
+
+Additionally, recall that a set is countably infinite if, and only if, it has
+the same cardinality as the set of positive integers $\mathbb{Z}^+$ (_i.e._
+there is a function that is a one-to-one correspondence from the given set to
+$\mathbb{Z}^+$).
+
+**Proof:**
+
+Suppose $3\mathbb{Z}$ represents the set of all integers that are multiples of
+$3$:
+
+$$ 3\mathbb{Z} = \{n \in \mathbb{Z} | n = 3k, \text{ for some integer } k\} $$
+
+To prove that $3\mathbb{Z}$ is countable, it must be shown that $3\mathbb{Z}$ is
+finite or countably infinite.
+
+$3\mathbb{Z}$ is not finite, thus it must be shown that $3\mathbb{Z}$ is
+countably infinite.
+
+As was shown in Example 7.4.3, $\mathbb{Z}$ is countably infinite (_i.e._
+$\mathbb{Z}$ has the same cardinality as $\mathbb{Z}^+$). Additionally, by
+problem 3, it has been shown that $3\mathbb{Z}$ has the same cardinality has
+$\mathbb{Z}$. By the transitive property of cardinality, it follows that
+$3\mathbb{Z}$ has the same cardinality as $\mathbb{Z}^+$, and therefore
+$3\mathbb{Z}$ is countably infinite.
 
 9. Show that the set of all nonnegative integers is countable by exhibiting a
    one-to-one correspondence between $\mathbb{Z}^+$ and
    $\mathbb{Z}^{\text{nonneg}}$.
 
+Recall that a set is countable if, and only if, it is finite or countably
+infinite.
+
+Additionally, recall that a set is countably infinite if, and only if, it has
+the same cardinality as the set of positive integers $\mathbb{Z}^+$ (_i.e._
+there is a function that is a one-to-one correspondence from the given set to
+$\mathbb{Z}^+$).
+
+**Proof:**
+
+Suppose $\mathbb{Z}^+$ represents the set of all positive integers and that
+$\mathbb{Z}^{\text{nonneg}}$ represents the set of all nonnegative integers.
+
+To prove that $\mathbb{Z}^{\text{nonneg}}$ is countable, it must be shown that
+$\mathbb{Z}^{\text{nonneg}}$ is finite or countably infinite. Since
+$\mathbb{Z}^{\text{nonneg}}$ is not finite, it follows that it must be shown
+that $\mathbb{Z}^{\text{nonneg}}$ is countably infinite (_i.e._ has the same
+cardinality as $\mathbb{Z}^+$).
+
+Let $f: \mathbb{Z}^+ \to \mathbb{Z}^{\text{nonneg}}$ be defined as
+$f(n) = n - 1$ for some positive integer $n$.
+
+_Proof ($f$ is one-to-one):_
+
+Suppose $x_1, x_2 \in \mathbb{Z}^+$ such that $f(x_1) = f(x_2)$.
+
+To prove that $f$ is one-to-one, it must be shown that $x_1 = x_2$.
+
+By definition of $f$:
+
+$$ x_1 - 1 = x_2 - 1 $$
+
+By algebra:
+
+$$ x_1 = x_2 $$
+
+This is what was to be shown. Therefore, it can be concluded that $f$ is
+one-to-one.
+
+_Proof ($f$ is onto):_
+
+Suppose $m \in \mathbb{Z}^{\text{nonneg}}$.
+
+To prove that $f$ is onto, it must be shown that $f(n) = m$ for some
+$n \in \mathbb{Z}^+$.
+
+By definition for $f$:
+
+$$ f(n) = n - 1 $$
+
+Let $n = m + 1$. Since $m \in \mathbb{Z}^{\text{nonneg}}$, it follows that
+$n \in \mathbb{Z}^+$ (since adding $1$ to any nonnegative integer is positive).
+
+Then, by substitution:
+
+$$ = (m + 1) - 1 $$
+
+By algebra:
+
+$$ = m $$
+
+This is what was to be shown. Therefore it can be concluded that $f$ is onto.
+
+_Conclusion:_
+
+Since $f$ has been shown to be a one-to-one correspondence, it can be concluded
+that $\mathbb{Z}^{\text{nonneg}}$ is countable.
+
 In 10-14 $S$ denotes the set of real numbers strictly between $0$ and $1$. That
-is, $s = \{x \in \mathbb{R} | 0 < x < 1\}$.
+is, $S = \{x \in \mathbb{R} | 0 < x < 1\}$.
 
 10. Let $U = \{x \in \mathbb{R} | 0 < x < 2\}$. Prove that $S$ and $U$ have the
     same cardinality.
 
+**Proof:**
+
+Suppose $S$ represents the set of real numbers strictly between $0$ and $1$:
+
+$$ S = \{x \in \mathbb{R} | 0 < x < 1\} $$
+
+Additionally, suppose $U$ is the set of real numbers strictly between $0$ and
+$2$:
+
+$$ U = \{x \in \mathbb{R} | 0 < x < 2\} $$
+
+Let $f: S \to U$, and define $f$ as $f(n) = 2n$ for some $n \in S$.
+
+To prove that $S$ and $U$ have the same cardinality, it must be shown that $f$
+is a one-to-one correspondence from $S \to U$.
+
+_Proof ($f$ is one-to-one):_
+
+Suppose $n_1, n_2 \in S$ such that $f(n_1) = f(n_2)$.
+
+To prove that $f$ is one-to-one, it must be shown that $n_1 = n_2$.
+
+By definition of $f$:
+
+$$ 2n_1 = 2n_2 $$
+
+By algebra:
+
+$$ n_1 = n_2 $$
+
+This is what was to be shown. Therefore, it can be concluded that $f$ is
+one-to-one.
+
+_Proof ($f$ is onto):_
+
+Let $m \in U$.
+
+To prove that $f$ is onto, it must be shown that $f(n) = m$ for some $n \in S$.
+
+Let $n = \frac{m}{2}$.
+
+Since $m \in U$, $0 < m < 2$. It follows that $0 < \dfrac{m}{2} < 1$. By
+substitution, this means that $0 < n < 1$, which means that $n \in S$.
+
+Then, by definition for $f$:
+
+$$ f(n) = 2n $$
+
+By substitution:
+
+$$ = 2\left(\frac{m}{2}\right) $$
+
+By algebra:
+
+$$ = m $$
+
+This is what was to be shown. Therefore, it can be concluded that $f$ is onto.
+
+_Conclusion:_
+
+Since it has been shown that $f$ is a one-to-one correspondence, it can be
+concluded that $S$ and $U$ have the same cardinality.
+
+Q.E.D.
+
 11. Let $V = \{x \in \mathbb{R} | 2 < x < 5\}$. Prove that $S$ and $V$ have the
     same cardinality.
+
+_Hint:_ Define $h: S \to V$ as follows: $h(x) = 3x + 2$, for every $x \in S$.
+
+**Proof:**
+
+Suppose $S$ represents the set of real numbers strictly between $0$ and $1$:
+
+$$ S = \{x \in \mathbb{R} | 0 < x < 1\} $$
+
+Additionally, suppose $V$ is the set of real numbers strictly between $2$ and
+$5$:
+
+$$ V = \{x \in \mathbb{R} | 2 < x < 5\} $$
+
+Let $h: S \to V$, and define $h$ as $h(x) = 3x + 2$ for some $x \in S$.
+
+To prove that $S$ and $V$ have the same cardinality, it must be shown that $h$
+is a one-to-one correspondence for $S \to V$.
+
+_Proof ($h$ is one-to-one):_
+
+Suppose $x_1, x_2 \in S$ such that $h(x_1) = h(x_2)$.
+
+To prove $h$ is one-to-one, it must be shown that $x_1 = x_2$.
+
+By the definition of $h$:
+
+$$ 3x_1 + 2 = 3x_2 + 2 $$
+
+By algebra:
+
+$$ 3x_1 = 3x_2 $$
+
+$$ x_1 = x_2 $$
+
+This is what was to be shown. Therefore, it can be concluded that $h$ is
+one-to-one.
+
+_Proof ($h$ is onto):_
+
+Let $v \in V$.
+
+To prove that $h$ is onto, it must be shown that $f(x) = v$ for some $x \in S$.
+
+Let $x = \dfrac{v - 2}{3}$.
+
+Since $v \in V$, $2 < v < 5$. It follows that:
+
+$$ 2 - 2 < v - 2 < 5 - 2 $$
+
+$$ 0 < v - 2 < 3 $$
+
+$$ \frac{0}{3} < \frac{v - 2}{3} < \frac{3}{3} $$
+
+$$ 0 < \frac{v - 2}{3} < 1 $$
+
+By substitution, this means that:
+
+$$ 0 < x < 1 $$
+
+This means that $x \in S$.
+
+Then, by definition for $h$:
+
+$$ h(x) = 3x + 2 $$
+
+By substitution:
+
+$$ h(x) = 3\left(\frac{v - 2}{3}\right) + 2 $$
+
+By algebra:
+
+$$ = (v - 2) + 2 $$
+
+$$ = v $$
+
+This is what was to be shown. Therefore it can be concluded that $h$ is onto.
+
+_Conclusion:_
+
+Since it has been shown that $h$ is a one-to-one correspondence for $S \to V$,
+it can be concluded that $S$ and $V$ have the same cardinality.
+
+Q.E.D.
 
 12. Let $a$ and $b$ be real numbers with $a < b$, and suppose that
     $W = \{x \in \mathbb{R} | a < x < b\}$. Prove that $S$ and $W$ have the same
     cardinality.
+
+**Proof:**
+
+Suppose $S$ represents the set of real numbers strictly between $0$ and $1$:
+
+$$ S = \{x \in \mathbb{R} | 0 < x < 1\} $$
+
+Additionally, suppose $a, b \in \mathbb{R}$ such that $a < b$. Then, suppose $W$
+is a set defined as:
+
+$$ W = \{x \in \mathbb{R} | a < x < b\} $$
+
+Let $f: S \to W$ be defined as $f(x) = (b - a)x + a$ for some $x \in S$.
+
+To prove that $S$ and $W$ have the same cardinality, it must be shown that $f$
+is a one-to-one correspondence for $S \to W$.
+
+_Proof ($f$ is one-to-one):_
+
+Let $x_1, x_2 \in S$ such that $f(x_1) = f(x_2)$.
+
+To prove that $f$ is one-to-one, it must be shown that $x_1 = x_2$.
+
+By the definition of $f$:
+
+$$ (b - a)x_1 + a = (b - a)x_2 + a $$
+
+By algebra:
+
+$$ (b - a)x_1 = (b - a)x_2 $$
+
+$$ x_1 = x_2 $$
+
+This is what was to be shown. Therefore it can be concluded that $f$ is
+one-to-one.
+
+_Proof ($f$ is onto):_
+
+Let $w \in W$.
+
+To prove that $f$ is onto, it must be shown that $f(x) = w$ for some $x \in S$.
+
+Let $x = \dfrac{w - a}{b - a}$.
+
+Since $w \in W$, this means that $a < w < b$. It follows that:
+
+$$ a - a < w - a < b - a $$
+
+$$ 0 < w - a < b - a $$
+
+$$ \frac{0}{b - a} < \frac{w - a}{b - a} < \frac{b - a}{b - a} $$
+
+$$ 0 < \frac{w - a}{b - a} < 1 $$
+
+By substitution:
+
+$$ 0 < x < 1 $$
+
+It follows that $x \in S$.
+
+By definition for $f$:
+
+$$ f(x) = (b - a)x + a $$
+
+By substitution:
+
+$$ f(x) = (b - a)\left(\frac{w - a}{b - a}\right) + a $$
+
+$$ = (w - a) + a $$
+
+$$ = w $$
+
+This is what was to be shown. Therefore it can be concluded that $f$ is onto.
+
+_Conclusion:_
+
+Since it has been shown that $f$ is a one-to-one correspondence for $S \to W$,
+it can be concluded that $S$ and $W$ have the same cardinality.
+
+Q.E.D.
 
 13. Draw the graph of the function $f$ defined by the following formula:
 
@@ -4002,6 +4672,8 @@ For each real number $x$ with $0 < x < 1$,
 $$ f(x) = \tan\left(\pi x - \frac{\pi}{2}\right) $$
 
 Use the graph to explain why $S$ and $\mathbb{R}$ have the same cardinality.
+
+Omitted.
 
 14. Define a function $g$ from the set of real numbers to $S$ by the following
     formula:
@@ -4014,36 +4686,143 @@ Prove that $g$ is a one-to-one correspondence. (It is possible to prove this
 statement either with calculus or without it.) What conclusion can you draw from
 this fact?
 
+Omitted.
+
 15. Show that the set of all bit strings (strings of $0$'s and $1$'s) is
     countable.
 
+Recall that a set is countable if, and only if, it is finite or countably
+infinite.
+
+Additionally, recall that a set is countably infinite if, and only if, it has
+the same cardinality as the set of positive integers $\mathbb{Z}^+$ (_i.e._
+there is a function that is a one-to-one correspondence from the given set to
+$\mathbb{Z}^+$).
+
+**Proof:**
+
+Suppose $B$ is the set of all bit strings (strings of $0$'s and $1$'s).
+
+To prove that $B$ is countable, it must be shown that $B$ is finite or countably
+infinite. Since $B$ is not finite, it must be shown that $B$ is countably
+infinite.
+
+To show that $B$ is countably infinite, it must be shown that $B$ has the same
+cardinality as the set of all positive integers, $\mathbb{Z}^+$.
+
+To show that $B$ and $\mathbb{Z}^+$ have the same cardinality, it must be shown
+that there exists some one-to-one correspondence for $B \to \mathbb{Z}^+$.
+
+Consider a function, $f$ that maps the bit strings by their length to some
+positive integer. For example, say $f(\lambda) = 1$ (where $\lambda$ represents
+the null string). Additional examples would include $f(0) = 2, f(1) = 3$ for bit
+strings of length $2$. Further examples for length $3$ include
+$f(00) = 4, f(01) = 5, f(10) = 6, f(11) = 7$, and so on.
+
+Generally, for each integer $n \geq 0$, there are $2^n$ bit strings of length
+$n$, and $f$ maps them to the positive integers between $2^n$ (inclusive) and
+$2^{n + 1} - 1$ (inclusive).
+
+$f$ is one-to-one since two bit strings never map to the same positive integer.
+
+$f$ is onto as every positive integer is in the range for $f$ (namely
+$\mathbb{Z}^+$).
+
+Therefore, since $f$ is a one-to-one correspondence for $B \to \mathbb{Z}^+$, it
+can be concluded that $B$ and $\mathbb{Z}^+$ have the same cardinality, and
+therefore $B$ is countable.
+
+Q.E.D.
+
 16. Show that $\mathbb{Q}$, the set of all rational numbers, is countable.
+
+Omitted.
 
 17. Show that $\mathbb{Q}$, the set of all rational numbers, is dense along the
     number line by showing that given any two rational numbers $r_1$ and $r_2$
     with $r_2 < r_2$, there exists a rational number $x$ such that
     $r_1 < x < r_2$.
 
-18. Must the average of two irrational numbers always be irrational? Prove or
+_Hint:_ See the hints for exercises 18 and 19 in Section 4.3.
+
+18. _Hint:_
+
+$$ \frac{\dfrac{a}{b} + \dfrac{c}{d}}{2} = \frac{\dfrac{(ad + bc)}{(bd)}{2} =
+\frac{ad + bc}{2bd} $$
+
+19. _Hint:_ If $a < b$ then $a + a < a + b$ (by T19 of Appendix A), or
+    equivalently, $2a < a + b$. Thus $a < \dfrac{a + b}{2}$ (by T20 of Appendix
+    A).
+
+**Proof:**
+
+Let $r_1, r_2 \in \mathbb{Q}$ such that $r_1 < r_2$.
+
+To prove $\mathbb{Q}$ is dense along the number line, it must be shown there
+exists some $x \in \mathbb{Q}$ such that $r_1 < x < r_2$.
+
+Let $x = \dfrac{r_1 + r_2}{2}$.
+
+Since $r_1, r_2 \in \mathbb{Q}$, it follows that
+$\dfrac{r_1 + r_2}{2} \in \mathbb{Q}$, hence $x \in \mathbb{Q}$.
+
+Since $r_1 < r_2$, it follows that $r_1$ is less than their average:
+
+$$ r_1 < \frac{r_1 + r_2}{2} $$
+
+Similarly, since $r_2 > r_1$, it follows that $r_2$ is greater than their
+average:
+
+$$ \frac{r_1 + r_2}{2} < r_2 $$
+
+This means that:
+
+$$ r_1 < \frac{r_1 + r_2}{2} < r_2 $$
+
+Now, by substitution:
+
+$$ r_1 < x < r_2 $$
+
+This is what was to be shown. Therefore it can be concluded that $\mathbb{Q}$ is
+dense along the number line.
+
+Q.E.D.
+
+20. Must the average of two irrational numbers always be irrational? Prove or
     give a counterexample.
 
-19. Show that the set of all irrational numbers is dense along the number line
+**Disproof (by counterexample):**
+
+Consider $r_1, r_2 \notin \mathbb{Q}$ where $r_1 = \sqrt{2}$ and
+$r_2 = -\sqrt{2}$.
+
+Then, their average would be:
+
+$$ \frac{r_1 + r_2}{2} = \frac{\sqrt{2} + (-\sqrt{2})}{2} = \frac{0}{2} = 0 $$
+
+Now, $0 \in \mathbb{Q}$.
+
+This shows that the average of two irrational numbers is not always irrational.
+
+Q.E.D.
+
+21. Show that the set of all irrational numbers is dense along the number line
     by showing that given any two real numbers, there is an irrational number in
     between.
 
-20. Give two examples of functions from $\mathbb{Z}$ to $\mathbb{Z}$ that are
+22. Give two examples of functions from $\mathbb{Z}$ to $\mathbb{Z}$ that are
     one-to-one but not onto.
 
-21. Give two examples of functions from $\mathbb{Z}$ to $\mathbb{Z}$ that are
+23. Give two examples of functions from $\mathbb{Z}$ to $\mathbb{Z}$ that are
     onto but not one-to-one.
 
-22. Define a function: $g: \mathbb{Z}^+ \times \mathbb{Z}y+ \to \mathbb{Z}^+$ by
+24. Define a function: $g: \mathbb{Z}^+ \times \mathbb{Z}y+ \to \mathbb{Z}^+$ by
     the formula $g(m, n) = 2^m3^n$ for all
     $(m, n) \in \mathbb{Z}^+ \times \mathbb{Z}^+$. Show that $g$ is one-to-one
     and use this result to prove that $\mathbb{Z}^+ \times \mathbb{Z}^+$ is
     countable.
 
-23.
+25.
 
 a. Explain how to use the following diagram to show that
 $\mathbb{Z}^{\text{nonneg}} \times \mathbb{Z}^{\text{nonneg}}$ and

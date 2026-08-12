@@ -484,6 +484,57 @@ cardinality as $B$ or $B$ has the same cardinality as $A$.
 
 ---
 
+Page 497
+
+**Example 7.4.1**
+
+**An Infinite Set and a Proper Subset Can Have the Same Cardinality**
+
+Let $2\mathbb{Z}$ be the set of all even integers. Prove that $2\mathbb{Z}$ and
+$\mathbb{Z}$ have the same cardinality.
+
+_Solution:_
+
+Consider the function $H$ from $\mathbb{Z}$ to $2\mathbb{Z}$ defined as follows:
+
+$$ H(n) = 2n \text{ for each } n \in \mathbb{Z} $$
+
+A (partial) arrow diagram for $H$ is shown below.
+
+(See Page 498 for image).
+
+To show that $H$ is one-to-one, suppose $H(n_1) = H(n_2)$ for some integers
+$n_1$ and $n_2$. Then $2n_1 = 2n_2$ by definition of $H$, and dividing both
+sides by $2$ gives $n_1 = n_2$. Hence $h$ is one-to-one.
+
+To show that $H$ is onto, suppose $m$ is any element of $2\mathbb{Z}$. Then $m$
+is an even integer, and so $m = 2k$ for some integer $k$. It follows that
+$H(k) = 2k = m$ . Thus there exists $k$ in $\mathbb{Z}$ with $H(k) = m$, and
+hence $H$ is onto.
+
+Therefore, by definition of cardinality, $\mathbb{Z}$ and $2\mathbb{Z}$ have the
+same cardinality.
+
+In Section 9.4 we will show that a function from one finite set to another set
+of the same size is one-to-one if, and only if, it is onto. This result does not
+hold for infinite sets. Although it is true that for two infinite sets to have
+the same cardinality there must exist a function from one to the other that is
+both one-to-one and onto, it is always the case that:
+
+If $A$ and $B$ are infinite sets with the same cardinality, then there exist
+functions from $A$ to $B$ that are one-to-one but not onto and functions from
+$A$ to $B$ that are onto but not one-to-one.
+
+For instance, since the function $H$ in Example 7.4.1 is one-to-one and onto,
+$\mathbb{Z}$ and $2\mathbb{Z}$ have the same cardinality. But the "inclusion
+function" $I$ from $2\mathbb{Z}$ to $\mathbb{Z}$, given by $I(n) = n$ for all
+even integers $n$, is one-to-one but not onto. And the function $J$ from
+$\mathbb{Z}$ to $2\mathbb{Z}$ defined by
+$J(n) = 2\left\lfloor \dfrac{n}{2} \right\rfloor$, for each integer $n$, is onto
+but not one-to-one. (See exercise 6 at the end of this section.)
+
+---
+
 Page 499
 
 **Definition**

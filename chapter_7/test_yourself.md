@@ -160,29 +160,57 @@ Page 507
 
 1. A set is finite if, and only if, _____.
 
+it is the empty set or there is a one-to-one correspondence from
+$\{1, 2, \dots n\}$ to it, for some positive integer $n$.
+
 2. To prove that a set $A$ has the same cardinality as a set $B$ you must _____.
 
+show that there is a function one-to-one correspondence from $A$ to $B$.
+
 3. The reflexive property of cardinality says that given any set $A$, _____.
+
+$A$ has the same cardinality as $A$.
 
 4. The symmetric property of cardinality says that given any sets $A$ and $B$,
    _____.
 
+if $A$ has the same cardinality as $B$, then $B$ has the same cardinality as
+$A$.
+
 5. The transitive property of cardinality says that given any sets $A$, $B$, and
    $C$, _____.
 
+if $A$ has the same cardinality as $B$, and if $B$ has the same cardinality as
+$C$, then $A$ has the same cardinality as $C$.
+
 6. A set is called countably infinite if, and only if, _____.
 
+it has the same cardinality as the set of all positive integers
+($\mathbb{Z}^+$).
+
 7. A set is called countable if, and only if, _____.
+
+it is finite or countably infinite
 
 8. In each of the following, fill in the blank with the word _countable_ or the
    word _uncountable_.
 
 a. The set of all integers is _____.
 
+countable
+
 b. The set of all rational numbers is _____.
+
+countable
 
 c. The set of all real numbers between $0$ and $1$ is _____.
 
+uncountable
+
 d. The set of all real numbers is _____.
 
+uncountable
+
 9. The Cantor diagonalization process is used to prove that _____.
+
+the set of all real numbers between $0$ and $1$ is uncountable
