@@ -4750,9 +4750,12 @@ _Hint:_ See the hints for exercises 18 and 19 in Section 4.3.
 $$ \frac{\dfrac{a}{b} + \dfrac{c}{d}}{2} = \frac{\dfrac{(ad + bc)}{(bd)}{2} =
 \frac{ad + bc}{2bd} $$
 
-19. _Hint:_ If $a < b$ then $a + a < a + b$ (by T19 of Appendix A), or
-    equivalently, $2a < a + b$. Thus $a < \dfrac{a + b}{2}$ (by T20 of Appendix
-    A).
+19. Show that the set of all irrational numbers is dense along the number line
+    by showing that given any two real numbers, there is an irrational number in
+    between.
+
+_Hint:_ If $a < b$ then $a + a < a + b$ (by T19 of Appendix A), or equivalently,
+$2a < a + b$. Thus $a < \dfrac{a + b}{2}$ (by T20 of Appendix A).
 
 **Proof:**
 
@@ -4806,29 +4809,100 @@ This shows that the average of two irrational numbers is not always irrational.
 
 Q.E.D.
 
-21. Show that the set of all irrational numbers is dense along the number line
-    by showing that given any two real numbers, there is an irrational number in
-    between.
-
-22. Give two examples of functions from $\mathbb{Z}$ to $\mathbb{Z}$ that are
+20. Give two examples of functions from $\mathbb{Z}$ to $\mathbb{Z}$ that are
     one-to-one but not onto.
 
-23. Give two examples of functions from $\mathbb{Z}$ to $\mathbb{Z}$ that are
+$$ f(x) = 2x $$
+
+$$ g(n) = 3n $$
+
+21. Give two examples of functions from $\mathbb{Z}$ to $\mathbb{Z}$ that are
     onto but not one-to-one.
 
-24. Define a function: $g: \mathbb{Z}^+ \times \mathbb{Z}y+ \to \mathbb{Z}^+$ by
+$$
+f(x) =
+\begin{cases}
+x & \text{if } x \leq 0 \\
+0 & \text{if } x = 1 \\
+x - 1 & \text{if } x > 1
+\end{cases}
+$$
+
+$$
+g(n) =
+\begin{cases}
+n & \text{if } n \leq 0 \\
+0 & \text{if } n = 1 \\
+n - 2 & \text{if } n \geq 3
+\end{cases}
+$$
+
+22. Define a function: $g: \mathbb{Z}^+ \times \mathbb{Z}y+ \to \mathbb{Z}^+$ by
     the formula $g(m, n) = 2^m3^n$ for all
     $(m, n) \in \mathbb{Z}^+ \times \mathbb{Z}^+$. Show that $g$ is one-to-one
     and use this result to prove that $\mathbb{Z}^+ \times \mathbb{Z}^+$ is
     countable.
 
-25.
+_Hint:_ Use the unique factorization of integers theorem (Theorem 4.4.5) and
+Theorem 7.4.3.
+
+**Proof:**
+
+Suppose $g: \mathbb{Z}^+ \times \mathbb{Z}^+ \to \mathbb{Z}^+$ is defined as
+$g(m, n) = 2^m3^n$ such that $(m, n) \in \mathbb{Z}^+ \times \mathbb{Z}^+$.
+
+To prove that $g$ is one-to-one, suppose that $g(m_1, n_1) = g(m_2, n_2)$ for
+some
+$(m_1, n_1) \in \mathbb{Z}^+ \times \mathbb{Z}^+, (m_2, n_2) \in \mathbb{Z}^+ \times \mathbb{Z}^+$,
+and show that $(m_1, n_1) = (m_2, n_2)$.
+
+By substitutuion:
+
+$$ 2^{m_1}3^{n_1} = 2^{m_2}3^{n_2} $$
+
+By Theorem 4.4.5 (the uniqueness of prime factorizations):
+
+$$ m_1 = m_2 \quad \text{ and } \quad n_1 = n_2 $$
+
+This is what was to be shown.
+
+Q.E.D.
+
+It follows that $g$ is a one-to-one correspondence between
+$(\mathbb{Z}^+ \times \mathbb{Z}^+)$ and $g(\mathbb{Z}^+ \times \mathbb{Z}^+)$.
+
+Since $g(\mathbb{Z}^+ \times \mathbb{Z}^+) \subseteq \mathbb{Z}^+$, by Theorem
+7.4.3, $g(\mathbb{Z}^+ \times \mathbb{Z}^+)$ is countable.
+
+Since $g$ is a one-to-one correspondence, $(\mathbb{Z}^+ \times \mathbb{Z}^+)$
+is countable.
+
+23.
 
 a. Explain how to use the following diagram to show that
 $\mathbb{Z}^{\text{nonneg}} \times \mathbb{Z}^{\text{nonneg}}$ and
 $\mathbb{Z}^{\text{nonneg}}$ have the same cardinality.
 
 (See Page 508 for image.)
+
+Define a function
+$G: \mathbb{Z}^{\text{nonneg}} \to \mathbb{Z}^{\text{nonneg}} \times \mathbb{Z}^{\text{nonneg}}$
+as follows:
+
+Let $G(0) = (0, 0)$, and then follow the arrows in the diagram, letting each
+successive ordered pairs of integers be the value of $G$ for the next successive
+integer. Thus, for instance
+
+$$
+G(1) = (1, 0) \\
+G(2) = (0, 1) \\
+G(3) = (2, 0) \\
+G(4) = (1, 1) \\
+G(5) = (0, 2) \\
+G(6) = (3, 0) \\
+G(7) = (2, 1) \\
+G(8) = (1, 2) \\
+$$
 
 b. Define a function
 $H: \mathbb{Z}^{\text{nonneg}} \times \mathbb{Z}^{\text{nonneg}} \to \mathbb{Z}^{\text{nonneg}}$
@@ -4839,42 +4913,310 @@ $$ H(m, n) = n + \frac{(m + n)(m + n + 1)}{2} $$
 for all nonnegative integers $m$ and $n$. Interpret the action of $H$
 geometrically using the diagram of part (a).
 
+_Hint:_ Observe that if the top ordered pair of any given diagonal is $(k, 0)$,
+the entire diagonal (moving from top to bottom) consists of
+$(k, 0), (k - 1, 1), (k - 2, 2), \dots, (2, k -  2), (1, k - 1), (0, k)$. Thus
+for every ordered pair $(m, n)$ within any given diagonal, the value of $m + n$
+is constant, and as you move down the ordered pairs in the diagonal, start at
+the top, the value of the second element of the pair keeps increasing by $1$.
+
+Omitted (hint is the answer).
+
 24. Prove that the function $H$ defined analytically in exercise 23b is a
     one-to-one correspondence.
 
+Omitted.
+
 25. Prove that $0.1999 \dots = 0.2$.
 
+_Hint:_ There are at least two different approaches to this problem. One is to
+use the method discussed in Section 4.3. Another is to suppose that
+$1.999999\dots < 2$ and derive a contradiction. (Show that the difference
+between $2$ and $1.999999\dots$ can be made smaller than any given positive
+number.)
+
+Let $x = 0.1999\dots$. Then $10x = 1.9999\dots$ and $100x = 19.9999\dotts$.
+Thus:
+
+$$ 100x - 10x = 18 $$
+
+Or:
+
+$$ 90x = 18 $$
+
+$$ x = \frac{18}{90} $$
+
+$$ x = \frac{2}{10} $$
+
+$$ x = \frac{1}{5} $$
+
+$$ x = 0.2 $$
+
 26. Prove that any infinite set contains a countably infinite subset.
+
+**Proof:**
+
+Let $A$ be an infinite set and $a_1 \in A$.
+
+For each integer $n \neq 2$, let $a_n$ be any element of
+$A - \{a_1, a_2, a_3, \dotts, a_{n - 1}\}$. Such an element exists, for if it
+did not, $A - \{a_1, a_2, a_3, \<F3>ots, a_{n - 1}\}$ would be empty and $A$
+would be finite.
 
 27. Prove that if $A$ is any countably infinite set, $B$ is any set, and
     $g: A \to B$ is onto, then $B$ is countable.
 
+**Proof:**
+
+Suppose $A$ is any countably infinite set, $B$ is any set, and $g: A \to B$ such
+that $g$ is onto.
+
+Since $A$ is countably infinite, there is a one-to-one correspondence
+$f: \mathbb{Z}^+ \to A$.
+
+Then, in particular, $f$ is onto, and so by Theorem 7.3.4, $g \circ f$ is an
+onto function from $\mathbb{Z}^+ \to B$.
+
+Define a function $h: B \to \mathbb{Z}^+$ as follows:
+
+Suppose $x$ is any element of $B$. Since $g \circ f$ is onto,
+$\{m \in \mathbb{Z}^+ | (g \circ f)(m) = x\} \neq \emptyset$.
+
+Thus, by the well-ordering principle for the integers, this set has at least one
+element. In other words, there is a least positive integer $n$ with
+$(g \circ f)(n) = x$.
+
+Let $h(x)$ be this integer.
+
+It is claimed that $h$ is one-to-one. Suppose $h(x_1) = h(x_2) = n$. By
+definition of $h$, $n$ is the least positive integer with
+$(g \circ f)(n) = x_1$. Moreover, by the definition of $h$, $n$ is the least
+positive integer with $(g \circ f)(n) = x_2$. Hence
+$x_1 = (g \circ f)(n) = x_2$.
+
+Thus $h$ is a one-to-one correspondence between $B$ and a subset $S$ of positive
+integers (the range of $h$). Since any subset of a countable set is countable
+(Theorem 7.4.3), $S$ is countable, and so there is a one-to-one correspondence
+between $B$ and a countable set. It follows from the transitive property of
+cardinality that $B$ is countable.
+
 28. Prove that a disjoint union of any finite set and any countably infinite set
     is countably infinite.
 
+**Proof:**
+
+Suppose $A = \{a_1, \dots, a_n\}$ is a finite set, $B$ is a countably infinite
+set, and that $A$ and $B$ are disjoint.
+
+By the definition of countably infinite, there is a one-to-one correspondence
+$f: \mathbb{Z}^+ \to B$.
+
+Let $g: \mathbb{Z}^+ \to (A \cup B)$, and define:
+
+$$
+g(i) =
+\begin{cases}
+a_i & \text{if } 1 \leq i \leq n \\
+f(i - n) & \text{if } (n + 1) \leq i
+\end{cases}
+$$
+
+for all $i \in \mathbb{Z}^+$.
+
+It must be shown that $g$ is a one-to-one correspondence from
+$\mathbb{Z}^+ \to (A \cup B)$.
+
+_Proof ($g$ is one-to-one):_
+
+Then, suppose $g(i) = g(j)$ (for all $j \in \mathbb{Z}^+$). Since $A$ and $B$
+are disjoint, either both $g(i)$ and $g(j)$ are in $A$, or they are both in $B$.
+
+_Case $g(i), g(j) \in A$:_
+
+Since $g(i), g(j) \in A$, then $a_i = a_j$, which implies that $i = j$.
+
+_Case $g(i), g(j) \in B$:_
+
+Since $g(i), g(j) \in B$, then $f(i - n) = f(j - n)$. Since $f$ is one-to-one,
+$i - n = j - n$, thus $i = j$.
+
+Thus $g$ is one-to-one.
+
+_Proof ($g$ is onto):_
+
+Suppose $x \in (A \cup B)$. This means that $x \in A$ or $x \in B$.
+
+_Case ($x \in A$):_
+
+Since $x \in A$, $x = a_i$ for some $i \in \{1, \dots, n\}$. It follows that
+$g(i) = a_i = x$.
+
+Thus $g$ is onto.
+
+_Case ($x \in B$):_
+
+Since $x \in B$, and since $f$ is onto, there exists some $m \in \mathbb{Z}^+$
+such that $f(m) = x$.
+
+Let $i = m + n$. Then $g(i) = g(m + n) = f(m + n - n) = f(m) = x$.
+
+Thus $g$ is onto.
+
+Therefore $g$ is a one-to-one correspondence from $\mathbb{Z}^+ \to (A \cup B)$,
+and so it has been shown that $(A \cup B)$ is countably infinite.
+
+Q.E.D.
+
 29. Prove that a union of any two countably infinite sets is countably infinite.
+
+**Proof:**
+
+Suppose $A$ and $B$ are any two countably infinite sets.
+
+By definition of countably infinite, there exists one-to-one correspondences
+$f: \mathbb{Z}^+ \to A$ and $g: \mathbb{Z}^+ \to B$.
+
+_Case ($A \cap B = \emptyset$):_
+
+In this case, to prove that $(A \cup B)$ is countably infinite, it must be shown
+that there exists some one-to-one correspondence
+$h: \mathbb{Z}^+ \to (A \cup B)$.
+
+Let $h: \mathbb{Z}^+ \to (A \cap B)$ be defined as:
+
+$$
+h(n) =
+\begin{cases}
+f\left(\dfrac{n}{2}\right) & \text{if } n \text{ is even} \\
+g\left(\dfrac{n + 1}{2}\right)& \text{if } n \text{ is odd}
+\end{cases}
+$$
+
+for every $n \in \mathbb{Z}$ where $n \geq 1$
+
+_Proof ($h$ is one-to-one):_
+
+Suppose $h(n_1) = h(n_2)$ for some $n_1, n_2 \in \mathbb{Z}$ where $n_1 \geq 1$
+and $n_2 \geq 1$.
+
+Since $A \cap B = \emptyset$, $n_1$ and $n_2$ are either both odd or both even.
+
+_Case ($n_1$ and $n_2$ are both even):_
+
+By substitution:
+
+$$ f\left(\frac{n_1}{2}\right) = f\left(\frac{n_2}{2}\right) $$
+
+Since $f$ is one-to-one, it follows that:
+
+$$ \frac{n_1}{2} = \frac{n_2}{2} $$
+
+By algebra:
+
+$$ n_1 = n_2 $$
+
+_Case ($n_1$ and $n_2$ are both odd):_
+
+By substitution:
+
+$$ g\left(\frac{n_1 + 1}{2}\right) = g\left(\frac{n_2 + 1}{2}\right) $$
+
+Since $g$ is one-to-one, it follows that:
+
+$$ \frac{n_1 + 1}{2} = \frac{n_2 + 1}{2} $$
+
+By algebra:
+
+$$ n_1 + 1 = n_2 + 1 $$
+
+$$ n_1 = n_2 $$
+
+Thus in both cases, $h$ is one-to-one.
+
+_Proof ($h$ is onto):_
+
+Suppose $x \in (A \cup B)$. This means that $x \in A$ or $x \in B$.
+
+_Case ($x \in A$):_
+
+Since $x \in A$, and since $f$ is onto, there is some $n \in \mathbb{Z}^+$ such
+that $f(n) = x$. Then:
+
+$$ h(2n) = f\left(\frac{2n}{2}\right) = f(n) = x $$
+
+_Case ($x \in B$):_
+
+Since $x \in B$, and since $g$ is onto, there is some $m \in \mathbb{Z}^+$ such
+that $g(n) = x$. Then:
+
+$$ h(2n - 1) = g\left(\frac{(2n - 1) + 1}{2}\right) = g(n) = x $$
+
+Thus in both cases, $h$ is onto.
+
+Therefore it has been shown that $h$ is a one-to-one correspondence from
+$\mathbb{Z}^+ \to (A \cup B)$, and therefore $A \cup B$ is countably infinite.
+
+_Case ($A \cap B \neq \emptyset$):_
+
+In this case, since $A \cap B \neq \emptyset$, there exists some set $C$ such
+that $C = B - A$.
+
+By definition of the difference of sets, thsi means that:
+
+$$ A \cup B = A \cup C $$
+
+and also:
+
+$$ A \cap C = \emptyset $$
+
+Case ($C$ is countably infinite):_
+
+In the case that $C$ is countably infinite, then $A \cup C$ is countably
+infinite.
+
+Case ($C$ is finite):_
+
+In the case that $C$ is finite, then by exercise 28 $A \cup C$ is countably
+infinite.
+
+Since $A \cup B = A \cup C$, it can be concluded that $A \cup B$ is also
+countably infinite.
+
+Q.E.D.
 
 30. Use the result of exercise 29 to prove that the set of all irrational
     numbers is uncountable.
 
+Omitted.
+
 31. Use the results of exercises 28 and 29 to prove that a union of any two
     countable sets is countable.
 
+Omitted.
+
 32. Prove that $\mathbb{Z} \times \mathbb{Z}$, the Cartesian product of the set
     of integers with itself, is countably infinite.
+
+Omitted.
 
 33. Use the results of exercises 27, 31, and 32 to prove the following: If $R$
     is the set of all solutions to all equations of the form $x^2 + bx + c = 0$,
     where $b$ and $c$ are integers, then $R$ is countable.
 
+Omitted.
+
 34. Let $\mathscr{P}(S)$ be the set of all subsets of set $S$, and let $T$ be
     the set of all functions from $S$ to $\{0, 1\}$. Show that $\mathscr{P}(S)$
     and $T$ have the same cardinality.
+
+Omitted.
 
 35. Let $S$ be a set and let $\mathscr{P}(S)$ be the set of all subsets of $S$.
     Show that $S$ is "smaller than" $\mathscr{P}(S)$ in the sense that there is
     a one-to-one function from $S$ to $\mathscr{P}(S)$ but there is no onto
     function from $S$ to $\mathscr{P}(S)$.
+
+Omitted.
 
 36. The Schroeder-Bernstein theorem states the following: if $A$ and $B$ are any
     sets with the property that there is a one-to-one function from $A$ to $B$
@@ -4883,8 +5225,12 @@ geometrically using the diagram of part (a).
     $\mathbb{Z}^+$ to $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}$ as there functions from
     $\mathbb{Z}^+$ to $\{0, 1\}$.
 
+Omitted.
+
 37. Prove that if $A$ and $B$ are any countably infinite sets, then $A \times B$
     is countably infinite.
+
+Omitted.
 
 38. Suppose $A_1, A_2, A_3, \dots$ is an infinite sequence of countable sets.
     Recall that
@@ -4893,3 +5239,5 @@ $$ \bigcup_{i = 1}^{\infty}A_i = \{x | x \in A_i \text{ for some positive intege
 
 Prove that $\bigcup_{i = 1}^{\infty}A_i$ is countable. (In other words, prove
 that a countably infinite union of countable sets is countable.)
+
+Omitted.
