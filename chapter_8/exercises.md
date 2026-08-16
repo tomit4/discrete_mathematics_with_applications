@@ -564,3 +564,225 @@ Primary_Diagnosis = appendicitis.
 (466581, Mary Lazars),
 
 (778400, Jamal Baskers)
+
+---
+
+Page 526
+
+**Exercise Set 8.2**
+
+In 1-8, a number of relations are defined on the set $A = \{0, 1, 2, 3\}$. For
+each relation:
+
+a. Draw the directed graph.
+
+b. Determine whether the relation is reflexive.
+
+c. Determine whether the relation is symmetric.
+
+d. Determine whether the relation is transitive.
+
+Give a counterexample in each case in which the relation does not satisfy one of
+the properties.
+
+1. $R_1 = \{(0, 0), (0, 1), (0, 3), (1, 1), (1, 0), (2, 3), (3, 3)\}$
+
+2. $R_2$ = \{(0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 3)\}
+
+3. $R_3 = \{(2, 3), (3, 2)\}$
+
+4. $R_4 = \{(1, 2), (2, 1), (1, 3), (3, 1)\}$
+
+5. $R_5 = \{(0, 0), (0, 1), (0, 2), (1, 2)\}$
+
+6. $R_6 = \{(0, 1), (0, 2)\}$
+
+7. $R_7 = \{(0, 3), (2, 3)\}$
+
+8. $R_8 = \{(0, 0), (1, 1)\}$
+
+In 9-33, determine whether the given relation is reflexive, symmetric,
+transitive, or none of these. Justify your answers.
+
+9. $R$ is the "greater than or equal to" relation on the set of real numbers:
+   For every $x, y \in \mathbb{R}$, $x R y \Leftrightarrow x \geq y$.
+
+10. $C$ is the circle relation on the set of real numbers: For every
+    $x, y \in \mathbb{R}, x C y \Leftrightarrow x^2 + y^2 = 1$.
+
+11. $D$ is the relation defined on $\mathbb{R}$ as follows: For every
+    $x, y \in \mathbb{R}, x D y \Leftrightarrow xy \geq 0$.
+
+12. $E$ is the congruence modulo $4$ relation on $\mathbb{Z}$: For every
+    $m, n \in \mathbb{Z}, m E n \Leftrightarrow 4 | (m - n)$.
+
+13. $F$ is the congruence modulo $5$ relation on $\mathbb{Z}$: For every
+    $m, n \in \mathbb{Z}, m F n \Leftrightarrow 5 | (m - n)$.
+
+14. $O$ is the relation defined on $\mathbb{Z}$ as follows: For every
+    $m, n \in \mathbb{Z}, m O n \Leftrightarrow m - n \text{ is odd}$.
+
+15. $D$ is the "divides" relation on $\mathbb{Z}^+$: For all positive integers
+    $m$ and $n$, $m D n \Leftrightarrow m | n$.
+
+16. $A$ is the "absolute value" relation on $\mathbb{R}$: For all real numbers
+    $x$ and $y$, $x A y \Leftrightarrow |x| = |y|$.
+
+17. Recall that a prime number is an integer that is greater than $1$ and has no
+    positive integer divisors other than $1$ and itself. (In particular, $1$ is
+    not prime.) A relation $P$ is defined on $\mathbb{Z}$ as follows: For every
+    $m, n \in \mathbb{Z}, m P n \Leftrightarrow \exists \text{ a prime number } p \text{ such that } p | m \text{ and } p | n$.
+
+18. Define a relation $Q$ on $\mathbb{R}$ as follows: For all real numbers $x$
+    and $y$, $x Q y \Leftrightarrow x - y$ is rational.
+
+19. Define a relation $I$ on $\mathbb{R}$ as follows: For all real numbers $x$
+    and $y$, $x I y \Leftrightarrow x - y$ is irrational.
+
+20. Let $X = \{a, b, c\}$ and $\mathscr{P}(X)$ be the power set of $X$ (the set
+    of all subsets of $X$). A relation $\mathbf{E}$ is defined on
+    $\mathscr{P}(X)$ as follows: For every
+    $A, B \in \mathscr{P}(X), A \mathbf{E} B \Leftrightarrow \text{ the number of elements in } A \text{ equals the number of elements in } B$.
+
+21. Let $X = \{a, b, c\}$ and $\mathscr{P}(X)$ be the power set of $X$. A
+    relation $\mathbf{L}$ is defined on $\mathscr{P}(X)$ as follows: For every
+    $A, B \in \mathscr{P}(X), A \mathbf{L} B \Leftrightarrow \text{ the number of elements in } A \text{ is less than the number of elements in } B$.
+
+22. Let $X = \{a, b, c\}$ and $\mathscr{P}(X)$ be the power set of $X$. A
+    relation $\mathbf{N}$ is defined on $\mathscr{P}(X)$ as follows: For every
+    $A, B \in \mathscr{P}(X), A \mathbf{N} B \Leftrightarrow \text{ the number of elements in } A \text{ is not equal to the number of elements in } B$.
+
+23. Let $X$ be a nonempty set and $\mathscr{P}(X)$ the power set of $X$. Define
+    the "subset" relation $\mathbf{S}$ on $\mathscr{P}(X)$ as follows: For every
+    $A, B \in \mathscr{P}(X), A \mathbf{S} B \Leftrightarrow A \subseteq B$.
+
+24. Let $X$ be a nonempty set and $\mathscr{P}(X)$ the power set of $X$. Define
+    the "not equal to" relation $\mathbf{U}$ on $\mathscr{P}(X)$ as follows: For
+    every $A, B \in \mathscr{P}(X), A \mathbf{U} B \Leftrightarrow A \neq B$.
+
+25. Let $A$ be the set of all strings of _a_'s and _b_'s of length $4$. Define a
+    relation $R$ on $A$ as follows: For every
+    $s, t \in A, s R t \Leftrightarrow s \text{ has the same first two characters as } t$.
+
+26. Let $A$ be the set of all strings of 0's, 1's, and 2's that have length 4
+    and for which the sum of the characters in the string is less than or equal
+    to 2. Define a relation $R$ on $A$ as follows: For every
+    $s, t \in A, s R t \Leftrightarrow \text{ the sum of the characters of } s \text{ equals the sum of the characters of } t$.
+
+27. Let $A$ be the set of all English statements. A relation $\mathbf{I}$ is
+    defined on $A$ as follows: For every $p, q \in A$,
+
+$$ p \mathbf{I} q \Leftrightarrow p \to q \text{ is true} $$
+
+28. Let $A = \mathbb{R} \times \mathbb{R}$. A relation $\mathbf{S}$ is defined
+    on $A$ as follows: For every $(x_1, y_1)$ and $(x_2, y_2)$ in $A$,
+
+$$ (x_1, y_2) \mathbf{S} (x_2, y_2) \Leftrightarrow x_1 = x_2 $$
+
+29. Let $A = \mathbb{R} \times \mathbb{R}$. A relation $\mathbf{S}$ is defined
+    on $A$ as follows: For every $(x_1, y_1)$ and $(x_2, y_2)$ in $A$,
+
+$$ (x_1, y_2) \mathbf{S} (x_2, y_2) \Leftrightarrow y_1 = y_2 $$
+
+30. Let $A$ be the "punctured plane"; that is, $A$ is the set of all points in
+    the Cartesian plane except the origin $(0, 0)$. A relation $R$ is defined on
+    $A$ as follows: For every $p_1$ and $p_2$ in $A$,
+    $p_1 R p_2 \Leftrightarrow p_1 \text{ and } p_2 \text{ lie on the same half line emanating from the origin}$.
+
+31. Let $A$ be the set of people living in the world today. A relation $R$ is
+    defined on $A$ as follows: For all people $p$ and $q$ in $A$,
+
+$$ p R q \Leftrightarrow p \text{ lives within 100 miles of } q $$
+
+32. Let $A$ be the set of all lines in the plane. A relation $R$ is defined on
+    $A$ as follows: For every $l_1$ and $l_2$ in $A$,
+    $l_1 R l_2 \Leftrightarrow l_1 \text{ is parallel to } l_2$. (Assume that a
+    line is parallel to itself.)
+
+33. Let $A$ be the set of all lines in the plane. A relation $R$ is defined on
+    $A$ as follows: For every $l_1$ and $l_2$ in $A$,
+
+$$ l_1 R l_2 \Leftrightarrow l_1 \text{ is perpendicular to } l_2 $$
+
+In 34-36, assume that $R$ is a relation on a set $A$. Prove or disprove each
+statement.
+
+34. If $R$ is reflexive, then $R^{-1}$ is reflexive.
+
+35. If $R$ is symmetric, then $R^{-1}$ is symmetric.
+
+36. If $R$ is transitive, then $R^{-1}$ is transitive.
+
+In 37-42, assume that $R$ and $S$ are relations on a set $A$. Prove or disprove
+each statement.
+
+37. If $R$ and $S$ are reflexive, is $R \cap S$ reflexive? Why?
+
+38. If $R$ and $S$ are symmetric, is $R \cap S$ symmetric? Why?
+
+39. If $R$ and $S$ are transitive, is $R \cap S$ transitive? Why?
+
+40. If $R$ and $S$ are reflexive, is $R \cup S$ reflexive? Why?
+
+41. If $R$ and $S$ are symmetric, is $R \cup S$ symmetric? Why?
+
+42. If $R$ and $S$ are transitive, is $R \cup S$ transitive? Why?
+
+In 43-50, the following definitions are used: A relation on a set $A$ is defined
+to be
+
+irreflexive if, and only if, for every $x \in A, x \cancel{R} x$;
+
+asymmetric if, and only if, for every $x, y \in A$ if $x R y$ then
+$y \cancel{R} x$;
+
+intransitive if, and only if, for every $x, y, z \in A$, if $x R y$ and $y R z$
+then $x \cancel{R} z$.
+
+For each of the relations in the referenced exercise, determine whether the
+relation is irreflexive, asymmetric, intransitive, or none of these.
+
+43. Exercise 1
+
+44. Exercise 2
+
+45. Exercise 3
+
+46. Exercise 4
+
+47. Exercise 5
+
+48. Exercise 6
+
+49. Exercise 7
+
+50. Exercise 8
+
+In 51-53, $R$, $S$, and $T$ are relations defined on $A = \{0, 1, 2, 3\}$.
+
+51. Let $R = \{(0, 1), (0, 2), (1, 1), (1, 3), (2, 2), (3, 0)\}$.
+
+Find $R^t$, the transitive closure of $R$.
+
+52. Let $S = \{(0, 0), (0, 3), (1, 0), (1, 2), (2, 0), (3, 2)\}$.
+
+Find $S^t$, the transitive closure of $S$.
+
+53. Let $T = \{(0, 2), (1, 0), (2, 3), (3, 1)\}$.
+
+Find $T^t$, the transitive closure of $T$.
+
+54. Write a computer algorithm to test whether a relation $R$ defined on a
+    finite set $A$ is reflexive, where
+
+$$ A = \{a[1], a[2], \dots, a[n]\} $$
+
+55. Write a computer algorithm to test whether a relation $R$ defined on a
+    finite set $A$ is symmetric, where
+
+$$ A = \{a[1], a[2], \dots, a[n]\} $$
+
+56. Write a computer algorithm to test whether a relation $R$ defined on a
+    finite set $A$ is transitive, where
+
+$$ A = \{a[1], a[2], \dots, a[n]\} $$
