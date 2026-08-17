@@ -587,19 +587,147 @@ the properties.
 
 1. $R_1 = \{(0, 0), (0, 1), (0, 3), (1, 1), (1, 0), (2, 3), (3, 3)\}$
 
+a. Draw the directed graph.
+
+(Done by hand.)
+
+b. Determine whether the relation is reflexive.
+
+No, $2 \cancel{R_1} 2$.
+
+c. Determine whether the relation is symmetric.
+
+No, $0 R_1 3$, but $3 \cancel{R_1} 0$.
+
+d. Determine whether the relation is transitive.
+
+No, $1 R_1 0$ and $0 R_1 3$, but $1 \cancel{R_1} 3$
+
 2. $R_2$ = \{(0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 3)\}
+
+a. Draw the directed graph.
+
+(Done by hand.)
+
+b. Determine whether the relation is reflexive.
+
+No, since $3 \cancel{R_2} 3$.
+
+c. Determine whether the relation is symmetric.
+
+No, $0 R_2 1$, but $1 \cancel{R_2} 0$.
+
+d. Determine whether the relation is transitive.
+
+No, $0 R_2 1$ and $1 R_2 2$, but $0 \cancel{R_2} 2$.
 
 3. $R_3 = \{(2, 3), (3, 2)\}$
 
+a. Draw the directed graph.
+
+(Done by hand.)
+
+b. Determine whether the relation is reflexive.
+
+No, $2 \cancel{R_3} 2$.
+
+c. Determine whether the relation is symmetric.
+
+Yes, $2 R_3 3$ and $3 R_3 2$.
+
+d. Determine whether the relation is transitive.
+
+No, $2 R_3 3$ and $3 R_3 2$, but $2 \cancel{R_3} 2$.
+
 4. $R_4 = \{(1, 2), (2, 1), (1, 3), (3, 1)\}$
+
+a. Draw the directed graph.
+
+(Done by hand.)
+
+b. Determine whether the relation is reflexive.
+
+No, $1 \cancel{R_4} 1$.
+
+c. Determine whether the relation is symmetric.
+
+Yes, $1 R_4 2$ and $2 R_4 1$ and $1 R_4 3$ and $3 R_4 1$.
+
+d. Determine whether the relation is transitive.
+
+No, $1 R_4 2$ and $2 R_4 1$, but $1 \cancel{R_4} 1$.
 
 5. $R_5 = \{(0, 0), (0, 1), (0, 2), (1, 2)\}$
 
+a. Draw the directed graph.
+
+(Done by hand.)
+
+b. Determine whether the relation is reflexive.
+
+No, $1 \cancel{R_5} 1$.
+
+c. Determine whether the relation is symmetric.
+
+No, $0 R_5 1$, but $1 \cancel{R_5} 0$.
+
+d. Determine whether the relation is transitive.
+
+Yes, $0 R_5 1$ and $1 R_5 2$, and $0 R_5 2$.
+
 6. $R_6 = \{(0, 1), (0, 2)\}$
+
+a. Draw the directed graph.
+
+(Done by hand.)
+
+b. Determine whether the relation is reflexive.
+
+No, $0 \cancel{R_6} 0$.
+
+c. Determine whether the relation is symmetric.
+
+No, $0 R_6 1$, but $1 \cancel{R_6} 0$.
+
+d. Determine whether the relation is transitive.
+
+Yes, vacuously.
 
 7. $R_7 = \{(0, 3), (2, 3)\}$
 
+a. Draw the directed graph.
+
+(Done by hand.)
+
+b. Determine whether the relation is reflexive.
+
+No, $0 \cancel{R_7} 0$.
+
+c. Determine whether the relation is symmetric.
+
+No, $0 R_7 3$, but $3 \cancel{R_7} 0$.
+
+d. Determine whether the relation is transitive.
+
+Yes, vacuously.
+
 8. $R_8 = \{(0, 0), (1, 1)\}$
+
+a. Draw the directed graph.
+
+(Done by hand.)
+
+b. Determine whether the relation is reflexive.
+
+Yes, both $0 R_8 0$ and $1 R_8 1$.
+
+c. Determine whether the relation is symmetric.
+
+Yes, since $0 R_8 0$ and $0 R_8 0$, and also $1 R_8 1$ and $1 R_8 1$.
+
+d. Determine whether the relation is transitive.
+
+Yes, vacuously.
 
 In 9-33, determine whether the given relation is reflexive, symmetric,
 transitive, or none of these. Justify your answers.
@@ -607,102 +735,758 @@ transitive, or none of these. Justify your answers.
 9. $R$ is the "greater than or equal to" relation on the set of real numbers:
    For every $x, y \in \mathbb{R}$, $x R y \Leftrightarrow x \geq y$.
 
+a. Is $R$ reflexive?
+
+Yes, since $\forall x \in \mathbb{R}, x = x$, it follows that
+$\forall x \in \mathbb{R}, x \geq x$.
+
+b. Is $R$ symmetric?
+
+No, since $\forall x, y \in \mathbb{R}, x \geq y \to y \geq x$ cannot be true.
+Consider the example that $x = 5$ and $y = 4$, then $x \geq y$, but
+$y \cancel{\geq} x$.
+
+c. Is $R$ transitive?
+
+Yes, since
+$\forall x, y, z \in \mathbb{R}, (x \geq y \wedge y \geq z) \to x \geq z$ is
+true by the transitive law of greatness (See appendix A, T18).
+
 10. $C$ is the circle relation on the set of real numbers: For every
     $x, y \in \mathbb{R}, x C y \Leftrightarrow x^2 + y^2 = 1$.
+
+a. Is $C$ reflexive?
+
+No, $C$ is not reflexive. The statement claims that
+$\forall x \in \mathbb{R}, x C x \Leftrightarrow x^2 + x^2 = 1$, but consider
+$x = 0$, then $0^2 + 0^2 = 1$, but $0 \neq 1$, this is a contradiction.
+
+b. Is $C$ symmetric?
+
+Yes, $C$ is symmetric. The statement claims that
+$x, y \in \mathbb{R}, (x^2 + y^2 = 1) \to (y^2 + x^2 = 1)$. This is true by the
+commutative laws of addition.
+
+c. Is $C$ transitive?
+
+No, $C$ is not transitive. The statement claims that
+$x, y, z \in \mathbb{R}, [(x^2 + y^2 = 1) \wedge (y^2 + z^2 = 1)] \to x^2 + z^2 = 1$.
+Consider $x = 1$, $y = 0$, and $z = 1$, then $x^2 + y^2 = (1)^2 + (0)^2 = 1$ and
+$y^2 + z^2 = (0)^2 + (1)^2 = 1$, but $x^2 + z^2 = (1)^2 + (1)^2 = 2 \neq 1$.
 
 11. $D$ is the relation defined on $\mathbb{R}$ as follows: For every
     $x, y \in \mathbb{R}, x D y \Leftrightarrow xy \geq 0$.
 
+a. Is $D$ reflexive?
+
+Yes, $D$ is reflexive. $\forall x \in \mathbb{R} x \cdot x \geq 0$ is a true
+statement, as even if $x$ is negative, any negative number times itself will
+always be positive, and so $x \geq 0$ is true. If $x = 0$, then $x \geq 0$ is a
+true statement. If $x$ is positive, then any positive number times itself will
+be positive, and so $x \geq 0$ is true.
+
+b. Is $D$ symmetric?
+
+Yes, $D$ is symmetric,
+$\forall x, y \in \mathbb{R}, (xy \geq 0) \to (yx \geq 0)$ is true by the
+commutative laws of multiplication since $xy = yx$.
+
+c. Is $D$ transitive?
+
+No, $D$ is not transitive. The statement claims
+$\forall x, y, z \in \mathbb{R}, [(xy \geq 0) \wedge (yz \geq 0)] \to (xz \geq 0)$.
+This is not true, consider $x = 1$, $y = 0$, and $z = -1$, then
+$xy = (1)(0) = 0 \geq 0$, and $yz = (0)(-1) = 0 \geq 0$, but
+$xz = (1)(-1) = -1 \cancel{\geq} 0$.
+
 12. $E$ is the congruence modulo $4$ relation on $\mathbb{Z}$: For every
     $m, n \in \mathbb{Z}, m E n \Leftrightarrow 4 | (m - n)$.
+
+a. Is $E$ reflexive?
+
+Yes, $E$ is reflexive. The statement claims
+$\forall m \in \mathbb{Z}, 4 | (m - m)$. Since any integer subtracted from
+itself is $0$, this means that:
+
+$$ 4 | (m - m) = 4 | 0 $$
+
+Which is true since $4 = 4 \cdot 0$.
+
+b. Is $E$ symmetric?
+
+Yes, $E$ is symmetric. The statement claims
+$\forall m, n \in \mathbb{Z}, [4 | (m - n)] \to [4 | (n - m)]$.
+
+Since $4 | (m - n)$, this means that $m - n = 4k$ for some integer $k$. It
+follows then that:
+
+$$ n - m = -1(m - n) $$
+
+$$ = -1(4k) $$
+
+$$ = 4(-k) $$
+
+Now, $-k$ is an integer by the multiplication of integers. It follows then that
+$4 | (n - m)$. This is what was to be shown.
+
+c. Is $E$ transitive?
+
+Yes, $E$ is transitive. The statement claims that
+$\forall m, n, p \in \mathbb{Z}, [(4 | (m - n)) \wedge (4 | (n - p))] \to (4 | (m - p))$.
+
+Since $4 | (m - n)$ and $4 | (n - p)$, it can be said that $m - n = 4r$ and
+$n - p = 4s$ for some integers $r$ and $s$. It follows by addition of these two
+terms, and substitution, that:
+
+$$ (m - n) + (n - p) = 4r + 4s $$
+
+and also that:
+
+$$ (m - n) + (n - p) = m - p $$
+
+Then, setting the substitution equal to the evaluation/simplification:
+
+$$ 4r + 4s = m - p $$
+
+Then, by algebra:
+
+$$ 4(r + s) = m - p $$
+
+Now, $r + s$ is an integer by the sum of integers. It follows that
+$4 | (m - p)$. This is what was to be shown.
 
 13. $F$ is the congruence modulo $5$ relation on $\mathbb{Z}$: For every
     $m, n \in \mathbb{Z}, m F n \Leftrightarrow 5 | (m - n)$.
 
+a. Is $F$ reflexive?
+
+Yes, $F$ is reflexive. The statement claims that
+$\forall m \in \mathbb{Z}, 5 | (m - m)$. This is true since $m - m = 0$, and
+$5 | 0$ is true since $5 = 5 \cdot 0$.
+
+b. Is $F$ symmetric?
+
+Yes, $F$ is symmetric. The statement claims that
+$\forall m, n \in \mathbb{Z}, (5 | (m - n)) \to (5 | (n - m))$.
+
+Since $5 | m - n$, it can be said that $m - n = 5k$ for some integer $k$. Then,
+consider:
+
+$$ m - n = -1(n - m) $$
+
+By substitution then:
+
+$$ 5k = -1(5k) $$
+
+$$ 5k = 5(-k) $$
+
+Now, $-k$ is an integer by the multiplication of integers. It follows that
+$5 | (n - m)$. This is what was to be shown.
+
+c. Is $F$ transitive?
+
+Yes, $F$ is transitive. The statement claims that
+$\forall m, n, p \in \mathbb{Z}, [(5 | (m - n)) \wedge (5 | (n - p))] \to [5 | (m - p)]$.
+
+Since $5 | (m - n)$ and $5 | (n - p)$, it can be said that $m - n = 5r$ and
+$n - p = 5s$ for some integers $r$ and $s$. Adding $m - n$ and $n - p$ gives
+$m - p$:
+
+$$ (m - n) + (n - p) = m - p $$
+
+Then, by substitution:
+
+$$ 5r + 5s = m - p $$
+
+Then, by algebra:
+
+$$ 5(r + s) = m - p $$
+
+Now, $r + s$ is an integer by the sum of integers. It follows that
+$5 | (m - p)$. This is what was to be shown.
+
 14. $O$ is the relation defined on $\mathbb{Z}$ as follows: For every
     $m, n \in \mathbb{Z}, m O n \Leftrightarrow m - n \text{ is odd}$.
+
+a. Is $O$ reflexive?
+
+No, $O$ is not reflexive. The statement claims that
+$\forall m \in \mathbb{Z}, m - m \text{ is odd}$. Since $m - m = 0$, and $0$ is
+even (since $0 = 2(0)$), by the definition of even, $m - m$ cannot be odd.
+Therefore $O$ is not reflexive.
+
+b. Is $O$ symmetric?
+
+Yes, $O$ is symmetric. The statement claims that
+$\forall m, n \in \mathbb{Z}, (m - n \text{ is odd}) \to (n - m \text{ is odd})$.
+
+Since $m - n$ is odd, it can be said that $m - n = 2k + 1$ for some integer $k$.
+Consider that:
+
+$$ m - n = -1(n - m) $$
+
+Then, by substitution:
+
+$$ 2k + 1 = -1(n - m) $$
+
+By algebra:
+
+$$ -1(2k + 1) = n - m $$
+
+$$ -2k - 1 = n - m $$
+
+$$ 2(-k - 1) + 1 = n - m $$
+
+Now, $-k - 1$ is an integer by the multiplication and sum of integers. Therefore
+$n - m$ is odd. This is what was to be shown.
+
+c. Is $O$ transitive?
+
+No, $O$ is not transitive. The statement claims that
+$\forall m, n, p \in \mathbb{Z} [(m - n \text{ is odd}) \wedge (n - p \text{ is odd})] \to [m - p \text{ is odd}]$.
+This is not true for all integers. Consider $m = 2$, $n = 1$, and $p = 0$. Then
+$m - n = 2 - 1 = 1 \text{ is odd}$, and $n - p = 1 - 0 = 1 \text{ is odd}$, but
+$m - p = 2 - 0 = 2 \text{ is even}$. Therefore $0$ is not transitive.
 
 15. $D$ is the "divides" relation on $\mathbb{Z}^+$: For all positive integers
     $m$ and $n$, $m D n \Leftrightarrow m | n$.
 
+a. Is $D$ reflexive?
+
+Yes, $D$ is reflexive. The statement claims $\forall m \in \mathbb{Z}^+, m | m$.
+This is true since any integer divides itself by the definition of divisibility.
+
+b. Is $D$ symmetric?
+
+No, $D$ is not symmetric. The statement claims
+$\forall m, n \in \mathbb{Z}^+, (m | n) \to (n | m)$, but this is not true for
+all positive integers. Consider $m = 2$ and $n = 4$, then $2 | 4$ is true since
+$2 = 2 \cdot 2 = 4$, but $4 \cancel{|} 2$ since $4 \neq 4k = 2$ for some integer
+$k$.
+
+c. Is $D$ transitive?
+
+Yes, $D$ is transitive. The statement claims
+$\forall m, n, p \in \mathbb{Z}^+, [(m | n) \wedge (n | p)] \to [m | p]$. This
+is true by the transitivity of divisibility (see Theorem 4.4.3).
+
 16. $A$ is the "absolute value" relation on $\mathbb{R}$: For all real numbers
     $x$ and $y$, $x A y \Leftrightarrow |x| = |y|$.
+
+a. Is $A$ reflexive?
+
+Yes, $A$ is reflexive. The statement claims
+$\forall x \in \mathbb{R}, |x| = |x|$. This is trivially true.
+
+b. Is $A$ symmetric?
+
+Yes, $A$ is symmetric. The statement claims that
+$\forall x, y \in \mathbb{R}, (|x| = |y|) \to (|y| = |x|)$. This is true by the
+definition of equality.
+
+c. Is $A$ transitive?
+
+Yes, $A$ is transitive. The statement claims that
+$\forall x, y, z \in \mathbb{R}, [(|x| = |y|) \wedge (|y| = |z|)] \to |x| = |z|$
+
+This is true by the transitivity of equality (since $|x| = |y| = |z|$).
 
 17. Recall that a prime number is an integer that is greater than $1$ and has no
     positive integer divisors other than $1$ and itself. (In particular, $1$ is
     not prime.) A relation $P$ is defined on $\mathbb{Z}$ as follows: For every
     $m, n \in \mathbb{Z}, m P n \Leftrightarrow \exists \text{ a prime number } p \text{ such that } p | m \text{ and } p | n$.
 
+a. Is $P$ reflexive?
+
+No, $P$ is not reflexive. The statement claims
+$\forall m \in \mathbb{Z}, \exists \text{ a prime number } p \text{ such that } p | m$.
+Consider $m = 1$ (note that $1 \in \mathbb{Z}$), then there is no such prime
+number $p$ that divides $m$.
+
+b. Is $P$ symmetric?
+
+Yes, $P$ is symmetric. The statement claims
+$\forall m, n \in \mathbb{Z}, \exists \text{ some prime number } p \text{ such that } p | m \wedge p | n \to p | n \wedge p | m$.
+
+Since there is a prime number $p$ that divides $m$ and $n$, it is trivially true
+that $p$ divides $n$ and $m$.
+
+c. Is $P$ transitive?
+
+No, $P$ is not transitive. The statement claims that:
+
+$$ \forall m, n, o \in \mathbb{Z}, [\exists \text{ some prime } p_1, p_1 | m \wedge p_1 | n] \wedge [\exists \text{ some prime } p_2, p_2 | n \wedge p_2 | o] \to [\exists \text{ some prime } p_3, p_3 | m \wedge p_3 | o] $$
+
+But this is not true for all integers $m$, $n$, and $o$.
+
+Consider $m = 6$, $n = 15$, $o = 35$.
+
+Then there exists the prime number $p_1 = 3$ such that $3 | m$ since $3 | 6$
+since $6 = 3 \cdot 2$. Additionally, $3 | n$ since $3 | 15$ since
+$15 = 3 \cdot 5$, so the first term of the supposition is true.
+
+Next, there exists the prime number $p_2 = 5$ such that $5 | n$ since $5 | 15$
+since $15 = 5 \cdot 3$. Additionally $5 | o$ since $5 | 35$ since
+$35 = 5 \cdot 7$, so the second term of the supposition is true.
+
+Then, the conclusion claims that there exists some prime $p_3$ such $p_3 | m$
+and $p_3 | o$, but the only prime numbers that divide $m$ are $3$ and $2$ since
+$m = 6$, and the only prime numbers that divide $o$ are $7$ and $5$ since
+$o = 35$. None of these primes are equal to each other, and so $p_3$ does not
+exist. Therefore $P$ is not transitive.
+
 18. Define a relation $Q$ on $\mathbb{R}$ as follows: For all real numbers $x$
     and $y$, $x Q y \Leftrightarrow x - y$ is rational.
 
+_Hint:_ $Q$ is reflexive, symmetric, and transitive.
+
+a. Is $Q$ reflexive?
+
+Yes, $Q$ is reflexive. The statement claims that
+$\forall x \in \mathbb{R}, x - x \text{ is rational}$. This is true since
+$x - x = 0$, and $0$ is rational since $0 = \dfrac{0}{1}$.
+
+b. Is $Q$ symmetric?
+
+Yes, $Q$ is symmetric. The statement claims that
+$\forall x, y \in \mathbb{R}, (x - y \text{ is rational }) \to (y - x \text{ is rational})$.
+
+Since $x - y$ is rational, it can be said that $x - y = \dfrac{a}{b}$, where $a$
+is some integer and $b$ is some integer with $b \neq 0$. Now, consider that:
+
+$$ x - y = -1(y - x) $$
+
+$$ -1(x - y) = y - x $$
+
+Then, by substitution:
+
+$$ -1\left(\frac{a}{b}\right) = y - x $$
+
+Now, $-1\left(\dfrac{a}{b}\right)$ is a rational number (since $-1$ multiplied
+by a rational number is a rational number). Therefore $y - x$ is rational. This
+is what was to be shown.
+
+c. Is $Q$ transitive?
+
+Yes, $Q$ is transitive. The statement claims that
+$\forall x, y, z \in \mathbb{R}, [(x - y \text{ is rational}) \wedge (y - z \text{ is rational})] \to x - z \text{ is rational}$.
+
+Since $x - y$ is rational and $y - z$ is rational, it can be said that
+$x - y = \dfrac{a}{b}$ and $y - z = \dfrac{c}{d}$, where
+$a, b, c, d \in \mathbb{Z}$ with $b \neq 0$ and $d \neq 0$.
+
+Then, consider the addition of $x - y$ and $y - z$:
+
+$$ (x - y) + (y - z) = x - z $$
+
+Then, by substitution:
+
+$$ x - z = \frac{a}{b} + \frac{c}{d} $$
+
+$$ = \frac{ad + cb}{bd}$$
+
+Now, $ad + cb$ is an integer by the product and sum of integers, and $bd$ is an
+integer by the product of integers and $bd \neq 0$ (since $b \neq 0$ and
+$d \neq 0$). Thus $\dfrac{ad + cb}{bd}$ is a rational number, and therefore
+$x - z$ is rational. This is what was to be shown.
+
 19. Define a relation $I$ on $\mathbb{R}$ as follows: For all real numbers $x$
     and $y$, $x I y \Leftrightarrow x - y$ is irrational.
+
+a. Is $I$ reflexive?
+
+No, $I$ is not reflexive. The statement claims that
+$\forall x \in \mathbb{R}, x - x \text{ is irrational}$. Since $x - x = 0$, and
+$0 = \dfrac{0}{1}$, it follows that $x - x$ is rational. Therefore $I$ is not
+reflexive.
+
+b. Is $I$ symmetric?
+
+Yes, $I$ is symmetric. The statement claims
+$\forall x, y \in \mathbb{R}, (x - y \text{ is irrational}) \to (y - x \text{ is irrational})$.
+
+Consider that:
+
+$$ x - y = -1(y - x) $$
+
+$$ -1(x - y) = y - x $$
+
+Now, the product of $-1$ and an irrational number ($x - y$) is irrational. It
+follows that $y - x$ is irrational. This is what was to be shown.
+
+c. Is $I$ transitive?
+
+The statement claims that
+$\forall x, y, z \in \mathbb{R}, [(x - y \text{ is irrational}) \wedge (y - z \text{ is irrational})] \to x - z \text{ is irrational}$.
+But this is not true for all integers $x$, $y$, and $z$.
+
+Consider $x = \sqrt{2}$, $y = 0$, and $z = \sqrt{2}$.
+
+Then $x - y = \sqrt{2} - 0 = \sqrt{2}$, which is irrational. Additionally,
+$y - z = 0 - \sqrt{2} = -\sqrt{2}$, which is irrational. Thus the supposition is
+true.
+
+Then $x - z = \sqrt{2} - \sqrt{2} = 0$, which is rational (since
+$0 = \dfrac{0}{1}$). Therefore $I$ is not transitive.
 
 20. Let $X = \{a, b, c\}$ and $\mathscr{P}(X)$ be the power set of $X$ (the set
     of all subsets of $X$). A relation $\mathbf{E}$ is defined on
     $\mathscr{P}(X)$ as follows: For every
     $A, B \in \mathscr{P}(X), A \mathbf{E} B \Leftrightarrow \text{ the number of elements in } A \text{ equals the number of elements in } B$.
 
+a. Is $E$ reflexive?
+
+Yes, $E$ is reflexive. The statement claims that
+$\forall A \in \mathscr{P}(X), \text{ the number of elements in } A \text{ equals the number of elements in } A$.
+
+This is trivially true.
+
+b. Is $E$ symmetric?
+
+Yes, $E$ is symmetric. The statement claims that
+$\forall A, B \in \mathscr{P}(X), (\text{the number of elements in } A \text{ equals the number of elements in } B) \to (\text{the number of elements in } B \text{ equals the number of elements in } A)$.
+
+This is trivially true (by the commutative laws of equality).
+
+c. Is $E$ transitive?
+
+Yes, $E$ is transitive. The statement claims that
+$\forall A, B, C \in \mathscr{P}(X), [(\text{ the
+number of elements in } A \text{ equals the number of elements in } B) \wedge
+(\text{ the number of elements in } B \text{ equals the number of elements in }
+C)] \to \text{the number of elements in } A \text{ equals the number of elements
+in } C$.
+
+This is trivially true (by the transitivity of equality).
+
 21. Let $X = \{a, b, c\}$ and $\mathscr{P}(X)$ be the power set of $X$. A
     relation $\mathbf{L}$ is defined on $\mathscr{P}(X)$ as follows: For every
     $A, B \in \mathscr{P}(X), A \mathbf{L} B \Leftrightarrow \text{ the number of elements in } A \text{ is less than the number of elements in } B$.
+
+a. Is $L$ reflexive?
+
+No, $L$ is not reflexive. The statement claims
+$\forall A \in \mathscr{P}(X), \text{ the number of elements in } A \text{ is less than the number of elements in } A$.
+
+This cannot be true, since the number of elements in $A$ will always equal the
+number of elements in $A$.
+
+b. Is $L$ symmetric?
+
+No, $L$ is not symmetric. The statement claims that
+$\forall A, B \in \mathscr{P}(X), (\text{the number of elements in } A \text{ is less than the number of elements in } B) \to (\text{the number of elements in } B \text{ is less than the number of elements in } A)$.
+
+Let $x= \text{ the number of elements in } A$ and
+$y = \text{ the number of elements in } B$. Then, by the supposition, $x < y$.
+By the definition of inequality, this means that $y \cancel{<} x$. Therefore $L$
+is not symmetric.
+
+c. Is $L$ transitive?
+
+Yes, $L$ is transitive. The statement claims that
+$\forall A, B, C \in \mathscr{P}(X), [(\text{the number of elements in } A \text{ is less than the number of elements in } B) \wedge (\text{the number of elements in } B \text{ is less than the number of elements in } C)] \to \text{ the number of elements in } A \text{ is less than the number of elements in } C$.
+
+Let $x = \text{ the number of elements in } A$,
+$y = \text{ the number of elements in } B$, and
+$z = \text{ the number of elements in } C$.
+
+Then, by the supposition, $x < y$ and $y < z$. Since $x < y < z$ (by the
+transitivity of inequality), it follows that $x < z$. This is what was to be
+shown. Therefore $L$ is transitive.
 
 22. Let $X = \{a, b, c\}$ and $\mathscr{P}(X)$ be the power set of $X$. A
     relation $\mathbf{N}$ is defined on $\mathscr{P}(X)$ as follows: For every
     $A, B \in \mathscr{P}(X), A \mathbf{N} B \Leftrightarrow \text{ the number of elements in } A \text{ is not equal to the number of elements in } B$.
 
+a. Is $\mathbf{N}$ reflexive?
+
+No, $\mathbf{N}$ is not reflexive. The statement claims
+$\forall A \in \mathscr{P}(X), \text{ the number of elements in } A \text{ is not equal to the number of elements in } A$.
+
+This is trivially false.
+
+b. Is $\mathbf{N}$ symmetric?
+
+Yes, $\mathbf{N}$ is symmetric. The statement claims
+$\forall A, B \in \mathscr{P}(X), (\text{the number of elements in } A \text{ is not equal to the number of elements in } B) \to (\text{ the number of elements in } B \text{ is not equal to the number of elements in } A)$.
+
+This is true.
+
+Let $x = \text{ the number of elements in } A$,
+$y = \text{ the number of elements in } B$. Then, by the supposition,
+$x \neq y$. It follows by the definition of inequality that $y \neq x$.
+
+Therefore $\mathbf{N}$ is symmetric.
+
+c. Is $\mathbf{N}$ transitive?
+
+No, $\mathbf{N}$ is not transitive. The statement claims
+$\forall A, B, C \in \mathscr{P}(X), [(\text{the number of elements in } A \text{ is not equal to the number of elements in } B) \wedge (\text{the number of elements in } B \text{ is not equal to the number of elements in } C)] \to \text{the number of elements in } A \text{ is not equal to the number of elements in } C$.
+But this is not true for all subsets $A$, $B$, and $C$.
+
+Consider $A = \{a\}$, $B = \{a, b\}$, and $C = \{c\}$.
+
+Then, by the supposition, the number of elements in $A$ does not equal the
+number of elements in $B$, and the number of elements in $B$ does not equal the
+number of elements in $C$, but the number of elements in $A$ is equal to the
+number of elements in $C$.
+
+Therefore, $\mathbf{N}$ is not transitive.
+
 23. Let $X$ be a nonempty set and $\mathscr{P}(X)$ the power set of $X$. Define
     the "subset" relation $\mathbf{S}$ on $\mathscr{P}(X)$ as follows: For every
     $A, B \in \mathscr{P}(X), A \mathbf{S} B \Leftrightarrow A \subseteq B$.
+
+a. Is $\mathbf{S}$ reflexive?
+
+Yes, $\mathbf{S}$ is reflexive. The statement claims
+$\forall A \in \mathscr{P}(X), A \subseteq A$. By the definition of subset, this
+is true.
+
+b. Is $\mathbf{S}$ symmetric?
+
+No, $\mathbf{S}$ is not symmetric. The statement claims
+$\forall A, B \in \mathscr{P}(X), (A \subseteq B) \to (B \subseteq A)$.
+
+Consider $X = \{1, 2, 3\}$, $A = \{1\}$, $B = \{1, 2\}$. Then, by the
+supposition $A, B \in \mathscr{P}(X)$, and $A \subseteq B$, but
+$B \nsubseteq A$. Therefore $\mathbf{S}$ is not symmetric.
+
+c. Is $\mathbf{S}$ transitive?
+
+Yes, $\mathbf{S}$ is transitive. The statement claims that
+$\forall A, B, C \in \mathscr{P}(X), [(A \subseteq B) \wedge (B \subseteq C)] \to [A \subseteq C]$.
+
+By the supposition $A \subseteq B$ and $B \subseteq C$, it follows by the
+transitivity property of subset that $A \subseteq B \subseteq C$, and thus
+$A \subseteq C$. Therefore $\mathbf{S}$ is transitive.
 
 24. Let $X$ be a nonempty set and $\mathscr{P}(X)$ the power set of $X$. Define
     the "not equal to" relation $\mathbf{U}$ on $\mathscr{P}(X)$ as follows: For
     every $A, B \in \mathscr{P}(X), A \mathbf{U} B \Leftrightarrow A \neq B$.
 
+a. Is $\mathbf{U}$ reflexive?
+
+No, $\mathbf{U}$ is not reflexive. The statement claims
+$\forall A \in \mathscr{P}(X), A \neq A$. This is trivially false.
+
+b. Is $\mathbf{U}$ symmetric?
+
+Yes, $\mathbf{U}$ is symmetric. The statement claims
+$\forall A, B \in \mathscr{P}, (A \neq B) \to (B \neq A)$. This is true by the
+definition of inequality.
+
+c. Is $\mathbf{U}$ transitive?
+
+No, $\mathbf{U}$ is not transitive. The statement claims
+$\forall A, B, C \in \mathscr{P}, [(A \neq B) \wedge (B \neq C)] \to [A \neq C]$.
+
+Let $X = \{1, 2, 3\}$, $A = \{1\}$, $B = \{2\}$, and $C = \{1\}$. Then, by the
+supposition, $A, B, C \in \mathscr{P}(X)$, $A \neq B$ and $B \neq C$, but
+$A = C$.
+
+Therefore $\mathbf{U}$ is not transitive.
+
 25. Let $A$ be the set of all strings of _a_'s and _b_'s of length $4$. Define a
     relation $R$ on $A$ as follows: For every
     $s, t \in A, s R t \Leftrightarrow s \text{ has the same first two characters as } t$.
+
+a. Is $R$ reflexive?
+
+Yes, $R$ is reflexive. The statement claims
+$\forall s \in A, s \text{ has the same first two characters as } s$. This is
+trivially true.
+
+b. Is $R$ symmetric?
+
+Yes, $R$ is symmetric. The statement claims
+$\forall s, t \in A, (s \text{ has the same first two characters as } t) \to (t \text{ has the same first two characters as} s)$.
+
+This is trivially true.
+
+c. Is $R$ transitive?
+
+Yes, $R$ is transitive. The statement claims
+$\forall s, t, u \in A, [(s \text{ has the same first two characters as } t) \wedge (t \text{ has the same first two characters as } u)] \to s \text{ has the same first two characters as } u$.
+
+This is true by the transitivity of equality, since $s$ and $t$ have the same
+first two characters, and $t$ and $u$ have the same first two characters, it
+follows that $s$ and $u$ have the same first two characters. Therefore $R$ is
+transitive.
 
 26. Let $A$ be the set of all strings of 0's, 1's, and 2's that have length 4
     and for which the sum of the characters in the string is less than or equal
     to 2. Define a relation $R$ on $A$ as follows: For every
     $s, t \in A, s R t \Leftrightarrow \text{ the sum of the characters of } s \text{ equals the sum of the characters of } t$.
 
+a. Is $R$ reflexive?
+
+Yes, $R$ is reflexive. The statement claims
+$\forall s \in A, \text{ the sum of the characters of } s \text{ equals the sum of the characters of } s$.
+This is trivially true.
+
+b. Is $R$ symmetric?
+
+Yes, $R$ is symmetric. The statement claims
+$\forall s, t \in A, (\text{ the sum of the characters of} s \text{ equals the sum of the characters of } t) \to (\text{ the sum of the characters of } t \text{ equals the sum of the characters of } s)$.
+
+Let $x = \text{ the sum of the characters of } s$ and
+$y = \text{ the sum of the characters of } t$. Then, by the supposition,
+$x = y$. It follows by symmetry of equality that $y = x$. This is what was to be
+shown. Therefore $R$ is symmetric.
+
+c. Is $R$ transitive?
+
+Yes, $R$ is transitive. The statement claims
+$\forall s, t, u \in A, [(\text{ the sum of the characters of } s \text{ equals the sum of the characters of } t) \wedge (\text{ the sum of the characters of } t \text{ equals the sum of the characters of } u)] \to \text{ the sum of the characters of } s \text{ equals the sum of the characters of } u$.
+
+Let $x = \text{ the sum of the characters of } s$,
+$y = \text{ the sum of the characters of } t$, and
+$z = \text{ the sum of the characters of } u$.
+
+By the supposition $x = y$ and $y = z$. By the transitivity of equality,
+$x = y = z$, and it follows that $x = z$. This is what was to be shown.
+Therefore $R$ is transitive.
+
 27. Let $A$ be the set of all English statements. A relation $\mathbf{I}$ is
     defined on $A$ as follows: For every $p, q \in A$,
 
 $$ p \mathbf{I} q \Leftrightarrow p \to q \text{ is true} $$
 
-28. Let $A = \mathbb{R} \times \mathbb{R}$. A relation $\mathbf{S}$ is defined
+a. Is $\mathbf{I}$ reflexive?
+
+Yes $\mathbf{I}$ is reflexive. The statement claims
+$\forall p \in A, p \to p \text{ is true}$. This is true by the law of identity
+(tautology).
+
+b. Is $\mathbf{I}$ symmetric?
+
+No, $\mathbf{I}$ is not symmetric. The statement claims
+$\forall p, q \in A, (p \to q) \to (q \to p)$.
+
+Consider $p$ is the statement "All pigs can fly", and $q$ is the statement "The
+sky is blue". Then, by the supposition $p, q \in A$, and $p \to q$ is vacuously
+true. But, $q \to p$ is false, since $q$ is true and $p$ is false.
+
+Therefore $\mathbf{I}$ is not symmetric.
+
+c. Is $\mathbf{I}$ transitive?
+
+Yes, $\mathbf{I}$ is transitive. The statement claims
+$\forall p, q, r \in A, [(p \to q) \wedge (q \to r)] \to (p \to r)$.
+
+This is true, since $p \to q$ and $q \to r$ is true, it follows that
+$p \to q \to r$, and that $p \to r$ is true.
+
+28. Let $A = \mathbb{R} \times \mathbb{R}$. A relation $\mathbf{F}$ is defined
     on $A$ as follows: For every $(x_1, y_1)$ and $(x_2, y_2)$ in $A$,
 
-$$ (x_1, y_2) \mathbf{S} (x_2, y_2) \Leftrightarrow x_1 = x_2 $$
+$$ (x_1, y_2) \mathbf{F} (x_2, y_2) \Leftrightarrow x_1 = x_2 $$
+
+a. Is $\mathbf{F}$ reflexive?
+
+Yes, $\mathbf{F}$ is reflexive. The statement claims
+$\forall (x_1, y_1) \in A, x_1 = x_1$. This is trivially true.
+
+b. Is $\mathbf{F}$ symmetric?
+
+Yes, $\mathbf{F}$ is symmetric. The statement claims
+$\forall (x_1, y_1), (x_2, y_2) \in A, (x_1 = x_2) \to (x_2 = x_1)$.
+
+This is true by the symmetry of equality.
+
+c. Is $\mathbf{F}$ transitive?
+
+The statement claims
+$\forall (x_1, y_1), (x_2, y_2), (x_3, y_3) \in A, [(x_1 = x_2) \wedge (x_2 = x_3)] \to x_1 = x_3$.
+
+This is true by the transitivity of equality.
 
 29. Let $A = \mathbb{R} \times \mathbb{R}$. A relation $\mathbf{S}$ is defined
     on $A$ as follows: For every $(x_1, y_1)$ and $(x_2, y_2)$ in $A$,
 
 $$ (x_1, y_2) \mathbf{S} (x_2, y_2) \Leftrightarrow y_1 = y_2 $$
 
+a. Is $\mathbf{S}$ reflexive?
+
+Yes, $\mathbf{S}$ is reflexive. The statement claims
+$\forall (x_1, y_1) \in A, y_1 = y_1$. This is trivially true.
+
+b. Is $\mathbf{S}$ symmetric?
+
+Yes, $\mathbf{S}$ is symmetric. The statement claims
+$\forall (x_1, y_1), (x_2, y_2) \in A, (y_1 = y_2) \to (y_2 = y_1)$.
+
+This is true by the symmetry of equality.
+
+c. Is $\mathbf{S}$ transitive?
+
+Yes, $\mathbf{S}$ is transitive. The statement claims
+$\forall (x_1, y_1), (x_2, y_2), (x_3, y_3) \in A, [(y_1 = y_2) \wedge (y_2 = y_3)] \to y_1 = y_3$.
+
+This is true by the transitivity of equality.
+
 30. Let $A$ be the "punctured plane"; that is, $A$ is the set of all points in
     the Cartesian plane except the origin $(0, 0)$. A relation $R$ is defined on
     $A$ as follows: For every $p_1$ and $p_2$ in $A$,
     $p_1 R p_2 \Leftrightarrow p_1 \text{ and } p_2 \text{ lie on the same half line emanating from the origin}$.
+
+a. Is $$ reflexive?
+
+b. Is $$ symmetric?
+
+c. Is $$ transitive?
 
 31. Let $A$ be the set of people living in the world today. A relation $R$ is
     defined on $A$ as follows: For all people $p$ and $q$ in $A$,
 
 $$ p R q \Leftrightarrow p \text{ lives within 100 miles of } q $$
 
+a. Is $$ reflexive?
+
+Omitted.
+
+b. Is $$ symmetric?
+
+Omitted.
+
+c. Is $$ transitive?
+
+Omitted.
+
 32. Let $A$ be the set of all lines in the plane. A relation $R$ is defined on
     $A$ as follows: For every $l_1$ and $l_2$ in $A$,
     $l_1 R l_2 \Leftrightarrow l_1 \text{ is parallel to } l_2$. (Assume that a
     line is parallel to itself.)
 
+a. Is $$ reflexive?
+
+Omitted.
+
+b. Is $$ symmetric?
+
+Omitted.
+
+c. Is $$ transitive?
+
+Omitted.
+
 33. Let $A$ be the set of all lines in the plane. A relation $R$ is defined on
     $A$ as follows: For every $l_1$ and $l_2$ in $A$,
 
 $$ l_1 R l_2 \Leftrightarrow l_1 \text{ is perpendicular to } l_2 $$
+
+a. Is $$ reflexive?
+
+Omitted.
+
+b. Is $$ symmetric?
+
+Omitted.
+
+c. Is $$ transitive?
+
+Omitted.
 
 In 34-36, assume that $R$ is a relation on a set $A$. Prove or disprove each
 statement.
