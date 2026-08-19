@@ -1957,3 +1957,405 @@ Omitted.
 $$ A = \{a[1], a[2], \dots, a[n]\} $$
 
 Omitted.
+
+---
+
+Page 543
+
+**Exercise Set 8.3**
+
+1. Suppose that $S = \{a, b, c, d, e\}$ and $R$ is a relation on $S$ such that
+   $a R b$, $b R c$, and $d R e$. List all of the following that must be true if
+   $R$ is (a) reflexive (but not symmetric or transitive), (b) symmetric (but
+   not reflexive or ransitive), \(c\) transitive (but not reflexive or
+   symmetric), and (d) an equivalence relation.
+
+$$ c R b \quad c R c  \quad a R c \quad b R a $$
+
+$$ a R d \quad e R a \quad e R d \quad c R a $$
+
+2. Each of the following partitions of $\{0, 1, 2, 3, 4\}$ induces a relation
+   $R$ on $\{0, 1, 2, 3, 4\}$. In each case, find the ordered pairs in $R$.
+
+a. $\{0, 2\}, \{1\}, \{3, 4\}$
+
+b. $\{0\}, \{1, 3, 4\}, \{2\}$
+
+c. $\{0\}$, $\{1, 2, 3, 4\}$
+
+In each of 3-6, the relation $R$ is an equivalence relation on $A$. As in
+example 8.3.5, first find the specified equivalence classes. Then state the
+number of distinct equivalence classes for $R$ and list them.
+
+3.
+
+$$ A = \{0, 1, 2, 3, 4\} $$
+
+$$ R = \{(0, 0), (0, 4), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3), (4, 0), (4, 4)\} $$
+
+equivalence classes: $[0], [1], [2], [3]$
+
+4.
+
+$$ A = \{a, b, c, d\} $$
+
+$$ R = \{(a, a), (b, b), (b, d), (c, c), (d, b), (d, d)\} $$
+
+equivalence classes: $[a], [b], [c], [d]$
+
+5.
+
+$$ A = \{1, 2, 3, 4, \dots, 20\} $$
+
+$R$ is defined on $A$ as follows:
+
+$$ \text{For all } x, y \in A, x R y \Leftrightarrow 4 | (x - y) $$
+
+equivalence classes: $[1], [2], [3], [4], [5]$
+
+6.
+
+$$ A = \{-4, -3, -2, -1, 0, 1, 2, 3, 4, 5\} $$
+
+$R$ is defined on $A$ as follows:
+
+$$ \text{For all } x, y \in A, x R y \Leftrightarrow 3 | (x - y) $$
+
+equivalence classes: $[0], [1], [2], [3]$
+
+In each of 7-14, the relation $R$ is an equivalence relation on the set $A$.
+Find the distinct equivalence classes of $R$.
+
+7. $A = \{(1, 3), (2, 4), (-4, -8), (3, 9), (1, 5), (3, 6)\}$. $R$ is defined on
+   $A$ as follows: For every $(a, b), (c, d) \in A$,
+
+$$ (a, b) R (c, d) \Leftrightarrow ad = bc $$
+
+8. $X = \{a, b, c\}$ and $A = \mathscr{P}(X)$. $R$ is defined on $A$ as follows:
+   For all sets $u$ and $v$ in $\mathscr{P}(X)$,
+
+$$ u R v \Leftrightarrow N(u) = N(v) $$
+
+(That is, the number of elements in $u$ equals the number of elements in $v$.)
+
+9. $X = \{-1, 0, 1\}$ and $A = \mathscr{P}(X)$. $R$ is defined on
+   $\mathscr{P}(X)$ as follows: For all sets $s$ and $t$ in $\mathscr{P}(X)$,
+
+$$ s R t \Leftrightarrow \text{ the sum of the elements in } s \text{ equals the sum of the elements in } t $$
+
+10. $A = \{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5\}$. $R$ is defined on $A$ as
+    follows: For all $m, n \in \mathbb{Z}$,
+
+$$ m R n \Leftrightarrow 3 |(m^2 - n^2) $$
+
+11. $A = \{-4, -3, -2< -1, 0, 1, 2, 3, 4\}$. $R$ is defined on $A$ as follows:
+    For every $(m, n) \in A$,
+
+$$ m R n \Leftrightarrow 4 | (m^2 - n^2) $$
+
+12. $A = \{-4, -3, -2, -1, 0, 1, 2, 3, 4\}$. $R$ is defined on $A$ as follows:
+    For all $(m, n) \in A$,
+
+$$ m R n \Leftrightarrow 5 | (m^2 - n^2) $$
+
+13. $A$ is the set of all strings of length 4 in _a_'s and _b_'s. $R$ is defined
+    on $A$ as follows: For all strings $s$ and $t$ in $A$,
+
+$$ s R t \Leftrightarrow s \text{ has the same first two characters as } t $$
+
+14. $A$ is the set of all strings of 0's, 1's, and 2's that have length 4 and
+    for which the sum of the characters in the string is less than or equal
+    to 2. $R$ is defined on $A$ as follows: For every $s, t \in A$,
+
+$$ s R t \Leftrightarrow \text{ the sum of the characters of } s \text{ equals the sum of the characters of } t $$
+
+15. Determine which of the following congruence relations are true and which are
+    false.
+
+a. $17 \equiv 2 (\mod 5)$
+
+b. $4 \equiv -5 (\mod 7)$
+
+c. $-2 \equiv -8 (\mod 3)$
+
+d. $-6 \equiv 22 (\mod 2)$
+
+16.
+
+a. Let $R$ be the relation of congruence modulo 3. Which of the following
+equivalence classes are equal?
+
+$$ [7], [-4], [-6], [17], [4], [27], [19] $$
+
+b. Let $R$ be the relation of congruence modulo 7. Which of the following
+equivalence classes are equal?
+
+$$ [35], [3], [-7], [12], [0], [-2], [17] $$
+
+17.
+
+a. Prove that for all integers $m$ and $n$, $m \equiv n (\mod 3)$ if, and only
+if, $m \mod 3 = n \mod 3$.
+
+b. Prove that for all integers $m$ and $n$ and any positive integer $d$,
+$m \equiv n (\mod d)$ if, and only if, $m \mod d = n \mod d$.
+
+18.
+
+a. Give an example of two sets that are distinct but not disjoint.
+
+b. Find sets $A_1$ and $A_2$ and elements $x$, $y$, and $z$ such that $x$ and
+$y$ are in $A_1$ and $y$ and $z$ are in $A_2$ but $x$ and $z$ are not both in
+either of the sets $A_1$ or $A_2$.
+
+In 19-31, (1) prove that the relation is an equivalence relation, and (2)
+describe the distinct equivalence classes of each relation.
+
+19. $A$ is the set of all students at your college.
+
+a. $R$ is the relation defined on $A$ a follows: For every $x$ and $y$ in $A$,
+
+$$ x R y \Leftrightarrow x \text{ has the same major (or double major) as } y $$
+
+(Assume "undeclared" is a major.)
+
+b. $S$ is the relation defined on $A$ as follows: For every $x, y \in A$,
+
+$$ x S y \Leftrightarrow x \text{ is the same age as } y $$
+
+20. $E$ is the relation defined on $\mathbb{Z}$ as follows:
+
+$$ \text{For every } m, n \in \mathbb{Z}, m E n \Leftrightarrow 4 | (m - n) $$
+
+21. $R$ is the relation defined on $\mathbb{Z}$ as follows:
+
+$$ \text{For every } m, n \in \mathbb{Z}, m R n \Leftrightarrow 7m - 5n \text{ is even} $$
+
+22. Let $A$ be the set of all statement forms in three variables $p$, $q$, and
+    $r$. $\mathbf{R}$ is the relation defined on $A$ as follows: For all $P$ and
+    $Q$ in $A$,
+
+$$ P \mathbf{R} Q \Leftrightarrow P \text{ and } Q \text{ have the same truth table} $$
+
+23. Let $P$ be a set of parts shipped to a company from various suppliers. $S$
+    is the relation defined on $P$ as follows: For every $x, y \in P$,
+
+$$ x S y \Leftrightarrow  x \text{ has the same part number and is shipped from the same supplier as } y $$
+
+24. Let $A$ be the set of identifiers in a computer program. It is common for
+    identifiers to be used for only a short part of the execution time of a
+    program and not to be used again to execute other parts of the program. In
+    such cases, arranging for identifiers to share memory locations makes
+    efficient use of a computer's memory capacity. Define a relation $R$ on $A$
+    as follows: For all identifiers $x$ and $y$,
+
+$$ x R y \Leftrightarrow \text{ the values of } x \text{ and } y \text{ are stored in the same memory location during execution of the program} $$
+
+25. $A$ is the "absolute value" relation defined on $\mathbb{R}$ as follows:
+
+$$ \text{For every } x, y \in \mathbb{R}, x A y \Leftrightarrow |x| = |y| $$
+
+26. $D$ is the relation defined on $\mathbb{Z}$ as follows: For every
+    $m, n \in \mathbb{Z}$,
+
+$$ m D n \Leftrightarrow 3 | (m^2 - n^2) $$
+
+27. $R$ is the relation defined on $\mathbb{Z}$ as follows: For every
+    $(m, n) \in \mathbb{Z}$,
+
+$$ m R n \Leftrightarrow 4 | (m^2 - n^2) $$
+
+28. $I$ is the relation defined on $\mathbb{R}$ as follows:
+
+$$ \text{For every } x, y \in \mathbb{R}, m I n \Leftrightarrow x - y \text{ is an integer} $$
+
+29. Define $P$ on the set $\mathbb{R} \times \mathbb{R}$ of ordered pairs of
+    real numbers as follows: For every
+    $(w, x), (y, z) \in \mathbb{R} \times \mathbb{R}$,
+
+$$ (w, x) P (y, z) \Leftrightarrow w = y $$
+
+30. Define $Q$ on the set $\mathbb{R} \times \mathbb{R}$ as follows: For every
+    $(w, x), (y, z) \in \mathbb{R} \times \mathbb{R}$,
+
+$$ (w, x) Q (y, z) \Leftrightarrow x = z $$
+
+31. Let $P$ be the set of all points in the Cartesian plane except the origin.
+    $R$ is the relation defined on $P$ as follows: For every $p_1$ and $p_2$ in
+    $P$,
+
+$$ p_1 R p_2 \Leftrightarrow p_1 \text{ and } p_2 \text{ lie on the same half-line emanating from the origin} $$
+
+32. Let $A$ be the set of all straight lines in the Cartesian plane. Define a
+    relation $\mid \mid$ on $A$ as follows: For every $l_1$ and $l_2$ in $A$,
+
+$$ l_1 \mid \mid l_2 \Leftrightarrow l_1 \text{ is parallel to } l_2 $$
+
+Then $\mid \mid$ is an equivalence relation on $A$. Describe the equivalence
+classes of this relation.
+
+33. Let $A$ be the set of points in the rectangle with $x$ and $y$ coordinates
+    between $0$ and $1$. That is,
+
+$$ A = \{(x, y) \in \mathbb{R} \times \mathbb{R} | 0 \leq x \leq 1 \text{ and } 0 \leq y \leq 1\} $$
+
+Define a relation $R$ on $A$ as follows: For all $(x_1, y_1) and $(x_2, y_2)$ in
+$A$,
+
+$$ (x_1, y_1) R (x_2, y_2) \Leftrightarrow (x_1, y_1) = (x_2, y_2) $$
+
+or
+
+$$ x_1 = 0 \text{ and } x_2 = 1 \text{ and } y_1 = y_2 $$
+
+or
+
+$$ x_1 = 1 \text{ and } x_2 = 0 \text{ and } y_1 = y_2 $$
+
+or
+
+$$ y_1 = 0 \text{ and } y_2 = 1 \text{ and } x_1 = x_2 $$
+
+or
+
+$$ y_1 = 1 \text{ and } y_2 = 0 \text{ and } x_1 = x_2 $$
+
+In other words, all points along the top edge of the rectangle are related to
+the points along the bottom edge directly beneath them, and all points directly
+opposite each other along the left and right edges are related to each other.
+The points in the interior of the rectangle are not related to anything other
+than themselves. Then $R$ is an equivalence relation on $A$. Imagine gluing
+together all the points that are in the same equivalence class. Describe the
+resulting figure.
+
+34. The documentation for the computer language Java recommends that when an
+    "equals method" is defined for an object, it be an equivalence relation.
+    That is, if $R$ is defined as follows:
+
+$$ x R y \Leftrightarrow \text{x.equals}(y) \text{ for all objects in the class} $$
+
+then $R$ should be an equivalence relation. Suppose that in trying to optimize
+some of the mathematics of a graphics application, a programmer creates an
+object called a point, consisting of two coordinates in the plane. The
+programmer defines an equals method as follows: If $p$ and $q$ are any points,
+then
+
+$$ \text{p.equals}(q) \Leftrightarrow \text{ the distance from } p \text{ to } q \text{ is less than or equal to } c $$
+
+where $c$ is a small positive number that depends on the resolution of the
+computer display. Is the programmer's equals method an equivalence relation?
+Justify your answer.
+
+35. Find an additional representative circuit for the input/output table of
+    Example 8.3.9.
+
+Let $R$ be an equivalence relation on a set $A$. Prove each of the statements in
+36-41 directly from the definitions of equivalence relation and equivalence
+class without using the results of Lemma 8.3.2, Lemma 8.3.3, or Theorem 8.3.4.
+
+36. For every $a$ in $a$, $a \in [a]$.
+
+37. For every $a$ and $b$ in $A$, if $b \in [a]$ then $a R b$.
+
+38. For every $a$, $b$, and $c$ in $A$, if $b R c$ and $c \in [a]$ then
+    $b \in [a]$.
+
+39. For every $a$ and $b$ in $A$, if $[a] = [b]$ then $a R b$.
+
+40. For every $a$, $b$, and $x$ in $A$, if $a R b$ and $x \in [a]$ then
+    $x \in [b]$.
+
+41. For every $a$ and $b$ in $A$, if $a \in [b]$ then $[a] = [b]$.
+
+42. Let $R$ be the relation defined in Example 8.3.12.
+
+a. Prove that $R$ is reflexive.
+
+b. Prove that $R$ is symmetric.
+
+c. List four distinct elements in $[(1, 3)]$.
+
+d. List four distinct elements in $[(2, 5)]$.
+
+43. In Example 8.3.12, define operations of addition $(+)$ and multiplication
+    $(\cdot)$ as follows: For every $(a, b), (c, d) \in A$,
+
+$$ [(a, b)] + [(c, d)] = [(ad + bc, bd)] $$
+
+$$ [(a, b)] \cdot [(c, d)] = [(ac, bd)] $$
+
+a. Prove that this addition is well defined. That is, show that if
+$[(a, b)] = [(a', b')]$ and $[(c, d)] = [(c', d')]$, then
+$[(ad + bc), bd] = [(a'd' + b'c', b'd')]$.
+
+b. Prove that this multiplication is well defined. That is, show that if
+$[(a, b)] = [(a', b')]$ and $[(c, d)] = [(c', d')]$, then
+$[(ac, bd)] = [(a'c', b'd')]$.
+
+c. Show that $[(0, 1)]$ is an identity element for addition. That is, show that
+for any $(a, b) \in A$,
+
+$$ [(a, b)] + [(0, 1)] = [(0, 1)] + [(a, b)] = [(a, b)] $$
+
+d. Find an identity element for multiplication. That is, find $(i, j)$ in $A$ so
+that for every $(a, b)$ in $A$,
+$[(a, b)] \cdot [(i, j)] = [(i, j)] \cdot [(a, b)] = [(a, b)]$.
+
+e. For any $(a, b) \in A$, show that $[(-a, b)]$ is an inverse for $[(a, b)]$
+for addition. That is, show that
+$[(-a, b)] + [(a, b)] = [(a, b)] + [(-a, b)] = [(0, 1)]$.
+
+f. Given any $(a, b) \in A$ with $a \neq 0$, find an inverse for $[(a, b)]$ for
+multiplication. That is, find $(c, d)$ in $A$ so that
+$[(a, b)] \cdot [(c, d)] = [(c, d)] \cdot [(a, b)] = [(i, j)]$, where $[(i, j)]$
+is the identity element you found in part (d).
+
+44. Let $A = \mathbb{Z}^+ \times \mathbb{Z}^+$. Define a relation $R$ on $A$ as
+    follows: For every $(a, b)$ and $(c, d)$ in $A$,
+
+$$ (a, b) R (c, d) \Leftrightarrow a + d = c + b $$
+
+a. Prove that $R$ is reflexive.
+
+b. Prove that $R$ is symmetric.
+
+c. Prove that $R$ is transitive.
+
+d. List five elements in $[(1, 1)]$.
+
+e. List five elements in $[(3, 1)]$.
+
+f. List five elements in $[(1, 2)]$.
+
+g. Describe the distinct equivalence classes of $R$.
+
+45. The following argument claims to prove that the requirement that an
+    equivalence relation be reflexive is redundant. In other words, it claims to
+    show that if a relation is symmetric and transitive, then it is reflexive.
+    Find the mistake in the argument.
+
+"**Proof:** Let $R$ be a relation on a set $A$ and suppose $R$ is symmetric and
+transitive. For any two elements $x$ and $y$ in $A$, if $x R y$ then $y R x$
+since $R$ is symmetric. Thus it follows by transitivity that $x R x$, and hence
+$R$ is reflexive."
+
+46. Let $R$ be a relation on a set $A$ and suppose $R$ is symmetric and
+    transitive. Prove the following: If for every $x$ in $A$ there is a $y$ in
+    $A$ such that $x R y$, then $R$ is an equivalence relation.
+
+47. Refer to the quote at the beginning of this section to answer the following
+    questions.
+
+a. What is the name of the Knight's song called?
+
+b. What is the name of the Knight's song?
+
+c. What is the Knight's song called?
+
+d. What _is_ the Knight's song?
+
+e. What is your (full, legal) name?
+
+f. What are you called?
+
+g. What _are_ you? (Do not answer this on paper; just think about it.)

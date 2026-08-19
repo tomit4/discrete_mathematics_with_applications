@@ -77,3 +77,27 @@ $\exists x, y, z \in A, (x R y \wedge y R z) \to x \cancel{R} z$
 
 $R^t$ is transitive; $R \subseteq R^t$; if $S$ is any other transitive relation
 that contains $R$, then $R^t \subseteq S$
+
+---
+
+Page 543
+
+**Test Yourself**
+
+1. For a relation on a set to be an equivalence relation, it must be ____.
+
+2. The notation $m \equiv n (\mod d)$ is read "____" and means that ____.
+
+3. Given an equivalence relation $R$ on a set $A$ and given an element $a$ in
+   $A$, the equivalence class of $a$ is denoted ____ and is defined to be ____.
+
+4. If $A$ is a set, $R$ is an equivalence relation on $A$, and $a$ and $b$ are
+   elements of $A$, then either $[a] = [b]$ or ____.
+
+5. If $A$ is a set and $R$ is an equivalence relation on $A$, then the distinct
+   equivalence classes of $R$ form ____.
+
+6. Let $A = \mathbb{Z} \times (\mathbb{Z} - \{0\})$, and define a relation $R$
+   on $A$ by specifying that for every $(a, b)$ and $(c, d)$ in $A$,
+   $(a, b) R (c, d)$ if, and only if, $ad = bc$. Then there is exactly one
+   equivalence class of $R$ for each ____.
