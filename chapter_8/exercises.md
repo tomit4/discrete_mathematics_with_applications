@@ -603,7 +603,7 @@ d. Determine whether the relation is transitive.
 
 No, $1 R_1 0$ and $0 R_1 3$, but $1 \cancel{R_1} 3$
 
-2. $R_2$ = \{(0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 3)\}
+2. $R_2 = \{(0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 3)\}$
 
 a. Draw the directed graph.
 
@@ -1493,24 +1493,172 @@ statement.
 
 34. If $R$ is reflexive, then $R^{-1}$ is reflexive.
 
+**Proof:**
+
+Suppose $R$ is any relation on a set $A$, such that $R$ is reflexive.
+
+By the definition of reflexive, this means that $\forall x \in A, (x, x) \in R$,
+or $\forall x \in A, x R x$. Then, by definition of an inverse relation, it
+follows that $(x, x) \in R^{-1}$, or $x R^{-1} x$.
+
+Therefore, $R^{-1}$ is reflexive.
+
+Q.E.D.
+
 35. If $R$ is symmetric, then $R^{-1}$ is symmetric.
 
+**Proof:**
+
+Suppose $R$ is any relation on a set $A$, such that $R$ is symmetric.
+
+By the definition of symmetric, this means that
+$\forall (x, y) \in A, (x, y) \in R \to (y, x) \in R$. Since $(y, x) \in R$, it
+follows, by definition of inverse relation, that $(x, y) \in R^{-1}$.
+Furthermore, since $(x, y) \in R$, it follows that $(y, x) \in R^{-1}$.
+
+Therefore $R^{-1}$ is symmetric.
+
+Q.E.D.
+
 36. If $R$ is transitive, then $R^{-1}$ is transitive.
+
+**Proof:**
+
+Suppose $R$ is any relation on a set $A$ such that $R$ is transitive.
+
+By the definition of transitive, this means that
+$\forall x, y, z \in A, [(x, y) \in R \wedge (y, z) \in R] \to (x, z) \in R$.
+
+Since $(x, y), (y, z), (x, z) \in R$, it follows by the definition of inverse
+that $(y, x), (z, y), (z, x) \in R^{-1}$. This means that
+$\forall x, y, z \in A, [(z, y) \in R^{-1} \wedge (y, x) \in R^{-1}] \to (z, x) \in R^{-1}$.
+
+Therefore $R^{-1}$ is transitive.
+
+Q.E.D.
 
 In 37-42, assume that $R$ and $S$ are relations on a set $A$. Prove or disprove
 each statement.
 
 37. If $R$ and $S$ are reflexive, is $R \cap S$ reflexive? Why?
 
+$R \cap S$ is reflexive.
+
+**Proof:**
+
+Suppose $R$ and $S$ are any relations on some set $A$ such that $R$ and $S$ are
+reflexive.
+
+By the definition of reflexive, this means that $\forall x \in A, (x, x) \in R$,
+and $\forall x \in A, (x, x) \in S$.
+
+Since $(x, x) \in R$ and $(x, x) \in S$, it follows (by the definition of
+intersection), that $(x, x) \in R \cap S$.
+
+Therefore $R \cap S$ is reflexive.
+
+Q.E.D.
+
 38. If $R$ and $S$ are symmetric, is $R \cap S$ symmetric? Why?
+
+$R \cap S$ is symmetric.
+
+**Proof:**
+
+Suppose $R$ and $S$ are any relations on a set $A$ such that $R$ and $S$ are
+symmetric.
+
+By the definition of symmetric, this means that
+$\forall x, y \in A, (x, y) \in R \to (y, x) \in R$. Similarly,
+$\forall x, y \in A, (x, y) \in S \to (y, x) \in S$.
+
+Since $(x, y) \in R$, $(y, x) \in R$, $(x, y) \in S$, $(y, x) \in S$, it follows
+by the definition of intersection that $(x, y) \in R \cap S$ and
+$(y, x) \in R \cap S$.
+
+Therefore $R \cap S$ is symmetric.
+
+Q.E.D.
 
 39. If $R$ and $S$ are transitive, is $R \cap S$ transitive? Why?
 
+$R \cap S$ is transitive.
+
+**Proof:**
+
+Suppose $R$ and $S$ are any relations on a set $A$ such that $R$ and $S$ are
+transitive.
+
+By the definition of transitive, this means that
+$\forall x, y, z \in A, [(x, y) \in R \wedge (y, z) \in R] \to (x, z) \in R$.
+Similarly,
+$\forall x, y, z \in A, [(x, y) \in S \wedge (y, z) \in S] \to (x, z) \in S$.
+
+Since $(x, y), (y, z), (x, z) \in R$ and $(x, y), (y, z), (x, z) \in S$, it
+follows by the definition of intersection that
+$(x, y), (y, z), (x, z) \in (R \cap S)$. Furthermore, this means that
+$\forall x, y, z \in A, [(x, y) \in (R \cap S) \wedge (y, z) \in (R \cap S)] \to (x, z) \in (R \cap S)$.
+
+Therefore, by the definition of transitive, $R \cap S$ is transitive.
+
+Q.E.D.
+
 40. If $R$ and $S$ are reflexive, is $R \cup S$ reflexive? Why?
+
+$R \cup S$ is reflexive.
+
+**Proof:**
+
+Suppose $R$ and $S$ are any relations on some set $A$ such that $R$ and $S$ are
+reflexive.
+
+By the definition of reflexive, this means that $\forall x \in A, (x, x) \in R$,
+and $\forall x \in A, (x, x) \in S$.
+
+Since $(x, x) \in R$ and $(x, x) \in S$, it follows (by the definition of
+union), that $(x, x) \in R \cup S$ (since in order to satisfy the definition of
+union, $(x, x) \in R$ _or_ $(x, x) \in S$).
+
+Therefore $R \cup S$ is reflexive.
+
+Q.E.D.
 
 41. If $R$ and $S$ are symmetric, is $R \cup S$ symmetric? Why?
 
+$R \cup S$ is symmetric.
+
+**Proof:**
+
+Suppose $R$ and $S$ are any relations on a set $A$ such that $R$ and $S$ are
+symmetric.
+
+By the definition of symmetric, this means that
+$\forall x, y \in A, (x, y) \in R \to (y, x) \in R$. Similarly,
+$\forall x, y \in A, (x, y) \in S \to (y, x) \in S$.
+
+Since $(x, y) \in R$, $(y, x) \in R$, $(x, y) \in S$, $(y, x) \in S$, it follows
+by the definition of union that $(x, y) \in R \cup S$ and $(y, x) \in R \cup S$
+(since in order to satisfy the definition of union, $(x, y) \in R$ and
+$(y, x) \in R$ _or_ $(x, y ) \in S$ and $(y, x) \in S$).
+
+Therefore $R \cup S$ is symmetric.
+
+Q.E.D.
+
 42. If $R$ and $S$ are transitive, is $R \cup S$ transitive? Why?
+
+**Disproof (by counterexample):**
+
+Let $A = \{a, b, c, d\}$, $R = {(a, b), (b, c), (a, c)}$, and
+$S = \{(b, c), (c, d), (b, d)\}$. Note that $R$ and $S$ are transitive. However,
+when we take the union, $R \cup S$:
+
+$$ (R \cup S) = \{(a, b), (b, c), (a, c), (c, d), (b, d)\} $$
+
+Note that $(a, b), (b, d) \in (R \cup S)$, but $(a, d) \notin (R \cup S)$. By
+the definition of transitive, it follows that $R \cup S$ is not transitive.
+
+Q.E.D.
 
 In 43-50, the following definitions are used: A relation on a set $A$ is defined
 to be
@@ -1528,19 +1676,142 @@ relation is irreflexive, asymmetric, intransitive, or none of these.
 
 43. Exercise 1
 
+$R_1 = \{(0, 0), (0, 1), (0, 3), (1, 1), (1, 0), (2, 3), (3, 3)\}$
+
+a. Irreflexive?:
+
+No, since $0 R_1 0$, $R_1$ is not irreflexive.
+
+b. Asymmetric?:
+
+No, since $(0, 1) \in R_1$ and $(1, 0) \in R_1$, $R_1$ is not asymmetric.
+
+c. Intransitive?:
+
+No, since $(0, 1), (1, 0), (0, 0) \in R_1$, $R_1$ is not intransitive.
+
 44. Exercise 2
+
+$R_2 = \{(0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 3)\}$
+
+a. Irreflexive?:
+
+No, since $0 R_2 0$, $R_2$ is not irreflexive.
+
+b. Asymmetric?:
+
+No, since $(0, 0) \in R_2$ and $(0, 0) \in R_2$, $R_2$ is not asymmetric.
+
+c. Intransitive?:
+
+No, since $(1, 1), (1, 2), (2, 2) \in R_2$, $R_2$ is not intransitive.
 
 45. Exercise 3
 
+$R_3 = \{(2, 3), (3, 2)\}$
+
+a. Irreflexive?:
+
+Yes, $R_3$ is irreflexive.
+
+b. Asymmetric?:
+
+No, since $(2, 3), (3, 2) \in R_3$, $R_3$ is not asymmetric.
+
+c. Intransitive?:
+
+Yes, since $(2, 3), (3, 2) \in R_3$, but $(2, 2) \notin R_3$, $R_3$ is
+intransitive.
+
 46. Exercise 4
+
+$R_4 = \{(1, 2), (2, 1), (1, 3), (3, 1)\}$
+
+a. Irreflexive?:
+
+Yes, $R_4$ is irreflexive.
+
+b. Asymmetric?:
+
+No, since $(1, 2), (2, 1) \in R_4$, $R_4$ is not asymmetric.
+
+c. Intransitive?:
+
+Yes, $R_4$ is intransitive.
+
+$$ (1, 2), (2, 1) \in R_4, \text{ but } (1, 1) \notin R_4 $$
+
+$$ (2, 1), (1, 3) \in R_4, \text{ but } (2, 3) \notin R_4 $$
+
+$$ (1, 3), (3, 1) \in R_4 , \text{ but } (1, 1) \notin R_4 $$
+
+etc. (note that a more rigorous proof would check all examples.)
 
 47. Exercise 5
 
+$R_5 = \{(0, 0), (0, 1), (0, 2), (1, 2)\}$
+
+a. Irreflexive?:
+
+No, since $(0, 0) \in R_5$
+
+b. Asymmetric?:
+
+No, since $(0, 0) \in R_5$ and $(0, 0) \in R_5$.
+
+c. Intransitive?:
+
+No, since $(0, 1), (1, 2), (0, 2) \in R_5$.
+
 48. Exercise 6
+
+$R_6 = \{(0, 1), (0, 2)\}$
+
+a. Irreflexive?:
+
+Yes.
+
+b. Asymmetric?:
+
+Yes.
+
+c. Intransitive?:
+
+Yes, since there is no $(1, x)$ for some element $x$, nor is there $(2, y)$ for
+some element $y$, the supposition is always false, and is therefore the if/then
+proposition is vacuously true.
 
 49. Exercise 7
 
+$R_7 = \{(0, 3), (2, 3)\}$
+
+a. Irreflexive?:
+
+Yes.
+
+b. Asymmetric?:
+
+Yes.
+
+c. Intransitive?:
+
+Yes (see Exercise 48 for vacuous truth explanation, which applies here as well.)
+
 50. Exercise 8
+
+$R_8 = \{(0, 0), (1, 1)\}$
+
+a. Irreflexive?:
+
+No, since $(0, 0) \in R_8$.
+
+b. Asymmetric?:
+
+No, since $(0, 0) \in R_8$.
+
+c. Intransitive?:
+
+No, since $(0, 0), (0, 0), (0, 0) \in R_8$.
 
 In 51-53, $R$, $S$, and $T$ are relations defined on $A = \{0, 1, 2, 3\}$.
 
@@ -1548,25 +1819,141 @@ In 51-53, $R$, $S$, and $T$ are relations defined on $A = \{0, 1, 2, 3\}$.
 
 Find $R^t$, the transitive closure of $R$.
 
+First, by definition of the transitive closure, $R \subseteq R^t$, so (building
+$R^t$, _i.e._ not finished):
+
+$$ R^t = \{(0, 1), (0, 2) (1, 1), (1, 3), (2, 2), (3, 0)\} $$
+
+Since $R^t$ must be transitive, every ordered pair triple must have a transitive
+"third":
+
+$$ (0, 1), (1, 1) \to (0, 1) $$
+
+$$ (0, 1), (1, 3) \to (0, 3) $$
+
+$$ (0, 2), (2, 2) \to (0, 2) $$
+
+$$ (1, 1), (1, 3) \to (1, 3) $$
+
+$$ (1, 3), (3, 0) \to (1, 0) $$
+
+$$ (3, 0), (0, 1) \to (3, 1) $$
+
+$$ (3, 0), (0, 2) \to (3, 2) $$
+
+Now, add all missing ordered pairs to $R^t$:
+
+$$ R^t = \{(0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 3), (2, 2), (3, 0), (3, 1), (3, 2)\} $$
+
+Now, check to be sure all ordered triples yields:
+
+$$ (3, 1), (1, 3) \to (3, 3) $$
+
+$$ \boxed{R^t = \{(0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 3), (2, 2), (3, 0), (3, 1), (3, 2), (3, 3)\}} $$
+
 52. Let $S = \{(0, 0), (0, 3), (1, 0), (1, 2), (2, 0), (3, 2)\}$.
 
 Find $S^t$, the transitive closure of $S$.
 
+$$ S^t = \{(0, 0), (0, 3), (1, 0), (1, 2), (2, 0), (3, 2)\} $$
+
+Then:
+
+$$ (0, 0), (0, 3) \to (0, 3) $$
+
+$$ (0, 3), (3, 2) \to (0, 2) $$
+
+$$ (1, 0), (0, 0) \to (1, 0) $$
+
+$$ (1, 0), (0, 3) \to (1, 3) $$
+
+$$ (1, 2), (2, 0) \to (1, 0) $$
+
+$$ (2, 0), (0, 0) \to (2, 0) $$
+
+$$ (2, 0), (0, 3) \to (2, 3) $$
+
+$$ (3, 2), (2, 0) \to (3, 0) $$
+
+New:
+
+$$ S^t = \{(0, 0), (0, 2), (0, 3), (1, 0), (1, 2), (1, 3), (2, 0), (2, 3), (3, 0), (3, 2)\} $$
+
+Check again:
+
+$$ (2, 0), (0, 2) \to (2, 2) $$
+
+$$ (3, 0), (0, 3) \to (3, 3) $$
+
+Finally:
+
+$$ S^t = \{(0, 0), (0, 2), (0, 3), (1, 0), (1, 2), (1, 3), (2, 0), (2, 2), (2, 3), (3, 0), (3, 2), (3, 3)\} $$
+
 53. Let $T = \{(0, 2), (1, 0), (2, 3), (3, 1)\}$.
 
 Find $T^t$, the transitive closure of $T$.
+
+$$ $T^t = \{(0, 2), (1, 0), (2, 3), (3, 1)\}. $$
+
+$$ (0, 2), (2, 3) \to (0, 3) $$
+
+$$ (1, 0), (0, 2) \to (1, 2) $$
+
+$$ (2, 3), (3, 1) \to (2, 1) $$
+
+$$ (3, 1), (1, 0) \to (3, 0) $$
+
+Now:
+
+$$ $T^t = \{(0, 2), (0, 3), (1, 0), (1, 2), (2, 1), (2, 3), (3, 0), (3, 1)\}. $$
+
+Furthermore:
+
+$$ (0, 2), (2, 1) \to (0, 1) $$
+
+$$ (0, 3), (3, 0) \to (0, 0) $$
+
+$$ (1, 0), (0, 3) \to (1, 3) $$
+
+$$ (1, 2), (2, 1) \to (1, 1) $$
+
+$$ (2, 3), (3, 0) \to (2, 0) $$
+
+Now:
+
+$$ $T^t = \{(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 2), (1, 3), (2,
+0), (2, 1), (2, 3), (3, 0), (3, 1)\}. $$
+
+And:
+
+$$ (2, 1), (1, 2) \to (2, 2) $$
+
+$$ (3, 1), (1, 2) \to (3, 2) $$
+
+$$ (3, 1), (1, 3) \to (3, 3) $$
+
+So:
+
+$$ $T^t = \{(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 2), (1, 3), (2,
+0), (2, 1), (2, 2), (2, 3), (3, 0), (3, 1), (3, 2), (3, 3)\}. $$
 
 54. Write a computer algorithm to test whether a relation $R$ defined on a
     finite set $A$ is reflexive, where
 
 $$ A = \{a[1], a[2], \dots, a[n]\} $$
 
+Omitted.
+
 55. Write a computer algorithm to test whether a relation $R$ defined on a
     finite set $A$ is symmetric, where
 
 $$ A = \{a[1], a[2], \dots, a[n]\} $$
 
+Omitted.
+
 56. Write a computer algorithm to test whether a relation $R$ defined on a
     finite set $A$ is transitive, where
 
 $$ A = \{a[1], a[2], \dots, a[n]\} $$
+
+Omitted.
