@@ -86,18 +86,30 @@ Page 543
 
 1. For a relation on a set to be an equivalence relation, it must be ____.
 
+reflexive, symmetric, and transitive
+
 2. The notation $m \equiv n (\mod d)$ is read "____" and means that ____.
+
+$m$ is congruient to $n$ modulo $d$; $d$ divides $m - n$
 
 3. Given an equivalence relation $R$ on a set $A$ and given an element $a$ in
    $A$, the equivalence class of $a$ is denoted ____ and is defined to be ____.
 
+$[a]$; the set of all elements $x \in A$ such that $x R a$
+
 4. If $A$ is a set, $R$ is an equivalence relation on $A$, and $a$ and $b$ are
    elements of $A$, then either $[a] = [b]$ or ____.
 
+$[a] \cap [b] = \emptyset$
+
 5. If $A$ is a set and $R$ is an equivalence relation on $A$, then the distinct
    equivalence classes of $R$ form ____.
+
+a partition of $A$
 
 6. Let $A = \mathbb{Z} \times (\mathbb{Z} - \{0\})$, and define a relation $R$
    on $A$ by specifying that for every $(a, b)$ and $(c, d)$ in $A$,
    $(a, b) R (c, d)$ if, and only if, $ad = bc$. Then there is exactly one
    equivalence class of $R$ for each ____.
+
+rational number

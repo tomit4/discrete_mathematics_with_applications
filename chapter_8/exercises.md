@@ -1974,14 +1974,36 @@ $$ c R b \quad c R c  \quad a R c \quad b R a $$
 
 $$ a R d \quad e R a \quad e R d \quad c R a $$
 
+a. reflexive
+
+$c R c$
+
+b. symmetric
+
+$b R a$, $c R b$, $e R d$
+
+c. transitive
+
+$a R c$
+
+d. equivalence relation
+
+$c R c$, $b R a$, $c R b$, $e R d$, $a R c$, $c R a$
+
 2. Each of the following partitions of $\{0, 1, 2, 3, 4\}$ induces a relation
    $R$ on $\{0, 1, 2, 3, 4\}$. In each case, find the ordered pairs in $R$.
 
 a. $\{0, 2\}, \{1\}, \{3, 4\}$
 
+$$ R = \{(0, 0), (0, 2), (2, 0), (2, 2), (1, 1), (3, 3), (3, 4), (4, 3) , (4, 4)\} $$
+
 b. $\{0\}, \{1, 3, 4\}, \{2\}$
 
+$$ R = \{(0, 0), (1, 1), (1, 3), (1, 4), (2, 2), (3, 1), (3, 3), (3, 4), (4, 1), (4, 3), (4, 4)\} $$
+
 c. $\{0\}$, $\{1, 2, 3, 4\}$
+
+$$ R = \{(0, 0), (1, 1), (1, 2), (1, 3), (1, 4), (2, 1), (2, 2), (2, 3), (2, 4), (3, 1), (3, 2), (3, 3), (3, 4), (4, 1), (4, 2), (4, 3), (4, 4)\} $$
 
 In each of 3-6, the relation $R$ is an equivalence relation on $A$. As in
 example 8.3.5, first find the specified equivalence classes. Then state the
@@ -1995,6 +2017,18 @@ $$ R = \{(0, 0), (0, 4), (1, 1), (1, 3), (2, 2), (3, 1), (3, 3), (4, 0), (4, 4)\
 
 equivalence classes: $[0], [1], [2], [3]$
 
+$$ [0] = \{x \in A | x R 0\} = \{0, 4\} $$
+
+$$ [1] = \{x \in A | x R 1\} = \{1, 3\} $$
+
+$$ [2] = \{x \in A | x R 2\} = \{2\} $$
+
+$$ [3] = \{x \in A | x R 3\} = \{1, 3\} $$
+
+The distinct number of classes is $3$. List:
+
+$$ [0] = \{0, 4\}, [1] = \{1, 3\} = [3], [2] = \{2\} $$
+
 4.
 
 $$ A = \{a, b, c, d\} $$
@@ -2002,6 +2036,18 @@ $$ A = \{a, b, c, d\} $$
 $$ R = \{(a, a), (b, b), (b, d), (c, c), (d, b), (d, d)\} $$
 
 equivalence classes: $[a], [b], [c], [d]$
+
+$$ [a] = \{x \in A | x R a\} = \{a\} $$
+
+$$ [b] = \{x \in A | x R b\} = \{b, d\} $$
+
+$$ [c] = \{x \in A | x R c\} = \{c\} $$
+
+$$ [d] = \{x \in A | x R d\} = \{b, d\} $$
+
+The number of distinct classes is 3. List:
+
+$$ [a] = \{a\}, [b] = \{b, d\} = [d], [c] = \{c\} $$
 
 5.
 
@@ -2013,6 +2059,20 @@ $$ \text{For all } x, y \in A, x R y \Leftrightarrow 4 | (x - y) $$
 
 equivalence classes: $[1], [2], [3], [4], [5]$
 
+$$ [1] = \{1, 5, 9, 13, 17\} $$
+
+$$ [2] = \{2, 6, 10, 14, 18\} $$
+
+$$ [3] = \{3, 7, 11, 15, 19\} $$
+
+$$ [4] = \{4, 8, 12, 16, 20\} $$
+
+$$ [5] = \{1, 5, 9, 13, 17\} $$
+
+There are 4 distinct classes:
+
+$$ [1] = \{1, 5, 9, 13, 17\} = [5], [2] = \{2, 6, 10, 14, 18\}, [3] = \{3, 7, 11, 15, 19\}, [4] = \{4, 8, 12, 16, 20\} $$
+
 6.
 
 $$ A = \{-4, -3, -2, -1, 0, 1, 2, 3, 4, 5\} $$
@@ -2023,6 +2083,18 @@ $$ \text{For all } x, y \in A, x R y \Leftrightarrow 3 | (x - y) $$
 
 equivalence classes: $[0], [1], [2], [3]$
 
+$$ [0] = \{-3, 0, 3\} $$
+
+$$ [1] = \{-2, 1, 4\} $$
+
+$$ [2] = \{-4, -1, 2, 5\} $$
+
+$$ [3] = \{-3, 0, 3\} $$
+
+There are 3 distinct equivalence classes:
+
+$$ [0] = \{-3, 0, 3\} = [3], [1] = \{-2, 1, 4\}, [2] = \{-4, -1, 2, 5\} $$
+
 In each of 7-14, the relation $R$ is an equivalence relation on the set $A$.
 Find the distinct equivalence classes of $R$.
 
@@ -2031,6 +2103,8 @@ Find the distinct equivalence classes of $R$.
 
 $$ (a, b) R (c, d) \Leftrightarrow ad = bc $$
 
+$$ \{(1, 3), (3, 9)\}, \{(2, 4), (-4, -8), (3, 6)\}, \{(1, 5)\} $$
+
 8. $X = \{a, b, c\}$ and $A = \mathscr{P}(X)$. $R$ is defined on $A$ as follows:
    For all sets $u$ and $v$ in $\mathscr{P}(X)$,
 
@@ -2038,30 +2112,64 @@ $$ u R v \Leftrightarrow N(u) = N(v) $$
 
 (That is, the number of elements in $u$ equals the number of elements in $v$.)
 
+$$ \mathscr{P}(X) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{a, b\}, \{a, c\}, \{b, c\}, \{a, b, c\}\} $$
+
+$$ \{\emptyset\}, \{\{a\}, \{b\}, \{c\}\}, \{\{a, b\}, \{a, c\}, \{b, c\}\}, \{\{a, b, c\}\} $$
+
 9. $X = \{-1, 0, 1\}$ and $A = \mathscr{P}(X)$. $R$ is defined on
    $\mathscr{P}(X)$ as follows: For all sets $s$ and $t$ in $\mathscr{P}(X)$,
 
 $$ s R t \Leftrightarrow \text{ the sum of the elements in } s \text{ equals the sum of the elements in } t $$
+
+$$ \mathscr{P}(X) = \{\emptyset, \{-1\}, \{0\}, \{1\}, \{-1, 0\}, \{-1, 1\}, \{0, 1\}, \{-1, 0, 1\}\} $$
+
+$$ \{\{\emptyset\}, \{-1\}, \{-1, 0\}\}, \{\{0\}, \{-1, 1\}, \{-1, 0, 1\}\}, \{\{1\}, \{0, 1\}\} $$
 
 10. $A = \{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5\}$. $R$ is defined on $A$ as
     follows: For all $m, n \in \mathbb{Z}$,
 
 $$ m R n \Leftrightarrow 3 |(m^2 - n^2) $$
 
+$$ \{-5, -4, -2, -1, 1, 2, 4, 5\}, \{-3, 0, 3\} $$
+
 11. $A = \{-4, -3, -2< -1, 0, 1, 2, 3, 4\}$. $R$ is defined on $A$ as follows:
     For every $(m, n) \in A$,
 
 $$ m R n \Leftrightarrow 4 | (m^2 - n^2) $$
+
+$$ [0] = \{x \in A | 4 | (x^2 - 0^2)\} = \{x \in A | 4 | x^2\} $$
+
+$$ = \{-4, -2, 0, 2, 4\} $$
+
+$$ [1] = \{x \in A | 4 | (x^2 - 1^2) = \{x \in A | 4 | (x^2 - 1)\}\} $$
+
+$$ = \{-3, -1, 1, 3\} $$
 
 12. $A = \{-4, -3, -2, -1, 0, 1, 2, 3, 4\}$. $R$ is defined on $A$ as follows:
     For all $(m, n) \in A$,
 
 $$ m R n \Leftrightarrow 5 | (m^2 - n^2) $$
 
+$$ [0] = \{x \in A | 5 | (x^2 - 0^2)\} = \{x \in A | 5 | x^2\} $$
+
+$$ = \{0\} $$
+
+$$ [1] = \{x \in A | 5 | (x^2 - 1^2)\} = \{x \in A | 5 | (x^2 - 1) \} $$
+
+$$ = \{-4, -1, 1, 4\} $$
+
+$$ [2] = \{x \in A | 5 | (x^2 - 2^2)\} = \{x \in A | 5 | (x^2 - 4)\} $$
+
+$$ = \{-3, -2, 2, 3\} $$
+
 13. $A$ is the set of all strings of length 4 in _a_'s and _b_'s. $R$ is defined
     on $A$ as follows: For all strings $s$ and $t$ in $A$,
 
 $$ s R t \Leftrightarrow s \text{ has the same first two characters as } t $$
+
+$$ A = \{aaaa, aaab, aabb, aaba, abbb, abba, abaa, abab, bbbb, bbba, bbaa, bbab, baaa, baab, babb, baba\} $$
+
+$$ \{aaaa, aaab, aabb, aaba\}, \{abbb, abba, abaa, abab\}, \{bbbb, bbba, bbaa, bbab\}, \{baaa, baab, babb, baba\} $$
 
 14. $A$ is the set of all strings of 0's, 1's, and 2's that have length 4 and
     for which the sum of the characters in the string is less than or equal
@@ -2069,16 +2177,46 @@ $$ s R t \Leftrightarrow s \text{ has the same first two characters as } t $$
 
 $$ s R t \Leftrightarrow \text{ the sum of the characters of } s \text{ equals the sum of the characters of } t $$
 
+$$ \{0000\}, \{0001, 0010, 0100, 1000\}, \{0011, 0101, 1001, 1010, 1100, 0002, 0020, 0200, 2000\}$$
+
 15. Determine which of the following congruence relations are true and which are
     false.
 
+$$ m \equiv n (\mod d) \Leftrightarrow d | (m - n) $$
+
 a. $17 \equiv 2 (\mod 5)$
+
+$$ 5 | 17 - 2 $$
+
+$$ 5 | 15 $$
+
+Yes, this congruence relation is true, because $15 = 5 \cdot 3$, therefore
+$5 | 15$.
 
 b. $4 \equiv -5 (\mod 7)$
 
+$$ 7 | 4 - (-5) $$
+
+$$ 7 | 9 $$
+
+No, this congruence relation is not true, since $7 \cancel{|} 9$.
+
 c. $-2 \equiv -8 (\mod 3)$
 
+$$ 3 | -2 - (-8) $$
+
+$$ 3 | 6 $$
+
+Yes, this congruence relation is true, since $6 = 3 \dot 2$, therefore $3 | 6$.
+
 d. $-6 \equiv 22 (\mod 2)$
+
+$$ 2 | -6 - 22 $$
+
+$$ 2 | -28 $$
+
+Yes, this congruence relation is true, since $-28 = 2 \cdot -14$, therefore
+$2 | -28$.
 
 16.
 
@@ -2087,26 +2225,226 @@ equivalence classes are equal?
 
 $$ [7], [-4], [-6], [17], [4], [27], [19] $$
 
+$$ 7 \mod 3 = 1, -4 \mod 3 = 2, -6 \mod 3 = 0, 17 \mod 3 = 2, 4 \mod 3 = 1, 27 \mod 3 = 0, 19 \mod 3 = 1 $$
+
+$$ [7] = [4] = [19], [-4] = [17], [-6] = [27] $$
+
 b. Let $R$ be the relation of congruence modulo 7. Which of the following
 equivalence classes are equal?
 
 $$ [35], [3], [-7], [12], [0], [-2], [17] $$
+
+$$ 35 \mod 7 = 0, 3 \mod 7 = 3, -7 \mod 7 = 0, 12 \mod 7 = 5, 0 \mod 7 = 0, -2 \mod 7 = 5, 17 \mod 7 = 3 $$
+
+$$ [35] = [-7] = [0], [12] = [-2], [3] = [17] $$
 
 17.
 
 a. Prove that for all integers $m$ and $n$, $m \equiv n (\mod 3)$ if, and only
 if, $m \mod 3 = n \mod 3$.
 
+**Proof:**
+
+To prove that $m \equiv n (\mod 3) \Leftrightarrow m \mod 3 = n \mod 3$, it must
+be shown that $m \equiv n (\mod 3) \to m \mod 3 = n \mod 3$, and it must also be
+shown that $m \mod 3 = n \mod 3 \to m \equiv n (\mod 3)$.
+
+_Proof ($m \equiv n (\mod 3)\to m \mod 3 = n \mod 3$):_
+
+Suppose $m \in \mathbb{Z}$ and $n \in \mathbb{Z}$, such that
+$m \equiv n (\mod 3)$.
+
+It is to be shown that $m \mod 3 = n \mod 3$.
+
+Since $m \equiv n (\mod 3)$, by the definition of congruence, this means that:
+
+$$ 3 | (m - n) $$
+
+By the definition of divisiblity:
+
+$$ m - n = 3a $$
+
+For some integer $a$.
+
+Let $r = m \mod 3$.
+
+Then, by the definition of modulo:
+
+$$ m = 3b + r $$
+
+for some integer $b$.
+
+Since $m - n = 3a$, it follows by substitution that:
+
+$$ m - n = (3b + r) - n = 3a $$
+
+Equivalently (by algebra):
+
+$$ (3b + r) - n = 3a $$
+
+$$ -n = 3a - (3b + r) $$
+
+$$ n = (3b + r) - 3a $$
+
+$$ n = 3b + r - 3a $$
+
+$$ n = 3b - 3a + r $$
+
+$$ n = 3(b - a) + r $$
+
+Now, $b - a$ is an integer (by the difference of integers), and $0 \leq r < 3$.
+So, by definition of $\mod$, $n \mod 3 = r$, which equals $m \mod 3$.
+
+This is what was to be shown.
+
+Q.E.D.
+
+_Proof ($m \mod 3 = n \mod 3 \to m \equiv n (\mod 3)$):_
+
+Suppose $m \in \mathbb{Z}$ and $n \in \mathbb{Z}$ such that
+$m \mod 3 = n \mod 3$.
+
+It must be shown that $m \equiv n (\mod 3)$.
+
+Let $r = m \mod 3 = n \mod 3$.
+
+Then, by definition of $\mod$, $m = 3p + r$ and $n = 3q + r$ for some integers
+$p$ and $q$.
+
+By substitution:
+
+$$ m - n = (3p + r) - (3q + r) $$
+
+$$ = 3p + r - 3q - r $$
+
+$$ = 3p - 3q $$
+
+$$ = 3(p - q) $$
+
+Now, $p - q$ is an integer (by the difference of integers). It follows by the
+definition of divisibility, that $3 | (m - n)$. Therefore, by the definition of
+congruence, $m \equiv n (\mod 3)$.
+
+This is what was to be shown.
+
+Q.E.D.
+
+_Conclusion:_
+
+Since it has been shown that $m \equiv n (\mod 3) \to m \mod 3 = n \mod 3$ and
+it has also been shown that $m \mod 3 = n \mod 3 \to m \equiv n (\mod 3)$, it
+can be concluded that $m \equiv n (\mod 3) \Leftrightarrow m \mod 3 = n \mod 3$.
+
 b. Prove that for all integers $m$ and $n$ and any positive integer $d$,
 $m \equiv n (\mod d)$ if, and only if, $m \mod d = n \mod d$.
+
+**Proof:**
+
+To prove that $m \equiv n (\mod d) \Leftrightarrow m \mod d = n \mod d$, it must
+be shown that $m \equiv n (\mod d) \to m \mod d = n \mod d$, and it must also be
+shown that $m \mod d = n \mod d \to m \equiv n (\mod d)$.
+
+_Proof ($m \equiv n (\mod d)\to m \mod d = n \mod d$):_
+
+Suppose $m \in \mathbb{Z}$, $n \in \mathbb{Z}$, and $d \in \mathbb{Z}^+$ such
+that $m \equiv n (\mod d)$.
+
+It is to be shown that $m \mod d = n \mod d$.
+
+Since $m \equiv n (\mod d)$, by the definition of congruence, this means that:
+
+$$ d | (m - n) $$
+
+By the definition of divisiblity:
+
+$$ m - n = da $$
+
+For some integer $a$.
+
+Let $r = m \mod d$.
+
+Then, by the definition of modulo:
+
+$$ m = db + r $$
+
+for some integer $b$.
+
+Since $m - n = da$, it follows by substitution that:
+
+$$ m - n = (db + r) - n = da $$
+
+Equivalently (by algebra):
+
+$$ (db + r) - n = da $$
+
+$$ -n = da - (db + r) $$
+
+$$ n = (db + r) - da $$
+
+$$ n = db + r - da $$
+
+$$ n = db - da + r $$
+
+$$ n = d(b - a) + r $$
+
+Now, $b - a$ is an integer (by the difference of integers), and $0 \leq r < d$.
+So, by definition of $\mod$, $n \mod d = r$, which equals $m \mod d$.
+
+This is what was to be shown.
+
+Q.E.D.
+
+_Proof ($m \mod d = n \mod d \to m \equiv n (\mod d)$):_
+
+Suppose $m \in \mathbb{Z}$, $n \in \mathbb{Z}$, $d \in \mathbb{Z}^+$ such that
+$m \mod d = n \mod d$.
+
+It must be shown that $m \equiv n (\mod d)$.
+
+Let $r = m \mod d = n \mod d$.
+
+Then, by definition of $\mod$, $m = dp + r$ and $n = dq + r$ for some integers
+$p$ and $q$.
+
+By substitution:
+
+$$ m - n = (dp + r) - (dq + r) $$
+
+$$ = dp + r - dq - r $$
+
+$$ = dp - dq $$
+
+$$ = d(p - q) $$
+
+Now, $p - q$ is an integer (by the difference of integers). It follows by the
+definition of divisibility, that $d | (m - n)$. Therefore, by the definition of
+congruence, $m \equiv n (\mod d)$.
+
+This is what was to be shown.
+
+Q.E.D.
+
+_Conclusion:_
+
+Since it has been shown that $m \equiv n (\mod d) \to m \mod d = n \mod d$ and
+it has also been shown that $m \mod d = n \mod d \to m \equiv n (\mod d)$, it
+can be concluded that $m \equiv n (\mod d) \Leftrightarrow m \mod d = n \mod d$.
 
 18.
 
 a. Give an example of two sets that are distinct but not disjoint.
 
+Consider $\{1, 2, 3\}$, $\{2\}$, then they are distinct since
+$\{1, 2, 3\} \neq \{2\}$, but they are not disjoint since
+$\{1, 2, 3\} \cap \{2\} = \{2\}$.
+
 b. Find sets $A_1$ and $A_2$ and elements $x$, $y$, and $z$ such that $x$ and
 $y$ are in $A_1$ and $y$ and $z$ are in $A_2$ but $x$ and $z$ are not both in
 either of the sets $A_1$ or $A_2$.
+
+$$ A_1 = \{x, y\} $$
+
+$$ A_2 = \{y, z\} $$
 
 In 19-31, (1) prove that the relation is an equivalence relation, and (2)
 describe the distinct equivalence classes of each relation.
@@ -2119,17 +2457,408 @@ $$ x R y \Leftrightarrow x \text{ has the same major (or double major) as } y $$
 
 (Assume "undeclared" is a major.)
 
+(1) Prove that the relation is an equivalence relation.
+
+**Proof:**
+
+Suppose $A$ is the set of all students at my college, and $R$ is a relation
+defined on $A$ defined as follows:
+
+$$ \forall x, y \in A, x R y \Leftrightarrow x \text{ has the same major (or
+double major) as } y $$
+
+It must be shown that $R$ is an equivalence relation.
+
+To prove that $R$ is an equivalence relation, it must be shown that $R$ is
+reflexive, symmetric, and transitive.
+
+_Proof (that $R$ is reflexive):_
+
+Let $x \in A$.
+
+To prove that $R$ is reflexive, it must be shown that $x R x$. It is true that
+$x$ has the same major as $x$. Therefore $R$ is reflexive. This is what was to
+be shown.
+
+_Proof (that $R$ is symmetric):_
+
+Let $x, y \in A$.
+
+To prove that $R$ is symmetric, it must be shown that
+$(x, y) \in R \to (y, x) \in R$.
+
+Suppose $(x, y) \in R$. Then, by definition of $R$, this means that $x$ has the
+same major as $y$. By symmetric property of equality, this means that $y$ has
+the same major as $x$. Therefore $(y, x) \in R$.
+
+This is what was to be shown.
+
+_Proof (that $R$ is transitive):_
+
+Let $x, y, z \in A$.
+
+To prove that $R$ is transitive, it must be shown that
+$(x, y) \in R \wedge (y, z) \in R \to (x, z) \in R$.
+
+Suppose $(x, y) \in R$ and $(y, z) \in R$. Then, by definition of $R$, this
+means that $x$ has the same major as $y$, and $y$ has the same major as $z$. By
+the transitive property of equality, it follows that $x$ has the same major as
+$z$.
+
+Therefore $(x, z) \in R$, and it can be concluded that $R$ is transitive.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since it has been shown that $R$ is reflexive, symmetric, and transitive, it can
+be concluded that $R$ is an equivalence relation.
+
+This is what was to be shown.
+
+Q.E.D.
+
+(2) Describe the distinct equivalence classes of each relation.
+
+There is one equivalence class for each major and double major at the college.
+Each class consists of all students with that major (or double major).
+
 b. $S$ is the relation defined on $A$ as follows: For every $x, y \in A$,
 
 $$ x S y \Leftrightarrow x \text{ is the same age as } y $$
+
+(1) Prove that the relation is an equivalence relation.
+
+**Proof:**
+
+Suppose $A$ is the set of all students at my college, with $S$ being a relation
+defined on $A$ as follows:
+
+$$ \forall x, y \in A, x S y \Leftrightarrow x \text{ is the same age as } y $$
+
+To prove that $S$ is an equivalence relation, it must be shown that $S$ is
+reflexive, symmetric, and transitive.
+
+_Proof (that $S$ is reflexive):_
+
+Let $x \in A$.
+
+To prove that $S$ is reflexive, it must be shown that $x S x$. It is true that
+$x$ is the same age as $x$. Thus $x S x$, and therefore $S$ is reflexive.
+
+This is what was to be shown.
+
+_Proof (that $S$ is symmetric):_
+
+Let $x, y \in A$.
+
+To prove that $S$ is symmetric, it must be shown that
+$(x, y) \in S \to (y, x) \in S$.
+
+Suppose $x S y$. By the definition of $S$, this means that $x$ is the same age
+as $y$. By the symmetric property of equality, this means that $y$ is the same
+age as $x$. It follows that $y R x$, and therefore $S$ is symmetric.
+
+This is what was to be shown.
+
+_Proof (that $S$ is transitive):_
+
+Let $x, y, z \in A$.
+
+To prove that $S$ is transitive, it must be shown that
+$(x, y) \in S \wedge (y, z) \in S \to (x, z) \in S$.
+
+Suppose $x S y$ and $y S z$. Then, by the definition of $S$, this means that $x$
+is the same age as $y$ and $y$ is the same age as $z$. By the transitive
+property of equality, this means that $x$ is the same age as $z$.
+
+It follows that $(x, z) \in S$, and therefore $S$ is transitive.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since $S$ has been shown to be reflexive, symmetric, and transitive, it can be
+concluded that $S$ is an equivalence relation.
+
+This is what was to be shown.
+
+Q.E.D.
+
+(2) Describe the distinct equivalence classes of each relation.
+
+There is one equivalence class for each student age (by year) at the college.
+Each class consists of all students with that age.
 
 20. $E$ is the relation defined on $\mathbb{Z}$ as follows:
 
 $$ \text{For every } m, n \in \mathbb{Z}, m E n \Leftrightarrow 4 | (m - n) $$
 
+(1) Prove that the relation is an equivalence relation.
+
+**Proof:**
+
+Suppose $m \in \mathbb{Z}$ and $n \in \mathbb{Z}$. Let $E$ be a relation defined
+on $\mathbb{Z}$ as follows:
+
+$$ \forall m, n \in \mathbb{Z}, m E n \Leftrightarrow 4 | (m - n) $$
+
+To prove that $E$ is an equivalence relation, it must be shown that $E$ is
+reflexive, symmetric, and transitive.
+
+_Proof ($E$ is reflexive):_
+
+Let $m \in \mathbb{Z}$.
+
+To prove that $E$ is reflexive, it must be shown that $(m, m) \in E$.
+
+By the definition for $E$, this means that:
+
+$$ 4 | (m - m) $$
+
+Since $m - m = 0$, this means that:
+
+$$ 4 | 0 $$
+
+This is true, since $0 = 4 \cdot 0$. It follows that $(m, m) \in E$, and
+therefore $E$ is reflexive.
+
+_Proof ($E$ is symmetric):_
+
+Let $m \in \mathbb{Z}$ and $n \in \mathbb{Z}$.
+
+To prove that $E$ is symmetric, it must be shown that
+$(m, n) \in E \to (n, m) \in E$.
+
+Since $(m, n) \in E$, this means that:
+
+$$ 4 | (m - n) $$
+
+By the definition of divisibility, this means that:
+
+$$ m - n = 4k $$
+
+for some integer $k$.
+
+Now, consider:
+
+$$ -1(m - n) = -1(4k) $$
+
+$$ n - m = 4(-k) $$
+
+Now, $-k$ is an integer (by the product of integers). It follows (by the
+definition of divisibility), that:
+
+$$ 4 | (n - m) $$
+
+This means that $(n, m) \in E$, and therefore $E$ is symmetric.
+
+_Proof ($E$ is transitive):_
+
+Let $m \in \mathbb{Z}$, $n \in \mathbb{Z}$, and $p \in \mathbb{Z}$.
+
+To prove that $E$ is transitive, it must be shown that
+$(m, n) \in E \wedge (n, p) \in E \to (m, p) \in E$.
+
+Suppose $(m, n) \in E$ and $(n, p) \in E$. By definition of $E$, this means
+that:
+
+$$ 4 | (m - n) $$
+
+and
+
+$$ 4 | (n - p) $$
+
+By the definition of divisibility, this means that:
+
+$$ m - n = 4k $$
+
+$$ n - p = 4q $$
+
+for some integers $k$ and $q$.
+
+Subtracting the two yields:
+
+$$ (m - n) - (n - p) = m - p $$
+
+And then by substitution this is:
+
+$$ m - p = 4k - 4q $$
+
+By algebra:
+
+$$ = 4(k - q) $$
+
+Now, $k - q$ is an integer (by the difference of integers). It follows that
+$4 | (m - p)$, and thus $(m, p) \in E$. Therefore, it can be concluded that $E$
+is transitive.
+
+_Conclusion:_
+
+Since it has been shown that $E$ is reflexive, symmetric, and transitive, it can
+be concluded that $E$ is an equivalence relation. This is what was to be shown.
+
+Q.E.D.
+
+(2) Describe the distinct equivalence classes of each relation.
+
+Observe that for any $a \in \mathbb{Z}$, the equivalence class of $a$, ($[a]$),
+is:
+
+$$ [a] = \{x \in \mathbb{Z} | x E a\} = \{x \in \mathbb{Z} | 4 | x - a\} $$
+
+By definition of divisiblity:
+
+$$ = \{x \in \mathbb{Z} | x - a = 4k \text{ for some integer } k\} $$
+
+By algebra:
+
+$$ = \{x \in \mathbb{Z} | x = 4k + a \} $$
+
+So, our equivalence classes are defined as follows:
+
+$$ \{x \in \mathbb{Z} | x = 4k \}, \{x \in \mathbb{Z} | x = 4k + 1 \}, \{x \in \mathbb{Z} | x = 4k + 2 \}, \{x \in \mathbb{Z} | x = 4k + 3 \} $$
+
 21. $R$ is the relation defined on $\mathbb{Z}$ as follows:
 
 $$ \text{For every } m, n \in \mathbb{Z}, m R n \Leftrightarrow 7m - 5n \text{ is even} $$
+
+(1) Prove that the relation is an equivalence relation.
+
+**Proof:**
+
+Suppose $m \in \mathbb{Z}$ and $n \in \mathbb{Z}$, such that $R$ is a relation
+on $\mathbb{Z}$ defined as follows:
+
+$$ \forall m, n \in \mathbb{Z}, m R n \Leftrightarrow 7m - 5n \text{ is even} $$
+
+It must be shown that $R$ is an equivalence relation.
+
+To show that $R$ is an equivalence relation, it must be shown that $R$ is
+reflexive, symmetric, and transitive.
+
+_Proof ($R$ is reflexive):_
+
+Let $m \in \mathbb{Z}$.
+
+To prove that $R$ is reflexive, it must be shown that $(m, m) \in R$. By the
+definition of $R$, it then must be shown that:
+
+$$ 7m - 5m \text{ is even} $$
+
+Consider that:
+
+$$ 7m - 5m = 2m $$
+
+Since $m$ is an integer (by the supposition), it follows that $7m - 5m$ is even
+(by the definition of even, since $7m - 5m = 2m$).
+
+It follows that $(m, m) \in R$, and therefore $R$ is reflexive.
+
+_Proof ($R$ is symmetric):_
+
+Let $m, n \in \mathbb{Z}$.
+
+To prove that $R$ is symmetric, it must be shown that
+$(m, n) \in R \to (n, m) \in R$.
+
+Suppose $(m, n) \in R$. By definition of $R$, this means that:
+
+$$ 7m - 5n \text{ is even} $$
+
+By definition of even, this means that:
+
+$$ 7m - 5n = 2k $$
+
+for some integer $k$.
+
+Then, consider:
+
+$$ 7n - 5m = (12 - 5)n - (12 - 7)m $$
+
+$$ = 12n - 5n - 12m + 7m $$
+
+$$ = 12n - 12m + (7m - 5n) $$
+
+$$ = 12n - 12m + 2k $$
+
+$$ = 2(6n - 6m + k) $$
+
+Now, $6n - 6m + k$ is an integer (by the product, sum, and difference of
+integers). It follows that $7n - 5m$ is even (by the definition of even).
+Therefore $(n, m) \in R$, and therefore $R$ is symmetric.
+
+_Proof ($R$ is transitive):_
+
+Let $m, n, p \in \mathbb{Z}$.
+
+To prove that $R$ is transitive, it must be shown that
+$(m, n) \in R \wedge (n, p) \in R \to (m, p) \in R$.
+
+Suppose $(m, n) \in R$ and $(n, p) \in R$. By definition of $R$, this means
+that:
+
+$$ 7m - 5n \text{ is even} $$
+
+and
+
+$$ 7n - 5p \text{ is even}  $$
+
+By the definition of even, this means that:
+
+$$ 7m - 5n = 2r  $$
+
+and
+
+$$ 7n - 5p = 2s $$
+
+for some integers $r$ and $s$.
+
+It must be shown that $7m - 5p \text{ is even}$. Consider:
+
+$$ 7m - 5p = (7m - 5n + 5n) + (7n - 7n - 5p) $$
+
+$$ = ((7m - 5n) + 5n) + (7n - (7n - 5p)) $$
+
+$$ = (2r + 5n) + (7n - 2s) $$
+
+$$ = 2r + 5n + 7n - 2s $$
+
+$$ = 2r + 12n - 2s $$
+
+$$ = 2(r + 6n - s) $$
+
+Now, $r + 6n - s$ is an integer (by the product, sum, and difference of
+integers). By the definition of even, this means that $7m - 5p$ is even. It
+follows that $(m, p) \in R$, and therefore $R$ is transitive.
+
+_Conclusion:_
+
+Since it has been shown that $R$ is reflexive, symmetric, and transitive, it can
+be concluded that $R$ is an equivalence relation.
+
+This is what was to be shown.
+
+Q.E.D.
+
+(2) Describe the distinct equivalence classes of each relation.
+
+$$ \forall m, n \in \mathbb{Z}, m R n \Leftrightarrow 7m - 5n \text{ is even} $$
+
+Consider $a \in \mathbb{Z}, then, by the definition of $r$, this means that:
+
+$$ \{x \in \mathbb{Z} | x R a \} $$
+
+By the definition of $R$:
+
+$$ \{x \in \mathbb{Z} | 7x - 5a \text{ is even} \} $$
+
+Since $7x - 5a$ is even, this means that both $7x$ and $5a$ are even, or both
+$7x$ and $5a$ are odd. Since $7$ and $5$ are both odd (and odd times odd is odd,
+and odd times even is even), this means that $7x$ and $5a$ have the same parity.
+
+Thus there are two equivalency cases, one the set of all even integers, and the
+other the set of all odd integers.
 
 22. Let $A$ be the set of all statement forms in three variables $p$, $q$, and
     $r$. $\mathbf{R}$ is the relation defined on $A$ as follows: For all $P$ and
@@ -2137,10 +2866,154 @@ $$ \text{For every } m, n \in \mathbb{Z}, m R n \Leftrightarrow 7m - 5n \text{ i
 
 $$ P \mathbf{R} Q \Leftrightarrow P \text{ and } Q \text{ have the same truth table} $$
 
+(1) Prove that the relation is an equivalence relation.
+
+**Proof:**
+
+Suppose $A$ is the set of all statement forms in three variables $p$, $q$, and
+$r$. Let $\mathbf{R}$ be a relation on the set $A$ defined as follows:
+
+$$ P \mathbf{R} Q \Leftrightarrow P \text{ and } Q \text{ have the same truth table} $$
+
+To prove that $\mathbf{R}$ is an equivalence relation, it must be shown that
+$\mathbf{R}$ is reflexive, symmetric, and transitive.
+
+_Proof ($\mathbf{R}$ is reflexive):_
+
+Let $P \in A$.
+
+To prove that $\mathbf{R}$ is reflexive, it must be shown that
+$(P, P) \in \mathbf{R}$. By the definition of $\mathbf{R}$, this means that $P$
+and $P$ have the same truth table.
+
+It is true that $P$ has the same truth table as itself.
+
+It follows that $(P, P) \in \mathbf{R}$, and therefore $\mathbf{R}$ is
+reflexive.
+
+_Proof ($\mathbf{R}$ is symmetric):_
+
+Let $P, Q \in A$.
+
+To prove that $\mathbf{R}$ is symmetric, it must be shown that
+$(P, Q) \in \mathbf{R} \to (Q, P) \in \mathbf{R}$.
+
+Suppose $(P, Q) \in \mathbf{R}$, by the definition for $\mathbf{R}$, this means
+that $P$ and $Q$ have the same truth tables.
+
+It follows by the symmetric property of equality that $Q$ and $P$ have the same
+truth tables.
+
+Thus $(Q, P) \in \mathbf{R}$, and therefore $\mathbf{R}$ is symmetric.
+
+_Proof ($\mathbf{R}$ is transitive):_
+
+Let $P, Q, S \in A$.
+
+To prove that $\mathbf{R}$ is transitive, it must be shown that
+$(P, Q) \in \mathbf{R} \wedge (Q, S) \in \mathbf{R} \to (P, S) \in \mathbf{R}$.
+
+Suppose $(P, Q) \in \mathbf{R}$ and $(Q, S) \in \mathbf{R}$. By the definition
+of $\mathbf{R}$, this means that $P$ and $Q$ have the same truth tables, and
+that $Q$ and $S$ have the same truth tables.
+
+It follows, by the transitive property of equality, that $P$ and $S$ have the
+same truth tables.
+
+Thus $(P, S) \in \mathbf{R}$, and therefore $\mathbf{R}$ is transitive.
+
+_Conclusion:_
+
+Since it has been shown that $\mathbf{R}$ is reflexive, symmetric, and
+transitive, it can be concluded that $\mathbf{R}$ is an equivalence relation.
+
+Q.E.D.
+
+(2) Describe the distinct equivalence classes of each relation.
+
+There is an equivalence class corresponding to every possible truth table in 3
+variables, $p, q, r$. There are 8 lines in every truth table, and each line has
+2 options (true or false), so there are $2^8$ equivalence classes.
+
 23. Let $P$ be a set of parts shipped to a company from various suppliers. $S$
     is the relation defined on $P$ as follows: For every $x, y \in P$,
 
 $$ x S y \Leftrightarrow  x \text{ has the same part number and is shipped from the same supplier as } y $$
+
+(1) Prove that the relation is an equivalence relation.
+
+**Proof:**
+
+Suppose $P$ is the set of all parts shipped to a company from various suppliers.
+Let $S$ be a relation defined on $P$ as follows:
+
+$$ \forall x, y \in P, x S y \Leftrightarrow x \text{ has the same part number and is shipped from the same supplier as } y $$
+
+To prove that $S$ is an equivalence relation, it must be shown that $S$ is
+reflexive, symmetric, and transitive.
+
+_Proof ($S$ is reflexive):_
+
+Let $x \in P$.
+
+To prove that $S$ is reflexive, it must be shown that $(x, x) \in S$. By the
+definition for $S$, this means it must be shown that $x$ has the same part
+number and is shipped from the same supplier as $x$.
+
+It is true that $x$ has the same part number as $x$ and that $x$ is shipped from
+the same supplier as $x$.
+
+Thus $(x, x) \in S$, and therefore $S$ is reflexive.
+
+_Proof ($S$ is symmetric):_
+
+Let $x, y \in P$.
+
+To prove that $S$ is symmetric, it must be shown that
+$(x, y) \in S \to (y, x) \in S$.
+
+Suppose $(x, y) \in S$. By the definition for $S$, this means that $x$ has the
+same part number as $y$ and $x$ is shipped from the same supplier as $y$.
+
+It follows by the symmetry of equality that $y$ has the same part number as $x$
+and $y$ is shipped from the same supplier as $x$.
+
+Thus $(y, x) \in S$, and therefore $S$ is symmetric.
+
+_Proof ($S$ is transitive):_
+
+Let $x, y, z \in P$.
+
+To prove that $S$ is transitive, it must be shown that
+$(x, y) \in S \wedge (y, z) \in S \to (x, z) \in S$.
+
+Suppose $(x, y) \in S$ and $(y, z) \in S$. By the definition for $S$, this means
+that:
+
+$x$ has the same part number and is shipped from the same supplier as $y$.
+
+and that:
+
+$y$ has the same part number and is shipped from the same supplier as $z$.
+
+By the definition of the transitivity of equality, this means that $x$ has the
+same part number and is shipped from the same supplier as $z$.
+
+Thus $(x, z) \in S$, and therefore $S$ is transitive.
+
+_Conclusion:_
+
+Since it has been shown that $S$ is reflexive, symmetric, and transitive, it can
+be concluded that $S$ is an equivalence relation. This is what was to be shown.
+
+Q.E.D.
+
+(2) Describe the distinct equivalence classes of each relation.
+
+The number of distinct equivalence classes is grouped based off of parts that
+all have the same part number and are shipped from the same supplier (_i.e._ the
+equivalence classes are sets of all parts with the same part number and
+supplier.)
 
 24. Let $A$ be the set of identifiers in a computer program. It is common for
     identifiers to be used for only a short part of the execution time of a
@@ -2151,23 +3024,192 @@ $$ x S y \Leftrightarrow  x \text{ has the same part number and is shipped from 
 
 $$ x R y \Leftrightarrow \text{ the values of } x \text{ and } y \text{ are stored in the same memory location during execution of the program} $$
 
+(1) Prove that the relation is an equivalence relation.
+
+**Proof:**
+
+Suppose $A$ is the set of identifiers in a computer program. Let $R$ be a
+relation on the set $A$ such that it is defined as follows:
+
+$$ \forall x, y \in A, x R y \Leftrightarrow \text{ the values of } x \text{ and } y \text{ are stored in the same memory location during execution of the program} $$
+
+To prove that $R$ is an equivalence relation, it must be shown that $R$ is
+reflexive, symmetric, and transitive.
+
+_Proof ($R$ is reflexive):_
+
+Let $x \in A$.
+
+To prove that $R$ is reflexive, it must be shown that $(x, x) \in R$.
+
+By definition of $R$, this means that it must be shown that the values of $x$
+and $x$ are stored in the same memory location during execution of the program.
+
+It is true that $x$ and $x$ are stored in the same memory location during
+execution of the program (since $x$ is the same identifier as $x$.)
+
+Thus $(x, x) \in R$ and therefore $R$ is reflexive.
+
+_Proof ($R$ is symmetric):_
+
+Let $x, y \in A$.
+
+To prove that $R$ is symmetric, it must be shown that
+$(x, y) \in R \to (y, x) \in R$.
+
+Suppose $(x, y) \in R$. Then, by definition of $R$, this means that the values
+of $x$ and $y$ are stored in the same memory location during the execution of
+the program.
+
+By the symmetric property of equality, this means that the values of $y$ and $x$
+are stored in the same memory location during the execution of the program.
+
+Thus, $(y, x) \in R$, and therefore $R$ is symmetric.
+
+_Proof ($R$ is transitive):_
+
+Let $x, y, z \in A$.
+
+To prove that $R$ is transitive, it must be shown that
+$(x, y) \in R \wedge (y, z) \in R \to (x, z) \in R$.
+
+Suppose $(x, y) \in R$ and $(y, z) \in R$. By the definition for $R$, this means
+that:
+
+The values of $x$ and $y$ are stored in the same memory location during
+execution of the program.
+
+and that:
+
+The values of $y$ and $z$ are stored in the same memory location during
+execution of the program.
+
+By the transitive property of equality, this means that the values of $x$ and
+$z$ are stored in the same memory location during execution of the program.
+
+Thus $(x, z) \in R$, and therefore $R$ is transitive.
+
+_Conclusion:_
+
+Since it has been shown that $R$ is reflexive, symmetric, and transitive, it can
+be concluded that $R$ is an equivalence relation.
+
+(2) Describe the distinct equivalence classes of each relation.
+
+The number of equivalence classes is based off the number of identifiers in a
+computer program that are stored in the same memory location during execution of
+the program.
+
 25. $A$ is the "absolute value" relation defined on $\mathbb{R}$ as follows:
 
 $$ \text{For every } x, y \in \mathbb{R}, x A y \Leftrightarrow |x| = |y| $$
+
+(1) Prove that the relation is an equivalence relation.
+
+**Proof:**
+
+Suppose $A$ is the "absolute value" relation on $\mathbb{R}$, defined as
+follows:
+
+$$ \forall x, y \in \mathbb{R}, x A y \Leftrightarrow |x| = |y| $$
+
+To prove that $A$ is an equivalence relation, it must be shown that $A$ is
+reflexive, symmetric, and transitive.
+
+_Proof ($A$ is reflexive):_
+
+Let $x \in \mathbb{R}$.
+
+To prove that $A$ is reflexive, it must be shown that $(x, x) \in A$.
+
+By definition for $A$, this means that it must be proved that:
+
+$$ |x| = |x| $$
+
+It is trivially true that $|x| = |x|$.
+
+Thus $(x, x) \in A$, and therefore $A$ is reflexive.
+
+_Proof ($A$ is symmetric):_
+
+Let $x, y \in \mathbb{R}$.
+
+To prove that $A$ is symmetric, it must be shown that
+$(x, y) \in A \to (y, x) \in A$.
+
+Suppose $(x, y) \in A$. By the definition for $A$, this means that:
+
+$$ |x| = |y| $$
+
+By the symmetric property of equality, it follows that:
+
+$$ |y| = |x| $$
+
+Thus $(y, x) \in A$, and therefore $A$ is symmetric.
+
+_Proof ($A$ is transitive):_
+
+Let $x, y, z \in \mathbb{R}$.
+
+To prove that $A$ is transitive, it must be shown that
+$(x, y) \in A \wedge (y, z) \in A \to (x, z) \in A$.
+
+Suppose $(x, y) \in A$ and $(y, z) \in A$. By the definition for $A$, this means
+that:
+
+$$ |x| = |y| $$
+
+and that:
+
+$$ |y| = |z| $$
+
+It follows, by the transitive property of equality that $|x| = |z|$.
+
+Thus $(x, z) \in A$, and therefore $A$ is transitive.
+
+_Conclusion:_
+
+Since it has been shown that $A$ is reflexive, symmetric, and transitive, it can
+be concluded that $A$ is an equivalence relation. This is what was to be shown.
+
+Q.E.D.
+
+(2) Describe the distinct equivalence classes of each relation.
+
+Let $a \in \mathbf{R}$, then by the definition of absolute value:
+
+$$ |-a| = |a| $$
+
+with the exception of $0$, since $0 \in \mathbb{R}$, but there is no $-0$.
+
+Thus the equivalence classes are all sets of all real numbers and their
+corresponding negative counterpart, and also the set $\{0\}$.
 
 26. $D$ is the relation defined on $\mathbb{Z}$ as follows: For every
     $m, n \in \mathbb{Z}$,
 
 $$ m D n \Leftrightarrow 3 | (m^2 - n^2) $$
 
+(1) Prove that the relation is an equivalence relation.
+
+(2) Describe the distinct equivalence classes of each relation.
+
 27. $R$ is the relation defined on $\mathbb{Z}$ as follows: For every
     $(m, n) \in \mathbb{Z}$,
 
 $$ m R n \Leftrightarrow 4 | (m^2 - n^2) $$
 
+(1) Prove that the relation is an equivalence relation.
+
+(2) Describe the distinct equivalence classes of each relation.
+
 28. $I$ is the relation defined on $\mathbb{R}$ as follows:
 
 $$ \text{For every } x, y \in \mathbb{R}, m I n \Leftrightarrow x - y \text{ is an integer} $$
+
+(1) Prove that the relation is an equivalence relation.
+
+(2) Describe the distinct equivalence classes of each relation.
 
 29. Define $P$ on the set $\mathbb{R} \times \mathbb{R}$ of ordered pairs of
     real numbers as follows: For every
@@ -2175,16 +3217,28 @@ $$ \text{For every } x, y \in \mathbb{R}, m I n \Leftrightarrow x - y \text{ is 
 
 $$ (w, x) P (y, z) \Leftrightarrow w = y $$
 
+(1) Prove that the relation is an equivalence relation.
+
+(2) Describe the distinct equivalence classes of each relation.
+
 30. Define $Q$ on the set $\mathbb{R} \times \mathbb{R}$ as follows: For every
     $(w, x), (y, z) \in \mathbb{R} \times \mathbb{R}$,
 
 $$ (w, x) Q (y, z) \Leftrightarrow x = z $$
+
+(1) Prove that the relation is an equivalence relation.
+
+(2) Describe the distinct equivalence classes of each relation.
 
 31. Let $P$ be the set of all points in the Cartesian plane except the origin.
     $R$ is the relation defined on $P$ as follows: For every $p_1$ and $p_2$ in
     $P$,
 
 $$ p_1 R p_2 \Leftrightarrow p_1 \text{ and } p_2 \text{ lie on the same half-line emanating from the origin} $$
+
+(1) Prove that the relation is an equivalence relation.
+
+(2) Describe the distinct equivalence classes of each relation.
 
 32. Let $A$ be the set of all straight lines in the Cartesian plane. Define a
     relation $\mid \mid$ on $A$ as follows: For every $l_1$ and $l_2$ in $A$,
