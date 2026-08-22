@@ -3192,7 +3192,110 @@ $$ m D n \Leftrightarrow 3 | (m^2 - n^2) $$
 
 (1) Prove that the relation is an equivalence relation.
 
+**Proof:**
+
+Suppose $D$ is a relation on $\mathbb{Z}$ defined as follows:
+
+$$ \forall m, n \in \mathbb{Z}, m D n \Leftrightarrow 3 | (m^2 - n^2) $$
+
+To prove that $D$ is an equivalence relation, it must be shown that $D$ is
+reflexive, symmetric, and transitive.
+
+_Proof ($D$ is reflexive):_
+
+Let $x \in \mathbb{Z}$.
+
+To prove that $D$ is reflexive, it must be shown that $(x, x) \in D$. By the
+definition for $D$, this means it must be shown that:
+
+$$ 3 | (x^2 - x^2) $$
+
+Now, $x^2 - x^2 = 0$, and it is true that $3 | 0$, since $0 = 3 \cdot 0$. Thus
+$(x, x) \in D$, and it can be concluded that $D$ is reflexive.
+
+_Proof ($D$ is symmetric):_
+
+Let $x, y \in \mathbb{Z}$.
+
+To prove that $D$ is symmetric, it must be shown that
+$(x, y) \in D \to (y, x) \in D$. By definition of $D$, this means it must be
+shown that:
+
+$$ [3 | (x^2 - y^2)] \to [3 | (y^2 - x^2)] $$
+
+Suppose $3 | (x^2 - y^2)$. By the definition of divisibility, this means that:
+
+$$ x^2 - y^2 = 3k $$
+
+for some integer $k$.
+
+Now, consider that:
+
+$$ y^2 - x^2 = -1(x^2 - y^2) $$
+
+Then, by substitution:
+
+$$ = -1(3k) $$
+
+$$ = 3(-k) $$
+
+Now, $-k$ is an integer (by the product of integers), thus $3 | (y^2 - x^2)$,
+and hence $(y, x) \in D$, and therefore $D$ is symmetric.
+
+_Proof ($D$ is transitive):_
+
+Let $x, y, z \in \mathbb{Z}$.
+
+To prove that $D$ is transitive, it must be shown that
+$[(x, y) \in D \wedge (y, z) \in D] \to [(x, z) \in D]$.
+
+Suppose $(x, y) \in D$ and $(y, z) \in D$. Then, by the definition for $D$, this
+means:
+
+$$ 3 | (x^2 - y^2) $$
+
+and also:
+
+$$ 3 | (y^2 - z^2) $$
+
+(It must be shown that $3 | (x^2 - z^2)$.)
+
+By the definition of divisibility, this means that:
+
+$$ x^2 - y^2 = 3k $$
+
+and also that:
+
+$$ y^2 - z^2 = 3p $$
+
+for some integers $k$ and $p$.
+
+Now, if one adds $x^2 - y^2$ and $y^2 - z^2$, this yields:
+
+$$ x^2 - y^2 + y^2 - z^2 = x^2 - z^2 $$
+
+Then, by substitution:
+
+$$ x^2 - z^2 = (3k) + (3p) $$
+
+$$ = 3(k + p) $$
+
+Now, $k + p$ is an integer (by the sum of integers). Thus $3 | (x^2 - z^2)$ (by
+the definition of divisibility). It follows that $(x, z) \in D$, and therefore
+$D$ is transitive.
+
+_Conclusion:_
+
+Since $D$ has been shown to be reflexive, symmetric, and transitive, it follows
+that $D$ is an equivalence relation. This is what was to be shown.
+
+Q.E.D.
+
 (2) Describe the distinct equivalence classes of each relation.
+
+There are two distinct equivalence classes:
+
+$$ [0] = \{\dots, -6, -3, 0, 3, 6, \dots\}, [1] = \{\dots, -5, -4, -2, -1, 1, 2, 4, 5, \dots\} $$
 
 27. $R$ is the relation defined on $\mathbb{Z}$ as follows: For every
     $(m, n) \in \mathbb{Z}$,
@@ -3201,7 +3304,112 @@ $$ m R n \Leftrightarrow 4 | (m^2 - n^2) $$
 
 (1) Prove that the relation is an equivalence relation.
 
+**Proof:**
+
+Suppose $R$ is a relation defined on $\mathbb{Z}$ as follows:
+
+$$ \forall m, n \in \mathbb{Z}, m R n \Leftrightarrow 4 | (m^2 - n^2) $$
+
+To prove that $R$ is an equivalence relation, it must be shown that $R$ is
+reflexive, symmetric, and transitive.
+
+_Proof ($R$ is reflexive):_
+
+Let $x \in \mathbb{Z}$.
+
+To prove that $R$ is reflexive, it must be shown that $(x, x) \in R$. By the
+definition for $R$, this means it must be shown that:
+
+$$ 4 | (x^2 - x^2) $$
+
+Since $x^2 - x^2 = 0$, this means it must be shown that $4 | 0$. Now, $4 | 0$
+because $0 = 4 \cdot 0$. Therefore $(x, x) \in R$, and it can be concluded that
+$R$ is reflexive.
+
+_Proof ($R$ is symmetric):_
+
+Let $x, y \in \mathbb{Z}$.
+
+To prove that $R$ is symmetric, it must be shown that
+$(x, y) \in R \to (y, x) \in R$.
+
+Suppose $(x, y) \in R$, then, by definition for $R$, this means:
+
+$$ 4 | (x^2 - y^2) $$
+
+By the definition of divisibility, this means that:
+
+$$ x^2 - y^2 = 4k $$
+
+for some integer $k$.
+
+Now, consider that:
+
+$$ y^2 - x^2 = -1(x^2 - y^2) $$
+
+Then, by substitution:
+
+$$ y^2 - x^2 = -1(4k) $$
+
+$$ = 4(-k) $$
+
+Now, $-k$ is an integer (by the product of integers). Hence $4 | (y^2 - x^2)$,
+and it follows that $(y, x) \in R$, and therefore $R$ is symmetric.
+
+_Proof ($R$ is transitive):_
+
+Let $x, y, z \in \mathbb{Z}$.
+
+To prove that $R$ is transitive, it must be shown that
+$[(x, y) \in R \wedge (y, z) \in R] \to (x, z) \in R$.
+
+Suppose $(x, y) \in R$ and $(y, z) \in R$. By the definition for $R$, this means
+that:
+
+$$ 4 | (x^2 - y^2) $$
+
+and also that:
+
+$$ 4 | (y^2 - z^2) $$
+
+Now, by the definition for divisibility, this means that:
+
+$$ x^2 - y^2 = 4k $$
+
+and also that:
+
+$$ y^2 - z^2 = 4p $$
+
+for some integers $k$ and $p$.
+
+Now, consider that:
+
+$$ x^2 - z^2 = x^2 - y^2 + y^2 - z^2 $$
+
+Then, by substitution:
+
+$$ x^2 - z^2 = 4k + 4p $$
+
+$$ x^2 - z^2 = 4(k + p) $$
+
+Now, $k + p$ is an integer (by the sum of integers), and so it follows that
+$4 | (x^2 - z^2)$. This means that $(x, z) \in R$, and therefore $R$ is
+transitive.
+
+_Conclusion:_
+
+Since it has been shown that $R$ is reflexive, symmetric, and transitive, it can
+be concluded that $R$ is an equivalence relation. This is what was to be shown.
+
+Q.E.D.
+
 (2) Describe the distinct equivalence classes of each relation.
+
+There are two distinct equivalence classes:
+
+$$ [0] = \{\dots, -8, -4, -2, 0, 2, 4, 8, \dots\} = \text{ the set of all even integers } $$
+
+$$ [1] = \{\dots, -9, -5, -1, 1, 5, 9\dots\} = \text{ the set of all odd integers } $$
 
 28. $I$ is the relation defined on $\mathbb{R}$ as follows:
 
@@ -3209,7 +3417,81 @@ $$ \text{For every } x, y \in \mathbb{R}, m I n \Leftrightarrow x - y \text{ is 
 
 (1) Prove that the relation is an equivalence relation.
 
+**Proof:**
+
+Suppose $I$ is a relation defined on $\mathbb{R}$ as follows:
+
+$$ \forall x, y \in \mathbb{R}, m I n \Leftrightarrow (x - y) \in \mathbb{Z} $$
+
+To prove that $I$ is an equivalence relation, it must be shown that $I$ is
+reflexive, symmetric, and transitive.
+
+_Proof ($I$ is reflexive):_
+
+Let $x \in \mathbb{R}$.
+
+To prove that $I$ is reflexive, it must be shown that $(x, x) \in I$. By the
+definition for $I$, this means it must be shown that:
+
+$$ (x - x) \in \mathbb{Z} $$
+
+Now, $x - x = 0$, and $0 \in \mathbb{Z}$. Thus $(x, x) \in I$, and therefore $I$
+is reflexive.
+
+_Proof ($I$ is symmetric):_
+
+Let $x, y \in \mathbb{R}$.
+
+To prove that $I$ is symmetric, it must be shown that
+$(x, y) \in I \to (y, x) \in I$.
+
+Suppose $(x, y) \in I$, by the definition for $I$, this means that:
+
+$$ (x - y) \in \mathbb{Z} $$
+
+Now, consider:
+
+$$ y - x = -1(x - y) $$
+
+Now, $-1(x - y)$ is an integer (by the product of integers), and thus
+$(y - x) \in \mathbb{Z}$. Thus $(y, x) \in I$, and therefore $I$ is symmetric.
+
+_Proof ($I$ is transitive):_
+
+Let $x, y, z \in \mathbb{R}$.
+
+To prove that $I$ is transitive, it must be shown that
+$[(x, y) \in I \wedge (y, z) \in I] \to (x, z) \in I$.
+
+Suppose $(x, y) \in I$ and $(y, z) \in I$. By the definition for $I$, this means
+that:
+
+$$ (x - y) \in \mathbb{Z} $$
+
+and also that:
+
+$$ (y - z) \in \mathbb{Z} $$
+
+Now, consider that:
+
+$$ x - z = (x - y) + (y - z) $$
+
+Thus, $(x - z) \in \mathbb{Z}$ (by the sum of integers). It follows that
+$(x, z) \in I$, and therefore $I$ is transitive.
+
+_Conclusion:_
+
+Since it has been shown that $I$ is reflexive, symmetric, and transitive, it can
+be concluded that $I$ is an equivalence relation. This is what was to be shown.
+
+Q.E.D.
+
 (2) Describe the distinct equivalence classes of each relation.
+
+There is one class for each real number $x$ with $0 \leq x < 1$. The distinct
+classes are all sets of the form
+$[x] = y \in \mathbb{R}, | y = n + x \text{ for some integer } n$, where $x$ is
+a real number such that $0 \leq x < 1$.
 
 29. Define $P$ on the set $\mathbb{R} \times \mathbb{R}$ of ordered pairs of
     real numbers as follows: For every
@@ -3219,7 +3501,72 @@ $$ (w, x) P (y, z) \Leftrightarrow w = y $$
 
 (1) Prove that the relation is an equivalence relation.
 
+**Proof:**
+
+Suppose $P$ is a relation on $\mathbb{R} \times \mathbb{R}$, defined as:
+
+$$ \forall (w, x), (y, z) \in \mathbb{R} \times \mathbb{R}, (w, x) P (y, z) \Leftrightarrow w = y $$
+
+To prove that $P$ is an equivalence relation, it must be shown that $P$ is
+reflexive, symmetric, and transitive.
+
+_Proof ($P$ is reflexive):_
+
+Let $(w, x) \in \mathbb{R} \times \mathbb{R}$.
+
+To prove that $P$ is reflexive, it must be shown that $[(w, x), (w, x)] \in P$.
+By the definition for $P$, this means it must be shown that:
+
+$$ w = w $$
+
+This is trivially true. Thus $[(w, x), (w, x)] \in P$, and therefore $P$ is
+reflexive.
+
+_Proof ($P$ is symmetric):_
+
+Let $(w, x), (y, z) \in \mathbb{R} \times \mathbb{R}$.
+
+TO prove that $P$ is symmetric, it must be shown that
+$[(w, x), (y, z)] \in P \to [(y, z), (w, x)] \in P$.
+
+Suppose $[(w, x), (y, z)] \in P$. By definition for $P$, this means that:
+
+$$ w = y $$
+
+This means that $y = w$, by the symmetric property of equality. This means that
+$[(y, z), (w, x)] \in P]$, and therefore $P$ is symmetric.
+
+_Proof ($P$ is transitive):_
+
+Let $(w, x), (y, z), (a, b) \in \mathbb{R} \times \mathbb{R}$.
+
+To prove that $P$ is transitive, it must be shown that
+$[[(w, x), (y, z)] \in P \wedge [(y, z), (a, b)] \in P \to [(w, x), (a, b)] \in P$.
+
+Suppose $[(w, x), (y, z)] \in P$ and $[(y, z), (a, b)] \in P$. By the definition
+for $P$, this means that:
+
+$$ w = y $$
+
+And also that:
+
+$$ y = a $$
+
+By the transitive property of equality, this means that $w = a$. It follows that
+$[(w, x), (a, b)] \in P$, and therefore $P$ is transitive.
+
+_Conclusion:_
+
+Since it has been shown that $P$ is reflexive, symmetric, and transitive, it
+follows that $P$ is an equivalence relation. This is what was to be shown.
+
+Q.E.D.
+
 (2) Describe the distinct equivalence classes of each relation.
+
+There is one equivalence class for each real number. The distinct equivalence
+classes are all sets of ordered pairs
+$(x, y) \in \mathbb{R} \times \mathbb{R}, | x = a$ for each real number $a$.
 
 30. Define $Q$ on the set $\mathbb{R} \times \mathbb{R}$ as follows: For every
     $(w, x), (y, z) \in \mathbb{R} \times \mathbb{R}$,
@@ -3228,7 +3575,11 @@ $$ (w, x) Q (y, z) \Leftrightarrow x = z $$
 
 (1) Prove that the relation is an equivalence relation.
 
+Omitted.
+
 (2) Describe the distinct equivalence classes of each relation.
+
+Omitted.
 
 31. Let $P$ be the set of all points in the Cartesian plane except the origin.
     $R$ is the relation defined on $P$ as follows: For every $p_1$ and $p_2$ in
@@ -3238,15 +3589,22 @@ $$ p_1 R p_2 \Leftrightarrow p_1 \text{ and } p_2 \text{ lie on the same half-li
 
 (1) Prove that the relation is an equivalence relation.
 
+Omitted.
+
 (2) Describe the distinct equivalence classes of each relation.
+
+Omitted.
 
 32. Let $A$ be the set of all straight lines in the Cartesian plane. Define a
     relation $\mid \mid$ on $A$ as follows: For every $l_1$ and $l_2$ in $A$,
 
-$$ l_1 \mid \mid l_2 \Leftrightarrow l_1 \text{ is parallel to } l_2 $$
+$$ l_1 \parallel l_2 \Leftrightarrow l_1 \text{ is parallel to } l_2 $$
 
-Then $\mid \mid$ is an equivalence relation on $A$. Describe the equivalence
+Then $\parallel$ is an equivalence relation on $A$. Describe the equivalence
 classes of this relation.
+
+Every possible slope is an equivalence class, including vertical lines
+(undefined).
 
 33. Let $A$ be the set of points in the rectangle with $x$ and $y$ coordinates
     between $0$ and $1$. That is,
@@ -3282,6 +3640,10 @@ than themselves. Then $R$ is an equivalence relation on $A$. Imagine gluing
 together all the points that are in the same equivalence class. Describe the
 resulting figure.
 
+Gluing the top and the bottom edges of the rectangle together forms a cylinder,
+and then gluing the left and right edges of the rectangle together forms a
+doughnut shape (a torus).
+
 34. The documentation for the computer language Java recommends that when an
     "equals method" is defined for an object, it be an equivalence relation.
     That is, if $R$ is defined as follows:
@@ -3300,8 +3662,15 @@ where $c$ is a small positive number that depends on the resolution of the
 computer display. Is the programmer's equals method an equivalence relation?
 Justify your answer.
 
+No. If points $p$, $q$, and $r$ all lie on a straight line with $q$ in the
+middle, and if $p$ is $c$ units from $q$ and $q$ is $c$ units from $r$, then $p$
+is more than $c$ units from $r$. In other words, the programmer's equals method
+is not an equivalence relation because it is not transitive.
+
 35. Find an additional representative circuit for the input/output table of
     Example 8.3.9.
+
+Omitted.
 
 Let $R$ be an equivalence relation on a set $A$. Prove each of the statements in
 36-41 directly from the definitions of equivalence relation and equivalence
@@ -3309,27 +3678,200 @@ class without using the results of Lemma 8.3.2, Lemma 8.3.3, or Theorem 8.3.4.
 
 36. For every $a$ in $a$, $a \in [a]$.
 
+**Proof:**
+
+Suppose $R$ is an equivalence relation on a set $A$, and let $a \in A$.
+
+Since $R$ is an equivalence relation, this means that $R$ is reflexive, or, in
+other words, every element in $A$ is related to itself by $R$. In particular,
+$a R a$, and hence, by definition of an equivalence class, $a \in [a]$. This is
+what was to be shown.
+
+Q.E.D.
+
 37. For every $a$ and $b$ in $A$, if $b \in [a]$ then $a R b$.
+
+**Proof:**
+
+Suppose $R$ is an equivalence relation on a set $A$, and let $a, b \in A$.
+
+Let $b \in [a]$.
+
+By definition of class, this means that:
+
+$$ b \in [a] \Leftrightarrow b R a $$
+
+Since $R$ is an equivalence relation, $R$ is symmetric. By the definition of
+symmetry, this means that:
+
+$$ a R b $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 38. For every $a$, $b$, and $c$ in $A$, if $b R c$ and $c \in [a]$ then
     $b \in [a]$.
 
+**Proof:**
+
+Suppose $R$ is an equivalence relation on a set $A$, and let $a, b, c \in A$.
+
+Let $b R c$ and let $c \in [a]$.
+
+We must show that $b \in [a]$.
+
+By the definition of class, since $c \in [a]$, this means that $c R a$. Since
+$R$ is an equivalence relation, and therefore transitive, and also since
+$b R c$, it follows, by the definition of transitive, that $b R c$ and $c R a$.
+In other words $b R a$, and by definition of class, this means that $b \in [a]$.
+This is what was to be shown.
+
+Q.E.D.
+
 39. For every $a$ and $b$ in $A$, if $[a] = [b]$ then $a R b$.
+
+**Proof:**
+
+Suppose $R$ is an equivalence relation on a set $A$, and let $a, b \in A$.
+
+Let $[a] = [b]$.
+
+Since $R$ is reflexive (by the definition of equivalence relation), it follows
+that $a \in [a]$ and $b \in [b]$.
+
+By the supposition, $[a] = [b]$, and so it follows that $a \in [b]$. By the
+definition of class, this means that $a R b$. This is what was to be shown.
+
+Q.E.D.
 
 40. For every $a$, $b$, and $x$ in $A$, if $a R b$ and $x \in [a]$ then
     $x \in [b]$.
 
+**Proof:**
+
+Suppose $R$ is an equivalence relation on a set $A$, and let $a, b, x \in A$.
+
+Let $a R b$ and $x \in [a]$.
+
+It must be shown that $x \in [b]$.
+
+Since $x \in [a]$, by the definition of equivalence class, this means that
+$x R a$. Since $a R b$, by the definition of transitivity (since $R$ is an
+equivalence relation and therefore transitive), it follows that $x R b$. By the
+definition of equivalence class, this means that $x \in [b]$. This is what was
+to be shown.
+
+Q.E.D.
+
 41. For every $a$ and $b$ in $A$, if $a \in [b]$ then $[a] = [b]$.
+
+**Proof:**
+
+Suppose $R$ is an equivalence relation on a set $A$, and let $a, b \in A$.
+
+Let $a \in [b]$.
+
+To prove that $[a] = [b]$, it must be shown that $[a] \subseteq [b]$, and that
+$[b] \subseteq [a]$.
+
+_Proof ($[a] \subseteq [b]$):_
+
+Let $x \in [a]$.
+
+By the definition of equivalence class, this means that $x R a$. Since
+$a \in [b]$, this means that $a R b$. Since $R$ is transitive (because $R$ is an
+equivalence relation), this means that $x R b$. By the definition of class, this
+means that $x \in [b]$. It follows that $[a] \subseteq [b]$. This is what was to
+be shown.
+
+_Proof ($[b] \subseteq [a]$):_
+
+Let $x \in [b]$.
+
+By the definition of equivalence, class this means that $x R b$. Since
+$a \in [b]$, this means that $a R b$. Since $R$ is symmetric (because $R$ is an
+equivalence relation), this means that $b R a$. Then, since $R$ is transitive
+(again, because $R$ is an equivalence relation), it follows that $x R a$. By the
+definition of equivalence class, this means that $x \in [a]$. It follows that
+$[b] \subseteq [a]$. This is what was to be shown.
+
+_Conclusion:_
+
+Since it has been shown that $[a] \subseteq [b]$ and also that
+$[b] \subseteq [a]$, it follows (by the definition for subset), that
+$[a] = [b]$. This is what was to be shown.
+
+Q.E.D.
 
 42. Let $R$ be the relation defined in Example 8.3.12.
 
 a. Prove that $R$ is reflexive.
 
+**Proof:**
+
+Suppose $A$ is the set of all ordered pairs of integers for which the second
+element of the pair is nonzero:
+
+$$ A = \mathbb{Z} \times (\mathbb{Z} - \{0\}) $$
+
+Then, define a relation $R$ on $A$ as follows:
+
+$$ \forall (a, b), (c, d) \in A, (a, b) R (c, d) \Leftrightarrow ad = bc $$
+
+Let $(x, y) \in A$.
+
+To prove that $R$ is reflexive, it must be shown that $[(x, y), (x, y)] \in R$.
+By the definition of $R$, this means it must be shown that:
+
+$$ xy = yx $$
+
+By the commutative law of product, this is true. Therefore
+$[(x, y), (x, y)] \in R$, and $R$ is reflexive.
+
+Q.E.D.
+
 b. Prove that $R$ is symmetric.
+
+**Proof:**
+
+Suppose $A$ is the set of all ordered pairs of integers for which the second
+element of the pair is nonzero:
+
+$$ A = \mathbb{Z} \times (\mathbb{Z} - \{0\}) $$
+
+Then, define a relation $R$ on $A$ as follows:
+
+$$ \forall (a, b), (c, d) \in A, (a, b) R (c, d) \Leftrightarrow ad = bc $$
+
+Let $(x, y), (z, a) \in A$.
+
+To prove that $R$ is symmetric, it must be shown that
+$[(x, y), (z, a)] \in R \to [(z, a), (x, y)] \in R$.
+
+Suppose $[(x, y), (z, a)] \in R$. By the definition for $R$, this means that:
+
+$$ xa = yz $$
+
+(It must be shown that $zy = ax$.)
+
+By the commutative property for product, and the symmetric property of equality,
+$xa = yz$ can be rewritten as:
+
+$$ zy = ax $$
+
+It follows that $[(z, a), (x, y)] \in R$, and therefore $R$ is symmetric. This
+is what was to be shown.
+
+Q.E.D.
 
 c. List four distinct elements in $[(1, 3)]$.
 
+$$ (2, 6), (-2, -6), (3, 9), (-3, -9) $$
+
 d. List four distinct elements in $[(2, 5)]$.
+
+$$ (4, 10), (6, 15), (8, 20), (10, 25) $$
 
 43. In Example 8.3.12, define operations of addition $(+)$ and multiplication
     $(\cdot)$ as follows: For every $(a, b), (c, d) \in A$,
@@ -3342,27 +3884,39 @@ a. Prove that this addition is well defined. That is, show that if
 $[(a, b)] = [(a', b')]$ and $[(c, d)] = [(c', d')]$, then
 $[(ad + bc), bd] = [(a'd' + b'c', b'd')]$.
 
+Omitted.
+
 b. Prove that this multiplication is well defined. That is, show that if
 $[(a, b)] = [(a', b')]$ and $[(c, d)] = [(c', d')]$, then
 $[(ac, bd)] = [(a'c', b'd')]$.
+
+Omitted.
 
 c. Show that $[(0, 1)]$ is an identity element for addition. That is, show that
 for any $(a, b) \in A$,
 
 $$ [(a, b)] + [(0, 1)] = [(0, 1)] + [(a, b)] = [(a, b)] $$
 
+Omitted.
+
 d. Find an identity element for multiplication. That is, find $(i, j)$ in $A$ so
 that for every $(a, b)$ in $A$,
 $[(a, b)] \cdot [(i, j)] = [(i, j)] \cdot [(a, b)] = [(a, b)]$.
+
+Omitted.
 
 e. For any $(a, b) \in A$, show that $[(-a, b)]$ is an inverse for $[(a, b)]$
 for addition. That is, show that
 $[(-a, b)] + [(a, b)] = [(a, b)] + [(-a, b)] = [(0, 1)]$.
 
+Omitted.
+
 f. Given any $(a, b) \in A$ with $a \neq 0$, find an inverse for $[(a, b)]$ for
 multiplication. That is, find $(c, d)$ in $A$ so that
 $[(a, b)] \cdot [(c, d)] = [(c, d)] \cdot [(a, b)] = [(i, j)]$, where $[(i, j)]$
 is the identity element you found in part (d).
+
+Omitted.
 
 44. Let $A = \mathbb{Z}^+ \times \mathbb{Z}^+$. Define a relation $R$ on $A$ as
     follows: For every $(a, b)$ and $(c, d)$ in $A$,
@@ -3371,15 +3925,27 @@ $$ (a, b) R (c, d) \Leftrightarrow a + d = c + b $$
 
 a. Prove that $R$ is reflexive.
 
+Omitted.
+
 b. Prove that $R$ is symmetric.
+
+Omitted.
 
 c. Prove that $R$ is transitive.
 
+Omitted.
+
 d. List five elements in $[(1, 1)]$.
+
+Omitted.
 
 e. List five elements in $[(3, 1)]$.
 
+Omitted.
+
 f. List five elements in $[(1, 2)]$.
+
+Omitted.
 
 g. Describe the distinct equivalence classes of $R$.
 
@@ -3393,23 +3959,53 @@ transitive. For any two elements $x$ and $y$ in $A$, if $x R y$ then $y R x$
 since $R$ is symmetric. Thus it follows by transitivity that $x R x$, and hence
 $R$ is reflexive."
 
+The mistake in the argument is that just because $R$ is symmetric and transitive
+does not necessarily mean it is reflexive. Recall that for $R$ to be reflexive,
+$\forall x \in A, x R x$. Consider, however, a set where the relation is both
+symmetric and transitive, but not reflexive:
+
+$$ A = \{1, 2\} $$
+
+$$ R = \{(1, 1)\} $$
+
+Now, $R$ is symmetric, since $(1, 1) \to (1, 1)$, and $R$ is transitive, since
+$(1, 1) \wedge  (1, 1) \to (1, 1)$, and while $(1, 1)$ is reflexive, there is no
+ordered pair in the set where $2 R 2$, so therefore $R$ is not reflexive, even
+though $R$ is symmetric and transitive.
+
 46. Let $R$ be a relation on a set $A$ and suppose $R$ is symmetric and
     transitive. Prove the following: If for every $x$ in $A$ there is a $y$ in
     $A$ such that $x R y$, then $R$ is an equivalence relation.
+
+Omitted.
 
 47. Refer to the quote at the beginning of this section to answer the following
     questions.
 
 a. What is the name of the Knight's song called?
 
+Omitted.
+
 b. What is the name of the Knight's song?
+
+Omitted.
 
 c. What is the Knight's song called?
 
+Omitted.
+
 d. What _is_ the Knight's song?
+
+Omitted.
 
 e. What is your (full, legal) name?
 
+Omitted.
+
 f. What are you called?
 
+Omitted.
+
 g. What _are_ you? (Do not answer this on paper; just think about it.)
+
+Omitted.

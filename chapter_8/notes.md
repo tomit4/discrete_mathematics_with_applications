@@ -439,3 +439,23 @@ $$ d | (m - n) $$
 Symbolically:
 
 $$ m \equiv n(\mod d) \Leftrightarrow d | (m - n) $$
+
+---
+
+Page 542
+
+**Example 8.3.12**
+
+_Rational Numbers are Really Equivalence Classes
+
+Let $A$ be the set of all ordered pairs of integers for which the second element
+of the pair is nonzero. Symbolically:
+
+$$ A = \mathbb{Z} \times (\mathbb{Z} - \{0\}) $$
+
+Define a relation $R$ on $A$ as follows: For all pairs $(a, b)$ and $(c, d)$ in
+$A$,
+
+$$ (a, b) R (c, d) \Leftrightarrow ad = bc $$
+
+The fact is that $R$ is an equivalence relation.
