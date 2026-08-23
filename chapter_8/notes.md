@@ -459,3 +459,469 @@ $A$,
 $$ (a, b) R (c, d) \Leftrightarrow ad = bc $$
 
 The fact is that $R$ is an equivalence relation.
+
+---
+
+Page 549
+
+**Theorem 8.4.1 Modular Equivalences**
+
+Let $a$, $b$, and $n$ be any integers and suppose $n > 1$. The following
+statements are all equivalent:
+
+1. $n | (a - b)$
+
+2. $a \equiv b (\mod n)$
+
+3. $a = b + kn$ for some integer $k$
+
+4. $a$ and $b$ have the same (nonnegative) remainder when divided by $n$
+
+5. $a \mod n = b \mod n$
+
+**Proof:**
+
+We will show that
+$(1) \Rightarrow (2) \Rightarrow (3) \Rightarrow (4) \Rightarrow (5) \Rightarrow (1)$.
+It will follow by the transitivity of if-then that all five statements are
+equivalent.
+
+So let $a$, $b$, and $n$ be any integers with $n > 1$.
+
+_Proof that $(1) \Rightarrow (2)$:_
+
+Suppose that $n | (a - b)$. By definition of congruence module $n$, we can
+immediately conclude that $a \equiv b (\mod n)$.
+
+_Proof that $(2) \Rightarrow (3)$:_
+
+Suppose $a \equiv b (\mod n)$. By definition of congruence modulo $n$,
+$n | (a - b)$. Thus, by definition of divisibility, $a - b = kn$, for some
+integer $k$. Adding $b$ to both sides gives that $a = b + kn$.
+
+_Proof that $(3) \Rightarrow (4)$:_
+
+Suppose that $a = b + kn$, for some integer $k$. Use the quotient-remainder
+theorem to divide $a$ by $n$ to obtain
+
+$$ a = qn + r \text{ where } q \text{ and } r \text{ are integers and } 0 \leq r < n $$
+
+So $r$ is the remainder obtained when $a$ is divided by $n$. Substituting
+$b + kn$ for $a$ in the equation $a = qn + r$ gives that
+
+$$ b + kn = qn + r $$
+
+and subtracting $kn$ from both sides and factoring out $n$ yields
+
+$$ b = (q - k)n + r $$
+
+Now since $0 \leq r < n$, the uniqueness property of the quotient-remainder
+theorem guarantees that $r$ is also the remainder obtained when $b$ is divided
+by $n$. Thus $a$ and $b$ have the same remainder when divided by $n$.
+
+_Proof that $(4) \Rightarrow (5)$:_
+
+Suppose that $a$ and $b$ have the same remainder when divided by $n$. It follows
+immediately from the definition of the $\mod$ function that
+$a \mod n = b \mod n$.
+
+_Proof that $(5) \Rightarrow (1)$:_
+
+Suppose that $a \mod n = b \mod n$. By definition of the $\mod$ function, $a$
+and $b$ have the same remainder when divided by $n$. Thus, by the
+quotient-remainder theorem, we can write
+
+$$ a = q_1n + r \text{ and } b = q_2n + r \text{ where } q_1, q_2 \text{ and } r \text{ are integers and } 0 \leq r < n $$
+
+It follows that
+
+$$ a - b = (q_1n + r) - (q_2n + r) = (q_1 - q_2)n $$
+
+Therefore, since $q_1 - q_2$ is an integer, $n | (a - b)$.
+
+---
+
+Page 550
+
+**Definition**
+
+Given integers $a$ and $n$ with $n > 1$, **the residue of $a$ modulo $n$** is
+$a \mod n$, the nonnegative remainder obtained when $a$ is divided by $n$. The
+numbers $0, 1, 2, \dots, n - 1$ are called a **complete set of residues modulo
+$n$**. To **reduce a number modulo $n$** means to set it equal to its residue
+modulo $n$. If a modulus $n > 1$ is fixed throughout a discussion and an integer
+$a$ is given, the words "modulo $n$" are often dropped and we simply speak of
+**the residue of $a$**.
+
+---
+
+Page 550
+
+**Theorem 8.4.2 Congruence Modulo $n$ Is an Equivalence Relation**
+
+If $n$ is any integer with $n > 1$, congruence modulo $n$ is an equivalence
+relation on the set of all integers. The distinct equivalence classes of the
+relation are the sets $[0], [1], [2], \dots, [n - 1]$, where for each
+$a = 0, 1, 2, \dots, n - 1$,
+
+$$ [a] = \{m \in \mathbb{Z} | m \equiv a (\mod n)\} $$
+
+or, equivalently,
+
+$$ [a] = \{m \in \mathbb{Z} | m = a + kn \text{ for some integer } k\} $$
+
+**Proof:**
+
+Suppose $n$ is any integer with $n > 1$. We must show that congruence modulo $n$
+is reflexive, symmetric, and transitive.
+
+_Proof of reflexivity:_
+
+Suppose $a$ is any integer. To show that $a \equiv a (\mod n)$, we must show
+that $n | (a - a)$. Now $a - a = 0$, and $n | 0$ because $0 = n \cdot 0$.
+Therefore $a \equiv a (\mod n)$.
+
+_Proof of symmetry:_
+
+Suppose $a$ and $b$ are any integers such that $a \equiv b(\mod n)$. We must
+show that $b \equiv a (\mod n)$. Now since $a \equiv b(\mod n)$, then
+$n | (a - b)$. Thus, by definition of divisibility, $a - b = nk$, for some
+integer $k$. Multiplying both sides of this equation by $-1$ to obtain
+
+$$ -(a - b) = -nk $$
+
+or, equivalently,
+
+$$ b - a = n(-k) $$
+
+Thus, by definition of divisibility $n | (b - a)$, and so, by definition of
+congruence modulo $n$, $b \equiv a (\mod n)$.
+
+_Proof of transitivity:_
+
+This is left as exercise 5 at the end of the section.
+
+_Proof that the distinct equivalence classes are
+$[0], [1], [2], \dots, [n - 1]$:_
+
+This is left as exercise 6 at the end of the section.
+
+---
+
+Page 551
+
+**Theorem 8.4.3 Modular Arithmetic**
+
+Let $a$, $b$, $c$, $d$, and $n$ be integers with $n > 1$, and suppose
+
+$$ a \equiv c (\mod n) \text{ and } b \equiv d(\mod n) $$
+
+Then
+
+1. $(a + b) \equiv (c + d)(\mod n)$
+
+2. $(a - b) \equiv (c - d)(\mod n)$
+
+3. $ab \equiv cd(\mod n)$
+
+4. $a^m \equiv c^m(\mod n)$ for every positive integer $m$
+
+**Proof:**
+
+Because we will make greatest use of part 3 of this theorem, we prove it here
+and leave the proofs of the remaining parts of the theorem to exercises 9-11 at
+the end of the section.
+
+_Proof of Part 3:_Proof Suppose $a$, $b$, $c$, $d$, and $n$ are integers with
+$n > 1$, and suppose $a \equiv b(\mod n)$ and $c \equiv d(\mod n)$. By Theorem
+8.4.1, there exists integers $s$ and $t$ such that
+
+$$ a = c + sn \text{ and } b = d + tn $$
+
+Then
+
+$$ ab = (c + sn)(d + tn) $$
+
+$$ = cd + ctn + snd + sntn $$
+
+$$ = cd + n(ct + sd + stn) $$
+
+Let $k = ct + sd + stn$. Then $k$ is an integer because it is a sum of products
+of integers, and $ab = cd + nk$. Thus by Theorem 8.4.1, $ab \equiv cd(\mod n)$.
+
+---
+
+Page 552
+
+**Corollary 8.4.4**
+
+Let $a$, $b$, and $n$ be integers with $n > 1$. Then
+
+$$ ab \equiv [(a \mod n)(b \mod n)](\mod n) $$
+
+or, equivalently,
+
+$$ ab \mod n = [(a \mod n)(b \mod n)]\mod n $$
+
+In particular, if $m$ is a positive integer, then
+
+$$ a^m \equiv [(a \mod n)^m](\mod n) $$
+
+---
+
+Page 555
+
+**Definition**
+
+An integer $d$ is said to be a **linear combination of integers** $a$ and $b$
+if, and only if, there exist integers $s$ and $t$ such that $as + bt = d$.
+
+---
+
+Page 555
+
+**Theorem 8.4.5 Writing a Greatest Common Divisor as a Linear Combination**
+
+For all integers $a$ and $b$, not both zero, if $d = \text{gcd}(a, b)$, then
+there exist integers $s$ and $t$ such that $as + bt = d$.
+
+**Proof:**
+
+Given integers $a$ and $b$, not both zero, and given $d = \text{gcd}(a, b)$, let
+
+$$ S = \{x | x \text{ is a positive integer and } x = as + bt \text{ for some integers } s \text{ and } t\} $$
+
+Note that $S$ is a nonempty set because (1) if $a > 0$ then
+$1 \cdot a + 0 \cdot b \in S$, (2) if $a < 0$ then
+$(-1) \cdot a + 0 \cdot b \in S$, and (3) if $a = 0$ then, by assumption,
+$b \neq 0$, and hence $0 \cdot a + 1 \cdot b \in S$ or
+$0 \cdot a + (-1) \cdot b \in S$. Thus, because $S$ is a nonempty subset of
+positive integers, by the well-ordering principle for the integers there is a
+least element $c$ in $S$. By definition of $S$,
+
+$$ c = as + bt \text{ for some integers } s \text{ and } t $$
+
+We will show that (1) $c \geq d$, and (2) $c \leq d$, and we will therefore be
+able to conclude that $c = d = \text{gcd}(a, b)$.
+
+_(1) Proof that $c \geq d$:_
+
+_[In this part of the proof, we show that $d$ is a divisor of $c$ and thus that
+$d \leq c$.]_ Because $d = \text{gcd}(a, b)$, by definition of greatest common
+divisor, $d | a$ and $d | b$. Hence $a = dx$ and $b = dy$ for some integers $x$
+and $y$. Then
+
+$$ c = as + bt $$
+
+$$ = (dx)s + (dy)t $$
+
+$$ = d(xs + y) $$
+
+Now $xs + yt$ is an integer because it is a sum of products of integers. Thus,
+by definition of divisibility, $d | c$. Both $c$ and $d$ are positive, and
+hence, by Theorem 4.4.1, $c \geq d$.
+
+_(2) Proof that $c \leq d$:_
+
+_[In this part of the proof, we show that $c$ is a divisor of both $a$ and $b$
+and therefore that $c$ is less than or equal to the greatest common divisor of
+$a$ and $b$, which is $d$.]_ Apply the quotient-remainder theorem to the
+division of $a$ by $c$ to obtain
+
+$$ a = cq + r \text{ for some integers } q \text{ and } r \text{ with } 0 \leq r < c $$
+
+Thus for some integers $q$ and $r$ with $0 \leq r < c$,
+
+$$ r = q - cq $$
+
+Now $c = as + bt$. Therefore, for some integers $q$ and $r$ with $0 \leq r < c$,
+
+$$ r = a - (as + bt)q $$
+
+$$ = a(1 - sq) - btq $$
+
+Thus $r$ is a linear combination of $a$ and $b$. If $r > 0$, then $r$ would be
+in $S$, and so $r$ would be a smaller element of $S$ than $c$, which would
+contradict the fact that $c$ is the least element of $S$. Hence $r = 0$. By
+substitution into (8.4.4),
+
+$$ a = cq $$
+
+and therefore $c | a$.
+
+An almost identical argument establishes that $c | b$ and is left as exercise 30
+at the end of the section.
+
+Because $c | a$ and $c | b$, $c$ is a common divisor of $a$ and $b$. Hence $c$
+is less than or equal to the greatest common divisor of $a$ and $b$. In other
+words, $c \leq d$.
+
+From (1) and (2), we conclude that $c = d$. It follows that $d$, the greatest
+common divisor of $a$ and $b$, is equal to $as + bt$.
+
+---
+
+Page 557
+
+**Definition**
+
+Given any integer $a$ and any positive integer $n$, if there exists an integer
+$s$ such that $as \equiv 1(\mod n)$, then $s$ is called **an inverse for $a$
+modulo $n$.**
+
+---
+
+Page 557
+
+**Definition**
+
+Integers $a$ and $b$ are **relatively prime** if, and only if,
+$\text{gcd}(a, b) = 1$. Integers $a_1, a_2, a_3, \dots, a_n$ are **pairwise
+relatively prime** if, and only if, $\text{gcd}(a_i, a_j) = 1$ for all integers
+$i$ and $j$ with $1 \leq i$, $j \leq n$, and $i \neq j$.
+
+---
+
+Page 557
+
+**Corollary 8.4.6**
+
+If $a$ and $b$ are relatively prime integers, then there exist integers $s$ and
+$t$ such that $as + bt = 1$.
+
+---
+
+Page 558
+
+**Corollary 8.4.7 Existence of Inverses Modulo $n$**
+
+For all integers $a$ and $n$, if $\text{gcd}(a, n) = 1$, then there exists an
+integer $s$ such that $as \equiv 1(\mod n)$, and so $s$ is an inverse for $a$
+modulo $n$.
+
+**Proof:**
+
+Suppose $a$ and $n$ are integers and $\text{gcd}(a, n) = 1$. By Corollary 8.4.6,
+there exist integers $s$ and $t$ such that
+
+$$ as + nt = 1 $$
+
+Subtracting $nt$ from both sides gives that
+
+$$ as = 1 - nt = 1 + (-t)n $$
+
+Thus, by definition of congruence modulo $n$,
+
+$$ as \equiv 1(\mod n) $$
+
+---
+
+Page 562
+
+**Theorem 8.4.8 Euclid's Lemma**
+
+For all integers $a$, $b$, and $c$, if $\text{gcd}(a, c) = 1$ and $a | bc$, then
+$a | b$.
+
+**Proof:**
+
+Suppose $a$, $b$, and $c$ are integers, $\text{gcd}(a, c) = 1$, and $a | bc$.
+_[We must show that $a | b$.]_ By Theorem 8.4.5, there exist integers $s$ and
+$t$ so that
+
+$$ as + ct = 1 $$
+
+Multiply both sides of this equation by $b$ to obtain
+
+$$ bas + bct = b $$
+
+Since $a | bc$, by definition of divisibility there exists an integer $k$ such
+that
+
+$$ bc = ak $$
+
+Substituting (8.4.8) into (8.4.7), rewriting, and factoring out an $a$ gives
+that
+
+$$ b = bas + (ak)t = a(bs + kt) $$
+
+Let $r = bs + kt$. Then $r$ is an integer (because $b$, $s$, $k$, and $t$ are
+all integers), and $b = ar$. Thus $a | b$ by definition of divisibility.
+
+Page 562
+
+**Theorem 8.4.9 Cancellation Theorem for Modular Congruence**
+
+For all integers $a$, $b$, and $c$, and $n$ with $n > 1$, if
+$\text{gcd}(c, n) = 1$ and $ac = bc(\mod n)$, then $a \equiv b(\mod n)$.
+
+**Proof:**
+
+Suppose $a$, $b$, $c$, and $n$ are integers, $\text{gcd}(c, n) = 1$, and
+$ac \equiv bc(\mod n)$. _[We must show that $a \equiv b(\mod n)$.]_ By
+definition of congruence modulo $n$,
+
+$$ n | (ac - bc) $$
+
+and so, since
+
+$$ ac - bc = (a - b)c $$
+
+then
+
+$$ n | (a - b)c $$
+
+Because $\text{gcd}(c, n) = 1$, we may apply Euclid's lemma to obtain
+
+$$ n | (a - b) $$
+
+and so, by definition of congruence modulo $n$,
+
+$$ a \equiv b(\mod n) $$
+
+---
+
+Page 563
+
+**Theorem 8.4.10 Fermat's Little Theorem**
+
+If $p$ is any prime number and $a$ is any integer such that $p \cancel{|} a$,
+then $a^{p - 1} \equiv 1(\mod p)$.
+
+**Proof:**
+
+Suppose $p$ is any prime number and $a$ is any integer such that
+$p \cancel{|} a$. Note that $a \neq 0$ because otherwise $p$ would divide $a$.
+Consider the set of integers
+
+$$ S = \{a, 2a, 3a, \dots, (p - 1)a\} $$
+
+We claim that no two elements of $S$ are congruent modulo $p$. For suppose
+$sa \equiv ra(\mod p)$ for some integers $s$ and $r$ with
+$1 \leq r < s \leq p - 1$. Then, by definition of congruence modulo $p$,
+
+$$ p | (sa - ra) \text{ or, equivalently, } p | (s - r)a $$
+
+Now $p \cancel{|} a$ by hypothesis, and because $p$ is prime,
+$\text{gcd}(a, p) = 1$. Thus, by Euclid's lemma, $p | (s - r)$, But this is
+impossible because $0 < s - r < p$.
+
+Consider the function $F$ from $S$ to the set $T = \{1, 2, 3, \dots, (p - 1)\}$
+that sends each element of $S$ to its residue modulo $p$. Then $F$ is one-to-one
+because no two elements of $S$ are congruent modulo $p$. In Section 9.4 we prove
+that if a function from one finite set to another is one-to-one, then it is also
+onto. Hence $F$ is onto, and so $p - 1$ residues of the $p - 1$ elements of $S$
+are exactly the numbers $1, 2, 3 \dots, (p - 1)$.
+
+It follows by Theorem 8.4.3(3) that
+
+$$ a \cdot 2a \cdot 3a \cdots (p - 1)a \equiv [1 \cdot 2 \cdot 3 \cdots (p - 1)](\mod p) $$
+
+or, equivalently,
+
+$$ a^{p - 1}(p - 1)! \equiv (p - 1)!(\mod p) $$
+
+Now because $p$ is prime, $p$ and $(p - 1)!$ are relatively prime. Thus, by the
+cancellation theorem for modular congruence (Theorem 8.4.9),
+
+$$ a^{p - 1} \equiv 1(\mod p) $$

@@ -4009,3 +4009,270 @@ Omitted.
 g. What _are_ you? (Do not answer this on paper; just think about it.)
 
 Omitted.
+
+---
+
+Page 567
+
+**Exercise Set 8.4**
+
+1.
+
+a. Use the Caesar cipher to encrypt the message WHERE SHALL WE MEET.
+
+b. Use the Caesar cipher to decrypt the message LQ WKH FDIHWHULD.
+
+2.
+
+a. Use the Caesar cipher to encrypt the message AN APPLE A DAY.
+
+b. Use the Caesar cipher to decrypt the message NHHSV WKH GRFWRU DZDB.
+
+3. Let $a = 25, $b = 19$, and $n = 3$.
+
+a. Verify that $3 | (25 - 19)$.
+
+b. Explain why $25 \equiv 19 (\mod 3)$.
+
+c. What value of $k$ has the property that $25 = 19 + 3k$?
+
+d. What is the (nonnegative) remainder obtained when $25$ is divided by $3$?
+When $19$ is divided by $3$?
+
+e. Explain why $25 \mod 3 = 19 \mod 3$.
+
+4. Let $a = 68$, $b = 33$, and $n = 7$.
+
+a. Verify that $7 | (68 - 33)$.
+
+b. Explain why $68 \equiv 33(\mod 7)$.
+
+c. What value of $k$ has the property that $68 = 33 + 7k$?
+
+d. What is the (nonnegative) remainder obtained when $68$ is divided by $7$?
+When $33$ is divided by $7$?
+
+e. Explain why $68 \mod 7 = 33 \mod 7$.
+
+5. Prove the transitivity of modular congruence. That is, prove that for all
+   integers $a$, $b$, $c$, and $n$ with $n > 1$, if $a \equiv b(\mod n)$ and
+   $b \equiv c(\mod n)$ then $a \equiv c(\mod n)$.
+
+6. Prove that the distinct equivalence classes of the relation of congruence
+   modulo $n$ are the sets $[0], [1], [2], \dots, [n - 1]$, where for each
+   $a = 0, 1, 2, \dots, n - 1$,
+
+$$ [a] = \{m \in \mathbb{Z} | m \equiv a (\mod n)\} $$
+
+7. Verify the following statements.
+
+a. $128 \equiv 2(\mod 7)$ and $61 \equiv 5(\mod 7)$
+
+b. $(128 + 61) \equiv (2 + 5)(\mod 7)$
+
+c. $(128 - 61) \equiv (2 - 5)(\mod 7)$
+
+d. $(128 \cdot 61) \equiv (2 \cdot 5)(\mod 7)$
+
+e. $128^2 = 2^2(\mod 7)$
+
+8. Verify the following statements.
+
+a. $45 \equiv 3(\mod 6)$ and $104 \equiv 2(\mod 6)$
+
+b. $(45 + 104) \equiv (3 + 2)(\mod 6)$
+
+c. $(45 - 104) \equiv (3 - 2)(\mod 6)$
+
+d. $(45 \cdot 104) \equiv (3 \cdot 2)(\mod 6)$
+
+e. $45^2 \equiv 3^2(\mod 6)$
+
+In 9-11, prove each of the following statements, assuming that $a$, $b$, $c$,
+$d$, and $n$ are integers with $n > 1$ and that $a \equiv c(\mod n)$ and
+$b \equiv d(\mod n)$.
+
+9.
+
+a. $(a + b) \equiv (c + d)(\mod n)$
+
+b. $(a - b) \equiv (c - d)(\mod n)$
+
+10. $a^2 \equiv c^2(\mod n$
+
+11. $a^m \equiv c^m(\mod n)$ for every integer $m \geq 1$ (Use mathematical
+    induction on $m$.)
+
+12.
+
+a. Prove that for every integer $n \geq 0$, $10^n \equiv 1(\mod 9)$.
+
+b. Use part (a) to prove that a positive integer is divisible by $9$ if, and
+only if, the sum of its digits is divisible by $9$.
+
+13.
+
+a. Prove that for every integer $n \geq 1$, $10^n \equiv (-1)^n(\mod 11)$ .
+
+b. Use part (a) to prove that a positive integer is divisible by $11$ if, and
+only if, the alternating sum of its digits is divisible by $114. (For instance,
+the alternating sum of the digits of $82,379$ is $8 - 2 + 3 - 7 + 9 = 11$ and
+$82,379 = 11 \cdot 7489$.)
+
+14. Use the technique of Example 8.4.4 to find $14^2 \mod 55$, $14^4 \mod 55$,
+    $14^8 \mod 55$, and $14^{16} \mod 55$.
+
+15. Use the result of exercise 14 and the technique of Example 8.4.5 to find
+    $14^{27} \mod 55$.
+
+In 16-18, use the techniques of Example 8.4.4 and Example 8.4.5 to find the
+given numbers.
+
+16. $675^{307} \mod 713$
+
+17. $89^{307} \mod 713$
+
+18. $48^{307} \mod 713$
+
+In 19-24, use the RSA cipher from Examples 8.4.9 and 8.4.10. In 19-21, translate
+the message into its numeric equivalent and encrypt it. In 22-24, decrypt the
+cipher-text and translate the result into letters of the alphabet to discover
+the message.
+
+19. HELLO
+
+20. WELCOME
+
+21. EXCELLENT
+
+22. 13 20 20 09
+
+23. 08 05 15
+
+24. 51 14 49 15
+
+25. Use Theorem 5.2.2 to prove that if $a$ and $n$ are positive integers and
+    $a^{n - 1}$ is prime, then $a = 2$ and $n$ is prime.
+
+In 26 and 27, use the extended Euclidean algorithm to find the greatest common
+divisor of the given numbers and express it as a linear combination of the two
+numbers.
+
+26. 6664 and 765
+
+27. 4158 and 1568
+
+Exercises 28 and 29 refer to the following formal version of the extended
+Euclidean algorithm.
+
+**Algorithm 8.4.1 Extended Euclidean Algorithm**
+
+_[Given integers $A$ and $B$ with $A > B > 0$, this algorithm computes
+$\text{gcd}(A, B) and finds integers $s$ and $t$ such that
+$sA + tB = \text{gcd}(A, B)$.]_
+
+**Input:** $A$, $B$ _[integers with $A > B > 0$]_
+
+**Algorithm Body:**
+
+$a := A, b := B, s := 1, t := 0, u := 0, v := 1\\ \textit{[pre-codndition: } a =
+sA + tB \textit{ and } b = uA + vB,\\ \text{gcd}(a, b) = \text{gcd}(A, B)
+\textit{]}\\ \textbf{while} (b \neq 0) \\ \ \ \textit{[loop invariant: } a =
+sA + tB \textit{ and } b = uA + vB,\\ \ \ \text{gcd}(a, b) = \text{gcd}(A, B)\\ \ \ r:= a \mod b, q := a \text{ div } b\\ \ \ a := b, b := r\\ \ \ \textit{newu } := s - uq, \textit{newv } := t - vq\\ \ \ s := u, t := v\\ \ \ u:= \textit{newu}, v := \textit{newv}\\ \textbf{end while}\\ gcd := a\\ \textit{[post condition: } \text{gcd}(A, B) = a = sA + tB \textit{]}$
+
+**Output:** $\text{gcd}\textit{[a positive integer]}, s, t \textit{[integers]}$
+
+In 28 and 29, for the given values of $A$ and $B$, make a table showing the
+values of $s$, $t$, and $sA + tB$ before the start of the while loop and after
+each iteration of the loop
+
+28. $A = 330$, $B = 156$
+
+29. $A = 284$, $B = 168$
+
+30. Finis the proof of Theorem 8.4.5 by proving that if $a$, $b$, and $c$ are as
+    in the proof, then $c | b$.
+
+31.
+
+a. Find an inverse for $210$ modulo $13$.
+
+b. Find a positive inverse for $210$ modulo $13$.
+
+c. Find a positive solution for the congruence $210x \equiv 8 (\mod 13)$.
+
+32.
+
+a. Find an inverse for $41$ modulo $660$.
+
+b. Find the least positive solution for the following congruence:
+$41x \equiv 125(\mod 660)$.
+
+33. Use Theorem 8.4.5 to prove that for all integers $a$, $b$, and $c$, if
+    $\text{gcd}(a, b) = 1$ and $a | c$ and $b | c$, then $ab | c$.
+
+34. Give a counterexample to show that the statement of exercise 33 is false if
+    the hypothesis that $\text{gcd}(a, b) = 1$ is removed.
+
+35. Corollary 8.4.7 guarantees the existence of an inverse modulo $n$ for an
+    integer $a$ when $a$ and $n$ are relatively prime. Use Euclid's lemma to
+    prove that the inverse is unique modulo $n$. In other words, show that if
+    $s$ and $t$ are any two integers whose product with $a$ is congruent to $1$
+    modulo $n$, then $s$ and $t$ are congruent to each other modulo $n$.
+
+In 36, 37, 39, and 40, use the RSA cipher with public key
+$n = 713 = 23 \cdot 31$ and $e = 43$. In 36 and 37, encode the messages into
+their numeric equivalents and encrypt them. In 39 and 40, decrypt the given
+ciphertext and find the original messages.
+
+36. HELP
+
+37. COME
+
+38. Find the least positive inverse for $43$ modulo $660$.
+
+39. 675 089 089 048
+
+40. 028 018 675 129
+
+41.
+
+a. Use mathematical induction and Euclid's lemma to prove that for every
+positive integer $s$, if $p$ and $q_1, q_2, \dots, q_s$ are 0rime numbers and
+$p | q_1q_2 \cdots q_s$, then $p = q_i$ for some $i$ with $1 \leq i \leq s$.
+
+b. The uniqueness part of the unique factorization theorem for the integers says
+that given any integer $n$, if
+
+$$ n = p_1p_2 \cdots p_r = q_1q_2 \cdots q_s $$
+
+for some positive integers $r$ and $s$ and prime numbers
+$p_1 \leq p_2 \leq \cdots \leq p_r$ and $q_1 \leq q_2 \leq \cdots \leq q_s$,
+then $r = s$ and $p_i = q_i$ for every integer $i$ with $1 \leq i \leq r$.
+
+Use the result of part (a) to fill in the details of the following sketch of a
+proof:
+
+Suppose that $n$ is an integer with two different prime factorizations:
+$n = p_1p_2 \cdots p_t = q_1q_2 \cdots q_u$. All the prime factors that appear
+on both sides can be cancelled (as many times as they appear on both sides) to
+arrive at the situation where $p_1p_2 \cdots p_r = q_1q_2 \cdots q_s$,
+$p_1 \leq p_2 \leq \cdots \leq p_r$, $q_1 \leq q_2 \leq \cdots \leq q_s$, and
+$p_i \neq q_j$ for any integers $i$ and $j$. Then use part (a) to deduce a
+contradiction, and conclude that the prime factorization of $n$ is unique
+except, possibly, for the order in which the prime factors are written.
+
+42. According to Fermat's little theorem, if $p$ is a prime number and $a$ and
+    $p$ are relatively prime, then $a^{p - 1} \equiv 1 (\mod p)$. Verify that
+    this theorem gives correct results for the following:
+
+a. $a = 15$ and $p = 7$
+
+b. $a = 8$ and $p = 11$
+
+43. Fermat's little theorem can be used to show that a number is not prime by
+    finding a number $a$ relatively prime to $p$ with the property that
+    $a^{p - 1} \cancel{\equiv} 1(\mod p)$. However, it cannot be used to show
+    that a number _is_ prime. Find an example to illustrate this fact. That is,
+    find integers $a$ and $p$ such that $a$ and $p$ are relatively prime and
+    $a^{p - 1} \equiv 1(\mod p)$ but $p$ is not prime.

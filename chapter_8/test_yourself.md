@@ -113,3 +113,45 @@ a partition of $A$
    equivalence class of $R$ for each ____.
 
 rational number
+
+---
+
+Page 566
+
+**Test Yourself**
+
+1. When letters of the alphabet are encrypted using the Caesar cipher, the
+   encrypted version of the letter is ____.
+
+2. If $a$, $b$, and $n$ are integers with $n > 1$, all of the following are
+   different ways to express the fact that $n | (a - b)$: ____, ____, ____,
+   ____.
+
+3. If $a$, $b$, $c$, $d$, $m$, and $n$ are integers with $n > 1$ and if
+   $a \equiv c(\mod n)$ and $b \equiv d(\mod n)$, then $a + b \equiv$ ____,
+   $a - b \equiv$ ____, $ab \equiv$ ____, and $a^m \equiv$ ____
+
+4. If $a$, $n$, and $k$ are positive integers with $n > 1$, an efficient way to
+   compute $a^k(\mod n)$ is to write $k$ as a ____ and use the facts about
+   computing products and powers modulo $n$.
+
+5. To express a greatest common divisor of two integers as a linear combination
+   of the integers, use the extended version of the ____ algorithm.
+
+6. To find an inverse for a positive integer $a$ modulo an integer $n$ with
+   $n > 1$, you express the number $1$ as ____.
+
+7. To encrypt a message $M$ using RSA cryptography with public key $pq$ and $e$,
+   you use the formula ____, and to decrypt a message $C$, you use the formula
+   ____, where ____.
+
+8. Euclid's lemma says that for all integers $a$, $b$, and $c$ if
+   $\text{gcd}(a, c) = 1$ and $a | bc$, then ____.
+
+9. Fermat's little theorem says that if $p$ is any prime number and $a$ is any
+   integer such that $p | a$, then ____.
+
+10. The crux of the proof that the RSA cipher works is that if (1) $p$ and $q$
+    are distinct large prime numbers, (2) $M < pq$, (3) $M$ is relatively prime
+    to $pq$, (4) $e$ is relatively prime to $(p - 1)(q - 1)$, and (5) $d$ is a
+    positive inverse for $e$ modulo $(p - 1)(q - 1)$, then $M =$ ____.
