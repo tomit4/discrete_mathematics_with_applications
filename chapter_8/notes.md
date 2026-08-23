@@ -669,6 +669,74 @@ $$ a^m \equiv [(a \mod n)^m](\mod n) $$
 
 ---
 
+Page 554
+
+**Example 8.4.4 Computing $a^k \mod n$ When $k$ is a Power of $2$**
+
+Find $144^4 \mod 713$.
+
+**Solution**
+
+Use property (8.4.1) to write $144^4 = (144^2)^2$. Then
+
+$$ 144^4 \mod 713 = (144^2)^2 \mod 713 $$
+
+$$ = (144^2 \mod 713)^2 \mod 713 $$
+
+$$ = (20736 \mod 713)^2 \mod 713 \text{ because } 144^2 = 20736 $$
+
+$$ = 59^2 \mod 713 \text{ because } 20736 \mod 713 =  59 $$
+
+$$ = 3481 \mod 713 \text{ because } 59^2 = 3481 $$
+
+$$ = 629 \text{ because } 3481 \mod 713 = 629 $$
+
+---
+
+Page 554
+
+**Example 8.4.5 Computing $a^k \mod n$ When $k$ is Not a Power of $2$**
+
+Find $12^{43} \mod 713$.
+
+**Solution**
+
+First write the exponent as a sum of powers of $2$:
+
+$$ 43 = 2^5 + 2^3 + 2 + 1 = 32 + 8 + 2 + 1 $$
+
+Next compute $12^{2^k}$ for $k = 0, 1, 2, 3, 4, \text { and } 5$.
+
+$$ 12 \mod 713 = 12 $$
+
+$$ 12^2 \mod 713 = 144 $$
+
+$$ 12^4 \mod 713 = 144^2 \mod 713 = 59 \text{ by Example 8.4.4} $$
+
+$$ 12^8 \mod 713 = 59^2 \mod 713 = 629 \text{ by Example 8.4.4} $$
+
+$$ 12^{16} \mod 713 = 629^2 \mod 713 = 639 \text{ by the method of Example 8.4.4} $$
+
+$$ 12^{32} \mod 713 = 639^2 \mod 713 = 485 \text{ by the method of Example 8.4.4} $$
+
+By property (8.4.2),
+
+$$ 12^{43} = 12^{32 + 8 + 2 + 1} = 12^{32} \cdot 12^8 \cdot 12^2 \cdot 12^1 $$
+
+Thus, by Corollary 8.4.4,
+
+$$ 12^{43} \mod 713 = \{(12^{32} \mod 713) \cdot (12^8 \mod 713) \cdot (12^2 \mod 713) \cdot (12 \mod 713)\} \mod 713 $$
+
+By substitution,
+
+$$ 12^{43} \mod 713 = (485 \cdot 629 \cdot 144 \cdot 12) \mod 713 $$
+
+$$ = 527152320 \mod 713 $$
+
+$$ = 48 $$
+
+---
+
 Page 555
 
 **Definition**

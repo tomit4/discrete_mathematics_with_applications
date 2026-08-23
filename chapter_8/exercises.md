@@ -4020,43 +4020,229 @@ Page 567
 
 a. Use the Caesar cipher to encrypt the message WHERE SHALL WE MEET.
 
+$$
+W = 23 + 3 = 26 = Z \\
+H = 08 + 3 = 11 = K \\
+E = 05 + 3 = 8 = H \\
+R = 18 + 3 = 21 = U \\
+E = 05 + 3 = 8 = H \\
+S = 19 + 3 = 22 = V \\
+H = 08 + 3 = 11 = K \\
+A = 01 + 3 = 4 = D \\
+L = 12 + 3 = 15 = O \\
+L = 12 + 3 = 15 = O \\
+W = 23 + 3 = 26 = Z \\
+E = 05 + 3 = 8 = H \\
+M = 13 + 3 = 16 = P \\
+E = 05 + 3 = 8 = H \\
+E = 05 + 3 = 8 = H \\
+T = 20 + 3 = 23 = W \\
+$$
+
+ZKHUH VKDOO ZH PHHW
+
 b. Use the Caesar cipher to decrypt the message LQ WKH FDIHWHULD.
 
 2.
 
+$$
+L = 12 - 3 = 9 = I \\
+Q = 17 - 3 = 14 = N \\
+W = 23 - 3 = 20 = T \\
+K = 11 - 3 = 8 = H \\
+H = 08 - 3 = 5 = E \\
+F = 06 - 3 = 3 = C \\
+D = 04 - 3 = 1 = A \\
+I = 09 - 3 = 6 = F \\
+H = 08 - 3 = 5 = E \\
+W = 23 - 3 = 20 = T \\
+H = 08 - 3 = 5 = E \\
+U = 21 - 3 = 18 = R \\
+L = 12 - 3 = 9 = I \\
+D = 04 - 3 = 1 = A \\
+$$
+
+IN THE CAFETERIA
+
 a. Use the Caesar cipher to encrypt the message AN APPLE A DAY.
 
+$$
+A = 01 + 3 = 4 = D \\
+N = 14 + 3 = 17 = Q \\
+A = 01 + 3 = 4 = D \\
+P = 16 + 3 = 19 = S \\
+P = 16 + 3 = 19 = S \\
+L = 12 + 3 = 15 = O \\
+E = 05 + 3 = 8 = H \\
+A = 01 + 3 = 4 = D \\
+D = 04 + 3 = 7 = G \\
+A = 01 + 3 = 4 = D \\
+Y = 25 + 3 = 28 = 2 = B \\
+$$
+
+DQ DSSOH D GDB
+
 b. Use the Caesar cipher to decrypt the message NHHSV WKH GRFWRU DZDB.
+
+$$
+N = 14 - 3 = 11 = K \\
+H = 08 - 3 = 5 = E \\
+H = 08 - 3 = 5 = E \\
+S = 19 - 3 = 16 = P \\
+V = 22 - 3 = 19 = S \\
+W = 23 - 3 = 20 = T \\
+K = 11 - 3 = 8 = H \\
+H = 08 - 3 = 5 = E \\
+G = 07 - 3 = 4 = D \\
+R = 18 - 3 = 15 = O \\
+F = 06 - 3 = 3 = C \\
+W = 23 - 3 = 20 = T \\
+R = 18 - 3 = 15 = O \\
+U = 21 - 3 = 18 = R \\
+D = 04 - 3 = 1 = A \\
+Z = 26 - 3 = 23 = W \\
+D = 04 - 3 = 1 = A \\
+B = 02 - 3 = -1 = 25 = Y \\
+$$
+
+KEEPS THE DOCTOR AWAY
 
 3. Let $a = 25, $b = 19$, and $n = 3$.
 
 a. Verify that $3 | (25 - 19)$.
 
+$$ 3 | (25 - 19) $$
+
+$$ 3 | 6 $$
+
+Yes, $3 | 6$, because $6 = 3 \cdot 2$.
+
 b. Explain why $25 \equiv 19 (\mod 3)$.
 
+By the definition for congruence modulo $n$, $25 \equiv 19 (\mod 3)$ means that:
+
+$$ 3 | (25 - 19) $$
+
+which part (a) shows is true.
+
 c. What value of $k$ has the property that $25 = 19 + 3k$?
+
+$$ 25 = 19 + 3k $$
+
+$$ 6 = 3k $$
+
+$$ 2 = k $$
+
+Since $2 \in \mathbb{Z}$, $k = 2$.
 
 d. What is the (nonnegative) remainder obtained when $25$ is divided by $3$?
 When $19$ is divided by $3$?
 
+$$ \frac{25}{3} = 8 \cdot 3 + 1 $$
+
+so $25 \mod 3 = 1$.
+
+$$ \frac{19}{3} = 6 \cdot 3 + 1 $$
+
+so $19 \mod 3 = 1$.
+
 e. Explain why $25 \mod 3 = 19 \mod 3$.
+
+In part (d), it was shown that $25 \mod 3 = 1$, and $19 \mod 3 = 1$. By the
+transitivity of equality, $25 \mod 3 = 19 \mod 3$.
 
 4. Let $a = 68$, $b = 33$, and $n = 7$.
 
 a. Verify that $7 | (68 - 33)$.
 
+$$ 7 | (68 - 33) $$
+
+$$ 7 | 35 $$
+
+Yes, $7 | 35, since $35 = 7 \cdot 5$$.
+
 b. Explain why $68 \equiv 33(\mod 7)$.
 
+By the definition of congruence modulo $n$, $68 \equiv 33(\mod 7)$ means:
+
+$$ 7 | (68 - 33) $$
+
+This is what part (a) showed to be true.
+
 c. What value of $k$ has the property that $68 = 33 + 7k$?
+
+$$ 68 = 33 + 7k $$
+
+$$ 35 = 7k $$
+
+$$ 5 = k $$
+
+Since $5 \in \mathbb{Z}$, $k = 5$.
 
 d. What is the (nonnegative) remainder obtained when $68$ is divided by $7$?
 When $33$ is divided by $7$?
 
+$$ \frac{68}{7} = 9 \cdot 7 + 5 $$
+
+so $68 \mod 7 = 5$
+
+$$ \frac{33}{7} = 4 \cdot 7 + 5 $$
+
+so $33 \mod 7 = 5$
+
 e. Explain why $68 \mod 7 = 33 \mod 7$.
+
+Since $68 \mod 7 = 5$ and $33 \mod 7 = 5$, it follows by the transitivity of
+equality that $68 \mod 7 = 33 \mod 7$.
 
 5. Prove the transitivity of modular congruence. That is, prove that for all
    integers $a$, $b$, $c$, and $n$ with $n > 1$, if $a \equiv b(\mod n)$ and
    $b \equiv c(\mod n)$ then $a \equiv c(\mod n)$.
+
+**Proof:**
+
+Suppose $a$, $b$, $c$, and $n$ are any integers with $n > 1$. Furthermore,
+suppose $a \equiv b(\mod n)$ and $b \equiv c(\mod n)$.
+
+To prove the transitivity of modular congruence, it must be shown that
+$a \equiv c(\mod n)$.
+
+Since $a \equiv b(\mod n)$ and $b \equiv c(\mod n)$, by the definition for
+congruence modulo $n$, this means that:
+
+$$ n | (a - b) $$
+
+and that:
+
+$$ n | (b - c) $$
+
+By the definition of divisibility, this means that:
+
+$$ a - b = nk $$
+
+and that:
+
+$$ b - c = np $$
+
+for some integers $k$ and $p$.
+
+Now, adding $a - b$ and $b - c$ yields:
+
+$$ a - c = (a - b) + (b - c) $$
+
+Then, by substitution:
+
+$$ a - c = nk + np $$
+
+Then, by algebra (factoring):
+
+$$ = n(k + p) $$
+
+Now, $k + p$ is an integer (by the sum of integers). Thus, by the definition of
+divisibility, this means that $n | a - c$, and therefore, by the definition for
+congruence modulo $n$, $a \equiv c(\mod n)$. This is what was to be shown.
+
+Q.E.D.
 
 6. Prove that the distinct equivalence classes of the relation of congruence
    modulo $n$ are the sets $[0], [1], [2], \dots, [n - 1]$, where for each
@@ -4064,29 +4250,203 @@ e. Explain why $68 \mod 7 = 33 \mod 7$.
 
 $$ [a] = \{m \in \mathbb{Z} | m \equiv a (\mod n)\} $$
 
+_Hints:_ (1) Use the quotient-remainder theorem and Theorem 8.4.1 to show that
+given any integer $a$, $a$ is in one of the classes
+$[0], [1], [2], \dots [n - 1]$. (2) Use the quotient-remainder theorem (Theorem
+4.5.1) to prove that if $0 \leq a < n$, $0 \leq b < n$, and
+$a \equiv b(\mod n)$, then $a = b$.
+
+**Proof:**
+
+Suppose $a \in \mathbb{Z}$.
+
+By the quotient-remainder theorem, this means that $a = nq + r$, with
+$n \in \mathbb{Z}^+$, and $0 \leq r < n$.
+
+By the definition for congruence modulo $n$, this means that:
+
+$$ a \equiv r (\mod n) $$
+
+By the definition of equivalence class, this means that:
+
+$$ a \in [r] $$
+
+And since $0 \leq r < n$, it follows that $a$ belongs to one of the classes
+$[0], [1], \dots, [n - 1]$.
+
+To show that these classes are distinct, it must be shown that if $[a] = [b]$,
+then $a = b$.
+
+Suppose $[a] = [b]$.
+
+By the definition of congruence modulo $n$:
+
+$$ a \equiv a(\mod n) $$
+
+And, by definition of equivalence class:
+
+$$ a \in [a] $$
+
+Since $[a] = [b]$, it follows that:
+
+$$ a \in [b] $$
+
+Then, by substitution:
+
+$$ a \equiv b(\mod n) $$
+
+By the definition of congruence modulo $n$, this means that:
+
+$$ n | (a - b) $$
+
+By the definition of divisibility, this means that:
+
+$$ a - b = kn $$
+
+for some integer $k$.
+
+Since $0 \leq a < n$ and $0 \leq b < n$ (by the quotient-remainder theorem), it
+follows that:
+
+$$ -n < a - b < n $$
+
+By substitution:
+
+$$ -n < kn < n $$
+
+Thus the only integer $k$ that can satisfy this inequality is $k = 0$.
+
+By substition:
+
+$$ a - b = (0)n $$
+
+$$ a - b = 0 $$
+
+$$ a = b $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 7. Verify the following statements.
 
 a. $128 \equiv 2(\mod 7)$ and $61 \equiv 5(\mod 7)$
 
+$$ 128 \equiv 2(\mod 7) \to 7 | (128 - 2) \to 7 | (126) $$
+
+This is true, as:
+
+$$ 126 = 7 \cdot 18 $$
+
+$$ 61 \equiv 5(\mod 7) \to 7 | (61 - 5) \to 7 | 56 $$
+
+This is true, as:
+
+$$ 56 = 7 \cdot 8 $$
+
 b. $(128 + 61) \equiv (2 + 5)(\mod 7)$
+
+$$ (128 + 61) \equiv (2 + 5)(\mod 7) \to 7 | [(128 + 61) - (2 + 5)] \to 7 | [(189) - (7)] \to 7 | 182 $$
+
+This is true, as:
+
+$$ 182 = 7 \cdot 26 $$
 
 c. $(128 - 61) \equiv (2 - 5)(\mod 7)$
 
+$$ (128 - 61) \equiv (2 - 5)(\mod 7) \to 7 | [(128 - 61) - (2 - 5)] \to 7 | [(67) - (-3)] \to 7 | 70 $$
+
+This is true, as:
+
+$$ 70 = 7 \cdot 10 $$
+
 d. $(128 \cdot 61) \equiv (2 \cdot 5)(\mod 7)$
 
+$$ (128 \cdot 61) \equiv (2 \cdot 5)(\mod 7) \to 7 | [(128 \cdot 61) - (2 \cdot 5)] $$
+
+$$ \to 7 | [(7808) - (10)] $$
+
+$$ \to 7 | 7798 $$
+
+This is true, as:
+
+$$ 7798 = 7 \cdot 1114 $$
+
 e. $128^2 = 2^2(\mod 7)$
+
+$$ \to 7 | [(128^2) - (2^2)] $$
+
+$$ \to 7 | [(16384) - (4)] $$
+
+$$ \to 7 | 16380 $$
+
+This is true, as:
+
+$$ 16380 = 7 \cdot 2340 $$
 
 8. Verify the following statements.
 
 a. $45 \equiv 3(\mod 6)$ and $104 \equiv 2(\mod 6)$
 
+$$ 45 \equiv 3(\mod 6) \to 6 | (45 - 3) \to 6 | 42 $$
+
+This is true, as:
+
+$$ 42 = 6 \cdot 7 $$
+
+$$ 104 \equiv 2(\mod 6) \to 6 | (104 - 2) \to 6 | 102 $$
+
+This is true, as:
+
+$$ 102 = 6 \cdot 17 $$
+
 b. $(45 + 104) \equiv (3 + 2)(\mod 6)$
+
+$$ (45 + 104) \equiv (3 + 2)(\mod 6) \to 6 | [(45 + 104) - (3 + 2)] $$
+
+$$ \to 6 | [(149) - (5)] $$
+
+$$ \to 6 | 144 $$
+
+This is true, as:
+
+$$ 144 = 6 \cdot 24 $$
 
 c. $(45 - 104) \equiv (3 - 2)(\mod 6)$
 
+$$ (45 - 104) \equiv (3 - 2)(\mod 6) \to 6 | [(45 - 104) - (3 - 2)] $$
+
+$$ \to 6 | [(-59) - (1)] $$
+
+$$ \to 6 | -60 $$
+
+This is true, as:
+
+$$ -60 = 6 \cdot (-10) $$
+
 d. $(45 \cdot 104) \equiv (3 \cdot 2)(\mod 6)$
 
+$$ (45 \cdot 104) \equiv (3 \cdot 2)(\mod 6) \to 6 | [(45 \cdot 104) - (3 \cdot 2)] $$
+
+$$ \to 6 | [(4680) - (6)] $$
+
+$$ \to 6 | 4674 $$
+
+This is true, as:
+
+$$ 4674 = 6 \cdot 779 $$
+
 e. $45^2 \equiv 3^2(\mod 6)$
+
+$$ 45^2 \equiv 3^2(\mod 6) \to 6 | [(45^2) - (3^2)] $$
+
+$$ \to 6 | [(2025) - (9)] $$
+
+$$ \to 6 | 2016 $$
+
+This is true, as:
+
+$$ 2016 = 6 \cdot 336  $$
 
 In 9-11, prove each of the following statements, assuming that $a$, $b$, $c$,
 $d$, and $n$ are integers with $n > 1$ and that $a \equiv c(\mod n)$ and
@@ -4096,43 +4456,687 @@ $b \equiv d(\mod n)$.
 
 a. $(a + b) \equiv (c + d)(\mod n)$
 
+**Proof:**
+
+Suppose $a$, $b$, $c$, $d$, and $n$ are integers with $n > 1$. Furthermore,
+suppose $a \equiv c(\mod n)$ and $b \equiv d(\mod n)$.
+
+It must be shown that $(a + b) \equiv (c + d)(\mod n)$.
+
+By the definition for congruence modulo $n$, since $a \equiv c(\mod n)$ and
+$b \equiv d(\mod n)$, this means that:
+
+$$ n | (a - c) $$
+
+and also that:
+
+$$ n | (b - d) $$
+
+By the definition of divisibility, this means that:
+
+$$ a - c = nk $$
+
+and also that:
+
+$$ b - d = np $$
+
+for some integers $k$ and $p$.
+
+Now, recall that it is to be shown that $(a + b) \equiv (c + d)(\mod n)$, or (by
+definition of congruence modulo $n$), $n | (a + b) - (c + d)$. Notice that:
+
+$$ (a + b) - (c + d) =  a + b - c - d $$
+
+$$ = (a - c) + (b - d) $$
+
+Then, by substitution:
+
+$$ = nk + np $$
+
+Then, by algebra (factoring):
+
+$$ = n(k + p) $$
+
+Now, $k + p$ is an integer (by the sum of integers). By the definition of
+divisibility, this means that $n | [(a + b) - (c + d)]$. By the definition of
+congruence modulo $n$, this means that $(a + b) \equiv (c + d)(\mod n)$. This is
+what was to be shown.
+
+Q.E.D.
+
 b. $(a - b) \equiv (c - d)(\mod n)$
 
-10. $a^2 \equiv c^2(\mod n$
+**Proof:**
+
+Suppose $a$, $b$, $c$, $d$, and $n$ are integers with $n > 1$. Furthermore,
+suppose $a \equiv c(\mod n)$ and $b \equiv d(\mod n)$.
+
+It must be shown that $(a - b) \equiv (c - d)(\mod n)$.
+
+By the definition for congruence modulo $n$, since $a \equiv c(\mod n)$ and
+$b \equiv d(\mod n)$, this means that:
+
+$$ n | (a - c) $$
+
+and also that:
+
+$$ n | (b - d) $$
+
+By the definition of divisibility, this means that:
+
+$$ a - c = nk $$
+
+and also that:
+
+$$ b - d = np $$
+
+for some integers $k$ and $p$.
+
+Now, recall that it is to be shown that $(a - b) \equiv (c - d)(\mod n)$, or (by
+definition of congruence modulo $n$), $n | (a - b) - (c - d)$. Notice that:
+
+$$ (a - b) - (c - d) =  a - b - c + d $$
+
+$$ = (a - c) - (b - d) $$
+
+Then, by substitution:
+
+$$ = nk - np $$
+
+Then, by algebra (factoring):
+
+$$ = n(k - p) $$
+
+Now, $k - p$ is an integer (by the difference of integers). By the definition of
+divisibility, this means that $n | [(a - b) - (c - d)]$. By the definition of
+congruence modulo $n$, this means that $(a - b) \equiv (c - d)(\mod n)$. This is
+what was to be shown.
+
+Q.E.D.
+
+10. $a^2 \equiv c^2(\mod n)$
+
+**Proof:**
+
+Suppose $a$, $c$, and $n$ are integers with $n > 1$. Furthermore, suppose
+$a \equiv c(\mod n)$.
+
+It must be shown that $a^2 \equiv c^2(\mod n)$, or $n | (a^2 - c^2)$.
+
+By the definition for congruence modulo $n$, since $a \equiv c(\mod n)$, this
+means that:
+
+$$ n | (a - c) $$
+
+By the definition of divisibility, this means that:
+
+$$ a - c = nk $$
+
+for some integer $k$.
+
+Now, recall it must be shown that $n | (a^2 - c^2)$. Notice that:
+
+$$ a^2 - c^2 = (a + c)(a - c) $$
+
+By substitution:
+
+$$ = (a + c)nk $$
+
+$$ = n[k(a + c)] $$
+
+Now $k(a + c)$ is an integer (by the sum and product of integers). Thus, by the
+definition of divisibility, $n | (a^2 - c^2)$, and therefore, by the definition
+of congruence modulo, $a^2 \equiv c^2(\mod n)$. This is what was to be shown.
+
+Q.E.D.
 
 11. $a^m \equiv c^m(\mod n)$ for every integer $m \geq 1$ (Use mathematical
     induction on $m$.)
+
+**Proof (by mathematical induction):**
+
+Suppose $a$, $c$, $m$, and $n$ are integers with $n > 1$ and $m \geq 1$.
+Furthermore, suppose $a \equiv c(\mod n)$.
+
+Let $P(m)$ be the statement:
+
+$$ a^m \equiv c^m(\mod n) $$
+
+or equivalently:
+
+$$ n | (a^m - c^m) $$
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ a^1 \equiv c^1(\mod n) $$
+
+$$ a \equiv c(\mod n) $$
+
+This holds by the supposition.
+
+_Inductive Step:_
+
+Suppose $P(m)$, that is:
+
+$$ a^m \equiv c^m(\mod n) $$
+
+Equivalently:
+
+$$ n | (a^m - c^m) $$
+
+This is the inductive hypothesis.
+
+Prove $P(m + 1)$, that is:
+
+$$ a^{m + 1} \equiv c^{m + 1}(\mod n) $$
+
+Equivalently:
+
+$$ n | \left(a^{m + 1} - c^{m + 1}\right) $$
+
+By the supposition, since $a \equiv c(\mod n)$, by the definition of congruence
+modulo $n$:
+
+$$ n | (a - c) $$
+
+By the definition of divisibility:
+
+$$ a - c = nk $$
+
+for some integer $k$.
+
+Now, notice that:
+
+$$ a^{m + 1} - c^{m + 1} = a(a^m) - c(c^m) $$
+
+Now add $-a(c^m) + a(c^m)$, (since $-a(c^m) + a(c^m) = 0$, this does not violate
+equality).
+
+$$ = a(a^m) - a(c^m) + a(c^m) - c(c^m) $$
+
+And then factor:
+
+$$ = a(a^m - c^m) + c^m(a - c) $$
+
+By the inductive hypothesis, we know that $n | (a^m - c^m)$, and we have shown
+that $a - c = nk$ for some integer $k$. Since $n | (a^m - c^m)$, let
+$a^m - c^m = np$ for some integer $p$. Then, by substitution:
+
+$$ = a(np) - c^m(nk) $$
+
+Factoring out the $n$:
+
+$$ = n\left(ap - c^mk\right) $$
+
+Now, $ap - c^mk$ is an integer (by the exponentiation, difference, and product
+of integers). Thus, by the definition of divisibility,
+$n | a^{m + 1} - c^{m + 1}$, and therefore, by congruence modulo $n$,
+$a^{m + 1} \equiv c^{m + 1}(\mod n)$. This is what was to be shown.
+
+Q.E.D.
 
 12.
 
 a. Prove that for every integer $n \geq 0$, $10^n \equiv 1(\mod 9)$.
 
+**Proof (by mathematical induction):**
+
+Suppose $n \in \mathbb{Z}$, with $n \geq 0$.
+
+It must be shown that $10^n \equiv 1(\mod 9)$, or equivalently $9 | (10^n - 1)$.
+
+Let $P(n)$, be the statement:
+
+$$ 10^n \equiv 1(\mod 9) $$
+
+or equivalently:
+
+$$ 9 | (10^n - 1) $$
+
+_Basis Step:_
+
+Prove $P(0)$, that is:
+
+$$ 10^0 \equiv 1(\mod 9) $$
+
+Or:
+
+$$ 9 | (10^0 - 1) $$
+
+$$ 9 | (1 - 1) $$
+
+$$ 9 | 0  $$
+
+Now, $9 | 0$, since $0 = 9 \cdot 0$. Therefore $P(0)$ is true.
+
+_Inductive Step:_
+
+Suppose $P(n)$, that is:
+
+$$ 10^n \equiv 1(\mod 9) $$
+
+or equivalently:
+
+$$ 9 | (10^n - 1) $$
+
+This is the inductive hypothesis.
+
+Prove $P(n + 1)$, that is:
+
+$$ 10^{n + 1} \equiv 1(\mod 9) $$
+
+or equivalently:
+
+$$ 9 | (10^{n + 1} - 1) $$
+
+Now, notice that:
+
+$$ 10^{n + 1} - 1 = 10(10^n) - 1 $$
+
+Now add $+10 - 10$ (since $+10 - 10 = 0$, this does not break equality):
+
+$$ = 10(10^n) + 10 - 10 - 1 $$
+
+$$ = 10(10^n) - 10 + 10 - 1 $$
+
+And factor:
+
+$$ = 10(10^n - 1) + 9 $$
+
+By the inductive hypothesis, it is known that $9 | (10^n - 1)$. By the
+definition of divisibility, $10^n - 1 = 9k$, for some integer $k$. Then, by
+substitution:
+
+$$ = 10(9k) + 9 $$
+
+Factor out the $9$:
+
+$$ = 9(10k + 1) $$
+
+Now, $10k + 1$ is an integer (by the product and sum of integers). It follows,
+by the definition of divisibility, that $9 | (10^{n + 1} - 1)$, and therefore,
+by the definition for congruence modulo $n$, $10^{n + 1} \equiv 1(\mod 9)$. This
+is what was to be shown.
+
+Q.E.D.
+
 b. Use part (a) to prove that a positive integer is divisible by $9$ if, and
 only if, the sum of its digits is divisible by $9$.
+
+**Proof:**
+
+Suppose $m \in \mathbb{Z}$, with $m \geq 0$.
+
+It must be shown that
+$9 | m \Leftrightarrow 9 | \text{ the sum of } m \text{ digits}$.
+
+Note that any number can be written in terms of its digits, such as:
+
+$$ m = d_k \cdot 10^k + d_{k - 1} \cdot 10^{k - 1} + \dots + d_1 \cdot 10 + d_0 $$
+
+Where $d$ represents the digit and $k$ is an integer representing the index of
+the highest digit.
+
+By part (a), it is known that $10^n \equiv 1(\mod 9)$, or equivalently
+$9 | (10^n - 1)$ for any $n \in \mathbb{Z}$, with $n \geq 0$.
+
+It follows that $9 | 10^i - 1$, for some integer $i$ (where $i$ represents the
+index of the digit $d$), or equivalently $10^i \equiv 1(\mod 9)$.
+
+so $d_i \cdot 10^i \equiv d_i \cdot 1 \equiv d_i(\mod 9)$.
+
+Then, our definition for $m$ as a summation of digits can be represented as:
+
+$$ m = (d_k \cdot 10^k + d_{k - 1} \cdot 10^{k - 1} + \dots + d_1 \cdot 10 + d_0)(\mod 9) $$
+
+Or, more succinctly:
+
+$$ m \equiv \sum_{i = 0}^{k}{d_i}(\mod 9) $$
+
+To prove $9 | m \Leftrightarrow 9 | \text{ the sum of } m \text{ digits}$, it
+must be shown that $9 | m \to 9 | \text{ the sum of } m \text{ digits}$, and
+also that $9 | \text{ the sum of } m \text{ digits } \to 9 | m$.
+
+_Proof ($9 | m \to 9 | \text{ the sum of } m \text{ digits}$):_
+
+Suppose $9 | m$. By the definition of divisibility, this means that:
+
+$$ m = 9p $$
+
+for some integer $p$.
+
+It has already been shown that $m \equiv \sum_{i = 0}^{k}{d_i}(\mod 9)$, or
+equivalently, that:
+
+$$ 9 | \left(m - \sum_{i = 0}^{k}{d_i}\right) $$
+
+By substitution:
+
+$$ 9 | \left(9p - \sum_{i = 0}^{k}{d_i}\right) $$
+
+By the definition of divisibility, since $9 | 9p$, and
+$9 | \left(9p - \sum_{i = 0}^{k}{d_i}\right)$, it follows that
+$9 | \sum_{i = 0}^{k}{d_i}$.
+
+This is what was to be shown.
+
+_Proof ($9 | \text{the sum of } m \text{ digits } \to 9 | m$):_
+
+Suppose $9 | \text{the sum of } m \text{digits}$. Alternatively, using sigma
+notation:
+
+$$ 9 | \sum_{i = 0}^{k}{d_i} $$
+
+By the definition of divisibility, this means that:
+
+$$ \sum_{i = 0}^{k}{d_i} = 9p $$
+
+for some integer $p$.
+
+It has already been shown that:
+
+$$ m \equiv \sum_{i = 0}^{k}{d_i}(\mod 9) $$
+
+Or:
+
+$$ 9 | \left(m - \sum_{i = 0}^{k}{d_i}\right) $$
+
+By substitution:
+
+$$ 9 | (m - 9p) $$
+
+Now, since $9 | 9p$ and $9 | (m - 9p)$, it follows, by the definition of
+divisibility, that $9 | m$.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since it has been shown that
+$9 | m \to 9 | \text{ the sum of } m \text{ digits}$ and also that
+$9 | \text{the sum of } m \text{ digits } \to 9 | m$, it can be concluded that
+$9 | m \Leftrightarrow 9 | \text{ the sum of } m \text{ digits}$.
+
+This is what was to be shown.
+
+Q.E.D.
 
 13.
 
 a. Prove that for every integer $n \geq 1$, $10^n \equiv (-1)^n(\mod 11)$ .
+
+**Proof (by mathematical induction):**
+
+Suppose $n \in \mathbb{Z}$, where $n \geq 1$.
+
+Let $P(n)$ be the statement:
+
+$$ 10^n \equiv (-1)^n(\mod 11) $$
+
+equivalently (by the definition of congruence modulo $n$):
+
+$$ 11 | \left(10^n - (-1)^n\right) $$
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ 11 | \left(10^1 - (-1)^1\right) $$
+
+$$ 11 | (10 - (-1)) $$
+
+$$ 11 | 11 $$
+
+Now, $11 | 11$, because $11 = 11 \cdot 1$, so therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Suppose $P(n)$, that is:
+
+$$ 11 | \left(10^n - (-1)^n\right) $$
+
+This is the inductive hypothesis.
+
+It must be shown that $P(n + 1)$ is true, that is:
+
+$$ 11 | \left(10^{n + 1} - (-1)^{n + 1}\right) $$
+
+Now, notice that:
+
+$$ 10^{n + 1} - (-1)^{n + 1} = 10(10^n) - (-1)(-1)^n $$
+
+Now, add and subtract $10(-1)^n$:
+
+$$ = 10(10^n) + 10(-1)^n - 10(-1)^n - (-1)(-1)^n $$
+
+$$ = 10(10^n) - 10(-1)^n + 10(-1)^n - (-1)(-1)^n $$
+
+Factor out $10$ and $(-1)^n$:
+
+$$ = 10(10^n - (-1)^n) + (-1)^n(10 - (-1)) $$
+
+$$ = 10(10^n - (-1)^n) + (-1)^n(11) $$
+
+By the inductive hypothesis, it is known that $11 | (10^n - (-1)^n)$, so by the
+definition of divisibility, $10^n - (-1)^n = 11k$ for some integer $k$. Then, by
+substitution:
+
+$$ = 10(11k) + (-1)^n(11) $$
+
+Then, factor out the $11$:
+
+$$ = 11(10k + (-1)^n) $$
+
+Now, $10k + (-1)^n$ is an integer (by the product, exponentiation, and sum of
+integers). It follows that $11 | \left(10^{n + 1} - (-1)^{n + 1}\right)$, by the
+definition of divisibility, and by the definition for congruence modulo $n$ that
+$10^{n + 1} \equiv (-1)^{n + 1}(\mod 11)$.
+
+This is what was to be shown.
+
+Q.E.D.
 
 b. Use part (a) to prove that a positive integer is divisible by $11$ if, and
 only if, the alternating sum of its digits is divisible by $114. (For instance,
 the alternating sum of the digits of $82,379$ is $8 - 2 + 3 - 7 + 9 = 11$ and
 $82,379 = 11 \cdot 7489$.)
 
+**Proof:**
+
+Suppose $m \in \mathbb{Z}$, such that $m \geq 1$.
+
+It must be shown that
+$11 | m \Leftrightarrow 11 | \text{the alternating sum of } m \text{ digits}$.
+
+Note that any number can be written in terms of its digits, such as:
+
+$$ m = d_k \cdot 10^k + d_{k - 1} \cdot 10^{k - 1} + \dots + d_1 \cdot 10 + d_0 $$
+
+Where $d$ represents the digit and $k$ is an integer representing the index of
+the highest digit.
+
+By part (a), it is known that $10^n \equiv (-1)^n(\mod 11)$, or equivalently
+$11 | (10^n - (-1)^n)$ for any $n \in \mathbb{Z}$, with $n \geq 1$.
+
+It follows that $11 | 10^i - (-1)^i$, for some integer $i$ (where $i$ represents
+the index of the digit $d$), or equivalently $10^i \equiv (-1)^i(\mod 11)$.
+
+so $d_i \cdot 10^i \equiv d_i(-1)^i(\mod 11)$.
+
+Then, our definition for $m$ as a summation of digits can be represented as:
+
+$$ m = (d_k \cdot 10^k + d_{k - 1} \cdot 10^{k - 1} + \dots + d_1 \cdot 10 + d_0)(\mod 11) $$
+
+Or, more succinctly:
+
+$$ m \equiv \sum_{i = 0}^{k}{d_i(-1)^i}(\mod 11) $$
+
+To prove $11 | m \Leftrightarrow 11 | \text{ the sum of } m \text{ digits}$, it
+must be shown that
+$11 | m \to 11 | \text{ the alternating sum of } m \text{ digits}$, and also
+that $11 | \text{ the alternating sum of } m \text{ digits } \to 11 | m$.
+
+_Proof ($11 | m \to 11 | \text{ the alternating sum of } m \text{ digits}$):_
+
+Suppose $11 | m$. By the definition of divisibility, this means that:
+
+$$ m = 11p $$
+
+for some integer $p$.
+
+It has already been shown that $m \equiv \sum_{i = 0}^{k}{d_i(-1)^i}(\mod 11)$,
+or equivalently, that:
+
+$$ 11 | \left(m - \sum_{i = 0}^{k}{d_i(-1)^i}\right) $$
+
+By substitution:
+
+$$ 11 | \left(11p - \sum_{i = 0}^{k}{d_i(-1)^i}\right) $$
+
+By the definition of divisibility, since $11 | 11p$, and
+$11 | \left(11p - \sum_{i = 0}^{k}{d_i(-1)^i}\right)$, it follows that
+$11 | \sum_{i = 0}^{k}{d_i(-1)^i}$.
+
+This is what was to be shown.
+
+_Proof ($11 | \text{the alternating sum of } m \text{ digits } \to 11 | m$):_
+
+Suppose $11 | \text{the alternating sum of } m \text{digits}$. Alternatively,
+using sigma notation:
+
+$$ 11 | \sum_{i = 0}^{k}{d_i(-1)^i} $$
+
+By the definition of divisibility, this means that:
+
+$$ \sum_{i = 0}^{k}{d_i(-1)^i} = 11p $$
+
+for some integer $p$.
+
+It has already been shown that:
+
+$$ m \equiv \sum_{i = 0}^{k}{d_i(-1)^i}(\mod 11) $$
+
+Or:
+
+$$ 11 | \left(m - \sum_{i = 0}^{k}{d_i(-1)^i}\right) $$
+
+By substitution:
+
+$$ 11 | (m - 11p) $$
+
+Now, since $11 | 11p$ and $11 | (m - 11p)$, it follows, by the definition of
+divisibility, that $11 | m$.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since it has been shown that
+$11 | m \to 11 | \text{ the alternating sum of } m \text{ digits}$ and also that
+$11 | \text{the alternating sum of } m \text{ digits } \to 11 | m$, it can be
+concluded that
+$11 | m \Leftrightarrow 11 | \text{ the sum of } m \text{ digits}$.
+
+This is what was to be shown.
+
+Q.E.D.
+
 14. Use the technique of Example 8.4.4 to find $14^2 \mod 55$, $14^4 \mod 55$,
     $14^8 \mod 55$, and $14^{16} \mod 55$.
 
+$14^2 \mod 55$:
+
+$$ 14^2 \mod 55 = 196 \mod 55 $$
+
+$$ = 196 \mod 55 $$
+
+$$ = 31 \text{ since } 196 = (55 \cdot 3) + 31 $$
+
+$14^4 \mod 55$:
+
+$$ 14^4 \mod 55 = (14^2)^2 \mod 55 $$
+
+$$ = (14^2 \mod 55)^2 \mod 55 $$
+
+$$ = (31)^2 \mod 55 $$
+
+$$ = 961 \mod 55 $$
+
+$$ = 26 \text{ since } 961 = (55 \cdot 17) + 26 $$
+
+$14^8 \mod 55$:
+
+$$ 14^8 \mod 55 = (14^4)^2 \mod 55 $$
+
+$$ = (14^4 \mod 55)^2 \mod 55 $$
+
+$$ = (26)^2 \mod 55 $$
+
+$$ = 676 \mod 55 $$
+
+$$ = 16 \text{ since } 676 = (55 \cdot 12) + 16 $$
+
+$14^{16} \mod 55$:
+
+$$ 14^{16} \mod 55 = (14^8)^2 \mod 55 $$
+
+$$ = (14^8 \mod 55)^2 \mod 55 $$
+
+$$ = (16)^2 \mod 55 $$
+
+$$ = 256 \mod 55 $$
+
+$$ = 36 \text{ since } 256 = (55 \cdot 4) + 36 $$
+
 15. Use the result of exercise 14 and the technique of Example 8.4.5 to find
     $14^{27} \mod 55$.
+
+First write the exponent as a sum of powers of $2$:
+
+$$ 27 = 2^4 + 2^3 + 2^1 + 2^0 = 16 + 8 + 2 + 1 $$
+
+Next compute $14^{2^k}$ for $k = 0, 1, 3, \text{ and } 4$.
+
+$$ 14^{2^0} \mod 55 = 14 $$
+
+$$ 14^{2^1} \mod 55 = 31 \text{ by Exercise 14} $$
+
+$$ 14^{2^3} \mod 55 = 16 \text{ by Exercise 14} $$
+
+$$ 14^{2^4} \mod 55 = 36 \text{ by Exercise 14} $$
+
+By property (8.4.2),
+
+$$ 14^{27} = 14^{16 + 8 + 2 + 1} = 14^{16} \cdot 14^8 \cdot 14^2 \cdot 14^1 $$
+
+Thus, by Corollary 8.4.4,
+
+$$ 14^{27} \mod 55 = \{(14^{16} \mod 55) \cdot (14^8 \mod 55) \cdot (14^2 \mod 55) \cdot (14^1 \mod 55)\} $$
+
+By substitution,
+
+$$ 14^{27} \mod 55 = (36 \cdot 16 \cdot 31 \cdot 14) \mod 55 $$
+
+$$ = 249984 \mod 55 $$
+
+$$ = 9 $$
 
 In 16-18, use the techniques of Example 8.4.4 and Example 8.4.5 to find the
 given numbers.
 
 16. $675^{307} \mod 713$
 
+Omitted.
+
 17. $89^{307} \mod 713$
 
+Omitted.
+
 18. $48^{307} \mod 713$
+
+Omitted.
 
 In 19-24, use the RSA cipher from Examples 8.4.9 and 8.4.10. In 19-21, translate
 the message into its numeric equivalent and encrypt it. In 22-24, decrypt the
