@@ -800,7 +800,7 @@ $$ a = cq + r \text{ for some integers } q \text{ and } r \text{ with } 0 \leq r
 
 Thus for some integers $q$ and $r$ with $0 \leq r < c$,
 
-$$ r = q - cq $$
+$$ r = a - cq $$
 
 Now $c = as + bt$. Therefore, for some integers $q$ and $r$ with $0 \leq r < c$,
 

@@ -5145,18 +5145,269 @@ the message.
 
 19. HELLO
 
+$$ C = M^e \mod pq $$
+
+$$ e = 3, p = 5, q = 11 $$
+
+$$
+H = 08\\
+E = 05\\
+L = 12\\
+L = 12\\
+O = 15\\
+$$
+
+$$ C_H = 8^3 \mod 55 = 512 \mod 55 = 17 $$
+
+$$ C_E = 5^3 \mod 55 = 125 \mod 55 = 15 $$
+
+$$ C_L = 12^3 \mod 55 = 1728 \mod 55 = 23 $$
+
+$$ C_L = 12^3 \mod 55 = 1728 \mod 55 = 23 $$
+
+$$ C_O = 15^3 \mod 55 = 3375 \mod 55 = 20 $$
+
+17 15 23 23 20
+
 20. WELCOME
+
+$$
+W = 23\\
+E = 05\\
+L = 12\\
+C = 03\\
+O = 15\\
+M = 13\\
+E = 05\\
+$$
+
+$$ C_W = 23^3 \mod 55 = 12167 \mod 55 = 12 $$
+
+$$ C_E = 5^3 \mod 55 = 125 \mod 55 = 15 $$
+
+$$ C_L = 12^3 \mod 55 = 1728 \mod 55 = 23 $$
+
+$$ C_C = 3^3 \mod 55 = 27 \mod 55 = 27 $$
+
+$$ C_O = 15^3 \mod 55 = 3375 \mod 55 = 20 $$
+
+$$ C_M = 13^3 \mod 55 = 2197 \mod 55 = 52 $$
+
+$$ C_E = 5^3 \mod 55 = 125 \mod 55 = 15 $$
+
+12 15 23 27 20 52 15
 
 21. EXCELLENT
 
+$$
+E = 05\\
+X = 24\\
+C = 03\\
+E = 05\\
+L = 12\\
+L = 12\\
+E = 05\\
+N = 14\\
+T = 20\\
+$$
+
+$$ C_E = 5^3 \mod 55 = 125 \mod 55 = 15 $$
+
+$$ C_X = 24^3 \mod 55 = 13824 \mod 55 = 19 $$
+
+$$ C_C = 3^3 \mod 55 = 27 \mod 55 = 27 $$
+
+$$ C_E = 5^3 \mod 55 = 125 \mod 55 = 15 $$
+
+$$ C_L = 12^3 \mod 55 = 1728 \mod 55 = 23 $$
+
+$$ C_L = 12^3 \mod 55 = 1728 \mod 55 = 23 $$
+
+$$ C_E = 5^3 \mod 55 = 125 \mod 55 = 15 $$
+
+$$ C_N = 14^3 \mod 55 = 2744 \mod 55 = 49 $$
+
+$$ C_T = 20^3 \mod 55 = 8000 \mod 55 = 25 $$
+
+15 19 27 15 23 23 15 49 25
+
 22. 13 20 20 09
+
+$$ M = C^d \mod pq $$
+
+$$ d = 27, p = 5, q = 11 $$
+
+$$ M_{13} = 13^{27} \mod 55 $$
+
+$$ = 13^{16 + 8 + 2 + 1} = 13^{16} \cdot 13^8 \cdot 13^2 \cdot 13^1 $$
+
+$$ = [(13^{16} \mod 55)(13^8 \mod 55)(13^2 \mod 55)(13 \mod 55)] (\mod 55) $$
+
+$$ = (31 \cdot 36 \cdot 4 \cdot 13)(\mod 55) $$
+
+$$ = 58032(\mod 55) $$
+
+$$ = 7 $$
+
+The above is just demonstrating how to do this somewhat "by hand". The rest are
+done using a calculator:
+
+$$ M_{20} = 20^{27} \mod 55 = 15 $$
+
+$$ M_{20} = 20^{27} \mod 55 = 15 $$
+
+$$ M_{09} = 9^{27} \mod 55 = 4 $$
+
+7 15 15 4
+
+Now using Caesar Cipher:
+
+$$
+07 = G\\
+15 = O\\
+15 = O\\
+04 = D\\
+$$
+
+GOOD
 
 23. 08 05 15
 
+$$ M_{08} = 8^{27} \mod 55 = 2 $$
+
+$$ M_{05} = 5^{27} \mod 55 = 25 $$
+
+$$ M_{15} = 15^{27} \mod 55 = 5 $$
+
+2 25 5
+
+$$
+02 = B\\
+25 = Y\\
+05 = E\\
+$$
+
+BYE
+
 24. 51 14 49 15
+
+$$ M_{51} = 51^{27} \mod 55 = 6 $$
+
+$$ M_{14} = 14^{27} \mod 55 = 9 $$
+
+$$ M_{49} = 49^{27} \mod 55 = 14 $$
+
+$$ M_{15} = 15^{27} \mod 55 = 5 $$
+
+6 9 14 5
+
+$$
+06 = F\\
+09 = I\\
+14 = N\\
+05 = E\\
+$$
+
+FINE
 
 25. Use Theorem 5.2.2 to prove that if $a$ and $n$ are positive integers and
     $a^{n - 1}$ is prime, then $a = 2$ and $n$ is prime.
+
+_Hint:_ By Theorem 5.2.2, using $a$ in place of $r$ and $n - 1$ in place of $n$,
+we have $1 + a + a^2 + \cdots + a^{n - 1} = \dfrac{a^n - 1}{a - 1}$.
+
+Multiplying both sides by $a - 1$ gives
+
+$$ a^n - 1 = (a - 1)\left(1 + a + a^2 + \cdots + a^{n - 1}\right) $$
+
+Theorem 5.2.2 states that:
+
+For any real number $r$ except $1$, and any integer $n \geq 0$,
+
+$$ \sum_{i = 0}^{n}{r^i} = \frac{r^{n + 1} - 1}{r - 1} $$
+
+**Proof:**
+
+Suppose $a$ and $n$ are positive integers and $a^{n - 1}$ is prime.
+
+It must be shown that $a = 2$ and $n$ is prime.
+
+_Proof (that $a = 2$):_
+
+By Theorem 5.2.2, using $a$ in place of $r$ and $n - 1$ in place of $n$ yields:
+
+$$ \sum_{i = 0}^{n - 1}{a^i} = \frac{a^{(n - 1) + 1} - 1}{a - 1} $$
+
+$$ = \frac{a^n - 1}{a - 1} $$
+
+Rewriting the summation notation as a sequence:
+
+$$ (1 + a + \cdots + a^{n - 1}) = \frac{a^n - 1}{a - 1} $$
+
+Then, multiplying both sides by $a - 1$:
+
+$$ (a - 1)(1 + a + \cdots + a^{n - 1}) = a^n - 1 $$
+
+So, $(a - 1)$ divides $a^n - 1$ (by the definition of divisibility).
+
+By the supposition $a^{n - 1}$ is prime, and by the definition of prime, this
+means that $a^{n - 1}$ can only have two factors, namely $1$ and itself.
+
+Since it has been shown that $(a - 1)$ and $(1 + a + \cdots + a^{n - 1})$ are
+two factors of $a^n - 1$, this means that either $(a - 1) = 1$ or
+$(1 + a + \cdots + a^{n - 1}) = 1$.
+
+Notice that:
+
+$$ (1 + a + \cdots + a^{n - 1}) \neq 1 $$
+
+since $a$ is a positive integer (_i.e._ $a \geq 1$).
+
+Thus $(a - 1) = 1$, and therefore, by algebra:
+
+$$ a - 1 = 1 $$
+
+$$ a = 2 $$
+
+This is what was to be shown.
+
+_Proof (that $n$ is prime) (by contradiction):_
+
+Suppose not, suppose $n$ is not prime. Then, since $n$ is not prime, this means
+that:
+
+$$ n = bc $$
+
+for some integers $b$ and $c$, where:
+
+$$ 1 < b,c < n $$
+
+Note that it has been shown that $a = 2$, and $a^{n - 1}$ is prime (by the
+supposition), it follows (by substitution):
+
+$$ 2^{n - 1} \text{ is prime} $$
+
+By Theorem 5.2.2:
+
+$$ 2^n - 1 = 2^{bc} - 1 = (2^b)^c - 1^c = (2^b - 1)((2^b)^{c - 1} + (2^b)^{c - 2} + \cdots + 1) $$
+
+where both $(2^b - 1) > 1$ and
+$((2^b)^{c - 1} + (2^b)^{c - 2} + \cdots + 1) > 1$, so $2^n - 1$ is not prime.
+
+So it has just been shown that $2^n - 1$ is not prime, but it is known from the
+note above that $2^n - 1$ is prime. This is a contradiction, therefore the
+supposition is false, and $n$ is prime.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Therefore, it has been shown that $a = 2$ and $n$ is prime.
+
+Q.E.D.
+
+Of note is that this proof introduces what is known as
+[Mersenne primes](https://en.wikipedia.org/wiki/Mersenne_prime).
 
 In 26 and 27, use the extended Euclidean algorithm to find the greatest common
 divisor of the given numbers and express it as a linear combination of the two
@@ -5164,7 +5415,35 @@ numbers.
 
 26. 6664 and 765
 
+$$ 6664 = 765 \cdot 8 + 544 $$
+
+$$ 765 = 544 \cdot 1 + 221 $$
+
+$$ 544 = 221 \cdot 2 + 102 $$
+
+$$ 221 = 102 \cdot 2 + 17 $$
+
+$$ 102 = 17 \cdot 6 + 0 $$
+
+$$ \text{gcd}(6664, 765) = 17 $$
+
 27. 4158 and 1568
+
+$$ 4158 = 1568 \cdot 2 + 1022 $$
+
+$$ 1568 = 1022 \cdot 1 + 546 $$
+
+$$ 1022 = 546 \cdot 1 + 476 $$
+
+$$ 546 = 476 \cdot 1 + 70 $$
+
+$$ 476 = 70 \cdot 6 + 56  $$
+
+$$ 70 = 56 \cdot 1 + 14  $$
+
+$$ 56 = 14 \cdot 4 + 0  $$
+
+$$ \text{gcd}(4158, 1568) = 14 $$
 
 Exercises 28 and 29 refer to the following formal version of the extended
 Euclidean algorithm.
@@ -5192,31 +5471,342 @@ each iteration of the loop
 
 28. $A = 330$, $B = 156$
 
+| $a$   | $b$   | $r$  | $q$ | $s$  | $t$   | $u$   | $v$   | $\text{newu}$ | $\text{newv}$ | $sA + tB$ |
+| ----- | ----- | ---- | --- | ---- | ----- | ----- | ----- | ------------- | ------------- | --------- |
+| $330$ | $156$ |      |     | $1$  | $0$   | $0$   | $1$   |               |               | $330$     |
+| $156$ | $18$  | $18$ | $2$ | $0$  | $1$   | $1$   | $-2$  | $1$           | $-2$          | $18$      |
+| $18$  | $12$  | $12$ | $8$ | $1$  | $-2$  | $-8$  | $17$  | $-8$          | $17$          | $-6$      |
+| $12$  | $6$   | $6$  | $1$ | $-8$ | $17$  | $9$   | $-19$ | $9$           | $-19$         | $6$       |
+| $6$   | $0$   | $0$  | $2$ | $9$  | $-19$ | $-26$ | $55$  | $-26$         | $55$          | $6$       |
+
 29. $A = 284$, $B = 168$
 
-30. Finis the proof of Theorem 8.4.5 by proving that if $a$, $b$, and $c$ are as
-    in the proof, then $c | b$.
+| $a$   | $b$   | $r$   | $q$ | $s$   | $t$  | $u$   | $v$   | $\text{newu}$ | $\text{newv}$ | $sA + tB$ |
+| ----- | ----- | ----- | --- | ----- | ---- | ----- | ----- | ------------- | ------------- | --------- |
+| $284$ | $168$ |       |     | $1$   | $0$  | $0$   | $1$   |               |               | $284$     |
+| $168$ | $116$ | $116$ | $1$ | $0$   | $1$  | $1$   | $-1$  | $1$           | $-1$          | $168$     |
+| $116$ | $52$  | $52$  | $1$ | $1$   | $-1$ | $-1$  | $2$   | $-1$          | $2$           | $116$     |
+| $52$  | $12$  | $12$  | $2$ | $-1$  | $2$  | $3$   | $-5$  | $3$           | $-5$          | $52$      |
+| $12$  | $4$   | $4$   | $4$ | $3$   | $-5$ | $-13$ | $22$  | $-13$         | $22$          | $12$      |
+| $4$   | $0$   | $0$   | $3$ | $-13$ | $22$ | $42$  | $-71$ | $42$          | $-71$         | $4$       |
+
+30. Finish the proof of Theorem 8.4.5 by proving that if $a$, $b$, and $c$ are
+    as in the proof, then $c | b$.
+
+**Theorem 8.4.5 Writing a Greatest Common Divisor as a Linear Combination**
+
+For all integers $a$ and $b$, not both zero, if $d = \text{gcd}(a, b)$, then
+there exist integers $s$ and $t$ such that $as + bt = d$.
+
+**Proof:**
+
+Given integers $a$ and $b$, not both zero, and given $d = \text{gcd}(a, b)$, let
+
+$$ S = \{x | x \text{ is a positive integer and } x = as + bt \text{ for some integers } s \text{ and } t\} $$
+
+Note that $S$ is a nonempty set because (1) if $a > 0$ then
+$1 \cdot a + 0 \cdot b \in S$, (2) if $a < 0$ then
+$(-1) \cdot a + 0 \cdot b \in S$, and (3) if $a = 0$ then, by assumption,
+$b \neq 0$, and hence $0 \cdot a + 1 \cdot b \in S$ or
+$0 \cdot a + (-1) \cdot b \in S$. Thus, because $S$ is a nonempty subset of
+positive integers, by the well-ordering principle for the integers there is a
+least element $c$ in $S$. By definition of $S$,
+
+$$ c = as + bt \text{ for some integers } s \text{ and } t $$
+
+We will show that (1) $c \geq d$, and (2) $c \leq d$, and we will therefore be
+able to conclude that $c = d = \text{gcd}(a, b)$.
+
+_(1) Proof that $c \geq d$:_
+
+_[In this part of the proof, we show that $d$ is a divisor of $c$ and thus that
+$d \leq c$.]_ Because $d = \text{gcd}(a, b)$, by definition of greatest common
+divisor, $d | a$ and $d | b$. Hence $a = dx$ and $b = dy$ for some integers $x$
+and $y$. Then
+
+$$ c = as + bt $$
+
+$$ = (dx)s + (dy)t $$
+
+$$ = d(xs + y) $$
+
+Now $xs + yt$ is an integer because it is a sum of products of integers. Thus,
+by definition of divisibility, $d | c$. Both $c$ and $d$ are positive, and
+hence, by Theorem 4.4.1, $c \geq d$.
+
+_(2) Proof that $c \leq d$:_
+
+_[In this part of the proof, we show that $c$ is a divisor of both $a$ and $b$
+and therefore that $c$ is less than or equal to the greatest common divisor of
+$a$ and $b$, which is $d$.]_ Apply the quotient-remainder theorem to the
+division of $a$ by $c$ to obtain
+
+$$ a = cq + r \text{ for some integers } q \text{ and } r \text{ with } 0 \leq r < c $$
+
+Thus for some integers $q$ and $r$ with $0 \leq r < c$,
+
+$$ r = a - cq $$
+
+Now $c = as + bt$. Therefore, for some integers $q$ and $r$ with $0 \leq r < c$,
+
+$$ r = a - (as + bt)q $$
+
+$$ = a(1 - sq) - btq $$
+
+Thus $r$ is a linear combination of $a$ and $b$. If $r > 0$, then $r$ would be
+in $S$, and so $r$ would be a smaller element of $S$ than $c$, which would
+contradict the fact that $c$ is the least element of $S$. Hence $r = 0$. By
+substitution into (8.4.4),
+
+$$ a = cq $$
+
+and therefore $c | a$.
+
+_[Now, here is where we show that $c | b$ for exercise 30.]_
+
+By the quotient-remainder theorem,
+
+$$ b = cp + r $$
+
+for some integers $p$ and $r$ where $0 \leq r < c$. Solving for $r$ by algebra
+yields:
+
+$$ r = b - cp $$
+
+Now, $c = as + bt$ by the definition for $S$. By substitution:
+
+$$ r = b - (as + bt)p $$
+
+$$ = b - pas + btp $$
+
+$$ = b + btp - pas $$
+
+$$ = b(1 + tp) - pas $$
+
+Thus $r$ is a linear combination of $a$ and $b$. If $r > 0$, then $r$ would be
+in $S$, and so $r$ would be a smaller element of $S$ than $c$, which would
+contradict the fact that $c$ is the least element of $S$. Hence $r = 0$. By
+substitution into (8.4.4),
+
+$$ b = cp $$
+
+Therefore, by the definition of divisibility, $c | b$.
+
+_[End of answer for exercise 30]_
+
+Because $c | a$ and $c | b$, $c$ is a common divisor of $a$ and $b$. Hence $c$
+is less than or equal to the greatest common divisor of $a$ and $b$. In other
+words, $c \leq d$.
+
+From (1) and (2), we conclude that $c = d$. It follows that $d$, the greatest
+common divisor of $a$ and $b$, is equal to $as + bt$.
 
 31.
 
+For all integers $a$ and $n$, if $\text{gcd}(a, n) = 1$, then there exists an
+integer $s$ such that $as \equiv 1(\mod n)$, and so $s$ is an inverse for $a$
+modulo $n$.
+
 a. Find an inverse for $210$ modulo $13$.
+
+_Step 1:_
+
+$$ 210 = 13 \cdot 16 + 2 $$
+
+so $2 = 210 - 16 \cdot 13 $.
+
+_Step 2:_
+
+$$ 13 = 2 \cdot 6 + 1 $$
+
+so $1 = 13 - 2 \cdot 6$.
+
+_Step 3:_
+
+$$ 6 = 1 \cdot 6 + 0 $$
+
+$$ \text{gcd}(210, 13) = 1 $$
+
+Substitute back through Steps 1 and 2:
+
+$$ 1 = 13 - 2 \cdot 6 \text{ by step 2} $$
+
+$$ = 13 - (210 - 16 \cdot 13) \cdot 6 \text{ by step 1} $$
+
+$$ = (-6) \cdot 210 + 97 \cdot 13 $$
+
+Thus $210 \cdot (-6) \equiv 1(\mod 13)$, and so $-6$ is an inverse for $210$
+modulo $13$.
 
 b. Find a positive inverse for $210$ modulo $13$.
 
+$$ 13 - 6 = 7 $$
+
+$$ 7 \equiv -6(\mod 13) $$
+
+because $7 - (-6) = 13 = 13 \cdot 1$.
+
+By Theorem 8.4.3(3):
+
+$$ 210 \cdot 7 \equiv 210 \cdot (-6)(\mod 13) $$
+
+By part (a), $-6$ is an inverse for $210$ modulo $13$, and so:
+
+$$ 210 \cdot (-6) \equiv 1(\mod 13) $$
+
+It follows, by the symmetric and transitive properties of congruence, that:
+
+$$ 210 \cdot 7 \equiv 1(\mod 13) $$
+
+and so $7$ is a positive inverse for $210$ modulo $13$.
+
 c. Find a positive solution for the congruence $210x \equiv 8 (\mod 13)$.
+
+By part (b):
+
+$$ 210 \cdot 7 \equiv 1(\mod 13) $$
+
+Multiplying both sides by $8$ and apply Theorem 8.4.3(3) to obtain:
+
+$$ 210 \cdot 56 \equiv 8(\mod 13) $$
+
+Thus a positive solution for $210x \equiv 8(\mod 13)$ is $x = 56$.
 
 32.
 
 a. Find an inverse for $41$ modulo $660$.
 
+_Step 1:_
+
+$$ 660 = 41 \cdot 16 + 4 $$
+
+so $4 = 660 - 41 \cdot 16 $
+
+_Step 2:_
+
+$$ 41 = 4 \cdot 10 + 1 $$
+
+so $1 = 41 - 4 \cdot 10$
+
+_Step 3:_
+
+$$ 4 = 1 \cdot 4 + 0 $$
+
+so $\text{gcd}(41, 660) = 1$.
+
+Substitute back through steps 2 and 1:
+
+$$ 1 = 41 - 4 \cdot 10 $$
+
+$$ = 41 - (660 - 41 \cdot 16) \cdot 10 $$
+
+$$ = 41 - 660(10) + 41(16)(10) $$
+
+$$ = 41 + 41(16)(10) - 660(10) $$
+
+$$ = 41(1 + (16)(10)) - 660(10) $$
+
+$$ = 41(1 + 160) - 660(10) $$
+
+$$ = 41(161) - 660(10) $$
+
+By the definition for congruence modulo $n$, this means that:
+
+$$ 41 \cdot 161 \equiv 1(\mod 660) $$
+
+And so $161$ is an inverse for $41$ modulo $660$.
+
 b. Find the least positive solution for the following congruence:
 $41x \equiv 125(\mod 660)$.
+
+By part (a), $41 \cdot 161 \equiv 1(\mod 660)$. Multiply both sides by $125$ to
+get:
+
+$$ 41 \cdot 20125 \equiv 125(\mod 660) $$
+
+Thus a positive solution for $41x \equiv 125(\mod 660)$ is $x = 20125$.
+
+By Theorem 8.4.1, $20125 \equiv 325 (\mod 660)$ because
+$20125 = 660 \cdot 30 + 325$.
+
+So, by Theorem 8.4.3(3),
+
+$$ 41 \cdot 20125 \equiv 41 \cdot 325 \equiv 125 (\mod 660) $$
+
+This shows that $325$ is also a solution for congruence, and because
+$0 \leq 325 < 660$, $325$ is the least positive solution for congruence.
 
 33. Use Theorem 8.4.5 to prove that for all integers $a$, $b$, and $c$, if
     $\text{gcd}(a, b) = 1$ and $a | c$ and $b | c$, then $ab | c$.
 
+_Hint:_ If $as + bt = 1$ and $c = au = bv$, then
+$c = asc + btc = as(bv) + bt(au)$.
+
+**Proof:**
+
+Suppose $a$, $b$, and $c$ are any integers, with $\text{gcd}(a, b) = 1$,
+$a | c$, and $b | c$.
+
+It must be shown that $ab | c$.
+
+Let $d = \text{gcd}(a, b) = 1$.
+
+By Theorem 8.4.5:
+
+$$ as + bt = d = 1 $$
+
+for some integers $s$ and $t$.
+
+Additionally, since $a | c$:
+
+$$ c = au $$
+
+for some integer $u$.
+
+Similarly, since $b | c$:
+
+$$ c = bv $$
+
+for some integer $v$.
+
+Multiplying $as + bt = 1$ by $c$ yields:
+
+$$ c = asc + btc $$
+
+Then, by substitution for $c$:
+
+$$ c = as(bv) + bt(au) $$
+
+$$ = asbv + btau $$
+
+$$ = ab(sv + tu) $$
+
+Now, $sv + tu$ is an integer (by the product and sum of integers). Then, by the
+definition of divisibility, it follows that $ab | c$. This is what was to be
+shown.
+
+Q.E.D.
+
 34. Give a counterexample to show that the statement of exercise 33 is false if
     the hypothesis that $\text{gcd}(a, b) = 1$ is removed.
+
+**Disproof (by counterexample):**
+
+Suppose $a$, $b$, and $c$ are any integers, with $a | c$, and $b | c$.
+
+It must be shown that there exists some $a$ and some $b$ such that
+$ab \cancel{|} c$.
+
+Consider $a = 4$, $b = 6$, and $c = 12$.
+
+Note that $a | c$ because $4 | 12$ (because $12 = 4 \cdot 3$), and also note
+that $b | c$ because $6 | 12$ (because $12 = 6 \cdot 2$), but notice that:
+
+$$ ab = (4)(6) = 24 \cancel{|} 12 = c $$
+
+Thus $ab \cancel{|} c$.
+
+Q.E.D.
 
 35. Corollary 8.4.7 guarantees the existence of an inverse modulo $n$ for an
     integer $a$ when $a$ and $n$ are relatively prime. Use Euclid's lemma to
@@ -5224,26 +5814,265 @@ $41x \equiv 125(\mod 660)$.
     $s$ and $t$ are any two integers whose product with $a$ is congruent to $1$
     modulo $n$, then $s$ and $t$ are congruent to each other modulo $n$.
 
+**Proof:**
+
+Suppose $a$, $s$, $t$, and $n$ are integers where $a$ and $n$ are relatively
+prime.
+
+Furthermore, suppose that $as \equiv 1(\mod n)$ and $at \equiv 1(\mod n)$.
+
+It must be shown that $s \equiv t(\mod n)$.
+
+By the supposition, since $a$ and $n$ are relatively prime, then that means
+that:
+
+$$ \text{gcd}(a, n) = 1 $$
+
+By the supposition, since $as \equiv 1(\mod n)$ and $at \equiv 1(\mod n)$, by
+the definition of congruence modulo $n$, this means that:
+
+$$ n | (as - 1) $$
+
+and:
+
+$$ n | (at - 1) $$
+
+Since $n$ divides both $as - 1$ and $at - 1$, it follows that $n$ divides any
+difference of the two.
+
+Subtracting $at - 1$ from $as - 1$ yields:
+
+$$ (as - 1) - (at - 1) = as - 1 - at + 1 = as - at = a(s - t) $$
+
+Thus $n | a(s - t)$.
+
+By Euclid's Lemma, since $\text{gcd}(a, n) = 1$, and since $n | a(s - t)$, it
+follows that $n | (s - t)$.
+
+By the definition for congruence modulo $n$, this means that:
+
+$$ s \equiv t(\mod n) $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 In 36, 37, 39, and 40, use the RSA cipher with public key
 $n = 713 = 23 \cdot 31$ and $e = 43$. In 36 and 37, encode the messages into
-their numeric equivalents and encrypt them. In 39 and 40, decrypt the given
-ciphertext and find the original messages.
+their numeric equivalents (using Caesar Cipher) and encrypt them. In 39 and 40,
+decrypt the given ciphertext and find the original messages.
 
 36. HELP
 
+_Reference Material:_
+
+$$ C = M^e \mod pq $$
+
+$$ pq = n = 713 = 23 \cdot 31 $$
+
+$$ e = 43 $$
+
+_Encoding:_
+
+$$
+H = 08\\
+E = 05\\
+L = 12\\
+P = 16\\
+$$
+
+_Encrypting:_
+
+$$ C_H = 8^{43} \mod 713 = 233 $$
+
+$$ C_E = 5^{43} \mod 713 = 129 $$
+
+$$ C_L = 12^{43} \mod 713 = 48 $$
+
+$$ C_P = 16^{43} \mod 713 = 128 $$
+
+233 129 48 128
+
 37. COME
+
+$$
+C = 03\\
+O = 15\\
+M = 13\\
+E = 05\\
+$$
+
+$$ C_C = 3^{43} \mod 713 = 675 $$
+
+$$ C_O = 15^{43} \mod 713 = 89 $$
+
+$$ C_M = 13^{43} \mod 713 = 476 $$
+
+$$ C_E = 5^{43} \mod 713 = 129 $$
+
+675 89 476 129
 
 38. Find the least positive inverse for $43$ modulo $660$.
 
+Note that to find this inverse, the final form you're looking for is:
+
+$$ 43s + 660t = 1 $$
+
+where $s$ will be the inverse.
+
+_Step 1:_
+
+$$ 660 = 43 \cdot 15 + 15 $$
+
+so $15 = 660 - 43 \cdot 15$
+
+_Step 2:_
+
+$$ 43 = 15 \cdot 2 + 13 $$
+
+so $13 = 43 - 15 \cdot 2$
+
+_Step 3:_
+
+$$ 15 = 13 \cdot 1 + 2 $$
+
+so $2 = 15 - 13 \cdot 1$
+
+_Step 4:_
+
+$$ 13 = 2 \cdot 6 + 1 $$
+
+so $1 = 13 - 2 \cdot 6$
+
+_Step 5:_
+
+$$ 2 = 1 \cdot 2 + 0 $$
+
+so $\text{gcd}(660, 43) = 1$.
+
+Stepping back through steps 4-3:
+
+$$ 1 = 13 - 2 \cdot 6 $$
+
+$$ = 13 - (15 - 13 \cdot 1) \cdot 6 $$
+
+$$ = 13 - (15 - 13) \cdot 6 $$
+
+$$ = 13 - (15(6) - 13(6)) $$
+
+$$ = 13 - 15(6) + 13(6) $$
+
+$$ = 13(7) - 15(6) $$
+
+$$ = 7 \cdot 13 - 6 \cdot 15 $$
+
+Stepping back through step 2:
+
+$$ = 7 \cdot (43 - 15 \cdot 2) - 6 \cdot 15 $$
+
+$$ = 7 \cdot (43 - 15(2)) - 15(6) $$
+
+$$ = (7 \cdot 43) - 7(15(2)) - 15(6) $$
+
+$$ = (7 \cdot 43) - 14(15) - 6(15) $$
+
+$$ = (7 \cdot 43) - 20(15) $$
+
+$$ = 7 \cdot 43 - 20 \cdot 15 $$
+
+Stepping back through step 1:
+
+$$ = 7 \cdot 43 - 20 \cdot (660 - 43 \cdot 15) $$
+
+$$ = 7 \cdot 43 - 20(660 - 43(15)) $$
+
+$$ = 7 \cdot 43 - 20(660) + (20)43(15) $$
+
+$$ = 7 \cdot 43 - 20(660) + (300)43 $$
+
+$$ = 307 \cdot 43 - 20 \cdot 660 $$
+
+So:
+
+$$ 307 \cdot 43 \equiv 1(\mod 660) $$
+
+And since:
+
+$$ 0 \leq 307 < 660 $$
+
+$307$ is the least positive inverse of $43$.
+
 39. 675 089 089 048
 
+_References:_
+
+$$ M = C^d \mod pq $$
+
+$$ e = 43 $$
+
+$$ pq = n = 713 = 23 \cdot 31 $$
+
+_Calculating $d$:_
+
+$d = \text{ the positive inverse for } e \text{ modulo } (p - 1)(q - 1)$
+
+$$ e \mod (p - 1)(q - 1) = 43 \mod (23 - 1)(31 - 1) = 43 \mod (22)(30) = 43 \mod 660 $$
+
+The positive inverse for $43 \mod 660$ was found by exercise 38 to be $307$.
+
+_Decrypting:_
+
+675 089 089 048
+
+$$ M_{675} = 675^{307} \mod 713 = 3 $$
+
+$$ M_{089} = 89^{307} \mod 713 = 15 $$
+
+$$ M_{089} = 89^{307} \mod 713 = 15 $$
+
+$$ M_{048} = 48^{307} \mod 713 = 12 $$
+
+_Decoding:_
+
+$$
+03 = C\\
+15 = O\\
+15 = O\\
+12 = L\\
+$$
+
+COOL
+
 40. 028 018 675 129
+
+_Decrypting:_
+
+$$ M_{028} = 28^{307} \mod 713 = 14 $$
+
+$$ M_{018} = 18^{307} \mod 713 = 9 $$
+
+$$ M_{675} = 675^{307} \mod 713 = 3 $$
+
+$$ M_{129} = 129^{307} \mod 713 = 5 $$
+
+_Decoding:_
+
+$$
+14 = N\\
+09 = I\\
+03 = C\\
+05 = E\\
+$$
+
+NICE
 
 41.
 
 a. Use mathematical induction and Euclid's lemma to prove that for every
-positive integer $s$, if $p$ and $q_1, q_2, \dots, q_s$ are 0rime numbers and
+positive integer $s$, if $p$ and $q_1, q_2, \dots, q_s$ are prime numbers and
 $p | q_1q_2 \cdots q_s$, then $p = q_i$ for some $i$ with $1 \leq i \leq s$.
+
+Omitted.
 
 b. The uniqueness part of the unique factorization theorem for the integers says
 that given any integer $n$, if
@@ -5266,13 +6095,19 @@ $p_i \neq q_j$ for any integers $i$ and $j$. Then use part (a) to deduce a
 contradiction, and conclude that the prime factorization of $n$ is unique
 except, possibly, for the order in which the prime factors are written.
 
+Omitted.
+
 42. According to Fermat's little theorem, if $p$ is a prime number and $a$ and
     $p$ are relatively prime, then $a^{p - 1} \equiv 1 (\mod p)$. Verify that
     this theorem gives correct results for the following:
 
 a. $a = 15$ and $p = 7$
 
+Omitted.
+
 b. $a = 8$ and $p = 11$
+
+Omitted.
 
 43. Fermat's little theorem can be used to show that a number is not prime by
     finding a number $a$ relatively prime to $p$ with the property that
@@ -5280,3 +6115,5 @@ b. $a = 8$ and $p = 11$
     that a number _is_ prime. Find an example to illustrate this fact. That is,
     find integers $a$ and $p$ such that $a$ and $p$ are relatively prime and
     $a^{p - 1} \equiv 1(\mod p)$ but $p$ is not prime.
+
+Omitted.
