@@ -6117,3 +6117,321 @@ Omitted.
     $a^{p - 1} \equiv 1(\mod p)$ but $p$ is not prime.
 
 Omitted.
+
+---
+
+Page 583
+
+**Exercise Set 8.5**
+
+1. Each of the following is a relation on $\{0, 1, 2, 3\}$. Draw directed graphs
+   for each relation, and indicate which relations are antisymmetric.
+
+a. $R_1 = \{(0, 0), (0, 2), (1, 0), (1, 3), (2, 2), (3, 0), (3, 1)\}$
+
+b. $R_2 = \{(0, 1), (0, 2), (1, 1), (1, 2), (1, 3), (2, 2), (3, 2)\}$
+
+c. $R_3 = \{(0, 0), (0, 3), (1, 0), (1, 3), (2, 2), (3, 3), (3, 2)\}$
+
+d. $R_4 = \{(0, 0), (1, 0), (1, 2), (1, 3), (2, 0), (2, 1), (3, 2), (3, 0)\}$
+
+2. Let $P$ be the set of all people in the world and define a relation $R$ on
+   $P$ as follows: For all people $x$ and $y$,
+
+$$ x R y \Leftrightarrow x \text{is no older than } y $$
+
+Is $R$ antisymmetric? Prove or give a counterexample.
+
+3. Let $S$ be the set of all strings _a_'s and _b_'s. Define a relation $R$ on
+   $S$ as follows: For every $s, t \in S$,
+
+$$ s R t \Leftrightarrow L(s) \leq L(t) $$
+
+where $L(x)$ denotes the length of a string $x$. Is $R$ antisymmetric? Prove or
+give a counterexample.
+
+4. Let $R$ be the "less than" relation on $\mathbb{R}$, the set of all real
+   numbers. For every $x, y \in \mathbb{R}$,
+
+$$ x R y \Leftrightarrow x < y $$
+
+Is $R$ antisymmetric? Prove or give a counterexample.
+
+5. Let $\mathbb{R}$ be the set of all real numbers and define a relation $R$ on
+   $\mathbb{R} \times \mathbb{R}$ as follows: For every $(a, b)$ and $(c, d)$ in
+   $\mathbb{R} \times \mathbb{R}$,
+
+$$ (a, b) R (c, d) \Leftrightarrow \text{ either } a < c \text{ or both } a = c \text{ and } b \leq d $$
+
+Is $R$ a partial order relation? Prove or give a counterexample.
+
+6. Let $P$ be the set of all people who have ever lived and define a relation
+   $R$ on $P$ as follows: For every $r, s \in P$,
+
+$$ r R s \Leftrightarrow r \text{ is an ancestor of } s \text{ or } r = s $$
+
+Is $R$ a partial order relation? Prove or give a counterexample.
+
+7. Define a relation $R$ on $\mathbb{Z}$, the set of all integers as follows:
+   For every $m, n \in \mathbb{Z}$,
+
+$$ m R n \Leftrightarrow \text{ every prime factor of } m \text{ is a prime factor of } n $$
+
+Is $R$ a partial order relation? Prove or give a counterexample.
+
+8. Define a relation $R$ on $\mathbb{Z}$, the set of all integers as follows:
+   For every $m, n \in \mathbb{Z}$,
+
+$$ m R n \Leftrightarrow m + n \text{ is even} $$
+
+Is $R$ a partial order relation? Prove or give a counterexample.
+
+9. Define a relation $R$ on $\mathbb{R}$, the set of all real numbers as
+   follows: For every $x, y \in \mathbb{R}$,
+
+$$ x R y \Leftrightarrow x^2 \leq y^2 $$
+
+Is $R$ a partial order relation? Prove or give a counterexample.
+
+10. Suppose $R$ and $S$ are antisymmetric relations on a set $A$. Must
+    $R \cup S$ also be antisymmetric? Explain.
+
+11. Let $A = \{a, b\}$, and suppose $A$ has the partial order relation $R$ where
+    $R = \{(a, a), (a, b) ,(b, b)\}$. Let $S$ be the set of all strings in _a_'s
+    and _b_'s and let be the corresponding lexicographic order on $S$. Indicate
+    which of the following statements are true, and for each true statement cite
+    as a reason part (1), (2), or (3) of the definition of lexicographic order
+    given in Theorem 8.5.1.
+
+a. $aab \preceq aaba$
+
+b. $bbab \preceq bba$
+
+c. $\lambda \preceq aba$
+
+d. $aba \preceq abb$
+
+e. $bbab \preceq bbaa$
+
+f. $ababa \preceq ababaa$
+
+g. $bbaba \preceq bbabb$
+
+12. Prove Theorem 8.5.1.
+
+13. Let $A = \{a, b\}$. Describe all partial order relations on $A$.
+
+14. Let $A = \{a, b, c\}$.
+
+a. Describe all partial order relations on $A$ for which $a$ is a maximal
+element.
+
+b. Describe all partial order relations on $A$ for which $a$ is a minimal
+element.
+
+15. Suppose a relation $R$ on a set $A$ is reflexive, symmetric, transitive, and
+    antisymmetric. What can you conclude about $R$? Prove your answer.
+
+16. Consider the "divides" relation on each of the following sets $A$. Draw the
+    Hasse diagram for each relation.
+
+a. $A = \{1, 2, 4, 5, 10, 15, 20\}$
+
+b. $A = \{2, 3, 4, 6, 8, 9, 12, 18\}$
+
+17. Consider the "subset" relation on $\mathscr{P}(S)$ for each of the following
+    sets $S$. Draw the Hasse diagram for each relation.
+
+a. $S = \{0, 1\}$
+
+b. $S = \{0, 1, 2\}$
+
+18. Let $S = \{0, 1\}$ and consider the partial order relation $R$ defined on
+    $S \times S$ as follows: For all ordered pairs $(a, b)$ and $(c, d)$ in
+    $S \times S$,
+
+$$ (a, b) R (c, d) \Leftrightarrow \text{ either } a < c \text{ or both } a = c \text{ and } b \leq d $$
+
+where $<$ denotes the usual "less than" and $\leq$ denotes the usual "less than
+or equal to" relation for real numbers. Draw the Hasse diagram for $R$.
+
+19. Let $S = \{0, 1\}$ and consider the partial order relation $R$ defined on
+    $S \times S$ as follows: For all ordered pairs $(a, b)$ and $(c, d)$ in
+    $S \times S$,
+
+$$ (a, b) R (c, d) \Leftrightarrow a \leq c \text{ and } b \leq d $$
+
+where $\leq$ denotes the usual "less than or equal to" relation for real
+numbers. Draw the Hasse diagram for $R$.
+
+20. Let $S = \{0, 1\}$ and consider the partial order relation $R$ defined on
+    $S \times S \times S$ as follows: For all ordered triples $(a, b, c)$ and
+    $(d, e, f)$ in $S \times S \times S$,
+
+$$ (a, b, c) R (d, e, f) \Leftrightarrow a \leq d, b \leq e, \text{ and } c \leq f $$
+
+where $\leq$ denotes the usual "less than or equal to" relation for real
+numbers. Draw the Hasse diagram for $R$.
+
+21. Consider the "divides" relation defined on the set
+    $A = \{1, 2, 2^2, 2^3, \dots, 2^n\}$, where $n$ is a nonnegative integer.
+
+a. Prove that this relation is a total order relation on $A$.
+
+b. Draw the Hasse diagram for this relation for $n = 4$.
+
+In 22-29, find all greatest, least, maximal, and minimal elements for the
+relations in each of the referenced exercises.
+
+22. Exercise 16(a)
+
+23. Exercise 16(b)
+
+24. Exercise 17(a)
+
+25. Exercise 17(b)
+
+26. Exercise 18
+
+27. Exercise 19
+
+28. Exercise 20
+
+29. Exercise 21
+
+30. Each of the following sets is partially ordered with respect to the "less
+    than or equal to" relation, $\leq$, for real numbers. In each case,
+    determine whether the set has a greatest or least element.
+
+a. $\mathbb{R}$
+
+b. $\{x \in \mathb{R} | 0 \leq x \leq 1\}$
+
+c. $\{x \in \mathbb{R} | 0 < x < 1\}$
+
+d. $\{x \in \mathbb{Z} | 0 < x < 10\}$
+
+31. Let $A = \{a, b, c, d\}$, and let $R$ be the relation
+
+$$ R = \{(a, a), (b, b), (c, c), (d, d), (c, a), (a, d), (c, d), (b, c), (b, d), (b, a)\} $$
+
+Is $R$ a total order on $A$? Justify your answer.
+
+32. Let $A = \{a, b, c, d\}$, and let $R$ be the relation
+
+$$ R = \{(a, a), (b, b), (c, c), (d, d), (c, b), (a, d), (b, a), (b, d), (c, d), (c, a)\} $$
+
+Is $R$ a total order on $A$? Justify your answer.
+
+33. Consider the set $A = \{12, 24, 48, 3, 9\}$ ordered by the "divides"
+    relation. Is $A$ totally ordered with respect to the relation? Justify your
+    answer.
+
+34. Suppose that $R$ is a partial order relation on a set $A$ and that $B$ is a
+    subset of $A$. The **restriction of $R$ to $B$** is defined as follows:
+
+The restriction of $R$ to $B$
+
+$$ = \{(x, y) | x \in B, y \in B, \text{ and } (x, y) \in R\} $$
+
+In other words, two elements of $B$ are related by the restriction of $R$ to $B$
+if, and only if, they are related by $R$. Prove that the restriction of $R$ to
+$B$ is a partial order relation on $B$. (In less formal language, this says that
+a subset of a partially ordered set is partially ordered.)
+
+35. The set $\mathscr{P}(\{w, x, y, z\})$ is partially ordered with respect to
+    the "subset" relation $\subsetea$. Find a chain of length $4$ in
+    $\mathscr{P}(\{w, x, y, z\})$.
+
+36. The set $A = \{2, 4, 3, 6, 12, 18, 24\}$ is partially ordered with respect
+    to the "divides" relation. Find a chain of length $3$ in $A$.
+
+37. Find a chain of length $2$ for the relation defined in exercise 19.
+
+38. Prove that a partially ordered set is totally ordered if, and only if, it is
+    chain.
+
+39. Suppose that $A$ is a totally ordered set. Use mathematical induction to
+    prove that for any integer $n \geq 1$, every subset of $A$ with $n$ elements
+    has both a least element and a greatest element.
+
+40. Prove that a nonempty, finite, partially ordered set has
+
+a. at least one minimal element,
+
+b. at least one maximal element.
+
+41. Prove that a finite, partially ordered set has
+
+a. at most one greatest element,
+
+b. at most one least element.
+
+42. Draw a Hasse diagram for a partially ordered set that has two maximal
+    elements and two minimal elements and is such that each element is
+    comparable to exactly two other elements.
+
+43. Draw a Hasse diagram for a partially ordered set that has three maximal
+    elements and three minimal elements and is such that each element is either
+    greater than or less than exactly two other elements.
+
+44. Use the algorithm given in the text to find a topological sorting for the
+    relation of exercise 16(a) that is different from the "less than or equal
+    to" relation $\leq$.
+
+45. Use the algorithm given in the text to find a topological sorting for the
+    relation of exercise 16(b) that is different from the "less than or equal
+    to" relation $\leq$.
+
+46. Use the algorithm given in the text to find a topological sorting for the
+    relation of exercise 19.
+
+47. Use the algorithm given in the text to find a topological sorting for the
+    relation of exercise 20.
+
+48. Use the algorithm given in the text to find a topological sorting for the
+    "subset" relation on $\mathscr{P}(\{a, b, c, d\})$.
+
+49. Refer to the prerequisite structure shown in Figure 8.5.1.
+
+a. Find a list of six noncomparable courses that is different from the list
+given in the text.
+
+b. Find two topological sortings that are different from the one given in the
+text.
+
+50. A set $S$ of jobs can be ordered by writing $x \preceq y$ to mean that
+    either $x = y$ or $x$ must be done before $y$, for all $x$ and $y$ in $S$.
+    The following is a Hasse diagram for this relation for a particular set $S$
+    of jobs.
+
+(See Page 586 for image.)
+
+a. If one person is to perform all the jobs, one after another, find an order in
+which the jobs can be done.
+
+b. Suppose enough people are available to perform any number of jobs
+simultaneously.
+
+    (i) If each job requires one day to perform, what is the least number of days needed to perform all ten jobs?
+
+    (ii) What is the maximum number of jobs that can be performed at the same time?
+
+51. Suppose the tasks described in Example 8.5.12 require the following
+    performance times:
+
+| Task | Time Needed to Perform Task |
+| ---- | --------------------------- |
+| $1$  | $9$ hours                   |
+| $2$  | $7$ hours                   |
+| $3$  | $4$ hours                   |
+| $4$  | $5$ hours                   |
+| $5$  | $7$ hours                   |
+| $6$  | $3$ hours                   |
+| $7$  | $2$ hours                   |
+| $8$  | $4$ hours                   |
+| $9$  | $6$ hours                   |
+
+a. What is the minimum time required to assemble a car?
+
+b. Find a critical path for the assembly process.

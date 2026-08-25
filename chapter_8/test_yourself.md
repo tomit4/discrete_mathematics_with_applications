@@ -123,35 +123,103 @@ Page 566
 1. When letters of the alphabet are encrypted using the Caesar cipher, the
    encrypted version of the letter is ____.
 
+the letter that is three places in the alphabet to the right of the given
+letter, with $X$ wrapped around to $A$, $Y$ to $B$, and $Z$ to $C$
+
 2. If $a$, $b$, and $n$ are integers with $n > 1$, all of the following are
    different ways to express the fact that $n | (a - b)$: ____, ____, ____,
    ____.
+
+$a \equiv b(\mod n)$; $a = b + kn$ for some integer $k$; $a$ and $b$ have the
+same nonnegative remainder when divided by $n$; $a \mod n = b \mod n$
 
 3. If $a$, $b$, $c$, $d$, $m$, and $n$ are integers with $n > 1$ and if
    $a \equiv c(\mod n)$ and $b \equiv d(\mod n)$, then $a + b \equiv$ ____,
    $a - b \equiv$ ____, $ab \equiv$ ____, and $a^m \equiv$ ____
 
+$(c + d)(\mod n)$; $(c - d)(\mod n)$; $(cd)(\mod n)$; $c^m(\mod n)$
+
 4. If $a$, $n$, and $k$ are positive integers with $n > 1$, an efficient way to
    compute $a^k(\mod n)$ is to write $k$ as a ____ and use the facts about
    computing products and powers modulo $n$.
 
+sum of powers of $2$
+
 5. To express a greatest common divisor of two integers as a linear combination
    of the integers, use the extended version of the ____ algorithm.
 
+Euclidean
+
 6. To find an inverse for a positive integer $a$ modulo an integer $n$ with
    $n > 1$, you express the number $1$ as ____.
+
+a linear combination of $a$ and $n$
 
 7. To encrypt a message $M$ using RSA cryptography with public key $pq$ and $e$,
    you use the formula ____, and to decrypt a message $C$, you use the formula
    ____, where ____.
 
+$C = M^e \mod pq$; $M = C^d \mod pq$; $d$ is a positive inverse for $e$ modulo
+$(p - 1)(q - 1)$
+
 8. Euclid's lemma says that for all integers $a$, $b$, and $c$ if
    $\text{gcd}(a, c) = 1$ and $a | bc$, then ____.
 
+$a | b$
+
 9. Fermat's little theorem says that if $p$ is any prime number and $a$ is any
    integer such that $p | a$, then ____.
+
+$a^{p - 1} \equiv 1(\mod p)$
 
 10. The crux of the proof that the RSA cipher works is that if (1) $p$ and $q$
     are distinct large prime numbers, (2) $M < pq$, (3) $M$ is relatively prime
     to $pq$, (4) $e$ is relatively prime to $(p - 1)(q - 1)$, and (5) $d$ is a
     positive inverse for $e$ modulo $(p - 1)(q - 1)$, then $M =$ ____.
+
+$M^{ed} \mod pq$
+
+---
+
+Page 583
+
+**Test Yourself**
+
+1. For a relation $R$ on a set $A$ to be antisymmetric means that ____.
+
+2. To show that a relation $R$ on an infinite set $A$ is antisymmetric, you
+   suppose that ____ and you show that ____.
+
+3. To show that a relation $R$ on a set $A$ is not antisymmetric, you ____.
+
+4. To construct a Hasse diagram for a partial order relation, you start with a
+   directed graph of the relation in which all arrows point upward and you
+   eliminate ____, ____, and ____.
+
+5. If $A$ is a set that is partially ordered with respect to a relation
+   $\preceq$ and if $a$ and $b$ are elements of $A$, we say that $a$ and $b$ are
+   comparable if, and only if, ____ or ____.
+
+6. A relation $\preceq$ on a set $A$ is a total order if, and only if, ____.
+
+7. If $A$ is a set that is partially ordered with respect to a relation
+   $\preceq$, and if $B$ is a subset of $A$, then $B$ is a chain if, and only
+   if, for all $a$ and $b$ in $B$, ____.
+
+8. Let $A$ be a set that is partially ordered with respect to a relation
+   $\preceq$, and let $a$ be an element of $A$.
+
+a. $a$ is maximal if, and only if, ____.
+
+b. $a$ is a greatest element of $A$ if, and only if, ____.
+
+c. $a$ is minimal if, and only if, ____.
+
+d. $a$ is a least element of $A$ if, and only if, ____.
+
+9. Given a set $A$ that is partially ordered with respect to a relation
+   $\preceq$, the relation $\preceq'$ is a topological sorting for $\preceq$,
+   if, and only if, $\preceq'$ is a ____ and for all $a$ and $b$ in $A$ if
+   $a \preceq b$ then ____.
+
+10. PERT and CPM are used to produce efficient ____.

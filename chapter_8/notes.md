@@ -993,3 +993,165 @@ Now because $p$ is prime, $p$ and $(p - 1)!$ are relatively prime. Thus, by the
 cancellation theorem for modular congruence (Theorem 8.4.9),
 
 $$ a^{p - 1} \equiv 1(\mod p) $$
+
+---
+
+Page 569
+
+**Definition**
+
+Let $R$ be a relation on a set $A$. $R$ is **antisymmetric** if, and only if,
+
+$$ \text{for every } a \text{ and } b \text{ in } A, \text{ if } a R b \text{ and } b R a \text{ then } a = b $$
+
+---
+
+Page 571
+
+**Definition**
+
+Let $R$ be a relation defined on a set $A$. $R$ is a **partial order relation**
+if, and only if, $R$ is reflexive, antisymmetric, and transitive.
+
+---
+
+Page 572
+
+**Notation**
+
+Because of the special paradigmatic role played by the $\leq$ relation in the
+study of partial order relations, the symbol $\preceq$ is often used to refer to
+a general partial order relation, and the notation $x \preceq y$ is read "$x$ is
+less than or equal to $y$" or "$y$ is greater than or equal to $x$."
+
+---
+
+Page 573
+
+**Theorem 8.5.1 Lexicographic Order**
+
+Let $A$ be a set with a partial order relation $R$, and let $S$ be a set of
+strings over $A$. Define a relation $\preceq$ on $S$ as follows:
+
+Let $s$ and $t$ be any strings in $S$ of lengths $m$ and $n$, respectively,
+where $m$ and $n$ are positive integers, and let $s_m$ and $t_m$ be the
+characters in the $m$th position for $s$ and $t$, respectively.
+
+1. If $m \leq n$ and the first $m$ chracters of $s$ and $t$ are the same, then
+   $s \preceq t$.
+
+2. If the first $m - 1$ characters in $s$ and $t$ are the same, $s_m R t_m$, and
+   $s_m \neq t_m$, then $s \preceq t$.
+
+3. If $\lambda$ is the null string then $\lambda \preceq s$.
+
+If no strings are related by $\preceq$ other than by these three conditions,
+then $\preceq$ is a partial order relation on $S$.
+
+---
+
+Page 573
+
+**Definition**
+
+The partial order relation of Theorem 8.5.1 is called the **lexicographic order
+for $S$** that corresponds to the partial order $R$ on $A$.
+
+---
+
+Page 576
+
+**Definition**
+
+Suppose $\preceq$ is a partial order relation on a set $A$. Elements $a$ and $b$
+of $A$ are said to be **comparable** if, and only if, either $a \preceq b$ or
+$b \preceq a$. Otherwise, $a$ and $b$ are called **noncomparable**.
+
+---
+
+Page 576
+
+**Definition**
+
+If $R$ is a partial order relation on a set $A$, and for any two elements $a$
+and $b$ in $A$ either $a R b$ or $b R a$, then $R$ is a **total order relation**
+on $A$.
+
+---
+
+Page 577
+
+**Definition**
+
+Let $A$ be a set that is partially ordered with respect to a relation $\preceq$.
+A subset $B$ of $A$ is called a **chain** if, and only if, the elements in each
+pair of elements in $B$ are comparable. In other words, $a \preceq b$ or
+$b \preceq a$ for every $a$ and $b$ in $B$. The **length of a chain** is one
+less than the number of elements in the chain.
+
+---
+
+Page 577
+
+**Definition**
+
+Let a set $A$ be partially ordered with respect to a relation $\preceq$.
+
+1. An element $a$ in $A$ is called a **maximal element of $A$** if, and only if,
+   for each $b$ in $a$, either $b \preceq a$ or $b$ and $a$ are not comparable.
+
+2. An element $a$ in $A$ is called a **greatest element of $A$** if, and only
+   if, for each $b$ in $A$, $b \preceq a$.
+
+3. An element $a$ in $A$ is called a **minimal element of $A$** if, and only if,
+   for each $b$ in $A$, either $a \preceq b$ or $b$ and $a$ are not comparable.
+
+4. An element $a$ in $A$ is called a **least element of $A$** if, and only if,
+   for each $b$ in $A$, $a \preceq b$.
+
+---
+
+Page 578
+
+**Definition**
+
+Given partial order relations $\preceq$ and $\preceq'$ on a set $A$, $\preceq'$
+is **compatible** with $\preceq$ if, and only if, for every $a$ and $b$ in $A$,
+if $a \preceq b$ then $a \preceq' b$.
+
+---
+
+Page 578
+
+**Definition**
+
+Given partial order relations $\preceq$ and $\preceq'$ on a set $A$, $\preceq'$
+is a **topological sorting** for $\preceq$ if, and only if, $\preceq'$ is a
+total order that is compatible with $\preceq$.
+
+---
+
+Page 579
+
+**Constructing a Topological Sorting**
+
+Let $\preceq$ be a partial order relation on a nonempty finite set $A$. To
+construct a topological sorting:
+
+1. Pick any minimal element $x$ in $A$. _[Such an element exists since $A$ is
+   nonempty.]_
+
+2. Set $A' := A - \{x\}$.
+
+3. Repeat steps a-c while $A' \neq \emptyset$.
+
+   a. Pick any minimal element $y$ in $A'$.
+
+   b. Define $x \preceq' y$.
+
+   c. Set $A' := A' - \{y\}$ and $x := y$.
+
+_[Completion of steps 1-3 of this algorithm gives enough information to
+construct the Hasse diagram fro the total ordering $\preceq$. We have already
+shown how to use the Hasse diagram to obtain a completed directed graph for a
+relation.]_
