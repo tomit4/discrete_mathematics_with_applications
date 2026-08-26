@@ -6129,11 +6129,23 @@ Page 583
 
 a. $R_1 = \{(0, 0), (0, 2), (1, 0), (1, 3), (2, 2), (3, 0), (3, 1)\}$
 
+Graphed on paper. $R_1$ is not antisymmetric since $1 R 3$ and $3 R 1$, but
+$1 \neq 3$.
+
 b. $R_2 = \{(0, 1), (0, 2), (1, 1), (1, 2), (1, 3), (2, 2), (3, 2)\}$
+
+Graphed on paper. $R_2$ is antisymmetric since
+$\forall x, y \in \{1, 2, 3, 4\}, (x, y) \in R \wedge (y, x) \in R \to x = y$.
 
 c. $R_3 = \{(0, 0), (0, 3), (1, 0), (1, 3), (2, 2), (3, 3), (3, 2)\}$
 
+Graphed on paper. $R_2$ is antisymmetric since
+$\forall x, y \in \{1, 2, 3, 4\}, (x, y) \in R \wedge (y, x) \in R \to x = y$.
+
 d. $R_4 = \{(0, 0), (1, 0), (1, 2), (1, 3), (2, 0), (2, 1), (3, 2), (3, 0)\}$
+
+Graphed on paper. $R_1$ is not antisymmetric since $1 R 2$ and $2 R 1$, but
+$1 \neq 2$.
 
 2. Let $P$ be the set of all people in the world and define a relation $R$ on
    $P$ as follows: For all people $x$ and $y$,
@@ -6141,6 +6153,19 @@ d. $R_4 = \{(0, 0), (1, 0), (1, 2), (1, 3), (2, 0), (2, 1), (3, 2), (3, 0)\}$
 $$ x R y \Leftrightarrow x \text{is no older than } y $$
 
 Is $R$ antisymmetric? Prove or give a counterexample.
+
+$R$ is not antisymmetric.
+
+**Disproof (by counterexample):**
+
+Suppose $x, y \in P$, where the age of $x$ is equal to the age of $y$. Then,
+$x R y$ (since $x$ is no older than $y$), and $y R x$ (since $y$ is no older
+than $x$), but $x \neq y$ (they are not necessarily the same person just because
+they are the same age).
+
+Therefore, $R$ is not antisymmetric.
+
+Q.E.D.
 
 3. Let $S$ be the set of all strings _a_'s and _b_'s. Define a relation $R$ on
    $S$ as follows: For every $s, t \in S$,
@@ -6150,12 +6175,40 @@ $$ s R t \Leftrightarrow L(s) \leq L(t) $$
 where $L(x)$ denotes the length of a string $x$. Is $R$ antisymmetric? Prove or
 give a counterexample.
 
+$R$ is not antisymmetric.
+
+**Disproof (by counterexample):**
+
+Suppose $s, t \in S$ where $L(s) = L(t)$. Then $s R t$ (since $L(s) \leq L(t)$),
+and $t R s$ (since $L(t) \leq L(s)$), but $s \neq t$.
+
+Suppose $s, t \in S$ where $s = a$ and $t = b$, then $L(s) = L(t) = 1$. Then
+$s R t$ (since $L(s) \leq L(t)$), and $t R s$ (since $L(t) \leq L(s)$), but
+$s \neq t$ (since $a \neq b$).
+
+Therefore $R$ is not antisymmetric.
+
+Q.E.D.
+
 4. Let $R$ be the "less than" relation on $\mathbb{R}$, the set of all real
    numbers. For every $x, y \in \mathbb{R}$,
 
 $$ x R y \Leftrightarrow x < y $$
 
 Is $R$ antisymmetric? Prove or give a counterexample.
+
+$R$ is antisymmetric.
+
+**Proof:**
+
+Suppose $x, y \in \mathbb{R}$ such that $x R y$ and $y R x$.
+
+By the supposition, this means that $x < y$ and $y < x$. This cannot be true.
+Since the supposition is false, the proposition is vacuously true.
+
+Therefore $R$ is antisymmetric.
+
+Q.E.D.
 
 5. Let $\mathbb{R}$ be the set of all real numbers and define a relation $R$ on
    $\mathbb{R} \times \mathbb{R}$ as follows: For every $(a, b)$ and $(c, d)$ in
@@ -6165,12 +6218,216 @@ $$ (a, b) R (c, d) \Leftrightarrow \text{ either } a < c \text{ or both } a = c 
 
 Is $R$ a partial order relation? Prove or give a counterexample.
 
+$R$ is a partial order relation.
+
+**Proof:**
+
+Suppose $R$ is a relation on $\mathbb{R} \times \mathbb{R}$, and $R$ is defined
+as follows:
+
+$$ \forall (a, b), (c, d) \in \mathbb{R} \times \mathbb{R}, (a, b) R (c, d) \Leftrightarrow (a < c) \vee [(a = c) \wedge (b \leq d)] $$
+
+It must be shown that $R$ is a partial order relation. To prove that $R$ is a
+partial order, it must be shown that $R$ is reflexive, antisymmetric, and
+transitive.
+
+_Proof (that $R$ is reflexive):_
+
+To prove that $R$ is reflexive, it must be shown that:
+
+$$ \forall (a, b) \in \mathbb{R} \times \mathbb{R}, (a, b) R (a, b) $$
+
+By the definition for $R$, this means that it must be shown that:
+
+$$ (a < a) \vee [(a = a) \wedge (b \leq b)] $$
+
+It is false that $a < a$, but it is true that $a = a$ and $b \leq b$.
+
+Thus it has been shown that $(a, b) R (a, b)$, and therefore $R$ is reflexive.
+
+_Proof (that $R$ is antisymmetric):_
+
+To prove that $R$ is antisymmetric, it must be shown that:
+
+$$ \forall (a, b), (c, d) \in \mathbb{R} \times \mathbb{R}, [(a, b) R (c, d) \wedge (c, d) R (a, b)] \to (a, b) = (c, d) $$
+
+Suppose $(a, b) R (c, d)$ and $(c, d) R (a, b)$. By the definition for $R$, this
+means that:
+
+(1) $(a < c) \vee [(a = c) \wedge (b \leq d)]$
+
+and also:
+
+(2) $(c < a) \vee [(c = a) \wedge (d \leq b)]$
+
+It must be shown that $(a, b) = (c, d)$.
+
+Notice that $(a < c) \vee (a = c) \equiv a \leq c$. Similarly, notice that
+$(c < a) \vee (c = a) \equiv c \leq a$. Since $a \leq c$ and $c \leq a$ (by the
+supposition), it follows that $a = c$ (by the definition of $\leq$).
+
+Now, by the supposition, $b \leq d$ and $d \leq b$, and once again, by the
+definition of $\leq$, it follows that $b = d$.
+
+Thus, since $a = c$ and $b = d$, it can be concluded (by the definition for
+ordered pairs/Cartesian product), that $(a, b) = (c, d)$. Therefore $R$ is
+antisymmetric.
+
+_Proof (that $R$ is transitive):_
+
+To prove that $R$ is transitive, it must be shown that:
+
+$$ \forall (a, b), (c, d), (e, f) \in \mathbb{R} \times \mathbb{R}, [(a, b) R (c, d) \wedge (c, d) R (e, f)] \to (a, b) R (e, f) $$
+
+Suppose $(a, b), (c, d), (e, f) \in \mathbb{R} \times \mathbb{R}$, such that
+$(a, b) R (c, d)$ and $(c, d) R (e, f)$.
+
+_[It must be shown that $(a, b) R (e, f)$.]_
+
+By the definition of $R$, the supposition states:
+
+(1) $(a < c) \vee [(a = c) \wedge (b \leq d)]$
+
+and:
+
+(2) $(c < e) \vee [(c = e) \wedge (d \leq f)]$
+
+It follows that one of the following cases must occur.
+
+_Case 1 ($(a < c) \wedge (c < e)$):_
+
+Since $a < c$ and $c < e$, it follows that $a < e$, and so by the definition for
+$R$, $(a, b) R (e, f)$.
+
+_Case 2 ($(a < c) \wedge (c = e)$):_
+
+Since $a < c$ and $c = e$, then by substitution, this means that $a < e$. Thus,
+by the definition for $R$, $(a, b) R (e, f)$.
+
+_Case 3 ($(a = c) \wedge (c < e)$):_
+
+Since $a = c$ and $c < e$, then $a < e$ by substitution. Thus, by definition for
+$R$, $(a, b) R (e, f)$.
+
+_Case 4 ($(a = c) \wedge (c = e)$):_
+
+Since $a = c$ and $c = e$, then $a = e$. In this case it must also be shown that
+$b \leq f$.
+
+Since (by the supposition), $b \leq d$ and $d \leq f$, it follows by
+transitivity of inequality that $b \leq f$.
+
+Thus $(a, b) R (e, f)$.
+
+In all cases it has been shown that $(a, b) R (e, f)$. Therefore $R$ is
+transitive.
+
+_Conclusion:_
+
+Since it has been shown that $R$ is reflexive, antisymmetric, and transitive, it
+can be concluded that $R$ is a partial order relation.
+
+Q.E.D.
+
 6. Let $P$ be the set of all people who have ever lived and define a relation
    $R$ on $P$ as follows: For every $r, s \in P$,
 
 $$ r R s \Leftrightarrow r \text{ is an ancestor of } s \text{ or } r = s $$
 
 Is $R$ a partial order relation? Prove or give a counterexample.
+
+$R$ is a partial order relation.
+
+**Proof:**
+
+Suppose $P$ is the set of all people who ever lived, and a relation $R$ on $P$
+is defined as follows:
+
+$$ \forall r, s \in P, r R s \Leftrightarrow r \text{ is an ancestor of } s \text{ or } r = s $$
+
+It must be shown that $R$ is a partial order relation. In order to prove that
+$R$ is a partial order relation, it must be shown that $R$ is reflexive,
+antisymmetric, and transitive.
+
+_Proof ($R$ is reflexive):_
+
+To prove that $R$ is reflexive, it must be shown that:
+
+$$ \forall r \in P, r R r $$
+
+By definition for $R$, it must be shown that:
+
+$r$ is an ancestor of $r$ or $r = r$.
+
+$r$ is not an ancestor of $r$ (since time travel, siring one's self, etc. is not
+possible except in fiction), but $r = r$ is trivially true.
+
+Thus $r R r$, and therefore $R$ is reflexive.
+
+_Proof ($R$ is antisymmetric):_
+
+To prove that $R$ is antisymmetric, it must be shown that:
+
+$$ \forall r, s \in P, (r R s) \wedge (s R r) \to r = s $$
+
+Suppose $r R s$ and $s R r$. By the definition for $R$, this means that:
+
+(1) $r$ is an ancestor of $s$ or $r = s$
+
+(2) $s$ is an ancestor of $r$ or $s = r$.
+
+Note that $r$ and $s$ cannot both be ancestors of each other. Similarly, it
+cannot be true that $r$ is an ancestor of $s$ and $s = r$. Additionally, and
+similarly, it cannot be true that $s$ is an ancestor of $r$ and $r = s$.
+Therefore the only possible remaining conclusion is that $r = s$ and $s = r$.
+
+Therefore, $R$ is antisymmetric.
+
+_Proof ($R$ is transitive):_
+
+To prove that $R$ is transitive, it must be shown that:
+
+$$ \forall r, s, t \in P, [(r R s) \wedge (s R t)] \to r R t $$
+
+Suppose $r R s$ and $s R t$. _[It must be shown that $r R t$.]_
+
+By the definition for $R$, this means that:
+
+(1) $r$ is an ancestor of $s$ or $r = s$
+
+(2) $s$ is an ancestor of $t$ or $s = t$
+
+It follows that the following cases emerge from the supposition:
+
+_Case ($r$ is an ancestor of $s$ and $s$ is an ancestor of $t$):_
+
+Since $r$ is an ancestor of $s$ and $s$ is an ancestor of $t$, it follows (by
+the definition of ancestry), that $r$ is an ancestor of $t$.
+
+_Case ($r$ is an ancestor of $s$ and $s = t$):_
+
+Since $r$ is an ancestor of $s$ and $s = t$, it follows by substitution that $r$
+is an ancestor of $t$.
+
+_Case ($r = s$ and $s$ is an ancestor of $t$):_
+
+Since $r = s$ and $s$ is an ancestor of $t$, then by substitution, $r$ is an
+ancestor of $t$.
+
+_Case ($r = s$ and $s = t$):_
+
+Since $r = s$ and $s = t$, then by transitivity of equality, $r = t$.
+
+In all cases, it has been shown that $r R t$. Therefore $R$ is transitive.
+
+_Conclusion:_
+
+Since it has been shown that $R$ is reflexive, antisymmetric, and transitive, it
+can be concluded that $R$ is a partial order relation.
+
+This is what was to be shown.
+
+Q.E.D.
 
 7. Define a relation $R$ on $\mathbb{Z}$, the set of all integers as follows:
    For every $m, n \in \mathbb{Z}$,
@@ -6179,12 +6436,46 @@ $$ m R n \Leftrightarrow \text{ every prime factor of } m \text{ is a prime fact
 
 Is $R$ a partial order relation? Prove or give a counterexample.
 
+$R$ is not a partial order relation.
+
+**Disproof (by counterexample):**
+
+For $R$ to be a partial order relation, $R$ must be reflexive, antisymmetric,
+and transitive, but $R$ is not antisymmetric.
+
+Consider $m = 2$, $n = 4$. Then, $m, n \in \mathbb{Z}$, and $m R n$ (since the
+prime factors of $m = 2$ are $\{2\}$ and the prime factors of $n = 4$ are
+$\{2\}$). Additionally, $n R m$ (for the same reasons that $m R n$.) Notice,
+however, that $m = 2 \neq 4 = n$, or $m \neq n$.
+
+Thus $R$ is not antisymmetric, and therefore $R$ is not a partial order
+relation.
+
+Q.E.D.
+
 8. Define a relation $R$ on $\mathbb{Z}$, the set of all integers as follows:
    For every $m, n \in \mathbb{Z}$,
 
 $$ m R n \Leftrightarrow m + n \text{ is even} $$
 
 Is $R$ a partial order relation? Prove or give a counterexample.
+
+$R$ is not a partial order relation.
+
+**Disproof (by counterexample):**
+
+In order for $R$ to be a partial order relation, $R$ must be reflexive,
+antisymmetric, and transitive, but $R$ is not antisymmetric.
+
+Consider $m = 2$, $n = 4$. Then $m, n \in \mathbb{Z}$ and $m R n$ since
+$m + n = 2 + 4 = 6 \text{ is even}$. Similarly, $n R m$ since
+$n + m = 4 + 2 = 6 \text{ is even}$. Notice, however, that $m = 2 \neq 4 = n$,
+or $m \neq n$.
+
+Thus $R$ is not antisymmetric, and therefore $R$ is not a partial order
+relation.
+
+Q.E.D.
 
 9. Define a relation $R$ on $\mathbb{R}$, the set of all real numbers as
    follows: For every $x, y \in \mathbb{R}$,
@@ -6193,58 +6484,170 @@ $$ x R y \Leftrightarrow x^2 \leq y^2 $$
 
 Is $R$ a partial order relation? Prove or give a counterexample.
 
+$R$ is not a partial order relation.
+
+**Disproof (by counterexample):**
+
+In order for $R$ to be a partial order relation, $R$ must be reflexive,
+antisymmetric, and transitive, but $R$ is not antisymmetric.
+
+Consider $x = -2$, $y = 2$. Then $x, y \in \mathbb{R}$ and $x R y$ since
+$(-2)^2 = 4 \leq 4 = (2)^2$. Additionally, $y R x$ since
+$(2)^2 = 4 \leq 4 = (-2)^2$. Notice, however, that $x = -2 \neq 2 = y$, or
+$x \neq y$.
+
+Thus $R$ is not antisymmetric, and therefore $R$ is not a partial order
+relation.
+
+Q.E.D.
+
 10. Suppose $R$ and $S$ are antisymmetric relations on a set $A$. Must
     $R \cup S$ also be antisymmetric? Explain.
 
+No.
+
+**Disproof (by counterexample):**
+
+Suppose $A = \{1, 2\}$, $R = \{(1, 2)\}$, and $S = \{(2, 1)\}$. Then $R$ is
+antisymmetric (vacuously), and similarly $S$ is antisymmetric (also vacuously.)
+Then, $R \cup S = \{(1, 2), (2, 1)\}$, which is not antisymmetric, since
+$1 (R \cup S) 2$ and $2 (R \cup S) 1$, but $1 \neq 2$.
+
+Therefore $R \cup S$ is not necessarily antisymmetric just because $R$ and $S$
+are antisymmetric.
+
+Q.E.D
+
 11. Let $A = \{a, b\}$, and suppose $A$ has the partial order relation $R$ where
     $R = \{(a, a), (a, b) ,(b, b)\}$. Let $S$ be the set of all strings in _a_'s
-    and _b_'s and let be the corresponding lexicographic order on $S$. Indicate
-    which of the following statements are true, and for each true statement cite
-    as a reason part (1), (2), or (3) of the definition of lexicographic order
-    given in Theorem 8.5.1.
+    and _b_'s and let $\preceq$ be the corresponding lexicographic order on $S$.
+    Indicate which of the following statements are true, and for each true
+    statement cite as a reason part (1), (2), or (3) of the definition of
+    lexicographic order given in Theorem 8.5.1.
 
 a. $aab \preceq aaba$
 
+True. by (1)
+
 b. $bbab \preceq bba$
+
+False. By (1) $bba \preceq bbab$
 
 c. $\lambda \preceq aba$
 
+True. by (3).
+
 d. $aba \preceq abb$
+
+True. by (2).
 
 e. $bbab \preceq bbaa$
 
+False. by (2) $bbaa \preceq bbab$.
+
 f. $ababa \preceq ababaa$
+
+True. by (1).
 
 g. $bbaba \preceq bbabb$
 
+True. by (2).
+
 12. Prove Theorem 8.5.1.
 
+Omitted.
+
 13. Let $A = \{a, b\}$. Describe all partial order relations on $A$.
+
+$$ R_1 = \{(a, a), (b, b)\} $$
+
+$$ R_2 = \{(a, a), (b, b), (a, b)\} $$
+
+$$ R_3 = \{(a, a), (b, b), (b, a)\} $$
 
 14. Let $A = \{a, b, c\}$.
 
 a. Describe all partial order relations on $A$ for which $a$ is a maximal
 element.
 
+$$ R_1 = \{(a, a), (b, b), (c, c)\} $$
+
+$$ R_2 = \{(a, a), (b, b), (c, c), (b, a)\} $$
+
+$$ R_3 = \{(a, a), (b, b), (c, c), (c, a)\} $$
+
+$$ R_4 = \{(a, a), (b, b), (c, c), (b, a), (c, a)\} $$
+
+$$ R_5 = \{(a, a), (b, b), (c, c), (c, b), (c, a)\} $$
+
+$$ R_6 = \{(a, a), (b, b), (c, c), (b, c), (b, a)\} $$
+
+$$ R_7 = \{(a, a), (b, b), (c, c), (c, b), (b, a), (c, a)\} $$
+
+$$ R_8 = \{(a, a), (b, b), (c, c), (b, c), (b, a), (c, a)\} $$
+
+$$ R_9 = \{(a, a), (b, b), (c, c), (b, c)\}$$
+
+$$ R_{10} = \{(a, a), (b, b), (c, c), (c, b)\}$$
+
 b. Describe all partial order relations on $A$ for which $a$ is a minimal
 element.
 
+$$ R_1  = \{(a, a), (b, b), (c, c)\}$$
+
+$$ R_2 = \{(a, a), (a, b), (b, b), (c, c)\} $$
+
+$$ R_3 = \{(a, a), (a, c), (b, b), (c, c)\} $$
+
+$$ R_4 = \{(a, a), (b, b), (c, c), (b, c)\} $$
+
+$$ R_5 = \{(a, a), (b, b), (c, c), (c, b)\} $$
+
+$$ R_6 = \{(a, a), (a, b), (a, c), (b, b), (c, c)\} $$
+
+$$ R_7 = \{(a, a), (a, b), (b, b), (b, c), (a, c), (c, c)\} $$
+
+$$ R_8 = \{(a, a), (a, b), (a, c), (b, b), (c, c), (c, b)\} $$
+
 15. Suppose a relation $R$ on a set $A$ is reflexive, symmetric, transitive, and
     antisymmetric. What can you conclude about $R$? Prove your answer.
+
+_Hint:_ $R$ is the identity relation on $A: x R x$ for each $x \in A$, and
+$x \cancel{R} y$ if $x \neq y$.
+
+Suppose $A$ is a set with a relation $R$ on $A$, where $R$ is reflexive,
+symmetric, transitive, and antisymmetric.
+
+Notice that since $R$ is reflexive, this means that $\forall x \in A, x R x$.
+Additionally, notice that since $R$ is symmetric, $\forall x, y \in A, x R y
+\to y R x$, so $y R x$. Then, since $R$ is transitive, this means that
+$\forall x, y, z \in A, x R y \wedge y R z \to x R z$, so $x R z$. Lastly, since
+$R$ is antisymmetric, $\forall x, y \in A, x R y \wedge y R x \to x = y$, so
+$x = y$.
+
+Therefore $R$ is the identity relation on $A$.
 
 16. Consider the "divides" relation on each of the following sets $A$. Draw the
     Hasse diagram for each relation.
 
 a. $A = \{1, 2, 4, 5, 10, 15, 20\}$
 
+(Done by hand.)
+
 b. $A = \{2, 3, 4, 6, 8, 9, 12, 18\}$
+
+(Done by hand.)
 
 17. Consider the "subset" relation on $\mathscr{P}(S)$ for each of the following
     sets $S$. Draw the Hasse diagram for each relation.
 
 a. $S = \{0, 1\}$
 
+(Done by hand.)
+
 b. $S = \{0, 1, 2\}$
+
+Omitted.
 
 18. Let $S = \{0, 1\}$ and consider the partial order relation $R$ defined on
     $S \times S$ as follows: For all ordered pairs $(a, b)$ and $(c, d)$ in
@@ -6255,6 +6658,8 @@ $$ (a, b) R (c, d) \Leftrightarrow \text{ either } a < c \text{ or both } a = c 
 where $<$ denotes the usual "less than" and $\leq$ denotes the usual "less than
 or equal to" relation for real numbers. Draw the Hasse diagram for $R$.
 
+(Done by hand.)
+
 19. Let $S = \{0, 1\}$ and consider the partial order relation $R$ defined on
     $S \times S$ as follows: For all ordered pairs $(a, b)$ and $(c, d)$ in
     $S \times S$,
@@ -6263,6 +6668,8 @@ $$ (a, b) R (c, d) \Leftrightarrow a \leq c \text{ and } b \leq d $$
 
 where $\leq$ denotes the usual "less than or equal to" relation for real
 numbers. Draw the Hasse diagram for $R$.
+
+(Done by hand.)
 
 20. Let $S = \{0, 1\}$ and consider the partial order relation $R$ defined on
     $S \times S \times S$ as follows: For all ordered triples $(a, b, c)$ and
@@ -6273,31 +6680,157 @@ $$ (a, b, c) R (d, e, f) \Leftrightarrow a \leq d, b \leq e, \text{ and } c \leq
 where $\leq$ denotes the usual "less than or equal to" relation for real
 numbers. Draw the Hasse diagram for $R$.
 
+Omitted.
+
 21. Consider the "divides" relation defined on the set
     $A = \{1, 2, 2^2, 2^3, \dots, 2^n\}$, where $n$ is a nonnegative integer.
 
 a. Prove that this relation is a total order relation on $A$.
 
+**Proof:**
+
+Suppose $A$ is a set where $A = \{1, 2, 2^2, 2^3, \dots, 2^n\}$ for some
+nonnegative integer $n$.
+
+Let $R$ be the "divides" relation on $A$ defined as:
+
+$$ \forall a, b \in A, a R b \Leftrightarrow a | b $$
+
+It must be shown that $R$ is a total order relation on $A$. To prove that $R$ is
+a total relation on $A$, it must be shown that if $R$ is a partial order
+relation on $A$, then:
+
+$$ \forall a, b \in A, (a R b) \vee (b R a) $$
+
+Firstly, it must be established that $R$ is a partial order relation. To
+establish this, it must be shown that $R$ is reflexive, antisymmetric, and
+transitive.
+
+_($R$ is reflexive):_
+
+$R$ is reflexive since $\forall a \in A, a R a$, or, in other words,
+$\forall a \in A, a | a$, which is true, since $a = 1 \cdot a$.
+
+_($R$ is antisymmetric):_
+
+$R$ is antisymmetric by Example 8.5.2.
+
+_($R$ is transitive):_
+
+$R$ is transitive since
+$\forall a, b, c \in A, [(a R b) \wedge (b R c)] \to a R c$. This is true by the
+transitivity of divisibility, therefore $R$ is transitive.
+
+Thus it has been established that $R$ is reflexive, antisymmetric, and
+transitive, and it follows that $R$ is a partial order relation on $A$.
+
+Now, it must be shown that either $a R b$ or $b R a$ for any two elements $a$
+and $b$ in $A$.
+
+Since $A = \{1, 2, 2^2, 2^3, \dots, 2^n\}$ for some integer $n$, it can be said
+that any two elements of $A$ are of the form $2^i$ and $2^j$ for some
+$0 \leq i, j \leq n$, where either $i \leq j$ or $j \leq i$.
+
+Since all elements in $A$ are exponents base $2$, this means that either
+$2^i | 2^j$ or $2^j | 2^i$.
+
+By the definition for $R$, this means that for any two elements $a, b \in A$,
+$a | b$ or $b | a$, or in other words $a R b$ or $b R a$.
+
+This is what was to be shown.
+
+Q.E.D.
+
 b. Draw the Hasse diagram for this relation for $n = 4$.
+
+Omitted.
 
 In 22-29, find all greatest, least, maximal, and minimal elements for the
 relations in each of the referenced exercises.
 
 22. Exercise 16(a)
 
+Greatest: none
+
+Least: $1$
+
+Maximal: $15$, $20$
+
+Minimal: $1$
+
 23. Exercise 16(b)
+
+Greatest: none
+
+Least: none
+
+Maximal: $8$, $12$, $18$
+
+Minimal: $2$, $3$
 
 24. Exercise 17(a)
 
+Greatest: $\{0, 1\}$
+
+Least: $\emptyset$
+
+Maximal: $\{0, 1\}$
+
+Minimal: $\emptyset$
+
 25. Exercise 17(b)
+
+Greatest:
+
+Least:
+
+Maximal:
+
+Minimal:
+
+Omitted.
 
 26. Exercise 18
 
+Greatest: $(1, 1)$
+
+Least: $(0, 0)$
+
+Maximal: $(1, 1)$
+
+Minimal: $(0, 0)$
+
 27. Exercise 19
+
+Greatest: $(1, 1)$
+
+Least: $(0, 0)$
+
+Maximal: $(1, 1)$
+
+Minimal: $(0, 0)$
 
 28. Exercise 20
 
+Greatest:
+
+Least:
+
+Maximal:
+
+Minimal:
+
+Omitted.
+
 29. Exercise 21
+
+Greatest: $2^n$
+
+Least: $1$
+
+Maximal: $2^n$
+
+Minimal: $1$
 
 30. Each of the following sets is partially ordered with respect to the "less
     than or equal to" relation, $\leq$, for real numbers. In each case,
@@ -6305,11 +6838,22 @@ relations in each of the referenced exercises.
 
 a. $\mathbb{R}$
 
-b. $\{x \in \mathb{R} | 0 \leq x \leq 1\}$
+No greatest element, no least element.
+
+b. $\{x \in \mathbb{R} | 0 \leq x \leq 1\}$
+
+Greatest element: $1$
+
+Least element: $0$
 
 c. $\{x \in \mathbb{R} | 0 < x < 1\}$
 
+No greatest element, no least element (as there's always a lesser or greater
+rational number).
+
 d. $\{x \in \mathbb{Z} | 0 < x < 10\}$
+
+Greatest element: $9$, least element: $1$.
 
 31. Let $A = \{a, b, c, d\}$, and let $R$ be the relation
 
@@ -6317,11 +6861,22 @@ $$ R = \{(a, a), (b, b), (c, c), (d, d), (c, a), (a, d), (c, d), (b, c), (b, d),
 
 Is $R$ a total order on $A$? Justify your answer.
 
+$R$ is a partial order relation, since $R$ is reflexive, symmetric, and
+transitive. $R$ is a total order relation since $[b, c, a, d]$ is a chain that
+contains every element of $A: b R c$, $c R a$, and $a R d$.
+
 32. Let $A = \{a, b, c, d\}$, and let $R$ be the relation
 
 $$ R = \{(a, a), (b, b), (c, c), (d, d), (c, b), (a, d), (b, a), (b, d), (c, d), (c, a)\} $$
 
 Is $R$ a total order on $A$? Justify your answer.
+
+$R$ is a partial order relation since $R$ is reflexive, antisymmetric, and
+transitive. $R$ is a total order relation since
+$c \preceq b \preceq a \preceq d$ is a chain that contains every element of $A$:
+$c R b$, $b R a$, and $a R d$.
+
+LEFT OFF HERE.
 
 33. Consider the set $A = \{12, 24, 48, 3, 9\}$ ordered by the "divides"
     relation. Is $A$ totally ordered with respect to the relation? Justify your

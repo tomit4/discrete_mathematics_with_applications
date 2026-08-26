@@ -187,39 +187,66 @@ Page 583
 
 1. For a relation $R$ on a set $A$ to be antisymmetric means that ____.
 
+$\forall a, b \in A, (a R b) \wedge (b R a) \to a = b$
+
 2. To show that a relation $R$ on an infinite set $A$ is antisymmetric, you
    suppose that ____ and you show that ____.
 
+$\forall a, b \in A, (a R b) \wedge (b R a)$; $a = b$
+
 3. To show that a relation $R$ on a set $A$ is not antisymmetric, you ____.
+
+$\exists a, b \in A, (a R b) \wedge (b R a) \to a \neq b$
 
 4. To construct a Hasse diagram for a partial order relation, you start with a
    directed graph of the relation in which all arrows point upward and you
    eliminate ____, ____, and ____.
 
+all loops; all arrows whose existence is implied by the transitive property; the
+direction indicators on the arrows
+
 5. If $A$ is a set that is partially ordered with respect to a relation
    $\preceq$ and if $a$ and $b$ are elements of $A$, we say that $a$ and $b$ are
    comparable if, and only if, ____ or ____.
 
+$a \preceq b$; $b \preceq a$
+
 6. A relation $\preceq$ on a set $A$ is a total order if, and only if, ____.
+
+$\forall a, b \in A, (a \preceq b) \vee (b \preceq a)$
 
 7. If $A$ is a set that is partially ordered with respect to a relation
    $\preceq$, and if $B$ is a subset of $A$, then $B$ is a chain if, and only
    if, for all $a$ and $b$ in $B$, ____.
+
+$a$ and $b$ are comparable
 
 8. Let $A$ be a set that is partially ordered with respect to a relation
    $\preceq$, and let $a$ be an element of $A$.
 
 a. $a$ is maximal if, and only if, ____.
 
+$\forall b \in A, (b \preceq a) \vee (b \text{ and } a \text{ are not comparable})$
+
 b. $a$ is a greatest element of $A$ if, and only if, ____.
+
+$\forall b \in A, (b \preceq a)$
 
 c. $a$ is minimal if, and only if, ____.
 
+$\forall b \in A, (a \preceq b) \vee (a \text{ and } b \text{ are not comparable})$
+
 d. $a$ is a least element of $A$ if, and only if, ____.
+
+$\forall b \in A, (a \preceq b)$
 
 9. Given a set $A$ that is partially ordered with respect to a relation
    $\preceq$, the relation $\preceq'$ is a topological sorting for $\preceq$,
    if, and only if, $\preceq'$ is a ____ and for all $a$ and $b$ in $A$ if
    $a \preceq b$ then ____.
 
+total order; $a \preceq' b$
+
 10. PERT and CPM are used to produce efficient ____.
+
+scheduling of tasks
