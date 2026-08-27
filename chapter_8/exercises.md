@@ -6876,11 +6876,14 @@ transitive. $R$ is a total order relation since
 $c \preceq b \preceq a \preceq d$ is a chain that contains every element of $A$:
 $c R b$, $b R a$, and $a R d$.
 
-LEFT OFF HERE.
-
 33. Consider the set $A = \{12, 24, 48, 3, 9\}$ ordered by the "divides"
     relation. Is $A$ totally ordered with respect to the relation? Justify your
     answer.
+
+The set $A$ is partially ordered, as it is reflexive, antisymmetric (vacuously),
+and transitive. It is not totally ordered, however, as there is no chain that
+includes all five elements, since $9$ does not divide any of the larger elements
+$12, 24, 48$.
 
 34. Suppose that $R$ is a partial order relation on a set $A$ and that $B$ is a
     subset of $A$. The **restriction of $R$ to $B$** is defined as follows:
@@ -6894,66 +6897,750 @@ if, and only if, they are related by $R$. Prove that the restriction of $R$ to
 $B$ is a partial order relation on $B$. (In less formal language, this says that
 a subset of a partially ordered set is partially ordered.)
 
+_Hint:_ Let $R'$ be the restriction of $R$ to $B$ and show that $R'$ is
+reflexive, antisymmetric, and transitive. In each case, this follows almost
+immediately from the fact that $R$ is reflexive, antisymmetric, and transitive.
+
+**Proof:**
+
+Suppose $A$ and $B$ are any sets where $B \subseteq A$. Then, suppose $R$ is a
+partial order relation on $A$, where there exists a restriction of $R$ to $B$,
+called $R'$, defined as follows:
+
+$$ R' = \{(x, y) | x \in B, y \in B, \text{ and } (x, y) \in R\} $$
+
+It is to be shown that $R'$ is a partial order relation on $B$. To show this, it
+must be shown that $R'$ is reflexive, antisymmetric, and transitive.
+
+_Proof ($R'$ is reflexive):_
+
+To prove that $R'$ is reflexive, it must be shown that
+$\forall b \in B, b R' b$.
+
+By the supposition, $B \subseteq A$, and since $R$ is a partial order relation
+on $A$, $R$ is reflexive. This means that $\forall a \in A, a R a$, and thus by
+the definition of subset, $b R b$. By the definition for $R'$, since $b R b$, it
+follows $b R' b$.
+
+Therefore $R'$ is reflexive.
+
+_Proof ($R'$ is antisymmetric):_
+
+To prove that $R'$ is antisymmetric, it must be shown that
+$\forall b, c \in B, [(b R' c) \wedge (c R' b)] \to b = c$.
+
+Suppose $b R' c$ and $c R' b$.
+
+By the definition for $R'$, this means that $b R c$, and $c R b$.
+
+Since $R$ is a partial order relation on $A$, $R$ is antisymmetric. Thus, since
+$b R c$ and $c R b$, it follows, by the definition for antisymmetric, that
+$b = c$. Therefore $R'$ is antisymmetric.
+
+_Proof ($R'$ is transitive):_
+
+To prove that $R'$ is transitive, it must be shown that
+$\forall a, b, c \in B, [(a R' b) \wedge (b R' c)] \to a R' c$.
+
+Suppose $a R' b$ and $b R' c$. By the definition for $R'$, this means that
+$a R b$ and $b R c$. Since $R$ is transitive, it follows that $a R c$, and since
+$B \subseteq A$, it follows that $a R' c$.
+
+Therefore $R'$ is transitive.
+
+_Conclusion:_
+
+Since it has been shown that $R'$ is reflexive, antisymmetric, and transitive,
+it can be concluded that $R'$ is a partial order relation on $B$.
+
+Q.E.D.
+
 35. The set $\mathscr{P}(\{w, x, y, z\})$ is partially ordered with respect to
     the "subset" relation $\subsetea$. Find a chain of length $4$ in
     $\mathscr{P}(\{w, x, y, z\})$.
 
+$$ \mathscr{P}(\{w, x, y, z\}) = \{\emptyset, \{w\}, \{x\}, \{y\}, \{z\}, \{w, x\}, \{w, y\}, \{w, z\}, \{x, y\}, \{x, z\}, \{y, z\}, \{w, x, y\}, \{w, x, z\}, \{w, y, z\}, \{x, y, z\}, \{w, x, y, z\}\} $$
+
+Chain of length 4:
+
+$$ \{w\} \preceq \{w, x\} \preceq \{w, x, y\} \preceq \{w, x, y, z\} $$
+
 36. The set $A = \{2, 4, 3, 6, 12, 18, 24\}$ is partially ordered with respect
     to the "divides" relation. Find a chain of length $3$ in $A$.
 
+$$ 3 \preceq 6 \preceq 12 $$
+
 37. Find a chain of length $2$ for the relation defined in exercise 19.
+
+Relation defined in exercise 19:
+
+$$ \forall (a, b), (c, d) \in \{0, 1\}, (a, b) R (c, d) \Leftrightarrow a \leq c \text{ and } b \leq d $$
+
+$$ (0, 0) R (1, 0) R (1, 1) $$
 
 38. Prove that a partially ordered set is totally ordered if, and only if, it is
     chain.
+
+**Proof:**
+
+Suppose $A$ is any set, and let $\preceq$ be a partially ordered relation on
+$A$.
+
+It must be shown that $A$ is totally ordered if, and only if, $A$ is a chain.
+
+To show this, it must be shown that if $A$ is totally ordered, then $A$ is a
+chain. Additionally, it must be shown that if $A$ is a chain, then $A$ is
+totally ordered.
+
+_Proof ($A \text{ is totally ordered } \to A \text{ is a chain}$):_
+
+Suppose $A$ is totally ordered.
+
+Since $A$ is totally ordered, this means that
+$\forall a, b \in A, a \text{ and } b \text{ are comparable } \Leftrightarrow (a \preceq b) \vee (b \preceq a)$.
+
+By definition for chain, for any given subset $B$ of $A$ (_i.e._
+$B \subseteq A$),
+$\forall (a, b) \in B, B \text{ is a chain } \Leftrightarrow (a \preceq b) \vee (b \preceq a)$
+(or in other words, $a$ and $b$ are comparable).
+
+Since $A \subseteq A$ (by definition of subset), this means that $A$ is a chain
+since any given $a, b \in A$ are comparable (by definition of totally ordered).
+
+_Proof ($A \text{ is a chain } \to A \text{ is totally ordered}$):_
+
+Suppose $A$ is a chain.
+
+By the definition for chain, this means that
+$\forall (a, b) \in A, (a \preceq b) \vee (b \preceq a)$ (_i.e._ $a$ and $b$ are
+comparable). Since $a$ and $b$ are comparable, it follows that $A$ is totally
+ordered (by the definition for totally ordered).
+
+_Conclusion:_
+
+Since both directions of the proposition have been proven true, it can be
+concluded that a partially ordered set is totally ordered if, and only if, it is
+a chain.
+
+This is what was to be shown.
+
+Q.E.D.
 
 39. Suppose that $A$ is a totally ordered set. Use mathematical induction to
     prove that for any integer $n \geq 1$, every subset of $A$ with $n$ elements
     has both a least element and a greatest element.
 
+**Proof:**
+
+Suppose $A$ is any set that is totally ordered, and let $n$ be any integer with
+$n \geq 1$.
+
+Let $P(n)$ be the statement:
+
+Every subset of $A$ with $n$ elements has both a least element and a greatest
+element.
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+Every subset of $A$ with $1$ element has both a least element and a greatest
+element.
+
+Suppose $A$ is a totally ordered set with $1$ element, and let us call that
+element $m$.
+
+Since $A$ is totally ordered, this means that $m \preceq m$ or $m \preceq m$, or
+in other words, $m$ is comparable to $m$.
+
+Since $m \preceq m$, this means that $m$ is the greatest element of $A$, by
+definition of greatest element. Additionally, since $m \preceq m$, this means
+that $m$ is the least element of $A$, by definition of least element.
+
+Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k$ be any integer such that $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+Every subset of $A$ with $k$ elements has both a least element and a greatest
+element.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+Every subset of $A$ with $k + 1$ elements has both a least element and a
+greatest element.
+
+Suppose $C$ is a subset of $A$ ($C \subseteq A$) with $k + 1$ elements, and
+suppose $B = C - \{p\}$, where $p$ is an element of $C$.
+
+Then, $B$ has $k$ elements, and by the supposition, has a least element and a
+greatest element.
+
+Let $a$ be the greatest element of $B$ and $b$ be the least element of $B$.
+
+_[It must be shown that $C$ has a greatest element and a least element.]_
+
+Since $C = B \cup \{p\}$, $C \subseteq A$, and $A$ is totally ordered (all by
+suppositions), it follows that $p$ is comparable with every element of $B$.
+
+The following cases emerge from this proposition:
+
+_Case ($p \preceq b$):_
+
+Since $p \preceq b$, this means by the definition for $\preceq$ that $p$ is the
+least element of $C$, $b$ is not the least element of $C$, and $a$ is the
+greatest element of $C$.
+
+Therefore $C$ has a least and greatest element.
+
+_Case ($b \preceq p \preceq a$):_
+
+Since $b \preceq p \preceq a$, $p$ is neither the least nor the greatest element
+of $C$, $b$ is the least element of $C$, and $a$ is the greatest element of $C$.
+
+Therefore $C$ has a least and greatest element.
+
+_Case ($a \preceq p$):_
+
+Since $a \preceq p$, $p$ is the greatest element of $C$, $a$ is not the greatest
+element of $C$, and $b$ is the least element of $C$.
+
+Therefore $C$ has a least and greatest element.
+
+In all cases, $C$ has a least and greatest element.
+
+Therefore $P(k + 1)$ is true.
+
+Q.E.D.
+
 40. Prove that a nonempty, finite, partially ordered set has
 
 a. at least one minimal element,
 
+**Proof:**
+
+Suppose $A$ is a nonempty, finite, partially ordered set.
+
+It must be shown that $A$ has at least one minimal element.
+
+Let $a \in A$. Since $A$ is finite and partially ordered, it follows that either
+$a$ is the only element in $A$, and therefore is the least, and a minimal
+element of $A$, or $b \preceq a$ for some $b \in A$, in which case $b$ is a
+minimal element of $A$, or $c \preceq b \preceq a$, in which case $c$ is a
+minimal element of $A$.
+
+The chain $\dots \preceq c \preceq b \preceq a$ is not infinite (since $A$ is
+finite). It follows that there must always be at least one minimal element in
+$A$.
+
+Q.E.D.
+
 b. at least one maximal element.
+
+**Proof:**
+
+Suppose $A$ is a nonempty, finite, partially ordered set.
+
+It must be shown that $A$ has at least one maximal element.
+
+Let $a \in A$. Since $A$ is finite and partially ordered, it follows that either
+$a$ is the only element in $A$, and therefore is the greatest, and a maximal
+element of $A$, or $a \preceq b$ for some $b \in A$, in which case $b$ is a
+maximal element of $A$, or $a \preceq b \preceq c$, in which case $c$ is a
+maximal element of $A$.
+
+The chain $a \preceq b \preceq c \preceq \dots$ is not infinite (since $A$ is
+finite). It follows that there must always be at least one maximal element in
+$A$.
+
+Q.E.D.
 
 41. Prove that a finite, partially ordered set has
 
 a. at most one greatest element,
 
+**Proof (by contradiction):**
+
+Suppose $A$ is a finite, partially ordered set, with more than one greatest
+element.
+
+Let $a$ and $b$ be elements in $A$ such that both are the greatest element of
+$A$, with $a \neq b$.
+
+Since $a$ is the greatest element of $A$, it follows that $b \preceq a$.
+
+Similarly, since $b$ is the greatest element of $A$, it follows that
+$a \preceq b$.
+
+Since $b \preceq a$, and $a \preceq b$, it follows (by the definition for
+$\preceq$) that $a = b$. So, by the supposition, $a \neq b$, and it has been
+shown that $a = b$. This is a contradiction.
+
+Since the proposition has been contradicted, the supposition must be false, and
+therefore $A$ must have at most one greatest element.
+
+Q.E.D.
+
 b. at most one least element.
+
+**Proof (by contradiction):**
+
+Suppose $A$ is a finite, partially ordered set, with more than one least
+element.
+
+Let $a$ and $b$ be elements in $A$ such that both are the least element of $A$,
+with $a \neq b$.
+
+Since $a$ is the least element of $A$, it follows that $a \preceq b$.
+
+Similarly, since $b$ is the least element of $A$, it follows that $b \preceq a$.
+
+Since $a \preceq b$, and $b \preceq a$, it follows (by the definition for
+$\preceq$) that $a = b$. So, by the supposition, $a \neq b$, and it has been
+shown that $a = b$. This is a contradiction.
+
+Since the proposition has been contradicted, the supposition must be false, and
+therefore $A$ must have at most one least element.
+
+Q.E.D.
 
 42. Draw a Hasse diagram for a partially ordered set that has two maximal
     elements and two minimal elements and is such that each element is
     comparable to exactly two other elements.
 
+(Done by hand.)
+
 43. Draw a Hasse diagram for a partially ordered set that has three maximal
     elements and three minimal elements and is such that each element is either
     greater than or less than exactly two other elements.
+
+(Done by hand.)
 
 44. Use the algorithm given in the text to find a topological sorting for the
     relation of exercise 16(a) that is different from the "less than or equal
     to" relation $\leq$.
 
+16(a) states:
+
+Consider the "divides" relation on each of the following sets $A$. Draw the
+Hasse diagram for each relation.
+
+$A = \{1, 2, 4, 5, 10, 15, 20\}$
+
+Let $R$ be the "divides" relation on $A$, then:
+
+$$ R = \{(1, 1), (1, 2), (1, 4), (1, 5), (1, 10), (1, 15), (1, 20), (2, 2), (2, 4), (2, 10), (2, 20), (4, 4), (4, 20), (5, 5), (5, 10), (5, 15), (5, 20), (10, 10), (10, 20), (15, 15), (20, 20)\} $$
+
+The minimal elements of $R$, denoted $R_{\text{min}}$, are:
+
+$$ R_{\text{min}} = \{1\} $$
+
+Set the topological order to: $1$.
+
+Now, $A' = A - \{1\}$:
+
+$$ A' = \{2, 4, 5, 10, 15, 20\} $$
+
+$$ R = \{(2, 2), (2, 4), (2, 10), (2, 20), (4, 4), (4, 20), (5, 5), (5, 10), (5, 15), (5, 20), (10, 10), (10, 20), (15, 15), (20, 20)\} $$
+
+$$ R_{\text{min}} = \{2, 5\} $$
+
+Set the topological order to: $1, 5$.
+
+Now, $A' = A - \{5\}$:
+
+$$ A' = \{2, 4, 10, 15, 20\} $$
+
+$$ R = \{(2, 2), (2, 4), (2, 10), (2, 20), (4, 4), (4, 20), (10, 10), (10, 20), (15, 15), (20, 20)\} $$
+
+$$ R_{\text{min}} = \{2, 15\} $$
+
+Set the topological order to: $1, 5, 15$.
+
+Now, $A' = A - \{15\}$:
+
+$$ A' = \{2, 4, 10, 20\} $$
+
+$$ R = \{(2, 2), (2, 4), (2, 10), (2, 20), (4, 4), (4, 20), (10, 10), (10, 20), (20, 20)\} $$
+
+$$ R_{\text{min}} = \{2\} $$
+
+Set the topological order to: $1, 5, 15, 2$.
+
+Now, $A' = A - \{2\}$:
+
+$$ A' = \{4, 10, 20\} $$
+
+$$ R = \{(4, 4), (4, 20), (10, 10), (10, 20), (20, 20)\} $$
+
+$$ R_{\text{min}} = \{4, 10\} $$
+
+Set the topological order to: $1, 5, 15, 2, 10$.
+
+Now, $A' = A - \{10\}$:
+
+$$ A' = \{4, 20\} $$
+
+$$ R = \{(4, 4), (4, 20), (20, 20)\} $$
+
+$$ R_{\text{min}} = \{4\} $$
+
+Set the topological order to: $1, 5, 15, 2, 10, 4$.
+
+Now, $A' = A - \{4\}$:
+
+$$ A' = \{20\} $$
+
+$$ R = \{(20, 20)\} $$
+
+$$ R_{\text{min}} = \{20\} $$
+
+Set the topological order to: $1, 5, 15, 2, 10, 4, 20$.
+
+Now, $A' = A - \{20\}$:
+
+$$ A' = \emptyset $$
+
+Done. Final topological order:
+
+$$ 1, 5, 15, 2, 10, 4, 20 $$
+
 45. Use the algorithm given in the text to find a topological sorting for the
     relation of exercise 16(b) that is different from the "less than or equal
     to" relation $\leq$.
 
+16(b) reads:
+
+Consider the "divides" relation on each of the following sets $A$. Draw the
+Hasse diagram for each relation.
+
+b. $A = \{2, 3, 4, 6, 8, 9, 12, 18\}$
+
+Let $R$ be the "divides" relation on $A$, then:
+
+$$ R = \{(2, 2), (2, 4), (2, 8), (2, 12), (2, 18), (3, 3), (3, 6), (3, 9), (3, 12), (3, 18), (4, 4), (4, 8), (4, 12), (6, 6), (6, 12), (6, 18), (8, 8), (9, 9), (9, 18), (12, 12), (18, 18)\}$$
+
+The minimal elements of $R$, denoted $R_{\text{min}}$, are:
+
+$$ R_{\text{min}} = \{2, 3\} $$
+
+Set the topological order to: $3$.
+
+Now, $A' = A - \{3\}$:
+
+$A' = \{2, 4, 6, 8, 9, 12, 18\}$
+
+$$ R = \{(2, 2), (2, 4), (2, 8), (2, 12), (2, 18), (4, 4), (4, 8), (4, 12), (6, 6), (6, 12), (6, 18), (8, 8), (9, 9), (9, 18), (12, 12), (18, 18)\}$$
+
+$$ R_{\text{min}} = \{2, 9\} $$
+
+Set the topological order to: $3, 9$.
+
+Now, $A' = A' - \{9\}$:
+
+$A' = \{2, 4, 6, 8, 12, 18\}$
+
+$$ R = \{(2, 2), (2, 4), (2, 8), (2, 12), (2, 18), (4, 4), (4, 8), (4, 12), (6, 6), (6, 12), (6, 18), (8, 8), (12, 12), (18, 18)\}$$
+
+$$ R_{\text{min}} = \{2\} $$
+
+Set the topological order to: $3, 9, 2$.
+
+Now, $A' = A' - \{2\}$:
+
+$A' = \{4, 6, 8, 12, 18\}$
+
+$$ R = \{(4, 4), (4, 8), (4, 12), (6, 6), (6, 12), (6, 18), (8, 8), (12, 12), (18, 18)\}$$
+
+$$ R_{\text{min}} = \{4, 6\} $$
+
+Set the topological order to: $3, 9, 2, 6$.
+
+Now, $A' = A' - \{6\}$:
+
+$A' = \{4, 8, 12, 18\}$
+
+$$ R = \{(4, 4), (4, 8), (4, 12), (8, 8), (12, 12), (18, 18)\}$$
+
+$$ R_{\text{min}} = \{4, 18\} $$
+
+Set the topological order to: $3, 9, 2, 6, 18$.
+
+Now, $A' = A' - \{18\}$:
+
+$A' = \{4, 8, 12\}$
+
+$$ R = \{(4, 4), (4, 8), (4, 12), (8, 8), (12, 12)\}$$
+
+$$ R_{\text{min}} = \{4\} $$
+
+Set the topological order to: $3, 9, 2, 6, 18, 4$.
+
+Now, $A' = A' - \{4\}$:
+
+$A' = \{8, 12\}$
+
+$$ R = \{(8, 8), (12, 12)\}$$
+
+$$ R_{\text{min}} = \{8, 12\} $$
+
+Set the topological order to: $3, 9, 2, 6, 18, 4, 12$.
+
+Now, $A' = A' - \{12\}$:
+
+$A' = \{8\}$
+
+$$ R = \{(8, 8)\}$$
+
+$$ R_{\text{min}} = \{8\} $$
+
+Set the topological order to: $3, 9, 2, 6, 18, 4, 12, 8$.
+
+Now, $A' = A' - \{8\}$:
+
+$A' = \emptyset$
+
+Done. Final topological order:
+
+$$ 3, 9, 2, 6, 18, 4, 12, 8 $$
+
 46. Use the algorithm given in the text to find a topological sorting for the
     relation of exercise 19.
+
+Exercise 19 reads:
+
+Let $S = \{0, 1\}$ and consider the partial order relation $R$ defined on
+$S \times S$ as follows: For all ordered pairs $(a, b)$ and $(c, d)$ in
+$S \times S$,
+
+$$ (a, b) R (c, d) \Leftrightarrow a \leq c \text{ and } b \leq d $$
+
+where $\leq$ denotes the usual "less than or equal to" relation for real
+numbers.
+
+$$ S \times S = \{(0, 0), (0, 1), (1, 0), (1, 1)\} $$
+
+$$ R = \{[(0, 0), (0, 0)], [(0, 0), (0, 1)], [(0, 0), (1, 0)], [(0, 0), (1, 1)], [(0, 1), (0, 1)], [(0, 1), (1, 1)], [(1, 0), (1, 0)], [(1, 0), (1, 1)], [(1, 1), (1, 1)]\} $$
+
+$$ R_{\text{min}} = \{(0, 0)\} $$
+
+Let $A = S \times S$.
+
+The topological sorting currently is: $(0, 0)$
+
+Now, let:
+
+$$ A' = A - \{(0, 0)\} $$
+
+$$ A' = \{(0, 1), (1, 0), (1, 1)\} $$
+
+$$ R = \{[(0, 1), (0, 1)], [(0, 1), (1, 1)], [(1, 0), (1, 0)], [(1, 0), (1, 1)], [(1, 1), (1, 1)]\} $$
+
+$$ R_{\text{min}} = \{(0, 1), (1, 0)\} $$
+
+The topological sorting currently is: $(0, 0), (1, 0)$
+
+$$ A' = A' - \{(1, 0)\} $$
+
+$$ A' = \{(0, 1), (1, 1)\} $$
+
+$$ R = \{[(0, 1), (0, 1)], [(0, 1), (1, 1)], [(1, 1), (1, 1)]\} $$
+
+$$ R_{\text{min}} = \{(0, 1)\} $$
+
+The topological sorting currently is: $(0, 0), (1, 0), (0, 1)$
+
+$$ A' = A' - \{(0, 1)\} $$
+
+$$ A' = \{(1, 1)\} $$
+
+$$ R = \{[(1, 1), (1, 1)]\} $$
+
+$$ R_{\text{min}} = \{(1, 1)\} $$
+
+The topological sorting currently is: $(0, 0), (1, 0), (0, 1), (1, 1)$
+
+$$ A' = A' - \{(1, 1)\} $$
+
+$$ A' = \emptyset $$
+
+Done. Final topological sorting:
+
+$$ (0, 0), (1, 0), (0, 1), (1, 1) $$
 
 47. Use the algorithm given in the text to find a topological sorting for the
     relation of exercise 20.
 
+Omitted.
+
 48. Use the algorithm given in the text to find a topological sorting for the
     "subset" relation on $\mathscr{P}(\{a, b, c, d\})$.
+
+$$ \mathscr{P}(\{a, b, c, d\}) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{d\}, \{a, b\}, \{a, c\}, \{a, d\}, \{b, c\}, \{b, d\}, \{c, d\}, \{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{b, c, d\}, \{a, b, c, d\}\} $$
+
+Let $R_{\text{min}}$ denote the minimal elements of
+$\mathscr{P}(\{a, b, c, d\})$.
+
+$$ R_{\text{min}} = \{\emptyset\} $$
+
+Let $A$ denote the power set $\mathscr{P}(\{a, b, c, d\})$.
+
+Topological sort so far: $\emptyset$
+
+$$ A' = A - \emptyset $$
+
+$$ A'  = \{\{a\}, \{b\}, \{c\}, \{d\}, \{a, b\}, \{a, c\}, \{a, d\}, \{b, c\}, \{b, d\}, \{c, d\}, \{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{b, c, d\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a\}, \{b\}, \{c\}, \{d\}\} $$
+
+Topological sort so far: $\emptyset, \{d\}$
+
+$$ A' = A' - \{d\} $$
+
+$$ A'  = \{\{a\}, \{b\}, \{c\}, \{a, b\}, \{a, c\}, \{a, d\}, \{b, c\}, \{b, d\}, \{c, d\}, \{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{b, c, d\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a\}, \{b\}, \{c\}\} $$
+
+Topological sort so far: $\emptyset, \{d\}, \{c\}$
+
+$$ A' = A' - \{c\} $$
+
+$$ A'  = \{\{a\}, \{b\}, \{a, b\}, \{a, c\}, \{a, d\}, \{b, c\}, \{b, d\}, \{c, d\}, \{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{b, c, d\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a\}, \{b\}\} $$
+
+Topological sort so far: $\emptyset, \{d\}, \{c\}, \{b\}$
+
+$$ A' = A' - \{b\} $$
+
+$$ A'  = \{\{a\}, \{a, b\}, \{a, c\}, \{a, d\}, \{b, c\}, \{b, d\}, \{c, d\}, \{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{b, c, d\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a\}\} $$
+
+Topological sort so far: $\emptyset, \{d\}, \{c\}, \{b\}, \{a\}$
+
+$$ A' = A' - \{a\} $$
+
+$$ A'  = \{\{a, b\}, \{a, c\}, \{a, d\}, \{b, c\}, \{b, d\}, \{c, d\}, \{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{b, c, d\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a, b\}, \{a, c\}, \{a, d\}, \{b, c\}, \{b, d\}, \{c, d\}\} $$
+
+Topological sort so far: $\emptyset, \{d\}, \{c\}, \{b\}, \{a\}, \{c, d\}$
+
+$$ A' = A' - \{c, d\} $$
+
+$$ A'  = \{\{a, b\}, \{a, c\}, \{a, d\}, \{b, c\}, \{b, d\}, \{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{b, c, d\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a, b\}, \{a, c\}, \{a, d\}, \{b, c\}, \{b, d\}\} $$
+
+Topological sort so far:
+$\emptyset, \{d\}, \{c\}, \{b\}, \{a\}, \{c, d\}, \{b, d\}$
+
+$$ A' = A' - \{b, d\} $$
+
+$$ A'  = \{\{a, b\}, \{a, c\}, \{a, d\}, \{b, c\}, \{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{b, c, d\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a, b\}, \{a, c\}, \{a, d\}, \{b, c\}\} $$
+
+Topological sort so far:
+$\emptyset, \{d\}, \{c\}, \{b\}, \{a\}, \{c, d\}, \{b, d\}, \{b, c\}$
+
+$$ A' = A' - \{b, c\} $$
+
+$$ A'  = \{\{a, b\}, \{a, c\}, \{a, d\}, \{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{b, c, d\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a, b\}, \{a, c\}, \{a, d\}\} $$
+
+Topological sort so far:
+$\emptyset, \{d\}, \{c\}, \{b\}, \{a\}, \{c, d\}, \{b, d\}, \{b, c\}, \{a, d\}$
+
+$$ A' = A' - \{a, d\} $$
+
+$$ A'  = \{\{a, b\}, \{a, c\}, \{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{b, c, d\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a, b\}, \{a, c\}\} $$
+
+Topological sort so far:
+$\emptyset, \{d\}, \{c\}, \{b\}, \{a\}, \{c, d\}, \{b, d\}, \{b, c\}, \{a, d\}, \{a, c\}$
+
+$$ A' = A' - \{a, c\} $$
+
+$$ A'  = \{\{a, b\}, \{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{b, c, d\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a, b\}\} $$
+
+Topological sort so far:
+$\emptyset, \{d\}, \{c\}, \{b\}, \{a\}, \{c, d\}, \{b, d\}, \{b, c\}, \{a, d\}, \{a, c\}, \{a, b\}$
+
+$$ A' = A' - \{a, b\} $$
+
+$$ A'  = \{\{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{b, c, d\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{b, c, d\}\}$$
+
+Topological sort so far:
+$\emptyset, \{d\}, \{c\}, \{b\}, \{a\}, \{c, d\}, \{b, d\}, \{b, c\}, \{a, d\}, \{a, c\}, \{a, b\}, \{b, c, d\}$
+
+$$ A' = A' - \{b, c, d\} $$
+
+$$ A'  = \{\{a, b, c\}, \{a, b, d\}, \{a, c, d\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a, b, c\}, \{a, b, d\}, \{a, c, d\}\}$$
+
+Topological sort so far:
+$\emptyset, \{d\}, \{c\}, \{b\}, \{a\}, \{c, d\}, \{b, d\}, \{b, c\}, \{a, d\}, \{a, c\}, \{a, b\}, \{b, c, d\}, \{a, c, d\}$
+
+$$ A' = A' - \{a, c, d\} $$
+
+$$ A'  = \{\{a, b, c\}, \{a, b, d\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a, b, c\}, \{a, b, d\}\}$$
+
+Topological sort so far:
+$\emptyset, \{d\}, \{c\}, \{b\}, \{a\}, \{c, d\}, \{b, d\}, \{b, c\}, \{a, d\}, \{a, c\}, \{a, b\}, \{b, c, d\}, \{a, c, d\}, \{a, b, d\}$
+
+$$ A' = A' - \{a, b, d\} $$
+
+$$ A'  = \{\{a, b, c\}, \{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a, b, c\}\}$$
+
+Topological sort so far:
+$\emptyset, \{d\}, \{c\}, \{b\}, \{a\}, \{c, d\}, \{b, d\}, \{b, c\}, \{a, d\}, \{a, c\}, \{a, b\}, \{b, c, d\}, \{a, c, d\}, \{a, b, d\}, \{a, b, c\}$
+
+$$ A' = A' - \{a, b, c\} $$
+
+$$ A'  = \{\{a, b, c, d\}\} $$
+
+$$ R_{\text{min}} = \{\{a, b, c, d\}\}$$
+
+Topological sort so far:
+$\emptyset, \{d\}, \{c\}, \{b\}, \{a\}, \{c, d\}, \{b, d\}, \{b, c\}, \{a, d\}, \{a, c\}, \{a, b\}, \{b, c, d\}, \{a, c, d\}, \{a, b, d\}, \{a, b, c\}, \{a, b, c, d\}$
+
+$$ A' = A' - \{a, b, c, d\} $$
+
+$$ A'  = \emptyset $$
+
+Done. Final topological sort:
+
+$$ \emptyset, \{d\}, \{c\}, \{b\}, \{a\}, \{c, d\}, \{b, d\}, \{b, c\}, \{a, d\}, \{a, c\}, \{a, b\}, \{b, c, d\}, \{a, c, d\}, \{a, b, d\}, \{a, b, c\}, \{a, b, c, d\} $$
 
 49. Refer to the prerequisite structure shown in Figure 8.5.1.
 
 a. Find a list of six noncomparable courses that is different from the list
 given in the text.
 
+Omitted.
+
 b. Find two topological sortings that are different from the one given in the
 text.
+
+Omitted.
 
 50. A set $S$ of jobs can be ordered by writing $x \preceq y$ to mean that
     either $x = y$ or $x$ must be done before $y$, for all $x$ and $y$ in $S$.
@@ -6965,12 +7652,18 @@ text.
 a. If one person is to perform all the jobs, one after another, find an order in
 which the jobs can be done.
 
+Omitted.
+
 b. Suppose enough people are available to perform any number of jobs
 simultaneously.
 
     (i) If each job requires one day to perform, what is the least number of days needed to perform all ten jobs?
 
+    Omitted.
+
     (ii) What is the maximum number of jobs that can be performed at the same time?
+
+    Omitted.
 
 51. Suppose the tasks described in Example 8.5.12 require the following
     performance times:
@@ -6989,4 +7682,8 @@ simultaneously.
 
 a. What is the minimum time required to assemble a car?
 
+Omitted.
+
 b. Find a critical path for the assembly process.
+
+Omitted.
