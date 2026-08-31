@@ -659,3 +659,408 @@ Omitted.
     mathematical induction on $n$.)
 
 Omitted.
+
+---
+
+Page 608
+
+**Exercise Set 9.2**
+
+In 1-4, use the fact that in baseball's World Series, the first team to win four
+games wins the series.
+
+1. Suppose team $A$ wins the first three games. How many ways can the World
+   Series be completed? (Draw a tree.)
+
+2. Suppose team $A$ wins the first two games. How many ways can the World Series
+   be completed? (Draw a tree.)
+
+3. How many ways can a World Series be played if team $A$ wins four games in a
+   row?
+
+4. How many ways can a World Series be played if no team wins two games in a
+   row?
+
+5. In a competition between players $X$ and $Y$, the first player to win three
+   games in a row or a total of four games wins. How many ways can the
+   competition be played if $X$ wins the first game and $Y$ wins the second and
+   third games? (Draw a tree.)
+
+6. One urn contains two black balls (labeled $B_1$ and $B_2$) and one white
+   ball. A second urn contains one black ball and two white balls (labeled $W_1$
+   and $W_2$). Suppose the following experiment is performed: One of the two
+   urns is chosen at random. Next a ball is randomly chosen from the urn. Then a
+   second ball is chosen at random from the same urn without replacing the first
+   ball.
+
+a. Construct the possibility tree showing all possible outcomes of this
+experiment.
+
+b. What is the total number of outcomes of this experiment?
+
+c. What is the probability that two black balls are chosen?
+
+d. What is the probability that two balls of opposite color are chosen?
+
+7. One urn contains one blue ball (labeled $B_1$) and three red balls (labeled
+   $R_1$, $R_2$, and $R_3$). A second urn contains two red balls ($R_4$ and
+   $R_5$) and two blue balls ($B_2$ and $B_3$). An experiment is performed in
+   which one of the two urns is chosen at random and then two balls are randomly
+   chosen from it, one after the other without replacement.
+
+a. Construct the possibility tree showing all possible outcomes of this
+experiment.
+
+b. What is the total number of outcomes of this experiment?
+
+c. What is the probability that two red balls are chosen?
+
+8. A person buying a personal computer system is offered a choice of three
+   models of the basic unit, two models of keyboard, and two models of printer.
+   How many distinct systems can be purchased?
+
+9. Suppose there are three roads from city $A$ to city $B$ and five roads from
+   city $B$ to city $C$.
+
+a. How many ways is it possible to travel from city $A$ to city $C$ via city
+$B$?
+
+b. How many different round-trip routes are there from city $A$ to $B$ to $C$
+and back to $A$?
+
+c. How many different routes are there from cities $A$ to $B$ to $C$ and back to
+$A$ in which no road is traversed twice?
+
+10. Suppose there are three routes from North Point to Boulder Creek, two routes
+    from Boulder Creek to Beaver Dam, two routes from Beaver Dam to Star Lake,
+    and four routes directly from Boulder Creek to Star Lake (Draw a sketch.)
+
+a. How many routes from North Point to Star Lake pass through Beaver Dam?
+
+b. How many routes from North Point to Star Lake bypass Beaver Dam?
+
+11.
+
+a. A bit string is a finite sequence of 0's and 1's. How many bit strings have
+length 8?
+
+b. How many bit strings of length 8 begin with three 0's?
+
+c. How many bit strings of length 8 begin and end with a 1?
+
+12. Hexadecimal numbers are made using the sixteen hexadecimal digits, 0, 1, 2,
+    3, 4, 5, 6, 7, 8, 9 A, B, C, D, E, F and are denoted using the subscript 16.
+    For example, $9A2D_{16}$ and $BC54_{16}$ are hexadecimal numbers.
+
+a. How many hexadecimal numbers begin with one of the digits $3$ through $B$,
+end with one of the digits $5$ through $F$, and are $5$ digits long?
+
+b. How many hexadecimal numbers begin with one of the digits $4$ through $D$,
+end with one of the digits $2$ through $E$, and are $6$ digits long?
+
+13. A coin is tossed four times. Each time the result $H$ for heads or $T$ for
+    tails is recorded. An outcome of $HHTT$ means that heads were obtained on
+    the first two tosses and tails on the second two. Assume that heads and
+    tails are equally likely on each toss.
+
+a. How many distinct outcomes are possible?
+
+b. What is the probability that exactly two heads occur?
+
+c. What is the probability that exactly one head occurs?
+
+14. Suppose that in a certain state, all automobile license plates have four
+    uppercase letters followed by three digits.
+
+a. How many different license plates are possible?
+
+b. How many license plates could begin with $A$ and end in $0$?
+
+c. How many license plates could begin with $TGIF$?
+
+d. How many license plates are possible in which all the letters and digits are
+distinct?
+
+e. How many license plates could begin with $AB$ and have all letters and digits
+distinct?
+
+15. A combination lock requires three selections of numbers, each from $1$
+    through $30$.
+
+a. How many different combinations are possible?
+
+b. Suppose the locks are constructed in such a way that no number may be used
+twice. How many different combinations are possible?
+
+16.
+
+a. How many integers are there from 10 through 99?
+
+b. How many odd integers are there from 10 through 99?
+
+c. How many integers from 10 through 99 have distinct digits?
+
+d. How many odd integers from 10 through 99 have distinct digits?
+
+e. What is the probability that a randomly chosen two-digits integer has
+distinct digits? has distinct digits and is odd?
+
+17.
+
+a. How many integers are there from 1000 through 9999?
+
+b. How many odd integers are there from 1000 through 9999?
+
+c. How many integers from 1000 through 9999 have distinct digits?
+
+d. How many odd integers from 1000 through 9999 have distinct digits?
+
+e. What is the probability that a randomly chosen four-digit integer has
+distinct digits? has distinct digits and is odd?
+
+18. The following diagram shows the keypad for an automatic teller machine. As
+    you can see, the same sequence of keys represents a variety of different
+    PINs. For instance, 2133, AZDE, and BQ3F are all keyed in exactly the same
+    way.
+
+(See page 609 for image.)
+
+a. How many different PINs are represented by the same sequence of keys as 2133?
+
+b. How many different PINs are represented by the same sequence of keys as 5031?
+
+c. How many different numeric sequences on the machine contain no repeated
+digit?
+
+19. Three officers - a president, a treasurer, and a secretary - are to be
+    chosen from among four people: Ann, Bob, Cyd, and Dan. Suppose that Bob is
+    not qualified to be treasurer and Cyd's other commitments make it impossible
+    for her to be secretary. How many ways can the officers be chosen? Can the
+    multiplication rule be used to solve this problem?
+
+20. Modify Example 9.2.4 by supposing that a PIN must not begin with any of the
+    letters A-M and mut end with a digit. Continue to assume that no symbol may
+    be used more than once and that the total number of PINs is to be
+    determined.
+
+a. Find the error in the following "solution."
+
+"Constructing a PIN is a four-step process.
+
+**Step 1:** Choose the left-hand symbol.
+
+**Step 2:** Choose the second symbol from the left.
+
+**Step 3:** Choose the third symbol from the left.
+
+**Step 4:** Choose the right-most symbol.
+
+Because none of the thirteen letters from A through M may be chosen in step 1,
+there are $36 - 13 = 23$ ways to perform step 1. There are $35$ ways to perform
+step 2 and $34$ ways to perform step 3 because previously used symbols may not
+be used. Since the symbol chosen in step 4 must be a previously unused digit,
+there are $10 - 3 = 7$ ways to perform step 4. Thus there are
+$23 \cdot 35 \cdot 34 \cdot 7 = 191,590$ different PINs that satisfy the given
+conditions."
+
+b. Reorder steps 1-4 in part (a) as follows:
+
+**Step 1:** Choose the right-most symbol.
+
+**Step 2:** Choose the left-most symbol.
+
+**Step 3:** Choose the second symbol from the left.
+
+**Step 4:** Choose the third symbol from the left.
+
+Use the multiplication rule to find the number of PINs that satisfy the given
+conditions.
+
+21. Suppose $A$ is a set with $m$ elements and $B$ is a set with $n$ elements.
+
+a. How many relations are there from $A$ to $B$? Explain.
+
+b. How many functions are there from $A$ to $B$? Explain.
+
+c. What fraction of the relations from $A$ to $B$ are functions?
+
+22.
+
+a. How many functions are there from a set with three elements to a set with
+four elements?
+
+b. How many functions are there from a set with five elements to a set with two
+elements?
+
+c. How many functions are there from a set with $m$ elements to a set with $n$
+elements, where $m$ and $n$ are positive integers?
+
+23. In Section 2.5 we showed how integers can be represented by strings of 0's
+    and 1's inside a digital computer. In fact, through various coding schemes,
+    strings of 0's and 1's can be used to represent all kinds of symbols. One
+    commonly used code is the Extended Binary-Coded Decimal Interchange Code
+    (EBCDIC) in which each symbol has an 8-bit representation. How many distinct
+    symbols can be represented by this code?
+
+In each of 24-28, determine how many times the innermost loop will be iterated
+when the algorithm segment is implemented and run. (Assume that $m$, $n$, $p$,
+$a$, $b$, $c$, and $d$ are all positive integers.)
+
+24.
+
+$\textbf{\text{for }} i := 1 \textbf{\text{ to }} 30\\ \ \ \textbf{ \text{for }} j := 1 \textbf{\text{ to }} 15\\ \ \ \ \ \textit{[Statements in body of inner loop.}\\ \ \ \ \ \textit{None contain branching statements that}\\ \ \ \ \ \textit{lead outside the loop.]}\\ \ \ \textbf{\text{next }} j\\ \textbf{\text{next }} i$
+
+25.
+
+$\textbf{\text{for }} j := 1 \textbf{\text{ to }} m\\ \ \ \textbf{\text{for }} k := 1 \textbf{\text{ to }} n\\ \ \ \ \ \textit{[Statements in body of inner loop.}\\ \ \ \ \ \textit{None contain branching statements that}\\ \ \ \ \ \textit{lead outside the loop.]}\\ \ \ \textbf{\text{next }} k\\ \textbf{\text{next }} j$
+
+26.
+
+$\textbf{\text{for }} i := 1 \textbf{\text{ to }} m\\ \ \ \textbf{\text{for }} j := 1 \textbf{\text{ to }} n\\ \ \ \ \ \textbf{\text{for }} k := 1 \textbf{\text{ to }} p\\ \ \ \ \ \ \ \textit{[Statements in body of inner loop.}\\ \ \ \ \ \ \ \textit{None contain branching statements}\\ \ \ \ \ \ \ \textit{that lead outside the loop.]}\\ \ \ \ \ \textbf{\text{next }} k\\ \ \ \textbf{\text{next }} j\\ \textbf{\text{next }} i$
+
+27.
+
+$\textbf{\text{for }} i := 5 \textbf{\text{ to }} 50\\ \ \ \textbf{\text{for }} j := 10 \textbf{\text{ to }} 20\\ \ \ \ \ \textit{[Statements in body of inner loop.}\\ \ \ \ \ \textit{None contain branching statements that}\\ \ \ \ \ \textit{lead outside the loop.]}\\ \ \ \textbf{\text{next }} j\\ \textbf{\text{next }} i$
+
+28. Assume $a \leq b$ and $c \leq d$.
+
+$\textbf{\text{for }} i := a \textbf{\text{ to }} b\\ \ \ \textbf{\text{for }} j := c \textbf{\text{ to }} d\\ \ \ \ \ \textit{[Statements in body of inner loop.}\\ \ \ \ \ \textit{None contain branching statements that}\\ \ \ \ \ \textit{lead outside the loop.]}\\ \ \ \textbf{\text{next }} j\\ \textbf{\text{next }} i$
+
+29. Consider the numbers 1 through 99,999 in their ordinary decimal
+    representations. How many contain exactly one of each of the digits 2, 3, 4,
+    and 5?
+
+30. Let $n = p_1^{k_1}p_2^{k_2} \cdots p_m^{k_m}$ where $p_1, p_2, \dots, p_m$
+    are distinct prime numbers and $k_1, k_2, \dots, k_m$ are positive integers.
+    How many ways can $n$ be written as a product of two positive integers that
+    have no common factors, assuming the following?
+
+a. Order matters (that is, $8 \cdot 15$ and $15 \cdot 8$ are regarded as
+different).
+
+b. Order does not matter (that is, $8 \cdot 15$ and $15 \cdot 8$ are regarded as
+the same).
+
+31.
+
+a. If $p$ is a prime number and $a$ is a positive integer, how many distinct
+positive divisors does $p^a$ have?
+
+b. If $p$ and $q$ are distinct prime numbers and $a$ and $b$ are positive
+integers, how many distinct positive divisors does $p^aq^b$ have?
+
+c. If $p$, $q$, and $r$ are distinct prime numbers and $a$, $b$, and $c$ are
+positive integers, how many distinct positive divisors does $p^aq^br^c$ have?
+
+d. If $p_1, p_2, \dots, p_m$ are distinct prime numbers and
+$a_1, a_2, \dots, a_m$ are positive integers, how many distinct positive
+divisors does $p_1^{a_1}p_2^{a_2} \cdots p_m^{a_m}$ have?
+
+e. What is the smallest positive integer with exactly 12 divisors?
+
+32.
+
+a. How many ways can the letters of the word _ALGORITHM_ be arranged in a row?
+
+b. How many ways can the letters of the word _ALGORITHM_ be arranged in a row if
+_A_ and _L_ must remain together (in order) as a unit?
+
+c. How many ways can the letters of the word _ALGORITHM_ be arranged in a row if
+the letters _GOR_ must remain together (in order) as a unit?
+
+33. Six people attend the theater together and sit in a row with exactly six
+    seats.
+
+a. How many ways can they be seated together in the row?
+
+b. Suppose one of the six is a doctor who must sit on the aisle in case she is
+paged. How many ways can the people be seated together in the row with the
+doctor in an aisle seat?
+
+c. Suppose the six people consist of three married couples and each couple wants
+to sit together with the older partner on the left. How many ways can the six be
+seated together in the row?
+
+34. Five people are to be seated around a circular table. Two seatings are
+    considered the same if one is a rotation of the other. How many different
+    seatings are possible?
+
+35. Write all the 2-permuations of $\{W, X, Y, Z\}$.
+
+36. Write all the 3-permutations of $\{s, t, u, v\}$.
+
+37. Evaluate the following quantities.
+
+a. $P(6, 4)$
+
+b. $P(6, 6)$
+
+c. $P(6, 3)$
+
+d. $P(6, 1)$
+
+38.
+
+a. How many 3-permutations are there of a set of five objects?
+
+b. How many 2-permutations are there of a set of eight objects?
+
+39.
+
+a. How many ways can three of the letters of the word _ALGORITHM_ be selected
+and written in a row?
+
+b. How many ways can six of the letters of the word _ALGORITHM_ be selected and
+written in a row?
+
+c. How many ways can six of the letters of the word _ALGORITHM_ be selected and
+written in a row if the first letter must be _A_?
+
+d. How many ways can six of the letters of the word _ALGORITHM_ be selected and
+written in a row if the first two letters must be _OR_?
+
+40. Prove that for every integer $n \geq 2$, $P(n + 1, 3) = n^3 - n$.
+
+41. Prove that for every integer $n \geq 2$,
+
+$$ P(n + 1, 2) - P(n, 2) = 2P(n, 1) $$
+
+42. Prove that for every integer $n \geq 3$,
+
+$$ P(n + 1, 3) - P(n, 3) = 3P(n, 2) $$
+
+43. Prove that for every integer $n \geq 2$,
+
+$$ P(n, n) = P(n, n - 1) $$
+
+44. Prove Theorem 9.2.1 by mathematical induction.
+
+45. Prove Theorem 9.2.2 by mathematical induction.
+
+46. Prove Theorem 9.2.3 by mathematical induction.
+
+47. A permutation on a set can be regarded as a function from the set to itself.
+    For instance, one permutation of $\{1, 2, 3, 4\}$ is $2341$. It can be
+    identified with the function that sends each position number to the number
+    occupying that position. Since position $1$ is occupied by $2$, $1$ is sent
+    to $2$ or $1 \to 2$; since position $2$ is occupied by $3$, $2$ is sent to
+    $3$ or $2 \to 3$; and so forth. The entire permutation can be written using
+    arrows as follows:
+
+$$
+\begin{array}{cccc}
+1 & 2 & 3 & 4 \\
+\downarrow & \downarrow & \downarrow & \downarrow \\
+2 & 3 & 4 & 1 \\
+\end{array}
+$$
+
+a. Use arrows to write each of the six permutations of $\{1, 2, 3\}$.
+
+b. Use arrows to write each of the permutations of $\{1, 2, 3, 4\}$ that keep
+$2$ and $4$ fixed.
+
+c. Which permutations of $\{1, 2, 3\}$ keep no elements fixed?
+
+d. Use arrows to write all permutations of $\{1, 2, 3, 4\}$ that keep no
+elements fixed.
