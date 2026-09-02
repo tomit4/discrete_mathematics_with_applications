@@ -672,19 +672,49 @@ games wins the series.
 1. Suppose team $A$ wins the first three games. How many ways can the World
    Series be completed? (Draw a tree.)
 
+(Done by hand.)
+
+There are five ways to complete the series: A, B-A, B-B-A, B-B-B-A, and B-B-B-B.
+
 2. Suppose team $A$ wins the first two games. How many ways can the World Series
    be completed? (Draw a tree.)
+
+Fifteen ways: A-A, A-B-A, A-B-B-A, A-B-B-B-A, A-B-B-B-B, B-A-A, B-A-B-A,
+B-A-B-B-A, B-A-B-B-B, B-B-A-A, B-B-A-B-A, B-B-A-B-B, B-B-B-A-A, B-B-B-A-B,
+B-B-B-B.
 
 3. How many ways can a World Series be played if team $A$ wins four games in a
    row?
 
+Four ways: A-A-A-A, B-A-A-A-A, B-B-A-A-A-A, B-B-B-A-A-A-A.
+
 4. How many ways can a World Series be played if no team wins two games in a
    row?
+
+Two ways: A-B-A-B-A-B-A, B-A-B-A-B-A-B.
 
 5. In a competition between players $X$ and $Y$, the first player to win three
    games in a row or a total of four games wins. How many ways can the
    competition be played if $X$ wins the first game and $Y$ wins the second and
    third games? (Draw a tree.)
+
+Must start: X-Y-Y.
+
+Seven ways:
+
+X-Y-Y-Y
+
+X-Y-Y-X-X-X
+
+X-Y-Y-X-Y-Y
+
+X-Y-Y-X-X-Y-X
+
+X-Y-Y-X-X-Y-Y
+
+X-Y-Y-X-Y-X-Y
+
+X-Y-Y-X-Y-X-X
 
 6. One urn contains two black balls (labeled $B_1$ and $B_2$) and one white
    ball. A second urn contains one black ball and two white balls (labeled $W_1$
@@ -696,11 +726,69 @@ games wins the series.
 a. Construct the possibility tree showing all possible outcomes of this
 experiment.
 
+For the sake of notation, let $U_1$ denote the first urn and $U_2$ denote the
+second urn. And let $W_0$ denote the while ball in $U_1$, and let $B_0$ denote
+the black ball in $U_2$.
+
+The outcomes then are:
+
+From $U_1$:
+
+$$
+B_1 - B_2 \\
+B_1 - W_0 \\
+B_2 - B_1 \\
+B_2 - W_0 \\
+W_0 - B_1 \\
+W_0 - B_2 \\
+$$
+
+From $U_2$:
+
+$$
+B_0 - W_1 \\
+B_0 - W_2 \\
+W_1 - B_0 \\
+W_1 - W_2 \\
+W_2 - B_0 \\
+W_2 - W_1 \\
+$$
+
 b. What is the total number of outcomes of this experiment?
+
+12
 
 c. What is the probability that two black balls are chosen?
 
+Only $B_1 - B_2$ and $B_2 - B_1$ are the outcomes where two black ball are
+chosen, so the probability that two black balls are chosen, denoted $P(E)$ is:
+
+$$ P(E) = \frac{2}{12} = \frac{1}{6} \approx 16.7\% $$
+
 d. What is the probability that two balls of opposite color are chosen?
+
+The following are the outcomes where two balls of opposite colors are chosen:
+
+$$
+B_1 - W_0 \\
+B_2 - W_0 \\
+W_0 - B_1 \\
+W_0 - B_2 \\
+$$
+
+From $U_2$:
+
+$$
+B_0 - W_1 \\
+B_0 - W_2 \\
+W_1 - B_0 \\
+W_2 - B_0 \\
+$$
+
+So the probability that two balls of opposite colors are chosen, denoted $P(E)$
+is:
+
+$$ P(E) = \frac{8}{12} = \frac{2}{3} \approx 66.7\% $$
 
 7. One urn contains one blue ball (labeled $B_1$) and three red balls (labeled
    $R_1$, $R_2$, and $R_3$). A second urn contains two red balls ($R_4$ and
@@ -711,13 +799,73 @@ d. What is the probability that two balls of opposite color are chosen?
 a. Construct the possibility tree showing all possible outcomes of this
 experiment.
 
+For the sake of notation, let $U_1$ denote the first urn and $U_2$ denote the
+second urn.
+
+Possible outcomes when $U_1$ is chosen:
+
+$$
+B_1 - R_1 \\
+B_1 - R_2 \\
+B_1 - R_3 \\
+R_1 - B_1 \\
+R_1 - R_2 \\
+R_1 - R_3 \\
+R_2 - B_1 \\
+R_2 - R_1 \\
+R_2 - R_3 \\
+R_3 - B_1 \\
+R_3 - R_1 \\
+R_3 - R_2 \\
+$$
+
+Possible outcomes when $U_2$ is chosen:
+
+$$
+R_4 - R_5 \\
+R_4 - B_2 \\
+R_4 - B_3 \\
+R_5 - R_4 \\
+R_5 - B_2 \\
+R_5 - B_3 \\
+B_2 - B_3 \\
+B_2 - R_4 \\
+B_2 - R_5 \\
+B_3 - B_2 \\
+B_3 - R_4 \\
+B_3 - R_5 \\
+$$
+
 b. What is the total number of outcomes of this experiment?
 
+24
+
 c. What is the probability that two red balls are chosen?
+
+$$
+R_1 - R_2 \\
+R_1 - R_3 \\
+R_2 - R_1 \\
+R_2 - R_3 \\
+R_3 - R_1 \\
+R_3 - R_2 \\
+$$
+
+Possible outcomes when $U_2$ is chosen:
+
+$$
+R_4 - R_5 \\
+R_5 - R_4 \\
+$$
+
+$$ P(E) = \frac{8}{24} = \frac{1}{3} \approx 33.3\%  $$
 
 8. A person buying a personal computer system is offered a choice of three
    models of the basic unit, two models of keyboard, and two models of printer.
    How many distinct systems can be purchased?
+
+By the multiplication rule, the amount of distinct systems that can be purchased
+is $3 \cdot 2 \cdot 2 = 12$.
 
 9. Suppose there are three roads from city $A$ to city $B$ and five roads from
    city $B$ to city $C$.
@@ -725,28 +873,58 @@ c. What is the probability that two red balls are chosen?
 a. How many ways is it possible to travel from city $A$ to city $C$ via city
 $B$?
 
+By multiplication rule: $3 \cdot 5 = 15$.
+
 b. How many different round-trip routes are there from city $A$ to $B$ to $C$
 and back to $A$?
 
+$$ 3 \cdot 5 \cdot 5 \cdot 3 = 225 $$
+
 c. How many different routes are there from cities $A$ to $B$ to $C$ and back to
 $A$ in which no road is traversed twice?
+
+$$ 3 \cdot 5 \cdot 4 \cdot 2 = 120 $$
 
 10. Suppose there are three routes from North Point to Boulder Creek, two routes
     from Boulder Creek to Beaver Dam, two routes from Beaver Dam to Star Lake,
     and four routes directly from Boulder Creek to Star Lake (Draw a sketch.)
 
+(Drawn by hand.)
+
 a. How many routes from North Point to Star Lake pass through Beaver Dam?
 
+$$ 3 \cdot 2 \cdot 2 = 12 $$
+
 b. How many routes from North Point to Star Lake bypass Beaver Dam?
+
+$$ 3 \cdot 4 = 12 $$
 
 11.
 
 a. A bit string is a finite sequence of 0's and 1's. How many bit strings have
 length 8?
 
+For every bit, you can either choose a 0 or a 1, that's 2 choices per bit, and
+since it is of length eight, it follows by the multiplication rule that the
+amount of possible outcomes for a length 8 bit string is:
+
+$$ 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 2^8 = 256 $$
+
 b. How many bit strings of length 8 begin with three 0's?
 
+Since the first three bits must be 0, that means there is only 1 choice per bit
+for the first three bits, and then 2 choices per bit for the remaining 5 bits,
+so the number of possible outcomes are:
+
+$$ 1 \cdot 1 \cdot 1 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 1^3 \cdot 2^5 = 32 $$
+
 c. How many bit strings of length 8 begin and end with a 1?
+
+Since the first and last bits must be a 1, that means there is only 1 choice per
+bit for the first and last bits, and there are 2 choices for the remaining 6
+bits. The number of possible outcomes are:
+
+$$ 1 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 1 = 1 \cdot 2^6 \cdot 1 = 64 $$
 
 12. Hexadecimal numbers are made using the sixteen hexadecimal digits, 0, 1, 2,
     3, 4, 5, 6, 7, 8, 9 A, B, C, D, E, F and are denoted using the subscript 16.
@@ -755,8 +933,22 @@ c. How many bit strings of length 8 begin and end with a 1?
 a. How many hexadecimal numbers begin with one of the digits $3$ through $B$,
 end with one of the digits $5$ through $F$, and are $5$ digits long?
 
+Since the first digit must begin with 3 through B, this means that there are 9
+choices for the first digit. Since the last digit must be 5 through F, this
+means there are 11 choices for the last digit. The remaining 3 digits have 16
+choices. So, the number of possible outcomes is:
+
+$$ 9 \cdot 16 \cdot 16 \cdot 16 \cdot 11 = 9 \cdot 16^3 \cdot 11 = 405504 $$
+
 b. How many hexadecimal numbers begin with one of the digits $4$ through $D$,
 end with one of the digits $2$ through $E$, and are $6$ digits long?
+
+Since the first digit must be 4 through D, this means that there are 10 choices
+for the first digit. Since the last digit must be 2 through E, this means that
+there are 13 choices for the last digit. For the remaining four digits, there
+are 16 choices. So, the number of possible outcomes is:
+
+$$ 10 \cdot 16 \cdot 16 \cdot 16 \cdot 16 \cdot 13 = 10 \cdot 16^4 \cdot 13 = 8519680  $$
 
 13. A coin is tossed four times. Each time the result $H$ for heads or $T$ for
     tails is recorded. An outcome of $HHTT$ means that heads were obtained on
@@ -765,58 +957,179 @@ end with one of the digits $2$ through $E$, and are $6$ digits long?
 
 a. How many distinct outcomes are possible?
 
+Since each toss can only result in H or T, there are 2 outcomes per toss. Thus
+the number of possible outcomes is:
+
+$$ 2^4 = 16 $$
+
 b. What is the probability that exactly two heads occur?
 
+Since two heads must occur, this means that on two tosses, only 1 outcome can
+occur, while on the other 2 tosses, 2 outcomes can occur. We can use binomial
+coefficients to find this. If you recall:
+
+$$ \binom{n}{k} = \frac{n!}{k!(n - k)!} $$
+
+Expressed as "$n$ choose $k$". In this case $n$ is the total amount of possible
+choices, and $k$ is the total amount of choices where the outcomes are the same
+(but order does not matter).
+
+$$ \binom{4}{2} = \frac{4!}{2!(4 - 2)!} = 6 $$
+
+And the probability of this event, denoted $P(E)$ is:
+
+$$ P(E) = \frac{6}{16} = \frac{3}{8} = 37.5\% $$
+
 c. What is the probability that exactly one head occurs?
+
+$$ \binom{4}{1} = \frac{4!}{1!(4 - 1)!} = 4 $$
+
+$$ P(E) = \frac{4}{16} = \frac{1}{4} = 25\% $$
 
 14. Suppose that in a certain state, all automobile license plates have four
     uppercase letters followed by three digits.
 
 a. How many different license plates are possible?
 
+Since the first four characters are all uppercase letters, there are 26 possible
+outcomes for each uppercase letter. Since the last three characters are all
+digits, there are 10 possible outcomes for each digit. By the multiplication
+rule, this means that the number of possible outcomes is:
+
+$$ 26 \cdot 26 \cdot 26 \cdot 26 \cdot 10 \cdot 10 \cdot 10 = 26^4 \cdot 10^3 = 456976000 $$
+
 b. How many license plates could begin with $A$ and end in $0$?
 
+$$ 1 \cdot 26 \cdot 26 \cdot 26 \cdot 10 \cdot 10 \cdot 1 = 1 \cdot 26^3 \cdot 10^2 \cdot 1 = 1757600 $$
+
 c. How many license plates could begin with $TGIF$?
+
+$$ 1 \cdot 1 \cdot 1 \cdot 1 \cdot 10 \cdot 10 \cdot 10 = 1^4 \cdot 10^3 = 1000 $$
 
 d. How many license plates are possible in which all the letters and digits are
 distinct?
 
+$$ 26 \cdot 25 \cdot 24 \cdot 23 \cdot 10 \cdot 9 \cdot 8 = 258336000 $$
+
 e. How many license plates could begin with $AB$ and have all letters and digits
 distinct?
+
+$$ 1 \cdot 1 \cdot 24 \cdot 23 \cdot 10 \cdot 9 \cdot 8 = 397440 $$
 
 15. A combination lock requires three selections of numbers, each from $1$
     through $30$.
 
 a. How many different combinations are possible?
 
+$$ 30 \cdot 30 \cdot 30 = 30^3 = 27000 $$
+
 b. Suppose the locks are constructed in such a way that no number may be used
 twice. How many different combinations are possible?
+
+$$ 30 \cdot 29 \cdot 28 = 24360 $$
 
 16.
 
 a. How many integers are there from 10 through 99?
 
+The number of possible outcomes for the first digit is 9 (since $0$ cannot be
+chosen), and the number of possible outcomes for the second digit is 10. By the
+multiplication rule:
+
+$$ 9 \cdot 10 = 90 $$
+
 b. How many odd integers are there from 10 through 99?
+
+The number of possible digits for the first digit is 9, and the possible
+outcomes for the second digit is $1, 3, 5, 7, 9$ (5 possible outcomes). By the
+multiplication rule:
+
+$$ 9 \cdot 5 = 45 $$
 
 c. How many integers from 10 through 99 have distinct digits?
 
+The number of possible outcomes for the first digit is 9 (since $0$ cannot be
+chosen), and the number of possible outcomes for the second digit is
+$10 - 1 = 9$ (since the second digit cannot be the same as the second digit). By
+the multiplication rule:
+
+$$ 9 \cdot 9 = 81 $$
+
 d. How many odd integers from 10 through 99 have distinct digits?
+
+The number of possible outcomes for the second digit is 5, and the number of
+outcomes for the first digit is $9 - 1 = 8$ (since the first digit cannot be the
+same as the second digit). By the multiplication rule:
+
+$$ 8 \cdot 5 = 40 $$
 
 e. What is the probability that a randomly chosen two-digits integer has
 distinct digits? has distinct digits and is odd?
+
+Has distinct digits:
+
+By parts (a) and \(c\):
+
+$$ P(E) = \frac{81}{90} = \frac{9}{10} = 90\% $$
+
+Has distinct digits and is odd:
+
+By parts (a) and (d):
+
+$$ P(E) = \frac{40}{90} = \frac{4}{9} \approx 44.4\%  $$
 
 17.
 
 a. How many integers are there from 1000 through 9999?
 
+The number of possible outcomes for the first digit is 9 (since 0 cannot be a
+first digit), 10 for the second, 10 for the third, and 10 for the fourth. By the
+multiplication rule:
+
+$$ 9 \cdot 10 \cdot 10 \cdot 10 = 9 \cdot 10^3 = 9000 $$
+
 b. How many odd integers are there from 1000 through 9999?
+
+The number of possible outcomes for the first digit is 9 (since 0 cannot be a
+first digit), 10 for the second, 10 for the third, and 5 for the fourth (since
+the last digit must be 1, 3, 5, 7, or 9). By the multiplication rule:
+
+$$ 9 \cdot 10 \cdot 10 \cdot 5 = 9 \cdot 10^2 \cdot 5 = 4500 $$
 
 c. How many integers from 1000 through 9999 have distinct digits?
 
+The number of possible outcomes for the first digit is 9 (since 0 cannot be a
+first digit), 10-1=9 for the second, 10-2=8 for the third, and 10-3=7 for the
+fourth. By the multiplication rule:
+
+$$ 9 \cdot 9 \cdot 8 \cdot 7 = 9^2 \cdot 8 \cdot 7 = 4536 $$
+
 d. How many odd integers from 1000 through 9999 have distinct digits?
+
+The number of possible digits for the last digit are 5. The number of possible
+digits for the first digit is 9-1=8 (since $0$ can't be a first digit and it
+can't be the same as the last digit). The number of possible digits for the
+second digit is 10-1-1=8 (since it can't be the same as the first digit or the
+last digit). The number of possible digits for the third digit is 10-1-1-1=7
+(since it can't be the same as the first, second, or last digit). By the
+multiplication rule:
+
+$$ 8 \cdot 8 \cdot 7 \cdot 5 = 8^2 \cdot 7 \cdot 5 = 2240 $$
 
 e. What is the probability that a randomly chosen four-digit integer has
 distinct digits? has distinct digits and is odd?
+
+Has distinct digits:
+
+By parts (a) and \(c\):
+
+$$ P(E) = \frac{4536}{9000} = \frac{63}{125} = 50.4\% $$
+
+Has distinct digits and is odd:
+
+By parts (a) and (d):
+
+$$ P(E) = \frac{2240}{9000} = \frac{56}{225} \approx 24.9\% $$
 
 18. The following diagram shows the keypad for an automatic teller machine. As
     you can see, the same sequence of keys represents a variety of different
@@ -825,12 +1138,39 @@ distinct digits? has distinct digits and is odd?
 
 (See page 609 for image.)
 
+$$
+1 - Q - Z \\
+2 - A - B - C \\
+3 - D - E - F \\
+4 - G - H - I \\
+5 - J - K - L \\
+6 - M - N - O \\
+7 - P - R - S \\
+8 - T - U - V \\
+9 - W - X - Y \\
+0
+$$
+
 a. How many different PINs are represented by the same sequence of keys as 2133?
+
+For key $2$, there are 4 possible outcomes, for key $1$, there are 3 possible
+outcomes, and for key 3, there are 4 possible outcomes. Since the PIN is four
+digits long, this means the number of possible different PINs are:
+
+$$ 4 \cdot 3 \cdot 4 \cdot 4 = 4^3 \cdot 3 = 192 $$
 
 b. How many different PINs are represented by the same sequence of keys as 5031?
 
+The number of possible outcomes for key 5 are 4, the number of possible outcomes
+for key 0 is 1, the number of possible outcomes for key 3 is 4, and the number
+of possible outcomes for 1 are 3. The number of possible different PINs are:
+
+$$ 4 \cdot 1 \cdot 4 \cdot 3 = 4^2 \cdot 3 = 48 $$
+
 c. How many different numeric sequences on the machine contain no repeated
 digit?
+
+$$ 10 \cdot 9 \cdot 8 \cdot 7 = 5040 $$
 
 19. Three officers - a president, a treasurer, and a secretary - are to be
     chosen from among four people: Ann, Bob, Cyd, and Dan. Suppose that Bob is
@@ -838,8 +1178,14 @@ digit?
     for her to be secretary. How many ways can the officers be chosen? Can the
     multiplication rule be used to solve this problem?
 
-20. Modify Example 9.2.4 by supposing that a PIN must not begin with any of the
-    letters A-M and mut end with a digit. Continue to assume that no symbol may
+See appendix b (page 989) for tree representation.
+
+There are 14 possible ways the officers can be chosen. Because $14 = 2 \cdot 7$,
+reordering the steps will not make it possible to use the multiplication rule
+alone to solve this problem.
+
+20. Modify Example 9.2.2 by supposing that a PIN must not begin with any of the
+    letters A-M and must end with a digit. Continue to assume that no symbol may
     be used more than once and that the total number of PINs is to be
     determined.
 
@@ -863,6 +1209,21 @@ there are $10 - 3 = 7$ ways to perform step 4. Thus there are
 $23 \cdot 35 \cdot 34 \cdot 7 = 191,590$ different PINs that satisfy the given
 conditions."
 
+The error occurs in that the steps must be reordered. Since the right-most
+symbol must be a digit, it follows that it can be any of 10 different symbols.
+Then, The first symbol is $36 - 13 - 1 = 22$ (since it cannot include A-M and
+cannot be the same as the right-most symbol), the second symbol must be
+$36 - 1 - 1 = 34$ (since it cannot be the same as the first symbol and the
+right-most symbol). And the third symbol is $36 - 1 - 1 - 1 = 33$ (since it
+cannot be the same as the first or second symbol, nor can it be the same as the
+right-most symbol).
+
+Thus there are:
+
+$$ 22 \cdot 34 \cdot 33 \cdot 10 = 246840 $$
+
+different PINs that satisfy the given conditions.
+
 b. Reorder steps 1-4 in part (a) as follows:
 
 **Step 1:** Choose the right-most symbol.
@@ -876,24 +1237,60 @@ b. Reorder steps 1-4 in part (a) as follows:
 Use the multiplication rule to find the number of PINs that satisfy the given
 conditions.
 
+This was done in part (a):
+
+$$ 22 \cdot 34 \cdot 33 \cdot 10 = 246840 $$
+
 21. Suppose $A$ is a set with $m$ elements and $B$ is a set with $n$ elements.
 
 a. How many relations are there from $A$ to $B$? Explain.
 
+_Hint:_ The answer is $2^{mn}$.
+
+There are $m \cdot n$ elements in $A \times B$, since there are $mn$ pairs in
+$\A times B$. The number of relations from $A$ to $B$ is simply the number of
+subsets in $\mathscr{P}(A \times B)$. Since a pair is either in or not in the
+relation, there are only two outcomes for each relation. Therefore, the amount
+of relations from $A$ to $B$ is $2^{mn}$.
+
 b. How many functions are there from $A$ to $B$? Explain.
 
+_Hint:_ The answer is $n^m$.
+
+For each input, $a \in A$, there are $n$ possible outputs for each $b \in B$. By
+the multiplication rule there are $n \cdot n \cdots n = n^m$ functions from $A$
+to $B$.
+
 c. What fraction of the relations from $A$ to $B$ are functions?
+
+By parts (a) and (b):
+
+$$ \frac{n^m}{2^{mn}} $$
+
+are functions.
 
 22.
 
 a. How many functions are there from a set with three elements to a set with
 four elements?
 
+By part 21.b:
+
+$$ 4^3 = 64 $$
+
 b. How many functions are there from a set with five elements to a set with two
 elements?
 
+By part 21.b:
+
+$$ 2^5 = 32 $$
+
 c. How many functions are there from a set with $m$ elements to a set with $n$
 elements, where $m$ and $n$ are positive integers?
+
+By part 21.b:
+
+$$ n^m $$
 
 23. In Section 2.5 we showed how integers can be represented by strings of 0's
     and 1's inside a digital computer. In fact, through various coding schemes,
@@ -901,6 +1298,8 @@ elements, where $m$ and $n$ are positive integers?
     commonly used code is the Extended Binary-Coded Decimal Interchange Code
     (EBCDIC) in which each symbol has an 8-bit representation. How many distinct
     symbols can be represented by this code?
+
+$$ 2^8 = 256 $$
 
 In each of 24-28, determine how many times the innermost loop will be iterated
 when the algorithm segment is implemented and run. (Assume that $m$, $n$, $p$,
@@ -910,25 +1309,41 @@ $a$, $b$, $c$, and $d$ are all positive integers.)
 
 $\textbf{\text{for }} i := 1 \textbf{\text{ to }} 30\\ \ \ \textbf{ \text{for }} j := 1 \textbf{\text{ to }} 15\\ \ \ \ \ \textit{[Statements in body of inner loop.}\\ \ \ \ \ \textit{None contain branching statements that}\\ \ \ \ \ \textit{lead outside the loop.]}\\ \ \ \textbf{\text{next }} j\\ \textbf{\text{next }} i$
 
+$$ 30 \cdot 15 = 450 $$
+
 25.
 
 $\textbf{\text{for }} j := 1 \textbf{\text{ to }} m\\ \ \ \textbf{\text{for }} k := 1 \textbf{\text{ to }} n\\ \ \ \ \ \textit{[Statements in body of inner loop.}\\ \ \ \ \ \textit{None contain branching statements that}\\ \ \ \ \ \textit{lead outside the loop.]}\\ \ \ \textbf{\text{next }} k\\ \textbf{\text{next }} j$
+
+$$ m \cdot n = mn $$
 
 26.
 
 $\textbf{\text{for }} i := 1 \textbf{\text{ to }} m\\ \ \ \textbf{\text{for }} j := 1 \textbf{\text{ to }} n\\ \ \ \ \ \textbf{\text{for }} k := 1 \textbf{\text{ to }} p\\ \ \ \ \ \ \ \textit{[Statements in body of inner loop.}\\ \ \ \ \ \ \ \textit{None contain branching statements}\\ \ \ \ \ \ \ \textit{that lead outside the loop.]}\\ \ \ \ \ \textbf{\text{next }} k\\ \ \ \textbf{\text{next }} j\\ \textbf{\text{next }} i$
 
+$$ m \cdot n \cdot p = mnp $$
+
 27.
 
 $\textbf{\text{for }} i := 5 \textbf{\text{ to }} 50\\ \ \ \textbf{\text{for }} j := 10 \textbf{\text{ to }} 20\\ \ \ \ \ \textit{[Statements in body of inner loop.}\\ \ \ \ \ \textit{None contain branching statements that}\\ \ \ \ \ \textit{lead outside the loop.]}\\ \ \ \textbf{\text{next }} j\\ \textbf{\text{next }} i$
+
+First outer loop: $50 - 5 + 1 = 46$.
+
+Second (inner) loop: $20 - 10 + 1 = 11$.
+
+$$ 46 \cdot 11 = 506 $$
 
 28. Assume $a \leq b$ and $c \leq d$.
 
 $\textbf{\text{for }} i := a \textbf{\text{ to }} b\\ \ \ \textbf{\text{for }} j := c \textbf{\text{ to }} d\\ \ \ \ \ \textit{[Statements in body of inner loop.}\\ \ \ \ \ \textit{None contain branching statements that}\\ \ \ \ \ \textit{lead outside the loop.]}\\ \ \ \textbf{\text{next }} j\\ \textbf{\text{next }} i$
 
+$$ (b - a + 1) \cdot (d - c + 1) $$
+
 29. Consider the numbers 1 through 99,999 in their ordinary decimal
     representations. How many contain exactly one of each of the digits 2, 3, 4,
     and 5?
+
+Omitted.
 
 30. Let $n = p_1^{k_1}p_2^{k_2} \cdots p_m^{k_m}$ where $p_1, p_2, \dots, p_m$
     are distinct prime numbers and $k_1, k_2, \dots, k_m$ are positive integers.
@@ -938,106 +1353,564 @@ $\textbf{\text{for }} i := a \textbf{\text{ to }} b\\ \ \ \textbf{\text{for }} j
 a. Order matters (that is, $8 \cdot 15$ and $15 \cdot 8$ are regarded as
 different).
 
+Omitted.
+
 b. Order does not matter (that is, $8 \cdot 15$ and $15 \cdot 8$ are regarded as
 the same).
+
+Omitted.
 
 31.
 
 a. If $p$ is a prime number and $a$ is a positive integer, how many distinct
 positive divisors does $p^a$ have?
 
+Omitted.
+
 b. If $p$ and $q$ are distinct prime numbers and $a$ and $b$ are positive
 integers, how many distinct positive divisors does $p^aq^b$ have?
 
+Omitted.
+
 c. If $p$, $q$, and $r$ are distinct prime numbers and $a$, $b$, and $c$ are
 positive integers, how many distinct positive divisors does $p^aq^br^c$ have?
+
+Omitted.
 
 d. If $p_1, p_2, \dots, p_m$ are distinct prime numbers and
 $a_1, a_2, \dots, a_m$ are positive integers, how many distinct positive
 divisors does $p_1^{a_1}p_2^{a_2} \cdots p_m^{a_m}$ have?
 
+Omitted.
+
 e. What is the smallest positive integer with exactly 12 divisors?
+
+Omitted.
 
 32.
 
 a. How many ways can the letters of the word _ALGORITHM_ be arranged in a row?
 
+$$ 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 9! = 362880 $$
+
 b. How many ways can the letters of the word _ALGORITHM_ be arranged in a row if
 _A_ and _L_ must remain together (in order) as a unit?
 
+$$ 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 8! = 40320 $$
+
 c. How many ways can the letters of the word _ALGORITHM_ be arranged in a row if
 the letters _GOR_ must remain together (in order) as a unit?
+
+$$ 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 7! = 5040 $$
 
 33. Six people attend the theater together and sit in a row with exactly six
     seats.
 
 a. How many ways can they be seated together in the row?
 
+$$ 6! = 720 $$
+
 b. Suppose one of the six is a doctor who must sit on the aisle in case she is
 paged. How many ways can the people be seated together in the row with the
 doctor in an aisle seat?
+
+$$ 5! = 120 $$
+
+The question is a bit ambiguous, as there can be 2 aisle seats in some
+situations, in which case it would be double this, or $240$.
 
 c. Suppose the six people consist of three married couples and each couple wants
 to sit together with the older partner on the left. How many ways can the six be
 seated together in the row?
 
+Each couple can be treated as a single entity, so:
+
+$$ 3! = 6 $$
+
 34. Five people are to be seated around a circular table. Two seatings are
     considered the same if one is a rotation of the other. How many different
     seatings are possible?
 
+$$ (5 - 1)! = 4! = 24 $$
+
 35. Write all the 2-permuations of $\{W, X, Y, Z\}$.
 
+WX, WY, WZ, XW, XY, XZ, YW, YX, YZ, ZW, ZX, ZY
+
 36. Write all the 3-permutations of $\{s, t, u, v\}$.
+
+stu, sut, stv, svt, suv, svu
+
+tsu, tus, tsv, tvs, tuv, tvu,
+
+uvs, usv, uvt, utv, ust, uts,
+
+vst, vts, vtu, vut, vsu, vus
 
 37. Evaluate the following quantities.
 
 a. $P(6, 4)$
 
+$$ P(6, 4) = \frac{6!}{(6 - 4)!} = \frac{6 \cdot 5 \cdot 4 \cdot 3 \cdot \cancel{2!}}{\cancel{2!}} = 6 \cdot 5 \cdot 4 \cdot 3 = 360 $$
+
 b. $P(6, 6)$
+
+$$ P(6, 6) = \frac{6!}{(6 - 6)!} = \frac{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot \1 \cdot \cancel{0!}}{\cancel{0!}} = 6! = 720  $$
 
 c. $P(6, 3)$
 
+$$ P(6, 3) = \frac{6!}{(6 - 3)!} = \frac{6 \cdot 5 \cdot 4 \cdot \cancel{3!}}{\cancel{3!}} = 6 \cdot 5 \cdot 4 = 120 $$
+
 d. $P(6, 1)$
+
+$$ P(6, 1) = \frac{6!}{(6 - 1)!} = \frac{6 \cdot \cancel{5!}}{\cancel{5!}} = 6 $$
 
 38.
 
 a. How many 3-permutations are there of a set of five objects?
 
+$$ P(5, 3) = \frac{5!}{(5 - 3)!} = \frac{5 \cdot 4 \cdot 3 \cdot \cancel{2!}}{\cancel{2!}} = 5 \cdot 4 \cdot 3 = 60 $$
+
 b. How many 2-permutations are there of a set of eight objects?
+
+$$ P(8, 2) = \frac{8!}{(8 - 2)!} = \frac{8 \cdot 7 \cdot \cancel{6!}}{\cancel{6!}} = 8 \cdot 7 = 56 $$
 
 39.
 
 a. How many ways can three of the letters of the word _ALGORITHM_ be selected
 and written in a row?
 
+$$ P(9, 3) = \frac{9!}{(9 - 3)!} = \frac{9 \cdot 8 \cdot 7 \cdot \cancel{6!}}{\cancel{6!}} = 9 \cdot 8 \cdot 7 = 504 $$
+
 b. How many ways can six of the letters of the word _ALGORITHM_ be selected and
 written in a row?
+
+$$ P(9, 6) = \frac{9!}{(9 - 6)!} = \frac{9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot \cancel{3!}}{\cancel{3!}} = 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 = 60480 $$
 
 c. How many ways can six of the letters of the word _ALGORITHM_ be selected and
 written in a row if the first letter must be _A_?
 
+$$ P(8, 5) = \frac{8!}{(8 - 5)!} = \frac{8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot \cancel{3!}}{\cancel{3!}} = 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 = 6720 $$
+
 d. How many ways can six of the letters of the word _ALGORITHM_ be selected and
 written in a row if the first two letters must be _OR_?
 
+$$ P(7, 4) = \frac{7!}{(7 - 4)!} = \frac{7 \cdot 6 \cdot 5 \cdot 4 \cdot \cancel{3!}}{\cancel{3!}} = 7 \cdot 6 \cdot 5 \cdot 4 = 840 $$
+
 40. Prove that for every integer $n \geq 2$, $P(n + 1, 3) = n^3 - n$.
+
+**Proof:**
+
+Suppose that $n \in \mathbb{Z}$ where $n \geq 2$.
+
+It must be shown that $P(n + 1, 3) = n^3 - n$.
+
+By the definition for $P$:
+
+$$ P(n, r) = \frac{n!}{(n - r)!} $$
+
+By substitution:
+
+$$ P(n + 1, 3) = \frac{(n + 1)!}{((n + 1) - 3)!} $$
+
+By algebra/definition for factorial:
+
+$$ = \frac{(n + 1)!}{(n - 2)!} $$
+
+$$ = \frac{(n + 1) \cdot n \cdot (n - 1) \cdot \cancel{(n - 2)!}}{\cancel{(n - 2)!}} $$
+
+$$ = (n + 1) \cdot n \cdot (n - 1) $$
+
+$$ = (n^2 + n) \cdot (n - 1) $$
+
+$$ = (n^2)(n - 1) + (n)(n - 1) $$
+
+$$ = (n^3 - n^2) + (n^2 - n) $$
+
+$$ = n^3 - n^2 + n^2 - n $$
+
+$$ = n^3 - n $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 41. Prove that for every integer $n \geq 2$,
 
 $$ P(n + 1, 2) - P(n, 2) = 2P(n, 1) $$
 
+**Proof:**
+
+Suppose $n \in \mathbb{Z}$ where $n \geq 2$.
+
+It must be shown that:
+
+$$ P(n + 1, 2) - P(n, 2) = 2P(n, 1) $$
+
+_Evaluating $P(n + 1, 2)$:_
+
+$$ P(n + 1, 2) = \frac{(n + 1)!}{((n + 1) - 2)!} $$
+
+$$ = \frac{(n + 1)!}{(n - 1)!} $$
+
+$$ = \frac{(n + 1) \cdot n \cdot \cancel{(n - 1)!}}{\cancel{(n - 1)!}} $$
+
+$$ = (n + 1) \cdot n $$
+
+$$ = n^2 + n $$
+
+_Evaluating $P(n, 2)$:_
+
+$$ P(n, 2) = \frac{n!}{(n - 2)!} $$
+
+$$ = \frac{n \cdot (n - 1) \cdot \cancel{(n - 2)!}}{\cancel{(n - 2)!}}$$
+
+$$ = n \cdot (n - 1) $$
+
+$$ = n^2 - n $$
+
+_Evaluating $P(n + 1, 2) - P(n, 2)$:_
+
+By the previous evaluations:
+
+$$ P(n + 1, 2) - P(n, 2) = (n^2 + n) - (n^2 - n) $$
+
+$$ = n^2 + n - n^2 + n $$
+
+$$ = 2n $$
+
+_Evaluating $2P(n, 1)$:_
+
+$$ 2P(n, 1) = 2\left(\frac{n!}{(n - 1)!}\right) $$
+
+$$ = 2\left(\frac{n \cdot \cancel{(n - 1)!}}{(n - 1)!}\right) $$
+
+$$ = 2\left(\frac{n \cdot \cancel{(n - 1)!}}{(n - 1)!}\right) $$
+
+$$ = 2n $$
+
+_Conclusion:_
+
+Since $P(n + 1, 2) - P(n, 2) = 2n$, and $2P(n, 1) = 2n$, it follows that
+$P(n + 1, 2) - P(n, 2) = 2P(n, 1)$. This is what was to be shown.
+
+Q.E.D.
+
 42. Prove that for every integer $n \geq 3$,
 
 $$ P(n + 1, 3) - P(n, 3) = 3P(n, 2) $$
+
+**Proof:**
+
+Suppose $n \in \mathbb{Z}$, where $n \geq 3$.
+
+It must be shown that:
+
+$$ P(n + 1, 3) - P(n, 3) = 3P(n, 2) $$
+
+_Evaluating $P(n + 1, 3)$:_
+
+$$ P(n + 1, 3) = \frac{(n + 1)!}{((n + 1) - 3)!} $$
+
+$$ = \frac{(n + 1)!}{(n - 2)!} $$
+
+$$ = \frac{(n + 1) \cdot n \cdot (n - 1) \cdot \cancel{(n - 2)!}}{\cancel{(n - 2)!}} $$
+
+$$ = (n + 1) \cdot n \cdot (n - 1) $$
+
+$$ = (n^2 + n) \cdot (n - 1) $$
+
+$$ = (n^2)(n - 1) + n(n - 1) $$
+
+$$ = n^3 - n^2 + n^2 - n $$
+
+$$ = n^3 - n $$
+
+_Evaluating $P(n, 3)$:_
+
+$$ P(n, 3) = \frac{n!}{(n - 3)!} $$
+
+$$ = \frac{n \cdot (n - 1) \cdot (n - 2) \cdot \cancel{(n - 3)!}}{\cancel{(n - 3)!}} $$
+
+$$ = n \cdot (n - 1) \cdot (n - 2) $$
+
+$$ = (n^2 - n) \cdot (n - 2) $$
+
+$$ = (n^2)(n - 2) - n(n - 2) $$
+
+$$ = n^3 - 2n^2 - (n^2 - 2n) $$
+
+$$ = n^3 - 2n^2 - n^2 + 2n $$
+
+$$ = n^3 - 3n^2 + 2n $$
+
+_Evaluating $P(n + 1, 3) - P(n, 3)$:_
+
+By the previous evaluations:
+
+$$ P(n + 1, 3) - P(n, 3) = (n^3 - n) - (n^3 - 3n^2 + 2n) $$
+
+$$ = n^3 - n - n^3 + 3n^2 - 2n $$
+
+$$ = -n + 3n^2 - 2n $$
+
+$$ = 3n^2 - 3n $$
+
+_Evaluating $3P(n, 2)$:_
+
+$$ 3P(n, 2) = 3\left(\frac{n!}{(n - 2)!}\right) $$
+
+$$ = 3\left(\frac{n \cdot (n - 1) \cdot \cancel{(n - 2)!}}{\cancel{(n - 2)!}}\right) $$
+
+$$ = 3\left(n \cdot (n - 1)\right) $$
+
+$$ = 3\left(n^2 - n\right) $$
+
+$$ = 3n^2 - 3n $$
+
+_Conclusion:_
+
+Since $P(n + 1, 3) - P(n, 3) = 3n^2 - 3n$ and $3P(n, 2) = 3n^2 - 3n$, it follows
+that $P(n + 1, 3) - P(n, 3) = 3P(n, 2)$. This is what was to be shown.
+
+Q.E.D.
 
 43. Prove that for every integer $n \geq 2$,
 
 $$ P(n, n) = P(n, n - 1) $$
 
+**Proof:**
+
+Suppose $n \in \mathbb{Z}$ where $n \geq 2$.
+
+It must be shown that:
+
+$$ P(n, n) = P(n, n - 1) $$
+
+_Evaluating $P(n, n)$:_
+
+$$ P(n, n) = \frac{n!}{(n - n)!} $$
+
+$$ = \frac{n!}{0!} $$
+
+$$ = \frac{n!}{1} $$
+
+$$ = n! $$
+
+_Evaluating $P(n, n - 1)$:_
+
+$$ P(n, n - 1) = \frac{n!}{(n - (n - 1))!} $$
+
+$$ = \frac{n!}{(n - n + 1)!} $$
+
+$$ = \frac{n!}{1!} $$
+
+$$ = \frac{n!}{1} $$
+
+$$ = n! $$
+
+_Conclusion:_
+
+Since $P(n, n) = n!$ and $P(n, n - 1) = n!$, it follows that
+$P(n, n) = P(n, n - 1)$. This is what was to be shown.
+
+Q.E.D.
+
 44. Prove Theorem 9.2.1 by mathematical induction.
+
+**Proof (by mathematical induction):**
+
+Let $P(k)$ be the statement declared in Theorem 9.2.1.
+
+_Basis Step:_
+
+Prove $P(1)$.
+
+By the definition for $P$ and by substitution:
+
+If an operation consists of $1$ steps and:
+
+- the first step can be performed in $n_1$ ways,
+
+- the $1$st step can be performed in $n_1$ ways
+
+- then the entire operation can be performed in $n_1$ ways
+
+This is a tautology, since the there is only one step, it is trivially true that
+it can be performed in $n_1$ ways. Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Suppose $P(k)$, that is:
+
+If an operation consists of $k$ steps, then the entire operation can be
+performed in $n_1 \cdot n_2 \cdots n_k$ ways.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$.
+
+Suppose an operation consists of $k + 1$ steps. By the definition of addition,
+this means that this operation has $k$ steps and an additional one. Since this
+operation has $k$ steps, it follows by the inductive hypothesis that the entire
+operation can be performed in $n_1 \cdot n_2 \cdot n_k$ ways.
+
+By the supposition, it is known that the $k + 1$th step can be performed in
+$n_{k + 1}$ ways.
+
+Therefore the entire operation can be performed in
+$n_1 \cdot n_2 \cdots n_k \cdot n_{k + 1}$ ways.
+
+This is what was to be shown.
+
+Q.E.D.
 
 45. Prove Theorem 9.2.2 by mathematical induction.
 
+**Proof (by mathematical induction):**
+
+Suppose $n \in \mathbb{Z}$ with $n \geq 1$.
+
+Let $P(n)$ be the statement:
+
+The number of permutations of a set with $n$ elements is $n!$.
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+The number of permutations of a set with $1$ elements is $1!$.
+
+By the definition for permutation, a set with $1$ element has $1$ ordering,
+which is $1 = 1!$.
+
+Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k \in \mathbb{Z}$ where $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+The number of permutations of a set with $k$ elements is $k!$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+The number of permutations of a set with $k + 1$ elements is $(k + 1)!$.
+
+Let $A$ be a set that has $k + 1$ elements in it. Since $A$ has $k + 1$ elements
+in it, it follows by the definition for addition that $A$ has $k$ elements in it
+as well as $1$ more additional element.
+
+By the inductive hypothesis, this means that the number of permutations $A$ has
+is $k!$.
+
+By the definition for permutation, since $A$ has $k + 1$ elements, it follows
+that there are $k + 1$ choices for the ordering of the first element of the
+permutation. It follows, by the inductive hypothesis, that the remaining
+elements can be arranged in $k!$ ways. This means that the number of ways that
+$A$ can be ordered (_i.e._ the permutation for $A$) is $(k + 1) \cdot k!$.
+
+Note that $(k + 1) \cdot k! = (k + 1)!$, and this is what was to be shown.
+
+Q.E.D.
+
 46. Prove Theorem 9.2.3 by mathematical induction.
+
+**Proof (by mathematical induction):**
+
+Suppose $n, r \in \mathbb{Z}$ with $1 \leq r \leq n$.
+
+Let $Q(r)$ be the statement:
+
+The number of $r$-permutations of a set of $n$ elements is given by the formula
+
+$$ P(n, r) = \frac{n!}{(n - r)!} $$
+
+_Basis Step:_
+
+Prove $Q(1)$, that is:
+
+The number of $1$-permutations of a set of $n$ elements is given by the formula
+
+$$ P(n, 1) = \frac{n!}{(n - 1)!} $$
+
+By the definition for $r$-permutation, a $1$-permutation is an ordered selection
+of $1$ elements taken from a set of $n$ elements. It follows that there are $n$
+ways to order a selection of $1$ elements.
+
+Evaluating $P(n, 1)$ yields:
+
+$$ P(n, 1) = \frac{n!}{(n - 1)!} $$
+
+$$ = \frac{n \cdot \cancel{(n - 1)!}}{\cancel{(n - 1)!}} $$
+
+$$ = n $$
+
+Thus there are $n$ ways to order a selection of $1$ elements, and therefore
+$Q(1)$ is true.
+
+_Inductive Step:_
+
+Let $k \in \mathbb{Z}$, with $1 \leq k \leq n$.
+
+Suppose $Q(k)$, that is:
+
+The number of $k$-permutations of a set of $n$ elements is given by the formula
+
+$$ P(n, k) = \frac{n!}{(n - k)!} $$
+
+This is the inductive hypothesis.
+
+Prove $Q(k + 1)$, that is:
+
+The number of $(k + 1)$-permutations of a set of $n$ elements is given by the
+formula
+
+$$ P(n, k + 1) = \frac{n!}{(n - (k + 1))!} $$
+
+Suppose $k < n$.
+
+Evaluating $P(n, k + 1)$:
+
+$$ P(n, k + 1) = \frac{n!}{(n - (k + 1))!} $$
+
+$$ = \frac{n!}{(n - k - 1)!} $$
+
+Now, consider the following:
+
+$$ = \frac{n \cdots (n - k) \cdots \cancel{(n - k - 1)!}}{\cancel{(n - k - 1)!}} $$
+
+$$ = n \cdots (n - k) $$
+
+By the definition for factorial, this means that:
+
+$$ = \frac{n!}{(n - k)!} \cdot (n - k) $$
+
+By the inductive hypothesis, it is known that $P(n, k) = \dfrac{n!}{(n - k)!}$:
+
+$$ = P(n, k) \cdot (n - k) $$
+
+By the definition for $r$-permutation, a $(k + 1)$ permutation is built by first
+choosing a $k$-permutation in $P(n, k)$ ways, then selecting one additional
+element from the remaining $n - k$ elements in $n - k$ ways. By Theorem 9.2.1,
+the total number of $(k + 1)$ permutations is:
+
+$$ P(n, k) \cdot (n - k) = \frac{n!}{(n - k)!} \cdot (n - k) $$
+
+$$ = \frac{n!(n - k)}{(n - k)!} $$
+
+$$ = \frac{n!\cancel{(n - k)}}{\cancel{(n - k)}(n - k - 1)!} $$
+
+$$ = \frac{n!}{(n - k - 1)!} $$
+
+$$ = \frac{n!}{(n - (k + 1))!} $$
+
+This is what was to be shown. Therefore $Q(k + 1)$ is true.
+
+Q.E.D.
 
 47. A permutation on a set can be regarded as a function from the set to itself.
     For instance, one permutation of $\{1, 2, 3, 4\}$ is $2341$. It can be
@@ -1057,10 +1930,18 @@ $$
 
 a. Use arrows to write each of the six permutations of $\{1, 2, 3\}$.
 
+Omitted.
+
 b. Use arrows to write each of the permutations of $\{1, 2, 3, 4\}$ that keep
 $2$ and $4$ fixed.
 
+Omitted.
+
 c. Which permutations of $\{1, 2, 3\}$ keep no elements fixed?
+
+Omitted.
 
 d. Use arrows to write all permutations of $\{1, 2, 3, 4\}$ that keep no
 elements fixed.
+
+Omitted.

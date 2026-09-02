@@ -31,13 +31,25 @@ Page 607
    performed in $n_i$ ways (regardless of how previous steps were performed),
    then the operation as a whole can be performed in ____.
 
+$n_1 \cdot n_2 \cdots n_k$ ways.
+
 2. A permutation of a set of elements is ____.
+
+an ordering of the elements of the set in a row
 
 3. The number of permutations of a set of $n$ elements equals ____.
 
+$n!$
+
 4. An $r$-permutation of a set of $n$ elements is ____.
+
+an ordered selection of $r$ of the elements of the set
 
 5. The number of $r$-permutations of a set of $n$ elements is denoted ____.
 
+$P(n, r)$
+
 6. One formula for the number of $r$-permutations of a set of $n$ elements is
    ____ and another formula is ____.
+
+$n(n - 1)(n - 2) \cdots (n - r + 1)$; $\dfrac{n!}{(n - r)!}$
