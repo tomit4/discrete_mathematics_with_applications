@@ -74,3 +74,50 @@ $$ P(n, r) = n(n - 1)(n - 2) \cdots (n - r + 1) \text{ first version} $$
 or, equivalently,
 
 $$ P(n, r) = \frac{n!}{(n - r)!} \text{ second version} $$
+
+---
+
+Page 612
+
+**Theorem 9.3.1 The Addition Rule**
+
+Suppose a finite set $A$ equals the union of $k$ distinct mutually disjoint
+subsets $A_1, A_2, \dots, A_k$. Then
+
+$$ N(A) = N(A_1) + N(A_2) + \cdots + N(A_k) $$
+
+---
+
+Page 613
+
+**Theorem 9.3.2 The Difference Rule**
+
+If $A$ is a finite set and $B$ is a subset of $A$, then
+
+$$ N(A - B) = N(A) - N(B) $$
+
+---
+
+Page 614
+
+**Formula for the Probability of the Complement of an Event**
+
+If $S$ is a finite sample space and $A$ is an event in $S$, then
+
+$$ P(A^c) = 1 - P(A) $$
+
+where $A^c = S - A$, the complement of $A$ in $S$.
+
+---
+
+Page 619
+
+**Theorem 9.3.3 The Inclusion/Exclusion Rule for Two or Three Sets**
+
+If $A$, $B$, and $C$ are any finite sets, then
+
+$$ N(A \cup B) = N(A) + N(B) - N(A \cap B) $$
+
+and
+
+$$ N(A \cup B \cup C) = N(A) + N(B) + N(C) - N(A \cap B) - N(A \cap C) - N(B \cap C) + N(A \cap B \cap C) $$

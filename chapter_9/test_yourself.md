@@ -53,3 +53,24 @@ $P(n, r)$
    ____ and another formula is ____.
 
 $n(n - 1)(n - 2) \cdots (n - r + 1)$; $\dfrac{n!}{(n - r)!}$
+
+---
+
+Page 622
+
+**Test Yourself**
+
+1. The addition rule says that if a finite set $A$ equals the union of $k$
+   distinct mutually disjoint subsets $A_1, A_2, \dots, A_k$, then ____.
+
+2. The difference rule says that if $A$ is a finite set and $B$ is a subset of
+   $A$, then ____.
+
+3. If $S$ is a finite sample space and $A$ is an event in $S$, then the
+   probability of $A^c$ equals ____.
+
+4. The inclusion/exclusion rule for two sets says that if $A$ and $B$ are any
+   finite sets, then ____.
+
+5. The inclusion/exclusion rule for three sets says that if $A$, $B$, and $C$
+   are any finite sets, then ____.

@@ -1945,3 +1945,527 @@ d. Use arrows to write all permutations of $\{1, 2, 3, 4\}$ that keep no
 elements fixed.
 
 Omitted.
+
+---
+
+Page 622
+
+**Exercise Set 9.3**
+
+1.
+
+a. How many bit strings consist of from one through four digits? (Strings of
+different lengths are considered distinct. Thus 10 and 0010 are distinct
+strings.)
+
+b. How many bit strings consist of from five through eight digits?
+
+2.
+
+a. How many strings of hexadecimal digits consist of from one through three
+digits? (Recall that hexadecimal numbers are constructed using the 16 digits 0,
+1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.)
+
+b. How many strings of hexadecimal digits consist of from two through five
+digits?
+
+3.
+
+a. How many integers from 1 through 999 do not have any repeated digits?
+
+b. How many integers from 1 through 999 have at least one repeated digit?
+
+c. What is the probability that an integer chosen at random from 1 through 999
+has at least one repeated digit?
+
+4. How many arrangements in a row of no more than three letters can be formed
+   using the letters of the word _NETWORK_ (with no repetitions allowed)?
+
+5.
+
+a. How many five-digit integers (integers from 10,000 through 99,999) are
+divisible by 5?
+
+b. What is the probability that a five-digit integer chosen at random is
+divisible by 5?
+
+6. In a certain state, all license plates consist of from four to six symbols
+   chosen from the 26 uppercase letters of the Roman alphabet together with the
+   ten digits 0-9.
+
+a. How many license plates are possible if repetition of symbols is allowed?
+
+b. How many license plates do not contain any repeated symbols?
+
+c. How many license plates have at least one repeated symbol?
+
+d. What is the probability that a license plate chosen at random has at least
+one repeated symbol?
+
+7. At a certain company, passwords must be from 3-5 symbols long and composed
+   from the 26 uppercase letters of the Roman alphabet, the ten digits 0-9, and
+   the 14 symbols !, @, #, $, %, ^, &, *, (, ), -, +, {, and }.
+
+a. How many passwords are possible if repetition of symbols is allowed?
+
+b. How many passwords contain no repeated symbols?
+
+c. How many passwords have at least one repeated symbol?
+
+d. What is the probability that a password chosen at random has at least one
+repeated symbol?
+
+8. In a certain country license plates consist of zero or one digit followed by
+   four or five uppercase letters from the Roman alphabet.
+
+a. How many different license plates can the country produce?
+
+b. How many license plates have no repeated letter?
+
+c. How many license plates have at least one repeated letter?
+
+d. What is the probability that a license plate has a repeated letter?
+
+9.
+
+a. Consider the following algorithm segment:
+
+$\textbf{\text{for }} i := 1 \textbf{\text{ to }} 4\\ \ \ \textbf{\text{for }} j := 1 \textbf{\text{ to }} i\\ \ \ \ \ \textit{[Statements in body of inner loop.}\\ \ \ \ \ \textit{None contain branching statements}\\ \ \ \ \ \textit{that lead outside the loop.]}\\ \ \ \textbf{\text{next }} j\\ \textbf{\text{next }} i$
+
+How many times will the inner loop be iterated when the algorithm is implemented
+and run?
+
+b. Let $n$ be a positive integer, and consider the following algorithm segment:
+
+$\textbf{\text{for }} i := 1 \textbf{\text{ to }} n\\ \ \ \textbf{\text{for }} j := 1 \textbf{\text{ to }} i\\ \ \ \ \ \textit{[Statements in body of inner loop.}\\ \ \ \ \ \textit{None contain branching statements}\\ \ \ \ \ \textit{that lead outside the loop.]}\\ \ \ \textbf{\text{next }} j\\ \textbf{\text{next }} i$
+
+How many times will the inner loop be iterated when the algorithm is implemented
+and run?
+
+10. A calculator has an eight-digit display and a decimal point that is located
+    at the extreme right of the number displayed, or at the extreme left, or
+    between any pair of digits. The calculator can also display a minus sign at
+    the extreme left of the number. How many distinct numbers can the calculator
+    display? (Note that certain numbers are equal, such as 1.9, 1.90, and
+    01.900, and should, therefore, not be counted twice.)
+
+11.
+
+a. How many ways can the letters of the word _QUICK_ be arranged in a row?
+
+b. How many ways can the letters of the word _QUICK_ be arranged in a row if the
+_Q_ and the _U_ must remain next to each other in the order _QU_?
+
+c. How many ways can the letters of the word _QUICK_ be arranged in a row if the
+letters _QU_ must remain together but may be in either the order _QU_ or the
+order _UQ_?
+
+12.
+
+a. How many ways can the letters of the word _THEORY_ be arranged in a row?
+
+b. How many ways can the letters of the word _THEORY_ be arranged in a row if
+_T_ and _H_ must remain next to each other as either _TH_ or _HT_?
+
+13. A group of eight people are attending the movies together.
+
+a. Two of the eight insist on sitting side-by-side. In how many ways can the
+eight be seated together in a row?
+
+b. Two of the people do not like each other and do not want to sit side-by-side.
+Now how many ways can the eight be seated together in a row?
+
+14. An early compiler recognized variable names according to the following
+    rules: Numeric variable names had to begin with a letter, and then the
+    letter could be followed by another letter or a digit or by nothing at all.
+    String variable names had to begin with the symbol $ followed by a letter,
+    which could then be followed by another letter or a digit or by nothing at
+    all. How many distinct variable names were recognized by this compiler?
+
+15. Identifiers in a certain database language must begin with a letter, and
+    then the letter may be followed by other characters, which can be letters,
+    digits, or underscores (_). However, 82 keywords (all consisting of 15 or
+    fewer characters) are reserved and cannot be used as identifiers. How many
+    identifiers with 30 or fewer characters are possible? (Write the answer
+    using summation notation and evaluate it using a formula from Section 5.2.)
+
+16.
+
+a. If any seven digits could be used to form a telephone number, how many
+seven-digit telephone numbers would not have any repeated digits?
+
+b. How many seven-digit telephone numbers would have at least one repeated
+digit?
+
+c. What is the probability that a randomly chosen seven-digit telephone number
+would have at least one repeated digit?
+
+17.
+
+a. How many strings of four hexadecimal digits do not have any repeated digits?
+
+b. How many strings of four hexadecimal digits have at least one repeated digit?
+
+c. What is the probability that a randomly chosen string of four hexadecimal
+digits has at least one repeated digit?
+
+18. Just as the difference rule gives rise to a formula for the probability of
+    the complement of an event, so the addition and inclusion/exclusion rules
+    give rise to formulas for the probability of the union of mutually disjoint
+    events and for a general union of (not necessarily mutually exclusive)
+    events.
+
+a. Prove that for mutually disjoint events $A$ and $B$,
+
+$$ P(A \cup B) = P(A) + P(B) $$
+
+b. Prove that for any events $A$ and $B$,
+
+$$ P(A \cup B) = P(A) + P(B) - P(A \cap B) $$
+
+19. A combination lock requires three selections of numbers, each from 1
+    through 39. Suppose the lock is constructed in such a way that no number may
+    be used twice in a row but the same number may occur both first and third.
+    For example, 20 13 20 would be acceptable, but 20 20 13 would not. How many
+    different combinations are possible?
+
+20.
+
+a. How many integers from 1 through 100,000 contain the digit 6 exactly once?
+
+b. How many integers from 1 through 100,000 contain the digit 6 at least once?
+
+c. If an integer is chosen at random from 1 through 100,000, what is the
+probability that it contains two or more occurrences of the digit 6?
+
+21. Six new employees, two of whom are married to each other, are to be assigned
+    six desks that are lined up in a row. If the assignment of employees to
+    desks is made randomly, what is the probability that the married couple will
+    have nonadjacent desks? (_Hint:_ The event that the couple have nonadjacent
+    desks is the complement of the event that they have adjacent desks.)
+
+22. Consider strings of length $n$ over the set $\{a, b, c, d\}$.
+
+a. How many such strings contain at least one pair of adjacent characters that
+are the same?
+
+b. If a string of length ten over $\{a, b, c, d\}$ is chosen at random, what is
+the probability that it contains at least one pair of adjacent characters that
+are the same?
+
+23.
+
+a. How many integers from 1 through 1,000 are multiples of 4 or multiples of 7?
+
+b. Suppose an integer from 1 through 1,000 is chosen at random. Use the result
+of part (a) to find the probability that the integer is a multiple of 4 or a
+multiple of 7.
+
+c. How many integers from 1 through 1,000 are neither multiples of 4 nor
+multiples of 7?
+
+24.
+
+a. How many integers from 1 through 1,000 are multiples of 2 or multiples of 9?
+
+b. Suppose an integer from 1 through 1,000 is chosen at random. Use the result
+of part (a) to find the probability that the integer is a multiple of 2 or a
+multiple of 9.
+
+c. How many integers from 1 through 1,000 are neither multiples of 2 nor
+multiples of 9?
+
+25. _Counting Strings:_
+
+a. Make a list of all bit strings of lengths 0, 1, 2, 3, and 4 that do not
+contain the bit pattern 111.
+
+b. For each integer $n \geq 0$, let $d_n =$ the number of bit strings of length
+$n$ that do not contain the bit pattern 111. Find $d_0, d_1, d_2, d_3$ and
+$d_4$.
+
+c. Find a recurrence relation for $d_0, d_1, d_2, \dots$.
+
+d. Use the results of parts (b) and \(c\) to find the number of bit strings of
+length 5 that do not contain the pattern 111.
+
+26. _Counting Strings:_ Consider the set of all strings of _a_'s, _b_'s, and
+    _c_'s.
+
+a. Make a list of all of these strings of lengths 0, 1, 2, and 3 that do not
+contain the pattern _aa_.
+
+b. For each integer $n \geq 0$, let $s_n =$ the number of strings of _a_'s,
+_b_'s, and _c_'s of length $n$ that do not contain the pattern _aa_. Find
+$s_0, s_1, s_2$, and $s_3$.
+
+c. Find a recurrence relation for $s_0, s_1, s_2, \dots$.
+
+d. Use the results of parts (b) and \(c\) to find the number 9f strings of
+_a_'s, _b_'s, and _c_'s of length four that do not contain the pattern _aa_.
+
+e. Use the technique described in Section 5.8 to find an explicit formula for
+$s_0, s_1, s_2, \dots$.
+
+27. For each integer $n \geq 0$, let $a_k$ be the number of bit strings of
+    length $n$ that do not contain the pattern 101.
+
+a. Show that $a_k = a_{k - 1} + a_{k - 3} + a_{k - 4} + \cdots + a_0 + 2$, for
+every integer $k \geq 3$.
+
+b. Use the result of part (a) to show that if $k \geq 3$, then
+$a_k = 2a_{k - 1} - a_{k - 2} +  a_{k - 3}$.
+
+28. For each integer $n \geq 2$ let $a_n$ be the number of permutations of
+    $\{1, 2, 3, \dots, n\}$ in which no number is more than one place removed
+    from its "natural" position. Thus $a_1 = 1$ since the one permutation of
+    $\{1\}$, namely, $1$, does not move $1$ from its natural position. Also,
+    $a_2 = 2$ since neither of the two permutations of $\{1, 2\}$, namely $12$
+    and $21$, moves either number more than one place from its natural position.
+
+a. Find $a_3$.
+
+b. Find a recurrence relation for $a_1, a_2, a_3, \dots$.
+
+29. Refer to Example 9.3.5.
+
+a. Write the following IP address in dotted decimal form:
+
+11001010 00111000 01101011 11101110
+
+b. How many Class _A_ networks can there be?
+
+c. What is the dotted decimal form of the IP address for a computer in a Class
+_A_ network?
+
+d. How many host IDs can there be for a Class _A_ network?
+
+e. How many Class _C_ networks can there be?
+
+f. What is the dotted decimal form of the IP address for a computer in a Class
+_C_ network?
+
+g. How many host IDs can there be for a Class _C_ network?
+
+h. How can you tell, by looking at the first of the four numbers in the dotted
+decimal form of an IP address, what kind of network the address is from?
+Explain.
+
+i. An IP address is 140.192.32.136. What class of network does it come from?
+
+j. An IP address is 202.56.107.238. What class of network does it come from?
+
+30. A row in a classroom has $n$ seats. Let $s_n$ be the number of ways nonempty
+    sets of students can sit in a row so that no student is seated directly
+    adjacent to any other student. (For instance, a row of three seats could
+    contain a single student in any of the seats or a pair of students in the
+    two outer seats. Thus $s_3 = 4$.) Find a recurrence relation for
+    $s_1, s_2, s_3, \dots$.
+
+31. Assume that birthdays are equally likely to occur in any one of the 12
+    months of the year.
+
+a. Given a group of four people, $A$, $B$, $C$, and $D$, what is the total
+number of ways in which birth months could be associated with $A$, $B$, $C$, and
+$D$? (For instance, $A$ and $B$ might have been born in May, $C$ in September,
+and $D$ in February. As another example, $A$ might have been born in January,
+$B$ in June, $C$ in March, and $D$ in October.)
+
+b. How many ways could birth months be associated with $A$, $B$, $C$, and $D$ so
+that no two people would share the same birth month?
+
+c. How many ways could birth months be associated with $A$, $B$, $C$, and $D$ so
+that at least two people would share the same birth month?
+
+d. What is the probability that at least two people out of $A$, $B$, $C$, and
+$D$ share the same birth month?
+
+e. How large must $n$ be so that in any group of $n$ people, the probability
+that two or more share the same birth month is at least 50%?
+
+32. Assuming that all years have 365 days and all birthdays occur with equal
+    probability, how large must $n$ be so that in any randomly chosen group of
+    $n$ people, the probability that two or more have the same birthday is at
+    least $\dfrac{1}{2}$? (This is called the **birthday problem**. Many people
+    find the answer surprising.)
+
+33. A college conducted a survey to explore the academic interests and
+    achievements of its students. It asked students to place checks behind the
+    numbers of all the statements that were true of them. Statement #1 was "I
+    was on the Dean's list last term," statement #2 was "I belong to an academic
+    club, such as the math club or the Spanish club," and statement #3 was "I am
+    majoring in at least two subjects." Out of a sample of 100 students, 28
+    checked #1, 26 checked #2, and 14 checked #3, 8 checked both #1 and #2, 4
+    checked both #1 and #3, 3 checked both #2 and #3, and 2 checked all three
+    statements.
+
+a. How many students declared at least one of the statements?
+
+b. How many students checked none of the statements?
+
+c. Let $H$ be the set of students who checked #1, $C$ the set of students who
+checked #2, and $D$ the set of students who checked #3. Fill in the numbers for
+all eight regions of the diagram.
+
+(See Page 625 for diagram.)
+
+d. How many students checked #1 and #2 but not #3?
+
+e. How many students checked #2 and #3 but not #1?
+
+f. How many students checked #2 but neither of the other two?
+
+34. A study was done to determine the efficacy of three different drugs - $A$,
+    $B$, and $C$ - in relieving headache pain. Over the period covered by the
+    study, 50 subjects were given the chance to use all three drugs. The
+    following results were obtained:
+
+21 reported relief from drug $A$
+
+21 reported relief from drug $B$
+
+31 reported relief from drug $C$
+
+9 reported relief from both drugs $A$ and $B$
+
+14 reported relief from both drugs $A$ and $C$
+
+15 reported relief from both drugs $B$ and $C$
+
+41 reported relief from at least one of the drugs.
+
+Note that some of the 21 subjects who reported relief from drug $A$ may also
+have reported relief from drugs $B$ or $C$. A similar occurrence may be true for
+the other data.
+
+a. How many people got relief from none of the drugs?
+
+b. How many people got relief from all three drugs?
+
+c. Let $A$ be the set of all subjects who got relief from drug $A$, $B$ the set
+of all subjects who got relief from drug $B$, and $C$ the set of all subjects
+who got relief from drug $C$. Fill in the numbers for all eight regions of the
+following diagram.
+
+(See page 626 for diagram.)
+
+d. How many subjects got relief from $A$ only?
+
+35. An interesting use of the inclusion/exclusion rule is to check survey
+    numbers for consistency. For example, suppose a public opinion polltaker
+    reports that out of a national sample of 1,200 adults, 675 are married, 682
+    are from 20 to 30 years old, 684 are female, 195 are married and are from 20
+    to 30 years old, 467 are married females, 318 are females from 20 to 30
+    years old, and 165 are married females from 20 to 30 years old. Are the
+    polltaker's figures consistent? Could they have occurred as a result of an
+    actual sample survey?
+
+36. Fill in the reasons for each step below. If $A$ and $B$ are sets in a finite
+    universe $U$, then
+
+$$ N(A \cap B) = N(U) - N((A \cap B)^c) \quad \text{ \_(a)\_} $$
+
+$$ = N(U) - N(A^c \cup B^c) \quad \text{ \_(b)\_} $$
+
+$$ = N(U) - (N(A^c) + N(B^c) - N(A^c \cap B^c)) \quad \text{ \_(c)\_} $$
+
+For each of exercises 37-39, the number of elements in a certain set can be
+found by computing the number in a larger universe that are not in the set and
+subtracting this from the total in the larger universe. In each of these, as was
+the case for the soltuion to Example 9.3.6(b), De Morgan's laws and the
+inclusion/exclusion rule can be used.
+
+37. How many positive integers less than 1,000 have no common factors with
+    1,000?
+
+38. How many permutations of _abcde_ are there in which the first character is
+    _a_, _b_, or _c_ and the last character is _c_, _d_, or _e_?
+
+39. How many integers from 1 through 999,999 contain each of the digits 1, 2,
+    and 3 at least once? (_Hint:_ For each $i = 1$, $2$, and $3$, let $A_i$ be
+    the set of all integers from 1 through 999,999 that do not contain the digit
+    $i$.)
+
+For 40 and 41, use the definition of the Euler phi function $\varphi$ from
+Section 7.1, exercises 51-53.
+
+40. Use the inclusion/exclusion principle to prove the following: If $n = pq$,
+    where $p$ and $q$ are distinct prime numbers, then
+    $\varphi(n) = (p - 1)(q - 1)$.
+
+41. Use the inclusion/exclusion principle to prove the following: If $n = pqr$,
+    where $p$, $q$, and $r$ are distinct prime numbers, then
+    $\varphi(n) = (p - 1)(q - 1)(r - 1)$.
+
+42. A gambler decides to play successive games of blackjack until he loses three
+    times in a row. (Thus the gambler could play five games by losing 5he first,
+    winning the second, and losing the final three or by winning the first two
+    and losing the final three. These possibilities can be symbolized as _LWLLL_
+    and _WWLLL_.) Let $g_n$ be the number of ways the gambler can play $n$
+    games.
+
+a. Find $g_3$, $g_4$, and $g_5$.
+
+b. Find $g_6$.
+
+c. Find a recurrence relation for $g_3, g_4, g_5, \dots$.
+
+43. A _derangement_ of the set $\{1, 2, \dots, n\}$ is a permutation that moves
+    every element of the set away from its "natural" position. Thus 21 is a
+    derangement of $\{1, 2\}$, and 231 and 312 are derangements of
+    $\{1, 2, 3\}$. For each positive integer $n$, let $d_n$ be the number of
+    derangements of the set $\{1, 2, \dots, n\}$.
+
+a. Find $d_1$, $d_2$, and $d_3$.
+
+b. Find $d_4$.
+
+c. Find a recurrence relation for $d_1, d_2, d_3, dots$.
+
+44. Note that a product $x_1x_2x_3$ may be parenthesized in two different ways:
+    $(x_1x_2)x_3$ and $x_1(x_2x_3)$. Similarly, there are several different ways
+    to parenthesize $x_1x_2x_3x_4$. Two such ways are $(x_1x_2)(x_3x_4)$ and
+    $x_1((x_2x_3)x_4)$. Let $P_n$ be the number of different ways to
+    parenthesize the product $x_1x_2 \dots x_4$. Show that if $P_1 = 1$, then
+
+$$ P_n = \sum_{k = 1}^{n - 1}{P_kP_{n - k}} \quad \text{ for every integer } n \geq 2 $$
+
+(It turns out that the sequence $P_1, P_2, P_3, \dots$ is the same as the
+sequence of Catalan numbers: $P_n = C_{n - 1}$ for every integer $n \geq 1$. See
+Example 5.6.4.)
+
+45. Use mathematical induction to prove Theorem 9.3.1.
+
+46. Prove the inclusion/exclusion rule for two sets $A$ and $B$ by showing that
+    $A \cup B$ can be partitioned into $A \cap B$, $A - (A \cap B)$, and
+    $B - (A \cap B)$, and then using the addition and difference rules. (See the
+    hint for exercise 39 in Section 6.2.)
+
+47. Prove the inclusion/exclusion rule for three sets.
+
+48. Use mathematical induction to prove the general inclusion/exclusion rule:
+
+If $A_1, A_2, \dots, A_n$ are finite sets, then
+
+$$ N(A_1 \cup A_2 \cup \dots \cup A_n) $$
+
+$$ =  \sum_{1 \leq i \leq n}^{}{N(A_i)} - \sum_{1 \leq i \leq j \leq n}^{}{N(A_i \cap A_j)} $$
+
+$$ + \sum_{1 \leq i \leq j \leq k \leq n}^{}{N(A_i \cap A_j \cap A_k)} $$
+
+$$ - \dots + (-1)^{n + 1}N(A_1 \cap A_2 \cap \cdots \cap A_n) $$
+
+(The notation $\sum_{1 \leq i \leq j \leq n}^{}{N(A_i \cap A_j)}$ means that
+quantities of the form $N(A_i \cap A_j)$ are to be added together for all
+integers $i$ and $j$ with $1 \leq i \leq j \leq n$.)
+
+49. A circular disk is cut into $n$ distinct sectors, each shaped like a piece
+    of pie and all meeting at the center point of the disk. Each sector is to be
+    painted red, green, yellow, or blue in such a way that no two adjacent
+    sectors are painted the same color. Let $S_n$ be the number of ways to paint
+    the disk.
+
+a. Find a recurrence relation for $S_k$ in terms of $S_{k - 1}$ and $S_{k - 2}$
+for each integer $k \geq 4$.
+
+b. Find an explicit formula for $S_n$ for $n \geq 2$.
