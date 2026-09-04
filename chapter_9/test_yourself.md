@@ -63,14 +63,25 @@ Page 622
 1. The addition rule says that if a finite set $A$ equals the union of $k$
    distinct mutually disjoint subsets $A_1, A_2, \dots, A_k$, then ____.
 
+the number of elements in $A$ denoted $N(A)$ is
+$N(A) = N(A_1) + N(A_2) + \dots + N(A_k)$
+
 2. The difference rule says that if $A$ is a finite set and $B$ is a subset of
    $A$, then ____.
+
+$N(A - B) = N(A) - N(B)$
 
 3. If $S$ is a finite sample space and $A$ is an event in $S$, then the
    probability of $A^c$ equals ____.
 
+$1 - P(A)$
+
 4. The inclusion/exclusion rule for two sets says that if $A$ and $B$ are any
    finite sets, then ____.
 
+$N(A \cup B) = N(A) + N(B) - N(A \cap B)$
+
 5. The inclusion/exclusion rule for three sets says that if $A$, $B$, and $C$
    are any finite sets, then ____.
+
+$N(A \cup B \cup C) = N(A) + N(B) + N(C) - N(A \cap B) - N(A \cap C) - N(B \cap C) + N(A \cap B \cap C)$
