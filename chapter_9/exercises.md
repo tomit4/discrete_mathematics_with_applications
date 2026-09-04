@@ -3806,3 +3806,200 @@ Omitted.
 b. Find an explicit formula for $S_n$ for $n \geq 2$.
 
 Omitted.
+
+---
+
+Page 637
+
+**Exercise Set 9.4**
+
+1.
+
+a. If 4 cards are selected from a standard 52-card deck, must at least 2 be of
+the same suit? Why?
+
+b. If 5 cards are selected from a standard 52-card deck, must at least 2 be the
+same suit? Why?
+
+2.
+
+a. If 13 cards are selected from a standard 52-card deck, must at least 2 be of
+the same denomination? Why?
+
+b. If 20 cards are selected from a standard 52-card deck, must at least 2 be of
+the same denomination? Why?
+
+3. A small town has only 500 residents. Must there be 2 residents who have the
+   same birthday? Why?
+
+4. In a group of 700 people, must there be 2 who have the same first and last
+   initials? Why?
+
+5.
+
+a. Given any set of four integers, must there be two that have the same
+remainder when divided by 3? Why?
+
+b. Given any set of three integers, must there be two that have the same
+remainder when divided by 3? Why?
+
+6.
+
+a. Given any set of seven integers, must there be two that have the same
+remainder when divided by 6? Why?
+
+b. Given any set of seven integers, must there be two that have the same
+remainder when divided by 8? Why?
+
+7. Let $S = \{3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}$. Suppose six integers are
+   chosen from $S$. Must there be two integers whose sum is 15? Why?
+
+8. Let $T = \{1, 2, 3, 4, 5, 6, 7, 8, 9\}$. Suppose five integers are chosen
+   from $T$. Must there be two integers whose sum is 10? Why?
+
+9.
+
+a. If seven integers are chosen from between 1 and 12 inclusive, must at least
+one of them be odd? Why?
+
+b. If ten integers are chosen from between 1 and 20 inclusive, must at least one
+of them be even? Why?
+
+10. If $n + 1$ integers are chosen from the set
+
+$$ \{1, 2, 3, \dots, 2n\} $$
+
+where $n$ is a positive integer, must at least one of them be odd? Why?
+
+11. If $n + 1$ integers are chosen from the set
+
+$$ \{1, 2, 3, \dots, 2n\} $$
+
+where $n$ is a positive integer, must at least one of them be even? Why?
+
+12. How many cards must you pick from a standard 52-card deck to be sure of
+    getting at least 1 red card? Why?
+
+13. Suppose six pairs of similar-looking boots are thrown together in a pile.
+    How many individual boots must you pick to be sure of getting a matching
+    pair? Why?
+
+14. How many integers from 0 through 60 must you pick in order to be sure of
+    getting at least one that is odd? at least one that is even?
+
+15. If $n$ is a positive integer, how many integers from $0$ through $2n$ must
+    you pick in order to be sure of getting at least one that is odd? at least
+    one that is even?
+
+16. How many integers from 1 through 100 must you pick in order to be sure of
+    getting one that is divisible by 5?
+
+17. How many integers must you pick in order to be sure that at least two of
+    them have the same remainder when divided by 7?
+
+18. How many integers must you pick in order to be sure that at least two of
+    them have the same remainder when divided by 15?
+
+19. How many integers from 100 through 999 must you pick in order to be sure
+    that at least two of them have a digit in common? (For example, 256 and 530
+    have the digit 5 in common.)
+
+20.
+
+a. If repeated divisions by 20,483 are performed, how many distinct remainders
+can be obtained?
+
+b. When $\dfrac{5}{20483}$ is written as a decimal, what is the maximum length
+of the repeating section of the representation?
+
+21. When $\dfrac{683}{1493}$ is written as a decimal, what is the maximum length
+    of the repeating section of the representation?
+
+22. Is $0.101001000100001000001 \dots$ (where each string of 0's is one larger
+    than the previous one) rational or irrational?
+
+23. Is $56.556655566655556666 \dots$ (where the strings of 5's and 6's become
+    larger in each repetition) rational or irrational?
+
+24. Show that within any set of thirteen integers chosen from 2 through 40,
+    there are at least two integers with a common divisor greater than 1.
+
+25. In a group of 30 people, must at least 3 have been born in the same month?
+    Why?
+
+26. In a group of 30 people, must at least 4 have been born in the same month?
+    Why?
+
+27. IN a group of 2,000 people, must at least 5 have the same birthday? Why?
+
+28. A programmer writes 500 lines of computer code in 17 days. Must there have
+    been at least 1 day when the programmer wrote 30 or more lines of code? Why?
+
+29. A certain college class has 40 students. All students in the class are known
+    to be from 17 through 34 years of age. You want to make a bet that the class
+    contains at least $x$ students of the same age. How large can you make $x$
+    and yet be sure to win your bet?
+
+30. A penny collection contains twelve 1967 pennies, seven 1968 pennies, and
+    eleven 1971 pennies. If you are to pick some pennies without looking at the
+    dates, how many must you pick to be sure of getting at least five pennies
+    from the same year?
+
+31. A group of 15 executives are to share 5 assistants. Each executive is
+    assigned exactly 1 assistant, and no assistant is assigned to more than 4
+    executives. Show that at least 3 assistants are assigned to 3 or more
+    executives.
+
+32. Let $A$ be a set of six positive integers each of which is less than 13.
+    Show that there must be two distinct subsets of $A$ whose elements when
+    added up give the same sum. (For example, if $A = \{5, 12, 10, 1, 3, 4\}$,
+    then the elements of the subsets $S_1 = \{1, 4, 10\}$ and $s_2 = \{5, 10\}$
+    both add up to 15.)
+
+33. Let $A$ be a set of six positive integers each of which is less than 15.
+    Show that there must be two distinct subsets of $A$ whose elements when
+    added up give the same sum. (Thanks to Jonathan Goldstine for this problem.)
+
+34. Let $S$ be a set of ten integers chosen from 1 through 50. Show that the set
+    contains at least two different (but not necessarily disjoint) subsets of
+    four integers that add up to the same number. (For instance, if the ten
+    numbers are $\{3, 8, 9, 18, 24, 34, 35, 41, 44, 50\}$, the subsets can be
+    taken to be $\{8, 24, 34, 35\}$ and $\{9, 18, 24, 50\}$. The numbers in both
+    of these add up to 101.)
+
+35. Given a set of 52 distinct integers, show that there must be 2 whose sum or
+    difference is divisible by 100.
+
+36. Show that if 101 integers are chosen from 1 to 200 inclusive, there must be
+    2 with the property that one is divisible by the other.
+
+37.
+
+a. Suppose $a_1, a_2, \dots, a_n$ is a sequenced of $n$ integers none of which
+is divisible by $n$. Show at least one of the differences $a_i - a_j$ (for
+$i \neq j$) must be divisible by $n$.
+
+b. Show that every finite sequence $x_1, x_2, \dots, x_n$ of $n$ integers has a
+consecutive subsequence $x_{i + 1}, x_{i + 2}, \dots, x_j$ whose sum is
+divisible by $n$. (For instance, the sequence $3, 4, 17, 7, 16$ has the
+consecutive subsequence $17, 7, 16$ whose sum is divisible by $5$.) (From: James
+E. Schultz and William F. Burger, "An Approach to Problem-Solving Using
+Equivalence Classes Modulo $n$", _College Mathematics Journal_ (15), No. 5,
+1984, 402-405.)
+
+38. Observe that the sequence $12, 15, 8, 13, 7, 18, 19, 11, 14, 10$ has three
+    increasing subsequences of length four: $12, 15, 18, 19$; $12, 13, 18, 19$;
+    and $8, 13, 18, 19$. It also has one decreasing subsequence of length four:
+    $15, 13, 11, 10$. Show that in any sequence of $n^2 + 1$ distinct real
+    numbers, there must be a sequence of length $n + 1$ that is either strictly
+    increasing or strictly decreasing.
+
+39. What is the largest number of elements that a set of integers from 1 through
+    100 can have so that no one integer in the set is divisible by another?
+    (_Hint:_ Imagine writing all the integers from $1$ through $100$ in the form
+    $2^k \cdot m$, where $k \geq 0$ and $m$ is odd.)
+
+40. Suppose $X$ and $Y$ are finite sets, $X$ has more elements than $Y$, and
+    $F: X \to Y$ is a function. By the pigeonhole principle, there exist
+    elements $a$ and $b$ in $X$ such that $a \neq b$ and $F(a) = F(b)$. Write a
+    computer algorithm to find such a pair of elements $a$ and $b$.

@@ -85,3 +85,16 @@ $N(A \cup B) = N(A) + N(B) - N(A \cap B)$
    are any finite sets, then ____.
 
 $N(A \cup B \cup C) = N(A) + N(B) + N(C) - N(A \cap B) - N(A \cap C) - N(B \cap C) + N(A \cap B \cap C)$
+
+---
+
+Page 637
+
+**Test Yourself**
+
+1. The pigeonhole principle states that ____.
+
+2. The generalized pigeonhole principle states that ____.
+
+3. If $X$ and $Y$ are finite sets and $f$ is a function from $X$ to $Y$ then $f$
+   is one-to-one if, and only if, ____.
