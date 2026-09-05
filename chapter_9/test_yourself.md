@@ -94,7 +94,18 @@ Page 637
 
 1. The pigeonhole principle states that ____.
 
+a function from one finite set to a smaller finite set cannot be one-to-one.
+There must be at least two elements in the domain that have the same image in
+the co-domain.
+
 2. The generalized pigeonhole principle states that ____.
+
+For any function $f$ from a finite set $X$ with $n$ elements to a finite set $Y$
+with $m$ elements and for any positive integer $k$, if $km < n$, then there is
+some $y \in Y$ such that $y$ is the image of at least $k + 1$ distinct elements
+in $X$.
 
 3. If $X$ and $Y$ are finite sets and $f$ is a function from $X$ to $Y$ then $f$
    is one-to-one if, and only if, ____.
+
+$f$ is onto

@@ -3818,52 +3818,149 @@ Page 637
 a. If 4 cards are selected from a standard 52-card deck, must at least 2 be of
 the same suit? Why?
 
+No. Consider that a standard deck of cards has 4 suits: S, C, H, D.
+
+Consider $n$, $m$, and a function $f$ that sends a domain set $X$ of $n$
+elements to a co-domain set, $Y$, of $m$ elements.
+
+Let $n = 4$ and $m = 4$.
+
+Since $4 \cancel{>} 4$, it does not necessarily mean that $f$ is not one-to-one,
+and therefore there could plausibly be 2 cards within a drawn hand of 4 cards
+are not the same suit. Consider the hand 2C, 3S, 4H, 5D. Then, we have drawn 4
+cards selected from a standard 52-card deck where none of the cards have the
+same suit.
+
 b. If 5 cards are selected from a standard 52-card deck, must at least 2 be the
 same suit? Why?
+
+Yes, in this case, by the pigeonhole principle, since there are 4 possible
+suits, and 5 cards have been selected, then $5 > 4$, and so at least 2 of the
+cards must have the same suit.
 
 2.
 
 a. If 13 cards are selected from a standard 52-card deck, must at least 2 be of
 the same denomination? Why?
 
+No, since there are 13 denominations in a standards 52-card deck: 2, 3, 4, 5, 6,
+7, 8, 9, 10, J, Q, K, A. Drawing 13 cards does not mean that 2 cards must be the
+same denomination. Consider the list of card denominations above were drawn (and
+pick any suits you'd like for the cards), then were this hand drawn, one would
+have drawn a hand of 13 cards where each card was a different denomination.
+
 b. If 20 cards are selected from a standard 52-card deck, must at least 2 be of
 the same denomination? Why?
+
+Yes, since there are 13 denominations in a standard 52-card deck, and $20 > 13$,
+it follows by the pigeon-hole principle that at least 2 of the drawn 20 cards
+must be the same denomination.
 
 3. A small town has only 500 residents. Must there be 2 residents who have the
    same birthday? Why?
 
+Yes, since there are 365 days in a standard year, and $500 > 365$, it follows by
+the pigeonhole principle that at least 2 residents must have the same birthday.
+
 4. In a group of 700 people, must there be 2 who have the same first and last
    initials? Why?
+
+The total number of combinations of first and last initials can be calculated by
+the product property. Since there are 26 possible first initials, and 26
+possible last initials, there are $26 \times 26 = 676$ possible first/last
+initial combinations.
+
+Since $700 > 676$, it follows by the pigeonhole principle that in a group of 700
+people that there must be at least 2 people with the same first and last
+initials.
 
 5.
 
 a. Given any set of four integers, must there be two that have the same
 remainder when divided by 3? Why?
 
+Any integer when divided by $3$ yields one of 3 possible remainders: $0$, $1$,
+and $2$. Thus, given any set of four integers, since $4 > 3$, by the pigeonhole
+principle, it follows that there must be at least two of the given integers have
+the same remainder when divided by 3.
+
 b. Given any set of three integers, must there be two that have the same
 remainder when divided by 3? Why?
+
+No, since $3 \cancel{>} 3$, it is possible that within a set of any three
+integers that all three of them have different remainders. Consider for example
+the set $\{4, 5, 6\}$, then the respective remainders are $1, 2, 0$, and
+$1 \neq 2 \neq 0$.
 
 6.
 
 a. Given any set of seven integers, must there be two that have the same
 remainder when divided by 6? Why?
 
+Yes, since any integer when divided by $6$ will have one of 6 possible
+remainders: 0, 1, 2, 3, 4, 5, and since the total amount of given integers is 7,
+and $7 > 6$, it follows by the pigeonhole principle that at least two of the
+given integers must have the same remainder when divided by 6.
+
 b. Given any set of seven integers, must there be two that have the same
 remainder when divided by 8? Why?
+
+No, since the amount of possible remainders when any integer is divided by 8 is
+8 (_i.e._ 0, 1, 2, 3, 4, 5, 6, 7), and $7 \cancel{>} 8$, it does not necessarily
+mean that there must be two integers that have the same remainder. Consider the
+set $\{8, 9, 10, 11, 12, 13, 14\}$, then the respective remainders are 0, 1, 2,
+3, 4, 5, 6. Notice that none of the remainders repeat and therefore in a set of
+seven integers, at least one example has been shown where there are not two that
+have the same remainder when divided by 8.
 
 7. Let $S = \{3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}$. Suppose six integers are
    chosen from $S$. Must there be two integers whose sum is 15? Why?
 
+_Hint:_ Look at Example 9.4.3.
+
+Notice that $3 + 12 = 15$, $4 + 11 = 15$, $5 + 10 = 15$, $6 + 9 = 15$, and
+$7 + 8 = 15$. We can divide $S$ into five subsets:
+
+$$ \{3, 12\}, \{4, 11\}, \{5, 10\}, \{6, 9\}, \{7, 8\} $$
+
+Notice that in any subset of six integers from $S$, one of these subsets of two
+integers will occur within that subset of six integers. By the pigeonhole
+principle, when 6 integers are chosen, and $6 > 5 \text{possible outputs}$, it
+follows that at least 2 of those integers from the given set will have a sum
+that is equal to 15.
+
 8. Let $T = \{1, 2, 3, 4, 5, 6, 7, 8, 9\}$. Suppose five integers are chosen
    from $T$. Must there be two integers whose sum is 10? Why?
+
+No, consider what happens when $T$ is divided into paired subsets that equal 10:
+
+$$ \{1, 9\}, \{2, 8\}, \{3, 7\}, \{4, 6\} $$
+
+But this is only 4 subsets, and notice also that $5$ is omitted, as there is no
+pairing with another integer in the set $T$ that when summed will equal 10. So
+$4 < 5$, and implies that there exists some five integers from $T$ where no two
+integers when summed equal 10. Consider the set $\{1, 2, 3, 4, 5\}$. The largest
+sum of any two integers in this set is $5 + 4 = 9 < 10$. Thus it has been
+demonstrated that there exists at least one subset of $T$ containing five
+integers where there are no two integers whose sum is 10.
 
 9.
 
 a. If seven integers are chosen from between 1 and 12 inclusive, must at least
 one of them be odd? Why?
 
+The even numbers from 1 to 12 inclusive are: $\{2, 4, 6, 8, 10, 12\}$. That is
+six elements, and since $7 > 6$, it follows by the pigeonhole principle that
+there must be at least one odd integer in a set of 7 integers chosen from the
+initial set of $\{1, \dots, 12\}$.
+
 b. If ten integers are chosen from between 1 and 20 inclusive, must at least one
 of them be even? Why?
+
+The odd numbers in $\{1, \dots, 20\}$ are
+$\{1, 3, 5, 7, 9, 11, 13, 15, 17, 19\}$. That is 10 elements, but since 10 can
+be chosen, it follows that this exact set of integers could be chosen, and it
+contains no even integers. Therefore the answer is no.
 
 10. If $n + 1$ integers are chosen from the set
 
@@ -3871,84 +3968,263 @@ $$ \{1, 2, 3, \dots, 2n\} $$
 
 where $n$ is a positive integer, must at least one of them be odd? Why?
 
+The subset of even integers from the given set are:
+
+$$ \{2, 4, 6, \dots, 2n\} $$
+
+Thus there are $n$ even integers in the given set, and since $n + 1 > n$, it
+follows by the pigeonhole principle that when $n + 1$ elements are chosen, that
+there must be at least one odd integer in the chosen set.
+
 11. If $n + 1$ integers are chosen from the set
 
 $$ \{1, 2, 3, \dots, 2n\} $$
 
 where $n$ is a positive integer, must at least one of them be even? Why?
 
+The subset of odd integers from the given set are:
+
+$$ \{1, 3, 5, \dots, (2n - 1)\} $$
+
+Thus there are $n$ odd integers in the given set. Since $n + 1 > n$, it follows
+by the pigeonhole principle that when $n + 1$ elements are chosen, that there
+must be at least one even integer in the chosen set.
+
 12. How many cards must you pick from a standard 52-card deck to be sure of
     getting at least 1 red card? Why?
+
+There are two suits that are red in a standard 52-card deck, that of Hearts
+(denoted H) and Diamonds (denoted D), the two suits that are black cards are
+Clubs (denoted C) and Spades (denoted S). Each suit has 13 cards (figure out the
+denotations on your own): 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A.
+
+When drawing cards, one could potentially draw all black cards until all black
+cards are exhausted, this would be all the C and S cards, so that would be
+$13 + 13 = 26$ cards. At this point, the next card would be guaranteed to be a
+red card.
+
+Thus the total amount of cards one must pick from a standard 52-card deck to be
+sure of getting at least 1 red card is 27.
 
 13. Suppose six pairs of similar-looking boots are thrown together in a pile.
     How many individual boots must you pick to be sure of getting a matching
     pair? Why?
 
+Six pairs of boots is 12 boots in total. When choosing boots, one could
+potentially choose 6 boots without a match, but upon choosing 7th boot, by the
+pigeonhole principle, this boot must match at least one of the previously chosen
+boots. Thus 7 boots must be chosen.
+
 14. How many integers from 0 through 60 must you pick in order to be sure of
     getting at least one that is odd? at least one that is even?
+
+The set $\{0, \dots, 60\}$ has 61 total integers. It has 31 even integers (since
+$0$ is an even integer), and 30 odd integers.
+
+_At least one that is odd:_
+
+One could potentially pick all 31 even integers in a row, so therefore in order
+to choose at least one that is odd, one must pick 32 integers.
+
+_At least one that is even:_
+
+One could potentially pick all 30 odd integers in a row, so therefore in order
+to choose at least one that is even, one must pick 31 integers.
 
 15. If $n$ is a positive integer, how many integers from $0$ through $2n$ must
     you pick in order to be sure of getting at least one that is odd? at least
     one that is even?
 
+The set $\{0, \dots, 2n\}$ has $2n + 1$ total integers (since $0$ is an
+integer). It has $n + 1$ even integers (since $0$ is an even integer), and $n$
+odd integers.
+
+_At least one that is odd:_
+
+It is possible that one could choose all $n + 1$ even integers in a row, so one
+must choose $n + 2$ integers in total to ensure that at least one chosen integer
+is odd.
+
+_At least one that is even:_
+
+It is possible that one could choose all $n$ odd integers in a row, so one must
+choose $n + 1$ integers in total to ensure that at least one chosen integer is
+even.
+
 16. How many integers from 1 through 100 must you pick in order to be sure of
     getting one that is divisible by 5?
+
+In the set $\{1, \dots, 100\}$, there are 100 total integers. Within that set,
+there are 20 integers divisible by 5. It follows by arithmetic that there are
+$100 - 20 = 80$ integers that are not divisible by 5 within the given set.
+
+It is possible that one could choose all 80 integers that are not divisible by 5
+in a row. Thus, one must pick 81 integers to ensure that at least one chosen
+integer is divisible by 5.
 
 17. How many integers must you pick in order to be sure that at least two of
     them have the same remainder when divided by 7?
 
+Any integer when divided by 7 can only have one of the following 7 remainders:
+0, 1, 2, 3, 4, 5, 6. Thus to ensure that when picking any amount of integers at
+random, that at least two of them have the same remainder, one must choose 8
+integers.
+
 18. How many integers must you pick in order to be sure that at least two of
     them have the same remainder when divided by 15?
+
+Any integer when divided by 15 can only have one of the following 15 remainders:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14. Thus to ensure that when
+picking any amount of integers at random, that at least two of them have the
+same remainder, one must choose 16 integers.
 
 19. How many integers from 100 through 999 must you pick in order to be sure
     that at least two of them have a digit in common? (For example, 256 and 530
     have the digit 5 in common.)
+
+Each integer chosen will have a digit from 0 through 9, or 10 possible digits.
+Thus in order to ensure that two integers from the set of $\{100, \dots, 999\}$
+when chosen will have at least one digit in common, one must choose at at least
+11 integers.
 
 20.
 
 a. If repeated divisions by 20,483 are performed, how many distinct remainders
 can be obtained?
 
+By the definition of divisibility/mod, the amount of distinct remainders from
+division of any integer by 20,483 is 20,483.
+
 b. When $\dfrac{5}{20483}$ is written as a decimal, what is the maximum length
 of the repeating section of the representation?
+
+The maximum length of the repeating section of the decimal representation for
+any integer divided by 20483 will be 20482, as there are only 20482 distinct
+nonzero remainders that can be obtained when dividing any integer by 20483.
 
 21. When $\dfrac{683}{1493}$ is written as a decimal, what is the maximum length
     of the repeating section of the representation?
 
+By the same reasoning as exercise 20, the maximum length of the repeating
+section of the decimal representation for any integer divided by 1493 will
+be 1492.
+
 22. Is $0.101001000100001000001 \dots$ (where each string of 0's is one larger
     than the previous one) rational or irrational?
+
+A rational number can have a decimal representation that either terminates or
+repeats. The given decimal does not terminate, nor does it contain a series of
+repeated digits (since the amount of 0's and 1's varies, it does not constitute
+a series of repeated digits.)
+
+Therefore the given decimal is not a rational number.
 
 23. Is $56.556655566655556666 \dots$ (where the strings of 5's and 6's become
     larger in each repetition) rational or irrational?
 
+The given decimal is not a rational number by the same reasoning as those given
+in exercise 22.
+
 24. Show that within any set of thirteen integers chosen from 2 through 40,
     there are at least two integers with a common divisor greater than 1.
+
+**Proof:**
+
+Let $A$ be the set of the thirteen chosen integers from \{2, 3, \dots, 40\}, and
+let $B$ be the set of all prime numbers from 1 through 40. Note that this means
+that:
+
+$$ B = \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37\} $$
+
+For each $x \in A$, let $F: x \to y$, where $y$ is the smallest prime number
+that divides $x$.
+
+Since $A$ has 13 elements and $B$ has 12 elements, by the pigeonhole principle
+$F$ is not one-to-one.
+
+Thus $F(x_1) = F(x_2)$ for some $x_1 \neq x_2$ in $A$.
+
+By definition of $F$, this means that the smallest prime number that divides
+$x_1$ equals the smallest prime number that divides $x_2$.
+
+Therefore, there exists two numbers in $A$, namely, $x_1$ and $x_2$, that have a
+common divisor greater than $1$.
+
+This is what was to be shown.
+
+Q.E.D.
 
 25. In a group of 30 people, must at least 3 have been born in the same month?
     Why?
 
+By the generalized pigeonhole principle, we can apply this to 30 pigeons
+(people), 12 pigeonholes (months), and $k = 2$ (3 - 1 chosen people), it follows
+that $30 > 24 = 12 \cdot 2$, and therefore yes, at least 3 people chosen from a
+group of 30 must have been born in the same month.
+
 26. In a group of 30 people, must at least 4 have been born in the same month?
     Why?
 
-27. IN a group of 2,000 people, must at least 5 have the same birthday? Why?
+No, by the generalized pigeonhole principle, this does not hold, since 30
+pigeons (people), 12 pigeonholes (months), and $k = 3$ ($4 - 1$ chosen people),
+it doesn't follow since $30 \cancel{>} 36 = 12 \cdot 3$.
+
+27. In a group of 2,000 people, must at least 5 have the same birthday? Why?
+
+Yes, since $2000 > 1460 = 365 \cdot 4$.
 
 28. A programmer writes 500 lines of computer code in 17 days. Must there have
     been at least 1 day when the programmer wrote 30 or more lines of code? Why?
+
+Yes, since $500 > 493 = 17 \cdot 29$.
 
 29. A certain college class has 40 students. All students in the class are known
     to be from 17 through 34 years of age. You want to make a bet that the class
     contains at least $x$ students of the same age. How large can you make $x$
     and yet be sure to win your bet?
 
+To ensure that I will win my bet, I must set $x$ such that $40 > 18(x - 1)$
+(since there are 18 ages from 17 through 34 inclusive.) I must not exceed a
+value for $x$ where $40 < 18x$.
+
+If $x = 2$, then $40 > 18$, if $x = 3$, then $40 > 36$, but if $x = 4$, then
+$40 \cancel{>} 54$. So I cannot let $x$ exceed $3$.
+
 30. A penny collection contains twelve 1967 pennies, seven 1968 pennies, and
     eleven 1971 pennies. If you are to pick some pennies without looking at the
     dates, how many must you pick to be sure of getting at least five pennies
     from the same year?
 
+The answer is $4 \cdot 3 + 1 = 13$.
+
+Since there are 3 different years, with $4 \cdot 3 = 12$ coins, we may get 4 of
+each year. Then one more penny guarantees that we get at least 5 pennies from
+the same year.
+
 31. A group of 15 executives are to share 5 assistants. Each executive is
     assigned exactly 1 assistant, and no assistant is assigned to more than 4
     executives. Show that at least 3 assistants are assigned to 3 or more
     executives.
+
+_Hint:_ Use the same type of reasoning as in Example 9.4.6.
+
+Let $k$ be the number of assistants shared by 3 or more executives.
+
+It must be shown that $k \geq 3$.
+
+Because each assistant is shared by at most 4 executives, these assistants are
+shared by at most $4k$ executives (by the contrapositive form of the generalized
+pigeonhole principle). Each of the remaining $5 - k$ assistants is shared by at
+most 2 executives. Hence, taken together, they are assisting at most
+$2(5 - k) = 10 - 2k$ executives (again, by the contrapositive form of the
+generalized pigeonhole principle). Thus the maximum number of executives
+assisted by the assistants is $4k + (10 - 2k) = 2k + 10$. Because 15 executives
+are assisted by the assistants, $2k + 10 \geq 15$. Solving for $k$ gives
+$k > 2.5$, and since $k$ is an integer, this implies that $k \geq 3$.
+
+This is what was to be shown.
+
+Q.E.D.
 
 32. Let $A$ be a set of six positive integers each of which is less than 13.
     Show that there must be two distinct subsets of $A$ whose elements when
@@ -3956,9 +4232,50 @@ of the repeating section of the representation?
     then the elements of the subsets $S_1 = \{1, 4, 10\}$ and $s_2 = \{5, 10\}$
     both add up to 15.)
 
+Omitted.
+
 33. Let $A$ be a set of six positive integers each of which is less than 15.
     Show that there must be two distinct subsets of $A$ whose elements when
     added up give the same sum. (Thanks to Jonathan Goldstine for this problem.)
+
+_Hint:_ The power set of $A$ has $2^6 = 64$ elements, and so there are 63
+nonempty subsets of $A$. Let $k$ be the smallest number in $A$. Then the sums
+over the elements in the nonempty subsets of $A$ lie in the range from $k$
+through $k + 10 + 11 + 12 + 13 + 14 = k + 60$. How many numbers are in this
+range?
+
+**Proof:**
+
+Suppose $A$ is any set of six positive integers, each of which is less than 15.
+
+It is to be shown that there exists two distinct subsets of $A$ whose elements
+when added up give the same sum.
+
+Consider that the power set of $A$, $\mathscr{P}(A)$, has $2^6 = 64$ elements
+(since a subset of any set is either in the power set or not, it follows that
+$N(\mathscr{P}(A)) = 2^{N(A)}$).
+
+Since $\emptyset \in \mathscr{P}(A)$, it follows that there are
+$2^6 - 1 = 64 - 1 = 63$ nonempty subsets of $A$.
+
+Let $k$ be the smallest number in $A$.
+
+Then the sums over the elements in the nonempty subsets of $A$ lie in the range
+from $k$ through $k + 10 + 11 + 12 + 13 + 14$ (since there are 6 elements in $A$
+and all are less than $15$.) By arithmetic:
+
+$$ k + 10 + 11 + 12 + 13 + 14 = k + 60 $$
+
+Thus the range of possible sums is $[k, k + 60]$, and so there are 61 elements
+in the range of possible sums.
+
+Since $63 > 61$, it follows by the pigeonhole principle that there exists at
+least two distinct subsets of $A$ whose elements when added up give the same
+sum.
+
+This is what was to be shown.
+
+Q.E.D.
 
 34. Let $S$ be a set of ten integers chosen from 1 through 50. Show that the set
     contains at least two different (but not necessarily disjoint) subsets of
@@ -3967,17 +4284,25 @@ of the repeating section of the representation?
     taken to be $\{8, 24, 34, 35\}$ and $\{9, 18, 24, 50\}$. The numbers in both
     of these add up to 101.)
 
+Omitted.
+
 35. Given a set of 52 distinct integers, show that there must be 2 whose sum or
     difference is divisible by 100.
 
+Omitted.
+
 36. Show that if 101 integers are chosen from 1 to 200 inclusive, there must be
     2 with the property that one is divisible by the other.
+
+Omitted.
 
 37.
 
 a. Suppose $a_1, a_2, \dots, a_n$ is a sequenced of $n$ integers none of which
 is divisible by $n$. Show at least one of the differences $a_i - a_j$ (for
 $i \neq j$) must be divisible by $n$.
+
+Omitted.
 
 b. Show that every finite sequence $x_1, x_2, \dots, x_n$ of $n$ integers has a
 consecutive subsequence $x_{i + 1}, x_{i + 2}, \dots, x_j$ whose sum is
@@ -3987,6 +4312,8 @@ E. Schultz and William F. Burger, "An Approach to Problem-Solving Using
 Equivalence Classes Modulo $n$", _College Mathematics Journal_ (15), No. 5,
 1984, 402-405.)
 
+Omitted.
+
 38. Observe that the sequence $12, 15, 8, 13, 7, 18, 19, 11, 14, 10$ has three
     increasing subsequences of length four: $12, 15, 18, 19$; $12, 13, 18, 19$;
     and $8, 13, 18, 19$. It also has one decreasing subsequence of length four:
@@ -3994,12 +4321,18 @@ Equivalence Classes Modulo $n$", _College Mathematics Journal_ (15), No. 5,
     numbers, there must be a sequence of length $n + 1$ that is either strictly
     increasing or strictly decreasing.
 
+Omitted.
+
 39. What is the largest number of elements that a set of integers from 1 through
     100 can have so that no one integer in the set is divisible by another?
     (_Hint:_ Imagine writing all the integers from $1$ through $100$ in the form
     $2^k \cdot m$, where $k \geq 0$ and $m$ is odd.)
 
+Omitted.
+
 40. Suppose $X$ and $Y$ are finite sets, $X$ has more elements than $Y$, and
     $F: X \to Y$ is a function. By the pigeonhole principle, there exist
     elements $a$ and $b$ in $X$ such that $a \neq b$ and $F(a) = F(b)$. Write a
     computer algorithm to find such a pair of elements $a$ and $b$.
+
+Omitted.

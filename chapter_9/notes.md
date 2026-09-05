@@ -156,6 +156,51 @@ other words, $n \leq km$.
 
 ---
 
+**Example 9.4.6 Using the Contrapositive Form of the Generalized Pigeonhole
+Principle**
+
+There are 42 students who are to share 12 computers. Each student uses exactly 1
+computer, and no computer is used by more than 6 students. Show that at least 5
+computers are used by 3 or more students.
+
+**Solution**
+
+a. _Using an Argument by Contradiction:_
+
+Suppose not. Suppose that 4 or fewer computers are used by 3 or more students.
+_[A contradiction will be derived.]_ Then $12 - 4 = 8$ or more computers are
+used by 2 or fewer students. Divide the set of computers into two subsets: $C_1$
+and $C_2$. Into $C_1$ place $8$ of the computers used by 2 or fewer students;
+into $C_2$ place the computers used by 3 or more students plus any remaining
+computers (to make a total of 4 computers in $C_2$.) (See Figure 9.4.3)
+
+(see page 635 for Figure 9.4.3)
+
+Since at most 6 students are served by any one computer, by the contrapositive
+form of the generalized pigeonhole principle, the computers in set $C_2$ serve
+at most $6 \cdot 4 = 24$ students. Since at most 2 students are served by any
+one computer in $C_1$, by the generalized pigeonhole principle (contrapositive
+form), the computers in set $C_1$ serve at most $2 \cdot 8 = 16$ students. Hence
+the total number of students served by the computers is $24 + 16 = 40$. But this
+contradicts the fact that each of the 42 students is served by a computer.
+Therefore, the supposition is false: At least 5 computers are used by 3 or more
+students.
+
+b. _Using a Direct Argument:_
+
+Let $k$ be the number of computers used by 3 or more students _[We must show
+that $k \geq 5$.]_ Because each computer is used by at most 6 students, these
+computers are used by at most $6k$ students (by the contrapositive form of the
+generalized pigeonhole principle). Each of the remaining $12 - k$ computers is
+used by at most 2 students. Hence, taken together, they are used by at most
+$2(12 - k) = 24 - 2k$ students (again, by the contrapositive form of the
+generalized pigeonhole principle). Thus the maximum number of students served by
+the computers is $6k + (24 - 2k) = 4k + 24$. Because 42 students are served by
+the computers, $4k + 24 \geq 42$. Solving for $k$ gives that $k > 4.5$, and
+since $k$ is an integer, this implies that $k \geq 5$ _[as was to be shown]._
+
+---
+
 Page 636
 
 **Theorem 9.4.1 The Pigeonhole Principle**
