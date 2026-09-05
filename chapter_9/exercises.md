@@ -4336,3 +4336,355 @@ Omitted.
     computer algorithm to find such a pair of elements $a$ and $b$.
 
 Omitted.
+
+---
+
+Page 653
+
+**Exercise Set 9.5**
+
+1.
+
+a. List all $2$-combinations for the set $\{x_1, x_2, x_3\}$. Deduce the value
+of $\dbinom{3}{2}$.
+
+b. List all unordered selections of four elements from the set
+$\{a, b, c, d, e\}$. Deduce the value of $\dbinom{5}{4}$.
+
+2.
+
+a. List all $3$-combinations for the set $\{x_1, x_2, x_3, x_4, x_5\}$. Deduce
+the value of $\dbinom{5}{3}$.
+
+b. List all unordered selections of two elements from the set
+$\{x_1, x_2, x_3, x_4, x_5, x_6\}$. Deduce the value of $\dbinom{6}{2}$.
+
+3. Write an equation relating $P(7, 2)$ and $\dbinom{7}{2}$.
+
+4. Write an equation relating $P(8, 3)$ and $\dbinom{8}{3}$.
+
+5. Use Theorem 9.5.1 to compute each of the following.
+
+a. $\dbinom{6}{0}$
+
+b. $\dbinom{6}{1}$
+
+c. $\dbinom{6}{2}$
+
+d. $\dbinom{6}{3}$
+
+e. $\dbinom{6}{4}$
+
+f. $\dbinom{6}{5}$
+
+g. $\dbinom{6}{6}$
+
+6. A student council consists of 15 students.
+
+a. In how many ways can a committee of six be selected from the membership of
+the council?
+
+b. Two council members have the same major and are not permitted to serve
+together on a committee. How many ways can a committee of six be selected from
+the membership of the council?
+
+c. Two council members always insist on serving on committees together. If they
+can't serve together, they won't serve at all. How many ways can a committee of
+six be selected from the council membership?
+
+d. Suppose the council contains eight men and seven women.
+
+    i. How many committees of six contain three men and three women?
+
+    ii. How many committees  of six contain at least one woman?
+
+e. Suppose the council consists of three freshmen, four sophomores, three
+juniors, and five seniors. How many committees of eight contain two
+representatives from each class?
+
+7. A computer programming team has 13 members.
+
+a. How many ways can a group of seven be chosen to work on a project?
+
+b. Suppose seven team members are women and six are men.
+
+    i. How many groups of seven can be chosen that contain four women and three men?
+
+    ii. How many groups of seven can be chosen that contain at least one man?
+
+    iii. How many groups of seven can be chosen that contain at most three women?
+
+c. Suppose two team members refuse to work together on projects. How many groups
+of seven can be chosen to work on a project?
+
+d. Suppose two team members insist on either working together or not at all on
+projects. How many groups of seven can be chosen to work on a project?
+
+8. An instructor gives an exam with fourteen questions. Students are allowed to
+   choose any ten to answer.
+
+a. How many different choices of ten questions are there?
+
+b. Suppose six questions require proof and eight do not.
+
+    i. How many groups of ten questions contain four that require proof and six that do not?
+
+    ii. How many groups of ten questions contain at least one that requires proof?
+
+    iii. How many groups of ten questions contain at most three that require proof?
+
+c. Suppose the exam instructions specify that at most one of the questions 1 and
+2 may be included among the ten. How many different choices of ten questions are
+there?
+
+d. Suppose the exam instructions specify that either both questions 1 and 2 are
+to be included among the ten or neither is to be included. How many different
+choices of ten questions are there?
+
+9. A club is considering changing its bylaws. In an initial straw vote on the
+   issue, 24 of the 40 members of the club favored the change and 16 did not. A
+   committee of six is to be chosen from the 40 club members to devote further
+   study to the issue.
+
+a. What is the total number of committees of six that can be formed from the
+club membership?
+
+b. How many of the total number of committees will contain at least three club
+members who, in the preliminary survey, favored the change in the bylaws?
+
+10. Two new drugs are to be tested using a group of 60 laboratory mice, each
+    tagged with a number for identification purposes. Drug $A$ is to be given to
+    22 mice, drug $B$ to be given to another 22 mice, and the remaining 16 mice
+    are to be used as controls. How many ways can the assignment of treatments
+    to mice be made? (A single assignment involves specifying the treatment for
+    each mouse - whether drug $A$, drug $B$, or no drug.)
+
+11. Refer to Example 9.5.9. For each poker holding below, (1) find the number of
+    five-card poker hands with that holding; (2) find the probability that a
+    randomly chosen set of five cards has that holding.
+
+a. royal flush
+
+b. straight flush
+
+c. four of a kind
+
+d. full house
+
+e. flush
+
+f. straight (including a straight flush and a royal flush)
+
+g. three of a kind
+
+h. one pair
+
+i. neither a repeated denomination nor five of the same suit nor five adjacent
+denominations
+
+12. How many pairs of two distinct integers chosen from the set
+    $\{1, 2, 3, \dots, 101\}$ have a sum that is even?
+
+13. A coin is tossed ten times. In each case the outcome _H_ (for heads) or _T_
+    (for tails) is recorded. (One possible outcome of the ten tosses is denoted
+    _T H H T T T H T T H_.)
+
+a. What is the total number of possible outcomes of the coin-tossing experiment?
+
+b. In how many of the possible outcomes are exactly five heads obtained?
+
+c. In how many of the possible outcomes are at least eight heads obtained?
+
+d. In how many of the possible outcomes is at least one head obtained?
+
+e. In how many of the possible outcomes is at most one head obtained?
+
+14.
+
+a. How many 16-bit strings contain exactly seven 1's?
+
+b. How many 16-bit strings contain at least thirteen 1's?
+
+c. How many 16-bit strings contain at least one 1?
+
+d. How many 16-bit strings contain at most one 1?
+
+15.
+
+a. How many even integers are in the set
+
+$$ \{1, 2, 3, \dots, 100\} $$
+
+b. How many odd integers are in the set
+
+$$ \{1, 2, 3, \dots, 100\} $$
+
+c. How many ways can two integers be selected from the set
+$\{1, 2, 3, \dots, 100\}$ so that their sum is even?
+
+d. How many ways can two integers be selected from the set
+$\{1, 2, 3, \dots, 100\}$ so that their sum is odd?
+
+16. Suppose that three microchips in a production run of forty are defective. A
+    sample of five is to be selected to be checked for defects.
+
+a. How many different samples can be chosen?
+
+b. How many samples will contain at least one defective chip?
+
+c. What is the probability that a randomly chosen sample of five contains at
+least one defective chip?
+
+17. Ten points labeled $A, B, C, D, E, F, G, H, I, J$ are arranged in a plane in
+    such a way that no three lie on the same straight line.
+
+a. How many straight lines are determined by the ten points?
+
+b. How many of these straight lines do not pass through point $A$?
+
+c. How many triangles have three of the ten points as vertices?
+
+d. How many of these triangles do not have point $A$ as a vertex?
+
+18. Suppose that you place the letters in Example 9.5.11 into positions in the
+    following order: first the $M$, then the $I$'s, then the $S$'s, and then the
+    $P$'s. Show that you would obtain the same answer for the number of
+    distinguishable orderings.
+
+19.
+
+a. How many distinguishable ways can the letters of the word _HULLABALOO_ be
+arranged in order?
+
+b. How many distinguishable orderings of the letters of _HULLABALOO_ begin with
+_U_ and end with _L_?
+
+c. How many distinguishable orderings of the letters of _HULLABALOO_ contain the
+two letters _HU_ next to each other in order?
+
+20.
+
+a. How many distinguishable ways can the letters of the word _MILLIMICRON_ be
+arranged in order?
+
+b. How many distinguishable orderings of the letters of _MILLIMICRON begin with
+_M_ and end with _N_?
+
+c. How many distinguishable orderings of the letters of _MILLIMICRON contain the
+two letters _CR_ next to each other in order and also the letters _ON_ next to
+each other in order?
+
+21. In Morse code, symbols are represented by variable-length sequences of dots
+    and dashes. (For example,
+    $A = \cdot \text{ — }, 1 = \cdot \text{ — — — — }, ? = \cdot \cdot \text{ — — } \cdot \cdot$.)
+    How many different symbols can be represented by sequences of seven or fewer
+    dots and dashes?
+
+22. Each symbol in the Braille code is represented by a rectangular arrangement
+    of six dots, each of which may be raised or flat against a smooth
+    background. For instance, when the word Braille is spelled out, it looks
+    like this:
+
+(see page 655 for image)
+
+Given that at least one of the six dots must be raised, how many symbols can be
+represented in the Braille code?
+
+23. On an $8 \times 8$ chessboard, a rook is allowed to move any number of
+    squares either horizontally or vertically. How many different paths can a
+    rook follow from the bottom-left square of the board to the top-right square
+    of the board if all moves are to the right or upward?
+
+24. The number 42 has the prime factorization $2 \cdot 3 \cdot 7$. Thus 42 can
+    be written in four ways as a product of two positive factors (without regard
+    to the order of the factors): $1 \cdot 42, 2 \cdot 21, 3 \cdot 14$, and
+    $6 \cdot 7$. Answer a-d without regard to the order of the factors.
+
+a. List the distinct ways the number 210 can be written as a product of two
+positive integer factors.
+
+b. If $n = p_1p_2p_3p_4$, where $p_i$ are distinct prime numbers, how many ways
+can $n$ be written as a product of two positive integer factors?
+
+c. If $n = p_1p_2p_3p_4p_5$, where $p_i$ are distinct prime numbers, how many
+ways can $n$ be written as a product of two positive integer factors?
+
+d. If $n = p_1p_2 \cdots p_k$, where the $p_i$ are distinct prime numbers, how
+many ways can $n$ be written as a product of two positive integer factors?
+
+25.
+
+a. How many one-to-one functions are there from a set with three elements to a
+set with four elements?
+
+b. How many one-to-one functions are there from a set with three elements to a
+set with two elements?
+
+c. How many one-to-one functions are there from a set with three elements to a
+set with three elements?
+
+d. How many one-to-one functions are there from a set with three elements to a
+set with five elements?
+
+e. How many one-to-one functions are there from a set with $m$ elements to a set
+with $n$ elements, where $m \leq n$?
+
+26.
+
+a. How many onto functions are there from a set with three elements to a set
+with two elements?
+
+b. How many onto functions are there from a set with three elements to a set
+with five elements?
+
+c. How many onto functions are there from a set with three elements to a set
+with three elements?
+
+d. How many onto functions are there from a set with four elements to a set with
+two elements?
+
+e. How many onto functions are there from a set with four elements to a set with
+three elements?
+
+f. Let $c_{m, n}$ be the number of onto functions from a set of $m$ elements to
+a set of $n$ elements, where $m \geq n \geq 1$. Find a formula relating
+$c_{m, n}$ to $c_{m - 1, n}$ and $c_{m - 1, n - 1}$.
+
+27. Let $A$ be a set with eight elements.
+
+a. How many relations are there on $A$?
+
+b. How many relations on $A$ are reflexive?
+
+c. How many relations on $A$ are symmetric?
+
+d. How many relations on $A$ are both reflexive and symmetric?
+
+28. A student council consists of three freshmen, four sophomores, four juniors,
+    and five seniors. How many committees of eight members of the council
+    contain at least one member from each class?
+
+29. An alternative way to derive Theorem 9.5.1 uses the following _division
+    rule:_ Let $n$ and $k$ be integers so that $k$ divides $n$. If a set
+    consists of $n$ elements is divided into subsets that each contain $k$
+    elements, then the number of such subsets is $\dfrac{n}{k}$. Explain how
+    Theorem 9.5.1 can be derived using the division rule.
+
+30. Find the error in the following reasoning: "Consider forming a poker hand
+    with two pairs as a five-step process.
+
+_Step 1:_ Choose the denomination of one of the pairs.
+
+_Step 2:_ Choose the two cards of that denomination.
+
+_Step 3:_ Choose the denomination of the other of the pairs.
+
+_Step 4:_ Choose the two cards of that second denomination.
+
+_Step 5:_ Choose the fifth card from the remaining denominations.
+
+There are $\dbinom{13}{1}$ ways to perform step 1, $\dbinom{4}{2}$ ways to
+perform step 2, $\dbinom{12}{1}$ ways to perform step 3, $\dbinom{4}{2}$ ways to
+perform step 4, and $\dbinom{44}{1}$ ways to perform step 5. Therefore, the
+total number of five-card poker hands with two pairs is
+$13 \cdot 6 \cdot 12 \cdot 6 \cdot 44 = 247,104$."

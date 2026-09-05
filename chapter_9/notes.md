@@ -296,3 +296,59 @@ Now if any one of the sets $f^{-1}(y_i)$ has more than one element, then the sum
 of the $m$ terms in equation (9.4.3) is greater than $m$. But we know this is
 not the case because $N(X) = m$. Hence each set $f^{-1}(y_i)$ has exactly one
 element, and thus $f$ is one-to-one _[as was to be shown]._
+
+---
+
+Page 640
+
+**Definition $r$-combination**
+
+Let $n$ and $r$ be nonnegative integers with $r \leq n$. An _$r$-combination_ of
+a set of $n$ elements is a subset of $r$ of the $n$ elements.
+
+---
+
+Page 640
+
+**Notation $\dbinom{n}{r}$**
+
+The symbol $\dbinom{n}{r}$, read "$n$ choose $r$," denotes the number of subsets
+of size $r$ (or $r$-combinations) that can be formed from a set of $n$ elements.
+
+---
+
+Page 643
+
+**Theorem 9.5.1 Computational Formula for $\binom{n}{r}$**
+
+The number of subsets of size $r$ (or $r$-combinations) that can be chosen from
+a set of $n$ elements, $\dbinom{n}{r}$, is given by the formula
+
+$$ \binom{n}{r} = \frac{P(n, r)}{r!} \quad \text{ first version} $$
+
+or, equivalently
+
+$$ \binom{n}{r} = \frac{n!}{r!(n - r)!} \quad \text{ second version} $$
+
+where $n$ and $r$ are nonnegative integers with $r \leq n$.
+
+---
+
+Page 652
+
+**Theorem 9.5.2 Permutations with Sets of Indistinguishable Objects**
+
+Suppose a collection consists of $n$ objects of which
+
+$$ n_1 \text{ are of type } 1 { and are indistinguishable from each other} $$
+
+$$ n_2 \text{ are of type } 2 { and are indistinguishable from each other} $$
+
+$$ \vdots $$
+
+$$ n_k \text{ are of type } k { and are indistinguishable from each other} $$
+
+and suppose that $n_1 + n_1 + \cdots + n_k = n$. Then the number of
+distinguishable permutations of the $n$ objects is
+
+$$ \binom{n}{n_1}\binom{n - n_1}{n_2}\binom{n - n_1 - n_2}{n_3} \cdots \binom{n - n_1 - n_2 - \cdots - n_{k - 1}}{n_k} $$
