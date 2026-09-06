@@ -5281,3 +5281,160 @@ total number of five-card poker hands with two pairs is
 $13 \cdot 6 \cdot 12 \cdot 6 \cdot 44 = 247,104$."
 
 Omitted.
+
+---
+
+**Exercise Set 9.6**
+
+1.
+
+a. According to Theorem 9.6.1, how many 5-combinations with repetition allowed
+can be chosen from a set of three elements?
+
+b. List all of the 5-combinations that can be chosen with repetition allowed
+from the set $\{1, 2, 3\}$.
+
+2.
+
+a. According to Theorem 9.6.1, how many multisets of size four can be chosen
+from a set of three elements?
+
+b. List all of the multisets of size four that can be chosen from the set
+$\{x, y, z\}$.
+
+3. A bakery produces six different kinds of pastry, one of which is eclairs.
+   Assume that there are at least 20 pastries of each kind.
+
+a. How many different selections of twenty pastries are there?
+
+b. How many different selections of twenty pastries are there if at least three
+must be eclairs?
+
+c. How many different selections of twenty pastries contain at most two eclairs?
+
+4. A camera shop stocks eight different types of batteries, one of which is type
+   A76. Assume there are at least 30 batteries of each type.
+
+a. How many ways can a total inventory of 30 batteries be distributed among the
+eight different types?
+
+b. How many ways can a total inventory of 30 batteries be distributed among the
+eight different types if the inventory must include at least four A76 batteries?
+
+c. How many ways can a total inventory of 30 batteries be distributed among the
+eight different types if the inventory includes at most three A76 batteries?
+
+5. If $n$ is a positive integer, how many 4-tuples of integers from $1$ through
+   $n$ can be formed in which the elements of the 4-tuple are written in
+   increasing order but are not necessarily distinct? In other words, how many
+   4-tuples of integers ($i, j, k, m$) are there with
+   $1 \leq i \leq j \leqq k \leq m \leq n$?
+
+6. If $n$ is a positive integer, how many 5-tuples of integers from $1$ through
+   $n$ can be formed in which the elements of the 5-tuple are written in
+   decreasing order but are not necessarily distinct? In other words, how many
+   5-tuples of integers ($h, i, j, k, m$) are there with
+   $n \geq h \geq i \geq j \geq k \geq m \geq 1$?
+
+7. Another way to count the number of nonnegative integral solutions to an
+   equation of the form $x_1 + x_2 + \cdots + x_n = m$ is to reduce the problem
+   to one of finding the number of $n$-tuples ($y_1, y_2, \dots, y_n$) with
+   $0 \leq y_1 \leq y_2 \leq \cdots \leq y_n \leq m$. The reduction results from
+   letting $y_i = x_1 + x_2 + \cdots + x_i$ for each $i = 1, 2, \dots, n$. Use
+   this approach to derive a general formula for the number of nonnegative
+   integral solutions to $x_1 + x_2 + \cdots + x_n = m$.
+
+In 8 and 9, how many times will the innermost loop be iterated when the
+algorithm segment is implemented and run? Assume $n$, $m$, $k$, and $j$ are
+positive integers.
+
+8.
+
+$\textbf{for } m := 1 \textbf{ to } n\\ \ \ \textbf{for } k := 1 \textbf{ to } m\\ \ \ \ \ \textbf{for } j := 1 \textbf{ to } k\\ \ \ \ \ \ \ \textbf{for } i := 1 \textbf{ to } j\\ \ \ \ \ \ \ \ \ \textit{[Statements in the body of the inner}\\ \ \ \ \ \ \ \ \ \textit{loop, none containing branching}\\ \ \ \ \ \ \ \ \ \textit{statements that lead outside the}\\ \ \ \ \ \ \ \ \ \textit{loop]}\\ \ \ \ \ \ \ \textbf{next } i\\ \ \ \ \ \textbf{next } j\\ \ \ \textbf{next } k\\ \textbf{next } m$
+
+9.
+
+$\textbf{for } k := 1 \textbf{ to } n\\ \ \ \textbf{for } j := k \textbf{ to } n\\ \ \ \ \ \textbf{for } i := j \textbf{ to } n\\ \ \ \ \ \ \ \textit{[Statements in the body of the inner}\\ \ \ \ \ \ \textit{loop, none containing branching}\\ \ \ \ \ \ \textit{statements that lead outside the loop]}\\ \ \ \ \ \ \ \textbf{next } i\\ \ \ \ \ \textbf{next } j\\ \textbf{next } k$
+
+In 10-14, find how many solutions there are to the given equation that satisfy
+the given condition.
+
+10. $x_1 + x_2 + x_3 = 30$, each $x_i$ is a nonnegative integer.
+
+11. $x_1 + x_2 + x_3 = 20$, each $x_i$ is a positive integer.
+
+12. $y_1 + y_1 + y_3 + y_4 = 30$, each $y_i$ is a nonnegative integer.
+
+13. $y_1 + y_2 + y_3 + y_4 = 30$, each $y_i$ is an integer that is at least $2$.
+
+14. $a + b + c + d + e = 500$, each of $a, b, c, d$, and $e$ is an integer that
+    is at least $10$.
+
+15. For how many integers from 1 through 99,999 is the sum of their digits equal
+    to 10?
+
+16. Consider the situation in Example 9.6.2.
+
+a. Suppose the store has only six cans of lemonade but at least 15 cans of each
+of the other four types of soft drink. In how many different ways can fifteen
+cans of soft drink be selected?
+
+b. Suppose that the store has only five cans of root beer and only six cans of
+lemonade but at least 15 cans of each of the other three types of soft drink. In
+how many different ways can fifteen cans of soft drink be selected?
+
+17.
+
+a. A store sells 8 colors of balloons with at least 30 of each color. How many
+different combinations of 30 balloons can be chosen?
+
+b. If the store has only 12 red balloons but at least 30 of each other color of
+balloon, how many combinations of balloons can be chosen?
+
+c. If the store has only 8 blue balloons but at least 30 of each other color of
+balloon, how many combinations of balloons can be chosen?
+
+d. If the store has only 12 red balloons and only 8 blue balloons but at least
+30 of each other color of balloon, how many combinations of balloons can be
+chosen?
+
+18. A large pile of coins consists of pennies, nickels, dimes, and quarters.
+
+a. How many different collections of 30 coins can be chosen if there are at
+least 30 of each kind of coin?
+
+b. If the pile contains only 15 quarters but at least 30 of each other kind of
+coin, how many collections of 30 coins can be chosen?
+
+c. If the pile contains only 20 dimes but at least 30 of each other kind of
+coin, how many collections of 30 coins can be chosen?
+
+d. If the pile contains only 15 quarters and only 20 dimes but at least 30 of
+each other kind of coin, how many collections of 30 coins can be chosen?
+
+19. Suppose the bakery in exercise 3 has only ten eclairs but has at least
+    twenty of each of the other kind of pastry.
+
+a. How many different selections of twenty pastries are there?
+
+b. Suppose in addition to having only ten eclairs, the bakery has only eight
+napoleon slices. How many different selections of twenty pastries are there?
+
+20. Suppose the camera shop in exercise 4 can obtain at most ten A76 batteries
+    but can get at least 30 of each of the other types.
+
+a. How many ways can a total inventory of 30 batteries be distributed among the
+eight different types?
+
+b. Suppose that in addition to being able to obtain only ten A76 batteries, the
+store can get only six of type D303. How many ways can a total inventory of 30
+batteries be distributed among the eight different types?
+
+21. Observe that the number of columns in the trace table for Example 9.6.4 can
+    be expressed as the sum
+
+$$ 1 + (1 + 2) + (1 + 2 +  3) + \cdots + (1 + 2 + \cdots + n) $$
+
+Explain why this is so, and show how this sum simplifies to the same expression
+given in the solution of Example 9.6.4 (_Hint:_ A formula from exercise 13 in
+Section 5.2 will be helpful.)

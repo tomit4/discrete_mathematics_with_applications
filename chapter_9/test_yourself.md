@@ -138,3 +138,31 @@ $\dbinom{n}{r} =\dfrac{P(n, r)}{r!} $
    ____.
 
 $n$ or more, $n$ or fewer
+
+---
+
+Page 662
+
+**Test Yourself**
+
+1. Given a set $X = \{x_1, x_2, \dots, x_n\}$, an $r$-combination with
+   repetition allowed, or a multiset of size $r$, chosen from $X$ is ____, which
+   is denoted ____.
+
+2. If $X = \{x_1, x_2, \dots, x_n\}$, the number of $r$-combinations with
+   repetition allowed (or multisets of size $r$) chosen from $X$ is ____.
+
+3. When choosing $k$ elements from a set of $n$ elements, order may or may not
+   matter and repetition may or may not be allowed.
+
+- The number of ways to choose the $k$ elements when repetition is allowed and
+  order matters is ____.
+
+- The number of ways to choose the $k$ elements when repetition is not allowed
+  and order matters is ____.
+
+- The number of ways to choose the $k$ elements when repetition is not allowed
+  and order does not matter is ____.
+
+- The number of ways to choose the $k$ elements when repetition is allowed and
+  order does not matter is ____.

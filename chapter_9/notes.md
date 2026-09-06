@@ -340,15 +340,42 @@ Page 652
 
 Suppose a collection consists of $n$ objects of which
 
-$$ n_1 \text{ are of type } 1 { and are indistinguishable from each other} $$
+$$ n_1 \text{ are of type } 1 \text{ and are indistinguishable from each other} $$
 
-$$ n_2 \text{ are of type } 2 { and are indistinguishable from each other} $$
+$$ n_2 \text{ are of type } 2 \text{ and are indistinguishable from each other} $$
 
 $$ \vdots $$
 
-$$ n_k \text{ are of type } k { and are indistinguishable from each other} $$
+$$ n_k \text{ are of type } k \text{ and are indistinguishable from each other} $$
 
 and suppose that $n_1 + n_1 + \cdots + n_k = n$. Then the number of
 distinguishable permutations of the $n$ objects is
 
 $$ \binom{n}{n_1}\binom{n - n_1}{n_2}\binom{n - n_1 - n_2}{n_3} \cdots \binom{n - n_1 - n_2 - \cdots - n_{k - 1}}{n_k} $$
+
+---
+
+Page 657
+
+**Definition and Notation**
+
+An _$r$-combination with repetition allowed_, or _multiset of size $r$_, chosen
+from a set $X$ of $n$ elements is an unordered selection of elements taken from
+$X$ with repetition allowed. If $X = \{x_1, x_2, \dots, x_n\}$, we write an
+$r$-combination with repetition allowed, or multiset of size $r$, as
+$[x_{i_1}, x_{i_2}, \dots, x_{i_r}]$ where $x_{i_j}$ is in $X$ and some of the
+$x_{i_j}$ may equal each other.
+
+---
+
+Page 659
+
+**Theorem 9.6.1**
+
+The number of $r$-combinations with repetition allowed (or multisets of size
+$r$) that can be selected from a set of $n$ elements is
+
+$$ \binom{r + n - 1}{r} $$
+
+This equals the number of ways $r$ objects can be selected from $n$ categories
+of objects with repetition allowed.
