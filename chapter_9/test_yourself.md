@@ -117,14 +117,24 @@ Page 653
 **Test Yourself**
 
 1. The number of subsets of size $r$ that can be formed from a set with $n$
-   elements is denoted ****, which is read as "****."
+   elements is denoted ____, which is read as " ____ ."
+
+$\dbinom{n}{r}$; $n$ choose $r$
 
 2. The number of $r$-combinations of a set of $n$ elements is ____.
+
+$\dbinom{n}{r}$
 
 3. Two unordered selections are said to be the same if the elements chosen are
    the same, regardless of ____.
 
+the order in which they are chosen
+
 4. A formula relating $\dbinom{n}{r}$ and $p(n, r)$ is ____.
+
+$\dbinom{n}{r} =\dfrac{P(n, r)}{r!} $
 
 5. The phrase "at least $n$" means ____, and the phrase "at most $n$" means
    ____.
+
+$n$ or more, $n$ or fewer

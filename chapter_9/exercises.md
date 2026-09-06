@@ -4348,98 +4348,333 @@ Page 653
 a. List all $2$-combinations for the set $\{x_1, x_2, x_3\}$. Deduce the value
 of $\dbinom{3}{2}$.
 
+_All $2$-combinations:_
+
+$$ \{x_1, x_2\}, \{x_1, x_3\}, \{x_2, x_3\} $$
+
+The value of $\dbinom{3}{2}$:
+
+by part (a), $\dbinom{3}{2} = 3$.
+
 b. List all unordered selections of four elements from the set
 $\{a, b, c, d, e\}$. Deduce the value of $\dbinom{5}{4}$.
+
+$$ \{a, b, c, d\}, \{a, b, c, e\}, \{a, b, d, e\}, \{a, c, d, e\}, \{b, c, d, e\} $$
+
+Hence, $\dbinom{5}{4} = 5$.
 
 2.
 
 a. List all $3$-combinations for the set $\{x_1, x_2, x_3, x_4, x_5\}$. Deduce
 the value of $\dbinom{5}{3}$.
 
+$$ \{x_1, x_2, x_3\}, \{x_1, x_2, x_4\}, \{x_1, x_2, x_5\}, \{x_1, x_3, x_4\}, \{x_1, x_3, x_5\}, \{x_1, x_4, x_5\}, \{x_2, x_3, x_4\}, \{x_2, x_3, x_5\}, \{x_2, x_4, x_5\}, \{x_3, x_4, x_5\} $$
+
+Hence $\dbinom{5}{3} = 10$.
+
 b. List all unordered selections of two elements from the set
 $\{x_1, x_2, x_3, x_4, x_5, x_6\}$. Deduce the value of $\dbinom{6}{2}$.
 
+$$ \{x_1, x_2\}, \{x_1, x_3\}, \{x_1, x_4\}, \{x_1, x_5\}, \{x_1, x_6\}, \{x_2, x_3\}, \{x_2, x_4\}, \{x_2, x_5\}, \{x_2, x_6\}, \{x_3, x_4\}, \{x_3, x_5\}, \{x_3, x_6\}, \{x_4, x_5\}, \{x_4, x_6\}, \{x_5, x_6\} $$
+
+Hence $\dbinom{6}{2} = 15$.
+
 3. Write an equation relating $P(7, 2)$ and $\dbinom{7}{2}$.
 
+$$ P(7, 2) = \binom{7}{2} \cdot 2! $$
+
 4. Write an equation relating $P(8, 3)$ and $\dbinom{8}{3}$.
+
+$$ P(8, 3) = \binom{8}{3} \cdot 3! $$
 
 5. Use Theorem 9.5.1 to compute each of the following.
 
 a. $\dbinom{6}{0}$
 
+$$ \binom{6}{0} = \frac{6!}{0!(6 - 0)!} $$
+
+$$ = \frac{6!}{6!} $$
+
+$$ = 1 $$
+
 b. $\dbinom{6}{1}$
+
+$$ \binom{6}{1} = \frac{6!}{1!(6 - 1)!} $$
+
+$$ = \frac{6 \cdot 5!}{5!} $$
+
+$$ = \frac{6 \cdot \cancel{5!}}{\cancel{5!}} $$
+
+$$ = 6 $$
 
 c. $\dbinom{6}{2}$
 
+$$ \binom{6}{2} = \frac{6!}{2!(6 - 2)!} $$
+
+$$ = \frac{6 \cdot 5 \cdot 4!}{2! \cdot 4!} $$
+
+$$ = \frac{6 \cdot 5 \cdot \cancel{4!}}{2! \cdot \cancel{4!}} $$
+
+$$ = \frac{6 \cdot 5}{2} $$
+
+$$ = \frac{30}{2} $$
+
+$$ = 15 $$
+
 d. $\dbinom{6}{3}$
+
+$$ \binom{6}{3} = \frac{6!}{3!(6 - 3)!} $$
+
+$$ = \frac{6 \cdot 5 \cdot 4 \cdot 3!}{3! \cdot 3!} $$
+
+$$ = \frac{\cancel{6} \cdot 5 \cdot 4 \cdot \cancel{3!}}{\cancel{6} \cdot \cancel{3!}} $$
+
+$$ = 5 \cdot 4 $$
+
+$$ = 20 $$
 
 e. $\dbinom{6}{4}$
 
+$$ \binom{6}{4} = \frac{6!}{4!(6 - 4)!} $$
+
+$$ = \frac{6 \cdot 5 \cdot 4!}{4! \cdot 2!} $$
+
+$$ = \frac{6 \cdot 5 \cdot \cancel{4!}}{\cancel{4!} \cdot 2} $$
+
+$$ = \frac{6 \cdot 5}{2} $$
+
+$$ = \frac{30}{2} $$
+
+$$ = 15 $$
+
 f. $\dbinom{6}{5}$
 
+$$ \binom{6}{5} = \frac{6!}{5!(6 - 5)!} $$
+
+$$ = \frac{6!}{5! \cdot 1!} $$
+
+$$ = \frac{6 \cdot 5!}{5! \cdot 1} $$
+
+$$ = \frac{6 \cdot \cancel{5!}}{\cancel{5!} \cdot 1} $$
+
+$$ = 6 $$
+
 g. $\dbinom{6}{6}$
+
+$$ \binom{6}{6} = \frac{6!}{6!(6 - 6)!} $$
+
+$$ = \frac{6!}{6! \cdot 1!} $$
+
+$$ = \frac{\cancel{6!}}{\cancel{6!} \cdot 1} $$
+
+$$ = 1 $$
 
 6. A student council consists of 15 students.
 
 a. In how many ways can a committee of six be selected from the membership of
 the council?
 
+$$ \binom{15}{6} = \frac{15!}{6!(15 - 6)!} $$
+
+$$ = \frac{15!}{6! \cdot 9!} $$
+
+$$ = \frac{15 \cdot 14 \cdot 13 \cdot 12 \cdot 11 \cdot 10 \cdot 9!}{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1! \cdot 9!} $$
+
+$$ = \frac{\cancel{15} \cancel{3} \cdot \cancel{14} 7 \cdot 13 \cdot \cancel{12} 3 \cdot 11 \cdot 10 \cdot \cancel{9!}}{6 \cdot \cancel{5} \cdot \cancel{4} \cdot \cancel{3} \cdot \cancel{2} \cdot 1! \cdot \cancel{9!}} $$
+
+$$ = \frac{7 \cdot 13 \cdot 3 \cdot 11 \cdot 10}{6 \cdot 1} $$
+
+$$ = \frac{7 \cdot 13 \cdot 3 \cdot 11 \cdot 10}{6} $$
+
+$$ = 5005 $$
+
 b. Two council members have the same major and are not permitted to serve
 together on a committee. How many ways can a committee of six be selected from
 the membership of the council?
+
+Let $A$ and $B$ be council members with the same major.
+
+Then:
+
+$$ \text{the number of committees of six that can be selected from the membership of the council } = \text{the number of committees + A and not B} + \text{the number of committees + B and not A} + \text{the number of committees with neither A nor B} $$
+
+$$ = \binom{13}{5} + \binom{13}{5} + \binom{13}{6} $$
+
+$$ = 1287 + 1287 + 1716 $$
+
+$$ = 4290 $$
 
 c. Two council members always insist on serving on committees together. If they
 can't serve together, they won't serve at all. How many ways can a committee of
 six be selected from the council membership?
 
+Let $A$ and $B$ be the council members that insist on serving on committees
+together.
+
+Then:
+
+$$ \text{the number of ways a committee of six can be selected from the council membership } = \text{the number of committees that have both A and B} + \text{the number of committees that have neither A nor B} $$
+
+$$ = \binom{13}{4} + \binom{13}{6} $$
+
+$$ = 715 + 1716 $$
+
+$$ = 2431 $$
+
 d. Suppose the council contains eight men and seven women.
 
     i. How many committees of six contain three men and three women?
 
-    ii. How many committees  of six contain at least one woman?
+$$ = \text{the number of commitees with 3 men } + \text{ the number of committees with 3 women} $$
+
+$$ = \binom{8}{3} \cdot \binom{7}{3} $$
+
+$$ = 56 + 35 $$
+
+$$ = 91 $$
+
+    ii. How many committees of six contain at least one woman?
+
+$$ = \text{the number of possible committees } - \text{the number of commitees with all men} $$
+
+$$ = \binom{15}{6} - \binom{8}{6} $$
+
+$$ = 5005 - 28 $$
+
+$$ = 4977 $$
 
 e. Suppose the council consists of three freshmen, four sophomores, three
 juniors, and five seniors. How many committees of eight contain two
 representatives from each class?
 
+$$ = \text{the number of ways to choose two freshmen } \cdot \text{ the number of ways to choose two sophomores } \cdot \text{ the number of ways to choose two juniors } \cdot \text{ the number of ways to choose two seniors } $$
+
+$$ = \binom{3}{2} \cdot \binom{4}{2} \cdot \binom{3}{2} \cdot \binom{5}{2} $$
+
+$$ = 3 \cdot 6 \cdot 3 \cdot 10 $$
+
+$$ = 540 $$
+
 7. A computer programming team has 13 members.
 
 a. How many ways can a group of seven be chosen to work on a project?
+
+$$ \binom{13}{7} = 1716 $$
 
 b. Suppose seven team members are women and six are men.
 
     i. How many groups of seven can be chosen that contain four women and three men?
 
+$$ = \binom{7}{4} \cdot \binom{6}{3} $$
+
+$$ = 35 \cdot 20 $$
+
+$$ = 700 $$
+
     ii. How many groups of seven can be chosen that contain at least one man?
 
+$$ = \binom{13}{7} - \binom{7}{7} $$
+
+$$ = 1716 - 1 $$
+
+$$ = 1715 $$
+
     iii. How many groups of seven can be chosen that contain at most three women?
+
+$$ = \binom{7}{1}\binom{6}{6} + \binom{7}{2}\binom{6}{5} + \binom{7}{3}\binom{6}{4}  $$
+
+$$ = (7)(1) + (21)(6) + (35)(15) $$
+
+$$ = 7 + 126 + 525 $$
+
+$$ = 658 $$
 
 c. Suppose two team members refuse to work together on projects. How many groups
 of seven can be chosen to work on a project?
 
+Let $A$ and $B$ be the two team members that refuse to work together.
+
+The sum will be the number of teams with $A$ and not $B$ + the number of teams
+with $B$ and not $A$ + the number of teams with neither $A$ nor $B$.
+
+$$ = \binom{11}{6} + \binom{11}{6} + \binom{11}{7} $$
+
+$$ = 462 + 462 + 330 $$
+
+$$ = 1254 $$
+
 d. Suppose two team members insist on either working together or not at all on
 projects. How many groups of seven can be chosen to work on a project?
+
+Let $A$ and $B$ be the two team members that insist on either working together
+or not at all.
+
+The sum is the number of teams with both $A$ and $B$ + the number of teams with
+neither $A$ nor $B$.
+
+$$ = \binom{11}{5} + \binom{11}{7} $$
+
+$$ = 462 + 330 $$
+
+$$ = 792 $$
 
 8. An instructor gives an exam with fourteen questions. Students are allowed to
    choose any ten to answer.
 
 a. How many different choices of ten questions are there?
 
+$$ \binom{14}{10} = 1001  $$
+
 b. Suppose six questions require proof and eight do not.
 
     i. How many groups of ten questions contain four that require proof and six that do not?
 
+$$ = \binom{6}{4} \cdot \binom{8}{6} $$
+
+$$ = 15 \cdot 28 $$
+
+$$ = 420 $$
+
     ii. How many groups of ten questions contain at least one that requires proof?
 
+All 1001 require proof, because there are only 8 non-proof questions, so 2 more
+questions are needed for 10 questions, which have to be proof questions.
+
     iii. How many groups of ten questions contain at most three that require proof?
+
+There must be at least two proof questions (total questions is 10, maximum no
+proof questions is 8.)
+
+$$ = \binom{6}{2}\binom{8}{8} + \binom{6}{3}\binom{8}{7} $$
+
+$$ = (15)(1) + (20)(8) $$
+
+$$ = 175 $$
 
 c. Suppose the exam instructions specify that at most one of the questions 1 and
 2 may be included among the ten. How many different choices of ten questions are
 there?
 
+Sum is question 1 is included but not 2 + question 2 is included but not 1 +
+neither.
+
+$$ = \binom{12}{9} + \binom{12}{9} + \binom{12}{10} $$
+
+$$ = 220 + 220 + 66 $$
+
+$$ 506 $$
+
 d. Suppose the exam instructions specify that either both questions 1 and 2 are
 to be included among the ten or neither is to be included. How many different
 choices of ten questions are there?
+
+Sum is question 1 and question 2 are included + neither.
+
+$$ = \binom{12}{8} + \binom{12}{10} $$
+
+$$ = 495 + 66 $$
+
+$$ = 561 $$
 
 9. A club is considering changing its bylaws. In an initial straw vote on the
    issue, 24 of the 40 members of the club favored the change and 16 did not. A
@@ -4449,8 +4684,16 @@ choices of ten questions are there?
 a. What is the total number of committees of six that can be formed from the
 club membership?
 
+$$ \binom{40}{6} = 3,838,380 $$
+
 b. How many of the total number of committees will contain at least three club
 members who, in the preliminary survey, favored the change in the bylaws?
+
+$$ = \binom{24}{3}\binom{16}{3} + \binom{24}{4}\binom{16}{2} + \binom{24}{5}\binom{16}{1} + \binom{24}{6}\binom{16}{0} $$
+
+$$ = (2024)(560) + (10626)(120) + (42504)(16) + (134596)(1) $$
+
+$$ = 3,223,220 $$
 
 10. Two new drugs are to be tested using a group of 60 laboratory mice, each
     tagged with a number for identification purposes. Drug $A$ is to be given to
@@ -4459,31 +4702,69 @@ members who, in the preliminary survey, favored the change in the bylaws?
     to mice be made? (A single assignment involves specifying the treatment for
     each mouse - whether drug $A$, drug $B$, or no drug.)
 
+$$ = \binom{60}{22}\binom{38}{22}\binom{16}{16} $$
+
+$$ = \binom{60}{22}\binom{38}{22} $$
+
+$$ = 3.147908286 \times 10^{26} $$
+
 11. Refer to Example 9.5.9. For each poker holding below, (1) find the number of
     five-card poker hands with that holding; (2) find the probability that a
     randomly chosen set of five cards has that holding.
 
 a. royal flush
 
+Omitted.
+
 b. straight flush
+
+Omitted.
 
 c. four of a kind
 
+Omitted.
+
 d. full house
+
+Omitted.
 
 e. flush
 
+Omitted.
+
 f. straight (including a straight flush and a royal flush)
+
+Omitted.
 
 g. three of a kind
 
+Omitted.
+
 h. one pair
+
+Omitted.
 
 i. neither a repeated denomination nor five of the same suit nor five adjacent
 denominations
 
+Omitted.
+
 12. How many pairs of two distinct integers chosen from the set
     $\{1, 2, 3, \dots, 101\}$ have a sum that is even?
+
+There are 51 odd numbers in the set, and 50 even numbers in the set.
+
+Either two even numbers sum to an even number or two odd numbers sum to an even
+number.
+
+The total pairs of even numbers is $\dbinom{50}{2}$, and the total pairs of odd
+numbers is $\dbinom{51}{2}$. Thus the amount of pairs that sum to even are:
+
+$$ = \binom{50}{2} + \binom{51}{2} $$
+
+$$ = 1225 + 1275 $$
+
+$$ = 2500 $$
 
 13. A coin is tossed ten times. In each case the outcome _H_ (for heads) or _T_
     (for tails) is recorded. (One possible outcome of the ten tosses is denoted
@@ -4491,23 +4772,81 @@ denominations
 
 a. What is the total number of possible outcomes of the coin-tossing experiment?
 
+$$ 2^{10} = 1024 $$
+
 b. In how many of the possible outcomes are exactly five heads obtained?
+
+$$ = \binom{10}{5}\binom{5}{5} $$
+
+$$ = (252)(1) $$
+
+$$ = 252 $$
 
 c. In how many of the possible outcomes are at least eight heads obtained?
 
+$$ = \binom{10}{8} + \binom{10}{9} + \binom{10}{10} $$
+
+$$ = 45 + 10 + 1 $$
+
+$$ = 56 $$
+
 d. In how many of the possible outcomes is at least one head obtained?
 
+All possible outcomes - no heads.
+
+$$ = 1024 - \binom{10}{10} $$
+
+$$ = 1024 - 1 $$
+
+$$ = 1023 $$
+
 e. In how many of the possible outcomes is at most one head obtained?
+
+One head + no heads.
+
+$$ = \binom{10}{9} + \binom{10}{10} $$
+
+$$ = 10 + 1 $$
+
+$$ = 11 $$
 
 14.
 
 a. How many 16-bit strings contain exactly seven 1's?
 
+$$ = \binom{16}{7}\binom{9}{9} $$
+
+$$ = (11440)(1) $$
+
+$$ = 11440 $$
+
 b. How many 16-bit strings contain at least thirteen 1's?
+
+$$ = \binom{16}{13} + \binom{16}{14} + \binom{16}{15} + \binom{16}{16} $$
+
+$$ = 560 + 120 + 16 + 1 $$
+
+$$ = 697 $$
 
 c. How many 16-bit strings contain at least one 1?
 
+All sixteen bit strings - strings that contain at least one 1.
+
+$$ = 2^{16} - \binom{16}{16} $$
+
+$$ = 65536 - 1 $$
+
+$$ = 65535 $$
+
 d. How many 16-bit strings contain at most one 1?
+
+16-bit strings that contain no 1 + 16-bit strings that contain one 1.
+
+$$ = \binom{16}{0} + \binom{16}{1} $$
+
+$$ = 1 + 16 $$
+
+$$ = 17 $$
 
 15.
 
@@ -4515,70 +4854,160 @@ a. How many even integers are in the set
 
 $$ \{1, 2, 3, \dots, 100\} $$
 
+50.
+
 b. How many odd integers are in the set
 
 $$ \{1, 2, 3, \dots, 100\} $$
 
+50.
+
 c. How many ways can two integers be selected from the set
 $\{1, 2, 3, \dots, 100\}$ so that their sum is even?
 
+$$ = \binom{50}{2} + \binom{50}{2}  $$
+
+$$ = 1225 + 1225 $$
+
+$$ = 2450 $$
+
 d. How many ways can two integers be selected from the set
 $\{1, 2, 3, \dots, 100\}$ so that their sum is odd?
+
+Total number of ways to choose - total number of ways to choose even.
+
+$$ = \binom{100}{2} - 2450 $$
+
+$$ = 4950 - 2450 $$
+
+$$ = 2500 $$
 
 16. Suppose that three microchips in a production run of forty are defective. A
     sample of five is to be selected to be checked for defects.
 
 a. How many different samples can be chosen?
 
+$$ \binom{40}{5} = 658,008 $$
+
 b. How many samples will contain at least one defective chip?
+
+Total samples - samples with defective chip:
+
+$$ = \binom{40}{5} - \binom{37}{5} $$
+
+$$ = 658008 - 435897 $$
+
+$$ = 222,111 $$
 
 c. What is the probability that a randomly chosen sample of five contains at
 least one defective chip?
+
+$$ = \frac{222111}{658008} $$
+
+$$ \approx 33.8\% $$
 
 17. Ten points labeled $A, B, C, D, E, F, G, H, I, J$ are arranged in a plane in
     such a way that no three lie on the same straight line.
 
 a. How many straight lines are determined by the ten points?
 
+$$ = \binom{10}{2} = 45 $$
+
 b. How many of these straight lines do not pass through point $A$?
+
+$$ = \binom{9}{2} = 36 $$
 
 c. How many triangles have three of the ten points as vertices?
 
+$$ \binom{10}{3} = 120 $$
+
 d. How many of these triangles do not have point $A$ as a vertex?
+
+$$ \binom{9}{3} =  84 $$
 
 18. Suppose that you place the letters in Example 9.5.11 into positions in the
     following order: first the $M$, then the $I$'s, then the $S$'s, and then the
     $P$'s. Show that you would obtain the same answer for the number of
     distinguishable orderings.
 
+**Proof:**
+
+MISSISSIPPI
+
+The answer in the exercise was 34650. Now:
+
+Choose a position for the M: $\dbinom{11}{1} = 11$.
+
+Choose a position for the I's: $\dbinom{10}{4} = 210$.
+
+Choose a position for the S's: $\dbinom{6}{4} = 15$.
+
+Choose a position for the P's: $\dbinom{2}{2} = 1$.
+
+By the product rule:
+
+$$ 11 \cdot 210 \cdot 15 \cdot 1 = 34650 $$
+
+Which confirms the same result of the exercise.
+
+Q.E.D.
+
 19.
 
 a. How many distinguishable ways can the letters of the word _HULLABALOO_ be
 arranged in order?
 
+$$ = \frac{10!}{1! \cdot 1! \cdot 3! \cdot 2! \cdot 1! \cdot 2!} $$
+
+$$ = 151,200 $$
+
 b. How many distinguishable orderings of the letters of _HULLABALOO_ begin with
 _U_ and end with _L_?
 
+$$ = \frac{8!}{1! \cdot 1! \cdot 2! \cdot 2! \cdot 2!} $$
+
+$$ = 5040 $$
+
 c. How many distinguishable orderings of the letters of _HULLABALOO_ contain the
 two letters _HU_ next to each other in order?
+
+$$ = \frac{9!}{1! \cdot 3! \cdot 2! \cdot 1! \cdot 2!} $$
+
+$$ = 15120 $$
 
 20.
 
 a. How many distinguishable ways can the letters of the word _MILLIMICRON_ be
 arranged in order?
 
+$$ = \frac{11!}{2! \cdot 3! \cdot 2! \cdot 1! \cdot 1! \cdot 1! \cdot 1!} $$
+
+$$ = 1,663,200 $$
+
 b. How many distinguishable orderings of the letters of _MILLIMICRON begin with
 _M_ and end with _N_?
+
+$$ = \frac{9!}{1! \cdot 3! \cdot 2! \cdot 1! \cdot 1! \cdot 1!} $$
+
+$$ = 30,240 $$
 
 c. How many distinguishable orderings of the letters of _MILLIMICRON contain the
 two letters _CR_ next to each other in order and also the letters _ON_ next to
 each other in order?
+
+$$ = \frac{9!}{1! \cdot 2! \cdot 3! \cdot 2!} $$
+
+$$ = 15120 $$
 
 21. In Morse code, symbols are represented by variable-length sequences of dots
     and dashes. (For example,
     $A = \cdot \text{ — }, 1 = \cdot \text{ — — — — }, ? = \cdot \cdot \text{ — — } \cdot \cdot$.)
     How many different symbols can be represented by sequences of seven or fewer
     dots and dashes?
+
+$$ = 2^1 + 2^2 + 2^3 + 2^4 + 2^5 + 2^6 + 2^7 $$
+
+$$ = 254 $$
 
 22. Each symbol in the Braille code is represented by a rectangular arrangement
     of six dots, each of which may be raised or flat against a smooth
@@ -4590,10 +5019,21 @@ each other in order?
 Given that at least one of the six dots must be raised, how many symbols can be
 represented in the Braille code?
 
+$$ 2^6 - 1 = 63 $$
+
 23. On an $8 \times 8$ chessboard, a rook is allowed to move any number of
     squares either horizontally or vertically. How many different paths can a
     rook follow from the bottom-left square of the board to the top-right square
     of the board if all moves are to the right or upward?
+
+The rook must move seven squares to the right and seven squares up, so
+
+the number of paths the rook can take = the number of orderings the seven rights
+and seven ups
+
+$$ = \frac{14!}{7! \cdot 7!} $$
+
+$$ = 3432 $$
 
 24. The number 42 has the prime factorization $2 \cdot 3 \cdot 7$. Thus 42 can
     be written in four ways as a product of two positive factors (without regard
@@ -4603,72 +5043,223 @@ represented in the Braille code?
 a. List the distinct ways the number 210 can be written as a product of two
 positive integer factors.
 
+$$ 1 \cdot 210, 2 \cdot 105, 3 \cdot 70, 5 \cdot 42, 6 \cdot 35, 7 \cdot 30, 10 \cdot 21, 14 \cdot 15 $$
+
 b. If $n = p_1p_2p_3p_4$, where $p_i$ are distinct prime numbers, how many ways
 can $n$ be written as a product of two positive integer factors?
+
+Let $S = \{p_1, p_2, p_3, p_4\}$, and let $p_1p_2p_3p_4 = P$. Then, let
+$f_1 \cdot f_2$ be any factorization of $P$. The product of the numbers in any
+subset $A \subseteq S$ can be used for $f_1$, with the product of the numbers in
+$A^c$ being $f_2$. There are as many ways to write $f_1$ as there are subsets of
+$S$, namely, $2^{4} = 16$.
+
+However, because $f_1 \cdot f_2 = f_2 \cdot f_1$, and because two factorizations
+are considered the same regardless of the order in which the factors are
+written, the number of ways to write $P$ as a product of two factors is half the
+nubmer of subsets of $S$. So the answer is $\dfrac{16}{2} = 8$.
 
 c. If $n = p_1p_2p_3p_4p_5$, where $p_i$ are distinct prime numbers, how many
 ways can $n$ be written as a product of two positive integer factors?
 
+By part (b), with some modification:
+
+$$ = \frac{2^{5}}{2} = 2^4 = 16 $$
+
 d. If $n = p_1p_2 \cdots p_k$, where the $p_i$ are distinct prime numbers, how
 many ways can $n$ be written as a product of two positive integer factors?
+
+By parts (b) and \(c\), with some modification:
+
+$$ = \frac{2^k}{2} = 2^{k - 1} $$
 
 25.
 
 a. How many one-to-one functions are there from a set with three elements to a
 set with four elements?
 
+There are 4 choices for the first element, 3 for the second, and 2 for the
+third:
+
+$$ 4 \cdot 3 \cdot 2 = 24 $$
+
 b. How many one-to-one functions are there from a set with three elements to a
 set with two elements?
+
+None, by the definition of function, every input must have an output, and since
+there are three input elements, and two output elements, it follows by the
+pigeonhole principle that at least two inputs must have the same output.
 
 c. How many one-to-one functions are there from a set with three elements to a
 set with three elements?
 
+The first input has 3 possible outputs, the second has 2, and the third has 1:
+
+$$ 3 \cdot 2 \cdot 1 = 6 $$
+
 d. How many one-to-one functions are there from a set with three elements to a
 set with five elements?
 
+The first input has 5 possible outputs, the second input has 4 possible outputs,
+and the third has 3 possible outputs:
+
+$$ 5 \cdot 4 \cdot 3 = 60 $$
+
 e. How many one-to-one functions are there from a set with $m$ elements to a set
 with $n$ elements, where $m \leq n$?
+
+$$ \prod_{k = 0}^{m - 1}{(n - k)} $$
 
 26.
 
 a. How many onto functions are there from a set with three elements to a set
 with two elements?
 
+Let the elements of the domain be called $a$, $b$, and $c$, and the elements of
+the co-domain be called $u$ and $v$. In order for a function from $\{a, b, c\}$
+to $\{u, v\}$ to be onto, two elements of the domain must be sent to $u$ and one
+to $v$, or two elements of the domain must be sent to $v$ and one to $u$. There
+are as many ways to send two elements of the domain to $ur and one to $v$ as
+there are to choose which elements of $\{a, b, c\}$ to send to $u$, namely,
+$\dbinom{3}{2} = 3$. Similarly, there are $\dbinom{3}{2} = 3$ ways to send two
+elements of the domain to $v$ and one to $u$. Therefore, there are $3 + 3 = 6$
+onto functions from a set with three elements to a set with two elements.
+
 b. How many onto functions are there from a set with three elements to a set
 with five elements?
+
+Since there are more elements in the co-domain than there are in the domain,
+there is no function that can be onto, as it requires that all outputs have a
+single input by the definition of onto. Additionally, if a single input results
+in more than one output, it is not a function.
+
+Therefore there are 0 onto functions with three elements in the domain that go
+to five elements in the co-domain.
 
 c. How many onto functions are there from a set with three elements to a set
 with three elements?
 
+The first input can go to 3 potential outputs, the second to 2, and the third to
+1:
+
+$$ = 3 \cdot 2 \cdot 1 = 6 $$
+
 d. How many onto functions are there from a set with four elements to a set with
 two elements?
 
+The first input can go to two different outputs, the second input can go to two
+different outputs, the third input can go to two different outputs, and the
+fourth input can go to two different outputs.
+
+$$ = 2 \cdot 2 \cdot 2 \cdot 2 = 16 $$
+
+But in the situation that all inputs go to one output, then that function would
+not be onto, as there are two outputs, there are two possible ways for all
+inputs to go to one output:
+
+$$ 16 - 2 = 14 $$
+
 e. How many onto functions are there from a set with four elements to a set with
 three elements?
+
+Let $X = \{a, b, c, d\}$ and $Y = \{u, v, w\}$.
+
+Consider that we map $\{a, b, c\}$ onto $\{u, v, w\}$ and then send $d$ to
+$u, v$ or $w$. The functdions in this category can be defined by the following
+two-step process:
+
+_Step 1:_ Construct an onto function from $\{a, b, c\}$ to $\{u, v, w\}$.
+
+_Step 2:_ Choose whether to send $d$ to $u$, $v$, or $w$.
+
+By part \(\c) there are 16 ways to perform this function in the first category.
+
+The second category consists of functions that send $\{a, b, c\}$ to either
+$\{u, v\}$ or $\{u, w\}$, or $$\{v, w\}$, and send $d$ to whichever element in
+the co-domain that is left over. This can be thought of as a three step process:
+
+_Step 1:_ Choose a 2-element subset of the co-domain.
+
+_Step 2:_ Construct an onto function from $\{a, b, c\}$ to the 2-element set
+from Step 1.
+
+_Step 3:_ Send $d$ to whichever element is left over.
+
+There are $\dbinom{3}{2} = 3$ ways to perform step 1, then by part (a) there are
+6 ways to perform step 2. There is only one way to perform step 3 since there is
+no choice. So there are $6 \cdot 3 \cdot 1 = 18$ onto functions in this
+category.
+
+Notice that the two categories are disjoint. Every onto function $X \to Y$
+either sends at least two elements to the image of $d$ or it does not. If it
+does, then it belongs to the first category. If it does not, then it belongs to
+the second category.
+
+So there are $18 + 18 = 36$ onto functions from a set of 4 elements to a set of
+3 elements.
 
 f. Let $c_{m, n}$ be the number of onto functions from a set of $m$ elements to
 a set of $n$ elements, where $m \geq n \geq 1$. Find a formula relating
 $c_{m, n}$ to $c_{m - 1, n}$ and $c_{m - 1, n - 1}$.
 
+Omitted.
+
 27. Let $A$ be a set with eight elements.
 
 a. How many relations are there on $A$?
 
+A relation on $A$ is any subset of $A \times A$.
+
+So there are $2^{8 \cdot 8}$ relations on $A$, since there are eight elements in
+$8$ and $64$ elements in $A \times A$.
+
 b. How many relations on $A$ are reflexive?
+
+A reflexive relation is any subset of $A \times A$ that contains
+$\{(a, a) | a \in A\}$. Since there are $8^2 = 64$ elements in $A \times A$ and
+there are $8$ reflexive pairs in $A \times A$, there are as many reflexive
+relations as there are subsets of a $64 - 8 = 56$ element set. So there are
+$2^{56}$ reflexive relations.
 
 c. How many relations on $A$ are symmetric?
 
+A symmetric relation is any subset of $A \times A$ that contains
+$(a, b) | (b, a) \in A \times A$ where $a \neq b$.
+
+Since $a \neq b$, we cannot include the reflexive pairs in our set, so:
+
+$$ 64 - 8 = 56 $$
+
+Then, since every remaining pair has a symmetric counterpart, it follows that
+only half of the remaining pairs can be counted as symmetric:
+
+$$ \frac{56}{2} = 28 $$
+
+Thus there are $2^{28}$ such sets minus the reflexive sets.
+
+However, the reflexive sets are symmetric, just that because there elements
+aren't distinct, they don't have to be halved in the previous step. So multiply
+$2^8$ back in:
+
+$$ 2^{28} \cdot 2^{8} = 2^{36}  $$
+
 d. How many relations on $A$ are both reflexive and symmetric?
+
+$$ 2^{28} $$
 
 28. A student council consists of three freshmen, four sophomores, four juniors,
     and five seniors. How many committees of eight members of the council
     contain at least one member from each class?
+
+Omitted.
 
 29. An alternative way to derive Theorem 9.5.1 uses the following _division
     rule:_ Let $n$ and $k$ be integers so that $k$ divides $n$. If a set
     consists of $n$ elements is divided into subsets that each contain $k$
     elements, then the number of such subsets is $\dfrac{n}{k}$. Explain how
     Theorem 9.5.1 can be derived using the division rule.
+
+Omitted.
 
 30. Find the error in the following reasoning: "Consider forming a poker hand
     with two pairs as a five-step process.
@@ -4688,3 +5279,5 @@ perform step 2, $\dbinom{12}{1}$ ways to perform step 3, $\dbinom{4}{2}$ ways to
 perform step 4, and $\dbinom{44}{1}$ ways to perform step 5. Therefore, the
 total number of five-card poker hands with two pairs is
 $13 \cdot 6 \cdot 12 \cdot 6 \cdot 44 = 247,104$."
+
+Omitted.
