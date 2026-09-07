@@ -5813,3 +5813,230 @@ given in the solution of Example 9.6.4 (_Hint:_ A formula from exercise 13 in
 Section 5.2 will be helpful.)
 
 Omitted.
+
+---
+
+Page 676
+
+**Exercise Set 9.7**
+
+In 1-4, use Theorem 9.5.1 to compute the values of the indicated quantities
+(Assume $n$ is an integer.)
+
+1. $\dbinom{n}{0}$, for $n \geq 0$
+
+2. $\dbinom{n}{1}$, for $n \geq 1$
+
+3. $\dbinom{n}{2}$, for $n \geq 2$
+
+4. $\dbinom{n}{3}$, for $n \geq 3$
+
+5. Use Theorem 9.5.1 to prove algebraically that
+   $\dbinom{n}{r} = \dbinom{n}{n - r}$, for integers $n$ and $r$ with
+   $0 \leq r \leq n$. (This can be done by direct calculation; it is not
+   necessary to use mathematical induction.)
+
+Justify the equations in 6-9 either by deriving them from formulas in Example
+9.7.1 or by direct computation from Theorem 9.5.1. Assume $m$, $n$, $k$, and $r$
+are integers.
+
+6. $\dbinom{m + k}{m + k - 1} = m + k$, for $m + k \geq 1$
+
+7. $\dbinom{n + 3}{n + 1} = \dfrac{(n + 3)(n + 2)}{2}$, for $n \geq -1$
+
+8. $\dbinom{k - r}{k - r} = 1$, for $k - r \geq 0$
+
+9. $\dbinom{2(n + 1)}{2n} = (n + 1)(2n + 1)$, for $n \geq 0$
+
+10.
+
+a. Use Pascal's triangle given in Table 9.7.1 to compute the values of
+$\dbinom{6}{2}$, $\dbinom{6}{3}$, $\dbinom{6}{4}$, and $\dbinom{6}{5}$.
+
+b. Use the result of part (a) and Pascal's formula to compute $\dbinom{7}{3}$,
+$\dbinom{7}{4}$, and $\dbinom{7}{5}$.
+
+c. Complete the row of Pascal's triangle that corresponds to $n = 7$.
+
+11. The row of Pascal's triangle that corresponds to $n = 8$ is as follows:
+
+1 8 28 56 70 56 28 8 1
+
+What is the row that corresponds to $n = 9$?
+
+12. Use Pascal's formula repeatedly to derive a formula for $\dbinom{n + 3}{r}$
+    in terms of values of $\dbinom{n}{k}$ with $k \leq r$. (Assume $n$ and $r$
+    are integers with $n \geq r \geq 3$.)
+
+13. Use Pascal's formula to prove by mathematical induction that if $n$ is an
+    integer and $n \geq 1$, then
+
+$$ \sum_{i = 2}^{n + 1}{\binom{i}{2}} = \binom{2}{2} + \binom{3}{2} + \cdots + \binom{n + 1}{2} $$
+
+:withA
+
+$$ = \binom{n + 2}{3} $$
+
+14. Prove that if $n$ is an integer and $n \geq 1$, then
+
+$$ 1 \cdot 2 + 2 \cdot 3 + \cdots + n(n + 1) = 2\binom{n + 2}{3} $$
+
+15. Prove the following generalization of exercise 13:
+
+Let $r$ be a fixed nonnegative integer. For every integer $n$ with $n \geq r$,
+
+$$ \sum_{i = 2}^{n}{\binom{i}{r}} = \binom{n + 1}{r + 1} $$
+
+16. Think of a set with $m + n$ elements as composed of two parts, one with $m$
+    elements and the other with $n$ elements. Give a combinatorial argument to
+    show that
+
+$$ \binom{m + n}{r} = \binom{m}{0}\binom{n}{r} +\binom{m}{1}\binom{m}{r - 1} + \cdots + \binom{m}{r}\binom{n}{0} $$
+
+where $m$ and $n$ are positive integers and $r$ is an integer that is less than
+or equal to both $m$ and $n$. This identity gives rise to many useful additional
+identities involving the quantities $\dbinom{n}{k}$. Because Alexander
+Vandermonde published an influential article about it in 1772, it is generally
+called the _Vandermonde convolution_. However, it was known at least in the
+1300s in China by Chu Shih-chieh.
+
+17. Prove that for every integer $n \geq 0$,
+
+$$ \binom{n}{0}^2 + \binom{n}{1}^2 + \cdots + \binom{n}{n}^2 = \binom{2n}{n} $$
+
+18. Let $m$ be any nonnegative integer. Use mathematical induction and Pascal's
+    formula to prove that for every integer $n \geq 0$,
+
+$$ \binom{m}{0} + \binom{m + 1}{2} + \cdots + \binom{m + n}{n} = \binom{m + n + 1}{n} $$
+
+Use the binomial theorem to expand the expressions in 19-27.
+
+19. $(1 + x)^7$
+
+20. $(p + q)^6$
+
+21. $(1 - x)^6$
+
+22. $(u - v)^5$
+
+23. $(p - 2q)^4$
+
+24. $(u - 3v)^4$
+
+25. $\left(x + \dfrac{1}{x}\right)^5$
+
+26. $\left(\dfrac{3}{a} - \dfrac{a}{3}\right)^5$
+
+27. $\left(x^2 + \dfrac{1}{x}\right)^5$
+
+28. In Example 9.7.5 it was shown that
+
+$$ (a + b)^5 = a^5 + 5a^4b + 10a^3b^2 + 10a^2b^3 + 5ab^4 + b^5 $$
+
+Evaluate $(a + b)^6$ by substituting the expression above into the equation
+
+$$ (a + b)^6 = (a + b)(a + b)^5 $$
+
+and then multiplying out and combining like terms.
+
+In 29-34, find the coefficient of the given term when the expression is expanded
+by the binomial theorem.
+
+29. $x^6y^3$ in $(x + y)^9$
+
+30. $x^7$ in $(2x + 3)^{10}$
+
+31. $a^5b^7$ in $(a - 2b)^{12}$
+
+32. $u^{16}v^4$ in $(u^2 - v^2)^{10}$
+
+33. $p^{16}q^7$ in $(3p^2 - 2q)^{15}$
+
+34. $x^9y^{10}$ in $(2x - 3y^2)^{14}$
+
+35. As in the proof of the binomial theorem, transform the summation
+
+$$ \sum_{k = 0}^{n}{\binom{m}{k}a^{m - k}b^{k + 1}} $$
+
+by making the change of variable $j = k + 1$.
+
+Use the binomial theorem to prove each statement in 36-41.
+
+36. Fore every integer $n \geq 1$,
+
+$$ \binom{n}{0} - \binom{n}{1} + \binom{n}{2} - \cdots + (-1)^n\binom{n}{n} = 0 $$
+
+(_Hint:_ Use the fact that $1 + (-1) = 0$.)
+
+37. For every integer $n \geq 0$,
+
+$$ 3^n = \binom{n}{0} + 2\binom{n}{1} + 2^2\binom{n}{2} + \cdots + 2^n\binom{n}{n} $$
+
+38. For every integer $m \geq 0$,
+
+$$ \sum_{i = 0}^{m}{(-1)^i\binom{m}{i}2^{m - 1}} = 1 $$
+
+39. For every integer $n \geq 0$,
+
+$$ \sum_{i = 0}^{n}{(-1)^i\binom{n}{i}3^{n - i}} = 2^n $$
+
+40. For every integer $n \geq 0$ and for every nonnegative real number $x$,
+    $1 + nx \leq (1 + x)^n$.
+
+41. For every integer $n \geq 1$,
+
+$$ \binom{n}{0} - \frac{1}{2}\binom{n}{1} + \frac{1}{2^2}\binom{n}{2} - \frac{1}{2^3}\binom{n}{3} + \cdots + (-1)^{n - 1}\frac{1}{2^{n - 1}}\binom{n}{n - 1} = \begin{cases}0 & \text{if } n \text{ is even} \\ \dfrac{1}{2^{n - 1}} & \text{if } n \text{ is odd}\end{cases}$$
+
+42. Use mathematical induction to prove that for every integer $n \geq 1$, if
+    $S$ is a set with $n$ elements, then $S$ has the same number of subsets with
+    an even number of elements as with an odd number of elements. Use this fact
+    to give a combinatorial argument to justify the identity of exercise 36.
+
+Express each of the sums in 43-54 in closed form (without using a summation
+symbol and without using an ellipsis $\dots$).
+
+43. $\sum_{k = 0}^{n}{\binom{n}{k}5^k}$
+
+44. $\sum_{i = 0}^{m}{\binom{m}{i}4^i}$
+
+45. $\sum_{i = 0}^{n}{\binom{n}{i}x^i}$
+
+46. $\sum_{k = 0}^{m}{\binom{m}{k}2^{m - k}x^k}$
+
+47. $\sum_{j = 0}^{2n}{\binom{2n}{j}x^j}$
+
+48. $\sum_{r = 0}^{n}{\binom{n}{r}x^{2r}}$
+
+49. $\sum_{i = 0}^{m}{\binom{m}{i}p^{m - i}q^{2i}}$
+
+50. $\sum_{k = 0}^{n}{\binom{n}{k}\dfrac{1}{2^k}}$
+
+51. $\sum_{i = 0}^{m}{(-1)^i\binom{m}{i}\dfrac{1}{2^i}}$
+
+52. $\sum_{k = 0}^{n}{\binom{n}{k}3^{2n - 2k}2^{2k}}$
+
+53. $\sum_{i = 0}^{m}{(-1)^i\binom{n}{i}5^{n - i}2^i}$
+
+54. $\sum_{k = 0}^{n}{(-1)^k\binom{n}{k}3^{2n - 2k}2^{2k}}$
+
+55. (For students who have studied calculus.)
+
+a. Explain how the equation below follows from the binomial theorem:
+
+$$ (1 + x)^n = \sum_{k = 0}^{n}{\binom{n}{k}x^k} $$
+
+b. Write the formula obtained by taking the derivative of both sides of the
+equation in part (a) with respect to $x$.
+
+c. Use the result of prat (b) to derive the formulas below.
+
+    i.
+
+$$ 2^{n - 1} = \frac{1}{n}\left[\binom{n}{1} + 2\binom{n}{2} + 3\binom{n}{3} + \cdots + n\binom{n}{n}\right] $$
+
+    ii.
+
+$$ \sum_{k = 0}^{n}{k\binom{n}{k}(-1)^k} = 0 $$
+
+d. Express $\sum_{k = 1}^{n}{k\binom{n}{k}3^k}$ in closed form (without using a
+summation sign or ellipsis).

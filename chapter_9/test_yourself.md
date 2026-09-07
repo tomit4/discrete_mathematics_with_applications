@@ -180,3 +180,34 @@ $\dbinom{n}{k}$
   order does not matter is ____.
 
 $\dbinom{k + n - 1}{k}$
+
+---
+
+Page 676
+
+**Test Yourself**
+
+1. If $n$ and $r$ are nonnegative integers with $r \leq n$, then the relation
+   between $\dbinom{n}{r}$ and $\dbinom{n}{n - r}$ is ____.
+
+2. Pascal's formula says that if $n$ and $r$ are positive integers with
+   $r \leq n$, then ____.
+
+3. The crux of the algebraic proof of Pascal's formula is that to add two
+   fractions you need to express both of them with a ____.
+
+4. The crux of the combinatorial proof of Pascal's formula is that the set of
+   subsets of size $r$ of a set $\{x_1, x_2, \dots, x_{n + 1}\}$ can be
+   partitioned into the set of subsets of size $r$ that contain ____ and the set
+   of subsets of size $r$ that ____.
+
+5. The binomial theorem says that given any real numbers $a$ and $b$ and any
+   nonnegative integer, $n$, ____.
+
+6. The crux of the algebraic proof of the binomial theorem is that, after making
+   a change of variable so that the two summations have the same lower and upper
+   limits and the exponents of $a$ and $b$ are the same, you use the fact that
+   $\dbinom{m}{k} + \dbinom{m}{k - 1} =$ ____.
+
+7. The crux of the combinatorial proof of the binomial theorem is that the
+   number of ways to arrange $k$ $b$'s and $(n - k)$ $a$'s in a row is ____.
