@@ -149,8 +149,14 @@ Page 662
    repetition allowed, or a multiset of size $r$, chosen from $X$ is ____, which
    is denoted ____.
 
+an unordered selection of elements taken from $X$ with repetition allowed;
+$[x_{i_1}, x_{i_2}, \dots, x_{i_r}]$ where each $x_{i_j}$ is in $X$ and some of
+the $x_{i_j}$ may equal each other
+
 2. If $X = \{x_1, x_2, \dots, x_n\}$, the number of $r$-combinations with
    repetition allowed (or multisets of size $r$) chosen from $X$ is ____.
+
+$\dbinom{r + n - 1}{r}$
 
 3. When choosing $k$ elements from a set of $n$ elements, order may or may not
    matter and repetition may or may not be allowed.
@@ -158,11 +164,19 @@ Page 662
 - The number of ways to choose the $k$ elements when repetition is allowed and
   order matters is ____.
 
+$n^k$
+
 - The number of ways to choose the $k$ elements when repetition is not allowed
   and order matters is ____.
+
+$P(n, k)$
 
 - The number of ways to choose the $k$ elements when repetition is not allowed
   and order does not matter is ____.
 
+$\dbinom{n}{k}$
+
 - The number of ways to choose the $k$ elements when repetition is allowed and
   order does not matter is ____.
+
+$\dbinom{k + n - 1}{k}$

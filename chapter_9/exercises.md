@@ -5291,26 +5291,84 @@ Omitted.
 a. According to Theorem 9.6.1, how many 5-combinations with repetition allowed
 can be chosen from a set of three elements?
 
+$$ \binom{5 + 3 - 1}{5} = \binom{7}{5} = \frac{7!}{5!(7 - 5)!} $$
+
+$$ = \frac{7!}{5! \cdot 2!} $$
+
+$$ = \frac{7 \cdot \cancel{6} \cdot 3 \cdot \cancel{5!}}{\cancel{5!} \cdot \cancel{2}} $$
+
+$$ = 7 \cdot 3 $$
+
+$$ = 21 $$
+
 b. List all of the 5-combinations that can be chosen with repetition allowed
 from the set $\{1, 2, 3\}$.
+
+$$
+[1, 1, 1, 1, 1], [1, 1, 1, 1, 2], [1, 1, 1, 1, 3], \\
+[1, 1, 1, 2, 2], [1, 1, 1, 2, 3], [1, 1, 1, 3, 3], \\
+[1, 1, 2, 2, 2], [1, 1, 2, 2, 3], [1, 1, 2, 3, 3], [1, 1, 3, 3, 3], \\
+[1, 2, 2, 2, 2], [1, 2, 2, 2, 3], [1, 2, 2, 3, 3], [1, 2, 3, 3, 3], \\
+[1, 3, 3, 3, 3], \\
+[2, 2, 2, 2, 2], [2, 2, 2, 2, 3], [2, 2, 2, 3, 3], [2, 2, 3, 3, 3], [2, 3, 3, 3, 3], \\
+[3, 3, 3, 3, 3]
+$$
 
 2.
 
 a. According to Theorem 9.6.1, how many multisets of size four can be chosen
 from a set of three elements?
 
+$$ \binom{4 + 3 - 1}{4} = \binom{6}{4} = \frac{6!}{4!(6 - 4)!} $$
+
+$$ = \frac{6!}{4! \cdot 2!} $$
+
+$$ = \frac{\cancel{6} 3 \cdot 5 \cdot \cancel{4!}}{\cancel{4!} \cdot \cancel{2}} $$
+
+$$ = 3 \cdot 5 $$
+
+$$ = 15 $$
+
 b. List all of the multisets of size four that can be chosen from the set
 $\{x, y, z\}$.
+
+$$
+[x, x, x, x], [x, x, x, y], [x, x, x, z], \\
+[x, x, y, y], [x, x, y, z], [x, x, z, z], \\
+[x, y, y, y], [x, y, y, z], [x, y, z, z], [x, z, z, z], \\
+[y, y, y, y], [y, y, y, z], [y, y, z, z], [y, z, z, z], \\
+[z, z, z, z] \\
+$$
 
 3. A bakery produces six different kinds of pastry, one of which is eclairs.
    Assume that there are at least 20 pastries of each kind.
 
 a. How many different selections of twenty pastries are there?
 
+$$ \binom{20 + 6 - 1}{20} = \binom{25}{20} = 53130 $$
+
 b. How many different selections of twenty pastries are there if at least three
 must be eclairs?
 
+If three must be eclairs, then 17 additional pastries are selected from six
+kinds.
+
+$$ \binom{17 + 6 - 1}{17} = \binom{22}{17} = 26334  $$
+
 c. How many different selections of twenty pastries contain at most two eclairs?
+
+Let $T$ be the set of selections of pastry that may be any one of the six kinds,
+let $E_{\geq 3}$ be the set of selections containing three or more elcairs, and
+let $E_{\leq 2}$ be the set of selections containing two or fewer eclairs. Then
+
+$$ N(E_{\leq 2}) = T - N(E_{\geq 3}) $$
+
+by part (a) we know that $T = 53130$, and by part (b) we know that
+$N(E_{\geq 3}) = 26334$, so, by the difference law:
+
+$$ N(E_{\leq 2}) = 53130 - 26334 $$
+
+$$ = 26796 $$
 
 4. A camera shop stocks eight different types of batteries, one of which is type
    A76. Assume there are at least 30 batteries of each type.
@@ -5318,11 +5376,35 @@ c. How many different selections of twenty pastries contain at most two eclairs?
 a. How many ways can a total inventory of 30 batteries be distributed among the
 eight different types?
 
+$$ \binom{30 + 8 - 1}{30} = \binom{37}{30} = 10,295,472 $$
+
 b. How many ways can a total inventory of 30 batteries be distributed among the
 eight different types if the inventory must include at least four A76 batteries?
 
+If four batteries must be A76 batteries, then 26 additional batteries are
+selected from eight types.
+
+$$ \binom{26 + 8 - 1}{26} = \binom{33}{26} = 4,272,048 $$
+
 c. How many ways can a total inventory of 30 batteries be distributed among the
 eight different types if the inventory includes at most three A76 batteries?
+
+Let $T$ be the total ways the inventory of 30 batteries can be distributed among
+the eight different types. Let $A_{\geq 4}$ be the total ways the inventory of
+30 batteries can be distributed among the eight different types if the inventory
+must include at least four A76 batteries. Let $A_{\leq 3}$ be the ways that the
+total inventory of 30 batteries can be distributed among the eight different
+types if the inventory includes at most three A76 batteries. By the difference
+law this means that:
+
+$$ A_{\leq 3} = T - A_{\geq 4} $$
+
+By part (a), we know that $T = 10,295,472$, and by part (b), we know that
+$A_{\geq 4} = 4,272,048$, so by substitution:
+
+$$ A_{\leq 3} = 10295472 - 4272048 $$
+
+$$ = 6,023,424 $$
 
 5. If $n$ is a positive integer, how many 4-tuples of integers from $1$ through
    $n$ can be formed in which the elements of the 4-tuple are written in
@@ -5330,11 +5412,38 @@ eight different types if the inventory includes at most three A76 batteries?
    4-tuples of integers ($i, j, k, m$) are there with
    $1 \leq i \leq j \leqq k \leq m \leq n$?
 
+The answer equals the number of 4-combinations with repetition allowed that can
+be formed from a set of $n$ elements:
+
+$$ \binom{4 + n - 1}{4} = \binom{n + 3}{4} $$
+
+$$ = \frac{(n + 3)!}{4!((n + 3) - 4)!} $$
+
+$$ = \frac{(n + 3)!}{4!(n - 1)!} $$
+
+$$ = \frac{(n + 3)(n + 2)(n + 1)(n)\cancel{(n - 1)!}}{4!\cancel{(n - 1)!}} $$
+
+$$ = \frac{(n + 3)(n + 2)(n + 1)(n)}{24} $$
+
 6. If $n$ is a positive integer, how many 5-tuples of integers from $1$ through
    $n$ can be formed in which the elements of the 5-tuple are written in
    decreasing order but are not necessarily distinct? In other words, how many
    5-tuples of integers ($h, i, j, k, m$) are there with
    $n \geq h \geq i \geq j \geq k \geq m \geq 1$?
+
+The answer equals the number of $5$-combinations with repetition allowed that
+can be formed from a set of $n$ elements (note that increasing/decreasing
+wording here does not change the logic from part 5, it's the same):
+
+$$ \binom{5 + (n - 1)}{5} = \binom{n + 4}{5} $$
+
+$$ = \frac{(n + 4)!}{5!((n + 4) - 5)!} $$
+
+$$ = \frac{(n + 4)!}{5!(n - 1)!} $$
+
+$$ = \frac{(n + 4)(n + 3)(n + 2)(n + 1)(n)\cancel{(n - 1)!}}{5!\cancel{(n - 1)!}} $$
+
+$$ = \frac{(n + 4)(n + 3)(n + 2)(n + 1)(n)}{120} $$
 
 7. Another way to count the number of nonnegative integral solutions to an
    equation of the form $x_1 + x_2 + \cdots + x_n = m$ is to reduce the problem
@@ -5344,6 +5453,17 @@ eight different types if the inventory includes at most three A76 batteries?
    this approach to derive a general formula for the number of nonnegative
    integral solutions to $x_1 + x_2 + \cdots + x_n = m$.
 
+Let $y_i$ be defined as above. If $x_1 + x_2 + \cdots + x_n = m$, then
+$y_n = m$. So what must be determined is the number of ways to choose $n - 1$
+integers $0 \leq y_1 \leq \cdots \leq y_{n - 1} \leq m$. There are $m + 1$
+integers to choose from: $0, 1, \dots, m$. This can be done in:
+
+$$ \binom{(m + 1) + (n - 1) - 1}{n - 1} $$
+
+$$ = \binom{m + n - 1}{n - 1} $$
+
+ways.
+
 In 8 and 9, how many times will the innermost loop be iterated when the
 algorithm segment is implemented and run? Assume $n$, $m$, $k$, and $j$ are
 positive integers.
@@ -5352,26 +5472,96 @@ positive integers.
 
 $\textbf{for } m := 1 \textbf{ to } n\\ \ \ \textbf{for } k := 1 \textbf{ to } m\\ \ \ \ \ \textbf{for } j := 1 \textbf{ to } k\\ \ \ \ \ \ \ \textbf{for } i := 1 \textbf{ to } j\\ \ \ \ \ \ \ \ \ \textit{[Statements in the body of the inner}\\ \ \ \ \ \ \ \ \ \textit{loop, none containing branching}\\ \ \ \ \ \ \ \ \ \textit{statements that lead outside the}\\ \ \ \ \ \ \ \ \ \textit{loop]}\\ \ \ \ \ \ \ \textbf{next } i\\ \ \ \ \ \textbf{next } j\\ \ \ \textbf{next } k\\ \textbf{next } m$
 
+Notice from the ordering of the loops, that
+$1 \leq i \leq j \leq k \leq m \leq n$.
+
+Since there are 4 loops, there are 4 possible selections from $n$ elements. This
+is a $4$-combination with repetitions allowed:
+
+$$ \binom{4 + n - 1}{4} = \binom{n + 3}{4} $$
+
+$$ = \frac{(n + 3)!}{4!(n + 3 - 4)!}$$
+
+$$ = \frac{(n + 3)!}{4!(n - 1)!}$$
+
+$$ = \frac{(n + 3)(n + 2)(n + 1)(n)\cancel{(n - 1)!}}{4!\cancel{(n - 1)!}}$$
+
+$$ = \frac{(n + 3)(n + 2)(n + 1)(n)}{24}$$
+
 9.
 
 $\textbf{for } k := 1 \textbf{ to } n\\ \ \ \textbf{for } j := k \textbf{ to } n\\ \ \ \ \ \textbf{for } i := j \textbf{ to } n\\ \ \ \ \ \ \ \textit{[Statements in the body of the inner}\\ \ \ \ \ \ \textit{loop, none containing branching}\\ \ \ \ \ \ \textit{statements that lead outside the loop]}\\ \ \ \ \ \ \ \textbf{next } i\\ \ \ \ \ \textbf{next } j\\ \textbf{next } k$
 
+Notice on this one that each loop goes up to $n$, thus our inequality is:
+
+$$ 1 \leq k \leq j \leq i \leq n $$
+
+The order doesn't matter, despite the fact that each variable simply starts from
+the previous variable's index, the reasoning for finding combinations is the
+same.
+
+In this case, we are still looking for a $3$-combination of $n$ elements.
+
+$$ \binom{3 + n - 1}{3} = \binom{n + 2}{3} $$
+
+$$ = \frac{(n + 2)!}{3!(n + 2 - 3)!} $$
+
+$$ = \frac{(n + 2)!}{3!(n - 1)!} $$
+
+$$ = \frac{(n + 2)(n + 1)(n)\cancel{(n - 1)!}}{3!\cancel{(n - 1)!}} $$
+
+$$ = \frac{(n + 2)(n + 1)(n)}{6} $$
+
 In 10-14, find how many solutions there are to the given equation that satisfy
 the given condition.
 
-10. $x_1 + x_2 + x_3 = 30$, each $x_i$ is a nonnegative integer.
+10. $x_1 + x_2 + x_3 = 20$, each $x_i$ is a nonnegative integer.
+
+Since there are three selections $x_1, x_2, x_3$, and $20$ is the number being
+distributed (_i.e._ the sum). This is a $3$-combination with repetition where
+the sum is $20$.
+
+$$ \binom{20 + 3 - 1}{20} = \binom{22}{20} = 231 $$
 
 11. $x_1 + x_2 + x_3 = 20$, each $x_i$ is a positive integer.
 
-12. $y_1 + y_1 + y_3 + y_4 = 30$, each $y_i$ is a nonnegative integer.
+Notice that $x_i \geq 1$, we can adjust our logic from 10, where
+$x_{i_10} = x_i - 1 \geq 0$ ($x_{i_10}$ being the $x_i$ from problem 10.)
+
+Since there are three selections, this means that the amount of the sum can be
+reduced by 3 to use the same logic from problem 10. Thus we would read this as:
+
+$$ x_1 + x_2 + x_3 = 17 $$
+
+where each $x_i$ is a nonnegative integer. Then the $r$-combination with
+repetitions formula applies as:
+
+$$ \binom{17 + 3 - 1}{17} = \binom{19}{17} = 171 $$
+
+12. $y_1 + y_2 + y_3 + y_4 = 30$, each $y_i$ is a nonnegative integer.
+
+$$ \binom{30 + 4 - 1}{30} = \binom{33}{30} = 5456 $$
 
 13. $y_1 + y_2 + y_3 + y_4 = 30$, each $y_i$ is an integer that is at least $2$.
+
+Adjust as in problem 11, but this time $y_i \geq 2$, so the total sum from
+problem 12 must be reduced by $8$ (since $-2$ must be applied to each $y$-term).
+
+$$ \binom{22 + 4 - 1}{22} = \binom{25}{22} = 2300 $$
 
 14. $a + b + c + d + e = 500$, each of $a, b, c, d$, and $e$ is an integer that
     is at least $10$.
 
+Same idea as problems 11 and 13, just that each term, call it $x_i$, is
+$x_i \geq 10$, so reduce the total sum by $10 \cdot 5 = 50$, and we get $450$.
+So:
+
+$$ \binom{450 + 5 - 1}{450} = \binom{454}{450} = 1,746,858,751 $$
+
 15. For how many integers from 1 through 99,999 is the sum of their digits equal
     to 10?
+
+Omitted.
 
 16. Consider the situation in Example 9.6.2.
 
@@ -5379,46 +5569,225 @@ a. Suppose the store has only six cans of lemonade but at least 15 cans of each
 of the other four types of soft drink. In how many different ways can fifteen
 cans of soft drink be selected?
 
+Let $T$ be the set of all possible selections assuming that there are at least
+15 cans of each type, let $L_{\geq 7}$ denote the set of all possible selections
+assuming there are at least 7 cans of lemonade but at least 15 cans of each of
+the other four types of soft drink, and let $L_{\leq 6}$ be the selection of all
+possible selections assuming there are at most 6 cans of lemonade but at least
+15 cans of each of the other four types of soft drink.
+
+We must find $N(L_{\leq 6})$.
+
+First we must find $N(L_{\geq 7})$, since $15 - 7 = 8$, this means that there
+are $8$ possible soft drinks to be selected from the $5$ selections:
+
+$$ N(L_{\geq 7}) = \binom{8 + 5 - 1}{8} = \binom{12}{8} = 495 $$
+
+By part (a) of Example 9.6.2, we know that $N(T) = 3876$, then by the difference
+law, it follows that:
+
+$$ N(L_{\leq 6}) = N(T) - N(L_{\geq 7}) $$
+
+By substitution:
+
+$$ N(L_{\leq 6}) = 3876 - 495 $$
+
+$$ = 3381 $$
+
 b. Suppose that the store has only five cans of root beer and only six cans of
 lemonade but at least 15 cans of each of the other three types of soft drink. In
 how many different ways can fifteen cans of soft drink be selected?
+
+Let $R_{\leq 5}$ be the set of selections containing at most five cans of root
+beer, and let $L_{\leq 6}$ be the set of selections containing at most six cans
+of lemonade. The answer to the question can be represented as
+$N(R_{\leq 5} \cap L_{\leq 6})$. As in part (a), let $T$ be the set of all
+selections of fifteen cans in which the soft drink may be any one of the five
+types assuming that there are at least 15 cans of each type. If you remove all
+the selections from $T$ that contain at least six cans of root beer or at least
+seven cans of lemonade, then you are left with all the selections that contain
+at most five cans of root beer and at most six cans of lemonade. Thus, in the
+notation of part (a) and Example 9.6.2,
+
+$$ N(R_{\leq 5} \cap L_{\leq 6}) = N(T) - N(R_{\geq 6} \cup L_{\geq 7}) \quad \text{ (*)} $$
+
+Use the inclusion/exclusion rule as follows to compute
+$N(R_{\geq 6} \cup L_{\geq 7})$:
+
+$$ N(R_{\geq 6} \cup L_{\geq 7}) $$
+
+$$ = N(R_{\geq 6}) + N(L_{\geq 7}) - N(R_{\geq 6} \cap L_{\geq 7}) $$
+
+To find $N(R_{\geq 6} \cap L_{\geq 7})$, observe that if at least 6 cans of root
+beer and at least 7 cans of lemonade are selected, then at most 2 additional
+cans of soft drink can be chosen from the other three types to make up the total
+of 15 cans. A selection of two such cans can be represented by a string of 2
+$\times$'s and 3 $\mid$'s, and a selection of one such can be represented by a
+string of 1 $\times$ and 3 $\mid$'s. Hence
+
+$$ N(R_{\geq 6} \cap L_{\geq 7}) = \binom{2 + 3 - 1}{2} + \binom{1 + 3 - 1}{1} $$
+
+$$ = \binom{4}{2} + \binom{3}{1} = 6 + 3 = 9 $$
+
+It follows that:
+
+By the inclusion/exclusion rule:
+
+$$ N(R_{\geq 6} \cup L_{\geq 7}) = N(R_{\geq 6}) + N(L_{\geq 7}) - N(R_{\geq 6}
+\cap L_{\geq 7}) $$
+
+by part (a) and the computation above, and by part (b) of Example 9.6.2:
+
+$$ = 715 + 495 - 9 $$
+
+$$ = 1,201 $$
+
+Putting this result together with equation $\text{(*)}$ and the value of $N(T)$
+from Example 9.6.2(a) gives that
+
+$$ N(R_{\leq 5} \cap L_{\leq 6}) = N(T) - N(R_{\geq 6} \cup L_{\geq 7}) $$
+
+$$ = 3,876 - 1,201 $$
+
+$$ = 2,675 $$
+
+Thus there are $2,675$ selections of fifteen soft drinks that contain at most
+five cans of root beer and at most six cans of lemonade.
 
 17.
 
 a. A store sells 8 colors of balloons with at least 30 of each color. How many
 different combinations of 30 balloons can be chosen?
 
+$$ \binom{30 + 8 - 1}{30} = \binom{37}{30} = 10,295,472 $$
+
 b. If the store has only 12 red balloons but at least 30 of each other color of
 balloon, how many combinations of balloons can be chosen?
+
+Using notation similar to the previous exercise:
+
+$$ T = R_{\leq 12} \cup R_{\geq 13} $$
+
+where $R_{\leq 12} \cap R_{\geq 13} = \emptyset$.
+
+So, by inclusion/exclusion:
+
+$$ N(T) = N(R_{\leq 12}) + N(R_{\geq 13}) $$
+
+By part (a), $N(T) = 10,195,471$, and by an argument similar to the previous
+exercises:
+
+$$ N(R_{\geq 13}) = \binom{17 + 8 - 1}{17} $$
+
+$$ = \binom{24}{17} $$
+
+$$ = 346,104 $$
+
+It follows that:
+
+$$ N(R_{\leq 12}) = 10,295,472 - 346,104 $$
+
+$$ = 9,949,368 $$
 
 c. If the store has only 8 blue balloons but at least 30 of each other color of
 balloon, how many combinations of balloons can be chosen?
 
+Using notation similar to the previous exercise:
+
+$$ T = R_{\leq 8} \cup R_{\geq 9} $$
+
+where $R_{\leq 8} \cap R_{\geq 9} = \emptyset$.
+
+So, by inclusion/exclusion:
+
+$$ N(T) = N(R_{\leq 8}) + N(R_{\geq 9}) $$
+
+By part (a), $N(T) = 10,195,471$, and by an argument similar to the previous
+exercises:
+
+$$ N(R_{\geq 9}) = \binom{21 + 8 - 1}{21} $$
+
+$$ = \binom{28}{21} $$
+
+$$ = 1,184,040 $$
+
+It follows that:
+
+$$ N(R_{\leq 8}) = 10,295,472 - 1,184,040 $$
+
+$$ = 9,111,432 $$
+
 d. If the store has only 12 red balloons and only 8 blue balloons but at least
 30 of each other color of balloon, how many combinations of balloons can be
 chosen?
+
+Omitted.
 
 18. A large pile of coins consists of pennies, nickels, dimes, and quarters.
 
 a. How many different collections of 30 coins can be chosen if there are at
 least 30 of each kind of coin?
 
+$$ \binom{30 + 4 - 1}{30} = \binom{33}{30} = 5,456 $$
+
 b. If the pile contains only 15 quarters but at least 30 of each other kind of
 coin, how many collections of 30 coins can be chosen?
+
+$$ T = Q_{\leq 15} \cup Q_{\geq 16} $$
+
+So:
+
+$$ N(T) = N(Q_{\leq 15}) + N(Q_{\geq 16}) $$
+
+We must find $N(Q_{\leq 15})$.
+
+By part (a), $N(T) = 5,456$.
+
+$$ N(Q_{\geq 16}) = \binom{14 + 4 - 1}{14} = \binom{17}{14} = 680 $$
+
+Thus, by substitution:
+
+$$ N(Q_{\leq 15}) = N(T) - N(Q_{\geq 16}) $$
+
+$$ = 5456 - 680 $$
+
+$$ = 4,776 $$
 
 c. If the pile contains only 20 dimes but at least 30 of each other kind of
 coin, how many collections of 30 coins can be chosen?
 
+$$ T = D_{\leq 20} \cup D_{\geq 21} $$
+
+$$ N(T) = N(D_{\leq 20}) + N(D_{\geq 21})  $$
+
+$N(T) = 5,456$ by (a).
+
+Find $N(D_{\leq 20})$.
+
+$$ N(D_{\geq 21}) = \binom{9 + 4 - 1}{9} = \binom{12}{9} = 220 $$
+
+$$ N(D_{\leq 20}) = N(T) - N(D_{\geq 21}) $$
+
+$$ = 5456 - 220 $$
+
+$$ = 5,236 $$
+
 d. If the pile contains only 15 quarters and only 20 dimes but at least 30 of
 each other kind of coin, how many collections of 30 coins can be chosen?
+
+Omitted.
 
 19. Suppose the bakery in exercise 3 has only ten eclairs but has at least
     twenty of each of the other kind of pastry.
 
 a. How many different selections of twenty pastries are there?
 
+Omitted.
+
 b. Suppose in addition to having only ten eclairs, the bakery has only eight
 napoleon slices. How many different selections of twenty pastries are there?
+
+Omitted.
 
 20. Suppose the camera shop in exercise 4 can obtain at most ten A76 batteries
     but can get at least 30 of each of the other types.
@@ -5426,9 +5795,13 @@ napoleon slices. How many different selections of twenty pastries are there?
 a. How many ways can a total inventory of 30 batteries be distributed among the
 eight different types?
 
+Omitted.
+
 b. Suppose that in addition to being able to obtain only ten A76 batteries, the
 store can get only six of type D303. How many ways can a total inventory of 30
 batteries be distributed among the eight different types?
+
+Omitted.
 
 21. Observe that the number of columns in the trace table for Example 9.6.4 can
     be expressed as the sum
@@ -5438,3 +5811,5 @@ $$ 1 + (1 + 2) + (1 + 2 +  3) + \cdots + (1 + 2 + \cdots + n) $$
 Explain why this is so, and show how this sum simplifies to the same expression
 given in the solution of Example 9.6.4 (_Hint:_ A formula from exercise 13 in
 Section 5.2 will be helpful.)
+
+Omitted.
