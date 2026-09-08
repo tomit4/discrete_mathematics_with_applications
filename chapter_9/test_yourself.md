@@ -190,24 +190,38 @@ Page 676
 1. If $n$ and $r$ are nonnegative integers with $r \leq n$, then the relation
    between $\dbinom{n}{r}$ and $\dbinom{n}{n - r}$ is ____.
 
+$\dbinom{n}{r} = \dbinom{n}{n - r}$
+
 2. Pascal's formula says that if $n$ and $r$ are positive integers with
    $r \leq n$, then ____.
 
+$\dbinom{n + 1}{r} = \dbinom{n}{r - 1} + \dbinom{n}{r}$
+
 3. The crux of the algebraic proof of Pascal's formula is that to add two
    fractions you need to express both of them with a ____.
+
+common denominator
 
 4. The crux of the combinatorial proof of Pascal's formula is that the set of
    subsets of size $r$ of a set $\{x_1, x_2, \dots, x_{n + 1}\}$ can be
    partitioned into the set of subsets of size $r$ that contain ____ and the set
    of subsets of size $r$ that ____.
 
+$x_{n + 1}$; do not contain $x_{n + 1}$
+
 5. The binomial theorem says that given any real numbers $a$ and $b$ and any
    nonnegative integer, $n$, ____.
+
+$(a + b)^n = \sum_{k = 0}^{n}{\dbinom{n}{k}a^{n - k}b^k}$
 
 6. The crux of the algebraic proof of the binomial theorem is that, after making
    a change of variable so that the two summations have the same lower and upper
    limits and the exponents of $a$ and $b$ are the same, you use the fact that
    $\dbinom{m}{k} + \dbinom{m}{k - 1} =$ ____.
 
+$\dbinom{m + 1}{k}$
+
 7. The crux of the combinatorial proof of the binomial theorem is that the
    number of ways to arrange $k$ $b$'s and $(n - k)$ $a$'s in a row is ____.
+
+$\dbinom{n}{k}$

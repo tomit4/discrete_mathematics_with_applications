@@ -5825,16 +5825,71 @@ In 1-4, use Theorem 9.5.1 to compute the values of the indicated quantities
 
 1. $\dbinom{n}{0}$, for $n \geq 0$
 
+$$ \binom{n}{0} = \frac{n!}{0!(n - 0)!} $$
+
+$$ = \frac{n!}{1 \cdot n!} $$
+
+$$ = \frac{n!}{n!} $$
+
+$$ = 1 $$
+
 2. $\dbinom{n}{1}$, for $n \geq 1$
+
+$$ \binom{n}{1} = \frac{n!}{1!(n - 1)!} $$
+
+$$ = \frac{n\cancel{(n - 1)!}}{1\cancel{(n - 1)!}} $$
+
+$$ = \frac{n}{1} $$
+
+$$ = n $$
 
 3. $\dbinom{n}{2}$, for $n \geq 2$
 
+$$ \binom{n}{2} = \frac{n!}{2!(n - 2)!} $$
+
+$$ = \frac{n(n - 1)\cancel{(n - 2)!}}{2i\cancel{(n - 2)!}} $$
+
+$$ = \frac{n(n - 1)}{2} $$
+
 4. $\dbinom{n}{3}$, for $n \geq 3$
+
+$$ \binom{n}{3} = \frac{n!}{3!(n - 3)!} $$
+
+$$ = \frac{n(n - 1)(n - 2)\cancel{(n - 3)!}}{6\cancel{(n - 3)!}} $$
+
+$$ = \frac{n(n - 1)(n - 2)}{6} $$
 
 5. Use Theorem 9.5.1 to prove algebraically that
    $\dbinom{n}{r} = \dbinom{n}{n - r}$, for integers $n$ and $r$ with
    $0 \leq r \leq n$. (This can be done by direct calculation; it is not
    necessary to use mathematical induction.)
+
+**Proof:**
+
+Suppose $n, r \in \mathbb{Z}$ with $0 \leq r \leq n$.
+
+It must be shown that $\dbinom{n}{r} = \dbinom{n}{n - r}$.
+
+By Theorem 9.5.1:
+
+$$ \binom{n}{r} = \frac{n!}{r!(n - r)!} $$
+
+and also by Theorem 9.5.1:
+
+$$ \binom{n}{n - r} = \frac{n!}{(n - r)!(n - (n - r))!} $$
+
+$$ = \frac{n!}{(n - r)!(n - n + r)!} $$
+
+$$ = \frac{n!}{(n - r)!r!} $$
+
+$$ = \frac{n!}{r!(n - r)!} $$
+
+By the laws of general equality, this means that
+$\dbinom{n}{r} = \dbinom{n}{n - r}$.
+
+This is what was to be shown.
+
+Q.E.D.
 
 Justify the equations in 6-9 either by deriving them from formulas in Example
 9.7.1 or by direct computation from Theorem 9.5.1. Assume $m$, $n$, $k$, and $r$
@@ -5842,21 +5897,121 @@ are integers.
 
 6. $\dbinom{m + k}{m + k - 1} = m + k$, for $m + k \geq 1$
 
+$$ \binom{m + k}{m + k - 1} = \frac{(m + k)!}{(m + k - 1)!((m + k) - (m + k - 1))!} $$
+
+$$ = \frac{(m + k)!}{(m + k - 1)!(m + k - m - k + 1)!} $$
+
+$$ = \frac{(m + k)\cancel{(m + k - 1)!}}{\cancel{(m + k - 1)!}1!} $$
+
+$$ = \frac{m + k}{1} $$
+
+$$ = m + k $$
+
 7. $\dbinom{n + 3}{n + 1} = \dfrac{(n + 3)(n + 2)}{2}$, for $n \geq -1$
+
+$$ \binom{n + 3}{n + 1} = \frac{(n + 3)!}{(n + 1)!((n + 3) - (n + 1))!} $$
+
+$$ = \frac{(n + 3)!}{(n + 1)!(n + 3 - n - 1)!} $$
+
+$$ = \frac{(n + 3)(n + 2)\cancel{(n + 1)!}}{\cancel{(n + 1)!}2!} $$
+
+$$ = \frac{(n + 3)(n + 2)}{2} $$
 
 8. $\dbinom{k - r}{k - r} = 1$, for $k - r \geq 0$
 
+$$ \binom{k - r}{k - r} = \frac{(k - r)!}{(k - r)!((k - r) - (k - r))!} $$
+
+$$ = \frac{\cancel{(k - r)!}}{\cancel{(k - r)!}(k - r - k + r)!} $$
+
+$$ = \frac{1}{0!} $$
+
+$$ = \frac{1}{1} $$
+
+$$ = 1 $$
+
 9. $\dbinom{2(n + 1)}{2n} = (n + 1)(2n + 1)$, for $n \geq 0$
+
+$$ \binom{2(n + 1)}{2n} = \binom{2n + 2}{2n} $$
+
+$$ = \frac{(2n + 2)!}{(2n)!((2n + 2) - (2n))!} $$
+
+$$ = \frac{(2n + 2)!}{(2n)!(2n + 2 - 2n)!} $$
+
+$$ = \frac{(2n + 2)(2n + 1)\cancel{(2n)!}}{\cancel{(2n)!}2!} $$
+
+$$ = \frac{(2n + 2)(2n + 1)}{2} $$
+
+$$ = \frac{\cancel{2}(n + 1)(2n + 1)}{\cancel{2}} $$
+
+$$ = (n + 1)(2n + 1) $$
 
 10.
 
 a. Use Pascal's triangle given in Table 9.7.1 to compute the values of
 $\dbinom{6}{2}$, $\dbinom{6}{3}$, $\dbinom{6}{4}$, and $\dbinom{6}{5}$.
 
+$$ \binom{6}{2} = \binom{5}{1} + \binom{5}{2} $$
+
+$$ = 5 + 10 $$
+
+$$ = 15 $$
+
+$$ \binom{6}{3} = \binom{5}{2} + \binom{5}{3} $$
+
+$$ = 10 + 10 $$
+
+$$ = 20 $$
+
+$$ \binom{6}{4} = \binom{5}{3} + \binom{5}{4} $$
+
+$$ = 10 + 5 $$
+
+$$ = 15 $$
+
+$$ \binom{6}{5} = \binom{5}{4} + \binom{5}{5} $$
+
+$$ = 5 + 1 $$
+
+$$ = 6 $$
+
 b. Use the result of part (a) and Pascal's formula to compute $\dbinom{7}{3}$,
 $\dbinom{7}{4}$, and $\dbinom{7}{5}$.
 
+Pascal's Formula states:
+
+$$ \binom{n + 1}{r} = \binom{n}{r - 1} + \binom{n}{r} $$
+
+Thus:
+
+$$ \binom{7}{3} = \binom{6}{2} + \binom{6}{3} $$
+
+by part (a):
+
+$$ = 15 + 20 $$
+
+$$ = 35 $$
+
+$$ \binom{7}{4} = \binom{6}{3} + \binom{6}{4} $$
+
+$$ = 20 + 15 $$
+
+$$ = 35 $$
+
+$$ \binom{7}{5} = \binom{6}{4} + \binom{6}{5} $$
+
+$$ = 15 + 6 $$
+
+$$ = 21 $$
+
 c. Complete the row of Pascal's triangle that corresponds to $n = 7$.
+
+To find this row we must calculate:
+
+$$ \binom{7}{0}, \binom{7}{1}, \binom{7}{2}, \binom{7}{3}, \binom{7}{4}, \binom{7}{5}, \binom{7}{6}, \binom{7}{7} $$
+
+So:
+
+$$ 1, 7, 21, 35, 35, 21, 7, 1 $$
 
 11. The row of Pascal's triangle that corresponds to $n = 8$ is as follows:
 
@@ -5864,22 +6019,132 @@ c. Complete the row of Pascal's triangle that corresponds to $n = 7$.
 
 What is the row that corresponds to $n = 9$?
 
+1 9 36 84 126 126 84 36 9 1
+
 12. Use Pascal's formula repeatedly to derive a formula for $\dbinom{n + 3}{r}$
     in terms of values of $\dbinom{n}{k}$ with $k \leq r$. (Assume $n$ and $r$
     are integers with $n \geq r \geq 3$.)
+
+$$ \binom{n + 3}{r} = \binom{n + 2}{r - 1} + \binom{n + 2}{r} $$
+
+$$ = \left[\binom{n + 1}{r - 2} + \binom{n + 1}{r - 1}\right] + \left[\binom{n + 1}{r - 1} + \binom{n + 1}{r}\right] $$
+
+$$ = \binom{n + 1}{r - 2} + 2\binom{n + 1}{r - 1} + \binom{n + 1}{r} $$
+
+$$ = \left[\binom{n}{r - 3} + \binom{n}{r - 2}\right] + 2\left[\binom{n}{r - 2} + \binom{n}{r - 1}\right] + \left[\binom{n}{r - 1} + \binom{n}{r}\right] $$
+
+$$ = \binom{n}{r - 3} + 3\binom{n}{r - 2} + 3\binom{n}{r - 1} + \binom{n}{r} $$
 
 13. Use Pascal's formula to prove by mathematical induction that if $n$ is an
     integer and $n \geq 1$, then
 
 $$ \sum_{i = 2}^{n + 1}{\binom{i}{2}} = \binom{2}{2} + \binom{3}{2} + \cdots + \binom{n + 1}{2} $$
 
-:withA
-
 $$ = \binom{n + 2}{3} $$
+
+**Proof (by mathematical induction):**
+
+Suppose $n \in \mathbb{Z}$ such that $n \geq 1$.
+
+Let $P(n)$ be the statement:
+
+$$ \sum_{i = 2}^{n + 1}{\binom{i}{2}} = \binom{n + 2}{3} $$
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ \sum_{i = 2}^{1 + 1}{\binom{i}{2}} = \binom{1 + 2}{3} $$
+
+$$ \sum_{i = 2}^{2}{\binom{i}{2}} = \binom{3}{3} $$
+
+By the definition of summation:
+
+$$ \sum_{i = 2}^{2}{\binom{i}{2}} = \binom{2}{2} = 1 = \binom{3}{3} $$
+
+Therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k \in \mathbb{Z}$ such that $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ \sum_{i = 2}^{k + 1}{\binom{i}{2}} = \binom{k + 2}{3} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is, it must be shown that:
+
+$$ \sum_{i = 2}^{(k + 1) + 1}{\binom{i}{2}} = \binom{(k + 1) + 2}{3} $$
+
+Or equivalently:
+
+$$ \sum_{i = 2}^{k + 2}{\binom{i}{2}} = \binom{k + 3}{3} $$
+
+If the last term is separated out from the summation, this yields:
+
+$$ \sum_{i = 2}^{k + 2}{\binom{i}{2}} = \sum_{i = 2}^{k + 1}{\binom{i}{2}} + \binom{k + 2}{2} $$
+
+Then, by the inductive hypothesis:
+
+$$ = \binom{k + 2}{3} + \binom{k + 2}{2} $$
+
+By Pascal's formula, it is known that this equals:
+
+$$ = \binom{(k + 2) + 1}{3} $$
+
+$$ = \binom{k + 3}{3} $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 14. Prove that if $n$ is an integer and $n \geq 1$, then
 
 $$ 1 \cdot 2 + 2 \cdot 3 + \cdots + n(n + 1) = 2\binom{n + 2}{3} $$
+
+_Hint:_ Use the results of exercises 3 and 13.
+
+**Proof:**
+
+Suppose $n \in \mathbb{Z}$, where $n \geq 1$.
+
+It must be shown that:
+
+$$ 1 \cdot 2 + 2 \cdot 3 + \cdots + n(n + 1) = 2\binom{n + 2}{3} $$
+
+or, equivalently:
+
+$$ \sum_{i = 1}^{n}{i(i + 1)} = 2\binom{n + 2}{3} $$
+
+By exercise 3, it is known that:
+
+$$ \dbinom{n}{2} = \frac{n(n - 1)}{2} $$
+
+If both sides are multiplied by $2$, it yields:
+
+$$ 2\dbinom{n}{2} = n(n - 1) $$
+
+By substitution into the summation:
+
+$$ = \sum_{i = 1}^{n}{2\binom{i + 1}{2}} $$
+
+Then, by the commutative laws of summation:
+
+$$ = 2\sum_{i = 1}^{n}{\binom{i + 1}{2}} $$
+
+Let $j = i + 1$, then:
+
+$$ = 2\sum_{j = 2}^{n + 1}{\binom{j}{2}} $$
+
+By exercise 13, this means that:
+
+$$ = 2\binom{n + 2}{3} $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 15. Prove the following generalization of exercise 13:
 
@@ -5887,11 +6152,67 @@ Let $r$ be a fixed nonnegative integer. For every integer $n$ with $n \geq r$,
 
 $$ \sum_{i = 2}^{n}{\binom{i}{r}} = \binom{n + 1}{r + 1} $$
 
+**Proof (by mathematical induction):**
+
+Suppose $n, r \in \mathbb{Z}$ with $0 \leq r \leq n$.
+
+Let $P(n)$ be the statement:
+
+$$ \sum_{i = 2}^{n}{\binom{i}{r}} = \binom{n + 1}{r + 1} $$
+
+_Basis Step:_
+
+Prove $P(r)$, that is:
+
+$$ \sum_{i = 2}^{r}{\binom{i}{r}} = \binom{r + 1}{r + 1} $$
+
+Note that all terms $i < r$ are equal to $0$, leaving the summation as:
+
+$$ \binom{r}{r} = 1 = \binom{r + 1}{r + 1} $$
+
+Thus $P(r)$ is true.
+
+_Inductive Step:_
+
+Let $k \in \mathbb{Z}$ with $0 \leq r \leq k$.
+
+Suppose $P(k)$, that is:
+
+$$ \sum_{i = 2}^{k}{\binom{i}{r}} = \binom{k + 1}{r + 1} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is, it must be shown that:
+
+$$ \sum_{i = 2}^{k + 1}{\binom{i}{r}} = \binom{(k + 1) + 1}{r + 1} $$
+
+or, equivalently:
+
+$$ \sum_{i = 2}^{k + 1}{\binom{i}{r}} = \binom{k + 2}{r + 1} $$
+
+If the last term of the summation is separated out, this yields:
+
+$$ = \sum_{i = 2}^{k}{\binom{i}{r}} + \binom{k + 1}{r} $$
+
+Then, by the inductive hypothesis:
+
+$$ = \binom{k + 1}{r + 1} + \binom{k + 1}{r} $$
+
+By Pascal's formula, it is known that this equals:
+
+$$ = \binom{(k + 1) + 1}{r + 1} $$
+
+$$ = \binom{k + 2}{r + 1} $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 16. Think of a set with $m + n$ elements as composed of two parts, one with $m$
     elements and the other with $n$ elements. Give a combinatorial argument to
     show that
 
-$$ \binom{m + n}{r} = \binom{m}{0}\binom{n}{r} +\binom{m}{1}\binom{m}{r - 1} + \cdots + \binom{m}{r}\binom{n}{0} $$
+$$ \binom{m + n}{r} = \binom{m}{0}\binom{n}{r} + \binom{m}{1}\binom{n}{r - 1} + \cdots + \binom{m}{r}\binom{n}{0} $$
 
 where $m$ and $n$ are positive integers and $r$ is an integer that is less than
 or equal to both $m$ and $n$. This identity gives rise to many useful additional
@@ -5900,34 +6221,217 @@ Vandermonde published an influential article about it in 1772, it is generally
 called the _Vandermonde convolution_. However, it was known at least in the
 1300s in China by Chu Shih-chieh.
 
+**Proof:**
+
+This follows from the addition and multiplication rules. We want to choose $r$
+elements from a set $K$ of $m + n$ elements, we can think of $K$ as the union of
+two disjoint sets $M$ and $N$ of $m$ and $n$ elements respectively. The
+possibilities for an $r$ element subset are:
+
+$0$ elements from $M$ and $r$ elements from $N$, with
+$\dbinom{m}{0} \cdot \dbinom{n}{r}$ ways to choose.
+
+$1$ element from $M$ and $r - 1$ elements from $N$, with
+$\dbinom{m}{1} \cdot \dbinom{n}{r - 1}$ ways to choose.
+
+$\vdots$
+
+$r$ elements from $M$ and $0$ elements from $N$, with
+$\dbinom{m}{r} \cdot \dbinom{n}{0}$ ways to choose.
+
+These possibilities are disjoint, then the formula follows by the addition rule.
+
+Q.E.D.
+
 17. Prove that for every integer $n \geq 0$,
 
 $$ \binom{n}{0}^2 + \binom{n}{1}^2 + \cdots + \binom{n}{n}^2 = \binom{2n}{n} $$
 
+_Hint:_ This follows by letting $m = n = r$ in exercise 16 and using the result
+of Example 9.7.2.
+
+**Proof:**
+
+Vandermonde's identity from exercise 16 is:
+
+$$ \binom{m + n}{r} = \binom{m}{0}\binom{n}{r} + \binom{m}{1}\binom{n}{r - 1} + \cdots + \binom{m}{r}\binom{n}{0} $$
+
+By the hint, substitute $m$ and $r$ with $n$:
+
+$$ \binom{n + n}{n} = \binom{n}{0}\binom{n}{n} + \binom{n}{1}\binom{n}{n - 1} + \cdots + \binom{n}{n}\binom{n}{0} $$
+
+Evaluating:
+
+$$ \binom{2n}{n} = \binom{n}{0}\binom{n}{n} + \binom{n}{1}\binom{n}{n - 1} + \cdots + \binom{n}{n}\binom{n}{0} $$
+
+By Exercise 5, it is known that:
+
+$$ \binom{n}{r} = \binom{n}{n - r} $$
+
+With this in mind, the equality can be expressed by substitution into each
+second term as:
+
+$$ \binom{2n}{n} = \binom{n}{0}\binom{n}{n - n} + \binom{n}{1}\binom{n}{n - (n - 1)} + \cdots + \binom{n}{n}\binom{n}{n - 0} $$
+
+Evaluating:
+
+$$ \binom{2n}{n} = \binom{n}{0}\binom{n}{0} + \binom{n}{1}\binom{n}{1} + \cdots + \binom{n}{n}\binom{n}{n} $$
+
+$$ \binom{2n}{n} = \binom{n}{0}^2 + \binom{n}{1}^2 + \cdots + \binom{n}{n}^2 $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 18. Let $m$ be any nonnegative integer. Use mathematical induction and Pascal's
     formula to prove that for every integer $n \geq 0$,
 
-$$ \binom{m}{0} + \binom{m + 1}{2} + \cdots + \binom{m + n}{n} = \binom{m + n + 1}{n} $$
+$$ \binom{m}{0} + \binom{m + 1}{1} + \cdots + \binom{m + n}{n} = \binom{m + n + 1}{n} $$
+
+**Proof (by mathematical induction):**
+
+Suppose $m, n \in \mathbb{Z}$ with $m, n \geq 0$.
+
+Let $P(n)$ be the statement:
+
+$$ \binom{m}{0} + \binom{m + 1}{1} + \cdots + \binom{m + n}{n} = \binom{m + n + 1}{n} $$
+
+_Basis Step:_
+
+Prove $P(0)$, that is it must be shown that:
+
+$$ \binom{m}{0} + \binom{m + 1}{1} + \cdots + \binom{m + 0}{0} = \binom{m + 0 + 1}{0} $$
+
+or, equivalently:
+
+$$ \binom{m}{0} + \binom{m + 1}{1} + \cdots + \binom{m}{0} = \binom{m + 1}{0} $$
+
+But the summation from $\binom{m}{0}$ to $\binom{m}{0}$ is simply
+$\binom{m}{0}$, so:
+
+$$ \binom{m}{0} = 1 = \binom{m + 1}{0} $$
+
+Thus $P(0)$ is true.
+
+_Inductive Step:_
+
+Let $k \in \mathbb{Z}$ where $k \geq 0$.
+
+Suppose $P(k)$, that is:
+
+$$ \binom{m}{0} + \binom{m + 1}{1} + \cdots + \binom{m + k}{k} = \binom{m + k + 1}{k} $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is it must be shown that:
+
+$$ \binom{m}{0} + \binom{m + 1}{1} + \cdots + \binom{m + k + 1}{k + 1} = \binom{m + k + 1 + 1}{k + 1} $$
+
+or, equivalently:
+
+$$ \binom{m}{0} + \binom{m + 1}{1} + \cdots + \binom{m + k + 1}{k + 1} = \binom{m + k + 2}{k + 1} $$
+
+Separating out the last term from the summation yields:
+
+$$ = \binom{m}{0} + \binom{m + 1}{1} + \cdots + \binom{m + k}{k} +  \binom{m + k + 1}{k + 1} $$
+
+By the inductive hypothesis:
+
+$$ = \binom{m + k + 1}{k} + \binom{m + k + 1}{k + 1} $$
+
+By Pascal's Formula, it is known that this equals
+
+$$ = \binom{(m + k + 1) + 1}{k + 1} $$
+
+$$ = \binom{m + k + 2}{k + 1} $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 Use the binomial theorem to expand the expressions in 19-27.
 
 19. $(1 + x)^7$
 
+$$ (1 + x)^7 = \binom{7}{0}x^0 + \binom{7}{1}x^1 + \binom{7}{2}x^2 + \binom{7}{3}x^3 + \binom{7}{4}x^4 + \binom{7}{5}x^5 + \binom{7}{6}x^6 + \binom{7}{7}x^7 $$
+
+$$ = (1)(1) + (7)x + 21x^2 + 35x^3 + 35x^4 + 21x^5 + 7x^6 + 1x^7 $$
+
+$$ = 1 + 7x + 21x^2 + 35x^3 + 35x^4 + 21x^5 + 7x^6 + x^7 $$
+
 20. $(p + q)^6$
+
+$$ (p + q)^6 = \binom{6}{0}p^6q^0 + \binom{6}{1}p^5q^1 + \binom{6}{2}p^4q^2 + \binom{6}{3}p^3q^3 + \binom{6}{4}p^2q^4 + \binom{6}{5}p^1q^5 + \binom{6}{6}p^0q^6 $$
+
+$$ = (1)p^6(1) + 6p^5q + 15p^4q^2 + 20p^3q^3 + 15p^2q^4 + 6pq^5 + (1)(1)q^6 $$
+
+$$ = p^6 + 6p^5q + 15p^4q^2 + 20p^3q^3 + 15p^2q^4 + 6pq^5 + q^6 $$
 
 21. $(1 - x)^6$
 
+$$ (1 - x)^6 = (1 + (-x))^6 $$
+
+$$ = \binom{6}{0}(1)^6(-x)^0 + \binom{6}{1}(1)^5(-x)^1 + \binom{6}{2}(1)^4(-x)^2 + \binom{6}{3}(1)^3(-x)^3 + \binom{6}{4}(1)^2(-x)^4 + \binom{6}{5}(1)^1(-x)^5 + \binom{6}{6}(1)^0(-x)^6 $$
+
+$$ = (1)(1)(1) + 6(1)(-x) + 15(1)(x)^2 + 20(1)(-x)^3 + 15(1)(x)^4 + 6(1)(-x)^5 + 1(1)(x)^6 $$
+
+$$ = 1 - 6x + 15x^2 - 20x^3 + 15x^4 - 6x^5 + x^6 $$
+
 22. $(u - v)^5$
+
+$$ (u - v)^5 = (u + (-v))^5 $$
+
+$$ = \binom{5}{0}(u)^5(-v)^0 + \binom{5}{1}(u)^4(-v)^1 + \binom{5}{2}(u)^3(-v)^2 + \binom{5}{3}(u)^2(-v)^3 + \binom{5}{4}(u)^1(-v)^4 + \binom{5}{5}(u)^0(-v)^5 $$
+
+$$ = 1u^5(1) + 5u^4(-v) + 10u^3v^2 + 10u^2(-v)^3 + 5uv^4 + 1(1)(-v)^5 $$
+
+$$ = u^5 - 5u^4v + 10u^3v^2 - 10u^2v^3 + 5uv^4 - v^5 $$
 
 23. $(p - 2q)^4$
 
+$$ (p - 2q)^4 = (p + (-2q))^4 $$
+
+$$ = \binom{4}{0}(p)^4(-2q)^0 + \binom{4}{1}(p)^3(-2q)^1 + \binom{4}{2}(p)^2(-2q)^2 + \binom{4}{3}(p)^1(-2q)^3 + \binom{4}{4}(p)^0(-2q)^4  $$
+
+$$ = 1p^4(1) + 4p^3(-2q) + 6p^2(4q^2) + 4p(-8q^3) + 1(1)(16q^4) $$
+
+$$ = p^4 - 8p^3q + 24p^2q^2 - 32pq^3 + 16q^4 $$
+
 24. $(u - 3v)^4$
+
+$$ (u - 3v)^4 = (u + (-3v))^4 $$
+
+$$ = \binom{4}{0}(u)^4(-3v)^0 + \binom{4}{1}(u)^3(-3v)^1 + \binom{4}{2}(u)^2(-3v)^2 + \binom{4}{3}(u)^1(-3v)^3 + \binom{4}{4}(u)^0(-3v)^4 $$
+
+$$ = 1u^4(1) + 4u^3(-3v) + 6u^2(9v^2) + 4u(-27v^3) + 1(1)(81v^4) $$
+
+$$ = u^4 - 12u^3v + 54u^2v^2 - 108uv^3 + 81v^4 $$
 
 25. $\left(x + \dfrac{1}{x}\right)^5$
 
+$$ \left(x + \frac{1}{x}\right)^5 = \binom{5}{0}(x)^5\left(\frac{1}{x}\right)^0 + \binom{5}{1}(x)^4\left(\frac{1}{x}\right)^1 + \binom{5}{2}(x)^3\left(\frac{1}{x}\right)^2 + \binom{5}{3}(x)^2\left(\frac{1}{x}\right)^3  + \binom{5}{4}(x)^1\left(\frac{1}{x}\right)^4 + \binom{5}{5}(x)^0\left(\frac{1}{x}\right)^5 $$
+
+$$ = 1x^5(1) + 5x^4\left(\frac{1}{x}\right) + 10x^3\left(\frac{1}{x^2}\right) + 10x^2\left(\frac{1}{x^3}\right)  + 5x\left(\frac{1}{x^4}\right) + 1(1)\left(\frac{1}{x^5}\right) $$
+
+$$ = x^5 + 5x^3 + 10x + \frac{10}{x} + \frac{5}{x^3} + \frac{1}{x^5} $$
+
 26. $\left(\dfrac{3}{a} - \dfrac{a}{3}\right)^5$
 
+$$ \left(\frac{3}{a} - \frac{a}{3}\right)^5 = \left(\frac{3}{a} + \left(-\frac{a}{3}\right)\right)^5 $$
+
+$$ = \binom{5}{0}\left(\frac{3}{a}\right)^5\left(-\frac{a}{3}\right)^0 + \binom{5}{1}\left(\frac{3}{a}\right)^4\left(-\frac{a}{3}\right)^1 + \binom{5}{2}\left(\frac{3}{a}\right)^3\left(-\frac{a}{3}\right)^2 + \binom{5}{3}\left(\frac{3}{a}\right)^2\left(-\frac{a}{3}\right)^3 + \binom{5}{4}\left(\frac{3}{a}\right)^1\left(-\frac{a}{3}\right)^4 + \binom{5}{5}\left(\frac{3}{a}\right)^0\left(-\frac{a}{3}\right)^5 $$
+
+$$ = 1\left(\frac{243}{a^5}\right)(1) + 5\left(\frac{81}{a^4}\right)\left(-\frac{a}{3}\right) + 10\left(\frac{27}{a^3}\right)\left(\frac{a^2}{9}\right) + 10\left(\frac{9}{a^2}\right)\left(-\frac{a^3}{27}\right) + 5\left(\frac{3}{a}\right)\left(\frac{a^4}{81}\right) + 1(1)\left(-\frac{a^5}{243}\right) $$
+
+$$ = \frac{243}{a^5} - \frac{135}{a^3} + \frac{30}{a} - \frac{10a}{3} + \frac{5a^3}{27} - \frac{a^5}{243} $$
+
 27. $\left(x^2 + \dfrac{1}{x}\right)^5$
+
+$$ \left(x^2 + \frac{1}{x}\right)^5 $$
+
+$$ = \binom{5}{0}(x^2)^5\left(\frac{1}{x}\right)^0 + \binom{5}{1}(x^2)^4\left(\frac{1}{x}\right)^1 + \binom{5}{2}(x^2)^3\left(\frac{1}{x}\right)^2 + \binom{5}{3}(x^2)^2\left(\frac{1}{x}\right)^3 + \binom{5}{4}(x^2)^1\left(\frac{1}{x}\right)^4 + \binom{5}{5}(x^2)^0\left(\frac{1}{x}\right)^5  $$
+
+$$ = x^{10} + 5x^7 + 10x^4 + 10x + \frac{5}{x^2} + \frac{1}{x^5} $$
 
 28. In Example 9.7.5 it was shown that
 
