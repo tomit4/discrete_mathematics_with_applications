@@ -6919,3 +6919,138 @@ d. Express $\sum_{k = 1}^{n}{k\binom{n}{k}3^k}$ in closed form (without using a
 summation sign or ellipsis).
 
 Omitted.
+
+---
+
+Page 683
+
+**Exercise Set 9.8**
+
+1. In any sample space $S$, what is $P(\emptyset)$?
+
+2. Suppose $A$, $B$, and $C$ are mutually exclusive events in a sample space
+   $S$, $A \cup B \cup C = S$, and $A$ and $B$ have probabilities $0.3$ and
+   $0.5$, respectively.
+
+a. What is $P(A \cup B)$?
+
+b. What is $P(C)$?
+
+3. Suppose $A$ and $B$ are mutually exclusive events in a sample space $S$, $C$
+   is another event in $S$, $A \cup B \cup C = S$, and $A$ and $B$ have
+   probabilities $0.4$ and $0.2$, respectively.
+
+a. What is $P(A \cup B)$?
+
+b. Is it possible that $P(C) = 0.2$? Explain.
+
+4. Suppose $A$ and $B$ are events in a sample space $S$ with probabilities $0.8$
+   and $0.7$, respectively. Suppose also that $P(A \cap B) = 0.6$. What is
+   $P(A \cup B)$?
+
+5. Suppose $A$ and $B$ are events in a sample space $S$ and suppose that
+   $P(A) = 0.6$, $P(B^C) = 0.4$, and $P(A \cap B) = 0.2$. What is $P(A \cup B)$?
+
+6. Suppose $U$ and $V$ are events in a sample space $S$ and suppose that
+   $P(U^c) = 0.3, P(V) = 0.6$, and $P(U^c \cup V^c) = 0.4$. What is
+   $P(U \cup V)$?
+
+7. Suppose a sample space $S$ consists of three outcomes: $0$, $1$, and $2$. Let
+   $A = \{0\}$, $B = \{1\}$, and $C = \{2\}$, and suppose $P(A) = 0.4$ and
+   $P(B) = 0.3$. Find each of the following:
+
+a. $P(A \cup B)$
+
+b. $P(C)$
+
+c. $P(A \cup C)$
+
+d. $P(A^c)$
+
+e. $P(A^c \cap B^c)$
+
+f. $P(A^c \cup B^c)$
+
+8. Redo exercise 7 assuming that $P(A) = 0.5$ and $P(B) = 0.4$.
+
+9. Let $A$ and $B$ be events in a sample space $S$, and let
+   $C = S - (A \cup B)$. Suppose $P(A) = 0.4$, $P(B) = 0.5$, and
+   $P(A \cap B) = 0.2$. Find each of the following:
+
+a. $P(A \cup B)$
+
+b. $P(C)$
+
+c. $P(A^c)$
+
+d. $P(A^c \cap B^c)$
+
+e. $P(A^c \cup B^c)$
+
+f. $P(B^c \cap C)$
+
+10. Redo exercise 9 assuming that $P(A) = 0.7$, $P(B) = 0.3$, and
+    $P(A \cap B) = 0.1$.
+
+11. Prove that if $S$ is any sample space and $U$ and $V$ are events in $S$ with
+    $U \subseteq V$, then $P(U) \leq P(V)$.
+
+12. Prove that if $S$ is any sample space and $U$ and $V$ are any events in $S$,
+    then $P(V - U) = P(V) - P(U \cap V)$.
+
+13. Use the axioms of probability and mathematical induction to prove that for
+    each integer $n \geq 2$, if $A_1, A_2, A_3, \dots, A_n$ are any mutually
+    disjoint events in a sample space $S$, then
+
+$$ P(A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_n) = \sum_{k = 1}^{n}{P(A_k)} $$
+
+14. A lottery game offers $2 million to the grand prize winner, $20 to each of
+    10,000 second prize winners, and $4 to each of 50,000 third prize winners.
+    The cost of the lottery is $2 per ticket. Suppose that 1.5 million tickets
+    are sold. What is the expected gain or loss of a ticket?
+
+15. A company offers a raffle whose grand prize is a $40,000 new car. Additional
+    prizes are a $1,000 television and a $500 computer. Tickets cost $20 each.
+    Ticket income over the cost of the prizes will be donated to charity. If
+    3,000 tickets are sold, what is the expected gain or loss of each ticket?
+
+16. An urn contains four balls numbered 2, 2, 5, and 6. If a person selects a
+    set of two balls at random, what is the expected value of the sum of the
+    numbers on the balls?
+
+17. An urn contains five balls numbered 1, 2, 2, 8, and 8. If a person selects a
+    set of two balls at random, what is the expected value of the sum of the
+    numbers on the balls?
+
+18. An urn contains five balls numbered 1, 2, 2, 8, and 8. If a person selects a
+    set of three balls at random, what is the expected value of the sum of the
+    numbers on the balls?
+
+19. When a pair of balanced dice are rolled and the sum of the numbers showing
+    face up is computed, the result can be any number from 2 to 12, inclusive.
+    What is the expected value of the sum?
+
+20. Suppose a person offers to play a game with you. In this game, when you draw
+    a card from a standard 52-card deck, if the card is a face card you win $3,
+    and if the card is anything else you lose $1. If you agree to play the game,
+    what is your expected gain or loss?
+
+21. A person pays $1 to play the following game: The person tosses a fair coin
+    four times. If no heads occur, the person pays an additional $2, if one head
+    occurs, the person pays an additional $1, if two heads occur, the person
+    just loses the initial dollar, if three heads occur, the person wins $3, and
+    if four heads occur, the person wins $4. What is the person's expected gain
+    or loss?
+
+22. A fair coin is tossed until either a head comes up or four tails are
+    obtained. What is the expected number of tosses?
+
+23. A gambler repeatedly bets that a die will come up 6 when rolled. Each time
+    the die comes up 6, the gambler wins $1; each time it does not, the gambler
+    loses $1. He will quit playing either when he is ruined or when he wins
+    $300. If $P_n$ is the probability that the gambler is ruined when he begins
+    play with $n,then $P_{k - 1} = \dfrac{1}{6}P_k + \dfrac{5}{6}P_{k - 2}$ for
+    every integer $k$ with $2 \leq k \leq 300$. Also $P_0 = 1$ and
+    $P_{300} = 0$. Find an explicit formula for $P_n$ and use it to calculate
+    $P_{20}$. (Exercise 33 in Section 9.9 asks you to derive the recurrence
+    relation for this sequence.)

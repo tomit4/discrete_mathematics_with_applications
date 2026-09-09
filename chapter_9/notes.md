@@ -600,3 +600,54 @@ combined, the coefficient of $a^{n - k}b^k$ in the sum is $\dbinom{n}{k}$. Thus
 $$ (a + b)^n = \sum_{k = 0}^{n}{\binom{n}{k}a^{n - k}b^k} $$
 
 as was to be shown.
+
+---
+
+Page 678
+
+**Probability Axioms**
+
+Let $S$ be a sample space. A **probability function** $P$ from the set of all
+events in $S$ to the set of real numbers satisfies the following three axioms:
+For all events $A$ and $B$ in $S$:
+
+1. $0 \leq P(A) \leq 1$.
+
+2. $P(\emptyset) = 0$ and $P(S) = 1$.
+
+3. If $A$ and $B$ are disjoint (that is, if $A \cap B = \emptyset$), then the
+   probability of the union of $A$ and $B$ is
+
+$$ P(A \cup B) = P(A) + P(B) $$
+
+---
+
+Page 679
+
+**Probability of the Complement of an Event**
+
+If $A$ is any event in a sample space $S$, then
+
+$$ P(A^c) = 1 - P(A) $$
+
+---
+
+Page 680
+
+**Probability of a General Union of Two Events**
+
+If $S$ is any sample space and $A$ and $B$ are any events in $S$, then
+
+$$ P(A \cup B) = P(A) + P(B) - P(A \cap B) $$
+
+---
+
+Page 681
+
+**Definition**
+
+Suppose the possible outcomes of an experiment, or random process, are real
+numbers $a_1, a_2, a_3, \cots, a_n$, which occur with probabilities
+$p_1, p_2, p_3, \dots, p_n$. The **expected value** of the process is
+
+$$ \sum_{k = 1}^{n}{a_kp_k} = a_1p_1 + a_2p_2 + a_3p_3 + \cdots + a_np_n $$
