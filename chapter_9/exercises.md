@@ -6443,20 +6443,77 @@ $$ (a + b)^6 = (a + b)(a + b)^5 $$
 
 and then multiplying out and combining like terms.
 
+$$ (a + b)^6 = (a + b)\left[a^5 + 5a^4b + 10a^3b^2 + 10a^2b^3 + 5ab^4 + b^5\right] $$
+
+$$ = a^5(a + b) + 5a^4b(a + b) + 10a^3b^2(a + b) + 10a^2b^3(a + b) + 5ab^4(a + b) + b^5(a + b) $$
+
+$$ = a^6 + a^5b + 5a^5b + 5a^4b + 10a^4b^2 + 10a^3b^3 + 10a^3b^3 + 10^2b^4 + 5a^2b^4 + 5ab^5 + ab^5 + b^6 $$
+
+$$ = a^6 + 6a^5b + 15a^4b + 20a^3b^3 + 15^2b^4 + 6ab^5 + b^6 $$
+
 In 29-34, find the coefficient of the given term when the expression is expanded
 by the binomial theorem.
 
 29. $x^6y^3$ in $(x + y)^9$
 
+You don't necessarily have to expand out, just take the exponent and then choose
+the exponent of $y$:
+
+$$ \binom{9}{3}x^6y^3 $$
+
+$$ 84x^6y^3 $$
+
+So the coefficient is $84$.
+
 30. $x^7$ in $(2x + 3)^{10}$
+
+$$ (2x + 3)^{10} = \binom{10}{0}(2x)^{10}(3)^0 + \binom{10}{1}(2x)^9(3)^1 +\binom{10}{2}(2x)^8(3)^2 +\binom{10}{3}(2x)^7(3)^3 + \cdots $$
+
+$$ \binom{10}{3}(2x)^7(3)^3 $$
+
+$$ 120(128x^7)(27) $$
+
+$$ 120(128)(27)x^7 $$
+
+$$ 414720x^7 $$
 
 31. $a^5b^7$ in $(a - 2b)^{12}$
 
+$$ \binom{12}{7}(a)^5(-2b)^7 $$
+
+$$ 792a^5(-128b^7) $$
+
+$$ 792(-128)a^5b^7 $$
+
+$$ -101376a^5b^7 $$
+
 32. $u^{16}v^4$ in $(u^2 - v^2)^{10}$
+
+$$ \binom{10}{2}(u^2)^8(-v^2)^2 $$
+
+$$ 45(u^{16})(v^4) $$
+
+$$ 45u^{16}v^4 $$
 
 33. $p^{16}q^7$ in $(3p^2 - 2q)^{15}$
 
+$$ \binom{15}{7}(3p^2)^8(-2q)^7 $$
+
+$$ 6435(6561p^16)(-128q^7) $$
+
+$$ 6435(6561)(-128)(p^16)(q^7) $$
+
+$$ -5,404,164,480p^16q^7 $$
+
 34. $x^9y^{10}$ in $(2x - 3y^2)^{14}$
+
+$$ \binom{14}{5}(2x)^9(3y^2)^5 $$
+
+$$ 2002(512x^9)(243y^{10}) $$
+
+$$ 2002(512)(243)x^9y^{10} $$
+
+$$ 249,080,832x^9y^{10} $$
 
 35. As in the proof of the binomial theorem, transform the summation
 
@@ -6464,64 +6521,374 @@ $$ \sum_{k = 0}^{n}{\binom{m}{k}a^{m - k}b^{k + 1}} $$
 
 by making the change of variable $j = k + 1$.
 
+$$ \sum_{j = 1}^{n + 1}{\binom{m}{j - 1}a^{m - (j - 1)}b^{j}} $$
+
+$$ \sum_{j = 1}^{n + 1}{\binom{m}{j - 1}a^{m - j + 1}b^{j}} $$
+
 Use the binomial theorem to prove each statement in 36-41.
 
-36. Fore every integer $n \geq 1$,
+36. For every integer $n \geq 1$,
 
 $$ \binom{n}{0} - \binom{n}{1} + \binom{n}{2} - \cdots + (-1)^n\binom{n}{n} = 0 $$
 
 (_Hint:_ Use the fact that $1 + (-1) = 0$.)
 
+**Proof:**
+
+Let $a = 1$, let $b = -1$, and let $n$ be a positive integer. Substitute into
+the binomial theorem to obtain
+
+$$ (1 + (-1))^n = \sum_{k = 0}^{n}{\binom{n}{k} \cdot 1^{n - k} \cdot (-1)^k} $$
+
+$$ = \sum_{k = 0}^{n}{\binom{n}{k}(-1)^k} \quad \text{ since } 1^{n - k} = 1 $$
+
+On the other hand, $(1 + (-1))^n = 0^n = 0$, so
+
+$$ 0 = \sum_{k = 0}^{n}{\binom{n}{k}(-1)^k} $$
+
+$$ = \binom{n}{0} - \binom{n}{1} + \binom{n}{2} - \binom{n}{3} + \cdots + (-1)^n\binom{n}{n} $$
+
+Q.E.D.
+
 37. For every integer $n \geq 0$,
 
 $$ 3^n = \binom{n}{0} + 2\binom{n}{1} + 2^2\binom{n}{2} + \cdots + 2^n\binom{n}{n} $$
+
+_Hint:_ $3 = 2 + 1$
+
+**Proof:**
+
+Let $a = 1$, $b = 2$, and $n \geq 0$. Substitute into the binomial theorem to
+obtain
+
+$$ 3^n = \sum_{k = 0}^{n}{\binom{n}{k}1^{n - k}2^k} $$
+
+$$ 3^n = \sum_{k = 0}^{n}{\binom{n}{k}2^k} \quad \text{ since } 1^{n - k} = 1 $$
+
+Expanding out the summation:
+
+$$ 3^n = \binom{n}{0}2^0 + \binom{n}{1}2^1 + \binom{n}{2}2^2 + \cdots + \binom{n}{n}2^n $$
+
+$$ = \binom{n}{0} + 2\binom{n}{1} + 2^2\binom{n}{2} + \cdots + 2^n\binom{n}{n} $$
+
+Q.E.D.
 
 38. For every integer $m \geq 0$,
 
 $$ \sum_{i = 0}^{m}{(-1)^i\binom{m}{i}2^{m - 1}} = 1 $$
 
+**Proof:**
+
+Let $a = 2$, $b = -1$, and $m \geq 0$. Substituting into the binomial theorem:
+
+$$ 1 = 1^m = (2 + (-1))^m = \sum_{i = 0}^{m}{\binom{m}{i}2^{m - 1}(-1)^i} $$
+
+$$ = \sum_{i = 0}^{m}{(-1)^i\binom{m}{i}2^{m - 1}} $$
+
+Q.E.D.
+
 39. For every integer $n \geq 0$,
 
 $$ \sum_{i = 0}^{n}{(-1)^i\binom{n}{i}3^{n - i}} = 2^n $$
 
+**Proof:**
+
+Let $a = 3$, $b = -1$, and $n \geq 0$. Then, substituting into the binomial
+theorem:
+
+$$ 2^n = (3 + (-1))^n = \sum_{i = 0}^{n}{\binom{n}{i}3^{n - i}(-1)^i} $$
+
+$$ = \sum_{i = 0}^{n}{(-1)^i\binom{n}{i}3^{n - i}} $$
+
+Q.E.D.
+
 40. For every integer $n \geq 0$ and for every nonnegative real number $x$,
     $1 + nx \leq (1 + x)^n$.
+
+**Proof:**
+
+Suppose $x \in \mathbb{R}$ such that $x \geq 0$, and $n \in \mathbb{Z}$, with
+$n \geq 0$.
+
+By the binomial theorem, we can take $(1 + x)^n$, assign $a = 1$, $b = x$, and
+obtain:
+
+$$ (1 + x)^n = \sum_{i = 0}^{n}{\binom{n}{i}(1)^{n - i}x^i} $$
+
+Expanded out this is:
+
+$$ = \binom{n}{0}(1)^{n - 0}(x)^0 + \binom{n}{1}(1)^{n - 1}(x)^1 + \binom{n}{2}(1)^{n - 2}(x)^2 + \cdots + \binom{n}{n}(1)^{n - n}(x)^n $$
+
+$$ = 1 + nx + \binom{n}{2}x^2 + \cdots + x^n $$
+
+By the supposition, $x \geq 0$, and thus all remaining terms (_i.e._
+$\binom{n}{2}x^2 + \cdots + x^n$) are nonnegative, it follows that:
+
+$$ 1 + nx \leq (1 + x)^n $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 41. For every integer $n \geq 1$,
 
 $$ \binom{n}{0} - \frac{1}{2}\binom{n}{1} + \frac{1}{2^2}\binom{n}{2} - \frac{1}{2^3}\binom{n}{3} + \cdots + (-1)^{n - 1}\frac{1}{2^{n - 1}}\binom{n}{n - 1} = \begin{cases}0 & \text{if } n \text{ is even} \\ \dfrac{1}{2^{n - 1}} & \text{if } n \text{ is odd}\end{cases}$$
+
+**Proof:**
+
+Let $a = 1$ and $b = -\dfrac{1}{2}$, and $n \in \mathbb{Z}$ such that
+$n \geq 1$.
+
+By the binomial theorem:
+
+$$ \frac{1}{2^n} = \left(1 - \frac{1}{2}\right)^n $$
+
+$$ = \sum_{i = 0}^{n}{\binom{n}{i}1^{n - i}\left(-\frac{1}{2}\right)^i} $$
+
+$$ = \binom{n}{n}(1)^{n - n}\left(-\frac{1}{2}\right)^n + \sum_{i = 0}^{n - 1}{\binom{n}{i}1^{n - i - 1}\left(-\frac{1}{2}\right)^i} $$
+
+Since the given equation goes up to $n - 1$ and not $n$, it follows that the
+last term should be separated out from the summation:
+
+$$ =  (-1)^n\left(\frac{1}{2}\right)^n + \sum_{i = 0}^{n - 1}{\binom{n}{i}1^{n - i}\left(-\frac{1}{2}\right)^i} $$
+
+If this last term is then subtracted from both sides of the equation, the
+following is obtained:
+
+$$ \frac{1}{2^n} - (-1)^n\left(\frac{1}{2}\right)^n = \sum_{i = 0}^{n - 1}{\binom{n}{i}1^{n - i}\left(-\frac{1}{2}\right)^i} $$
+
+Evaluating the left-hand side:
+
+$$ \frac{1}{2^n} - (-1)^n\left(\frac{1}{2^n}\right) $$
+
+$$ \frac{1}{2^n}(1 - (-1)^n) $$
+
+Notice that in the case that $n$ is even, then $(1 - (-1)^n) = 0$, and by the
+zero-product property, this will always evaluate to $0$.
+
+Then, notice that in the case that $n$ is odd, then $(1 - (-1)^n) = 2$, so
+multiplying this out with $\dfrac{1}{2^n}$ yields $\dfrac{1}{2^{n - 1}}$.
+
+It follows that a piecewise expression can be substituted in for the left-hand
+side of the equation:
+
+$$
+\begin{cases}
+0 & \text{if } n \text{ is even} \\
+\dfrac{1}{2^{n - 1}}& \text{if } n \text{ is odd}
+\end{cases}
+$$
+
+And then simply expanding the summation this is equal to yields:
+
+$$ \begin{cases}
+0 & \text{if } n \text{ is even} \\
+\dfrac{1}{2^{n - 1}}& \text{if } n \text{ is odd}
+\end{cases}
+ = \sum_{i = 0}^{n - 1}{\binom{n}{i}1^{n - i}\left(-\frac{1}{2}\right)^i} $$
+
+$$ = \binom{n}{0}(1)^{n - 0}\left(-\frac{1}{2}\right)^0 + \binom{n}{1}(1)^{n - 1}\left(-\frac{1}{2}\right)^1 + \cdots + \binom{n}{n}(1)^{n - (n - 1)}\left(-\frac{1}{2}\right)^{n - 1} $$
+
+$$ = \binom{n}{0} - \frac{1}{2}\binom{n}{1} + \cdots + (-1)^{n - 1}\left(\frac{1}{2^{n - 1}}\right)\binom{n}{n - 1} $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 42. Use mathematical induction to prove that for every integer $n \geq 1$, if
     $S$ is a set with $n$ elements, then $S$ has the same number of subsets with
     an even number of elements as with an odd number of elements. Use this fact
     to give a combinatorial argument to justify the identity of exercise 36.
 
+**Proof (by mathematical induction):**
+
+Suppose $n \in \mathbb{Z}$, with $n \geq 1$, and let $S$ be any set such that
+$N(s) = n$.
+
+Let $P(n)$ be the statement:
+
+$S$ has the same number of subsets with an even number of elements as with an
+odd number of elements.
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$S$ has the same number of subsets with an even number of elements as with an
+odd number of elements.
+
+Since $N(S) = 1$, let $a$ represent the sole element in $S$, Then, the set of
+all sets in $S$ (_i.e._ the power set of $S$) is:
+
+$$ \mathscr{P}(S) = \{\emptyset, \{a\}\} $$
+
+Notice that $N(\emptyset) = 0$, and $0$ is even. Similarly, notice that
+$N(\{a\}) = 1$, and $1$ is odd.
+
+Since there is 1 even subset, and 1 odd subset, it can be said that $S$ has the
+same number of subsets with an even number of elements as with an odd number of
+elements.
+
+Thus $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k \in \mathbb{Z}$, with $k \geq 1$, $Q$ be any set and let $N(Q) = k$.
+
+Suppose $P(k)$, that is:
+
+$Q$ has the same number of subsets with an even number of elements as with an
+odd number of elements.
+
+This is the inductive hypothesis.
+
+Then, suppose that $T$ is any set where $N(T) = k + 1$.
+
+Prove $P(k + 1)$, that is, it must be shown that:
+
+$T$ has the same number of subsets with an even number of elements as with an
+odd number of elements.
+
+Let $t \in T$ and $t \notin Q$. It follows that since $N(T) = k + 1$, that
+$Q = T - \{t\}$.
+
+Now, each subset of $T$ either contains $t$ or it doesn't.
+
+_Case ($t$ is not in the subset of $T$):_
+
+Since $t$ is not in the subset of $T$, the subsets not containing $t$ are the
+subsets of $Q$.
+
+By the inductive hypothesis, $Q$ has the same number of even and odd subsets.
+
+_Case ($t$ is in the subset of $T$):_
+
+Since $t$ is in the subset of $T$, then each subset of $Q$ gives a subset of $T$
+by adding $t$ to it.
+
+This means that if the subset of $Q$ had an even number of elements in it, that
+corresponding subset in $T$ now has an odd number of elements in it. Similarly,
+if the subset of $Q$ had an odd number of elements in it, that corresponding
+subset in $T$ now has an even number of elements in it. Thus the subsets of $Q$
+and $T$ have opposite parity.
+
+Notice though that the equality of the _number_ of even and odd subsets does not
+change though.
+
+_Conclusion:_
+
+In both cases the number of even an odd subsets is equal, and therefore
+$P(k + 1)$ is true, or in other words, $\mathscr{P}(T)$ has the same number of
+even and odd subsets.
+
+This is what was to be shown.
+
+Q.E.D.
+
+_Combinatorial Argument:_
+
+A set with $n$ elements has $\dbinom{n}{k}$ subsets of size $k$. The alternating
+sum $\dbinom{n}{0} - \dbinom{n}{1} + \cdots$ counts even subsets minus odd
+subsets. By the above proof, these are equal, so the difference is $0$.
+
 Express each of the sums in 43-54 in closed form (without using a summation
 symbol and without using an ellipsis $\dots$).
 
 43. $\sum_{k = 0}^{n}{\binom{n}{k}5^k}$
 
+$$ \sum_{k = 0}^{n}{\binom{n}{k}5^k} = \sum_{k = 0}^{n}{\binom{n}{k}1^{n - k}5^k} $$
+
+$$ = (1 + 5)^n $$
+
+$$ = 6^n $$
+
 44. $\sum_{i = 0}^{m}{\binom{m}{i}4^i}$
+
+$$ \sum_{i = 0}^{m}{\binom{m}{i}4^i} = \sum_{i = 0}^{m}{\binom{m}{i}1^{m - i}4^i} $$
+
+$$ = (1 + 4)^m $$
+
+$$ = 5^m $$
 
 45. $\sum_{i = 0}^{n}{\binom{n}{i}x^i}$
 
+$$ \sum_{i = 0}^{n}{\binom{n}{i}x^i} = \sum_{i = 0}^{n}{\binom{n}{i}1^{n - i}x^i} $$
+
+$$ = (1 + x)^n $$
+
 46. $\sum_{k = 0}^{m}{\binom{m}{k}2^{m - k}x^k}$
 
-47. $\sum_{j = 0}^{2n}{\binom{2n}{j}x^j}$
+$$ \sum_{k = 0}^{m}{\binom{m}{k}2^{m - k}x^k} $$
+
+$$ = (2 + x)^m $$
+
+47. $\sum_{j = 0}^{2n}{(-1)^j\binom{2n}{j}x^j}$
+
+$$ \sum_{j = 0}^{2n}{(-1)^j\binom{2n}{j}x^j} = \sum_{j = 0}^{2n}{\binom{2n}{j}1^{2n - j}(-x)^j} $$
+
+$$ = (1 + (-x))^{2n} $$
+
+$$ = (1 - x)^{2n} $$
 
 48. $\sum_{r = 0}^{n}{\binom{n}{r}x^{2r}}$
 
+$$ \sum_{r = 0}^{n}{\binom{n}{r}x^{2r}} = \sum_{r = 0}^{n}{\binom{n}{r}1^{n - r}(x^2)^r}  $$
+
+$$ = (1 + x^2)^n $$
+
 49. $\sum_{i = 0}^{m}{\binom{m}{i}p^{m - i}q^{2i}}$
+
+$$ \sum_{i = 0}^{m}{\binom{m}{i}p^{m - i}q^{2i}} = \sum_{i = 0}^{m}{\binom{m}{i}p^{m - i}(q^2)^i} $$
+
+$$ = (p + q^2)^m $$
 
 50. $\sum_{k = 0}^{n}{\binom{n}{k}\dfrac{1}{2^k}}$
 
+$$ \sum_{k = 0}^{n}{\binom{n}{k}\dfrac{1}{2^k}} = \sum_{k = 0}^{n}{\binom{n}{k}1^{n - k}\left(\dfrac{1}{2}\right)^k} $$
+
+$$ = \left(1 + \frac{1}{2}\right)^n $$
+
+$$ = \left(\frac{3}{2}\right)^n $$
+
 51. $\sum_{i = 0}^{m}{(-1)^i\binom{m}{i}\dfrac{1}{2^i}}$
+
+$$ \sum_{i = 0}^{m}{(-1)^i\binom{m}{i}\dfrac{1}{2^i}} = \sum_{i = 0}^{m}{\binom{m}{i}1^{m - i}\left(-\dfrac{1}{2}\right)^i} $$
+
+$$ = \left(1 - \frac{1}{2}\right)^m $$
+
+$$ = \left(\frac{1}{2}\right)^m $$
 
 52. $\sum_{k = 0}^{n}{\binom{n}{k}3^{2n - 2k}2^{2k}}$
 
-53. $\sum_{i = 0}^{m}{(-1)^i\binom{n}{i}5^{n - i}2^i}$
+$$ \sum_{k = 0}^{n}{\binom{n}{k}3^{2n - 2k}2^{2k}} = \sum_{k = 0}^{n}{\binom{n}{k}(3^2)^{n - k}(2^2)^k} $$
+
+$$ = (3^2 + 2^2)^n $$
+
+$$ = (9 + 4)^n $$
+
+$$ = 13^n $$
+
+53. $\sum_{i = 0}^{n}{(-1)^i\binom{n}{i}5^{n - i}2^i}$
+
+$$ \sum_{i = 0}^{n}{(-1)^i\binom{n}{i}5^{n - i}2^i} = \sum_{i = 0}^{n}{\binom{n}{i}5^{n - i}(-2)^i} $$
+
+$$ = (5 - 2)^n $$
+
+$$ = 3^n $$
 
 54. $\sum_{k = 0}^{n}{(-1)^k\binom{n}{k}3^{2n - 2k}2^{2k}}$
+
+$$ \sum_{k = 0}^{n}{(-1)^k\binom{n}{k}3^{2n - 2k}2^{2k}} = \sum_{k = 0}^{n}{(-1)^k\binom{n}{k}(3^2)^{n - k}(2^2)^k} $$
+
+$$ = \sum_{k = 0}^{n}{\binom{n}{k}(3^2)^{n - k}(-1 \cdot 2^2)^k} $$
+
+$$ = \sum_{k = 0}^{n}{\binom{n}{k}(3^2)^{n - k}(-4)^k} $$
+
+$$ = (3^2 - 4)^n $$
+
+$$ = (9 - 4)^n $$
+
+$$ = 5^n $$
 
 55. (For students who have studied calculus.)
 
@@ -6529,8 +6896,12 @@ a. Explain how the equation below follows from the binomial theorem:
 
 $$ (1 + x)^n = \sum_{k = 0}^{n}{\binom{n}{k}x^k} $$
 
+Omitted.
+
 b. Write the formula obtained by taking the derivative of both sides of the
 equation in part (a) with respect to $x$.
+
+Omitted.
 
 c. Use the result of prat (b) to derive the formulas below.
 
@@ -6542,5 +6913,9 @@ $$ 2^{n - 1} = \frac{1}{n}\left[\binom{n}{1} + 2\binom{n}{2} + 3\binom{n}{3} + \
 
 $$ \sum_{k = 0}^{n}{k\binom{n}{k}(-1)^k} = 0 $$
 
+Omitted.
+
 d. Express $\sum_{k = 1}^{n}{k\binom{n}{k}3^k}$ in closed form (without using a
 summation sign or ellipsis).
+
+Omitted.
