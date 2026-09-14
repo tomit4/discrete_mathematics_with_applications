@@ -235,13 +235,23 @@ Page 683
 1. If $A$ is an event in a sample space $S$, $P(A)$ can take values between ____
    and ____. Moreover, $P(S) =$ ____ and $P(\emptyset) =$ ____.
 
+$0$; $1$; $1$; $0$
+
 2. If $A$ and $B$ are disjoint events in a sample space $S$, $P(A \cup B) =$
    ____.
 
+$P(A) + P(B)$
+
 3. If $A$ is an event in a sample space $S$, $P(A^c) =$ ____.
 
+$1 - P(A)$
+
 4. If $A$ and $B$ are any events in a sample space $S$, $P(A \cup B) =$ ____.
+
+$P(A) + P(B) - P(A \cap B)$
 
 5. If the possible outcomes of a random process or experiment are real numbers
    $a_1, a_2, \dots, a_n$, which occur with probabilities
    $p_1, p_2, \dots, p_n$, then the expected value of the process is ____.
+
+$a_1p_1 + a_2p_2 + \cdots + a_np_n$

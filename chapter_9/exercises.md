@@ -6928,13 +6928,19 @@ Page 683
 
 1. In any sample space $S$, what is $P(\emptyset)$?
 
+By probability axiom 2, $P(\emptyset) = 0$.
+
 2. Suppose $A$, $B$, and $C$ are mutually exclusive events in a sample space
    $S$, $A \cup B \cup C = S$, and $A$ and $B$ have probabilities $0.3$ and
    $0.5$, respectively.
 
 a. What is $P(A \cup B)$?
 
+$$ P(A \cup B) = P(A) + P(B) = 0.3 + 0.5 = 0.8  $$
+
 b. What is $P(C)$?
+
+$$ P(C) = 1 - P(A \cup B) = 1 - 0.8 = 0.2 $$
 
 3. Suppose $A$ and $B$ are mutually exclusive events in a sample space $S$, $C$
    is another event in $S$, $A \cup B \cup C = S$, and $A$ and $B$ have
@@ -6942,18 +6948,92 @@ b. What is $P(C)$?
 
 a. What is $P(A \cup B)$?
 
+$$ P(A \cup B) = P(A) + P(B) = 0.4 + 0.2 = 0.6 $$
+
 b. Is it possible that $P(C) = 0.2$? Explain.
+
+No, by probability axiom 1, any event $A$ in the sample space has a probability
+within the range of $0 \leq P(A) \leq 1$.
+
+Since $A \cup B \cup C = S$, it follows that $P(A \cup B \cup C) = P(S) = 1$,
+and we know that $P(A) = 0.4$, and $P(B) = 0.2$, so:
+
+Since $A$ and $B$ are mutually exclusive events, and $C$ is another event, it
+follows that:
+
+$$ P(A \cup B \cup C) = P(A \cup B) + P(C) - P((A \cup B) \cap C) $$
+
+Using these together, there is:
+
+$$ 1 = 0.6 + 0.2 - P((A \cup B) \cap C) $$
+
+Which is impossible since the right-hand side is $\leq 0.8$.
 
 4. Suppose $A$ and $B$ are events in a sample space $S$ with probabilities $0.8$
    and $0.7$, respectively. Suppose also that $P(A \cap B) = 0.6$. What is
    $P(A \cup B)$?
 
+Since $P(A \cap B) = 0.6$, and $P(A \cap B) \neq \emptyset$ (so we cannot apply
+axiom 3 from the probability axioms.), we apply the formula for general union of
+two events.
+
+$$ P(A \cup B) = P(A) + P(B) - P(A \cap B) $$
+
+$$ = 0.8 + 0.7 - 0.6 $$
+
+$$ = 0.9 $$
+
 5. Suppose $A$ and $B$ are events in a sample space $S$ and suppose that
    $P(A) = 0.6$, $P(B^C) = 0.4$, and $P(A \cap B) = 0.2$. What is $P(A \cup B)$?
+
+As in 4, we apply the general union of two events:
+
+$$ P(A \cup B) = P(A) + P(B) - P(A \cap B) $$
+
+Since $P(B^c) = 0.4$, we can apply the probability of the complement of an event
+$$ P(B^c) - 1 - P(B) $$
+
+formula to find $P(B)$:
+
+$$ P(B^c) = 1 - P(B) $$
+
+$$ P(B^c) - 1 = -P(B) $$
+
+$$ P(B) = 1 - P(B^c) $$
+
+$$ P(B) = 1 - 0.4 $$
+
+$$ P(B) = 0.6 $$
+
+And now we apply the general union of two events:
+
+$$ P(A \cup B) = 0.6 + 0.6 - 0.2 $$
+
+$$ = 1 $$
 
 6. Suppose $U$ and $V$ are events in a sample space $S$ and suppose that
    $P(U^c) = 0.3, P(V) = 0.6$, and $P(U^c \cup V^c) = 0.4$. What is
    $P(U \cup V)$?
+
+$$ P(U \cup V) = P(U) + P(V) - P(U \cap V) $$
+
+$$ P(U^c) = 1 - P(U) $$
+
+$$ 0.3 = 1 - P(U) $$
+
+$$ P(U) = 0.7 $$
+
+$$ P(U^c \cup V^c) = P((U \cap V)^c) $$
+
+$$ 0.4 = 1 - P(U \cap V) $$
+
+$$ P(U \cap V) = 0.6 $$
+
+$$ P(U \cup V) = P(U) + P(V) - P(U \cap V) $$
+
+$$ P(U \cup V) = 0.7 + 0.6 - 0.6 $$
+
+$$ P(U \cup V) = 0.7 $$
 
 7. Suppose a sample space $S$ consists of three outcomes: $0$, $1$, and $2$. Let
    $A = \{0\}$, $B = \{1\}$, and $C = \{2\}$, and suppose $P(A) = 0.4$ and
@@ -6961,17 +7041,131 @@ b. Is it possible that $P(C) = 0.2$? Explain.
 
 a. $P(A \cup B)$
 
+By definition for each of the subsets, $A$, $B$, and $C$ are all mutually
+disjoint.
+
+$$ P(A \cup B) = P(A) + P(B) $$
+
+$$ = 0.4 + 0.3 $$
+
+$$ = 0.7 $$
+
 b. $P(C)$
+
+$$ P(C) = P(S) - P(A \cup B) $$
+
+$$ P(C) = P(S) - (P(A) + P(B)) $$
+
+$$ P(C) = P(S) - P(A) - P(B) $$
+
+$$ P(C) = 1 - 0.4 - 0.3 $$
+
+$$ P(C) = 0.3 $$
 
 c. $P(A \cup C)$
 
+$$ P(A \cup C) = P(A) + P(C) $$
+
+$$ P(A \cup C) = 0.4 + 0.3 $$
+
+$$ P(A \cup C) = 0.7 $$
+
 d. $P(A^c)$
+
+$$ P(A^c) = 1 - P(A) $$
+
+$$ P(A^c) = 1 - 0.4 $$
+
+$$ P(A^c) = 0.6 $$
 
 e. $P(A^c \cap B^c)$
 
+$$ P(A^c \cap B^c) = P((A \cup B)^c) $$
+
+$$ P(A^c \cap B^c) = 1 - P(A \cup B) $$
+
+$$ P(A^c \cap B^c) = 1 - 0.7 $$
+
+$$ P(A^c \cap B^c) = 0.3 $$
+
 f. $P(A^c \cup B^c)$
 
+$$ P(A^c \cup B^c) = P((A \cap B)^c) $$
+
+$$ P(A^c \cup B^c) = 1 - P(A \cap B) $$
+
+As $A$ and $B$ are mutually disjoint, it follows that:
+
+$$ P(A^c \cup B^c) = 1 - P(\emptyset) $$
+
+$$ P(A^c \cup B^c) = 1 - 0 $$
+
+$$ P(A^c \cup B^c) = 1 $$
+
 8. Redo exercise 7 assuming that $P(A) = 0.5$ and $P(B) = 0.4$.
+
+a. $P(A \cup B)$
+
+By definition for each of the subsets, $A$, $B$, and $C$ are all mutually
+disjoint.
+
+$$ P(A \cup B) = P(A) + P(B) $$
+
+$$ = 0.5 + 0.4 $$
+
+$$ = 0.9 $$
+
+b. $P(C)$
+
+$$ P(C) = P(S) - P(A \cup B) $$
+
+$$ P(C) = P(S) - (P(A) + P(B)) $$
+
+$$ P(C) = P(S) - P(A) - P(B) $$
+
+$$ P(C) = 1 - 0.5 - 0.4 $$
+
+$$ P(C) = 0.1 $$
+
+c. $P(A \cup C)$
+
+$$ P(A \cup C) = P(A) + P(C) $$
+
+$$ P(A \cup C) = 0.5 + 0.1 $$
+
+$$ P(A \cup C) = 0.6 $$
+
+d. $P(A^c)$
+
+$$ P(A^c) = 1 - P(A) $$
+
+$$ P(A^c) = 1 - 0.5 $$
+
+$$ P(A^c) = 0.5 $$
+
+e. $P(A^c \cap B^c)$
+
+$$ P(A^c \cap B^c) = P((A \cup B)^c) $$
+
+$$ P(A^c \cap B^c) = 1 - P(A \cup B) $$
+
+$$ P(A^c \cap B^c) = 1 - 0.9 $$
+
+$$ P(A^c \cap B^c) = 0.1 $$
+
+f. $P(A^c \cup B^c)$
+
+$$ P(A^c \cup B^c) = P((A \cap B)^c) $$
+
+$$ P(A^c \cup B^c) = 1 - P(A \cap B) $$
+
+As $A$ and $B$ are mutually disjoint, it follows that:
+
+$$ P(A^c \cup B^c) = 1 - P(\emptyset) $$
+
+$$ P(A^c \cup B^c) = 1 - 0 $$
+
+$$ P(A^c \cup B^c) = 1 $$
 
 9. Let $A$ and $B$ be events in a sample space $S$, and let
    $C = S - (A \cup B)$. Suppose $P(A) = 0.4$, $P(B) = 0.5$, and
@@ -6979,24 +7173,213 @@ f. $P(A^c \cup B^c)$
 
 a. $P(A \cup B)$
 
+Note that it is not known if $A$ and $B$ are mutually disjoint.
+
+$$ P(A \cup B) = P(A) + P(B) - P(A \cap B) $$
+
+$$ = 0.4 + 0.5 - 0.2 $$
+
+$$ = 0.7 $$
+
 b. $P(C)$
+
+$$ P(C) = P(S - (A \cup B)) $$
+
+$$ P(C) = P(1 - (A \cup B)) $$
+
+$$ P(C) = P((A \cup B)^c) $$
+
+$$ P(C) = 1 - P(A \cup B) $$
+
+$$ P(C) = 1 - 0.7 $$
+
+$$ P(C) = 0.3 $$
 
 c. $P(A^c)$
 
+$$ P(A^c) = 1 - P(A) $$
+
+$$ P(A^c) = 1 - 0.4 $$
+
+$$ P(A^c) = 0.6 $$
+
 d. $P(A^c \cap B^c)$
+
+$$ P(A^c \cap B^c) = P((A \cup B)^c) $$
+
+$$ = 1 - P(A \cup B) $$
+
+$$ = 1 - 0.7 $$
+
+$$ = 0.3 $$
 
 e. $P(A^c \cup B^c)$
 
+$$ P(A^c \cup B^c) = P((A \cap B)^c) $$
+
+$$ = 1 - P(A \cap B) $$
+
+$$ = 1 - 0.2 $$
+
+$$ = 0.8 $$
+
 f. $P(B^c \cap C)$
+
+$$ B^c \cap C = B^c \cap (S - (A \cup B)) $$
+
+$$ B^c \cap C = B^c \cap (A \cup B)^c $$
+
+$$ B^c \cap C = B^c \cap (A^c \cap B^c) $$
+
+$$ B^c \cap C = B^c \cap A^c $$
+
+It follows that:
+
+$$ P(B^c \cap C) = P(B^c \cap A^c) $$
+
+by part (d), the right-hand side is known:
+
+$$ P(B^c \cap C) = 0.3 $$
 
 10. Redo exercise 9 assuming that $P(A) = 0.7$, $P(B) = 0.3$, and
     $P(A \cap B) = 0.1$.
 
+a. $P(A \cup B)$
+
+Note that it is not known if $A$ and $B$ are mutually disjoint.
+
+$$ P(A \cup B) = P(A) + P(B) - P(A \cap B) $$
+
+$$ = 0.7 + 0.3 - 0.1 $$
+
+$$ = 0.9 $$
+
+b. $P(C)$
+
+$$ P(C) = P(S - (A \cup B)) $$
+
+$$ P(C) = P(1 - (A \cup B)) $$
+
+$$ P(C) = P((A \cup B)^c) $$
+
+$$ P(C) = 1 - P(A \cup B) $$
+
+$$ P(C) = 1 - 0.9 $$
+
+$$ P(C) = 0.1 $$
+
+c. $P(A^c)$
+
+$$ P(A^c) = 1 - P(A) $$
+
+$$ P(A^c) = 1 - 0.7 $$
+
+$$ P(A^c) = 0.3 $$
+
+d. $P(A^c \cap B^c)$
+
+$$ P(A^c \cap B^c) = P((A \cup B)^c) $$
+
+$$ = 1 - P(A \cup B) $$
+
+$$ = 1 - 0.9 $$
+
+$$ = 0.1 $$
+
+e. $P(A^c \cup B^c)$
+
+$$ P(A^c \cup B^c) = P((A \cap B)^c) $$
+
+$$ = 1 - P(A \cap B) $$
+
+$$ = 1 - 0.1 $$
+
+$$ = 0.9 $$
+
+f. $P(B^c \cap C)$
+
+$$ B^c \cap C = B^c \cap (S - (A \cup B)) $$
+
+$$ B^c \cap C = B^c \cap (A \cup B)^c $$
+
+$$ B^c \cap C = B^c \cap (A^c \cap B^c) $$
+
+$$ B^c \cap C = B^c \cap A^c $$
+
+It follows that:
+
+$$ P(B^c \cap C) = P(B^c \cap A^c) $$
+
+by part (d), the right-hand side is known:
+
+$$ P(B^c \cap C) = 0.1 $$
+
 11. Prove that if $S$ is any sample space and $U$ and $V$ are events in $S$ with
     $U \subseteq V$, then $P(U) \leq P(V)$.
 
+_Hint:_ Since $U \subseteq V$, $V = U \cup (V - U)$
+
+**Proof:**
+
+Suppose that $S$ is any sample space with $U$ and $V$ being events in $S$, such
+that $U \subseteq V$.
+
+It must be shown that $P(U) \leq P(V)$.
+
+By definition of subset, since $U \subseteq V$, it follows that:
+
+$$ V = U \cup (V - U) $$
+
+It follows then that the probability of $V$, $P(V)$, is:
+
+$$ P(V) = P(U \cup (V - U)) $$
+
+And since $U \cap (V - U) = \emptyset$, axiom 3 of the Probability axioms can be
+applied:
+
+$$ P(V) = P(U) + P(V - U) $$
+
+By algebra:
+
+$$ P(U) = P(V) - P(V - U) $$
+
+By axiom 1, $0 \leq P(V - U) \leq 1$, and so it follows that
+$P(V) - P(V - U) \leq P(V)$, and therefore $P(U) \leq P(V)$.
+
+This is what was to be shown.
+
+Q.E.D.
+
 12. Prove that if $S$ is any sample space and $U$ and $V$ are any events in $S$,
     then $P(V - U) = P(V) - P(U \cap V)$.
+
+_Hint:_ For arbitrarily chosen sets $U$ and $V$, $U \cup (V - U) = U \cup V$.
+
+**Proof:**
+
+Suppose $S$ is any sample space and $U$ and $V$ are any events in $S$.
+
+It must be shown that $P(V - U) = P(V) - P(U \cap V)$.
+
+By the definition of set,
+
+$$ V = (U \cap V) \cup (V - U) $$
+
+Since $(U \cap V) \cap (V - U) = \emptyset$, by probability axiom 3:
+
+$$ P((U \cap V) \cup (V - U)) = P(U \cap V) + P(V - U) $$
+
+By algebra:
+
+$$ P(V - U) = P((U \cap V) \cup (V - U)) - P(U \cap V) $$
+
+And by substitution:
+
+$$ P(V - U) = P(V) - P(U \cap V) $$
+
+This is what was to be shown:
+
+Q.E.D.
 
 13. Use the axioms of probability and mathematical induction to prove that for
     each integer $n \geq 2$, if $A_1, A_2, A_3, \dots, A_n$ are any mutually
@@ -7004,36 +7387,227 @@ f. $P(B^c \cap C)$
 
 $$ P(A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_n) = \sum_{k = 1}^{n}{P(A_k)} $$
 
+_Hint:_ $(A_1 \cup A_2 \cup \dots \cup A_k) \cap A_{k + 1} = \emptyset$ and
+$A_1 \cup A_2 \cup \dots \cup A_k \cup A_{k + 1} = (A_1 \cup A_2 \cup \dots \cup A_k) \cup A_{k + 1}$.
+
+**Proof (by mathematical induction):**
+
+Suppose that $A_1, A_2, A_3, \dots, A_n$ are any mutually disjoint events in any
+sample space $S$, where $n \in \mathbb{Z}$ and $n \geq 2$.
+
+It must be shown that:
+
+$$ P(A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_n) = \sum_{k = 1}^{n}{P(A_k)} $$
+
+Let $Q(n)$ be the statement:
+
+$$ P(A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_n) = \sum_{k = 1}^{n}{P(A_k)} $$
+
+_Basis Step:_
+
+Prove $Q(2)$, that is:
+
+$$ P(A_1 \cup A_2) = \sum_{k = 1}^{2}{P(A_k)} $$
+
+Since $A_1$ and $A_2$ are mutually disjoint, it follows by probability axiom 3
+that:
+
+$$ P(A_1 \cup A_2) = P(A_1) + P(A_2) $$
+
+And this is equal to the given summation:
+
+$$ P(A_1 \cup A_2) = P(A_1) + P(A_2) = \sum_{k = 1}^{2}{P(A_k)} $$
+
+Thus $Q(2)$ is true.
+
+_Inductive Step:_
+
+Let $m \in \mathbb{Z}$, where $m \geq 2$.
+
+Suppose $Q(m)$, that is:
+
+$$ P(A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_m) = \sum_{k = 1}^{m}{P(A_k)} $$
+
+This is the inductive hypothesis.
+
+Prove $Q(m + 1)$, that is:
+
+$$ P(A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_{m + 1}) = \sum_{k = 1}^{m + 1}{P(A_k)} $$
+
+By the definition of sequence:
+
+$$ A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_{m + 1} = A_1 \cup A_2 \cup A_3 \cup \cdots A_m \cup A_{m + 1} $$
+
+Thus the left-hand side of $Q(m + 1)$ can be rewritten as:
+
+$$ P((A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_m) \cup (A_{m + 1})) $$
+
+Since the two sets in the arguments for $P$ are mutually disjoint, by
+probability axiom 3, this is equal to:
+
+$$ P((A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_m) \cup (A_{m + 1})) = P(A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_m) + P(A_{m + 1}) $$
+
+By the inductive hypothesis, the first term on the right-hand side can be
+substituted with the summation:
+
+$$ = \sum_{k = 1}^{m}{P(A_k)} + P(A_{m + 1}) $$
+
+And by the definition of summation, this can be rewritten as:
+
+$$ = \sum_{k = 1}^{m + 1}{P(A_k)} $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 14. A lottery game offers $2 million to the grand prize winner, $20 to each of
     10,000 second prize winners, and $4 to each of 50,000 third prize winners.
     The cost of the lottery is $2 per ticket. Suppose that 1.5 million tickets
     are sold. What is the expected gain or loss of a ticket?
+
+Each of the 1,500,000 lottery tickets has the same chance as any other of
+containing a winning lottery number, and so $p_k = \dfrac{1}{1,500,000}$ for
+each $k = 1, 2, 3, \dots, 1,500,000$. Let $a_i$ be the net gain for an
+individual ticket $a_i$, where $a_1 = 1,999,998$ (the net gain for the
+grand-prize winner). Let $a_2 = a_3 = \cdots = a_{10001} = 18$ (the net gain for
+the second prize winners). Let $a_{10002} = \cdots = a_{60001} = 2$ (the net
+gain for the third prize winners). Since the remaining 1,439,999 tickets just
+lose $2$ dollars, $a_{60002} = \cdots = a_{1500000} = -2$ .
+
+The expected value of a ticket is therefore
+
+$$ \sum_{k = 1}^{1,500,000}{a_kp_k} = \sum_{k = 1}^{1,500,000}{a_k \cdot \frac{1}{1,500,000}} $$
+
+$$ = \frac{1}{1,500,000}\sum_{k = 1}^{1,500,000}{a_k} $$
+
+$$ = \frac{1}{1,500,000}(1,999,998 \cdot 1 + 18 \cdot 10,000 + 2 \cdot 50,000 + (-2) \cdot 1,439,999) $$
+
+$$ = -0.4 $$
+
+Thus there is an expected loss of $0.40 per ticket.
 
 15. A company offers a raffle whose grand prize is a $40,000 new car. Additional
     prizes are a $1,000 television and a $500 computer. Tickets cost $20 each.
     Ticket income over the cost of the prizes will be donated to charity. If
     3,000 tickets are sold, what is the expected gain or loss of each ticket?
 
+Each of the 3,000 tickets has the same chance as any other of being a winning
+ticket, and so $p_k = \dfrac{1}{3,000}$ for each $k = 1, 2, 3, \dots, 3,000$.
+Let $a_i$ be the net gain for an individual ticket $a_i$, where $a_1 = 39,980$
+(the net gain for the winner of the new car). Let $a_2 = 980$ (the net gain for
+the winner of the television). Let $a_3 = 480$ (the net gain for the winner of
+the computer). Since the remaining 2,997 tickets sold just lose $20$,
+$a_4 = \cdots = a_{3000} = -20$.
+
+The expected value of a ticket is therefore
+
+$$ \sum_{k = 1}^{3000}{a_kp_k} = \sum_{k = 1}^{3000}{a_k \cdot \frac{1}{3000}} $$
+
+$$ = \frac{1}{3000}\sum_{k = 1}^{3000}{a_k} $$
+
+$$ = \frac{1}{3000}(39980 \cdot 1 + 980 \cdot 1 + 480 \cdot 1 + (-20) \cdot 2997 )$$
+
+$$ \approx -6.17 $$
+
+So the expected loss per ticket is approximately $6.17.
+
 16. An urn contains four balls numbered 2, 2, 5, and 6. If a person selects a
     set of two balls at random, what is the expected value of the sum of the
     numbers on the balls?
+
+Let $2_1$ and $2_2$ denote the two balls with the number 2, and let $5$ and $6$
+denote the other two balls. There are $\dbinom{4}{2} = 6$ subsets of 2 balls
+that can be chosen from the urn. The following table shows the sums of the
+numbers on the balls in each set and the corresponding probabilities:
+
+| Subset                   | Sum $s$ | Probability that the sum $= s$ |
+| ------------------------ | ------- | ------------------------------ |
+| $\{2_1, 2_2\}$           | $4$     | $\dfrac{1}{6}$                 |
+| $\{2_1, 5\}, \{2_2, 5\}$ | $7$     | $\dfrac{2}{6}$                 |
+| $\{2_1, 6\}, \{2_2, 6\}$ | $8$     | $\dfrac{2}{6}$                 |
+| $\{5, 6\}$               | $11$    | $\dfrac{1}{6}$                 |
+
+So the expected value is:
+
+$$ 4 \cdot \dfrac{1}{6} + 7 \cdot \dfrac{2}{6} + 8 \cdot \dfrac{2}{6} + 11 \cdot \dfrac{1}{6} = 7.5 $$
 
 17. An urn contains five balls numbered 1, 2, 2, 8, and 8. If a person selects a
     set of two balls at random, what is the expected value of the sum of the
     numbers on the balls?
 
+Let $2_1$ and $2_2$ denote the two balls with the number $2$, let $8_1$ and
+$8_2$ denote the two balls with the number $8$, and let $1$ denote the other
+ball with a $1$ on it.
+
+There are $\dbinom{5}{2} = 10$ subsets of 2 balls that can be chosen from the
+urn. The following table shows the sums of the numbers on the balls in each set
+and the corresponding probabilities:
+
+| Subset                                                   | Sum $s$ | Probability that the sum $= s$ |
+| -------------------------------------------------------- | ------- | ------------------------------ |
+| $\{1, 2_1\}, \{1, 2_2\}$                                 | $3$     | $\dfrac{2}{10}$                |
+| $\{1, 8_1\}, \{1, 8_2\}$                                 | $9$     | $\dfrac{2}{10}$                |
+| $\{2_1, 2_2\}$                                           | $4$     | $\dfrac{1}{10}$                |
+| $\{2_1, 8_1\}, \{2_2, 8_1\}, \{2_1, 8_2\}, \{2_2, 8_2\}$ | $10$    | $\dfrac{4}{10}$                |
+| $\{8_1, 8_2\}$                                           | $16$    | $\dfrac{1}{10}$                |
+
+So the expected value is:
+
+$$ 3 \cdot \frac{2}{10} + 9 \cdot \frac{2}{10} + 4 \cdot \frac{1}{10} + 10 \cdot \frac{4}{10} + 16 \cdot \frac{1}{10} = 8.4 $$
+
 18. An urn contains five balls numbered 1, 2, 2, 8, and 8. If a person selects a
     set of three balls at random, what is the expected value of the sum of the
     numbers on the balls?
+
+Let $2_1$ and $2_2$ denote the two balls with the number $2$, let $8_1$ and
+$8_2$ denote the two balls with the number $8$, and let $1$ denote the other
+ball with a $1$ on it.
+
+There are $\dbinom{5}{3} = 10$ subsets of 3 balls that can be chosen from the
+urn. The following table shows the sums of the numbers on the balls in each set
+and the corresponding probabilities:
+
+| Subset                                                               | Sum $s$ | Probability that the sum $= s$ |
+| -------------------------------------------------------------------- | ------- | ------------------------------ |
+| $\{1, 2_1, 2_2\}$                                                    | $5$     | $\dfrac{1}{10}$                |
+| $\{1, 8_1, 8_2\}$                                                    | $17$    | $\dfrac{1}{10}$                |
+| $\{1, 2_1, 8_1\}, \{1, 2_1, 8_2\}, \{1, 2_2, 8_1\}, \{1, 2_2, 8_2\}$ | $11$    | $\dfrac{4}{10}$                |
+| $\{2_1, 2_2, 8_1\}, \{2_1, 2_2, 8_2\}$                               | $12$    | $\dfrac{2}{10}$                |
+| $\{2_1, 8_1, 8_2\}, \{2_2, 8_1, 8_2\}$                               | $18$    | $\dfrac{2}{10}$                |
+
+So the expected value is:
+
+$$ 5 \cdot \frac{1}{10} + 17 \cdot \frac{1}{10} + 11 \cdot \frac{4}{10} + 12 \cdot \frac{2}{10} + 18 \cdot \frac{2}{10} = 12.6 $$
 
 19. When a pair of balanced dice are rolled and the sum of the numbers showing
     face up is computed, the result can be any number from 2 to 12, inclusive.
     What is the expected value of the sum?
 
+The following table shows the values for each die on the labels for the
+columns/rows and their sum in each cell:
+
+|     | $1$ | $2$ | $3$ | $4$  | $5$  | $6$  |
+| --- | --- | --- | --- | ---- | ---- | ---- |
+| $1$ | $2$ | $3$ | $4$ | $5$  | $6$  | $7$  |
+| $2$ | $3$ | $4$ | $5$ | $6$  | $7$  | $8$  |
+| $3$ | $4$ | $5$ | $6$ | $7$  | $8$  | $9$  |
+| $4$ | $5$ | $6$ | $7$ | $8$  | $9$  | $10$ |
+| $5$ | $6$ | $7$ | $8$ | $9$  | $10$ | $11$ |
+| $6$ | $7$ | $8$ | $9$ | $10$ | $11$ | $12$ |
+
+There are 36 cells in total, so any sum has a probability of occurring of
+$\dfrac{1}{36}$.
+
+So the expected value can be calculated as:
+
+$$ 2\left(\frac{1}{36}\right) + 3\left(\frac{2}{36}\right) + 4\left(\frac{3}{36}\right) + 5\left(\frac{4}{36}\right) + 6\left(\frac{5}{36}\right) + 7\left(\frac{6}{36}\right) + 8\left(\frac{5}{36}\right) + 9\left(\frac{4}{36}\right) + 10\left(\frac{3}{36}\right) + 11\left(\frac{2}{36}\right) + 12\left(\frac{1}{36}\right) = 7 $$
+
 20. Suppose a person offers to play a game with you. In this game, when you draw
     a card from a standard 52-card deck, if the card is a face card you win $3,
     and if the card is anything else you lose $1. If you agree to play the game,
     what is your expected gain or loss?
+
+Omitted.
 
 21. A person pays $1 to play the following game: The person tosses a fair coin
     four times. If no heads occur, the person pays an additional $2, if one head
@@ -7042,8 +7616,12 @@ $$ P(A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_n) = \sum_{k = 1}^{n}{P(A_k)} $$
     if four heads occur, the person wins $4. What is the person's expected gain
     or loss?
 
+Omitted.
+
 22. A fair coin is tossed until either a head comes up or four tails are
     obtained. What is the expected number of tosses?
+
+Omitted.
 
 23. A gambler repeatedly bets that a die will come up 6 when rolled. Each time
     the die comes up 6, the gambler wins $1; each time it does not, the gambler
@@ -7054,3 +7632,15 @@ $$ P(A_1 \cup A_2 \cup A_3 \cup \cdots \cup A_n) = \sum_{k = 1}^{n}{P(A_k)} $$
     $P_{300} = 0$. Find an explicit formula for $P_n$ and use it to calculate
     $P_{20}$. (Exercise 33 in Section 9.9 asks you to derive the recurrence
     relation for this sequence.)
+
+Solving, we get $P_k = 6P_{k - 1} - 5P_{k - 2}$. The characteristic equation is
+$r^2 - 6r + 5 = 0$ with roots $r = 1, 5$. The general solution is
+$P_n = A + B \cdot 5^n$. Applying initial conditions $P_0 = 1 = A + B$ and
+$P_{300} = 0 = A + B \cdot 5^{300}$ and solving both for $A$ we get
+$A = -B \cdot 5^{300} = 1 - B$, solving for $B$ we get
+$B = \dfrac{1}{1 - 5^{300}}$ and $A = 1 - \dfrac{1}{1 - 5^{300}}$. So
+
+$$ P_n = 1 - \frac{1}{1 - 5^{300}} + \frac{1}{1 - 5^{300}} \cdot 5^n $$
+
+Then
+$P_{20} = 1 - \dfrac{1}{1 - 5^{300}} + \dfrac{1}{1 - 5^{300}} \cdot 5^{20} = \dfrac{5^{20} - 5^{300}}{1 - 5^{300}} \approx 1$.
