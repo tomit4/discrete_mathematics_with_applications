@@ -7644,3 +7644,305 @@ $$ P_n = 1 - \frac{1}{1 - 5^{300}} + \frac{1}{1 - 5^{300}} \cdot 5^n $$
 
 Then
 $P_{20} = 1 - \dfrac{1}{1 - 5^{300}} + \dfrac{1}{1 - 5^{300}} \cdot 5^{20} = \dfrac{5^{20} - 5^{300}}{1 - 5^{300}} \approx 1$.
+
+---
+
+Page 696
+
+**Exercise Set 9.9**
+
+1. Suppose $P(A | B) = \dfrac{1}{2}$ and $P(A \cap B) = \dfrac{1}{6}$. What is
+   $P(B)$?
+
+2. Suppose $P(X | Y) = \dfrac{1}{3}$ and $P(Y) = \dfrac{1}{4}$. What is
+   $P(X \cap Y)$?
+
+3. The instructor of a discrete mathematics class gave two tests. Twenty-five
+   percent of the students received an A on the first test and 15% of the
+   students received A's on both tests. What percent of the students who
+   received A's on the first test also received A's on the second test?
+
+4.
+
+a. Prove that if $A$ and $B$ are any events in a sample space $S$, with
+$P(B) \neq 0$, then $P(A^c | B) = 1 - P(A | B)$.
+
+b. Explain how the result in part (a) justifies the following statements: (1) If
+the probability of a false positive on a test for a condition is 4%, then there
+is a 96% probability that a person who does not have the condition will have a
+negative test result. (2) If the probability of a false negative on a test for a
+condition is 1%, then there is a 99% probability that a person who does have the
+condition will test positive for it.
+
+5. Suppose that $A$ and $B$ are events in a sample space $S$ and that $P(A)$,
+   $P(B)$, and $P(A | B)$ are known. Derive a formula for $P(A | B^c)$.
+
+6. An urn contains 25 red balls and 15 blue balls. Two are chosen at random, one
+   after the other, without replacement.
+
+a. Use a tree diagram to help calculate the following probabilities: the
+probability that both balls are red, the probability that the first ball is red
+and the second is not, the probability that the first ball is not red and the
+second is red, the probability that neither ball is red.
+
+b. What is the probability that the second ball is red?
+
+c. What is the probability that at least one of the balls is red?
+
+7. Redo exercise 6 assuming that the urn contains 30 red balls and 40 blue
+   balls.
+
+8. A pool of 10 semifinalists for a job consists of 7 men and 3 women. Because
+   all are considered equally qualified, the names of two of the semifinalists
+   are drawn, one after the other, at random, to become finalists for the job.
+
+a. What is the probability that both finalists are women?
+
+b. What is the probability that both finalists are men?
+
+c. What is the probability that one finalist is a woman and the other is a man?
+
+9. Prove Bayes' theorem for $n = 2$. That is, prove that if a sample space $S$
+   is a union of mutually disjoint events $B_1$ and $B_2$, if $A$ is an event in
+   $S$ with $P(A) \neq 0$, and if $k = 1$ or $k = 2$, then
+
+$$ P(B_k | A) = \frac{P(A | B_k)P(B_k)}{P(A | B_1)P(B_1) + P(A | B_2)P(B_2)} $$
+
+10. Prove the full version of Bayes' theorem.
+
+11. One urn contains 12 blue balls and 7 white balls, and a second urn contains
+    8 blue balls and 19 white balls. An urn is selected at random, and a ball is
+    chosen from the urn.
+
+a. What is the probability that the chosen ball is blue?
+
+b. If the chosen ball is blue, what is the probability that it came from the
+first urn?
+
+12. Redo exercise 11 assuming that the first urn contains 4 blue balls and 16
+    white balls and the second urn contains 10 blue balls and 9 white balls.
+
+13. One urn contains 10 red balls and 25 green balls, and a second urn contains
+    22 red balls and 15 green balls. A ball is chosen as follows: First an urn
+    is selected by tossing a loaded coin with probability 0.4 of landing heads
+    up and probability 0.6 of landing tails up. IF the coin lands heads up, the
+    first urn is chosen, otherwise, the second urn is chosen. Then a ball is
+    picked at random from the chosen urn.
+
+a. What is the probability that the chosen ball is green?
+
+b. If the chosen ball is green, what is the probability that it was picked from
+the first urn?
+
+14. A drug-screening test is used in a large population of people of whom 4%
+    actually use drugs. Suppose that the false positive rate is 3% and the false
+    negative rate is 2%. Thus a person who uses drugs tests positive for them
+    98% of the time, and a person who does not use drugs tests negative for them
+    97% of the time.
+
+a. What is the probability that a randomly chosen person who tests positive for
+drugs actually uses drugs?
+
+b. What is the probability that a randomly chosen person who tests negative for
+drugs does not use drugs?
+
+15. Two different factories both produce a certain automobile part. The
+    probability that a component from the first factory is defective is 2%, and
+    the probability that a component from the second factory is defective is 5%.
+    In a supply of 180 of the parts, 100 were obtained from the first factory
+    and 80 from the second factory.
+
+a. What is the probability that a part chosen at random from the 180 is from the
+first factory?
+
+b. What is the probability that a part chosen at random from the 180 is from the
+second factory?
+
+c. What is the probability that a part chosen at random from the 180 is
+defective?
+
+d. If the chosen part is defective, what is the probability that it came from
+the first factory?
+
+16. Three different supplies - $X$, $Y$, and $Z$ - provide produce for a grocery
+    store. Twelve percent of produce from $X$ is superior grade, 8% of produce
+    from $Y$ is superior grade, and 15% of produce from $Z$ is superior grade.
+    The store obtains 20% of its produce from $X$, 45% from $Y$, and 35% from
+    $Z$.
+
+a. If a piece of produce is purchased, what is the probability that it is
+superior grade?
+
+b. If a piece of produce in the store is superior grade, what is the probability
+that it is from $X$?
+
+17. Prove that if $A$ and $B$ are events in a sample space $S$ with the property
+    that $P(A | B) = P(A)$ and $P(A) \neq 0$, then $P(B | A) = P(B)$.
+
+18. Prove that if $P(A \cap B) = P(A) \cdot P(B)$, $P(A) \neq 0$, and
+    $P(B) \neq 0$, then $P(A | B) = P(A)$ and $P(B | A) = P(B)$.
+
+19. A pair of fair dice, one blue and the other gray, are rolled. Let $A$ be the
+    event that the number face up on blue die is 2, and let $B$ be the event
+    that the number face up on the gray die is 4 or 5. Show that
+    $P(A | B) = P(A)$ and $P(B | A) = P(B)$.
+
+20. Suppose a fair coin is tossed three times. Let $A$ be the event that a head
+    appears on the first toss, and let $B$ be the event that an even number of
+    heads is obtained. Show that $P(A | B) = P(A)$ and $P(B | A) = P(B)$.
+
+21. If $A$ and $B$ are events in a sample space $S$ and $A \cap B = \emptyset$,
+    what must be true in order for $A$ and $B$ to be independent? Explain.
+
+22. Prove that if $A$ and $B$ are independent events in a sample space $S$, then
+    $A^c$ and $B$ are also independent, and so are $A^c$ and $B^c$.
+
+23. A student taking a multiple-choice exam does not know the answers to two
+    questions. All have five choices for the answer. For one of the two
+    questions, the student can eliminate two answer choices as incorrect but has
+    no idea about the other answer choices. For the other question, the student
+    has no clue about the correct answer at all. Assume that whether the student
+    chooses the correct answer on one of the questions does not affect whether
+    the student chooses the correct answer on the other question.
+
+a. What is the probability that the student will answer both questions
+correctly?
+
+b. What is the probability that the student will answer exactly one of the
+questions correctly?
+
+c. What is the probability that the student will answer neither question
+correctly?
+
+24. A software company uses two quality assurance (QA) checkers $X$ and $Y$ to
+    check an application for bugs. $X$ misses 12% of the bugs and $Y$ misses
+    15%. Assume that the QA checkers work independently.
+
+a. What is the probability that a randomly chosen bug will be missed by both QA
+checkers?
+
+b. If the program contains 1,000 bugs, what number can be expected to be missed?
+
+25. A coin is loaded so that the probability of heads is 0.7 and the probability
+    of tails is 0.3. Suppose that the coin is tossed twice and that the results
+    of the tosses are independent.
+
+a. What is the probability of obtaining exactly two heads?
+
+b. What is the probability of obtaining exactly one head?
+
+c. What is the probability of obtaining no heads?
+
+d. What is the probability of obtaining at least one head?
+
+26. Describe a sample space and events $A$, $B$, and $C$, where
+    $P(A \cap B \cap C) = P(A) \cdot P(B) \cdot P(C)$ but $A$, $B$, and $C$ are
+    not pairwise independent.
+
+27. The example used to introduce conditional probability described a family
+    with two children each of whom was equally likely to be a boy or a girl. The
+    example showed that if it is known that one child is a boy, the probability
+    that the other child is a boy is $\dfrac{1}{3}$. Now imagine the same kind
+    of family - two children each of whom is equally likely to be a boy or a
+    girl. Suppose you meet one of the children and that child is a boy. What is
+    the probability that the other child is a boy? Explain. (Be careful. The
+    answer may surprise you.)
+
+28. A coin is loaded so that the probability of heads is 0.7 and the probability
+    of tails is 0.3. Suppose that the coin is tossed ten times and that the
+    results of the tosses are mutually independent.
+
+a. What is the probability of obtaining exactly seven heads?
+
+b. What is the probability of obtaining exactly ten heads?
+
+c. What is the probability of obtaining no heads?
+
+d. What is the probability of obtaining at least one head?
+
+29. Suppose that ten items are chosen at random from a large batch delivered to
+    a company. The manufacturer claims that just 3% of the items in the batch
+    are defective. Assume that the batch is large enough so that even though the
+    selection is made without replacement, the number 0.03 can be used to
+    approximate the probability that any one of the ten items is defective. In
+    addition, assume that because the items are chosen at random, the outcomes
+    of the choices are mutually independent. Finally, assume that the
+    manufacturer's claim is correct.
+
+a. What is the probability that none of the ten items is defective?
+
+b. What is the probability that at least one of the ten is defective?
+
+c. What is the probability that exactly four of the ten are defective?
+
+d. What is the probability that at most two of the ten are defective?
+
+30. Suppose the probability of a false positive result on a mammogram is 4% and
+    that radiologists' interpretations of mammograms are mutually independent in
+    the sense that whether or not a radiologist finds a positive result on one
+    mammogram does not influence whether or not a radiologist finds a positive
+    result on another mammogram. Assume that a woman has a mammogram every year
+    for ten years.
+
+a. What is the probability that she will have no false positive results during
+that time?
+
+b. What is the probability that she will have at least one false positive result
+during that time?
+
+c. What is the probability that she will have exactly two false positive results
+during that time?
+
+d. Suppose that the probability of a false negative result on a mammogram is 2%,
+and assume that the probability that a randomly chosen woman has breast cancer
+is 0.0002.
+
+(i). If a woman has a positive test result one year, what is the probability
+that she actually has breast cancer?
+
+(ii). If a woman has a negative test result one year, what is the probability
+that she actually has breast cancer?
+
+31. Empirical data indicate that approximately 103 of every 200 children born
+    are male. Hence the probability of a newborn being male is about 51.5%.
+    Suppose that a family has six children, and suppose that the genders of all
+    the children are mutually independent.
+
+a. What is the probability that none of the children is male?
+
+b. What is the probability that at least one of the children is male?
+
+c. What is the probability that exactly five of the children are male?
+
+32. A person takes a multiple-choice exam in which each question has four
+    possible answers. Suppose that the person has no idea about the answers to
+    three of the questions and simply chooses randomly for each one.
+
+a. What is the probability that the person will answer all three questions
+correctly?
+
+b. What is the probability that the person will answer exactly two questions
+correctly?
+
+c. What is the probability that the person will answer exactly one question
+correctly?
+
+d. What is the probability that the person will answer no questions correctly?
+
+e. Suppose that the person gets one point of credit for each correct answer and
+that $\dfrac{1}{3}$ point is deducted for each incorrect answer. What is the
+expected value of the person's score for the three questions?
+
+33. In exercise 23 of Section 9.8, let $C_k$ be the event that the gambler has
+    $k$ dollars, wins the next roll of the die, and is eventually ruined, let
+    $D_k$ be the event that the gambler has $k$ dollars, loses the next roll of
+    the die, and is eventually ruined, and let $P_k$ be the probability that the
+    gambler is eventually ruined if he has $k$ dollars. Use the probability
+    axioms and the definition of conditional probability to derive the equation
+
+$$ P_{k - 1} = \frac{1}{6}P_k + \frac{5}{6}P_{k - 2} $$
+
+34. Use conditional probability to analyze exercise 20 in Section 9.1. Let $X$
+    be the event that the prize is not behind door $A$, and let $Y$ be the event
+    that you switch and choose the door with the prize. Should you switch?
+    Explain why or why not.

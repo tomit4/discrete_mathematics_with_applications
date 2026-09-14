@@ -651,3 +651,67 @@ numbers $a_1, a_2, a_3, \cots, a_n$, which occur with probabilities
 $p_1, p_2, p_3, \dots, p_n$. The **expected value** of the process is
 
 $$ \sum_{k = 1}^{n}{a_kp_k} = a_1p_1 + a_2p_2 + a_3p_3 + \cdots + a_np_n $$
+
+---
+
+Page 685
+
+**Definition**
+
+Let $A$ and $B$ be events in a sample space $S$. If $P(A) \neq 0$, then the
+**conditional probability of $B$ given $A$**, denoted $P(B | A)$, is
+
+$$ P(B | A) = \frac{P(A \cap B)}{P(A)} $$
+
+---
+
+Page 689
+
+**Theorem 9.9.1 Bayes' Theorem**
+
+Suppose a sample space $S$ is a union of mutually disjoint events
+$B_1, B_2, B_3, \dots, B_n$, suppose $A$ is an event in $S$, and suppose both
+$A$ and each $B_k$ have nonzero probabilities for every $k$ with
+$1 \leq k \leq n$. Then
+
+$$ P(B_k | A) = \frac{P(A | B_k)P(B_k)}{P(A|B_1)P(B_1) + P(A | B_2)P(B_2) + \cdots + P(A | B_n)P(B_n)} $$
+
+---
+
+Page 691
+
+**Definition**
+
+If $A$ and $B$ are events in a sample space $S$, then $A$ and $B$ are
+**independent** if, and only if,
+
+$$ P(A \cap B) = P(A) \cdot P(B) $$
+
+---
+
+Page 694
+
+**Definition**
+
+Let $A$, $B$, and $C$ be events in a sample space $S$. $A$, $B$, and $C$ are
+**pairwise independent** if, and only if, they satisfy conditions 1-3 below.
+They are **mutually independent** if, and only if, they satisfy all four
+conditions below.
+
+1. $P(A \cap B) = P(A) \cdot P(B)$
+
+2. $P(A \cap C) = P(A) \cdot P(C)$
+
+3. $P(B \cap C) = P(B) \cdot P(C)$
+
+4. $P(A \cap B \cap C) = P(A) \cdot P(B) \cdot P(C)$
+
+---
+
+Page 694
+
+**Definition**
+
+Events $A_1, A_2, A_3, \dots, A_n$ in a sample space $S$ are **mutually
+independent** if, and only if, the probability of the intersection of any subset
+of the events is the product of the probabilities of the events in the subset.

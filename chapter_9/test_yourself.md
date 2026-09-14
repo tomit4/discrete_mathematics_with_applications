@@ -255,3 +255,24 @@ $P(A) + P(B) - P(A \cap B)$
    $p_1, p_2, \dots, p_n$, then the expected value of the process is ____.
 
 $a_1p_1 + a_2p_2 + \cdots + a_np_n$
+
+---
+
+Page 695
+
+**Test Yourself**
+
+1. If $A$ and $B$ are any events in a sample space $S$ and $P(A) \neq 0$, then
+   the conditional probability of $B$ given $a$, denoted $P(A | B)$, equals
+   ____.
+
+2. Bayes' theorem says that if a sample space $S$ is a union of mutually
+   disjoint events $B_1, B_2, \dots, B_n$, each with a nonzero probability, if
+   $A$ is an event in $S$ with $P(A) \neq 0$, and if $k$ is an integer with
+   $1 \leq k \leq n$, then ____.
+
+3. Events $A$ and $B$ in a sample space $S$ are independent if, and only if,
+   ____.
+
+4. Events $A$, $B$, and $C$ in a sample space $S$ are mutually independent if,
+   and only if, ____, ____, ____, and ____.
