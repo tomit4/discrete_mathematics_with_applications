@@ -7654,18 +7654,68 @@ Page 696
 1. Suppose $P(A | B) = \dfrac{1}{2}$ and $P(A \cap B) = \dfrac{1}{6}$. What is
    $P(B)$?
 
+$$ P(B) = \dfrac{P(A \cap B)}{P(A | B)} $$
+
+$$ = \dfrac{\dfrac{1}{6}}{\dfrac{1}{2}} = \frac{1}{3} $$
+
 2. Suppose $P(X | Y) = \dfrac{1}{3}$ and $P(Y) = \dfrac{1}{4}$. What is
    $P(X \cap Y)$?
+
+$$ P(X \cap Y) = P(X | Y) \cdot P(Y) $$
+
+$$ = \frac{1}{3} \cdot \frac{1}{4} $$
+
+$$ = \frac{1}{12} $$
 
 3. The instructor of a discrete mathematics class gave two tests. Twenty-five
    percent of the students received an A on the first test and 15% of the
    students received A's on both tests. What percent of the students who
    received A's on the first test also received A's on the second test?
 
+_Hint:_ The answer is 60%.
+
+Let $A_1$ denote the set of students who received an A on the first test and let
+$A_2$ denote the set of students who received an A on the second test. Then
+$P(A_1) = 0.25$ and $P(A_1 \cap A_2) = 0.15$.
+
+$P(A_2 | A_1)$ is what is to be found.
+
+$$ P(A_2 | A_1) = \frac{P(A_1 \cap A_2)}{P(A_1)} $$
+
+$$ = \frac{0.15}{0.25} $$
+
+$$ = 0.6 = 60% $$
+
 4.
 
 a. Prove that if $A$ and $B$ are any events in a sample space $S$, with
 $P(B) \neq 0$, then $P(A^c | B) = 1 - P(A | B)$.
+
+**Proof:**
+
+Suppose $A$ and $B$ are any events in any sample space $S$, with $P(B) \neq 0$.
+
+It must be shown that $P(A^c | B) = 1 - P(A | B)$.
+
+By the definition of conditional probability:
+
+$$ P(A^c | B) = \frac{P(A^c \cap B)}{P(B)} $$
+
+By the complement rule applied to $B$:
+
+$$ = \frac{P(B) - P(A \cap B)}{P(B)} $$
+
+Then, by algebra:
+
+$$ = 1 - \frac{P(A \cap B)}{P(B)} $$
+
+Lastly, by the definition of conditional probability once again yields:
+
+$$ = 1 - P(A | B) $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 b. Explain how the result in part (a) justifies the following statements: (1) If
 the probability of a false positive on a test for a condition is 4%, then there
@@ -7674,33 +7724,244 @@ negative test result. (2) If the probability of a false negative on a test for a
 condition is 1%, then there is a 99% probability that a person who does have the
 condition will test positive for it.
 
+(1) If the probability of a false positive on a test for a condition is 4%, then
+there is a 96% probability that a person who does not have the condition will
+have a negative test result.
+
+Let $B$ be the event that a person has the condition, and let $A$ be the event
+that a person has a negative test result.
+
+Then, by the definition of complement, $A^c$ is the event that the person has a
+positive test result, and $B^c$ is the event that the person does not have the
+condition.
+
+By the supposition, $P(A^c | B^c) = 0.04$. It must be shown that
+$P(A | B^c) = 0.96$.
+
+By part (a), we know that:
+
+$$ P(A^c | B) = 1 - P(A | B) $$
+
+By algebra, it follows that:
+
+$$ P(A | B) = 1 - P(A^c | B) $$
+
+Since what must be found is $P(A | B^c)$, replace all $B$ in part(a)'s formula
+with $B^c$:
+
+$$ P(A | B^c) = 1 - P(A^c | B^c) $$
+
+Then, by substitution:
+
+$$ P(A | B^c) = 1 - 0.04 $$
+
+$$ P(A | B^c) = 0.96 $$
+
+This is what was to be shown.
+
+(2) If the probability of a false negative on a test for a condition is 1%, then
+there is a 99% probability that a person who does have the condition will test
+positive for it.
+
+Let $B$ be the event that a person has the condition, and let $A$ be the event
+that a person has a positive test result.
+
+Then, by definition of complement, this means that $B^c$ is the event that a
+person does not have the condition, and $A^c$ is the event that a person has a
+negative test result.
+
+By the supposition, $P(A^c | B) = 0.01$. It must be shown that
+$P(A | B) = 0.99$.
+
+By part (a), it is known that:
+
+$$ P(A^c | B) = 1 - P(A | B) $$
+
+Then, by substitution:
+
+$$ 0.01 = 1 - P(A | B) $$
+
+$$ 0.01 - 1 = -P(A | B) $$
+
+$$ -0.99 = -P(A | B) $$
+
+$$ P(A | B) = 0.99 $$
+
+This is what was to be shown.
+
 5. Suppose that $A$ and $B$ are events in a sample space $S$ and that $P(A)$,
    $P(B)$, and $P(A | B)$ are known. Derive a formula for $P(A | B^c)$.
 
+_Hints:_
+
+(1) $A = (A \cap B) \cup (A \cap B^c)$
+
+(2) The answer is $P(A | B^c) = \dfrac{P(A) - P(A | B)P(B)}{1 - P(B)}$
+
+By definition 9.9.1:
+
+$$ P(A | B^c) = \frac{P(B^c \cap A)}{P(B^c)} $$
+
+By the commutative law of $\cap$:
+
+$$ P(A | B^c) = \frac{P(A \cap B^c)}{P(B^c)} $$
+
+By the definition of complement/set difference/$\cap$:
+
+$$ P(A | B^c) = \frac{P(A) - P(A \cap B)}{P(B^c)} $$
+
+By the definition of complement:
+
+$$ P(A | B^c) = \frac{P(A) - P(A \cap B)}{1 - P(B)} $$
+
+By Example 9.9.1, definition 9.9.2:
+
+$$ P(A | B^c) = \frac{P(A) - P(A | B) \cdot P(B)}{1 - P(B)} $$
+
+This is what was to be shown.
+
 6. An urn contains 25 red balls and 15 blue balls. Two are chosen at random, one
    after the other, without replacement.
+
+Let $B_1$ denote the event that the first ball chosen is blue, let $B_2$ denote
+the event that the second ball chosen is blue, let $R_1$ denote the event that
+the first ball chosen is red, and let $R_2$ denote the event that the second
+ball chosen is red.
 
 a. Use a tree diagram to help calculate the following probabilities: the
 probability that both balls are red, the probability that the first ball is red
 and the second is not, the probability that the first ball is not red and the
 second is red, the probability that neither ball is red.
 
+(1) the probability that both balls are red
+
+$$ P(R_1 \cap R_2) $$
+
+By Example 9.9.1, definition 9.9.2:
+
+$$ P(R_1 \cap R_2) = P(R_2 | R_1) \cdot P(R_1) $$
+
+$$ = \left(\frac{24}{39}\right) \cdot \left(\frac{25}{40}\right)$$
+
+$$ = \frac{5}{13} $$
+
+(2) the probability that the first ball is red and the second is not
+
+$$ P(R_1 \cap R_2^c) $$
+
+This is also:
+
+$$ P(R_1 \cap B_2) $$
+
+Again, by Example 9.9.1, definition 9.9.2:
+
+$$ P(R_1 \cap B_2) = P(B_2 | R_1) \cdot P(R_1) $$
+
+$$ = \frac{15}{39} \cdot \frac{25}{40} $$
+
+$$ = \frac{25}{104} $$
+
+(3) the probability that the first ball is not red and the second is red
+
+$$ P(R_1^c \cap R_2) $$
+
+Alternatively:
+
+$$ P(B_1 \cap R_2) $$
+
+$$ P(B_1 \cap R_2) = P(R_2 | B_1) \cdot P(B_1) $$
+
+$$ = \frac{25}{39} \cdot \frac{15}{40} $$
+
+$$ = \frac{25}{104} $$
+
+(4) the probability that neither ball is red
+
+$$ P(R_1^c \cap R_2^c) $$
+
+Alternatively:
+
+$$ P(B_1 \cap B_2) $$
+
+$$ P(B_1 \cap B_2) = P(B_2 | B_1) \cdot P(B_1) $$
+
+$$ = \frac{14}{39} \cdot \frac{15}{40} $$
+
+$$ = \frac{7}{52} $$
+
 b. What is the probability that the second ball is red?
+
+$$ P(B_1 \cap R_2) + P(R_1 \cap R_2) $$
+
+by parts a(1) and a(3):
+
+$$ = \frac{25}{104} + \frac{5}{13} $$
+
+$$ = \frac{5}{8} $$
 
 c. What is the probability that at least one of the balls is red?
 
+$$ P(R_1 \cap R_2) + P(B_1 \cap R_2) + P(R_1 \cap B_2) $$
+
+by parts a(1), a(3), and a(2):
+
+$$ = \frac{5}{13} + \frac{25}{104} + \frac{25}{104} $$
+
+$$ = \frac{45}{52} $$
+
 7. Redo exercise 6 assuming that the urn contains 30 red balls and 40 blue
    balls.
+
+Omitted.
 
 8. A pool of 10 semifinalists for a job consists of 7 men and 3 women. Because
    all are considered equally qualified, the names of two of the semifinalists
    are drawn, one after the other, at random, to become finalists for the job.
 
+Let $M_1$ be the event that the first finalist chosen is a man, let $M_2$ be the
+event that the second finalist chosen is a man, let $W_1$ be the event that the
+first finalist chosen is a woman, and let $W_2$ be the event that the second
+finalist chosen is a woman.
+
 a. What is the probability that both finalists are women?
+
+$$ P(W_1 \cap W_2) $$
+
+$$ P(W_1 \cap W_2) = P(W_2 | W_1) \cdot P(W_1) $$
+
+$$ = \frac{2}{9} \cdot \frac{3}{10} $$
+
+$$ = \frac{1}{15} $$
 
 b. What is the probability that both finalists are men?
 
+$$ P(M_1 \cap M_2) $$
+
+$$ P(M_1 \cap M_2) = P(M_2 | M_1) \cdot P(M_1) $$
+
+$$ = \frac{6}{9} \cdot \frac{7}{10} $$
+
+$$ = \frac{7}{15} $$
+
 c. What is the probability that one finalist is a woman and the other is a man?
+
+$$ P(M_1 \cap W_2) + P(W_1 \cap M_2) $$
+
+$$ P(M_1 \cap W_2) = P(W_2 | M_1) \cdot P(M_1) $$
+
+$$ = \frac{3}{9} \cdot \frac{7}{10} $$
+
+$$ = \frac{7}{30} $$
+
+$$ P(W_1 \cap M_2) = P(M_2 | W_1) \cdot P(W_1) $$
+
+$$ = \frac{7}{9} \cdot \frac{3}{10} $$
+
+$$ = \frac{7}{30} $$
+
+$$ P(M_1 \cap W_2) + P(W_1 \cap M_2) = \frac{7}{30} + \frac{7}{30} $$
+
+$$ = \frac{7}{15} $$
 
 9. Prove Bayes' theorem for $n = 2$. That is, prove that if a sample space $S$
    is a union of mutually disjoint events $B_1$ and $B_2$, if $A$ is an event in
@@ -7708,7 +7969,117 @@ c. What is the probability that one finalist is a woman and the other is a man?
 
 $$ P(B_k | A) = \frac{P(A | B_k)P(B_k)}{P(A | B_1)P(B_1) + P(A | B_2)P(B_2)} $$
 
+_Hint:_ Use the facts that $P(B_k | A) = \dfrac{P(B_k \cap A)}{P(A)}$ and that
+$(A \cap B_1) \cup (A \cap B_2) = A$.
+
+**Proof:**
+
+Suppose $S$ is any sample space such that it is a union of mutually disjoint
+events $B_1$ and $B_2$.
+
+Let $A$ be an event in $S$, with $P(A) \neq 0$.
+
+Additionally, let $k = 1$ or $k = 2$.
+
+The following is what is to be shown:
+
+$$ P(B_k | A) = \frac{P(A | B_k)P(B_k)}{P(A | B_1)P(B_1) + P(A | B_2)P(B_2)} $$
+
+By definition 9.9.1 (and the hint):
+
+$$ P(B_k | A) = \frac{P(B_k \cap A)}{P(A)} $$
+
+Then, by example 9.9.1, definition 9.9.2:
+
+$$ P(B_k \cap A) = P(A | B_k)P(B_k) $$
+
+Then, by substitution:
+
+$$ P(B_k | A) = \frac{P(A | B_k)P(B_k)}{P(A)} $$
+
+By the property of distribution of $\cap$ over $\cup$ (_i.e._ the second hint),
+note that:
+
+$$ A = (A \cap B_1) \cup (A \cap B_2) $$
+
+Since $B_1$ and $B_2$ are mutually disjoint, the probability of $A$, $P(A)$, can
+be expressed as:
+
+$$ P(A) = P(A \cap B_1) + P(A \cap B_2) $$
+
+Thus, by substitution once again:
+
+$$ P(B_k | A) = \frac{P(A | B_k)P(B_k)}{P(A \cap B_1) + P(A \cap B_2)} $$
+
+Once again, apply example 9.9.1, definition 9.9.2 to both $P(A \cap B_1)$ and
+$P(A \cap B_2)$:
+
+$$ P(A \cap B_1) = P(A | B_1)P(B_1) $$
+
+$$ P(A \cap B_2) = P(A | B_2)P(B_2) $$
+
+Then, by substitution:
+
+$$ P(B_k | A) = \frac{P(A | B_k)P(B_k)}{P(A | B_1)P(B_1) + P(A | B_2)P(B_2)} $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 10. Prove the full version of Bayes' theorem.
+
+**Proof:**
+
+Suppose a sample space $S$ is a union of mutually disjoint events
+$B_1, B_2, B_3, \dots, B_n$, suppose $A$ is an event in $S$, and suppose both
+$A$ and each $B_k$ have nonzero probabilities for every $k$ with
+$1 \leq k \leq n$.
+
+The following is what is to be shown:
+
+$$ P(B_k | A) = \frac{P(A | B_k)P(B_k)}{P(A|B_1)P(B_1) + P(A | B_2)P(B_2) + \cdots + P(A | B_n)P(B_n)} $$
+
+By definition 9.9.1:
+
+$$ P(B_k | A) = \frac{P(B_k \cap A)}{P(A)} $$
+
+Then, by example 9.9.1, definition 9.9.2:
+
+$$ P(B_k \cap A) = P(A | B_k)P(B_k) $$
+
+Then, by substitution:
+
+$$ P(B_k | A) = \frac{P(A | B_k)P(B_k)}{P(A)} $$
+
+By the property of distribution of $\cap$ over $\cup$, note that:
+
+$$ A = (A \cap B_1) \cup (A \cap B_2) \cup \cdots \cup (A \cap B_n) $$
+
+Since $B_1, B_2, B_3, \dots, B_n$ are mutually disjoint, the probability of $A$,
+$P(A)$, can be expressed as:
+
+$$ P(A) = P(A \cap B_1) + P(A \cap B_2) + \cdots + P(A \cap B_n) $$
+
+Thus, by substitution once again:
+
+$$ P(B_k | A) = \frac{P(A | B_k)P(B_k)}{P(A \cap B_1) + P(A \cap B_2) + \cdots + P(A \cap B_n)} $$
+
+Once again, apply example 9.9.1, definition 9.9.2 to $P(A \cap B_1)$,
+$P(A \cap B_2)$ and so on up unto $P(A \cap B_n)$:
+
+$$ P(A \cap B_1) = P(A | B_1)P(B_1) $$
+
+$$ P(A \cap B_2) = P(A | B_2)P(B_2) $$
+
+$$ P(A \cap B_n) = P(A | B_n)P(B_n) $$
+
+Then, by substitution:
+
+$$ P(B_k | A) = \frac{P(A | B_k)P(B_k)}{P(A | B_1)P(B_1) + P(A | B_2)P(B_2) + \cdots + P(A | B_n)P(B_n)} $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 11. One urn contains 12 blue balls and 7 white balls, and a second urn contains
     8 blue balls and 19 white balls. An urn is selected at random, and a ball is
@@ -7716,23 +8087,118 @@ $$ P(B_k | A) = \frac{P(A | B_k)P(B_k)}{P(A | B_1)P(B_1) + P(A | B_2)P(B_2)} $$
 
 a. What is the probability that the chosen ball is blue?
 
+Let $U_1$ be the event that the first urn is chosen, let $U_2$ be the event that
+the second urn is chosen, and let $B$ be the event that a blue ball is chosen.
+
+Then:
+
+$$ P(B | U_1) = \frac{12}{19} $$
+
+and:
+
+$$ P(B | U_2) = \frac{8}{27} $$
+
+and:
+
+$$ P(U_1) = P(U_2) = \frac{1}{2} $$
+
+Thus the probability of choosing a blue ball and urn 1 is chosen is:
+
+$$ P(B \cap U_1) = P(B | U_1) \cdot P(U_1) $$
+
+$$ = \frac{12}{19} \cdot \frac{1}{2} $$
+
+$$ = \frac{6}{19} $$
+
+and also the probability of choosing a blue ball and urn 2 is chosen is:
+
+$$ P(B \cap U_2) = P(B | U_2) \cdot P(U_2) $$
+
+$$ = \frac{8}{27} \cdot \frac{1}{2} $$
+
+$$ = \frac{4}{27} $$
+
+By the definition of a disjoint union, $B$ can be expressed as a distribution of
+$\cap$ over $\cup$:
+
+$$ B = (B \cap U_1) \cup (B \cap U_2) $$
+
+Since $B \cap U_1$ and $B \cap U_2$ are mutually disjoint, $P(B)$ can be
+expressed as:
+
+$$ P(B) = P(B \cap U_1) + P(B \cap U_2) $$
+
+Then, by substitution:
+
+$$ P(B) = \frac{6}{19} + \frac{4}{27} $$
+
+$$ P(B) = \frac{238}{513} \approx 0.464 = 46.4\% $$
+
 b. If the chosen ball is blue, what is the probability that it came from the
 first urn?
+
+This is asking us to find $P(U_1 | B)$.
+
+By Bayes' theorem:
+
+$$ P(U_1 | B) = \frac{P(B | U_1)P(U_1)}{P(B | U_1)P(U_1) + P(B | U_2)P(U_2)} $$
+
+Then, by part (a):
+
+$$ P(U_1 | B) = \frac{\dfrac{12}{19} \cdot \dfrac{1}{2}}{\left(\dfrac{12}{19}\right)\left(\dfrac{1}{2}\right) + \left(\dfrac{8}{27}\right)\left(\dfrac{1}{2}\right)} $$
+
+$$ = \frac{\dfrac{6}{19}}{\left(\dfrac{6}{19}\right) + \left(\dfrac{4}{27}\right)} $$
+
+$$ = \frac{\dfrac{6}{19}}{\dfrac{238}{513}} $$
+
+$$ = \frac{81}{119} \approx 0.681 = 68.1\% $$
 
 12. Redo exercise 11 assuming that the first urn contains 4 blue balls and 16
     white balls and the second urn contains 10 blue balls and 9 white balls.
 
+Omitted.
+
 13. One urn contains 10 red balls and 25 green balls, and a second urn contains
     22 red balls and 15 green balls. A ball is chosen as follows: First an urn
     is selected by tossing a loaded coin with probability 0.4 of landing heads
-    up and probability 0.6 of landing tails up. IF the coin lands heads up, the
+    up and probability 0.6 of landing tails up. If the coin lands heads up, the
     first urn is chosen, otherwise, the second urn is chosen. Then a ball is
     picked at random from the chosen urn.
 
+Let $U_1$ be the event that the first urn is chosen, let $U_2$ be the event that
+the second urn is chosen, and let $G$ be the event that the chosen ball is
+green.
+
+Then:
+
+$$ P(U_1) = 0.4, P(U_2) = 0.6, P(G | U_1) = \dfrac{25}{35} = \dfrac{5}{7}, P(G | U_2) = \dfrac{15}{37} $$
+
 a. What is the probability that the chosen ball is green?
+
+$$ P(G) = P(G \cap U_1) + P(G \cap U_2) $$
+
+$$ = P(G | U_1)P(U_1) + P(G | U_2)P(U_2) $$
+
+$$ = \left(\frac{5}{7}\right)\left(\frac{2}{5}\right) + \left(\frac{15}{37}\right)\left(\frac{3}{5}\right) $$
+
+$$ = \frac{2}{7} + \frac{9}{37} $$
+
+$$ = \frac{137}{259} \approx 0.529 = 52.9\% $$
 
 b. If the chosen ball is green, what is the probability that it was picked from
 the first urn?
+
+By Bayes Theorem:
+
+$$ P(U_1 | G) = \frac{P(G | U_1)P(U_1)}{P(G | U_1)P(U_1) + P(G | U_2)P(U_2)} $$
+
+$$ = \frac{\left(\dfrac{5}{7}\right)\left(\dfrac{2}{5}\right)}{\left(\dfrac{5}{7}\right)\left(\dfrac{2}{5}\right) + \left(\dfrac{15}{37}\right)\left(\dfrac{3}{5}\right)} $$
+
+$$ = \frac{\dfrac{2}{7}}{\dfrac{2}{7} + \dfrac{9}{37}} $$
+
+$$ = \frac{\dfrac{2}{7}}{\dfrac{137}{259}} $$
+
+$$ = \frac{74}{137} \approx 0.540 = 54.0\% $$
 
 14. A drug-screening test is used in a large population of people of whom 4%
     actually use drugs. Suppose that the false positive rate is 3% and the false
@@ -7740,11 +8206,40 @@ the first urn?
     98% of the time, and a person who does not use drugs tests negative for them
     97% of the time.
 
+Let $D$ denote the event that a person actually uses drugs, and let $T$ denote
+the event that a person tests positive for using drugs.
+
+Then:
+
+$$ P(D) = 0.04, P(T | D^c) = 0.03, P(T^c | D) = 0.02, P(T | D) = 0.98, P(T^c | D^c) = 0.97 $$
+
 a. What is the probability that a randomly chosen person who tests positive for
 drugs actually uses drugs?
 
+By Bayes Theorem:
+
+$$ P(D | T) = \frac{P(T | D)P(D)}{P(T | D)P(D) + P(T | D^c)P(D^c)} $$
+
+$$ = \frac{(0.98)(0.04)}{(0.98)(0.04) + (0.03)(0.96)} $$
+
+$$ = \frac{0.0392}{0.0392 + 0.0288} $$
+
+$$ = \frac{0.0392}{0.068} $$
+
+$$ \approx 0.576 = 57.6\% $$
+
 b. What is the probability that a randomly chosen person who tests negative for
 drugs does not use drugs?
+
+$$ P(D^c | T^c) = \frac{P(T^c | D^c)P(D^c)}{P(T^c | D^c)P(D^c) + P(T^c | D)P(D)} $$
+
+$$ = \frac{(0.97)(0.96)}{(0.97)(0.96) + (0.02)(0.04)} $$
+
+$$ = \frac{0.9312}{0.9312 + 0.0008} $$
+
+$$ = \frac{0.9312}{0.932} $$
+
+$$ \approx 0.999 = 99.9\% $$
 
 15. Two different factories both produce a certain automobile part. The
     probability that a component from the first factory is defective is 2%, and
@@ -7752,17 +8247,49 @@ drugs does not use drugs?
     In a supply of 180 of the parts, 100 were obtained from the first factory
     and 80 from the second factory.
 
+Let $F$ be the event that the part was chosen from the first factory, let $S$ be
+the event that the part was chosen from the second factory, and let $D$ denote
+the event that the part was defective.
+
+Then:
+
+$$ P(F) = \frac{100}{180} = \frac{5}{9}, P(S) = \frac{80}{180} = \frac{4}{9}, P(D | F) = \frac{2}{100} = \frac{1}{50}, P(D | S) = \frac{5}{100} = \frac{1}{20} $$
+
 a. What is the probability that a part chosen at random from the 180 is from the
 first factory?
+
+$$ P(F) = \frac{5}{9} $$
 
 b. What is the probability that a part chosen at random from the 180 is from the
 second factory?
 
+$$ P(S) = \frac{4}{9} $$
+
 c. What is the probability that a part chosen at random from the 180 is
 defective?
 
+$$ P(D) = P(D \cap F) + P(D \cap S) $$
+
+$$ = P(D | F)P(F) + P(D | S)P(S) $$
+
+$$ = \left(\frac{1}{50}\right)\left(\frac{5}{9}\right) + \left(\frac{1}{20}\right)\left(\frac{4}{9}\right) $$
+
+$$ = \frac{1}{90} + \frac{1}{45} $$
+
+$$ = \frac{1}{30} \approx 0.033 = 3.3\% $$
+
 d. If the chosen part is defective, what is the probability that it came from
 the first factory?
+
+By Bayes Theorem:
+
+$$ P(F | D) = \frac{P(D | F)P(F)}{P(D | F)P(F) + P(D | S)P(S)} $$
+
+$$ = \frac{\dfrac{1}{90}}{\dfrac{1}{90} + \dfrac{1}{45}} $$
+
+$$ = \frac{\dfrac{1}{90}}{\dfrac{1}{30}} $$
+
+$$ = \frac{1}{3} \approx 0.333 = 33.3\% $$
 
 16. Three different supplies - $X$, $Y$, and $Z$ - provide produce for a grocery
     store. Twelve percent of produce from $X$ is superior grade, 8% of produce
@@ -7770,14 +8297,72 @@ the first factory?
     The store obtains 20% of its produce from $X$, 45% from $Y$, and 35% from
     $Z$.
 
+Let $S$ denote the event that the piece of produce is superior grade, let $X$
+denote the event that the piece of produce came from grocery store $X$, let $Y$
+denote the event that the piece of produce came from grocery store $Y$, and let
+$Z$ denote the event that the piece of produce came from grocery store $Z$.
+
+Then:
+
+$$ P(S | X) = 0.12, P(S | Y) = 0.08, P(S | Z) = 0.15, P(X) = 0.2, P(Y) = 0.45, P(Z) = 0.35 $$
+
 a. If a piece of produce is purchased, what is the probability that it is
 superior grade?
+
+$$ P(S) = P(S \cap X) + P(S \cap Y) + P(S \cap Z) $$
+
+$$ = P(S | X)P(X) + P(S | Y)P(Y) + P(S | Z)P(Z) $$
+
+$$ = (0.12)(0.2) + (0.08)(0.45) + (0.15)(0.35) $$
+
+$$ = 0.1125 = 11.25\% $$
 
 b. If a piece of produce in the store is superior grade, what is the probability
 that it is from $X$?
 
+By Bayes Theorem:
+
+$$ P(X | S) = \frac{P(S | X)P(X)}{P(S | X)P(X) + P(S | Y)P(Y) + P(S | Z)P(Z)} $$
+
+$$ = \frac{(0.12)(0.2)}{0.1125} $$
+
+$$ = \frac{0.024}{0.1125} $$
+
+$$ \approx 0.213 = 21.3\% $$
+
 17. Prove that if $A$ and $B$ are events in a sample space $S$ with the property
     that $P(A | B) = P(A)$ and $P(A) \neq 0$, then $P(B | A) = P(B)$.
+
+**Proof:**
+
+Suppose $S$ is any sample space with $A$ and $B$ being events in $S$, such that
+$P(A | B) = P(A)$.
+
+It must be shown that $P(B | A) = P(B)$.
+
+By 9.9.1:
+
+$$ P(A | B) = \frac{P(B \cap A)}{P(B)} $$
+
+By Example 9.9.1, definition 9.9.2:
+
+$$ P(A | B) = \frac{P(B | A)P(A)}{P(B)} $$
+
+Then, by the supposition, since $P(A | B) = P(A)$:
+
+$$ P(A) = \frac{P(B | A)P(A)}{P(B)} $$
+
+By Algebra (and since $P(A) \neq 0$):
+
+$$ P(A)P(B) = P(B | A)P(A) $$
+
+$$ P(B) = P(B | A) $$
+
+$$ P(B | A) = P(B) $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 18. Prove that if $P(A \cap B) = P(A) \cdot P(B)$, $P(A) \neq 0$, and
     $P(B) \neq 0$, then $P(A | B) = P(A)$ and $P(B | A) = P(B)$.

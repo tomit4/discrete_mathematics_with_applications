@@ -266,13 +266,23 @@ Page 695
    the conditional probability of $B$ given $a$, denoted $P(A | B)$, equals
    ____.
 
+$\dfrac{P(A \cap B)}{P(A)}$
+
 2. Bayes' theorem says that if a sample space $S$ is a union of mutually
    disjoint events $B_1, B_2, \dots, B_n$, each with a nonzero probability, if
    $A$ is an event in $S$ with $P(A) \neq 0$, and if $k$ is an integer with
    $1 \leq k \leq n$, then ____.
 
+$P(B_k | A) = \dfrac{P(A | B_k)P(B_k)}{P(A_1 | B_1)P(B_1) + P(A | B_2)P(B_2) + \cdots + P(A | B_n)P(B_n)}$
+
 3. Events $A$ and $B$ in a sample space $S$ are independent if, and only if,
    ____.
 
+$P(A \cap B) = P(A) \cdot P(B)$
+
 4. Events $A$, $B$, and $C$ in a sample space $S$ are mutually independent if,
    and only if, ____, ____, ____, and ____.
+
+$P(A \cap B) = P(A) \cdot P(B)$; $P(A \cap C) = P(A) \cdot P(C)$;
+$P(B \cap C) = P(B) \cdot P(C)$;
+$P(A \cap B \cap C) = P(A) \cdot P(B) \cdot P(C)$
