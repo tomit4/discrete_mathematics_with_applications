@@ -8367,20 +8367,208 @@ Q.E.D.
 18. Prove that if $P(A \cap B) = P(A) \cdot P(B)$, $P(A) \neq 0$, and
     $P(B) \neq 0$, then $P(A | B) = P(A)$ and $P(B | A) = P(B)$.
 
+**Proof:**
+
+Suppose $A$ and $B$ are any events where $P(A \cap B) = P(A) \cdot P(B)$,
+$P(A) \neq 0$, and $P(B) \neq 0$.
+
+It must be shown that $P(A | B) = P(A)$ and it must also be shown that
+$P(B | A) = P(B)$.
+
+_Proof ($P(A | B) = P(A)$):_
+
+By 9.9.1:
+
+$$ P(A | B) = \frac{P(B \cap A)}{P(B)} $$
+
+By the supposition:
+
+$$ = \frac{P(A) \cdot P(B)}{P(B)} $$
+
+$$ = P(A) $$
+
+_Proof ($P(B | A) = P(B)$):_
+
+By 9.9.1:
+
+$$ P(B | A) = \frac{P(A \cap B)}{P(A)} $$
+
+By the supposition:
+
+$$ = \frac{P(A) \cdot P(B)}{P(A)} $$
+
+$$ = P(B) $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 19. A pair of fair dice, one blue and the other gray, are rolled. Let $A$ be the
     event that the number face up on blue die is 2, and let $B$ be the event
     that the number face up on the gray die is 4 or 5. Show that
     $P(A | B) = P(A)$ and $P(B | A) = P(B)$.
 
+Since the dice are fair, it follows that $P(A) = \dfrac{1}{6}$. Similarly,
+$P(B) = \dfrac{2}{6} = \dfrac{1}{3}$.
+
+It must be shown that $P(A | B) = P(A)$ and that $P(B | A) = P(B)$, which is the
+same conclusion proven in exercise 18. It follows that if it can be shown that
+$P(A \cap B) = P(A) \cdot P(B)$, then by exercise 18 that this conclusion is
+true. In evaluating $P(A \cap B)$, note that there are a total of $36$ possible
+outcomes, and $2$ events (_i.e._ that of the blue die rolling a $2$, and the
+gray die rolling a $4$ or $5$.)
+
+$$ P(A \cap B) = \frac{2}{36} = \frac{1}{18} = \frac{1}{6} \cdot \frac{1}{3} = P(A) \cdot P(B) $$
+
+So it has been shown that $P(A \cap B) = P(A) \cdot P(B)$, and by exercise 18,
+since $P(A \cap B) = P(A) \cdot P(B)$, it can be concluded that
+$P(A | B) = P(A)$ and that $P(B | A) = P(B)$.
+
 20. Suppose a fair coin is tossed three times. Let $A$ be the event that a head
     appears on the first toss, and let $B$ be the event that an even number of
     heads is obtained. Show that $P(A | B) = P(A)$ and $P(B | A) = P(B)$.
 
+This is similar to exercise 19, if we can show that
+$P(A \cap B) = P(A) \cdot P(B)$, then by exercise 18, we can conclude that
+$P(A | B) = P(A)$ and $P(B | A) = P(B)$.
+
+Note that by the supposition, it follows that $P(A) = \dfrac{1}{2}$, and
+$P(B) = \dfrac{4}{8} = \dfrac{1}{2}$. Note that $A \cap B = \{HHT, HTH\}$, so
+therefore $P(A \cap B) = \dfrac{2}{8}$.
+
+Then:
+
+$$ P(A \cap B) = \frac{2}{8} = \frac{1}{4} = \frac{1}{2} \cdot \frac{1}{2} = P(A) \cdot P(B) $$
+
+By exercise 18, since $P(A \cap B) = P(A) \cdot P(B)$, it follows that
+$P(A | B) = P(A)$ and $P(B | A) = P(B)$.
+
 21. If $A$ and $B$ are events in a sample space $S$ and $A \cap B = \emptyset$,
     what must be true in order for $A$ and $B$ to be independent? Explain.
 
+By definition, $A$ and $B$ are independent if, and only if,
+$P(A \cap B) = P(A) \cdot P(B)$.
+
+Since $A \cap B = \emptyset$, then $P(A \cap B) = 0$.
+
+It follows by the definition of independence that if $P(A \cap B) = 0$, then
+$P(A) \cdot P(B) = 0$, which in turn implies that either $P(A) = 0$ and/or
+$P(B) = 0$.
+
 22. Prove that if $A$ and $B$ are independent events in a sample space $S$, then
     $A^c$ and $B$ are also independent, and so are $A^c$ and $B^c$.
+
+**Proof:**
+
+Suppose that $S$ is any sample space in which $A$ and $B$ are independent
+events.
+
+It must be shown that $A^c$ and $B$ are independent. It must also be shown that
+$A^c$ and $B^c$ are independent.
+
+_Proof ($A^c$ and $B$ are independent):_
+
+By the definition of independence:
+
+$$ P(A \cap B)  = P(A) \cdot P(B)$$
+
+It must be shown that $P(A^c \cap B) = P(A^c) \cdot P(B)$.
+
+By the definition of set:
+
+$$ B = (A \cap B) \cup (A^c \cap B) $$
+
+Since $(A \cap B)$ and $(A^c \cap B)$, are mutually disjoint, it follows that:
+
+$$ P(B) = P(A \cap B) + P(A^c \cap B) $$
+
+By arithmetic:
+
+$$ P(A^c \cap B) = P(B) - P(A \cap B) $$
+
+By the supposition:
+
+$$ P(A^c \cap B) = P(B) - P(A) \cdot P(B) $$
+
+By arithmetic:
+
+$$ P(A^c \cap B) = P(B) \cdot (1 - P(A)) $$
+
+By the definition of complement:
+
+$$ P(A^c \cap B) = P(B) \cdot P(A^c) $$
+
+$$ P(A^c \cap B) = P(A^c) \cdot P(B) $$
+
+This is what was to be shown.
+
+_Proof ($A^c$ and $B^c$ are independent):_
+
+By the definition of independence:
+
+$$ P(A \cap B)  = P(A) \cdot P(B)$$
+
+It must be shown that $P(A^c \cap B^c) = P(A^c) \cdot P(B^c)$.
+
+By the definition of set:
+
+$$ B^c = (A \cap B^c) \cup (A^c \cap B^c) $$
+
+Since $A \cap B^c$ and $A^c \cap B^c$ are mutually disjoint, it follows that:
+
+$$ P(B^c) = P(A \cap B^c) + P(A^c \cap B^c) $$
+
+By arithmetic:
+
+$$ P(A \cap B^c) = P(B^c) - P(A^c \cap B^c)$$
+
+By definition of set:
+
+$$ A = (B \cap A) \cup (B^c \cap A) $$
+
+Since $(B \cap A)$ and $(B^c \cap A)$ are disjoint, it follows that:
+
+$$ P(A) = P(B \cap A) + P(B^c \cap A) $$
+
+By commutative law of sets and arithmetic:
+
+$$ P(A) = P(B \cap A) + P(A \cap B^c) $$
+
+$$ P(A \cap B^c) = P(A) - P(B \cap A) $$
+
+Thus:
+
+$$ P(B^c) - P(A^c \cap B^c) = P(A \cap B^c) = P(A) - P(B \cap A) $$
+
+$$ P(B^c) - P(A^c \cap B^c) = P(A) - P(A \cap B) $$
+
+By the supposition:
+
+$$ P(B^c) - P(A^c \cap B^c) = P(A) - P(A) \cdot P(B) $$
+
+$$ P(B^c) - P(A^c \cap B^c) = P(A) \cdot (1 - P(B)) $$
+
+By the definition of complement:
+
+$$ P(B^c) - P(A^c \cap B^c) = P(A) \cdot P(B^c) $$
+
+By algebra:
+
+$$ -P(A^c \cap B^c) = (P(A) \cdot P(B^c)) - P(B^c) $$
+
+$$ P(A^c \cap B^c) = P(B^c) - (P(A) \cdot P(B^c)) $$
+
+$$ P(A^c \cap B^c) = P(B^c) \cdot (1 - P(A)) $$
+
+By the definition of complement:
+
+$$ P(A^c \cap B^c) = P(B^c) \cdot P(A^c) $$
+
+$$ P(A^c \cap B^c) = P(A^c) \cdot P(B^c) $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 23. A student taking a multiple-choice exam does not know the answers to two
     questions. All have five choices for the answer. For one of the two
@@ -8393,11 +8581,48 @@ Q.E.D.
 a. What is the probability that the student will answer both questions
 correctly?
 
+Let $A$ be the event that the student answers the first question correctly, and
+$B$ be the event that the student answers the second question correctly, with
+$B$ being the event concerning the question where the student has eliminated two
+answer choices as incorrect. Note that both $A$ and $B$ are independent events.
+
+Now, by the supposition, it follows that:
+
+$$ P(A) = \frac{1}{5}, P(B) = \frac{1}{3} $$
+
+For part (a), we must solve for $P(A \cap B)$.
+
+$$ P(A \cap B) = P(A) \cdot P(B) $$
+
+$$ = \frac{1}{5} \cdot \frac{1}{3} $$
+
+$$ = \frac{1}{15} $$
+
 b. What is the probability that the student will answer exactly one of the
 questions correctly?
 
+We are trying to find $P((A^c \cap B) \cup (A \cap B^c))$.
+
+Since $A^c \cap B$ and $A \cap B^c$ are mutually disjoint, it follows that:
+
+$$ P((A^c \cap B) \cup (A \cap B^c)) = P(A^c \cap B) + P(A \cap B^c) $$
+
+$$ = P(A^c)P(B) + P(A)P(B^c) $$
+
+$$ = \left(\frac{4}{5}\right)\left(\frac{1}{3}\right) + \left(\frac{1}{5}\right)\left(\frac{2}{3}\right) $$
+
+$$ = \frac{2}{5} $$
+
 c. What is the probability that the student will answer neither question
 correctly?
+
+We are trying to find $P(A^c \cap B^c)$.
+
+$$ P(A^c \cap B^c) = P(A^c)P(B^c) $$
+
+$$ = \left(\frac{4}{5}\right)\left(\frac{2}{3}\right) $$
+
+$$ = \frac{8}{15} $$
 
 24. A software company uses two quality assurance (QA) checkers $X$ and $Y$ to
     check an application for bugs. $X$ misses 12% of the bugs and $Y$ misses
@@ -8406,7 +8631,24 @@ correctly?
 a. What is the probability that a randomly chosen bug will be missed by both QA
 checkers?
 
+Let $A$ be the event that $X$ misses a bug, and let $B$ be the event that $Y$
+misses a bug, then:
+
+$$ P(A) = 0.12, P(B) = 0.15 $$
+
+We are trying to find $P(A \cap B)$.
+
+$$ P(A \cap B) = P(A) \cdot P(B) $$
+
+$$ = 0.12 \cdot 0.15 $$
+
+$$ = 0.018 = 1.8\% $$
+
 b. If the program contains 1,000 bugs, what number can be expected to be missed?
+
+By part (a), we know that both QA checkers will miss 1.8% of the bugs, so:
+
+$$ 0.018 \cdot 1000 = 18 $$
 
 25. A coin is loaded so that the probability of heads is 0.7 and the probability
     of tails is 0.3. Suppose that the coin is tossed twice and that the results
@@ -8414,15 +8656,62 @@ b. If the program contains 1,000 bugs, what number can be expected to be missed?
 
 a. What is the probability of obtaining exactly two heads?
 
+Let $A$ be the event that heads is obtained on the first toss, and let $B$ be
+the event that heads is obtained on the second toss. Then:
+
+$$ P(A) = P(B) = 0.7 $$
+
+We are trying to find $P(A \cap B)$.
+
+$$ P(A \cap B) = P(A) \cdot P(B) $$
+
+$$ = 0.7 \cdot 0.7 $$
+
+$$ = 0.49 = 49\% $$
+
 b. What is the probability of obtaining exactly one head?
+
+We are trying to find $P((A \cap B^c) \cup (A^c \cap B))$.
+
+Since $A \cap B^c$ and $A^c \cap B$ are mutually disjoint, it follows that:
+
+$$ P((A \cap B^c) \cup (A^c \cap B)) = P(A \cap B^c) + P(A^c \cap B) $$
+
+$$ = P(A)P(B^c) + P(A^c)P(B) $$
+
+$$ = (0.7)(0.3) + (0.3)(0.7) $$
+
+$$ = 0.42 = 42\% $$
 
 c. What is the probability of obtaining no heads?
 
+We are trying to find $P(A^c \cap B^c)$.
+
+$$ P(A^c \cap B^c) = P(A^c)P(B^c) $$
+
+$$ = (0.3)(0.3) $$
+
+$$ = 0.09 = 9\% $$
+
 d. What is the probability of obtaining at least one head?
+
+We are trying to find $P((A^c \cap B^c)^c)$.
+
+By the definition of complement:
+
+$$ P((A^c \cap B^c)^c) = 1 - P(A^c \cap B^c) $$
+
+By part \(c\):
+
+$$ = 1 - 0.09 $$
+
+$$ = 0.91 = 91\% $$
 
 26. Describe a sample space and events $A$, $B$, and $C$, where
     $P(A \cap B \cap C) = P(A) \cdot P(B) \cdot P(C)$ but $A$, $B$, and $C$ are
     not pairwise independent.
+
+Omitted.
 
 27. The example used to introduce conditional probability described a family
     with two children each of whom was equally likely to be a boy or a girl. The
@@ -8433,17 +8722,49 @@ d. What is the probability of obtaining at least one head?
     the probability that the other child is a boy? Explain. (Be careful. The
     answer may surprise you.)
 
+_Hint:_ The answer is $\dfrac{1}{2}$.
+
+Unlike in the example, this problem does not present a conditional probability,
+because the gender of the child you met gives no information about the gender of
+the other child, they are independent events. Thus, given that there is an equal
+chance that the second child is a boy or a girl, the probability that the second
+child is a boy is $\dfrac{1}{2}$.
+
+Note that the wording for this problem is particularly confusing.
+
 28. A coin is loaded so that the probability of heads is 0.7 and the probability
     of tails is 0.3. Suppose that the coin is tossed ten times and that the
     results of the tosses are mutually independent.
 
 a. What is the probability of obtaining exactly seven heads?
 
+This is similar to Example 9.9.9.
+
+Use the binomial probability formula:
+
+$$ P(\text{obtain seven heads}) = \binom{10}{7}(0.7)^7(0.3)^3 $$
+
+$$ \approx 0.27 = 27\% $$
+
 b. What is the probability of obtaining exactly ten heads?
+
+$$ P(\text{obtain ten heads}) = \binom{10}{10}(0.7)^{10}(0.3)^0 $$
+
+$$ \approx 0.03 = 3\% $$
 
 c. What is the probability of obtaining no heads?
 
+$$ P(\text{no heads}) = \binom{10}{0}(0.7)^0(0.3)^{10} $$
+
+$$ = 0.0000059049 $$
+
 d. What is the probability of obtaining at least one head?
+
+$$ P(\text{at least one head}) = 1 - P(\text{no heads}) $$
+
+$$ = 1 - 0.0000059049 $$
+
+$$ = 0.9999940951 $$
 
 29. Suppose that ten items are chosen at random from a large batch delivered to
     a company. The manufacturer claims that just 3% of the items in the batch
@@ -8456,11 +8777,45 @@ d. What is the probability of obtaining at least one head?
 
 a. What is the probability that none of the ten items is defective?
 
+$$ P(\text{none are defective}) = \binom{10}{0}(0.03)^0(0.97)^{10} $$
+
+$$ \approx 0.74 = 74\% $$
+
 b. What is the probability that at least one of the ten is defective?
+
+$$ P(\text{at least one is defective}) = 1 - P(\text{none are defective}) $$
+
+$$ \approx 1 - 0.74 $$
+
+$$ \approx 0.26 = 26\% $$
 
 c. What is the probability that exactly four of the ten are defective?
 
+$$ P(\text{four are defective}) = \binom{10}{4}(0.03)^4(0.97)^6 $$
+
+$$ \approx 0.0001416885380 $$
+
 d. What is the probability that at most two of the ten are defective?
+
+$$ P(\text{at most two are defective}) = P(\text{none are defective}) +  P(\text{one is defective}) + P(\text{two is defective}) $$
+
+By part (a), $P(\text{none are defective}) \approx 0.74$.
+
+Evaluating the others:
+
+$$ P(\text{one is defective}) = \binom{10}{1}(0.03)^1(0.97)^9 $$
+
+$$ P(\text{one is defective}) \approx 0.2280693176 $$
+
+$$ P(\text{two are defective}) = \binom{10}{2}(0.03)^2(0.97)^8 $$
+
+$$ P(\text{two are defective}) \approx 0.03174160606 $$
+
+And so:
+
+$$ P(\text{at most two are defective}) \approx 0.74 + 0.2280693176 + 0.03174160606 $$
+
+$$ P(\text{at most two are defective}) \approx 0.9998109237 \approx 99.9\% $$
 
 30. Suppose the probability of a false positive result on a mammogram is 4% and
     that radiologists' interpretations of mammograms are mutually independent in
@@ -8472,21 +8827,87 @@ d. What is the probability that at most two of the ten are defective?
 a. What is the probability that she will have no false positive results during
 that time?
 
+Let $A$ be the event that she has a false positive on a single mammogram, and
+let $A_{10}$ be the event that she has a false positive on 10 mammograms. Then
+$P(A) = 0.04$.
+
+It follows by the definition of complement:
+
+$$ P(A^c) = 0.96 $$
+
+And then:
+
+$$ P(A_{10}^c) = (0.96)^{10} $$
+
+$$ P(A_{10}^c) \approx 0.664 = 66.4\% $$
+
 b. What is the probability that she will have at least one false positive result
 during that time?
 
+Let $A_{\geq 1}$ be the event that she has at least one false positive result in
+10 mammograms.
+
+$$ P(A_{\geq 1}) = 1 - P(A_{10}^c) $$
+
+$$ P(A_{\geq 1}) \approx 1 - 0.6648326360 $$
+
+$$ P(A_{\geq 1}) \approx 0.335167364 \approx 33.5\% $$
+
 c. What is the probability that she will have exactly two false positive results
 during that time?
+
+Let $A_{2}$ be the event that she has exactly two false positive results in 10
+mammograms.
+
+$$ P(A_2) = \binom{10}{2}(0.04)^2(0.96)^8 $$
+
+$$ P(A_2) \approx 0.052 = 5.2\% $$
 
 d. Suppose that the probability of a false negative result on a mammogram is 2%,
 and assume that the probability that a randomly chosen woman has breast cancer
 is 0.0002.
 
+Let $A$ be the event that the woman receives a negative result on her mammogram,
+and let $B$ be the event that the woman has breast cancer. This means that:
+
+$$ P(A | B) = 0.02, P(B) = 0.0002 $$
+
 (i). If a woman has a positive test result one year, what is the probability
 that she actually has breast cancer?
 
+We are trying to find $P(B | A^c)$.
+
+By Bayes' Theorem:
+
+$$ P(B | A^c) = \frac{P(A^c | B)P(B)}{P(A^c | B)P(B) + P(A^c | B^c)P(B^c)} $$
+
+$$ P(B | A^c) = \frac{(1 - P(A | B))P(B)}{(1 - P(A | B))P(B) + P(A^c | B^c)(1 - P(B))} $$
+
+$$ P(B | A^c) = \frac{(1 - 0.02)(0.0002)}{(1 - 0.02)(0.0002) + P(A^c | B^c)(1 - 0.0002)} $$
+
+Note that $P(A^c | B^c) = 0.04$ since that is the probability of a false
+positive on a mammogram.
+
+$$ P(B | A^c) = \frac{(1 - 0.02)(0.0002)}{(1 - 0.02)(0.0002) + (0.04)(1 - 0.0002)} $$
+
+$$ P(B | A^c) = \frac{0.000196}{0.000196 + 0.039992} $$
+
+$$ P(B | A^c) \approx 0.004877077735 \approx 0.5\% $$
+
 (ii). If a woman has a negative test result one year, what is the probability
 that she actually has breast cancer?
+
+We are trying to find $P(B | A)$.
+
+By Bayes' Theorem:
+
+$$ P(B | A) = \frac{P(A | B)P(B)}{P(A | B)P(B) + P(A | B^c)P(B^c)} $$
+
+$$ P(B | A) = \frac{(0.02)(0.0002)}{(0.02)(0.0002) + (1 - 0.04)(1 - 0.0002)} $$
+
+$$ P(B | A) = \frac{0.000004}{0.000004 + (0.96)(0.9998)} $$
+
+$$ P(B | A) \approx 0.000004167482799 $$
 
 31. Empirical data indicate that approximately 103 of every 200 children born
     are male. Hence the probability of a newborn being male is about 51.5%.
@@ -8495,9 +8916,15 @@ that she actually has breast cancer?
 
 a. What is the probability that none of the children is male?
 
+Omitted.
+
 b. What is the probability that at least one of the children is male?
 
+Omitted.
+
 c. What is the probability that exactly five of the children are male?
+
+Omitted.
 
 32. A person takes a multiple-choice exam in which each question has four
     possible answers. Suppose that the person has no idea about the answers to
@@ -8506,17 +8933,27 @@ c. What is the probability that exactly five of the children are male?
 a. What is the probability that the person will answer all three questions
 correctly?
 
+Omitted.
+
 b. What is the probability that the person will answer exactly two questions
 correctly?
+
+Omitted.
 
 c. What is the probability that the person will answer exactly one question
 correctly?
 
+Omitted.
+
 d. What is the probability that the person will answer no questions correctly?
+
+Omitted.
 
 e. Suppose that the person gets one point of credit for each correct answer and
 that $\dfrac{1}{3}$ point is deducted for each incorrect answer. What is the
 expected value of the person's score for the three questions?
+
+Omitted.
 
 33. In exercise 23 of Section 9.8, let $C_k$ be the event that the gambler has
     $k$ dollars, wins the next roll of the die, and is eventually ruined, let
@@ -8527,7 +8964,11 @@ expected value of the person's score for the three questions?
 
 $$ P_{k - 1} = \frac{1}{6}P_k + \frac{5}{6}P_{k - 2} $$
 
+Omitted.
+
 34. Use conditional probability to analyze exercise 20 in Section 9.1. Let $X$
     be the event that the prize is not behind door $A$, and let $Y$ be the event
     that you switch and choose the door with the prize. Should you switch?
     Explain why or why not.
+
+Omitted.

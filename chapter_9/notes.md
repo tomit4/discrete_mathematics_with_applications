@@ -656,6 +656,39 @@ $$ \sum_{k = 1}^{n}{a_kp_k} = a_1p_1 + a_2p_2 + a_3p_3 + \cdots + a_np_n $$
 
 Page 685
 
+**Conditional Probability**
+
+Imagine a couple with two children, each of whom is equally likely to be a boy
+or a girl. Now suppose you are given the information that one is a boy. What is
+the probability that the other child is a boy?
+
+Figure 9.9.1 shows four equally likely combinations of gender for the children.
+You can imagine that the first letter refers to the older child and the second
+letter to the younger. Thus the combination _BG_ indicates that the older child
+is a boy and the younger is a girl.
+
+(See Page 685 for figure.)
+
+There are three combinations where one of the children is a boy, and in one of
+these three combinations the other child is also a boy. Given that you know one
+child is a boy, only these three combinations could be the case. So you can
+think of the set of those outcomes as a new sample space with three elements,
+all of which are equally likely.Within the new sample space, there is one
+combination where the other child is a boy. Thus it would be reasonable to say
+that the likelihood that the other child is a boy, given that at least one is a
+boy, is $\dfrac{1}{3} = 33\dfrac{1}{3}\%$. Given that the original sample space
+contained four outcomes note that the following computation gives the same
+result:
+
+$$ \frac{P(\text{at least one child is a boy and the other child is also a boy})}{P(\text{at least one child is a boy})} = \frac{\dfrac{1}{4}}{\dfrac{3}{4}} = \frac{1}{3} $$
+
+A generalization of this observation forms the basis for the following
+definition.
+
+---
+
+Page 685
+
 **Definition**
 
 Let $A$ and $B$ be events in a sample space $S$. If $P(A) \neq 0$, then the
