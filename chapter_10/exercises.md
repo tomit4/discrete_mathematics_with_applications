@@ -1082,3 +1082,394 @@ Omitted.
     $C$. Then derive a contraction from the assumption that $H \neq G$. Show
     that $H$ contains every vertex of $G$, and show that $H$ contains every edge
     of $G$.
+
+---
+
+Page 733
+
+**Exercise Set 10.2**
+
+1. Find real numbers $a$, $b$, and $c$ such that the following are true.
+
+a.
+
+$$
+\left[\begin{array}{}
+a + b && a - c \\
+c && b - a \\
+\end{array}\right] =
+\left[\begin{array}{}
+1 && 0 \\
+-1 && 3 \\
+\end{array}\right]
+$$
+
+b.
+
+$$
+\left[\begin{array}{}
+2a && b + c \\
+c - a && 2b - a \\
+\end{array}\right] =
+\left[\begin{array}{}
+4 && 3 \\
+1 && -2 \\
+\end{array}\right]
+$$
+
+2. Find the adjacency matrices for the following directed graphs.
+
+a. (See Page 733 for image of graph.)
+
+b. (See Page 733 for image of graph.)
+
+3. Find the directed graphs that have the following adjacency matrices:
+
+a.
+
+$$
+\left[\begin{array}{}
+1 && 0 && 1 && 2 \\
+0 && 0 && 1 && 0 \\
+0 && 2 && 1 && 1 \\
+0 && 1 && 1 && 0 \\
+\end{array}\right]
+$$
+
+b.
+
+$$
+\left[\begin{array}{}
+0 && 1 && 0 && 0 \\
+2 && 0 && 1 && 0 \\
+1 && 2 && 1 && 0 \\
+0 && 0 && 1 && 0 \\
+\end{array}\right]
+$$
+
+4. Find adjacency matrices for the following (undirected) graphs.
+
+a. (See page 734 for image of graph.)
+
+b. (See page 734 for image of graph.)
+
+c. $K_4$, the complete graph on four vertices
+
+d. $K_{2, 3}$, the complete bipartite graph on $(2, 3)$ vertices
+
+5. Find graphs that have the following adjacency matrices.
+
+a.
+
+$$
+\left[\begin{array}{}
+1 && 0 && 1 \\
+0 && 1 && 2 \\
+1 && 2 && 0 \\
+\end{array}\right]
+$$
+
+b.
+
+$$
+\left[\begin{array}{}
+0 && 2 && 0 \\
+2 && 1 && 0 \\
+0 && 0 && 1 \\
+\end{array}\right]
+$$
+
+6. The following are adjacency matrices for graphs. In each case determine
+   whether the graph is connected by analyzing the matrix without drawing the
+   graph.
+
+a.
+
+$$
+\left[\begin{array}{}
+0 && 1 && 1 \\
+1 && 1 && 0 \\
+1 && 0 && 0 \\
+\end{array}\right]
+$$
+
+b.
+
+$$
+\left[\begin{array}{}
+0 && 2 && 0 && 0 \\
+2 && 0 && 0 && 0 \\
+0 && 0 && 1 && 1 \\
+0 && 0 && 1 && 1 \\
+\end{array}\right]
+$$
+
+7. Suppose that for every positive integer $i$, all the entries in the $i$th row
+   and the $i$th column of the adjacency matrix of a graph are $0$. What can you
+   conclude about the graph?
+
+8. Find each of the following products.
+
+a.
+
+$$
+\left[\begin{array}{}
+2 && -1 \\
+\end{array}\right]
+\left[\begin{array}{}
+1 \\
+3 \\
+\end{array}\right]
+$$
+
+b.
+
+$$
+\left[\begin{array}{}
+4 && -1 && 7 \\
+\end{array}\right]
+\left[\begin{array}{}
+1 \\
+2 \\
+0 \\
+\end{array}\right]
+$$
+
+9. Find each of the following products.
+
+a.
+
+$$
+\left[\begin{array}{}
+3 && 0 \\
+1 && -2 \\
+\end{array}\right]
+\left[\begin{array}{}
+1 && -1 && 4 \\
+0 && 2 && 1 \\
+\end{array}\right]
+$$
+
+b.
+
+$$
+\left[\begin{array}{}
+2 && 0 && 1 \\
+0 && -1 && 0 \\
+\end{array}\right]
+\left[\begin{array}{}
+1 && 3 \\
+5 && -4 \\
+-2 && 2 \\
+\end{array}\right]
+$$
+
+c.
+
+$$
+\left[\begin{array}{}
+-1 \\
+2 \\
+\end{array}\right]
+\left[\begin{array}{}
+2 && 3 \\
+\end{array}\right]
+$$
+
+d.
+
+$$
+\left[\begin{array}{}
+1 && 2 \\
+3 && -1 \\
+\end{array}\right]^2
+$$
+
+10. Let
+
+$$
+\mathbf{A} = \left[\begin{array}{}
+1 && 1 && -1 \\
+0 && -2 && 1
+\end{array}\right]
+$$
+
+$$
+\mathbf{B} = \left[\begin{array}{}
+-2 && 0 \\
+1 && 3 \\
+\end{array}\right]
+$$
+
+and
+
+$$
+\mathbf{C} = \left[\begin{array}{}
+0 && -2 \\
+3 && 1 \\
+1 && 0 \\
+\end{array}\right]
+$$
+
+For each of the following, determine whether the indicated product exists, and
+compute it if it does.
+
+a. $\mathbf{AB}$
+
+b. $\mathbf{BA}$
+
+c. $\mathbf{A}^2$
+
+d. $\mathbf{BC}$
+
+e. $\mathbf{CB}$
+
+f. $\mathbf{B}^2$
+
+g. $\mathbf{B}^3$
+
+h. $\mathbf{C}^2$
+
+i. $\mathbf{AC}$
+
+j. $\mathbf{CA}$
+
+11. Give an example different from that in the text to show that matrix
+    multiplication is not commutative. That is, find $2 \times 2$ matrices
+    $\mathbf{A}$ and $\mathbf{B}$ such that $\mathbf{AB}$ and $\mathbf{BA}$ both
+    exist but $\mathbf{AB} \neq \mathbf{BA}$.
+
+12. Let $\mathbf{O}$ denote the matrix
+    $\left[\begin{array}{} 0 && 0 \\ 0 && 0\\ \end{array}\right]$. Find
+    $2 \times 2$ matrices $\mathbf{A}$ and $\mathbf{B}$ such that
+    $\mathbf{A} \neq \mathbf{O}$ and $\mathbf{B} \neq \mathbf{O}$ but
+    $\mathbf{AB} = \mathbf{O}$.
+
+13. Let $\mathbf{O}$ denote the matrix
+    $\left[\begin{array}{} 0 && 0 \\ 0 && 0\\ \end{array}\right]$. Find
+    $2 \times 2$ matrices $\mathbf{A}$ and $\mathbf{B}$ such that
+    $\mathbf{A} \neq \mathbf{B}$, $\mathbf{B} \neq \mathbf{O}$ and
+    $\mathbf{AB} \neq \mathbf{O}$, but $\mathbf{BA} = \mathbf{O}$.
+
+In 14-18, assume the entries of all matrices are real numbers.
+
+14. Prove that if $\mathbf{I}$ is the $m \times m$ identity matrix and
+    $\mathbf{A}$ is any $m \times n$ matrix, then $\mathbf{IA} = \mathbf{A}$.
+
+15. Prove that if $\mathbf{A}$ is an $m \times m$ symmetric matrix, then
+    $\mathbf{A}^2$ is symmetric.
+
+16. Prove that matrix multiplication is associative: If $\mathbf{A}$,
+    $\mathbf{B}$, and $\mathbf{C}$ are any $m \times k$, $k \times r$, and
+    $r \times n$ matrices, respectively, then
+    $(\mathbf{AB})\mathbf{C} = \mathbf{A}(\mathbf{BC})$. (_Hint:_ Summation
+    notation is helpful.)
+
+17. Use mathematical induction and the result of exercise 16 to prove that if
+    $\mathbf{A}$ is any $m \times m$ matrix, then
+    $\mathbf{A}^n\mathbf{A} = \mathbf{A}\mathbf{A}^n$ for each integer
+    $n \geq 1$.
+
+18. Use mathematical induction to prove that if $\mathbf{A}$ is an $m \times m$
+    symmetric matrix, then for any integer $n \geq 1$, $\mathbf{A}^n$ is also
+    symmetric.
+
+19.
+
+a. Let
+$\mathbf{A} = \left[\begin{array}{} 1 && 1 && 2 \\ 1 && 0 && 1 \\ 2 && 1 && 0 \\ \end{array}\right]$.
+Find $\mathbf{A}^2$ and $\mathbf{A}^3$.
+
+b. Let $G$ be the graph with vertices $v_1$, $v_2$, and $v_3$ and with
+$\mathbf{A}$ as its adjacency matrix. Use the answers to part (a) to find the
+number of walks of length $2$ from $v_1$ to $v_3$ and the number of walks of
+length $3$ from $v_1$ to $v_3$. Do not draw $G$ to solve this problem.
+
+c. Examine the calculations you performed in answering part (a) to find five
+walks of length $2$ from $v_3$ to $v_3$. Then draw $G$ and find the walks by
+visual inspection.
+
+20. The following is an adjacency matrix for a graph:
+
+(See page 735 for matrix.)
+
+Answer the following questions by examining the matrix and its powers only, not
+by drawing the graph:
+
+a. How many walks of length 2 are there from $v_2$ to $v_3$?
+
+b. How many walks of length 2 are there from $v_3$ to $v_4$?
+
+c. How many walks of length 3 are there from $v_1$ to $v_4$?
+
+d. How many walks of length 3 are there from $v_2$ to $v_3$?
+
+21. Let $\mathbf{A}$ be the adjacency matrix for $K_3$, the complete graph on
+    three vertices. Use mathematical induction to prove that for each positive
+    integer $n$, all the entries along the main diagonal of $\mathbf{A}^n$ are
+    equal to each other and all the entries that do not lie along the main
+    diagonal are equal to each other.
+
+22.
+
+a. Draw a graph that has
+
+$$
+\left[\begin{array}{}
+0 && 0 && 0 && 1 && 2 \\
+0 && 0 && 0 && 1 && 1 \\
+0 && 0 && 0 && 2 && 1 \\
+1 && 1 && 2 && 0 && 0 \\
+2 && 1 && 1 && 0 && 0 \\
+\end{array}\right]
+$$
+
+as its adjacency matrix. Is this graph bipartite?
+
+---
+
+Page 735
+
+**Definition:**
+
+Given an $m \times n$ matrix $\mathbf{A}$ whose $ij$th entry is denoted
+$a_{ij}$, the **transpose of $\mathbf{A}$** is the matrix $\mathbf{A}^t$ whose
+$ij$th entry is $a_{ji}$, for each $i = 1, 2, \dots m$ and $j = 1, 2, \dots, n$.
+
+---
+
+Note that the first row of $\mathbf{A}$ becomes the first column of
+$\mathbf{A}^t$, the second row of $\mathbf{A}$ becomes the second column of
+$\mathbf{A}^t$, and so forth. For instance,
+
+$$ \text{if } \mathbf{A} = \left[\begin{array}{} 0 && 1 && 1 \\ 1 && 2 && 3 \\ \end{array}\right] \text{, then } \mathbf{A}^t = \left[\begin{array}{} 0 && 1 \\ 2 && 2 \\ 1 && 3 \\ \end{array}\right] $$
+
+b. Show that a graph with $n$ vertices is bipartite if, and only if, for some
+labeling of its vertices, its adjacency matrix has the form
+
+$$
+\left[\begin{array}{}
+\mathbf{O} && \mathbf{A} \\
+\mathbf{A}^t && \mathbf{O} \\
+\end{array}\right]
+$$
+
+where $\mathbf{A}$ is a $k \times (n - k)$ matrix for some integer $k$ such that
+$0 < k < n$, the top left $\mathbf{O}$ represents a $k \times k$ matrix all of
+whose entries are $0$, $\mathbf{A}^t$ is the transpose of $\mathbf{A}$, and the
+bottom right $\mathbf{O}$ represents an $(n - k) \times (n - k)$ matrix all of
+whose entries are $0$.
+
+23.
+
+a. Let $G$ be a graph with $n$ vertices, and let $v$ and $w$ be distinct
+vertices of $G$. Prove that if there is a walk from $v$ to $w$, then there is a
+walk from $v$ to $w$ that has length less than or equal to $n - 1$.
+
+b. If $\mathbf{A} = (a_{ij})$ and $\mathbf{B} = (b_{ij})$ are any $m \times n$
+matrices, the matrix $\mathbf{A} + \mathbf{B}$ is the $m \times n$ matrix whose
+$ij$th entry is $a_{ij} + b_{ij}$ for each $i = 1, 2, \dots, m$ and
+$j = 1, 2, \dots, n$. Let $G$ be a graph with $n$ vertices where $n > 1$, and
+let $\mathbf{A}$ be the adjacency matrix of $G$. Prove that $G$ is connected if,
+and only if, every entry of
+$\mathbf{A} + \mathbf{A}^2 + \cdots + \mathbf{A}^{n - 1}$ is positive.

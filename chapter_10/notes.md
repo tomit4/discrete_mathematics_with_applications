@@ -264,3 +264,261 @@ following properties:
 3. $H$ has the same number of edges as vertices.
 
 4. Every vertex of $H$ has degree $2$.
+
+---
+
+Page 721
+
+**Definition**
+
+An $m \times n$ (read "$m$ by $n$") **matrix $A$ over a set $S$** is a
+rectangular array of elements of $S$ arranged into $m$ rows and $n$ columns:
+
+$$
+\mathbf{A} = \left[\begin{array}{}
+a_{11} && a_{12} && \cdots && a_{1j} && \cdots a_{1n} \\
+a_{21} && a_{22} && \cdots && a_{2j} && \cdots a_{2n} \\
+\vdots && \vdots && && \vdots && && \vdots \\
+a_{i1} && a_{i2} && \cdots && a_{ij} && \cdots && a_{in} \\
+\vdots && \vdots && && \vdots && && \vdots \\
+a_{m1} && a_{m2} && \cdots && a_{mj} && \cdots && a_{mn} \\
+\end{array}\right]
+$$
+
+We write $\mathbf{A} = (a_{ij})$
+
+---
+
+Page 722
+
+**Definition**
+
+Let $G$ be a directed graph with ordered vertices $v_1, v_2, \dots, v_n$. The
+**adjacency matrix of $G$** is the $n \times n$ matrix $\mathbf{A} = (a_{ij})$
+over the set of nonnegative integers such that
+
+$$ a_{ij} = \text{ the number of arrows from } v_i \text{ to } v_j \text{ for all } i, j = 1, 2, \dots, n $$
+
+---
+
+Page 724
+
+**Definition**
+
+Let $G$ be an undirected graph with ordered vertices $v_1, v_2, \dots, v_n$. The
+**adjacency matrix of $G$** is the $n \times n$ matrix $\mathbf{A} = (a_{ij})$
+over the set of nonnegative integers such that
+
+$$ a_{ij} = \text{ the number of edges connecting } v_i \text{ and } v_j $$
+
+---
+
+Page 724
+
+**Definition**
+
+An $n \times n$ square matrix $\mathbf{A} = (a_{ij})$ is called **symetric** if,
+and only if, for every $i$ and $j = 1, 2, \dots, n$,
+
+$$ a_{ij} = a_{ji} $$
+
+---
+
+Page 726
+
+**Theorem 10.2.1**
+
+Let $G$ be a graph with connected components $G_1, G_2, \dots, G_k$. If there
+are $n_i$ vertices in each connected component $G_i$ and these vertices are
+numbered consecutively, then the adjacency matrix of $G$ has the form
+
+$$
+\left[\begin{array}{}
+A_1 && \mathbf{O} && \mathbf{O} && \cdots && \mathbf{O} && \mathbf{O} \\
+\mathbf{O} && A_2 && \mathbf{O} && \cdots && \mathbf{O} && \mathbf{O} \\
+\mathbf{O} && \mathbf{O} && A_3 && \cdots && \mathbf{O} && \mathbf{O} \\
+\vdots && \vdots && \vdots && && \vdots && \vdots \\
+\mathbf{O} && \mathbf{O} && \mathbf{O} && \cdots && \mathbf{O} && A_k \\
+\end{array}\right]
+$$
+
+where each $A_i$ is the $n_i \times n_i$ adjacency matrix of $G_i$, for every
+$i = 1, 2, \dots, k$, and the $\mathbf{O}$'s represent matrices whose entries
+are all $0$.
+
+---
+
+Page 726
+
+**Definition**
+
+Suppose that all entrices in matrices $\mathbf{A}$ and $\mathbf{B}$ are real
+numbers. If the number of element, $n$, in the $i$th row of $\mathbf{A}$ equals
+the number of elements in the $j$th column of $\mathbf{B}$, then the **scalar
+product** or **dot product** of the $i$th row of $\mathbf{A}$ and the $j$th
+column of $\mathbf{B}$ is the real number obtained as follows:
+
+$$
+\left[\begin{array}{}
+a_{i1} && a_{i2} && \cdots && a_{in} \\
+\end{array}\right]
+\left[\begin{array}{}
+b_{1j} \\
+b_{2j} \\
+\vdots \\
+b_{nj}
+\end{array}\right] =  a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{in}b_{nj}
+$$
+
+---
+
+Page 727
+
+**Definition**
+
+Let $\mathbf{A} = (a_{ij})$ be an $m \times k$ matrix and
+$\mathbf{B} = (b_{ij})$ a $k \times n$ matrix with real entries. The (matrix)
+product of $\mathbf{A}$ times $\mathbf{B}$, denoted $\mathbf{AB}$, is the matrix
+$(c_{ij})$ defined as follows:
+
+$$
+\left[\begin{array}{}
+a_{11} && a{12} && \cdots && a_{1k} \\
+a_{21} && a{22} && \cdots && a_{2k} \\
+\vdots && \vdots && && \vdots \\
+a_{i1} && a{i2} && \cdots && a_{ik} \\
+\vdots && \vdots && && \vdots \\
+a_{m1} && a{m2} && \cdots && a_{mk} \\
+\end{array}\right]
+\left[\begin{array}{}
+b_{11} && b{12} && \cdots && b_{1j} && \cdots && b_{1n} \\
+b_{21} && b{22} && \cdots && b_{2j} && \cdots && b_{2n} \\
+&& \cdot && && \cdot && && \cdot \\
+&& \cdot && && \cdot && && \cdot \\
+&& \cdot && && \cdot && && \cdot \\
+b_{k1} && b{k2} && \cdots && b_{kj} && \cdots && b_{kn} \\
+\end{array}\right] = \left[\begin{array}{}
+c_{11} && c_{12} && \cdots && c_{1j} && \cdots && c_{1n} \\
+c_{21} && c_{22} && \cdots && c_{2j} && \cdots && c_{2n} \\
+\vdots && \vdots && && \vdots && && \vdots \\
+c_{i1} && c_{i2} && \cdots && c_{ij} && \cdots && c_{in} \\
+\vdots && \vdots && && \vdots && && \vdots \\
+c_{m1} && c_{m2} && \cdots && c_{mj} && \cdots && c_{mn} \\
+\end{array}\right]
+$$
+
+where
+
+$$ c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{ik}b_{kj} = \sum_{r = 1}^{k}{a_{ir}b_{rj}} $$
+
+for each $i = 1, 2, \dots, m$ and $j = 1, 2, \dots, n$.
+
+---
+
+Page 729
+
+**Definition**
+
+For each positive integer $n$, the $n \times n$ **identity matrix**, denoted
+$\mathbf{I}_n = (\delta_{ij})$ or just $\mathbf{I}$ (if the size of the matrix
+is obvious from context), is the $n \times n$ matrix in which all entries in the
+main diagonal are $1$'s and all other entries are $0$'s. In other words,
+
+$$
+\delta_{ij} =
+\begin{cases}
+1 & \text{ if } i = j \\
+0 & \text{ if } i \neq j
+\end{cases}
+\text{, for every } i, j = 1, 2, \dots, n
+$$
+
+---
+
+Page 730
+
+**Definition**
+
+For any $n \times n$ matrix $\mathbf{A}$, the powers of $\mathbf{A}$ are defined
+as follows:
+
+$$ \mathbf{A}^0 = \mathbf{I} \quad \text{ where } \mathbf{I} \text{ is the } n \times n \text{ identity matrix} $$
+
+$$ \mathbf{A}^n = \mathbf{A}\mathbf{A}^{n - 1} \quad \text{ for every integer } n \geq 1 $$
+
+---
+
+Page 732
+
+**Theorem 10.2.2**
+
+If $G$ is a graph with vertices $v_1, v_2, \dots, v_m$ and $\mathbf{A}$ is the
+adjacency matrix of $G$, then for each positive integer $n$ and for all integers
+$i, j = 1, 2, \dots, m$,
+
+the $ij$th enter of $\mathbf{A}^n =$ the number of walks of length $n$ from
+$v_i$ to $v_j$.
+
+**Proof (by mathematical induction):**
+
+Suppose $G$ is a graph with vertices $v_1, v_2, \dots, v_m$ and $\mathbf{A}$ is
+the adjacency matrix of $G$. Let $P(n)$ be the sentence
+
+For all integers $i, j = 1, 2, \dots, m$, the $ij$th entry of $\mathbf{A}^n =$
+the number of walks of length $n$ from $v_i$ to $v_j$.
+
+We will show that $P(n)$ is true for every integer $n \geq 1$.
+
+_Show that $P(1)$ is true:_
+
+The $ij$th entry of
+$\mathbf{A}^1 = \text{ the } ij \text{th entry of } \mathbf{A}$
+
+$$ \quad = \text{ the number of edges connecting } v_i \text{ to } v_j $$
+
+$$ \quad = \text{ the number of walks of length } 1 \text{ from } v_i \text{ to } v_j $$
+
+_Show that for every integer $k$ with $k \geq 1$, if $P(k)$ is true then
+$P(k + 1)$ is true:_
+
+Let $k$ be any integer with $k \geq 1$, and suppose that
+
+For all integers $i, j = 1, 2, \dots m$, the $ij$th entry of $\mathbf{A}^k =$
+the number of walks of length $k$ from $v_i$ to $v_j$
+
+We must show that
+
+For all integers $i, j = 1, 2, \dots, m$,
+
+the $ij$the entry of $\mathbf{A}^{k + 1} =$ the number of walks of length
+$k + 1$ from $v_i$ to $v_j$.
+
+Let $\mathbf{A} = (a_{ij})$ and $\mathbf{A}^k = (b_{ij})$. Since
+$\mathbf{A}^{k + 1} = \mathbf{A}\mathbf{A}^k$, the $ij$th entry of
+$\mathbf{A}^{k + 1}$ is obtained by multiplying the $i$th row of $\mathbf{A}$ by
+the $j$th column of $\mathbf{A}^k$:
+
+the $ij$th entry of
+$\mathbf{A}^{k +  1} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{im}b_{mj}$
+
+for every $i, j = 1, 2, \dots, m$. Now consider the individual term of this sum:
+$a_{i1}$ is the number of edges from $v_i$ to $v_1$; and, by the inductive
+hypothesis, $b_{1j}$ is the number of walks of length $k$ from $v_1$ to $v_j$.
+Now any edge from $v_i$ to $v_1$ can be joined with any walk of length $k$ from
+$v_1$ to $v_j$ to create a walk of length $k + 1$ from $v_i$ to $v_j$ with $v_1$
+as its second vertex. Thus, by the multiplication rule,
+
+$$ a_{i1}b_{1j} = \left[\text{ the number of walks of length } k + 1 \text{ from } v_i \text{ to } v_j \text{ that have } v_1 \text{ as their second vertex}\right] $$
+
+$$ a_{ir}b_{rj} = \left[\text{ the number of walks of length } k + 1 \text{ from } v_i \text{ to } v_j \text{ that have } v_r \text{ as their second vertex}\right] $$
+
+Because every walk of length $k + 1$ from $v_i$ to $v_j$ must have one of the
+vertices $v_1, v_2, \dots, v_m$ as its second vertex, the total number of walks
+of length $k + 1$ from $v_i$ to $v_j$ equals the sum in (10.2.1), which equals
+the $ij$th entry of $\mathbf{A}^{k + 1}$. Hence
+
+the $ij$th entry of $\mathbf{A}^{k + 1} =$ the number of walks of length $k + 1$
+from $v_i$ to $v_j$ _[as was to be shown]._
+
+_[Since both the basis step and the inductive step have been proved, the
+sentence $P(n)$ is true for every integer $n \geq 1$.]_
