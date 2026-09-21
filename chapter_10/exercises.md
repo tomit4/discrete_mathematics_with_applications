@@ -381,7 +381,7 @@ odd degree, all vertices with odd degrees are: $u, f, e, h, w$.
 Yes, there exists an Euler trail as there are two vertices with odd degree, $u$
 and $w$, and every other vertex has an even degree. One such Euler trail is:
 
-$$ uv0v_7v_6v_3uv_1v_2v_3v_4v_6wv_5v_4w $$
+$$ uv_0v_7v_6v_3uv_1v_2v_3v_4v_6wv_5v_4w $$
 
 22. The following is a floor plan of a house. Is it possible to enter the house
     in room $A$, travel through every interior doorway of the house exactly
@@ -461,52 +461,221 @@ $A$ and $C$, $A$ and $D$, $B$ and $C$, $C$ and $D$, $C$ and $E$.
 
 a. Draw a graph to represent this situation.
 
+(Done by hand.)
+
 b. Draw a graph that illustrates who among these five people are _not_
 acquainted. That is, draw an edge between two people if, and only if, they are
 not acquainted.
 
+(Done by hand.)
+
 27. Let $G$ be a simple graph with $n$ vertices. What is the relation between
     the number of edges of $G$ and the number of edges of the complement $G'$?
 
+_Hint:_ Consider the graph obtained by taking the vertices and edges of $G$ plus
+all the edges of $G'$.
+
+By definition of a graph's complement, $G'$ has all the edges that $G$ does not
+between any two vertices. Therefore, if all the edges of $G$ and $G'$ are
+plotted together, it should present a graph with all possible edges between any
+two vertices, which is a complete graph.
+
+Let $K_n$ be this complete graph on $n$ vertices. By definition of a complete
+graph, it is known that $K_n$ has $\dfrac{n(n - 1)}{2}$ edges total. Therefore,
+the number of edges of $G$ plus the number of edges of $G'$ equals
+$\dfrac{n(n - 1)}{2}$.
+
 28. Show that at a party with at least two people, there are at least two mutual
-    acquaintences or at least two mutual strangers.
+    acquaintances or at least two mutual strangers.
+
+**Proof:**
+
+Suppose that there is a party with $n$ people present, where $n \geq 2$.
+
+Pick any person $p_i$. There are $n - 1$ remaining people, and $p_i$ either
+knows or doesn't know each of them. By the pigeonhole principle, at least
+$\left\lceil \dfrac{(n - 1)}{2} \right\rceil$ of them fall into the same
+category - call this group $S$.
+
+_Case ($S$ is a group of acquaintances of $p_i$):_
+
+If any two people in $S$ know each other, then they are mutual acquaintances.
+
+If no one in $S$ knows each other, then there are at least two people in $S$
+that are mutual strangers.
+
+_Case ($S$ is a group of strangers of $p_i$):_
+
+If any two people in $S$ don't know each other, then they are mutual strangers.
+If all people in $S$ do know each other, then there are at least two people in
+$S$ that are mutual acquaintances.
+
+In both cases, there exists at least two mutual acquaintances or two mutual
+strangers at the party.
+
+Q.E.D.
 
 Find Hamiltonian circuits for each of the graphs in 29 and 30.
 
 29. (See Page 719 for image of graph.)
 
+$v_0v_1v_3v_4v_5v_2v_6v_7v_0$
+
 30. (See Page 719 for image of graph.)
+
+$alkjedcfihgba$
 
 Show that none of the graphs in 31-33 has a Hamiltonian circuit.
 
+Recall that:
+
+If a graph $G$ has a Hamiltonian circuit, then $G$ has a subgraph $H$ with the
+following properties:
+
+    1. $H$ contains every vertex of $G$.
+
+    2. $H$ is connected.
+
+    3. $H$ has the same number of edges as vertices.
+
+    4. Every vertex of $H$ has degree $2$.
+
 31. (See Page 719 for image of graph.)
+
+_Hint:_ See the solution to Example 10.1.9.
+
+**Proof (by contradiction):**
+
+Suppose not, that is, suppose there exists some Hamiltonian circuit $H$, a
+subgraph of the shown graph, denoted $G$, that fulfills the four properties of a
+Hamiltonian circuit (see page 714).
+
+By property 1, $H$ has all 7 vertices of $G$, denoted $(a, b, c, d, e, f, g)$.
+By property 2, $H$ is connected. By property 3 $H$ has the same number of edges
+as vertices, _i.e._ 7 edges. By property 4, every vertex of $H$ has a degree
+of 2.
+
+Since the degree of $c$ in $G$ is 5, 3 edges incident on $c$ must be removed
+from $G$ to create $H$. $Edge $\{b, c\}$ cannot be removed, because then $b$
+would have a degree of 1. This logic also applies to edges
+$\{d, c\}, \{f, c\}, \{g, c\}$. It follows that the degree of $c$ cannot be
+reduced to 2, which contradicts property 4 of a Hamiltonian circuit.
+
+Thus it has been shown that the supposition is false, and therefore there does
+not exist a Hamiltonian circuit for the shown graph.
+
+Q.E.D.
 
 32. (See Page 719 for image of graph.)
 
+**Proof (by contradiction):**
+
+Suppose not, that is, suppose there exists some Hamiltonian circuit $H$, a
+subgraph of the shown graph, denoted $G$, that fulfills the four properties of a
+Hamiltonian circuit (see page 714).
+
+By property 1, $H$ has all 10 vertices of $G$, denoted
+$(a, b, c, d, e, f, g, h, i, j)$. By property 2, $H$ is connected. By property 3
+$H$ has the same number of edges as vertices, _i.e._ 10 edges. By property 4,
+every vertex of $H$ has a degree of 2.
+
+Since the degree on $h$ is 4, 2 edges incident on $h$ must be removed from $G$
+to create $H$. Edge $\{g, h\}$ cannot be removed because then $g$ would have a
+degree of $1$.
+
+It follows that the degree of $h$ cannot be reduced to 2, which contradicts
+property 4 of a Hamiltonian circuit.
+
+Thus it has been shown that the supposition is false, and therefore there does
+not exist a Hamiltonian circuit for the shown graph.
+
+Q.E.D.
+
 33. (See Page 719 for image of graph.)
+
+**Proof (by contradiction):**
+
+Suppose not, that is, suppose there exists some Hamiltonian circuit $H$, a
+subgraph of the shown graph, denoted $G$, that fulfills the four properties of a
+Hamiltonian circuit (see page 714).
+
+By property 1, $H$ has all 7 vertices of $G$, denoted $(A, B, C, D, E, F, G)$.
+By property 2, $H$ is connected. By property 3 $H$ has the same number of edges
+as vertices, _i.e._ 7 edges. By property 4, every vertex of $H$ has a degree
+of 2.
+
+Since the degree on $B$ is 5, 3 edges incident on $B$ must be removed from $G$
+to create $H$. Edge $\{A, B\}$ cannot be removed because then $A$ would have a
+degree of $1$.
+
+It follows that the degree of $B$ cannot be reduced to 2, which contradicts
+property 4 of a Hamiltonian circuit.
+
+Thus it has been shown that the supposition is false, and therefore there does
+not exist a Hamiltonian circuit for the shown graph.
+
+Q.E.D.
 
 In 34-37, find Hamiltonian circuits for those graphs that have them. Explain why
 the other graphs do not.
 
 34. (See Page 719 for image of graph.)
 
+_Hint:_ This graph does not have a Hamiltonian circuit.
+
+This graph does not have a Hamiltonian circuit because it violates property 4 of
+a Hamiltonian circuit. Notice $b$ has a degree of 3, but reducing it to 2 to
+create a Hamiltonian circuit would result in either $a$ or $c$ or $d$ having a
+degree of 1.
+
 35. (See Page 719 for image of graph.)
+
+Yes, this graph has a Hamiltonian circuit. One such circuit is:
+
+$abcdefga$
 
 36. (See Page 719 for image of graph.)
 
+Yes, this graph has a Hamiltonian circuit. One such circuit is:
+
+$v_1v_5v_4v_7v_6v_2v_3v_0v_1$
+
 37. (See Page 719 for image of graph.)
+
+This graph has no Hamiltonian circuit. As the shown graph's vertex $a$ has a
+degree 3, which must be reduced to 2. To accomplish this, only edge $\{a, e\}$
+can be removed as removing $\{a, b\}$ or $\{a, d\}$ will cause either $b$ or $d$
+to have degree 1. Similarly, $c$ has a degree 3, where only $\{c, f\}$ can be
+removed, as $\{c, d\}$ and $\{c, b\}$ would cause either $d$ or $b$ to have
+degree 1.
+
+Once this is done, one would have a Hamiltonian circuit, but removing $\{a, e\}$
+and $\{c, f\}$ causes the resulting graph to be disconnected (into two
+disconnected subgraphs, $abcd$ and $efgh$). This violates property 2 of a
+Hamiltonian circuit.
+
+Therefore it can be concluded that there is no Hamiltonian circuit in the shown
+graph.
 
 38. Give two examples of graphs that have Euler circuits but not Hamiltonian
     circuits.
 
+(Done by hand.)
+
 39. Give two examples of graphs that have Hamiltonian circuits but not Euler
     circuits.
+
+(Done by hand.)
 
 40. Give two examples of graphs that have circuits that are both Euler circuits
     and Hamiltonian circuits.
 
+(Done by hand.)
+
 41. Give two examples of graphs that have Euler circuits and Hamiltonian
     circuits that are not the same.
+
+Omitted.
 
 42. A traveler in Europe wants to visit each of the cities shown on the map
     exactly once, starting and ending in Brussels. The distance (in kilometers)
@@ -525,63 +694,384 @@ the other graphs do not.
 | Munich     | 585    | 771      | 613        | 517        |        |
 | Paris      | 1,057  | 308      | 497        | 375        | 832    |
 
+Some possible Hamiltonian circuits are:
+
+$$ Br \to Lu \to Du \to Be \to Mu \to Pa \to Br = 219 + 224 + 564 + 585 + 832 + 308 = 2732 $$
+
+$$ Br \to Du \to Lu \to Be \to Mu \to Pa \to Br = 223 + 224 + 764 + 585 + 832 + 308 = 2936 $$
+
+$$ Br \to Pa \to Lu \to Du \to Be \to Mu \to Br = 308 + 375 + 224 + 564 + 585 + 771 = 2827 $$
+
+$$ Br \to Pa \to Lu \to Mu \to Be \to Du \to Br = 308 + 375 + 517 + 585 + 564 + 223 = 2572 $$
+
+Thus $Br \to Pa \to Lu \to Mu \to Be \to Du \to Br$ is the shortest Hamiltonian
+circuit.
+
 43.
 
 a. Prove that if a walk in a graph contains a repeated edge, then the walk
 contains a repeated vertex.
 
+**Proof:**
+
+Suppose $G$ is a graph and $W$ is a walk in $G$ that contains a repeated edge
+$e$. Let $v$ and $w$ be the endpoints of $e$. In the case that $v = w$, then $v$
+is a repeated vertex of $W$. In the case that $v \neq w$, then one of the
+following must occur:
+
+(1) $W$ contains two copies f $vew$ or of $wev$ (for instance, $W$ might contain
+a section of the form $vewe'vew$, as illustrated below); (2) $W$ contains
+separate sections of the form $vew$ and $wev$ (For instance, $W$ might contain a
+section of the form $vewe'wev$ as illustrated below); or (3) $W$ contains a
+section of the form $vewev$ or of the form $wevew$ (as illustrated below).
+
+In cases (1) and (2), both vertices $v$ and $w$ are repeated, and in case (3),
+one of $v$ or $w$ is repeated.
+
+In all cases, there is at least one vertex in $W$ that is repeated.
+
+Q.E.D.
+
 b. Explain how it follows from part (a) that any walk with no repeated vertex
 has no repeated edge.
+
+By part (a), it has been shown that if a walk in a graph contains a repeated
+edge, then the walk contains a repeated vertex. It follows, by the laws of
+propositional logic, that the contrapositive statement is also true. That is,
+that if a walk contains no repeated vertex, then the graph has no repeated edge.
 
 44. Prove Lemma 10.1.1(a): If $G$ is a connected graph, then two distinct
     vertices of $G$ can be connected by a path. (You may use the result stated
     in exercise 43.)
 
+**Proof:**
+
+Suppose $G$ is any graph such that $G$ is connected.
+
+Let $v$ and $w$ be any two distinct vertices of $G$.
+
+It must be shown that $v$ and $w$ can be connected by a path.
+
+In the case that there is only a single edge from $v$ to $w$, then they are
+connected by a walk with no repeated vertex, which is a trail.
+
+In the case that there are a series of vertices and edges in between $v$ and
+$w$, recursively delete all recurring vertices until only distinct vertices
+between $v$ and $w$ remain. Then $v$ and $w$ are connected by a walk with no
+repeated vertex, which is a trail.
+
+The resulting trail has no repeating edges by exercise 43(b), and thus the
+resulting trail is a path.
+
+This is what was to be shown.
+
+Q.E.D.
+
 45. Prove Lemma 10.1.1(b): If vertices $v$ and $w$ are part of a circuit in a
     graph $G$ and one edge is removed from the circuit, then there still exists
     a trail from $v$ to $w$ in $G$.
+
+**Proof:**
+
+Suppose $G$ is any graph. Let $C$ be a circuit in $G$, where $v$ and $w$ are
+part of $C$, and $v \neq w$. Furthermore, let $e$ represent an edge removed from
+$C$.
+
+It must be shown that there exists a trail from $v$ to $w$ in $G$.
+
+Since $v$ and $w$ are part of $C$, and $v \neq w$, it follows that there exists
+$n$ edges, where $n \geq 2$, such that $C$ can be expressed as
+$ve_1v_1e_2v_2 \dots e \dots w \dots v$ or
+$ve_1v_1e_2v_2 \dots w \dots e \dots v$.
+
+In either case, once $e$ is removed, the remaining $C$ is expressed as
+$ve_1v_1e_2v_2 \dots w \dots v$.
+
+It follows that there exists a trail from $v$ to $w$ in $G$ after $e$ has been
+removed from $C$.
+
+This is what was to be shown.
+
+Q.E.D.
 
 46. Draw a picture to illustrate Lemma 10.1.1\(c\): If a graph $G$ is connected
     and $G$ contains a circuit, then an edge of the circuit can be removed
     without disconnecting $G$.
 
+(Done by hand.)
+
 47. Prove that if there is a trail in a graph $G$ from a vertex $v$ to a vertex
     $w$, then there is a trail from $w$ to $v$.
 
+**Proof:**
+
+Suppose $G$ is any graph. Let $T$ be a trail in $G$ that is a walk from $v$ to
+$w$.
+
+If $v = w$, then there exists a trail from $w$ to $v$, namely $T$.
+
+If $v \neq w$, then there exist $n$ edges from $v$ to $w$, where $n \geq 1$,
+such that $T$ can be expressed as:
+
+$$ ve_1v_1e_2v_2 \dots e_nw $$
+
+By the definition of trail, $T$ has no repeated edges, and thus a reverse trail
+from $w$ to $v$ exists, which can be expressed as:
+
+$$ we_n \dots v_2e_2v_1e_1v $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 48. If a graph contains a circuit that starts and ends at a vertex $v$, does the
     graph contain a simple circuit that starts and ends at $v$? Why?
+
+_Hint:_ Look at the answer to exercise 46 and use the fact that all graphs have
+finite number of edges.
+
+Suppose a graph $G$ contains a circuit that starts and ends at vertex $v$.
+
+If $v$ is the only vertex in the circuit, then the circuit is a loop, which is a
+simple circuit.
+
+In every other case, there exists $n \geq 2$ other vertices. Now remove all
+repeated vertices and their incident edges. Note that each time a vertex
+repeats, the circuit can be split into a smaller circuit at that vertex.
+
+By the definition of a graph, the amount of edges removed will be finite.
+
+The resulting circuit will be a simple circuit.
+
+Q.E.D.
 
 49. Prove that if there is a circuit in a graph that starts and ends at a vertex
     $v$ and if $w$ is another vertex in the circuit, then there is a circuit in
     the graph that starts and ends at $w$.
 
-50. Let $G$ be a connected graph, and let $c$ be any circuit in $G$ that does
-    not contain every vertex of $C$. Let $G'$ be the subgraph obtained by
+**Proof:**
+
+Suppose that there is a circuit in a graph that starts and ends at a vertex $v$.
+Furthermore, suppose $w$ is another vertex in the circuit.
+
+It must be shown that there is a circuit in the graph that starts and ends at
+$w$.
+
+Since the circuit starts and ends at $v$ and $w$ is a vertex in the same
+circuit, the circuit can be expressed as:
+
+$$ ve_1v_1e_2v_2 \dots w \dots v $$
+
+Since all circuits are closed walks, it follows that there exists a circuit that
+can be expressed starting and ending at $w$ such that:
+
+$$ w \dots ve_1v_1e_2v_2 \dots w $$
+
+This is what was to be shown.
+
+Q.E.D.
+
+50. Let $G$ be a connected graph, and let $C$ be any circuit in $G$ that does
+    not contain every vertex of $G$. Let $G'$ be the subgraph obtained by
     removing all the edges of $C$ from $G$ and also any vertices that become
     isolated when the edges of $C$ are removed. Prove that there exists a vertex
     $v$ such that $v$ is in both $C$ and $G'$.
 
+**Proof:**
+
+Let $G$ be a connected graph and let $C$ be a circuit in $G$. Let $G'$ be the
+subgraph obtained by removing all the edges of $C$ from $G$ and also any
+vertices that become isolated when the edges of $C$ are removed.
+
+_[We must show that there exits a vertex $v$ such that $v$ is in both $C$ and
+$G'$.]_
+
+Pick any vertex $v$ of $C$ and any vertex $w$ of $G'$. Since $G$ is connected,
+there is a path from $v$ to $w$ (by Lemma 10.1.1(a)):
+
+$$ \underbrace{v}_{\text{in } C} = v_0e_1v_1e_2v_2 \dots v_{i - 1}\underbrace{e_iv_ie_i}_{\text{in } C} + \underbrace{v_{i + 1}}_{\text{not in } C} \dots v_{n - 1}e_nv_n = \underbrace{w}_{\text{ in } G'} $$
+
+Let $i$ be the largest subscript such that $v_i$ is in $C$.
+
+If $i = n$, then $v_n = w$ is in $C$ and also in $G'$, and we are done.
+
+If $i < n$, then $v_i$ is in $C$ and $v_{i + 1}$ is not in $C$. This implies
+that $e_{i + 1}$ is not in $C$ (for if it were, both endpoints would be in $C$
+by definition of circuit). Hence when $G'$ is formed by removing the edges and
+resulting isolated vertices from $G$, then $e_{i + 1}$ is not removed. That
+means that $v_i$ does not become an isolated vertex, so $v_i$ is not removed
+either. Hence $v_i$ is in $G'$.
+
+Consequently, $v_i$ is in both $C$ and $G'$ _[as was to be shown]._
+
+Q.E.D.
+
 51. Prove that any graph with an Euler circuit is connected.
+
+**Proof:**
+
+Suppose $G$ is a graph with an Euler circuit.
+
+It must be shown that $G$ is connected.
+
+If $G$ has only one vertex, then $G$ is automatically connected.
+
+Otherwise, let $v$ and $w$ be any two vertices of $G$. By definition of an Euler
+circuit, $v$ and $w$ must appear at least once in the Euler circuit that is in
+$G$.
+
+The section of the circuit between the first occurrence of one of $v$ or $w$ and
+the first occurrence of the other is a walk from one of the two vertices to the
+other.
+
+Since the choice of $v$ and $w$ was arbitrary, given any two vertices in $G$
+there is a walk from one to the other. This means that $G$ is connected.
+
+Q.E.D.
 
 52. Prove Corollary 10.1.5.
 
+**Corollary 10.1.5**
+
+Let $G$ be a graph, and let $v$ and $w$ be two distinct vertices of $G$. There
+is an Euler trail from $v$ to $w$ if, and only if, $G$ is connected, $v$ and $w$
+have odd degree, and all other vertices of $G$ have positive even degree.
+
+**Proof:**
+
+Suppose $G$ is any graph, and let $v$ and $w$ be two distinct vertices of $G$.
+
+It must be shown that there is an Euler trail from $v$ to $w$ if, and only if,
+$G$ is connected, $v$ and $w$ have odd degree, and all other vertices of $G$
+have positive even degree.
+
+_Proof (1<sup>st</sup> proposition):_
+
+Suppose there is an Euler trail from $v$ to $w$.
+
+It must be shown that $G$ is connected, $v$ and $w$ have odd degree, and all
+other vertices of $G$ have a positive even degree.
+
+Since there is an Euler trail from $v$ to $w$, this means that there is a series
+of $n \geq 1$ edges from $v$ to $w$ such that the trail passes through each edge
+of $G$ exactly once. It follows that there exists a walk from $v$ to $w$, and
+this means that $G$ is connected.
+
+Each time a trail visits a vertex, it both enters and exits, which means that
+there is an even amount of degrees for every vertex.
+
+The exception to this is both $v$ and $w$, which are the vertices that are the
+beginning and the end of the trail respectively. $v$ is exited without entering,
+meaning that $v$ has an odd number of degrees, and similarly $w$ is entered
+without exiting, and also has an odd number of degrees.
+
+Thus $v$ and $w$ have odd degree, and all other vertices of $G$ have a positive
+even degree.
+
+This is what was to be shown.
+
+_Proof (2<sup>nd</sup> proposition):_
+
+Suppose that $G$ is connected, $v$ and $w$ have odd degree, and all other
+vertices of $G$ have a positive even degree.
+
+It must be shown that there is an Euler trail from $v$ to $w$.
+
+In other words, it must be shown that there exists a trail that starts at $v$
+and ends at $w$, passes through every vertex of $G$ at least once, and traverses
+every edge of $G$ exactly once (by the definition of Euler trail).
+
+Let $e'$ be an added edge between $v$ and $w$, then the degree of $v$ and $w$ is
+even (since an odd integer plus 1 is even). Then, by Theorem 10.1.3, this new
+graph has an Euler circuit. That is, this new graph has a circuit that has at
+least one edge, starts and ends at the same vertex, uses every vertex of the
+graph at least once, and uses every edge of the graph exactly once.
+
+If $e'$ is now removed, then the circuit is broken, then $v$ and $w$ now once
+again have an odd degree, and the other two conditions for an Euler circuit
+remain, which in turn define a trail that fulfills the properties of an Euler
+trail.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since both propositions have been shown, it follows that there is an Euler trail
+from $v$ to $w$ if, and only if, $G$ is connected, $v$ and $w$ have odd degree,
+and all other vertices of $G$ have positive even degree.
+
+Q.E.D.
+
 53. For what values of $n$ does the complete graph $K_n$ with $n$ vertices have
     (a) an Euler circuit? (b) a Hamiltonian circuit? Justify your answers.
+
+a.
+
+Since $K_n$ is a complete graph with $n$ vertices, this means that every vertex
+is connected to every other vertex. In other words, ever vertex connects to
+$n - 1$ vertices, and thus every vertex has $n - 1$ degrees.
+
+By definition of an Euler circuit, if $K_n$ has an Euler circuit, $K_n$ must be
+connected (which is true since $K_n$ is complete).
+
+Additionally, if $K_n$ has an Euler circuit, then every vertex must have an even
+degree. Thus every vertex must have $2k$ degrees, for some integer $k$.
+
+Equating $n - 1$ with $2k$ yields this expression:
+
+$$ n - 1 = 2k $$
+
+Then, evaluating for $n$ yields:
+
+$$ n = 2k + 1 $$
+
+This means that $n$ must be an odd positive integer, and therefore all values of
+$n$ for $K_n$ such that $K_n$ has an Euler circuit are $n \geq 3$, where $n$ is
+an odd integer.
+
+b.
+
+Since $K_n$ is a complete graph with $n$ vertices, this means that every vertex
+is connected to every other vertex. In other words, ever vertex connects to
+$n - 1$ vertices, and thus every vertex has $n - 1$ degrees.
+
+By property 4 of Proposition 10.1.6, a Hamiltonian circuit must have a degree of
+$2$.
+
+Equating the degree of every vertex in $K_n$ to $2$ yields:
+
+$$ n - 1 = 2 $$
+
+Then, solving for $2$:
+
+$$ n = 3 $$
+
+For any $n \geq 3$, a Hamiltonian circuit can always be constructed in $K_n$ by
+visiting each vertex exactly once in sequence and returning to the start, since
+$K_n$ contains all necessary edges by definition of a complete graph.
 
 54. For what values of $m$ and $n$ does the complete bipartite graph on $(m, n)$
     vertices have (a) an Euler circuit? (b) a Hamiltonian circuit? Justify your
     answers.
 
+Omitted.
+
 55. What is the maximum number of edges a simple disconnected graph with $n$
     vertices can have? Prove your answer.
+
+Omitted.
 
 56.
 
 a. Prove that if $G$ is any bipartite graph, then every circuit in $G$ has an
 even number of edges.
 
+Omitted.
+
 b. Prove that if $G$ is any graph with at least two vertices and if $G$ does not
 have a circuit with an odd number of edges, then $G$ is bipartite.
+
+Omitted.
 
 57. An alternative proof for Theorem 10.1.3 has the following outline. Suppose
     $g$ is a connected graph in which every vertex has even degree. Suppose the
