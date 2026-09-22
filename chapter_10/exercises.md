@@ -2104,3 +2104,89 @@ and only if, every entry of
 $\mathbf{A} + \mathbf{A}^2 + \cdots + \mathbf{A}^{n - 1}$ is positive.
 
 Omitted.
+
+---
+
+Page 742
+
+**Exercise Set 10.3**
+
+For each pair of graphs $G$ and $G'$ in 1-5, determine whether $G$ and $G'$ are
+isomorphic. If they are, give functions $g: V(G) \to V(G')$ and
+$h: E(G) \to E(G')$ that define isomorphism. If they are not, given an invariant
+for graph isomorphism that they do not share.
+
+1. (See page 742 for graph image.)
+
+2. (See page 742 for graph image.)
+
+3. (See page 742 for graph image.)
+
+4. (See page 742 for graph image.)
+
+5. (See page 742 for graph image.)
+
+For each pair of simple graphs $G$ and $G'$ in 6-13, determine whether $G$ and
+$G'$ are isomorphic. If they are, give a function $g: V(G) \to V(G')$ that
+defines the isomorphism. If they do not, give an invariant for graph isomorphism
+that they do not share.
+
+6. (See page 742 for graph image.)
+
+7. (See page 742 for graph image.)
+
+8. (See page 742 for graph image.)
+
+9. (See page 742 for graph image.)
+
+10. (See page 742 for graph image.)
+
+11. (See page 742 for graph image.)
+
+12. (See page 742 for graph image.)
+
+13. (See page 743 for graph image.)
+
+14. Draw all nonisomorphic simple graphs with three vertices.
+
+15. Draw all nonisomorphic simple graphs with four vertices.
+
+16. Draw all nonisomorphic graphs with three vertices and no more than two
+    edges.
+
+17. Draw all nonisomorphic graphs with four vertices and no more than two edges.
+
+18. Draw all nonisomorphic graphs with four vertices and three edges.
+
+19. Draw all nonisomorphic graphs with six vertices, all having degree 2.
+
+20. Draw four nonisomorphic graphs with six vertices, two of degree 4 and four
+    of degree 3.
+
+Prove that each of the properties in 21-29 is an invariant for graph
+isomorphism. Assume that $n$, $m$, and $k$ are all nonnegative integers.
+
+21. Has $n$ vertices
+
+22. Has $m$ edges
+
+23. Has a circuit of length $k$
+
+24. Has a simple circuit of length $k$
+
+25. Has $m$ vertices of degree $k$
+
+26. Has $m$ simple circuits of length $k$
+
+27. Is connected
+
+28. Has an Euler circuit
+
+29. Has a Hamiltonian circuit
+
+30. Show that the following two graphs are not isomorphic by supposing they are
+    isomorphic and deriving a contradiction.
+
+(See page 743 for graph image.)
+
+(See page 743 for graph image.)

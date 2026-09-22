@@ -113,3 +113,20 @@ $1$; $0$
    $\mathbf{A}^n =$ ____.
 
 the number of walks of length $n$ from $v_i$ to $v_j$
+
+---
+
+Page 741
+
+1. If $G$ and $G'$ are graphs, then $G$ is isomorphic to $G'$ if, and only if,
+   there exist a one-to-one correspondence $g$ from the vertex set of $G$ to the
+   vertex set of $G'$ and a one-to-one correspondence $h$ from the edge set of
+   $G$ to the edge set of $G'$ such that for every vertex $v$ and every edge $e$
+   in $G$, $v$ is an endpoint of $e$ if, and only if, ____.
+
+2. A property $P$ is an invariant for graph isomorphism if, and only if, given
+   any graphs $G$ and $G'$, if $G$ has property $P$ and $G'$ is isomorphic to
+   $G$ then ____.
+
+3. Some invariants for graph isomorphisms are ____, ____, ____, ____, ____,
+   ____, ____, ____, ____, and ____.

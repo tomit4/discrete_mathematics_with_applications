@@ -522,3 +522,107 @@ from $v_i$ to $v_j$ _[as was to be shown]._
 
 _[Since both the basis step and the inductive step have been proved, the
 sentence $P(n)$ is true for every integer $n \geq 1$.]_
+
+---
+
+Page 736
+
+**Definition**
+
+Let $G$ and $G'$ be graphs with vertex sets $V(G)$ and $V(G')$ and edge sets
+$E(G)$ and $E(G')$, respectively. **$G$ is isomorphic to $G'$** if, and only if,
+there exists one-to-one correspondences $g: V(G) \to V(G')$ and
+$h: E(G) \to E(G')$ that preserve the edge-endpoint functions of $G$ and $G'$ in
+the sense that for each $v \in V(G)$ and $e \in E(G)$,
+
+$$ v \text{ is an endpoint of } e \Leftrightarrow g(v) \text{ is an endpoint of } h(e) $$
+
+---
+
+Page 738
+
+**Theorem 10.3.1 Graph Isomorphism Is an Equivalence Relation**
+
+Let $S$ be a set of graphs and let $R$ be the relation of graph isomorphism on
+$S$. Then $R$ is an equivalence relation on $S$.
+
+**Proof:**
+
+_$R$ is reflexive:_
+
+Given any graph $G$ in $S$, define a graph isomorphism from $G$ to $G$ by using
+the identity functions on the set of vertices and on the set of edges of $G$.
+
+_$R$ is symmetric:_
+
+Given any graphs $G$ and $G'$ in $S$ such that $G$ is isomorphic to $G'$, we
+must show that $G'$ is isomorphic to $G$.
+
+This is true because if $g$ and $h$ are vertex and edge correspondences from $G$
+to $G'$ that preserve the edge-endpoint functions, then $g^{-1}$ and $h^{-1}$
+are vertex and edge correspondences from $G'$ to $G$ that preserve the
+edge-endpoint functions.
+
+_$R$ is transitive:_
+
+Given any graphs $G$, $G'$, and $G''$ in $S$ such that $G$ is isomorphic to $G'$
+and $G'$ is isomorphic to $G''$, we must show that $G$ is isomorphic to $G''$.
+
+This follows from the fact that if $g_1$ and $h_1$ are vertex and edge
+correspondences from $G$ to $G'$ that preserve the edge-endpoint functions of
+$G$ and $G'$ and if $g_2$ and $h_2$ are vertex and edge correspondences from
+$G'$ to $G''$ that preserve the edge-endpoint functions of $G'$ and $G''$, then
+$g_2 \circ g_1$ and $h_2 \circ h_2$ are vertex and edge correspondences from $G$
+to $G''$ that preserve the edge-endpoint functions of $G$ and $G''$.
+
+---
+
+Page 739
+
+**Definition**
+
+A property $P$ is called an **invariant for graph isomorphism** if, and only if,
+given any graphs $G$ and $G'$, if $G$ has property $P$ and $G'$ is isomorphic to
+$G$, then $G'$ has property $P$.
+
+---
+
+Page 739
+
+**Theorem 10.3.2**
+
+Each of the following properties is an invariant for graph isomorphism, where
+$n$, $m$, and $k$ are all nonnegative integers:
+
+1. has $n$ vertices
+
+2. has $m$ edges
+
+3. has a vertex of degree $k$
+
+4. has $m$ vertices of degree $k$
+
+5. has a circuit of length $k$
+
+6. has a simple circuit of length $k$
+
+7. has $m$ simple circuits of length $k$
+
+8. is connected
+
+9. has an Euler circuit
+
+10. has a Hamiltonian circuit
+
+---
+
+Page 741
+
+**Definition**
+
+If $G$ and $G'$ are simple graphs, then **$G$ is isomorphic to $G'$** if, and
+only if, there exists a one-to-one correspondence $g$ from the vertex set $V(G)$
+of $G$ to the vertex set $V(G')$ of $G'$ that preserves the edge-endpoint
+functions of $G$ and $G'$ in the sense that for all vertices $u$ and $v$ of $G$,
+
+$$ \{u, v\} \text{ is an edge in } G \Leftrightarrow \{g(u), g(v)\} \text{ is an edge in } G' $$
