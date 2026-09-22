@@ -317,8 +317,8 @@ Page 724
 
 **Definition**
 
-An $n \times n$ square matrix $\mathbf{A} = (a_{ij})$ is called **symetric** if,
-and only if, for every $i$ and $j = 1, 2, \dots, n$,
+An $n \times n$ square matrix $\mathbf{A} = (a_{ij})$ is called **symmetric**
+if, and only if, for every $i$ and $j = 1, 2, \dots, n$,
 
 $$ a_{ij} = a_{ji} $$
 

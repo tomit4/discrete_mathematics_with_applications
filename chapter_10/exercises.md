@@ -1104,6 +1104,48 @@ c && b - a \\
 \end{array}\right]
 $$
 
+The four equalities are:
+
+$$ a + b = 1 $$
+
+$$ a - c = 0 $$
+
+$$ c = -1 $$
+
+$$ b - a = 3 $$
+
+Therefore:
+
+$$ a - c = 0 $$
+
+$$ a - (-1) = 0 $$
+
+$$ a + 1 = 0 $$
+
+$$ a = -1 $$
+
+and:
+
+$$ a + b = 1 $$
+
+$$ (-1) + b = 1 $$
+
+$$ b - 1 = 1 $$
+
+$$ b = 2 $$
+
+Checking other equalities:
+
+$$ b - a = 3 $$
+
+$$ 2 - (-1) = 3 $$
+
+$$ 3 = 3 $$
+
+So the real number values of $a, b, c$ are:
+
+$$ a = -1, b = 2, c = -1 $$
+
 b.
 
 $$
@@ -1117,11 +1159,74 @@ c - a && 2b - a \\
 \end{array}\right]
 $$
 
+Four values are:
+
+$$ 2a = 4 $$
+
+$$ b + c = 3 $$
+
+$$ c - a = 1 $$
+
+$$ 2b - a = -2 $$
+
+Evaluating:
+
+$$ 2a = 4 $$
+
+$$ a = 2 $$
+
+then:
+
+$$ c - a = 1 $$
+
+$$ c - (2) = 1 $$
+
+$$ c = 3 $$
+
+then:
+
+$$ b + c = 3 $$
+
+$$ b + 3 = 3 $$
+
+$$ b = 0 $$
+
+Checking:
+
+$$ 2b - a = -2 $$
+
+$$ 2(0) - (2) = -2 $$
+
+$$ 0 - 2 = -2 $$
+
+$$ -2 = -2 $$
+
+Done, so:
+
+$$ a = 2, b = 0, c = 3 $$
+
 2. Find the adjacency matrices for the following directed graphs.
 
 a. (See Page 733 for image of graph.)
 
+$$
+\left[\begin{array}{}
+0 & 1 & 1 \\
+1 & 0 & 0 \\
+0 & 0 & 0 \\
+\end{array}\right]
+$$
+
 b. (See Page 733 for image of graph.)
+
+$$
+\left[\begin{array}{}
+1 & 0 & 1 & 0 \\
+0 & 0 & 1 & 0 \\
+1 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 \\
+\end{array}\right]
+$$
 
 3. Find the directed graphs that have the following adjacency matrices:
 
@@ -1135,6 +1240,8 @@ $$
 0 && 1 && 1 && 0 \\
 \end{array}\right]
 $$
+
+(Done by hand.)
 
 b.
 
@@ -1151,11 +1258,48 @@ $$
 
 a. (See page 734 for image of graph.)
 
+$$
+\left[\begin{array}{}
+0 & 0 & 1 & 1 \\
+0 & 0 & 2 & 0 \\
+1 & 2 & 0 & 0 \\
+1 & 0 & 0 & 1 \\
+\end{array}\right]
+$$
+
 b. (See page 734 for image of graph.)
+
+$$
+\left[\begin{array}{}
+1 & 0 & 0 & 0 \\
+0 & 1 & 1 & 2 \\
+0 & 1 & 1 & 0 \\
+0 & 2 & 0 & 0 \\
+\end{array}\right]
+$$
 
 c. $K_4$, the complete graph on four vertices
 
+$$
+\left[\begin{array}{}
+0 & 1 & 1 & 1 \\
+1 & 0 & 1 & 1 \\
+1 & 1 & 0 & 1 \\
+1 & 1 & 1 & 0 \\
+\end{array}\right]
+$$
+
 d. $K_{2, 3}$, the complete bipartite graph on $(2, 3)$ vertices
+
+$$
+\left[\begin{array}{}
+0 & 0 & 1 & 1 & 1 \\
+0 & 0 & 1 & 1 & 1 \\
+1 & 1 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 \\
+\end{array}\right]
+$$
 
 5. Find graphs that have the following adjacency matrices.
 
@@ -1193,6 +1337,8 @@ $$
 \end{array}\right]
 $$
 
+The graph is connected.
+
 b.
 
 $$
@@ -1204,9 +1350,16 @@ $$
 \end{array}\right]
 $$
 
+No, $v_3$ is not connected to either $v_1$ or $v_2$, the same applies to $v_4$.
+
 7. Suppose that for every positive integer $i$, all the entries in the $i$th row
    and the $i$th column of the adjacency matrix of a graph are $0$. What can you
    conclude about the graph?
+
+The $i$th row and $i$th column define the number of edges between $v_i$ and all
+other edges. If $v_ii$ is always $0$, this indicates that there are $0$ edges
+from $v_ii$ to every other vertex on the graph, and therefore the graph is
+disconnected and in fact, has no edges at all.
 
 8. Find each of the following products.
 
@@ -1219,7 +1372,7 @@ $$
 \left[\begin{array}{}
 1 \\
 3 \\
-\end{array}\right]
+\end{array}\right] = (2)(1) + (-1)(3) = 2 + (-3) = -1
 $$
 
 b.
@@ -1232,7 +1385,7 @@ $$
 1 \\
 2 \\
 0 \\
-\end{array}\right]
+\end{array}\right] = (4)(1) + (-1)(2) + (7)(0) = 4 + (-2) + 0 = 4 - 2 = 2
 $$
 
 9. Find each of the following products.
@@ -1247,7 +1400,7 @@ $$
 \left[\begin{array}{}
 1 && -1 && 4 \\
 0 && 2 && 1 \\
-\end{array}\right]
+\end{array}\right] = \left[\begin{array}{} 3 & -3 & 12 \\ 1 & -5 & 2 \end{array}\right]
 $$
 
 b.
@@ -1261,7 +1414,7 @@ $$
 1 && 3 \\
 5 && -4 \\
 -2 && 2 \\
-\end{array}\right]
+\end{array}\right] = \left[\begin{array}{} 0 & 8 \\ -5 & 4 \end{array}\right]
 $$
 
 c.
@@ -1273,7 +1426,7 @@ $$
 \end{array}\right]
 \left[\begin{array}{}
 2 && 3 \\
-\end{array}\right]
+\end{array}\right] = \left[\begin{array}{} -2 & -3 \\ 4 & 6 \end{array}\right]
 $$
 
 d.
@@ -1282,7 +1435,7 @@ $$
 \left[\begin{array}{}
 1 && 2 \\
 3 && -1 \\
-\end{array}\right]^2
+\end{array}\right]^2 = \left[\begin{array}{} 7 & 0 \\ 0 & 7 \end{array}\right]
 $$
 
 10. Let
@@ -1316,28 +1469,138 @@ compute it if it does.
 
 a. $\mathbf{AB}$
 
+Recall that in order for a matrix multiplication between two matrices to be
+valid, the first matrix's columns must be equal to the second matrix's rows.
+
+$\mathbf{A}$ is a $2 \times 3$ matrix (so 3 columns), and $\mathbf{B}$ is a
+$2 \times 2$ matrix (so 2 rows). Thus the indicated product of $\mathbf{AB}$
+does not exist.
+
 b. $\mathbf{BA}$
+
+$\mathbf{B}$ has 2 columns, and $\mathbf{A}$ has 2 rows, so the indicated
+product exists.
+
+$$
+\mathbf{BA} = \left[\begin{array}{}
+-2 & -2 & 2 \\
+1 & -5 & -2 \\
+\end{array}\right]
+$$
 
 c. $\mathbf{A}^2$
 
+$\mathbf{A}$ has 3 columns, and $\mathbf{A}$ has rows 2, so the indicated
+product does not exist.
+
 d. $\mathbf{BC}$
+
+$\mathbf{B}$ has 2 columns, and $\mathbf{C}$ has 3 rows, so the indicated
+product does not exist.
 
 e. $\mathbf{CB}$
 
+$\mathbf{C}$ has 2 columns, and $\mathbf{B}$ has 2 rows, so the indicated
+product does exist.
+
+$$
+\mathbf{CB} = \left[\begin{array}{}
+-2 & -6 \\
+-5 & 3 \\
+-2 & 0 \\
+\end{array}\right]
+$$
+
 f. $\mathbf{B}^2$
+
+$\mathbf{B} has 2 columns, and $\mathbf{B}$ has 2 rows, so the indicated product
+does exist.
+
+$$
+\mathbf{B}^2 = \left[\begin{array}{}
+4 & 0 \\
+1 & 9 \\
+\end{array}\right]
+$$
 
 g. $\mathbf{B}^3$
 
+Note that $\mathbf{B}^3 = \mathbf{B}\mathbf{B}^2$.
+
+$\mathbf{B}$ has 2 columns, and $\mathbf{B}^2$ has 2 rows, so the indicated
+product exists.
+
+$$
+\mathbf{B}^3 = \left[\begin{array}{}
+-8 & 0 \\
+7 & 27 \\
+\end{array}\right]
+$$
+
 h. $\mathbf{C}^2$
+
+$\mathbf{C}$ has 2 columns, and $\mathbf{C}$ has 3 rows, so the indicated
+product does not exist.
 
 i. $\mathbf{AC}$
 
+$\mathbf{A}$ has 3 columns, and $\mathbf{C}$ has 3 rows, so the indicated
+product does exist.
+
+$$
+\mathbf{AC} = \left[\begin{array}{}
+2 & -1  \\
+-5 & -2 \\
+\end{array}\right]
+$$
+
 j. $\mathbf{CA}$
+
+$\mathbf{C}$ has 2 columns, and $\mathbf{A}$ has 2 rows, so the indicated
+product does exist.
+
+$$
+\mathbf{CA} = \left[\begin{array}{}
+0 & 4 & -2 \\
+3 & 1 & -2 \\
+1 & 1 & -1 \\
+\end{array}\right]
+$$
 
 11. Give an example different from that in the text to show that matrix
     multiplication is not commutative. That is, find $2 \times 2$ matrices
     $\mathbf{A}$ and $\mathbf{B}$ such that $\mathbf{AB}$ and $\mathbf{BA}$ both
     exist but $\mathbf{AB} \neq \mathbf{BA}$.
+
+$$
+\mathbf{A} = \left[\begin{array}{}
+1 & 2 \\
+3 & 4 \\
+\end{array}\right]
+$$
+
+$$
+\mathbf{B} = \left[\begin{array}{}
+2 & 4 \\
+3 & 6 \\
+\end{array}\right]
+$$
+
+$$
+\mathbf{AB} = \left[\begin{array}{}
+8 & 16 \\
+18 & 36 \\
+\end{array}\right]
+$$
+
+$$
+\mathbf{BA} = \left[\begin{array}{}
+14 & 20 \\
+21 & 30 \\
+\end{array}\right]
+$$
+
+So, $\mathbf{AB}$ and $\mathbf{BA}$ exist, but $\mathbf{AB} \neq \mathbf{BA}$.
 
 12. Let $\mathbf{O}$ denote the matrix
     $\left[\begin{array}{} 0 && 0 \\ 0 && 0\\ \end{array}\right]$. Find
@@ -1345,19 +1608,139 @@ j. $\mathbf{CA}$
     $\mathbf{A} \neq \mathbf{O}$ and $\mathbf{B} \neq \mathbf{O}$ but
     $\mathbf{AB} = \mathbf{O}$.
 
+$$
+\mathbf{A} = \left[\begin{array}{}
+1 & -1 \\
+-1 & 1 \\
+\end{array}\right]
+$$
+
+$$
+\mathbf{B} = \left[\begin{array}{}
+1 & 1 \\
+1 & 1 \\
+\end{array}\right]
+$$
+
+$$
+\mathbf{AB} = \left[\begin{array}{}
+0 & 0 \\
+0 & 0 \\
+\end{array}\right]
+$$
+
 13. Let $\mathbf{O}$ denote the matrix
     $\left[\begin{array}{} 0 && 0 \\ 0 && 0\\ \end{array}\right]$. Find
     $2 \times 2$ matrices $\mathbf{A}$ and $\mathbf{B}$ such that
     $\mathbf{A} \neq \mathbf{B}$, $\mathbf{B} \neq \mathbf{O}$ and
     $\mathbf{AB} \neq \mathbf{O}$, but $\mathbf{BA} = \mathbf{O}$.
 
+$$
+\mathbf{A} = \left[\begin{array}{}
+1 & 0 \\
+0 & 0 \\
+\end{array}\right]
+$$
+
+$$
+\mathbf{B} = \left[\begin{array}{}
+0 & 1 \\
+0 & 0 \\
+\end{array}\right]
+$$
+
+$$
+\mathbf{AB} = \left[\begin{array}{}
+0 & 1 \\
+0 & 0 \\
+\end{array}\right]
+$$
+
+so $\mathbf{AB} \neq \mathbf{O}$.
+
+$$
+\mathbf{BA} = \left[\begin{array}{}
+0 & 0 \\
+0 & 0 \\
+\end{array}\right]
+$$
+
+so $\mathbf{BA} = \mathbf{O}$.
+
 In 14-18, assume the entries of all matrices are real numbers.
 
 14. Prove that if $\mathbf{I}$ is the $m \times m$ identity matrix and
     $\mathbf{A}$ is any $m \times n$ matrix, then $\mathbf{IA} = \mathbf{A}$.
 
+_Hint:_ If the entries of the $m \times m$ identity matrix are denoted
+$\delta_{ik}$, then
+$\delta_{ik} = \begin{cases} 0 & \text{if } i \neq k \\ 1 & \text{if } i = k \end{cases}$.
+The $ij$th entry of $\mathbf{IA}$ is
+$\sum_{k = 1}^{m}{\delta_{ik}\mathbf{A}_{kj}}$.
+
+**Proof:**
+
+Suppose that $\mathbf{I}$ is the $m \times m$ identity matrix, and $\mathbf{A}$
+is any $m \times n$ matrix.
+
+It must be shown that $\mathbf{IA} = \mathbf{A}$.
+
+Equivalently, it must be shown that for all $1 \leq i \leq m$ and all
+$1 \leq j \leq n$, that $\mathbf{IA}_{ij} = \mathbf{A}_{ij}$.
+
+Denote the entries of $\mathbf{I}$ as $\delta_{ik}$, where each $\delta_{ik}$ is
+defined by the following piecewise function:
+
+$$
+\delta_{ik} =
+\begin{cases}
+0 & \text{if } i \neq k \\
+1 & \text{if } i = k
+\end{cases}
+$$
+
+Then, the $ij$th entry of $\mathbf{IA}$ is:
+
+$$ \sum_{k = 1}^{m}{\delta_{ik}\mathbf{A}_{kj}} $$
+
+$$ = \delta_{i1}\mathbf{A}_{1j} + \delta_{i2}\mathbf{A}_{2j} + \cdots + \delta_{im}\mathbf{A}_{mj} $$
+
+Because all the terms in the sum are $0$ except when $i = k$, by multiplication,
+it follows that $\mathbf{IA} = \mathbf{A}$.
+
+This is what was to be shown.
+
+Q.E.D.
+
 15. Prove that if $\mathbf{A}$ is an $m \times m$ symmetric matrix, then
     $\mathbf{A}^2$ is symmetric.
+
+**Proof:**
+
+Suppose that $\mathbf{A}$ is an $m \times m$ symmetric matrix.
+
+It must be shown that $\mathbf{A}^2$ is symmetric.
+
+Let $1 \leq i$, and $j \leq m$.
+
+For all $i$, $j$, and $k$:
+
+$$ (\mathbf{A}^2)_{ij} = \sum_{k = 1}^{m}{\mathbf{A}_{ik}\mathbf{A}_{kj}} $$
+
+and
+
+$$ (\mathbf{A}^2)_{ji} = \sum_{k = 1}^{m}{\mathbf{A}_{jk}\mathbf{A}_{ki}} $$
+
+Since $\mathbf{A}$ is symmetric, this means that
+$(\mathbf{A}_{ik}) = (\mathbf{A}_{ki})$ and
+$(\mathbf{A}_{jk}) = (\mathbf{A}_{kj})$, for some integer $k \geq 1$.
+
+By the commutative law of multiplication, it follows that
+$(\mathbf{A})_{ik}(\mathbf{A}_{kj}) = (\mathbf{A}_{jk})(\mathbf{A}_{ki})$.
+
+Hence $(\mathbf{A}^2_{ij}) = (\mathbf{A}^2_{ji})$ for all $i$ and $j$.
+
+Q.E.D.
 
 16. Prove that matrix multiplication is associative: If $\mathbf{A}$,
     $\mathbf{B}$, and $\mathbf{C}$ are any $m \times k$, $k \times r$, and
@@ -1365,14 +1748,215 @@ In 14-18, assume the entries of all matrices are real numbers.
     $(\mathbf{AB})\mathbf{C} = \mathbf{A}(\mathbf{BC})$. (_Hint:_ Summation
     notation is helpful.)
 
+**Proof:**
+
+Suppose that $\mathbf{A}$ is an $m \times k$ matrix, $\mathbf{B}$ is a
+$k \times r$ matrix, and $\mathbf{C}$ is an $r \times n$ matrix.
+
+It must be shown that $(\mathbf{AB})\mathbf{C} = \mathbf{A}(\mathbf{BC})$.
+
+By the definition of matrix multiplication, $\mathbf{AB}$ is an $m \times r$
+matrix. Let $1 \leq i \leq m$, and $1 \leq j \leq r$. Thus the $ij$th entry of
+$\mathbf{A}\mathbf{B}$ can be expressed as:
+
+$$ (\mathbf{A}\mathbf{B})_{ij} = \sum_{x = 1}^{k}{\mathbf{A}_{ix}\mathbf{B}_{xj}} $$
+
+Similarly, $\mathbf{BC}$: is an $r \times n$ matrix, where $1 \leq i \leq r$,
+and $1 \leq j \leq n$. Thus the $ij$th entry of $\mathbf{B}\mathbf{C}$ can be
+expressed as:
+
+$$ (\mathbf{B}\mathbf{C})_{ij} = \sum_{y = 1}^{r}{\mathbf{B}_{iy}\mathbf{C}_{yj}} $$
+
+Then, $(\mathbf{AB})\mathbf{C}$ is a $m \times n$ matrix where $1 \leq i \leq m$
+and $1 \leq j \leq n$, where the $ij$th entry is:
+
+$$ ((\mathbf{AB})\mathbf{C})_{ij} = \sum_{y = 1}^{r}{(\mathbf{A}\mathbf{B})_{iy}\mathbf{C}_{yj}} $$
+
+$$ = \sum_{y = 1}^{r}{\sum_{x = 1}^{k}{\mathbf{A}_{ix}\mathbf{B}_{xy}\mathbf{C}_{yj}}} $$
+
+By the associative law of multiplication:
+
+$$ = \sum_{x = 1}^{k}{\mathbf{A}_{ix}\left(\sum_{y = 1}^{r}{\mathbf{B}_{xy}\mathbf{C}_{yj}}\right)} $$
+
+Now, $\mathbf{A}(\mathbf{BC})$ is an $m \times n$ matrix where
+$1 \leq i \leq m$, and $1 \leq j \leq n$, where the $ij$th entry is:
+
+$$ (\mathbf{A}(\mathbf{BC}))_{ij} = \sum_{x = 1}^{k}{\mathbf{A}_{ix}(\mathbf{BC})_{xj}} $$
+
+$$ = \sum_{x = 1}^{k}{\mathbf{A}_{ix}\left(\sum_{y = 1}^{r}{\mathbf{B}_{xy}\mathbf{C}_{yj}}\right)} $$
+
+And this is equal to $(\mathbf{AB})\mathbf{C}$.
+
+Q.E.D.
+
 17. Use mathematical induction and the result of exercise 16 to prove that if
     $\mathbf{A}$ is any $m \times m$ matrix, then
     $\mathbf{A}^n\mathbf{A} = \mathbf{A}\mathbf{A}^n$ for each integer
     $n \geq 1$.
 
+**Proof (by mathematical induction):**
+
+Suppose that $\mathbf{A}$ is any $m \times m$ matrix.
+
+It must be shown that $\mathbf{A}^n\mathbf{A} = \mathbf{A}\mathbf{A}^n$ for each
+integer $n \geq 1$.
+
+Let $P(n)$ be the statement:
+
+If $\mathbf{A}$ is any $m \times m$ matrix, then
+$\mathbf{A}^n\mathbf{A} = \mathbf{A}\mathbf{A}^n$.
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+If $\mathbf{A}$ is any $m \times m$ matrix, then
+$\mathbf{A}^1\mathbf{A} = \mathbf{A}\mathbf{A}^1$.
+
+Since $\mathbf{A}^1 = \mathbf{A}$ by the laws of exponents,
+$\mathbf{A}^1\mathbf{A} = \mathbf{A}\mathbf{A}^1$ can be expressed as:
+
+$$ \mathbf{A}\mathbf{A} = \mathbf{A}\mathbf{A} $$
+
+$$ \mathbf{A}^2 = \mathbf{A}^2 $$
+
+This is trivially true by the laws of equality, therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k \in \mathbb{Z}$ where $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+If $\mathbf{A}$ is any $m \times m$ matrix, then
+$\mathbf{A}^k\mathbf{A} = \mathbf{A}\mathbf{A}^k$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+If $\mathbf{A}$ is any $m \times m$ matrix, then
+$\mathbf{A}^{k + 1}\mathbf{A} = \mathbf{A}\mathbf{A}^{k + 1}$.
+
+By the definition of taking a matrix to a power:
+
+$$ \mathbf{A}^{k + 1} = \mathbf{A}\mathbf{A}^k $$
+
+So:
+
+$$ \mathbf{A}^{k + 1}\mathbf{A}  = (\mathbf{A}\mathbf{A}^k)\mathbf{A} $$
+
+Then, by exercise 16, it is known that this expression is associative, so:
+
+$$ = \mathbf{A}(\mathbf{A}^k\mathbf{A}) $$
+
+Then, by the inductive hypothesis:
+
+$$ = \mathbf{A}(\mathbf{A}\mathbf{A}^k) $$
+
+And once again by the definition of taking a matrix to a power:
+
+$$ = \mathbf{A}(\mathbf{A}^{k + 1}) $$
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since both the basis and inductive step have been proven, the statement $P(n)$
+is true.
+
+Q.E.D.
+
 18. Use mathematical induction to prove that if $\mathbf{A}$ is an $m \times m$
     symmetric matrix, then for any integer $n \geq 1$, $\mathbf{A}^n$ is also
     symmetric.
+
+**Proof (by mathematical induction):**
+
+Suppose $\mathbf{A}$ is an $m \times m$ symmetric matrix.
+
+It must be shown that for any integer $n \geq 1$, $\mathbf{A}^n$ is symmetric.
+
+Let $P(n)$ be the statement:
+
+If $\mathbf{A}$ is an $m \times m$ symmetric matrix, then for any integer
+$n \geq 1$, $\mathbf{A}^n$ is also symmetric.
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+If $\mathbf{A}$ is an $m \times m$ symmetric matrix, then $\mathbf{A}^1$ is also
+symmetric.
+
+Since $\mathbf{A}^1 = \mathbf{A}$, and since, by the supposition, $\mathbf{A}$
+is symmetric, it follows by the laws of equality that $\mathbf{A}^1$ is
+symmetric.
+
+Thus $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k \in \mathbf{Z}$, such that $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+If $\mathbf{A}$ is an $m \times m$ symmetric matrix, then $\mathbf{A}^k$ is also
+symmetric.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+If $\mathbf{A}$ is an $m \times m$ symmetric matrix, then $\mathbf{A}^{k + 1}$
+is also symmetric.
+
+Now, note that by the laws of exponents on matrices:
+
+$$ \mathbf{A}^{k + 1} = \mathbf{A}\mathbf{A}^k $$
+
+The $ij$th entry of $\mathbf{A}^{k + 1}$ can be expressed as a summation as:
+
+$$ (\mathbf{A}^{k + 1})_{ij} = \sum_{l = 1}^{m}{\mathbf{A}_{il}(\mathbf{A}^{k})_{lj}} $$
+
+For all integers $1 \leq i \leq m$, and $1 \leq j \leq m$.
+
+Similarly, the $ji$th entry is:
+
+$$ (\mathbf{A}^{k + 1})_{ji} = \sum_{l = 1}^{m}{\mathbf{A}_{jl}(\mathbf{A}^{k})_{li}} $$
+
+To show that $\mathbf{A}^{k + 1}$ is symmetric, these two entries must be shown
+to be equal.
+
+By the supposition, it is known that $\mathbf{A}$ is symmetric, and by the
+inductive hypothesis, it is known that $\mathbf{A}^k$ is symmetric. Thus
+$\mathbf{A}_{jl} = \mathbf{A}_{lj}$, and
+$(\mathbf{A}^k)_{li} = (\mathbf{A}^k)_{il}$.
+
+Now, by substitution, it can be said that:
+
+$$ (\mathbf{A}^{k + 1})_{ji} = \sum_{l = 1}^{m}{\mathbf{A}_{jl}(\mathbf{A}^{k})_{li}} $$
+
+$$ = \sum_{l = 1}^{m}{\mathbf{A}_{lj}(\mathbf{A}^k)_{il}} $$
+
+By exercise 17, it is known that
+$\mathbf{A}\mathbf{A}^k = \mathbf{A}^k\mathbf{A}$, so the last expression
+becomes:
+
+$$ = \sum_{l = 1}^{m}{\mathbf{A}_{il}(\mathbf{A}^k)_{lj}} $$
+
+Notice that this is the same as the summation for $(\mathbf{A}^{k + 1})_{ij}$.
+Thus $(\mathbf{A}^{k + 1})_{ij} = \mathbf{A}^{k + 1}_{ji}$, and this means that
+$\mathbf{A}^{k + 1}$ is symmetric.
+
+This is what was to be shown.
+
+_Conclusion:_
+
+Since both the basis and inductive steps have been shown, it can be concluded
+that $P(n)$ is true.
+
+Q.E.D.
 
 19.
 
@@ -1380,14 +1964,43 @@ a. Let
 $\mathbf{A} = \left[\begin{array}{} 1 && 1 && 2 \\ 1 && 0 && 1 \\ 2 && 1 && 0 \\ \end{array}\right]$.
 Find $\mathbf{A}^2$ and $\mathbf{A}^3$.
 
+$$
+\mathbf{A}^2 = \left[\begin{array}{}
+6 & 3 & 3 \\
+3 & 2 & 2 \\
+3 & 2 & 5 \\
+\end{array}\right]
+$$
+
+$$
+\mathbf{A}^3 = \left[\begin{array}{}
+15 & 9 & 15 \\
+9 & 5 & 8 \\
+15 & 8 & 8 \\
+\end{array}\right]
+$$
+
 b. Let $G$ be the graph with vertices $v_1$, $v_2$, and $v_3$ and with
 $\mathbf{A}$ as its adjacency matrix. Use the answers to part (a) to find the
 number of walks of length $2$ from $v_1$ to $v_3$ and the number of walks of
 length $3$ from $v_1$ to $v_3$. Do not draw $G$ to solve this problem.
 
+By theorem 10.2.2, the number of walks of length $2$ from $v_1$ to $v_3$ is
+$(\mathbf{A}^2)_{13} = 3$.
+
+Similarly, the number of walks of length 3 from $v_1$ to $v_3$ is
+$(\mathbf{A}^3)_{13} = 15$.
+
 c. Examine the calculations you performed in answering part (a) to find five
 walks of length $2$ from $v_3$ to $v_3$. Then draw $G$ and find the walks by
 visual inspection.
+
+By looking at $\mathbf{A}$, it can be seen that $\mathbf{A}_{13} = 2$, call
+these two edges $e_2, e_3$. Then note that $\mathbf{A}_{23} = 1$, call this edge
+$e_4$. Using these edges, five walks of length 2 from $v_3$ to $v_3$ can be
+expressed as:
+
+$$ v_3e_2v_1e_3v_3, v_3e_3v_1e_2v_3, v_3e_2v_1e_2v_3, v_3e_3v_1e_3v_3, v_3e_4v_2e_4v_3 $$
 
 20. The following is an adjacency matrix for a graph:
 
@@ -1398,17 +2011,27 @@ by drawing the graph:
 
 a. How many walks of length 2 are there from $v_2$ to $v_3$?
 
+Omitted.
+
 b. How many walks of length 2 are there from $v_3$ to $v_4$?
+
+Omitted.
 
 c. How many walks of length 3 are there from $v_1$ to $v_4$?
 
+Omitted.
+
 d. How many walks of length 3 are there from $v_2$ to $v_3$?
+
+Omitted.
 
 21. Let $\mathbf{A}$ be the adjacency matrix for $K_3$, the complete graph on
     three vertices. Use mathematical induction to prove that for each positive
     integer $n$, all the entries along the main diagonal of $\mathbf{A}^n$ are
     equal to each other and all the entries that do not lie along the main
     diagonal are equal to each other.
+
+Omitted.
 
 22.
 
@@ -1425,6 +2048,8 @@ $$
 $$
 
 as its adjacency matrix. Is this graph bipartite?
+
+Omitted.
 
 ---
 
@@ -1460,11 +2085,15 @@ whose entries are $0$, $\mathbf{A}^t$ is the transpose of $\mathbf{A}$, and the
 bottom right $\mathbf{O}$ represents an $(n - k) \times (n - k)$ matrix all of
 whose entries are $0$.
 
+Omitted.
+
 23.
 
 a. Let $G$ be a graph with $n$ vertices, and let $v$ and $w$ be distinct
 vertices of $G$. Prove that if there is a walk from $v$ to $w$, then there is a
 walk from $v$ to $w$ that has length less than or equal to $n - 1$.
+
+Omitted.
 
 b. If $\mathbf{A} = (a_{ij})$ and $\mathbf{B} = (b_{ij})$ are any $m \times n$
 matrices, the matrix $\mathbf{A} + \mathbf{B}$ is the $m \times n$ matrix whose
@@ -1473,3 +2102,5 @@ $j = 1, 2, \dots, n$. Let $G$ be a graph with $n$ vertices where $n > 1$, and
 let $\mathbf{A}$ be the adjacency matrix of $G$. Prove that $G$ is connected if,
 and only if, every entry of
 $\mathbf{A} + \mathbf{A}^2 + \cdots + \mathbf{A}^{n - 1}$ is positive.
+
+Omitted.

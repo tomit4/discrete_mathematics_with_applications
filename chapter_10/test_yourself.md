@@ -83,21 +83,33 @@ Page 733
 1. In the adjacency matrix for a directed graph, the entry in the $i$th row and
    $j$th column is ____.
 
+the number of arrows from $v_i$ to $v_j$
+
 2. In the adjacency matrix for an undirected graph, the entry in the $i$th row
    and the $j$th column is ____.
+
+the number of edges connecting $v_i$ and $v_j$
 
 3. An $n \times n$ square matrix is called symmetric if, and only if, for all
    integers $i$ and $j$ from $1$ to $n$, the entry in row ____ and column ____
    equals the entry in row ____ and column ____.
 
+$i$; $j$; $j$; $i$
+
 4. The $ij$th entry in the product of two matrices $\mathbf{A}$ and $\mathbf{B}$
    is obtained by multiplying row ____ of $\mathbf{A}$ by the row ____ of
    $\mathbf{B}$.
 
+$i$; $j$
+
 5. In an $n \times n$ identity matrix, the entries on the main diagonal are all
    ____ and the off-diagonal entries are all ____.
+
+$1$; $0$
 
 6. If $G$ is a graph with vertices $v_1, v_2, \dots, v_m$ and $\mathbf{A}$ is
    the adjacency matrix of $G$, then for each positive integer $n$ and for all
    integers $i$ and $j$ with $i, j = 1, 2, \dots, m$, the $ij$th entry of
    $\mathbf{A}^n =$ ____.
+
+the number of walks of length $n$ from $v_i$ to $v_j$
