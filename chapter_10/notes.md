@@ -626,3 +626,292 @@ of $G$ to the vertex set $V(G')$ of $G'$ that preserves the edge-endpoint
 functions of $G$ and $G'$ in the sense that for all vertices $u$ and $v$ of $G$,
 
 $$ \{u, v\} \text{ is an edge in } G \Leftrightarrow \{g(u), g(v)\} \text{ is an edge in } G' $$
+
+---
+
+Page 743
+
+**Definition**
+
+A graph is said to be *_circuit-free_ if, and only if, it has no circuits. A
+graph is called a **tree** if, and only if, it is circuit-free and connected. A
+**trivial tree** is a graph that consists of a single vertex. A graph is called
+a **forest** if, and only if, it is circuit-free and not connected.
+
+---
+
+Page 747
+
+**Lemma 10.4.1**
+
+Any tree that has more than one vertex has at least one vertex of degree 1.
+
+---
+
+Page 747
+
+**Proof (of Lemma 10.4.1)**
+
+Let $T$ be a particular but arbitrarily chosen tree that has more than one
+vertex, and consider the following algorithm:
+
+**Step 1:** Pick a vertex $v$ of $T$ and let $e$ be an edge incident on $v$.
+
+_[If there were no edge incident on $v$, then $v$ would be an isolated vertex.
+But this would contradict the assumption that $T$ is connected (since it is a
+tree) and has at least two vertices.]_
+
+**Step 2:** While $\text{deg}(v) > 1$, repeat steps 2a, 2b, and 2c:
+
+**Step 2a:** Choose $e'$ to be an edge incident on $v$ such that $e' \neq e$.
+_[Since an edge exists because $\text{deg}(v) > 1$ and so there are at least two
+edges incident on $v$.]_
+
+**Step 2b:** Let $v'$ be the vertex at the other end of $e'$ from $v$. _[Since
+$T$ is a tree, $e'$ cannot be a loop and therefore $e'$ has two distinct
+endpoints.]_
+
+**Step 2c:** Let $e = e'$ and $v = v'$. _[This is just a renaming process in
+preparation for repeating step 2.]_
+
+The algorithm just described must eventually terminate because the set of
+vertices of the tree $T$ is finite and $T$ is circuit-free. When it does, a
+vertex $v$ of degree 1 will have been found.
+
+---
+
+Page 748
+
+**Definition**
+
+Let $T$ be a tree. If $T$ has at least two vertices, then a vertex of degree 1
+in $T$ is called a **leaf** (or a **terminal vertex**), and a vertex of degree
+greater than 1 in $T$ is called an **internal vertex** (or a **branch vertex**).
+The unique vertex in a trivial tree is also called a **leaf** or **terminal
+vertex**.
+
+---
+
+Page 748
+
+**Theorem 10.4.2**
+
+For any positive integer $n$, any tree with $n$ vertices has $n - 1$ edges.
+
+---
+
+Page 749
+
+**Proof (of Theorem 10.4.2) (by mathematical induction):**
+
+Let the Property $P(n)$ be the sentence
+
+Any tree with $n$ vertices has $n - 1$ edges.
+
+We use mathematical induction to show that this property is true for every
+integer $n \geq 1$.
+
+_Show that $P(1)$ is true:_
+
+Let $T$ be any tree with one vertex. Then $T$ has zero edges (since it contains
+no loops.) Since $0 = 1 - 1$, then $P(1)$ is true.
+
+_Show that for every integer $k \geq 1$, if $P(K)$ is true then $P(k + 1)$ is
+true:_
+
+Suppose $k$ is any positive integer for which $P(k)$ is true. In other words,
+suppose that
+
+Any tree with $k$ vertices has $k - 1$ edges.
+
+This is the inductive hypothesis.
+
+We must show that $P(k + 1)$ is true. In other words, we must show that
+
+Any tree with $k + 1$ vertices has $(k + 1) - 1 = k$ edges.
+
+Let $T$ be a particular but arbitrarily chosen tree with $k + 1$ vertices. _[We
+must show that $T$ has $k$ edges.]_
+
+Since $k$ is a positive integer, $(k + 1) \geq 2$, and so $T$ has more than one
+vertex. Hence by Lemma 10.4.1, $T$ has a vertex $v$ of degree 1. Also, since $T$
+has more than one vertex, there is at least one other vertex in $T$ besides $v$.
+Thus there is an edge $e$ connecting $v$ to the rest of $T$. Define a subgraph
+$T'$ of $T$ so that
+
+$$ V(T') = V(T) - \{v\} \quad \text{ and } \quad E(T') = E(T) - \{e\} $$
+
+Then
+
+1. The number of vertices of $T'$ is $(k + 1) - 1 = k$.
+
+2. $T'$ is circuit-free (since $T$ is circuit-free, and removing an edge and a
+   vertex cannot create a circuit).
+
+3. $T'$ is connected (see exercise 24 at the end of this section).
+
+Hence, by the definition of tree, $T'$ is a tree. Since $T'$ has $k$ vertices,
+by the inductive hypothesis
+
+$$ \text{the number of edges of } T' = (\text{the number of vertices of } T') - 1 $$
+
+$$  = k - 1 $$
+
+It follows that
+
+$$ \text{the number of edges of } T = (\text{the number of edges of } T') + 1 $$
+
+$$ (k - 1) + 1 $$
+
+$$ = k $$
+
+_[This is what was to be shown.]_
+
+---
+
+Page 750
+
+**Lemma 10.4.3**
+
+If $G$ is any connected graph, $C$ is any circuit in $G$, and any one of the
+edges of $C$ is removed from $G$, then the graph that remains is connected.
+
+---
+
+Page 751
+
+**Proof (of Lemma 10.4.3):**
+
+Suppose $G$ is a connected graph, $C$ is a circuit in $G$, and $e$ is an edge of
+$C$. Form a subgraph $G'$ of $G$ by removing $e$ from $G$. Thus
+
+$$ V(G') = V(G) $$
+
+$$ E(G') = E(G) - \{e\} $$
+
+We must show that $G'$ is connected. _[To show a graph is connected, we must
+show that if $u$ and $w$ are any vertices of the graph, then there exists a walk
+in $G'$ from $u$ to $w$.]_
+
+Suppose $u$ and $w$ are any two vertices of $G'$. _[We must find a walk from $u$
+to $w$.]_ Since the vertex sets of $G$ and $G'$ are the same, because $u$ and
+$w$ are both vertices of $G$, and since $G$ is connected, there is a walk $W$ in
+$G$ from $u$ to $w$.
+
+_Case 1($e$ is not an edge of $W$):_ The only edge in $G$ that is not in $G'$ is
+$e$, so in this case $W$ is also a walk in $G'$. Hence $u$ is connected to $w$
+by a walk in $G'$.
+
+_Case 2($e$ is an edge of $W$):_ In this case the walk $W$ from $u$ to $w$
+includes a section of the circuit $C$ that contains $e$. Let $C$ be denoted as
+follows:
+
+$$ C: v_0e_1v_1e_2v_2 \cdots e_nv_n(=v_0) $$
+
+Now $e$ is one of the edges of $C$, so, to be specific, let $e = e_k$. Then the
+walk $W$ contains either the sequence
+
+$$ v_{k - 1}e_kv_k \quad \text{ or } \quad v_ke_kv_{k - 1} $$
+
+If $W$ contains $v_{k - 1}e_kv_k$, connect $v_{k - 1}$ to $v_k$ by taking the
+"counterclockwise" walk $W'$ defined as follows:
+
+$$ W': v_{k - 1}e_{k - 1}v_{k - 1} \cdots v_0e_nv_{n - 1} \cdots e_{k + 1}v_k \text{ where } v_n = 0 $$
+
+An example showing how to go from $u$ to $w$ while avoiding $e_k$ is given in
+Figure 10.4.4.
+
+(See Page 752 for Figure 10.4.4)
+
+If $W$ contains $v_ke_kv_{k - 1}$, connect $v_k$ to $v_{k - 1}$ by taking the
+"clockwise" walk $W''$ defined as follows:
+
+$$ W'': v_ke_{k + 1}v_{k + 1} \cdots v_ne_1v_1e_2 \cdots e_{k - 1}v_{k - 1} \text{ where } v_n = v_0 $$
+
+Now patch either $W'$ or $W''$ into $W$ to form a new walk from $u$ to $w$. For
+instance, to patch $W'$ into $W$, start with the section of $W$ from $u$ to
+$v_{k - 1}$, then take $W'$ from $v_{k - 1}$ to $v_k$, and finally take the
+section of $W$ from $v_k$ to $w$. If this new walk still contains an occurrence
+of $e$, just repeat the process described previously until all occurrences are
+eliminated. _[This must happen eventually since the number of occurrences of $e$
+in $C$ is finite.]_ The result is a walk from $u$ to $w$ that does not contain
+$e$ and hence is a walk in $G'$.
+
+The previous arguments show that both in case 1 and in case 2 there is a walk in
+$G'$ from $u$ to $w$. Since the choice of $u$ and $w$ was arbitrary, $G'$ is
+connected.
+
+---
+
+Page 752
+
+**Theorem 10.4.4**
+
+For any positive integer $n$, if $G$ is a connected graph with $n$ vertices and
+$n - 1$ edges, then $G$ is a tree.
+
+**Proof:**
+
+Let $n$ be a positive integer and suppose $G$ is a particular but arbitrarily
+chosen graph that is connected and has $n$ vertices and $n - 1$ edges. _[We must
+show that $G$ is a tree. Now a tree is a connected, circuit-free graph. Since we
+already know $G$ is connected, it suffices to show that $G$ is circuit-free.]_
+
+Suppose $G$ is not circuit-free. That is, suppose $G$ has a circuit $C$. _[We
+must derive a contradiction.]_ By Lemma 10.4.3, an edge of $C$ can be removed
+from $G$ to obtain a graph $G'$ that is connected. If $G'$ has a circuit, then
+repeat this process:
+
+Remove an edge of the circuit from $G'$ to form a new connected graph.
+
+Continue repeating the process of removing edges from circuits until eventually
+a graph $G''$ is obtained that is connected and is circuit-free.
+
+By definition, $G''$ is a tree. Since no vertices were removed from $G$ to form
+$G''$, $G''$ has $n$ vertices just as $G$ does.
+
+Thus, by Theorem 10.4.2, $G''$ has $n - 1$ edges. But the supposition that $G$
+has a circuit implies that at least one edge of $G$ is removed to form $G''$.
+Hence $G''$ has no more than $(n - 1) - 1 = n - 2$ edges, which contradicts its
+having $n - 1$ edges. So the supposition is false.
+
+Hence $G$ is circuit-free, and therefore $G$ is a tree _[as was to be shown]_.
+
+---
+
+Page 753
+
+**Corollary 10.4.5**
+
+If $G$ is any graph with $n$ vertices and $m$ edges, where $m$ and $n$ are
+positive integers and $m \geq n$, then $G$ has a circuit.
+
+**Proof (by contradiction):**
+
+Suppose not. That is, suppose there is a graph $G$ with $n$ vertices and $m$
+edges, where $m$ and $n$ are positive integers and $m \geq n$, and suppose $G$
+does not have a circuit. Let $G_1, G_2, \dots, G_k$ be the connected components
+of $G$, and let $n_1, n_2, \dots, n_k$ be the number of vertices of
+$G_1, G_2, \dots, G_k,$ respectively. Because $G_1, G_2, \dots, G_k$ are the
+connected components of $G$,
+
+$$ \sum_{i = 1}^{k}{n_i} = n $$
+
+Since $G$ does not have a circuit, none of $G_1, G_2, \dots, G_k$ have circuits
+either. So, since each is connected, each is a tree. By Theorem 10.4.4, the
+number of edges of each $G_i$ is $n_{i - 1}$. Now because $G$ is composed of its
+connected components,
+
+$$ \text{the number of edges of } G = \sum_{i = 1}^{k}{(\text{the number of edges of } G_i)} $$
+
+$$ = (n_1 - 1) + (n_1 - 1) + \cdots + (n_k  - 1) $$
+
+$$ = (n_1 + n_2 + \cdots + n_k) - \underbrace{(1 + 1 + 1 + \cdots + 1)}_{k \text{ 1's}} $$
+
+$$ = n - k $$
+
+$$ < n $$
+
+Thus the number of edges of $G$ is less than $n$, which contradicts the
+hypothesis that the number of edges of $G$, namely, $m$, is greater than or
+equal to $n$. Hence the supposition is false and $G$ has a circuit.

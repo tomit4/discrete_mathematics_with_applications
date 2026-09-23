@@ -139,3 +139,26 @@ has $n$ vertices; has $m$ edges; has vertex of degree $k$; has $m$ vertices of
 degree $k$; has a circuit of length $k$; has a simple circuit of length $k$; has
 $m$ simple circuits of length $k$; is connected; has an Euler circuit; has a
 Hamiltonian circuit
+
+---
+
+Page 754
+
+**Test Yourself**
+
+1. A circuit-free graph is a graph with ____.
+
+2. A forest is a graph that is ____, and a tree is a graph that is ____.
+
+3. A trivial tree is a graph that consist of ____.
+
+4. Any tree with at least two vertices has at least one vertex of degree ____.
+
+5. If a tree $T$ has at least two vertices, then a terminal vertex (or leaf) in
+   $T$ is a vertex of degree ____ and an internal vertex (or branch vertex) in
+   $T$ is a vertex of degree ____.
+
+6. For any positive integer $n$, any tree with $n$ vertices has ____.
+
+7. For any positive integer $n$, if $G$ is a connected graph with $n$ vertices
+   and $n - 1$ edges then ____.

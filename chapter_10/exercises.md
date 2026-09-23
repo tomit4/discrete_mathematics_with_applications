@@ -2486,3 +2486,127 @@ Q.E.D.
 (See page 743 for graph image.)
 
 Omitted.
+
+---
+
+Page 754
+
+**Exercise Set 10.4**
+
+1. Read the tree in Example 10.4.2 from left to right to answer the following
+   questions.
+
+a. A student scored 12 on part I and 4 on part II. What course should the
+student take?
+
+b. A student scored 8 on part I and 9 on part II. What course should the student
+take?
+
+2. Draw trees to show the derivations of the following sentences from the rules
+   given in Example 10.4.3.
+
+a. The young ball caught the man.
+
+b. The man caught the young ball.
+
+3. What is the total degree of a tree with $n$ vertices? Why?
+
+4. Let $G$ be the graph of a hydrocarbon molecule with the maximum number of
+   hydrogen atoms for the number of its carbon atoms.
+
+a. Draw the graph of $G$ if $G$ has three carbon atoms and eight hydrogen atoms.
+
+b. Draw the graphs of three isomers of **C<sub>5</sub>H<sub>12</sub>**.
+
+c. Use Example 10.4.4 and exercise 3 to prove that if the vertices of $G$
+consist of $k$ carbon atoms and $m$ hydrogen atoms, then $G$ has a total degree
+of $2k + 2m - 2$.
+
+d. Prove that if the vertices of $G$ consist of $k$ carbon atoms and $m$
+hydrogen atoms, then $G$ has a total degree of $4k + m$.
+
+e. Equate the results of \(c\) and (d) to prove Cayley's result that a saturated
+hydrocarbon molecule with $k$ carbon atoms and a maximum number of hydrogen
+atoms has $2k + 2$ hydrogen atoms.
+
+5. Extend the argument given in the proof of Lemma 10.4.1 to show that a tree
+   with more than one vertex has at least two vertices of degree 1.
+
+6. If graphs are allowed to have an infinite number of vertices and edges, then
+   Lemma 10.4.1 is false. Give a counterexample that shows this. In other words,
+   give an example of an "infinite tree" (a connected, circuit-free graph with
+   an infinite number of vertices and edges) that has no vertex of degree 1.
+
+7. Find all leaves (or terminal vertices) and all internal (or branch) vertices
+   for the following tree.
+
+a. (See page 754 for image of tree.)
+
+b. (See page 754 for image of tree.)
+
+In each of 8-21, either draw a graph with the given specifications or explain
+why no such graph exists.
+
+8. Tree, nine vertices, nine edges
+
+9. Graph, connected, nine vertices, nine edges
+
+10. Graph, circuit-free, nine vertices, six edges
+
+11. Tree, six vertices, total degree 14
+
+12. Tree, five vertices, total degree 8
+
+13. Graph, connected, six vertices, five edges, has a circuit
+
+14. Graph, two vertices, one edge, not a tree
+
+15. Graph, circuit-free, seven vertices, four edges
+
+16. Tree, twelve vertices, fifteen edges
+
+17. Graph, six vertices, five edges, not a tree
+
+18. Tree, five vertices, total degree 10
+
+19. Graph, connected, ten vertices, nine edges, has a circuit
+
+20. Simple graph, connected, six vertices, six edges
+
+21. Tree, ten vertices, total degree 24
+
+22. A connected graph has twelve vertices and eleven edges. Does it have a
+    vertex of degree 1? Why?
+
+23. A connected graph has nine vertices and twelve edges. Does it have a
+    circuit? Why?
+
+24. Suppose that $v$ is a vertex of degree 1 in a connected graph $G$ and that
+    $e$ is the edge incident on $v$. Let $G'$ be the subgraph of $G$ obtained by
+    removing $v$ from $e$ from $G$. Must $G'$ be connected? Why?
+
+25. A graph has eight vertices and six edges. Is it connected? Why?
+
+26. If a graph has $n$ vertices and $n - 2$ or fewer edges, can it be connected?
+    Why?
+
+27. A circuit-free graph has ten vertices and nine edges. Is it connected? Why?
+
+28. Is a circuit-free graph with $n$ vertices and at least $n - 1$ edges
+    connected? Why?
+
+29. Prove that every nontrivial tree has at least two vertices of degree 1 by
+    filling in the details and completing the following argument: Let $T$ be a
+    nontrivial tree and let $S$ be the set of all paths from one vertex to
+    another in $T$. Among all the paths in $S$, choose a path $P$ with a maximum
+    number of edges. (Why is it possible to find such a $P$?) What can you say
+    about the initial and final vertices of $P$? Why?
+
+30. Find all nonisomorphic trees with five vertices.
+
+31.
+
+a. Prove that the following is an invariant for graph isomorphism: A vertex of
+degree $i$ is adjacent to a vertex of degree $j$.
+
+b. Find all nonisomorphic trees with six vertices.
