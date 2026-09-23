@@ -124,9 +124,18 @@ Page 741
    $G$ to the edge set of $G'$ such that for every vertex $v$ and every edge $e$
    in $G$, $v$ is an endpoint of $e$ if, and only if, ____.
 
+$g(v)$ is an endpoint of $h(e)$
+
 2. A property $P$ is an invariant for graph isomorphism if, and only if, given
    any graphs $G$ and $G'$, if $G$ has property $P$ and $G'$ is isomorphic to
    $G$ then ____.
 
+$G'$ has property $P$
+
 3. Some invariants for graph isomorphisms are ____, ____, ____, ____, ____,
    ____, ____, ____, ____, and ____.
+
+has $n$ vertices; has $m$ edges; has vertex of degree $k$; has $m$ vertices of
+degree $k$; has a circuit of length $k$; has a simple circuit of length $k$; has
+$m$ simple circuits of length $k$; is connected; has an Euler circuit; has a
+Hamiltonian circuit

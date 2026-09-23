@@ -2118,13 +2118,25 @@ for graph isomorphism that they do not share.
 
 1. (See page 742 for graph image.)
 
+Yes, isomorphic, functions defined by hand.
+
 2. (See page 742 for graph image.)
+
+Not isomorphic, $G$ has 5 vertices, while $G'$ has 6 vertices.
 
 3. (See page 742 for graph image.)
 
+Isomorphic, done by hand.
+
 4. (See page 742 for graph image.)
 
+Not isomorphic, $G'$ has vertex $w_5$ of degree 5, and $G$ has no vertex of
+degree 5.
+
 5. (See page 742 for graph image.)
+
+Not isomorphic, $G$ has vertex $v_5$ which has degree 5, but no vertex in $G'$
+has a vertex of degree 5.
 
 For each pair of simple graphs $G$ and $G'$ in 6-13, determine whether $G$ and
 $G'$ are isomorphic. If they are, give a function $g: V(G) \to V(G')$ that
@@ -2133,56 +2145,338 @@ that they do not share.
 
 6. (See page 742 for graph image.)
 
+Isomorphic, done by hand.
+
 7. (See page 742 for graph image.)
+
+Isomorphic, done by hand.
 
 8. (See page 742 for graph image.)
 
+Not Isomorphic, $G$ has a simple circuit of length $3$ and $G'$ does not.
+
 9. (See page 742 for graph image.)
+
+Isomorphic, done by hand.
 
 10. (See page 742 for graph image.)
 
+Isomorphic, done by hand.
+
 11. (See page 742 for graph image.)
+
+Not isomorphic, graph $G$ is not connected, while $G'$ is.
 
 12. (See page 742 for graph image.)
 
+Isomorphic, done by hand.
+
 13. (See page 743 for graph image.)
+
+Not isomorphic, $G$ has 4 circuits of length 4, while $G'$ has 6 circuits of
+length 4.
 
 14. Draw all nonisomorphic simple graphs with three vertices.
 
+(Done by hand.)
+
 15. Draw all nonisomorphic simple graphs with four vertices.
+
+(Done by hand.)
 
 16. Draw all nonisomorphic graphs with three vertices and no more than two
     edges.
 
+(Done by hand.)
+
 17. Draw all nonisomorphic graphs with four vertices and no more than two edges.
+
+(Done by hand.)
 
 18. Draw all nonisomorphic graphs with four vertices and three edges.
 
+(Done by hand.)
+
 19. Draw all nonisomorphic graphs with six vertices, all having degree 2.
+
+Omitted.
 
 20. Draw four nonisomorphic graphs with six vertices, two of degree 4 and four
     of degree 3.
+
+Omitted.
 
 Prove that each of the properties in 21-29 is an invariant for graph
 isomorphism. Assume that $n$, $m$, and $k$ are all nonnegative integers.
 
 21. Has $n$ vertices
 
+Prove that if $G$ is a graph that has $n$ vertices, and $G'$ is isomorphic to
+$G$, then $G'$ has $n$ vertices.
+
+**Proof:**
+
+Suppose $G$ and $G'$ are isomorphic graphs, and $G$ has $n$ vertices (where
+$n \in \mathbb{Z}$, and $n \geq 1$).
+
+It must be shown that $G'$ has $n$ vertices.
+
+Since $G$ and $G'$ are isomorphic, it follows, by the definition of isomorphism,
+that there exists a one-to-one, onto function $g$ from the vertices of $G$ to
+the vertices of $G'$ that preserve the edge function. In other words, for all
+vertices $u$ of $G$, there exists a vertex $g(u)$ in $G'$.
+
+Since $g$ is one-to-one, this ensures that every vertex, $g(u)$ in $G'$ is
+distinct, and since $g$ is onto, this ensures that every vertex, $g(u)$ in $G'$,
+is mapped to a vertex $u$ in $G$.
+
+Thus it follows that if $G$ has $n$ vertices, then $G'$ also has $n$ vertices.
+
+This is what was to be shown.
+
+Q.E.D.
+
 22. Has $m$ edges
+
+Prove that if $G$ is a graph that has $m$ edges, and $G'$ is isomorphic to $G$,
+then $G'$ has $m$ edges.
+
+**Proof:**
+
+Suppose $G$ and $G'$ are isomorphic graphs, and $G$ has $m$ edges (where
+$m \in \mathbb{Z}$, and $m \geq 0$).
+
+It must be shown that $G'$ has $m$ edges.
+
+Since $G$ and $G'$ are isomorphic, it follows, by the definition of isomorphism,
+that there exists a one-to-one, onto function $h$ from the edges of $G$ to the
+edges of $G'$ that preserve the endpoint function. In other words, for all edges
+$e$ of $G$, there exists an edge $h(e)$ in $G'$.
+
+Since $h$ is one-to-one, this ensures that every edge, $h(e)$ in $G'$ is
+distinct, and since $h$ is onto, this ensures that every edge, $h(e)$ in $G'$,
+is mapped to a edge $e$ in $G$.
+
+Thus it follows that if $G$ has $m$ edges, then $G'$ also has $m$ edges.
+
+This is what was to be shown.
+
+Q.E.D.
 
 23. Has a circuit of length $k$
 
+**Proof:**
+
+Suppose $G$ and $G'$ are isomorphic graphs and suppose $G$ has a circuit C$ of
+length $k$, where $k \in \mathbb{Z}$ and $k \geq 0$.
+
+It must be shown that $G'$ has a circuit of length $k$.
+
+Let $C$ be $v_0e_1v_1e_2 \dots e_kv_k(=v_0)$. By definition of graph
+isomorphism, there are one-to-one correspondences $g: V(G) \to V(G')$ and
+$h: E(G) \to E(G')$ that preserve the edge-endpoint functions in the sense that
+for each $v$ in $V(G)$ and each $e$ in $E(G)$, $v$ is an endpoint of
+$e \Leftrightarrow g(v)$ is an endpoint of $h(e)$.
+
+Let $C'$ be $g(v_0)h(e_1)g(v_1)h(e_2) \dots h(e_k)g(v_k)(=g(v_0))$. Then $C'$ is
+a circuit of length $k$ in $G'$.
+
+The reasons for this are that:
+
+(1) Because $g$ and $h$ preserve the edge-endpoint functions, both $g(v_i)$ and
+$g(v_i + 1)$ are incident on $h(e_i + 1)$ for each $i = 0, 1, \dots, k - 1$, and
+so $C'$ is a walk from $g(v_0)$ to $g(v_0)$.
+
+(2) Since $C$ is a circuit, then $e_1, e_2, \dots, e_k$ are distinct, and since
+$h$ is a one-to-one correspondence, $h(e_1), h(e_2), \dots, h(e_k)$ are also
+distinct, which implies that $C'$ has $k$ distinct edges.
+
+Therefore $G'$ has a circuit $C'$ of length $k$.
+
+Q.E.D.
+
 24. Has a simple circuit of length $k$
+
+**Proof:**
+
+Suppose $G$ and $G'$ are isomorphic graphs and suppose $G$ has a simple circuit
+C$ of length $k$, where $k \in \mathbb{Z}$ and $k \geq 0$.
+
+It must be shown that $G'$ has a simple circuit of length $k$.
+
+Let $C$ be a circuit of distinct edges and vertices (except for the first and
+the last vertices) $v_0e_1v_1e_2 \dots e_kv_k(=v_0)$. By definition of graph
+isomorphism, there are one-to-one correspondences $g: V(G) \to V(G')$ and
+$h: E(G) \to E(G')$ that preserve the edge-endpoint functions in the sense that
+for each $v$ in $V(G)$ and each $e$ in $E(G)$, $v$ is an endpoint of
+$e \Leftrightarrow g(v)$ is an endpoint of $h(e)$.
+
+Similarly, let $C'$ be a circuit of distinct edges and vertices (except for the
+first and the last vertices)
+$g(v_0)h(e_1)g(v_1)h(e_2) \dots h(e_k)g(v_k)(=g(v_0))$. Then $C'$ is a simple
+circuit of length $k$ in $G'$.
+
+The reasons for this are that:
+
+(1) Because $g$ and $h$ preserve the edge-endpoint functions, both $g(v_i)$ and
+$g(v_i + 1)$ are incident on $h(e_i + 1)$ for each $i = 0, 1, \dots, k - 1$, and
+so $C'$ is a walk from $g(v_0)$ to $g(v_0)$.
+
+(2) Since $C$ is a circuit, then $e_1, e_2, \dots, e_k$ are distinct, and since
+$h$ is a one-to-one correspondence, $h(e_1), h(e_2), \dots, h(e_k)$ are also
+distinct, which implies that $C'$ has $k$ distinct edges.
+
+(3) Since $C$ is a simple circuit, then $v_0, v_1, v_2, \dots, v_k$ are distinct
+except for $v_0$ and $v_k$, and since $g$ is a one-to-one correspondence,
+$g(v_0), g(v_1), g(v_2) \dots, g(v_k)(=g(v_0))$ are also distinct except for
+$g(v_0)$ and $g(v_k)$, which implies that $C'$ is a simple circuit.
+
+Therefore $G'$ has a simple circuit $C'$ of length $k$.
+
+Q.E.D.
 
 25. Has $m$ vertices of degree $k$
 
+_Hint:_ Suppose $G$ and $G'$ are isomorphic and $G$ has $m$ vertices of degree
+$k$; call them $v_1, v_2, \dots, v_m$. Since $G$ and $G'$ are isomorphic, there
+are one-to-one correspondences $g: V(G) \to V(G')$ and $h: E(G) \to E(G')$. Show
+that $g(v_1), g(v_2), \dots, g(v_m)$ are $m$ distinct vertices of $G'$, each of
+which has degree $k$.
+
+**Proof:**
+
+Suppose $G$ and $G'$ are isomorphic graphs and suppose $G$ has $m$ vertices of
+degree $k$ (where $m, k \in \mathbb{Z}$ and $m \geq 1$, and $k \geq 0$).
+
+Let these vertices be $v_1, v_2, \dots, v_m$.
+
+Since $G$ and $G'$ are isomorphic to each other, there exists one-to-one
+correspondences $g : V(G) \to V(G')$ and $h: E(G) \to E(G')$.
+
+It must be shown that $g(v_1), g(v_2), \dots, g(v_m)$ are $m$ distinct vertices
+of $G'$, each of which has degree $k$.
+
+Consider any arbitrarily chosen vertex in $G$, say $v_i$ in $G$ (for every
+$i = 1, 2, \dots m$), and let $v_i$ have degree $k$. This means that there
+exists $k$ edges incident on $v_i$, call them $e_1, e_2, \dots e_k$.
+
+Then, since $g$ and $h$ are one-to-one correspondences, it follows that there
+exists edges $h(e_1), h(e_2), \dots h(e_k)$ in $G'$ that are incident on
+$g(v_i)$. Since $v_i$ has $k$ degree edges, it follows that $g(v_i)$ also has
+$k$ degree edges.
+
+Additionally, since $g$ and $h$ are one-to-one and onto, it is implied that each
+$g(v_i)$ are distinct.
+
+Therefore it has been shown that there are $m$ distinct vertices of $G'$, each
+of which has degree $k$.
+
+This is what was to be shown.
+
+Q.E.D.
+
 26. Has $m$ simple circuits of length $k$
+
+**Proof:**
+
+Suppose $G$ and $G'$ are isomorphic graphs, with $G$ having $m$ simple circuits
+of length $k$ (where $m, k \geq 1$).
+
+It must be shown that $G'$ has $m$ simple circuits of length $k$.
+
+Let the $m$ simple circuits of $G$ be $C_1, C_2, \dots, C_m$. By exercise 24,
+each simple circuit of length $k$ in $G$ maps to a simple circuit of length $k$
+in $G'$, call them $C_1', C_2', \dots, C_m'$.
+
+Since $G$ and $G'$ are isomorphic, there exists one-to-one correspondences,
+$g: V(G) \to V(G')$ and $h: E(G) \to E(G')$. By exercise 25, it is known that
+these images are distinct, and therefore the $C_1', C_2', \dots, C_m'$ are
+distinct.
+
+Therefore $G'$ has $m$ simple circuits of length $k$, which is what was to be
+shown.
+
+Q.E.D.
 
 27. Is connected
 
+**Proof:**
+
+Suppose $G$ and $G'$ are isomorphic graphs, where $G$ is connected.
+
+It must be shown that $G'$ is connected.
+
+Since $G$ and $G'$ are isomorphic, there exists one-to-one correspondences
+$g: V(G) \to V(G')$ and $h: E(G) \to E(G')$.
+
+Since $G$ is connected, there is a walk that exists between every pair of
+vertices in $G$. So, for every pair of vertices that are endpoints of a walk,
+call them $u, v \in G$, there must exist a corresponding $g(u), g(v) \in G'$
+(since $G$ and $G'$ are isomorphic) that are also endpoints of a walk.
+
+This implies that $G'$ is connected, which is what was to be shown.
+
+Q.E.D.
+
 28. Has an Euler circuit
 
+**Proof:**
+
+Suppose $G$ and $G'$ are isomorphic graphs, where $G$ has an Euler circuit.
+
+It must be shown that $G'$ has an Euler circuit.
+
+Since $G$ and $G'$ are isomorphic, there exists one-to-one correspondences
+$g: V(G) \to V(G')$ and $h: E(G) \to E(G')$.
+
+Since $G$ has an Euler circuit, this means that $G$ has a circuit that contains
+every vertex and every edge of $G$, and traverses each vertex of $G$ at least
+once, and traverses every edge of $G$ exactly once.
+
+By exercise 21, it is known that if $G$ has $n$ vertices, then $G'$ has $n$
+vertices.
+
+By exercise 22, it is known that if $G$ has $m$ edges, then $G'$ has $m$ edges.
+
+By exercise 23, it is known that if $G$ has a circuit of length $k$, then $G'$
+has a circuit of length $k$.
+
+Since $h$ maps the edges of the Euler circuit in $G$ to distinct edges in $G'$,
+and, by exercise 22, $G'$ has exactly $m$ edges, it follows that the image
+circuit covers all edges of $G'$.
+
+Q.E.D.
+
 29. Has a Hamiltonian circuit
+
+**Proof:**
+
+Suppose $G$ and $G'$ are isomorphic graphs, where $G$ has an Hamiltonian
+circuit.
+
+It must be shown that $G'$ has an Hamiltonian circuit.
+
+Since $G$ and $G'$ are isomorphic, there exists one-to-one correspondences
+$g: V(G) \to V(G')$ and $h: E(G) \to E(G')$.
+
+Since $G$ has a Hamiltonian circuit, this means that $G$ has a simple circuit
+that includes every vertex of $G$. In other words, in $G$ there exists a
+sequence of adjacent vertices and distinct edges in which every vertex of $G$
+appears exactly once, except for the first and the last, which are the same.
+
+By exercise 21, it is known that if $G$ has $n$ vertices, then $G'$ has $n$
+vertices.
+
+By exercise 22, it is known that if $G$ has $m$ edges, then $G'$ has $m$ edges.
+
+By exercise 24, it is known that if $G$ has a simple circuit of length $k$, then
+$G'$ has a simple circuit of length $k$.
+
+Since $g$ maps the vertices of the Hamiltonian circuit in $G$ to distinct
+vertices in $G'$, and, by exercise 21, $G'$ has exactly $n$ vertices, it follows
+that the image circuit covers all vertices of $G'$.
+
+Q.E.D.
 
 30. Show that the following two graphs are not isomorphic by supposing they are
     isomorphic and deriving a contradiction.
@@ -2190,3 +2484,5 @@ isomorphism. Assume that $n$, $m$, and $k$ are all nonnegative integers.
 (See page 743 for graph image.)
 
 (See page 743 for graph image.)
+
+Omitted.
