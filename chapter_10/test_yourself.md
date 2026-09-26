@@ -148,17 +148,31 @@ Page 754
 
 1. A circuit-free graph is a graph with ____.
 
+no circuits
+
 2. A forest is a graph that is ____, and a tree is a graph that is ____.
+
+circuit-free and disconnected; circuit-free and connected;
 
 3. A trivial tree is a graph that consist of ____.
 
+a single vertex (and no edges)
+
 4. Any tree with at least two vertices has at least one vertex of degree ____.
+
+$1$
 
 5. If a tree $T$ has at least two vertices, then a terminal vertex (or leaf) in
    $T$ is a vertex of degree ____ and an internal vertex (or branch vertex) in
    $T$ is a vertex of degree ____.
 
+$1$, $2$ or more
+
 6. For any positive integer $n$, any tree with $n$ vertices has ____.
+
+$n - 1$ edges
 
 7. For any positive integer $n$, if $G$ is a connected graph with $n$ vertices
    and $n - 1$ edges then ____.
+
+$G$ is a tree

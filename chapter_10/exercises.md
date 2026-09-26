@@ -2499,22 +2499,44 @@ Page 754
 a. A student scored 12 on part I and 4 on part II. What course should the
 student take?
 
+Math 110
+
 b. A student scored 8 on part I and 9 on part II. What course should the student
 take?
+
+Math 110
 
 2. Draw trees to show the derivations of the following sentences from the rules
    given in Example 10.4.3.
 
 a. The young ball caught the man.
 
+(Done by hand.)
+
 b. The man caught the young ball.
 
+(Done by hand.)
+
 3. What is the total degree of a tree with $n$ vertices? Why?
+
+_Hint:_ The answer is $2n - 2$. To obtain this result, use the relationship
+between the total degree of a graph and the number of edges of the graph.
+
+By the definition of a graph, the total degree of a graph is $2$ times the
+number of edges in the graph. By the definition of a tree, a tree of $n$
+vertices has $n - 1$ edges, and therefore a tree of $n$ vertices has
+$2(n - 1) = 2n - 2$ degrees.
 
 4. Let $G$ be the graph of a hydrocarbon molecule with the maximum number of
    hydrogen atoms for the number of its carbon atoms.
 
+Recall that a hydrocarbon molecule is composed of carbon and hydrogen, where
+each carbon atom can form up to four chemical bonds with other atoms, and each
+hydrogen atom can form one bond with another atom.
+
 a. Draw the graph of $G$ if $G$ has three carbon atoms and eight hydrogen atoms.
+
+(Done by hand.)
 
 b. Draw the graphs of three isomers of **C<sub>5</sub>H<sub>12</sub>**.
 
@@ -2522,78 +2544,284 @@ c. Use Example 10.4.4 and exercise 3 to prove that if the vertices of $G$
 consist of $k$ carbon atoms and $m$ hydrogen atoms, then $G$ has a total degree
 of $2k + 2m - 2$.
 
+The number of vertices of $G$ is $k + m$, and the number of degree of $G$ is $2$
+times the amount of edges in $G$. By the definition of tree, $G$ has
+$(k + m) - 1$ edges, and so $G$ has $2(k + m - 1) = 2k + 2m - 2$ degrees.
+
 d. Prove that if the vertices of $G$ consist of $k$ carbon atoms and $m$
 hydrogen atoms, then $G$ has a total degree of $4k + m$.
+
+**Proof:**
+
+Let $G$ be the graph of a hydrocarbon molecule with the maximum number of
+hydrogen atoms for the number of its carbon atoms.
+
+Recall that a hydrocarbon molecule is composed of carbon and hydrogen, where
+each carbon atom can form up to four chemical bonds with other atoms, and each
+hydrogen atom can form one bond with another atom.
+
+Then, suppose $G$ consists of $k$ carbon atoms and $m$ hydrogen atoms.
+
+It must be shown that $G$ has a total degree of $4k + m$.
+
+Since $G$ has the maximum number of hydrogen atoms for the number of its carbon
+atoms, and since $G$ has $k$ carbon atoms, it follows that each carbon atom
+vertex has $4$ degrees, since $G$ has the maximum number of hydrogen atoms for
+the number of carbon atoms, and thus there are $4k$ total degrees for $k$ carbon
+atoms.
+
+Additionally, since $G$ has the maximum number of hydrogen atoms for the number
+of its carbon atoms, and since $G$ has $m$ hydrogen atoms, it follows that each
+hydrogen atom vertex has $1$ degree. Thus there are a total of $m$ degrees for
+$m$ hydrogen atoms.
+
+Adding this together yields $4k + m$ total degrees in $G$, which is what was to
+be shown.
+
+Q.E.D.
 
 e. Equate the results of \(c\) and (d) to prove Cayley's result that a saturated
 hydrocarbon molecule with $k$ carbon atoms and a maximum number of hydrogen
 atoms has $2k + 2$ hydrogen atoms.
 
+**Proof:**
+
+Suppose $G$ is a saturated hydrocarbon molecule with $k$ carbon atoms and a
+maximum number of hydrogen atoms, where $m$ is the number of hydrogen atoms.
+
+It must be shown that $G$ has $2k + 2$ hydrogen atoms.
+
+By part \(c\), it is known that if $G$ has $k$ carbon atoms, $m$ hydrogen atoms,
+and $G$ is saturated, then there is a total degree of $2k + 2m - 2$ degrees in
+$G$.
+
+By part (d), it is known that if $G$ has $k$ carbon atoms, $m$ hydrogen atoms,
+and $G$ is saturated, then there is a total degree of $4k + m$ degrees in $G$.
+
+Equating these two values yields:
+
+$$ 2k + 2m - 2 = 4k + m $$
+
+Then, solving for $m$:
+
+$$ 2m - m = 4k - 2k + 2 $$
+
+$$ m = 2k + 2 $$
+
+Thus $m$, which is the number of hydrogen atoms, is equal to $2k + 2$.
+
+This is what was to be shown.
+
+Q.E.D.
+
 5. Extend the argument given in the proof of Lemma 10.4.1 to show that a tree
    with more than one vertex has at least two vertices of degree 1.
+
+_Hint:_ Revise the algorithm given in the proof of Lemma 10.4.1 to keep track of
+which vertex and edge were chosen in step 1 (by, say, labeling them $v_0$ and
+$e_0$). Then after one vertex of degree 1 is found, return to $v_0$ and search
+for another vertex of degree 1 by moving along a path outward from $v_0$
+starting with another edge incident on $v_0$. such an edge exists because $v_0$
+has degree at least $2$.
+
+The hint is essentially the answer here.
 
 6. If graphs are allowed to have an infinite number of vertices and edges, then
    Lemma 10.4.1 is false. Give a counterexample that shows this. In other words,
    give an example of an "infinite tree" (a connected, circuit-free graph with
    an infinite number of vertices and edges) that has no vertex of degree 1.
 
+Consider an infinite chain that grows in both directions, then such a chain is a
+tree since it is connected and circuit-free. Notice that each vertex has a
+degree of $2$, and there is no vertex of degree $1$ since the chain never ends.
+
 7. Find all leaves (or terminal vertices) and all internal (or branch) vertices
    for the following tree.
 
 a. (See page 754 for image of tree.)
 
+Leaves: $v_1, v_5, v_7$
+
+Branches: $v_2, v_3, v_4, v_6$
+
 b. (See page 754 for image of tree.)
+
+Leaves: $v_1, v_2, v_5, v_6, v_8$
+
+Branches: $v_3, v_4, v_7$
 
 In each of 8-21, either draw a graph with the given specifications or explain
 why no such graph exists.
 
 8. Tree, nine vertices, nine edges
 
+No such graph exists, by definition of tree, a tree with $9$ vertices would have
+$8$ edges.
+
 9. Graph, connected, nine vertices, nine edges
+
+(Done by hand.)
 
 10. Graph, circuit-free, nine vertices, six edges
 
+(Done by hand.)
+
 11. Tree, six vertices, total degree 14
+
+No such graph exists, by definition of tree, if tree has 6 vertices, then must
+have 5 edges. By definition of graph, total degree of graph is 2 times edges, so
+must proposed tree would have to have to have total degree of 10 for tree of six
+vertices to exist.
 
 12. Tree, five vertices, total degree 8
 
+(Done by hand.)
+
 13. Graph, connected, six vertices, five edges, has a circuit
+
+No such graph exists, since this connected graph has six vertices and five
+edges, such a graph is a tree and thus cannot have a circuit.
 
 14. Graph, two vertices, one edge, not a tree
 
+(Done by hand.)
+
 15. Graph, circuit-free, seven vertices, four edges
+
+(Done by hand.)
 
 16. Tree, twelve vertices, fifteen edges
 
+Nope, must have 11 edges.
+
 17. Graph, six vertices, five edges, not a tree
+
+Not connected, so is possible, done by hand.
 
 18. Tree, five vertices, total degree 10
 
+Nope, degree must equal $2(5 - 1) = 8$.
+
 19. Graph, connected, ten vertices, nine edges, has a circuit
+
+Nope, connected, ten vertices, nine edges, is a tree, cannot have circuit.
 
 20. Simple graph, connected, six vertices, six edges
 
+(Done by hand.)
+
 21. Tree, ten vertices, total degree 24
+
+Nope, total degree must be $2(10 - 1) = 18$
 
 22. A connected graph has twelve vertices and eleven edges. Does it have a
     vertex of degree 1? Why?
 
+Yes, since the graph is connected, has $12$ vertices and has $12 - 1 = 11$
+edges, this graph is a tree, and by 10.4.1, must have at least one vertex of
+degree 1.
+
 23. A connected graph has nine vertices and twelve edges. Does it have a
     circuit? Why?
 
+Suppose the graph does not have a circuit, since the graph is connected and has
+no circuit, it is a tree, but then since the graph has nine vertices and twelve
+edges, and thus the graph is not a tree. This is a contradiction, therefore the
+graph does have a circuit.
+
 24. Suppose that $v$ is a vertex of degree 1 in a connected graph $G$ and that
     $e$ is the edge incident on $v$. Let $G'$ be the subgraph of $G$ obtained by
-    removing $v$ from $e$ from $G$. Must $G'$ be connected? Why?
+    removing $v$ and $e$ from $G$. Must $G'$ be connected? Why?
+
+**Proof:**
+
+Suppose that $G$ is any connected graph where $v$ is a vertex of degree 1, with
+$e$ being an edge incident on $v$.
+
+Let $G'$ be the subgraph of $G$ obtained by removing $v$ and $e$ from $G$.
+
+It must be shown that $G'$ is connected.
+
+Since $G$ is connected, there exists a walk between every pair of vertices, thus
+let $V(G) = \{v, v_1, \dots, v_n\}$ where $n$ is the number of vertices in $G$.
+
+To show that $G'$ is connected, it must be shown that there is a walk between
+every pair of vertices in $G'$, such that $V(G') = \{v_1, \dots, v_n\}$.
+
+Consider any two vertices $v_i$ and $v_j$ in $G'$ where $1 \leq i, j \leq n$.
+There is a walk from $v_i$ to $v_j$ in $G$. If this walk contains the edge $e$,
+then it must visit $v$, then traverse $e$ again and come back to $v_1$, because
+$v$ is only adjacent to $v_1$ and no other vertex (since $v$ has a degree of 1).
+
+Once $v$ and $e$ are removed to obtain $G'$, then $v$ and the two occurrences of
+$e$ are removed from this walk, and a walk in $G'$ is obtained.
+
+This is what was to be shown.
+
+Q.E.D.
 
 25. A graph has eight vertices and six edges. Is it connected? Why?
+
+**Disproof (by contradiction):**
+
+Suppose there is such a graph that is connected and has eight vertices and six
+edges, then either the graph is a tree or edges could be eliminated from its
+circuits to obtain a tree. In either case, there would be a tree with eight
+vertices and six edges, but by definition of a tree, such a tree with eight
+vertices would have seven edges, not six or fewer.
+
+This is a contradiction, therefore the supposition is false and there exists no
+such connected graph with eight vertices and six edges.
+
+Q.E.D.
 
 26. If a graph has $n$ vertices and $n - 2$ or fewer edges, can it be connected?
     Why?
 
+_Hint:_ See the answer to exercise 25.
+
+No, by exercise 25, a connected graph either must be a tree or can have edges
+removed such that no circuits remain and thus a tree is obtained, but then such
+a tree of $n$ vertices must have $n - 1$ edges, not $n - 2$ or fewer.
+
 27. A circuit-free graph has ten vertices and nine edges. Is it connected? Why?
+
+Yes. Suppose $G$ is a circuit-free graph with ten vertices and nine edges. Let
+$G_1, G_2, \dots, G_k$ be the connected components of $G$. _[To show that $G$ is
+connected, we will show that $k = 1$.]_ Each $G_i$ is a tree since $G_i$ is
+connected and circuit-free. For each $i = 1, 2, \dots, k$, let $G_i$ have $n_i$
+vertices. Note that since $G$ has ten vertices in all,
+
+$$ n_1 + n_2 + \cdots + n_k = 10 $$
+
+By Theorem 10.4.2,
+
+$$ G_1 \text{ has } n_1 - 1 \text{edges,} $$
+
+$$ G_2 \text{ has } n_2 - 1 \text{edges,} $$
+
+$$ \vdots $$
+
+$$ G_k \text{ has } n_k - 1 \text{edges,} $$
+
+So the number of edges of $G$ equals
+
+$$ (n_1 - 1) + (n_2 - 1) + \cdots + (n_k - 1) $$
+
+$$ = (n_1 + n_2 + \cdots n_k) - \underbrace{(1 + 1 + \cdots + 1)}_{k \text{1's}} $$
+
+$$ = 10 - k $$
+
+But we are given that $G$ has nine edges. Hence $10 - k = 9$, and so $k = 1$.
+Thus $G$ has just one connected component, $G_1$, and so $G$ is connected.
 
 28. Is a circuit-free graph with $n$ vertices and at least $n - 1$ edges
     connected? Why?
+
+_Hint:_ See the answer to exercise 27 and the proof of Corollary 10.4.5.
+
+Yes, simply repeat the proof of exercise 27 with $n$ instead of 10 and $n - 1$
+instead of 9.
 
 29. Prove that every nontrivial tree has at least two vertices of degree 1 by
     filling in the details and completing the following argument: Let $T$ be a
@@ -2602,11 +2830,19 @@ why no such graph exists.
     number of edges. (Why is it possible to find such a $P$?) What can you say
     about the initial and final vertices of $P$? Why?
 
+Omitted.
+
 30. Find all nonisomorphic trees with five vertices.
+
+Omitted.
 
 31.
 
 a. Prove that the following is an invariant for graph isomorphism: A vertex of
 degree $i$ is adjacent to a vertex of degree $j$.
 
+Omitted.
+
 b. Find all nonisomorphic trees with six vertices.
+
+Omitted.
