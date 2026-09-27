@@ -3092,3 +3092,129 @@ b. Australia, Antarctica, Africa, North America, Asia, South America, Europe
 25. All good things which exist are the fruits of originality.
 
 (Done by hand.)
+
+---
+
+Page 780
+
+**Exercise Set 10.6**
+
+Find all possible spanning trees for each of the graphs in 1 and 2.
+
+1. (See page 780 for image.)
+
+2. (See page 780 for image.)
+
+Find a spanning tree for each of the graphs in 3 and 4.
+
+3. (See page 780 for image.)
+
+4. (See page 780 for image.)
+
+Use Kruskal's algorithm to find a minimum spanning tree for each of the graphs
+in 5 and 6. Indicate the order in which edges are added to form each tree.
+
+5. (See page 780 for image.)
+
+6. (See page 780 for image.)
+
+Use Prim's algorithm starting with vertex $a$ or $v_0$ to find a minimum
+spanning tree for each of the graphs in 7 and 8. Indicate the order in which
+edges are added to form each tree.
+
+7. The graph of exercise 5.
+
+8. The graph of exercise 6.
+
+For each of the graphs in 9 and 10, find all minimum spanning trees that can be
+obtained using (a) Kruskal's algorithm and (b) Prim's algorithm starting with
+vertex $a$ or $t$. Indicate the order in which edges are added to form each
+tree.
+
+9. (See page 780 for image.)
+
+10. (See page 780 for image.)
+
+11. A pipeline is to be built that will link six cities. The cost (in hundreds
+    of millions of dollars) of constructing each potential link depends on
+    distance and terrain and is shown in the weighted graph below. Find a system
+    of pipelines to connect all the cities and yet minimize the total cost.
+
+(See page 781 for image.)
+
+12. Use Dijkstra's algorithm for the airline route system of Figure 10.6.3 to
+    find the shortest distance from Nashville to Minneapolis. Make a table
+    similar to Tabled 10.6.1 to show the action of the algorithm.
+
+Use Dijkstra's algorithm to find the shortest path from $a$ to $z$ for each of
+the graphs in 13-16. In each case make tables similar to Table 10.6.1 to show
+the action of the algorithm.
+
+13. (See page 781 for image.)
+
+14. (See page 781 for image.)
+
+15. The graph of exercise 9 with $a = a$ and $z = f$
+
+16. The graph of exercise 10 with $a = u$ and $z = w$
+
+17. Prove part (2) of Proposition 10.6.1: Any two spanning trees for a graph
+    have the same number of edges.
+
+18. Given any two distinct vertices of a tree, there exists a unique path from
+    one to the other.
+
+a. Give an informal justification for the above statement.
+
+b. Write a formal proof of the above statement.
+
+19. Prove that if $G$ is a graph with a spanning tree $T$ and $e$ is an edge of
+    $G$ that is not in $T$, then the graph obtained by adding $e$ to $T$
+    contains one and only one set of edges that form a circuit.
+
+20. Suppose $G$ is a connected graph and $T$ is a circuit-free subgraph of $G$.
+    Suppose also that if any edge $e$ of $G$ not in $T$ is added to $T$, the
+    resulting graph contains a circuit. Prove that $T$ is a spanning tree for
+    $G$.
+
+21.
+
+a. Suppose $T_1$ and $T_2$ are two different spanning trees for a graph $G$.
+Must $T_1$ and $T_2$ have an edge in common? Prove or give a counterexample.
+
+b. Suppose that the graph $G$ in part (a) is simple. Must $T_1$ and $T_2$ have
+an edge in common? Prove or give a counterexample.
+
+22. Prove that an edge $e$ is contained in every spanning tree for a connected
+    graph $G$ if, and only if, removal of $e$ disconnects $G$.
+
+23. Consider the spanning trees $T_1$ and $T_2$ in the proof of Theorem 10.6.3.
+    Prove that $w(T_2) \leq w(TS_1)$.
+
+24. Suppose that $T$ is a minimum spanning tree for a connected, weighted graph
+    $G$ and that $G$ contains an edge $e$ (not a loop) that is not in $T$. Let
+    $v$ and $w$ be the endpoints of $e$. By exercise 18 there is a unique path
+    in $T$ from $v$ to $w$. Let $e'$ be any edge of this path. Prove that
+    $w(e') \leq w(e)$.
+
+25. Prove that if $G$ is a connected, weighted graph and $e$ is an edge of $G$
+    (not a loop) that has smaller weight than any other edge of $G$, then $e$ is
+    in every minimum spanning tree for $G$.
+
+26. If $G$ is a connected, weighted graph and no two edges of $G$ have the same
+    weight, does there exist a unique minimum spanning tree for $G$? Use the
+    result of exercise 19 to help justify your answer.
+
+27. Prove that if $G$ is a connected, weighted graph and $e$ is an edge of $G$
+    that (1) has greater weight than any other edge of $G$ and (2) is in a
+    circuit of $G$, then there is no minimum spanning tree $T$ for $G$ such that
+    $e$ is in $T$.
+
+28. Suppose a disconnected graph is input to Kruskal's algorithm. What will be
+    the output?
+
+29. Suppose a disconnected graph is input to Prim's algorithm. What will be the
+    output?
+
+30. Modify Algorithm 10.6.3 so that the output consists of the sequences of
+    edges in the shortest path from $a$ to $z$.

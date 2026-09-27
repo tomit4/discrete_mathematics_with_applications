@@ -1137,3 +1137,410 @@ to insert into the root.
 $\textbf{while} \text{ (there are still keys to be added)}\\ \ \ \text{Choose a key, } \textit{newkey} \text{, from } K \text{ to add. Let the root be called } v \text{, let } \textit{key(v) } \text{be} \\ \ \ \text{the key at the root, and let } \textit{success } = 0\text{.}\\ \ \ \ \ \textbf{while (} \textit{success } = 0\text{)}\\ \ \ \ \ \ \ \ \ \textbf{if (} \textit{newkey } < \textit{ key(v)}\text{)}\\ \ \ \ \ \ \ \ \ \ \ \textbf{then if } \text{(} v \text{ has a left child), call the left child } v_L \text{ and let } v := v_L\\ \ \ \ \ \ \ \ \ \ \ \textbf{else do } \text{1. add a vertex } v_L \text{ to } T \text{ as the left child for } v\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{2. add an edge to } T \text{ to join } v \text{ to } v_L\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{3. insert } \textit{newkey } \text{ as the key for } v_L\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{4. let } \textit{success } := 1 \textbf{ end do}\\ \ \ \ \ \ \ \ \ \textbf{if (} \textit{newkey} > \textit{key(v)}\\ \ \ \ \ \ \ \ \ \ \ \textbf{then if } v \text{ has a right child}\\ \ \ \ \ \ \ \ \ \ \ \ \ \textbf{then } \text{call the right child } v_R \text{, and let } v := v_R\\ \ \ \ \ \ \ \ \ \ \ \ \ \textbf{else do } \text{1. add a vertex } v_R \text{ to } T \text{ as the right child for } v\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{2. add an edge to } T \text{ to join } v \text{ to } v_R\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{3. insert } \textit{newkey } \text{ as the key for } v_R\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{4. let } \textit{success } := 1 \textbf{ end do}\\ \ \ \ \ \textbf{end while}\\ \ \textbf{end while}$
 
 **Output:** A binary search tree $T$ for the set $K$ of keys
+
+---
+
+Page 766
+
+**Definition**
+
+A **spanning tree** for a graph $G$ is a subgraph of $G$ that contains every
+vertex of $G$ and is a tree.
+
+---
+
+Page 766
+
+**Proposition 10.6.1**
+
+1. Every connected graph has a spanning tree.
+
+2. Any two spanning trees for a graph have the same number of edges.
+
+**Proof of part (1) of Proposition 10.6.1:**
+
+Suppose $G$ is a connected graph. If $G$ is circuit-free, then $G$ is its own
+spanning tree and we are done. If not, then $G$ has at least one circuit $C_1$.
+By Lemma 10.4.3, the subgraph of $G$ obtained by removing an edge from $C_1$ is
+connected. If this subgraph is circuit-free, then it is a spanning tree and we
+are done. If not, then it has at least one circuit $C_2$, and, as above, an edge
+can be removed from $C_2$ to obtain a connected subgraph. Continuing in this
+way, we can remove successive edges from circuits, until eventually we obtain a
+connected, circuit-free subgraph $T$ of $G$. _[This must happen at some point
+because the number of edges of $G$ is finite, and at no stage does removal of an
+edge disconnect the subgraph.]_ Also, $T$ contains every edge of $G$ because no
+vertices of $G$ were removed in constructing it. Thus $T$ is a spanning tree for
+$G$.
+
+---
+
+Page 768
+
+**Definition and Notation**
+
+A **weighted graph** is a graph for which each edge has an associated positive
+real number **weight**. The sum of the weights of all the edges is the **total
+weight** of the graph. A **minimum spanning tree** for a connected, weighted
+graph is a spanning tree that has the least possible total weight compared to
+all other spanning trees for the graph.
+
+If $g$ is a weighted graph and $e$ is an edge of $G$, then $w(e)$ denotes the
+weight of $e$ and $w(G)$ denotes the total weight of $G$.
+
+---
+
+Page 768
+
+**Algorithm 10.6.1 Kruskal**
+
+**Input:** $G$ _[a connected, weighted graph with $n$ vertices, where $n$ is a
+positive integer]_
+
+**Algorithm Body:**
+
+_[Build a subgraph $T$ of $G$ to consist of all the vertices of $G$ with edges
+added in order of increasing weight. At each stage, let $m$ be the number of
+edges of $T$.]_
+
+1. Initialize $T$ to have all the vertices of $G$ and no edges.
+
+2. Let $E$ be the set of all edges of $G$, and let $m := 0$.
+
+3. $\textbf{while } (m < n - 1)$
+
+3a. Find an edge $e$ in $E$ of least weight.
+
+3b. Delete $e$ from $E$.
+
+3c. $\textbf{if }$ addition of $e$ to the edge set of $T$ does not produce a
+circuit $\textbf{then }$ add $e$ to the edge set of $T$ and set $m := m + 1$
+
+$\textbf{end while}$
+
+**Output:** $T$ _[$T$ is a minimum spanning tree for $G$]_
+
+---
+
+Page 770
+
+**Theorem 10.6.2 Correctness of Kruskal's Algorithm**
+
+When a connected, weighted graph is input to Kruska's algorithm the output is a
+minimum spanning tree.
+
+**Proof:**
+
+Suppose that $G$ is a connected, weighted graph with $n$ vertices and that $T$
+is a subgraph of $G$ produced when $G$ is input to Kruskal's algorithm. Clearly
+$T$ is circuit-free _[since no edge that completes a circuit is ever added to
+$T$]_. Also, $T$ is connected. For as long as $T$ has more than one connected
+component, the set of edges of $G$ that can be added to $T$ without creating a
+circuit is nonempty. _[The reason is that since $G$ is connected, given any
+vertex $v_1$ in one connected component $C_1$ of $T$ and any vertex $v_2$ in
+another connected component $C_2$, there is a path in $G$ from $v_1$ to $v_2$.
+Since $C_1$ and $C_2$ are distinct, there is an edge $e$ of this path that is
+not in $T$. Adding $e$ to $T$ does not create a circuit in $T$, because deletion
+of an edge from a circuit does not disconnect a graph and deletion of $e$
+would.]_ The preceding arguments show that $T$ is circuit-free and connected.
+Since by construction $T$ contains every vertex of $G$, $T$ is a spanning tree
+for $G$.
+
+Next we show that $T$ has minimum weight. Let $T_1$ be any minimum spanning tree
+for $G$ such that the number of edges $T_1$ and $T$ have in common is a maximum.
+Suppose that $T \neq T_1$. Then there is an edge $e$ in $T$ that is not an edge
+of $T_1$. _[Since trees $T$ and $T_1$ both have the same vertex set, if they
+differ at all, they must have different, but same-size, edge sets.]_ Now adding
+$e$ to $T_1$ produces a graph with a unique circuit (see exercise 19 at the end
+of this section). Let $e'$ be an edge of this circuit such that $e'$ is not in
+$T$. _[Such an edge must exist because $T$ is a tree and hence circuit-free.]_
+Let $T_2$ be the graph obtained from $T_1$ by removing $e'$ and adding $e$. This
+situation is illustrated below.
+
+(See Page 771 for image of graph.)
+
+Note that $T_2$ has $n - 1$ edges and $n$ vertices and that $T_2$ is connected
+_[since by Lemma 10.4.3 the subgraph obtained by removing an edge from a circuit
+in a connected graph is connected]_. Consequently, $T_2$ is a spanning tree for
+$G$. In addition,
+
+$$ w(T_2) = w(T_1) - w(e') + w(e) $$
+
+Now $w(e) \leq w(e')$ because at the stage in Kruskal's algorithm when $e$ was
+added to $T$, $e'$ was available to be added _[since it was not already in $T$,
+and at that stage its addition could not produce a circuit since $e$ was not in
+$T$]_, and $e'$ would have been added had its weight been less than that of $e$.
+Thus
+
+$$ w(T_2) = w(T_1) - \underbrace{[w(e') - w(e)]}_{\geq 0} $$
+
+$$ \quad \leq w(T_1) $$
+
+But $T_1$ is a minimum spanning tree. So since $T_2$ is a spanning tree with
+weight less than or equal to the weight of $T_1$, $T_2$ is also a minimum
+spanning tree for $G$.
+
+Finally, note that by construction, $T_2$ has one more edge in common with $T$
+than $T_1$ does, which contradicts the choice of $T_1$ as a minimum spanning
+tree for $G$ with a maximum number of edges in common with $T$. Thus the
+supposition that $T \neq T_1$ is false, and hence $T$ itself is a minimum
+spanning tree for $G$.
+
+---
+
+Page 771
+
+**Algorithm 10.6.2**
+
+**Input:** $G$ _[a connected, weighted graph with $n$ vertices where $n$ is a
+positive integer]_
+
+**Algorithm Body:**
+
+_[Build a subgraph $T$ of $G$ by starting with any vertex $v$ of $G$ and
+attaching edges (with endpoints) one by one to an as-yet-unconnected vertex of
+$G$, each time choosing an edge of least weight that is adjacent to a vertex of
+$T$.]_
+
+1. Pick a vertex $v$ of $G$ and let $T$ be the graph with one vertex, $v$, and
+   no edges.
+
+2. Let $V$ be the set of all vertices of $G$ except $v$.
+
+3. $\textbf{for } i := 1 \textbf{ to } n - 1$
+
+3a. Find an edge $e$ of $G$ such that (1) $e$ connects $T$ to one of the
+vertices in $V$ and, (2) $e$ has the least weight of all edges connecting $T$ to
+a vertex in $V$. Let $w$ be the endpoint of $e$ that is in $V$.
+
+3b. Add $e$ and $w$ to the edge and vertex sets of $T$, and delete $w$ from $V$.
+
+$\textbf{next } i$
+
+**Output:** $T$ _[$T$ is a minimum spanning tree for $G$.]_
+
+---
+
+Page 773
+
+**Theorem 10.6.3 Correctness of Prim's Algorithm**
+
+When a connected, weighted graph $G$ is input to Prim's algorithm, the output is
+a minimum spanning tree for $G$.
+
+**Proof:**
+
+Let $G$ be a connected, weighted graph, and suppose $G$ is input to Prim's
+algorithm. At each stage of execution of the algorithm, an edge must be found
+that connects a vertex in a subgraph to a vertex outside the subgraph. As long
+as there are vertices outside the subgraph, the connectedness of $G$ ensures
+that such an edge can always be found. _[For if one vertex in the subgraph and
+one vertex outside it are chosen, then by the connectednedss of $G$ there is a
+walk in $G$ linking the two. As one travels along this walk, at some point one
+moves along ane dge from a vertex inside the subgraph to a vertex outside the
+subgraph.]_
+
+Now it is clear that the output $T$ of Prim's algorithm is a tree because the
+edge and vertex added to $T$ at each stage are connected to other edges and
+vertices of $T$ and because at no stage is a circuit created since each edge
+added connects vertices in two disconnected sets. _[Consequently, removal of a
+newly added edge produces a disconnected graph, whereas by Lemma 10.4.3, removal
+of an edge from a circuit produces a connected graph.]_ Also, $T$ includes every
+vertex of $G$ because $T$, being a tree with $n - 1$ edges, has $n$ vertices
+_[and that is all $G$ has]_. Thus $T$ is a spanning tree for $G$.
+
+Next we show that $T$ has minimum weight. Suppose there is a minimum spanning
+tree for $G$, $T_1$, such that the number of edges $T_1$ and $T$ have in common
+is a maximum, but $T \neq T_1$. Then there is an edge $e$ in $T$ that is not an
+edge of $T_1$. _[Since trees $T$ and $T_1$ both have the same vertex set if they
+differ at all, they must have different, same-sized edge sets.]_ Of all such
+edges, let $e$ be the last that was added when $T$ was constructed using Prim's
+algorithm. Let $S$ be the set of vertices of $T$ just before the addition of
+$e$. Then one endpoint, say $v$ of $e$, is in $S$ and the other, say $w$, is
+not. Since $T_1$ is a spanning tree, there is a path in $T_1$ joining $v$ to
+$w$. And since $v \in S$ and $w \notin S$,, as one travels along this path, one
+must encounter an edge $e'$ that joins a vertex in $S$ to one that is not in $S$
+and that therefore is not in $T$ because $e$ was the last edge added to $T$. Now
+at the stage when $e$ was added to $T$, $e'$ could have been added and it
+_would_ have been added instead of $e$ had its weight been less than that of
+$e$. Since $e'$ was not added at that stage, we conclude that
+
+$$ w(e') \geq w(e) $$
+
+Let $T_2$ be the graph obtained from $T_1$ by removing $e'$ and adding $e$.
+_[Thus $T_2$ has one more edge in common with $T$ than $T_2$ does.]_ Note that
+$T_2$ is a tree. The reason is that since $e'$ is a part of a path in $T_1$ from
+$v$ to $w$, and $e$ connects $v$ and $w$, adding $e$ to $T_1$ creates a circuit.
+When $e'$ is removed from this circuit, the resulting subgraph remains connected
+and has the same number of edges as $T$. In fact, $T_2$ is a spanning tree for
+$G$ since no vertices were removed in forming $T_2$ from $T_1$. The argument
+showing that $w(T_2) \leq w(T_1)$ is left as an exercise. _[It is virtually
+identical to part of the proof of Theorem 10.6.2.]_ It follows that $T_2$ is a
+minimum spanning tree for $G$.
+
+By construction, $T_2$ has one more edge in common with $T$ than $T_1$ does,
+which contradicts the choice of $T_1$ as a minimum spanning tree for $G$, not
+equal to $T$, with a maximum number of edges in common with $T$. It follows that
+$T = T_1$, and hence $T$ itself is a minimum spanning tree for $G$.
+
+---
+
+Page 775
+
+**Algorithm 10.6.3 Dijkstra**
+
+**Input:** $G$ _[a connected simple graph with a positive weight for every
+edge]_, $\infty$ _[a number greater than the sum of the weights of all the edges
+in the graph]_, $w(u, v)$ _[the weight of edge $\{u, v\}$]_, $a$ _[the starting
+vertex]_, $z$ _[the ending verte]_
+
+**Algorithm Body:**
+
+1. Initialize $T$ to be the graph with vertex $a$ and no edges. Let $V(T)$ be
+   the set of vertices of $T$, and let $E(T)$ be the set of edges of $T$.
+
+2. Let $L(a) = 0$, and for all vertices in $G$ except $a$, let $L(u) = \infty$.
+   _[The number $L(x)$ is called the label of $x$.]_
+
+3. Initialize $v$ to equal $a$ and $F$ to be $\{a\}$. _[The symbol $v$ is used
+   to denote the vertex most recently added to $T$.]_
+
+4. $\textbf{while } (z \notin V(T))$
+
+4a.
+$F : = (F - \{v\}) \cup \{\text{vertices that are adjacent to } v \text{ and are not in } V(T)\}$
+_[The set $F$ is called the fringe. Each time a vertex is added to $T$, it is
+removed from the fringe and the vertices adjacent to it are added to the fringe
+if they are not already in the fringe or the tree $T$.]_
+
+4b. For each vertex $u$ that is adjacent to $v$ and is not in $V(T)$,
+
+$\textbf{if } L(v) + w(v, u) < L(u) \textbf{ then}$
+
+$$ L(u) := L(v) + w(v, u) $$
+
+$$ D(u) := v $$
+
+_[Note that adding $v$ to $T$ does not affect the labels of any vertices in the
+fringe $F$ except those adjacent to $v$. Also, when $L(u)$ is changed to a
+smaller value, the notation $D(u)$ is introduced to keep track of which vertex
+in $T$ gave rise to the smaller value.]_
+
+4c. Find a vertex $x$ in $F$ with the smallest label
+
+Add vertex $x$ to $V(T)$, and add edge $\{D(x), x\}$ to $E(T)$
+
+$v := x$ _[This statement sets up the notation for the next iteration of the
+loop.]_
+
+$\textbf{end while}$
+
+**Output:** $L(z)$ _[$L(z)$, a nonnegative integer, is the length of the
+shortest path from $a$ to $z$.]_
+
+---
+
+Page 778
+
+**Theorem 10.6.4 Correctness of Dijkstra's Algorithm**
+
+When a connected, simple graph with a positive weight for every edge is input to
+Dijkstra's algorithm, with starting vertex $a$ and ending vertex $z$, the output
+is the length of a shortest path from $a$ to $z$.
+
+**Proof:**
+
+Let $G$ be a connected, weighted graph with no loops or parallel edges and with
+a positive weight for every edge. Let $T$ be the graph built up by Dijkstra's
+algorithm, and for each vertex $u$ in $G$, let $L(u)$ be the label given by the
+algorithm to vertex $u$. For each integer $n \geq 0$, let the property $P(n)$ be
+the sentence
+
+After the $n$th iteration of the while loop in Dijkstra's algorithm, (1) $T$ is
+a tree, and (2) for every vertex $v$ in $T$, $L(v)$ is the length of a shortest
+path in $G$ from $a$ to $v$.
+
+We will show by mathematical induction that $P(n)$ is true for each integer $n$
+from $0$ through the termination of the algorithm.
+
+_Show that $P(0)$ is true:_ When $n = 0$, the graph $T$ is a tree because it is
+defined to consist only of the vertex $a$ and no edges. In addition, $L(a)$ is
+the length of the shortest path from $a$ to $a$ because the initial value of
+$L(a)$ is $0$.
+
+_Show that for every integer $k \geq 0$, if $P(k)$ is true then $P(k + 1)$ is
+also true:_
+
+Let $k$ be any integer with $k \geq 0$ and suppose that
+
+After the $k$th iteration of the while loop in Dijkstra's algorithm, (1) $T$ is
+a tree, and (2) for every vertex $v$ in $T$, $L(v)$ is the length of the
+shortest path in $G$ from $a$ to $v$.
+
+This is the inductive hypothesis.
+
+We must show that
+
+After the $(k + 1)$st iteration of the **while** loop in Dijkstra's algorithm,
+(1) $T$ is a tree, and (2) for every vertex $v$ in $T$, $L(v)$ is the length of
+the shortest path in $G$ from $a$ to $v$.
+
+Suppose that after the $(k + 1)$st iteration of the **while** loop in Dijkstra's
+algorithm, the vertex $v$ and edge $\{x, v\}$ have been added to $T$, where $x$
+is in $V(T)$. Clearly the new value of $T$ is a tree because adding a new vertex
+to a tree along with the edge leading to it neither creates a circuit nor
+disconnects the tree. By inductive hypothesis, for each vertex $y$ that is in
+the tree before the addition of $v$, $L(y)$ is the length of a shortest path
+from $a$ to $y$. So it remains only to show that $L(v)$ is the length of a
+shortest path from $a$ to $v$.
+
+Now, according to the algorithm, the final value of $L(v) = L(x) + w(x, v)$.
+Consider _any_ shortest path from $a$ to $v$, and let $\{s, t\}$ be the first
+edge in the path to leave $T$, where $s \in V(T)$ and $t \notin V(T)$. This
+situation is illustrated below.
+
+(See page 779 for image.)
+
+Let $\text{LSP}(a, v)$ be the length of a shortest path from $a$ to $v$, and let
+$\text{LSP}(a, s)$ be the length of the shortest path from $a$ to $s$. Observe
+that
+
+$$ \text{LSP}(a, v) \geq \text{LSP}(a, s) + w(s, t) $$
+
+because the path from $t$ to $v$ has length $\geq 0$
+
+$$ \quad \geq L(s) + w(s, t) $$
+
+by inductive hypothesis because $s$ is a vertex in $T$
+
+$$ \quad \geq L(x) + w(x, v) $$
+
+$t$ is in the fringe of the tree, and so if $L(s) + w(s, t)$ were less than
+$L(x) + w(x, v)$ then $t$ would have been added to $T$ instead of $r$.
+
+On the other hand,
+
+$$ L(x) + w(x, v) \geq \text{LSP}(a, v) $$
+
+because $L(x) + w(x, v)$ is the length of a path from $a$ to $v$ and so it is
+greater than or equal to the length of the shortest path from $a$ to $v$.
+
+Because both $\text{LSP}(a, v) \geq L(x) + w(x, v)$ and
+$L(x) + w(x, v) \geq \text{LSP}(a, v)$, we have that
+
+$$ \text{LSP}(a, v) = L(x) + w(x, v) $$
+
+And since it is also the case that
+
+$$ L(v) = L(x) + w(x, v) $$
+
+we conclude that
+
+$$ L(v) = \text{LSP}(a, v) $$
+
+Therefore, $L(v)$ is the length of a shortest path from $a$ to $v$, which
+completes the proof by mathematical induction.
+
+The algorithm terminates as soon as $z$ is in $T$, and, since we have proved
+that the label of every vertex in the tree gives the length of the shortest path
+to it from $a$, then, in particular, $L(z)$ is the length of a shortest path
+from $a$ to $z$.

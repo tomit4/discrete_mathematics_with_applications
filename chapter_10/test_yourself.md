@@ -207,3 +207,28 @@ $2k + 1$; $k + 1$
    are related by the inequality ____.
 
 $t \leq 2^h$, or, equivalently, $\log_2t \leq h$
+
+---
+
+Page 780
+
+**Test Yourself**
+
+1. A spanning tree for a graph $G$ is ____.
+
+2. A weighted graph is a graph for which ____, and the total weight of the graph
+   is ____.
+
+3. A minimum spanning tree for a connected, weighted graph is ____.
+
+4. In Kruskal's algorithm, the edges of a connected, weighted graph are examined
+   one by one in order of ____ starting with ____.
+
+5. In Prim's algorithm, a minimum spanning tree is built by expanding outward
+   from an ____ in a sequence of ____.
+
+6. In Dijkstra's algorithm, a vertex is in the fringe if it is ____ vertex in
+   the tree that is being built up.
+
+7. At each stage of Dijkstra's algorithm, the vertex that is added to the tree
+   is a vertex in the fringe whose label is a ____.
