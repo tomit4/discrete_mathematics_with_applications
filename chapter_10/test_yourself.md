@@ -186,12 +186,24 @@ Page 764
 1. A rooted tree is a tree in which ____. The level of a vertex in a rooted tree
    is ____. The height of a rooted tree is ____.
 
+there is one vertex that is distinguished from the others and is called the
+root; the number of edges along the unique path between it and the root; the
+maximum level of any vertex of the tree
+
 2. A binary tree is a rooted tree in which ____.
 
+every parent has at most two children
+
 3. A full binary tree is a rooted tree in which ____.
+
+each parent has exactly two children
 
 4. If $k$ is a positive integer and $T$ is a full binary tree with $k$ internal
    vertices, then $T$ has a total of ____ vertices and has ____ leaves.
 
+$2k + 1$; $k + 1$
+
 5. If $T$ is a binary tree that has $t$ leaves and height $h$, then $t$ and $h$
    are related by the inequality ____.
+
+$t \leq 2^h$, or, equivalently, $\log_2t \leq h$

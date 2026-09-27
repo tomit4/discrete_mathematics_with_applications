@@ -2857,19 +2857,35 @@ Page 764
 
 a. What is the level of $n$?
 
+3
+
 b. What is the level of $a$?
+
+0
 
 c. What is the height of this rooted tree?
 
+5
+
 d. What are the children of $n$?
+
+$u, v$
 
 e. What is the parent of $g$?
 
+$d$
+
 f. What are the siblings of $j$?
+
+$k, l$
 
 g. What are the descendants of $f$?
 
+$m, s, t, x, y$
+
 h. How many leaves (terminal vertices) are on the tree?
+
+12 (don't forget the root)
 
 (See page 764 for image of tree.)
 
@@ -2877,19 +2893,35 @@ h. How many leaves (terminal vertices) are on the tree?
 
 a. What is the level of $v_8$?
 
+3
+
 b. What is the level of $v_0$?
+
+0
 
 c. What is the height of this rooted tree?
 
+5
+
 d. What are the children of $v_{10}$?
+
+$v_{14}, v_{15}, v_{16}$
 
 e. What is the parent of $v_5$?
 
+$v_1$
+
 f. What are the siblings of $v_1$?
+
+$v_2$
 
 g. What are the descendants of $v_{12}$?
 
+$v_{17}, v_{18}, v_{19}$
+
 h. How many leaves (terminal vertices) are on the tree?
+
+10
 
 (See page 764 for image of tree.)
 
@@ -2897,71 +2929,166 @@ h. How many leaves (terminal vertices) are on the tree?
 
 a. $a \cdot - \left(\dfrac{c}{(d + e)}\right)$
 
+(Done by hand.)
+
 b. $\dfrac{a}{(b - c \cdot d)}$
+
+(Done by hand.)
 
 In each of 4-20, either draw a graph with the given specifications or explain
 why no such graph exists.
 
 4. Full binary tree, five internal vertices
 
+(Done by hand.)
+
 5. Full binary tree, five internal vertices, seven leaves
+
+No such tree exists, since a full binary tree with five internal vertices must
+have six leaves, not seven.
 
 6. Full binary tree, seven vertices, of which four are internal vertices
 
+Any full binary tree with four internal vertices must have five leaves for a
+total of nine vertices, not seven, thus such a tree does not exist.
+
 7. Full binary tree, twelve vertices
+
+Any full binary tree must have $2k + 1$ vertices, where $k$ is the number of
+internal vertices, but $2k + 1$ is an odd number and twelve is even, and thus
+such a tree does not exist.
 
 8. Full binary tree, nine vertices
 
+(Done by hand.)
+
 9. Binary tree, height 3, seven leaves
+
+(Done by hand.)
 
 10. Full binary tree, height 3, six leaves
 
+(Done by hand.)
+
 11. Binary tree, height 3, nine leaves
+
+The number of leaves in a binary tree can be expressed by the inequality
+$t \leq 2^k$, where $t$ is the number of leaves and $k$ is the height of the
+tree, since $9 \cancel{\leq} 2^3 = 8$, this tree does not exist.
 
 12. Full binary tree, eight internal vertices, seven leaves
 
+A full binary tree of eight internal vertices has $2(8) + 1 = 17$ total
+vertices, with $17 - 8 = 9$ leaves, and since $9 \neq 7$, this tree cannot
+exist.
+
 13. Binary tree, height 4, eight leaves
+
+(Done by hand.)
 
 14. Full binary tree, seven vertices
 
+(Done by hand.)
+
 15. Full binary tree, nine vertices, five internal vertices
+
+A full binary tree of nine vertices must have $2k + 1 = 9, k = 4$ internal
+vertices, and since $4 \neq 5$, this tree cannot exist.
 
 16. Full binary tree, four internal vertices
 
+(Done by hand.)
+
 17. Binary tree, height 4, eighteen leaves
+
+This tree cannot exist, since it must be true that $18 \leq 2^4$, but
+$18 \cancel{\leq} 16$.
 
 18. Full binary tree, sixteen vertices
 
+In order for this tree to exist, the total of vertices must be expressed as
+$2k + 1$, but $2k + 1 = 16$, $2k = 15$, since $k$ must be an integer, this tree
+cannot exist.
+
 19. Full binary tree, height 3, seven leaves
+
+(Done by hand.)
 
 20. What can you deduce about the height of a binary tree if you know that it
     has the following properties?
 
 a. Twenty-five leaves
 
+Let $t$ represent the amount of leaves and $k$ represent the height of the
+binary tree, then:
+
+$$ t \leq 2^k $$
+
+So:
+
+$$ 25 \leq 2^k $$
+
+Or, equivalently:
+
+$$ \log_2(25) \leq k $$
+
+$$ \approx 4.6449 \leq k $$
+
+Since $k$ must be an integer, we can deduce that $k \geq 5$.
+
 b. Forty leaves
+
+Similar to part (a):
+
+$$ \log_2(40) \leq k $$
+
+$$ \approx 5.3219 \leq k $$
+
+So $k \geq 6$
 
 c. Sixty leaves
 
+Again, similar to parts (a) and (b):
+
+$$ \log_2(60) \leq k $$
+
+$$ \approx 5.9069 \leq k $$
+
+So $k \geq 6$.
+
 In 21-25, use the steps of Algorithm 10.5.1 to build binary search trees. Use
 numerical order in 21 and alphabetical order in 22-25. In parts (a) and (b) of
-21 and 22, the eleemnts in the list are the same, but the trees are different
+21 and 22, the elements in the list are the same, but the trees are different
 because the lists are ordered differently.
 
 21.
 
 a. $16, 24, 21, 3, 18, 9, 7$
 
+(Done by hand.)
+
 b. $16, 7, 3, 21, 18, 24, 9$
+
+(Done by hand.)
 
 22.
 
 a. Asia, Africa, Australia, Antarctica, Europe, North America, South America
 
+(Done by hand.)
+
 b. Australia, Antarctica, Africa, North America, Asia, South America, Europe
+
+(Done by hand.)
 
 23. Carpe diem. Seize the day. Make your lives extraordinary.
 
+(Done by hand.)
+
 24. May the force be with you.
 
+(Done by hand.)
+
 25. All good things which exist are the fruits of originality.
+
+(Done by hand.)
