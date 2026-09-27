@@ -2846,3 +2846,122 @@ Omitted.
 b. Find all nonisomorphic trees with six vertices.
 
 Omitted.
+
+---
+
+Page 764
+
+**Exercise Set 10.5**
+
+1. Consider the tree shown below with root $a$.
+
+a. What is the level of $n$?
+
+b. What is the level of $a$?
+
+c. What is the height of this rooted tree?
+
+d. What are the children of $n$?
+
+e. What is the parent of $g$?
+
+f. What are the siblings of $j$?
+
+g. What are the descendants of $f$?
+
+h. How many leaves (terminal vertices) are on the tree?
+
+(See page 764 for image of tree.)
+
+2. Consider the tree shown below with root $v_0$.
+
+a. What is the level of $v_8$?
+
+b. What is the level of $v_0$?
+
+c. What is the height of this rooted tree?
+
+d. What are the children of $v_{10}$?
+
+e. What is the parent of $v_5$?
+
+f. What are the siblings of $v_1$?
+
+g. What are the descendants of $v_{12}$?
+
+h. How many leaves (terminal vertices) are on the tree?
+
+(See page 764 for image of tree.)
+
+3. Draw binary trees to represent the following expressions:
+
+a. $a \cdot - \left(\dfrac{c}{(d + e)}\right)$
+
+b. $\dfrac{a}{(b - c \cdot d)}$
+
+In each of 4-20, either draw a graph with the given specifications or explain
+why no such graph exists.
+
+4. Full binary tree, five internal vertices
+
+5. Full binary tree, five internal vertices, seven leaves
+
+6. Full binary tree, seven vertices, of which four are internal vertices
+
+7. Full binary tree, twelve vertices
+
+8. Full binary tree, nine vertices
+
+9. Binary tree, height 3, seven leaves
+
+10. Full binary tree, height 3, six leaves
+
+11. Binary tree, height 3, nine leaves
+
+12. Full binary tree, eight internal vertices, seven leaves
+
+13. Binary tree, height 4, eight leaves
+
+14. Full binary tree, seven vertices
+
+15. Full binary tree, nine vertices, five internal vertices
+
+16. Full binary tree, four internal vertices
+
+17. Binary tree, height 4, eighteen leaves
+
+18. Full binary tree, sixteen vertices
+
+19. Full binary tree, height 3, seven leaves
+
+20. What can you deduce about the height of a binary tree if you know that it
+    has the following properties?
+
+a. Twenty-five leaves
+
+b. Forty leaves
+
+c. Sixty leaves
+
+In 21-25, use the steps of Algorithm 10.5.1 to build binary search trees. Use
+numerical order in 21 and alphabetical order in 22-25. In parts (a) and (b) of
+21 and 22, the eleemnts in the list are the same, but the trees are different
+because the lists are ordered differently.
+
+21.
+
+a. $16, 24, 21, 3, 18, 9, 7$
+
+b. $16, 7, 3, 21, 18, 24, 9$
+
+22.
+
+a. Asia, Africa, Australia, Antarctica, Europe, North America, South America
+
+b. Australia, Antarctica, Africa, North America, Asia, South America, Europe
+
+23. Carpe diem. Seize the day. Make your lives extraordinary.
+
+24. May the force be with you.
+
+25. All good things which exist are the fruits of originality.

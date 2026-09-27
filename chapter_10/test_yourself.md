@@ -176,3 +176,22 @@ $n - 1$ edges
    and $n - 1$ edges then ____.
 
 $G$ is a tree
+
+---
+
+Page 764
+
+**Test Yourself**
+
+1. A rooted tree is a tree in which ____. The level of a vertex in a rooted tree
+   is ____. The height of a rooted tree is ____.
+
+2. A binary tree is a rooted tree in which ____.
+
+3. A full binary tree is a rooted tree in which ____.
+
+4. If $k$ is a positive integer and $T$ is a full binary tree with $k$ internal
+   vertices, then $T$ has a total of ____ vertices and has ____ leaves.
+
+5. If $T$ is a binary tree that has $t$ leaves and height $h$, then $t$ and $h$
+   are related by the inequality ____.

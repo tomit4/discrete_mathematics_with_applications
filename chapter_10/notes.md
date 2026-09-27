@@ -915,3 +915,225 @@ $$ < n $$
 Thus the number of edges of $G$ is less than $n$, which contradicts the
 hypothesis that the number of edges of $G$, namely, $m$, is greater than or
 equal to $n$. Hence the supposition is false and $G$ has a circuit.
+
+---
+
+Page 756
+
+**Definition**
+
+A **rooted tree** is a tree in which there is one vertex that is distinguished
+from the others and is called the **root**. The **level** of a vertex is the
+number of edges along the unique path between it and the root. The **height** of
+a rooted tree is the maximum level of any vertex of the tree. Given the root or
+any internal vertex $v$ of a rooted tree, the **children** of $v$ are all those
+vertices that are adjacent to $v$ and are one level farther away from the root
+than $v$. If $w$ is a child of $v$, then $v$ is called the **parent** of $w$,
+and two distinct vertices that are both children of the same parent are called
+**siblings**. Given two distinct vertices $v$ and $w$, if $v$ lies on the unique
+path between $w$ and the root, then $v$ is an **ancestor** of $w$ and $w$ is a
+**descendant** of $v$.
+
+---
+
+Page 757
+
+**Definition**
+
+A **binary tree** is a rooted tree in which every parent has at most two
+children. Each child in a binary tree is a designated either a **left child** or
+a **right child** (but not both), and every parent has at most one left child
+and one right child. A **full binary tree** is a binary tree in which each
+parent has exactly two children.
+
+Given any parent $v$ in a binary tree $T$, if $v$ has a left child, then the
+**left subtree** of $v$ is the binary tree whose root is the left child of $v$,
+whose vertices consist of the left child of $v$ and all its descendants, and
+whose edges consist of all those edges of $T$ that connect the vertices of the
+left subtree. The **right subtree** of $v$ is defined analogously.
+
+---
+
+Page 758
+
+**Theorem 10.5.1**
+
+If $k$ is a positive integer and $T$ is a full binary tree with $k$ internal
+vertices, then (1) $T$ has a total of $2k + 1$ vertices, and (2) $T$ has $k + 1$
+leaves.
+
+**Proof:**
+
+Suppose $k$ is a positive integer and $T$ is a full binary tree with $k$
+internal vertices. (1) Observe that the set of all vertices of $T$ can be
+partitioned into two disjoint subsets: the set of all vertices that have a
+parent and the set of all vertices that do not have a parent. Now there is just
+one vertex that does not have a parent, namely the root. Also, since every
+internal vertex of a full binary tree has exactly two children, the number of
+vertices that have a parent is twice the number of parents, or $2k$, since each
+parent is an internal vertex. Hence
+
+$$ \left[\text{the total number of vertices of } T\right] = \left[\text{the number of vertices that have a parent}\right] + \left[\text{the number of vertices that do not have a parent}\right] $$
+
+(2) Because it is also true that the total number of vertices of $T$ equals the
+number of internal vertices plus the number of leaves,
+
+$$ \left[\text{the total number of vertices of } T\right] = \left[\text{the number of internal vertices}\right] + \left[\text{the number of leaves}\right] $$
+
+$$  \quad = k + \left[\text{the number of leaves}\right] $$
+
+Now equate the two expressions for the total number of vertices of $T$:
+
+$$ 2k + 1 = k + \left[\text{the number of leaves}\right] $$
+
+Solving this equation gives
+
+$$ \left[\text{the number of leaves}\right] = (2k + 1) - k = k + 1 $$
+
+Thus the total number of vertices is $2k + 1$ and the number of leaves is
+$k + 1$ _[as was to be shown]_.
+
+---
+
+Page 759
+
+**Theorem 10.5.2**
+
+For every integer $h \geq 0$, if $T$ is any binary tree with height $h$ and $t$
+leaves, then
+
+$$ t \leq 2^h $$
+
+Equivalently:
+
+$$ \log_2t \leq h $$
+
+**Proof (by strong mathematical induction):**
+
+Let $P(h)$ be the sentence
+
+If $T$ is any binary tree of height $h$, then $T$ has at most $2^h$ leaves.
+
+_Show that $P(0)$ is true:_
+
+We must show that if $T$ is any binary tree of height $0$, then $T$ has at most
+$2^0$ leaves. Suppose $T$ is a tree of height $0$. Then $T$ consists of a single
+vertex, the root. By definition this is also a leaf, and so the number of leaves
+is $t = 1 = 2^0 = 2^h$. Hence $t \leq 2^h$ _[as was to be shown]_.
+
+_Show that for every integer $k \geq 0$, if $P(i)$ is true for each integer $i$
+from $0$ through $k$, then it is true for $k + 1$:_
+
+Let $k$ be any integer with $k \geq 0$, and suppose that
+
+For each integer $i$ from $0$ through $k$, if $T$ is any binary tree of height
+$i$, then $T$ has at most $2^i$ leaves.
+
+This is the inductive hypothesis.
+
+We must show that
+
+If $T$ is any binary tree of height $k + 1$, then $T$ has at most $2^{k + 1}$
+leaves.
+
+Let $T$ be a binary tree of height $k + 1$, root $v$ and $t$ leaves. Because
+$k \geq 0$, we have that $k + 1 \geq 1$ and so $v$ has at least one child.
+
+_Case 1 ($v$ has only one child):_
+
+In this case, we may assume without loss of generality that $v$'s child is a
+left child $v_L$, and that $v_L$ is the root of the subtree $T_L$ of $v$. (This
+situation is illustrated in Figure 10.5.3.) Let $t_L$ be the number of leaves in
+$T_L$. By inductive hypothesis, $t_L \leq 2^k$ because the height of $T_L$ is
+one less than the height of $T$, which is $k + 1$. Also since the root $v$ has
+only one child, $v$ is also a leaf, and hence the total number of leaves in $T$
+is one more than the number of leaves in $T_L$. Finally $2^k \geq 2^0 = 1$
+because $k \geq 0$.
+
+Therefore,
+
+$$ t = t_L + 1 \leq 2^k + 1 \leq 2^k + 2^k = 2 \cdot 2^k = 2^{(k + 1)} $$
+
+(See page 750 for figure 10.5.3)
+
+_Case 2 ($v$ has two children):_
+
+In this case, $v$ has both a left child, $v_L$, and a right child, $v_R$, and
+$v_L$ and $v_R$ are roots of a left subtree $T_L$ and a right subtree $T_R$.
+Note that $T_L$ and $T_R$ are binary trees because $T$ is a binary tree. (This
+situation is illustrated in Figure 10.5.4.)
+
+(See page 750 for figure 10.5.4)
+
+Let $t_L$ and $t_R$ be the numbers of leaves in $T_L$ and $T_R$, respectively,
+and let $h_L$ and $h_R$ be the heights of $T_L$ and $T_R$, respectively. Because
+$T$ has height $k + 1$, then $h_L \leq k$ and $h_R \leq k$, and so, by inductive
+hypothesis,
+
+$$ t_L \leq 2^{h_L} \quad \text{ and } \quad t_R \leq 2^{h_R} $$
+
+Now the leaves of $T$ consist exactly of the leaves of $T_L$ together with the
+leaves of $T_R$. Therefore,
+
+$$ t = t_L + t_R \leq 2^{h_L} + 2^{h_R} $$
+
+by the inductive hypothesis since $h_L \leq k$ and $h_R \leq k$.
+
+Hence,
+
+$$ t \leq 2^k + 2^k = 2 \cdot 2^k = 2^{k + 1} $$
+
+by basic algebra.
+
+Thus the number of leaves is at most $2^{kn + 1}$ _[as was to be shown]_.
+
+Since both the basis step and the inductive step have been proved, we conclude
+that for every integer $h \geq 0$, if $T$ is a binary tree with height $h$ and
+$t$ leaves, then $t \leq 2^h$.
+
+The equivalent inequality $\log_2t \leq h$ follows from the fact that the
+logarithmic function with base $2$ is increasing. In other words, for all
+positive real numbers $x$ and $y$,
+
+$$ \text{if } x < y \text{ then } \log_2x < \log_2y $$
+
+Thus if we apply the logarithmic function with base $2$ to both sides of
+
+$$ t \leq 2^h $$
+
+we obtain
+
+$$ \log_2t \leq \log_2\left(2^h\right) $$
+
+Now by definition of logarithm, $\log_2\left(2^h\right) = h$ _[because
+$\log_2\left(2^h\right)$ is the exponent to which $2$ must be raised to obtain
+$2^h$]_. Hence
+
+$$ \log_2t \leq h $$
+
+_[as was to be shown]_.
+
+---
+
+Page 761
+
+**Corollary 10.5.3**
+
+A full binary tree of height $h$ has $2^h$ leaves.
+
+---
+
+Page 762
+
+**Algorithm 10.5.1 Building a Binary Search Tree**
+
+**Input:** A totally ordered, nonempty set $K$ of keys
+
+**Algorithm Body:**
+
+Initialize $T$ to have one vertex, the root, and no edges. Choose a key from $K$
+to insert into the root.
+
+$\textbf{while} \text{ (there are still keys to be added)}\\ \ \ \text{Choose a key, } \textit{newkey} \text{, from } K \text{ to add. Let the root be called } v \text{, let } \textit{key(v) } \text{be} \\ \ \ \text{the key at the root, and let } \textit{success } = 0\text{.}\\ \ \ \ \ \textbf{while (} \textit{success } = 0\text{)}\\ \ \ \ \ \ \ \ \ \textbf{if (} \textit{newkey } < \textit{ key(v)}\text{)}\\ \ \ \ \ \ \ \ \ \ \ \textbf{then if } \text{(} v \text{ has a left child), call the left child } v_L \text{ and let } v := v_L\\ \ \ \ \ \ \ \ \ \ \ \textbf{else do } \text{1. add a vertex } v_L \text{ to } T \text{ as the left child for } v\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{2. add an edge to } T \text{ to join } v \text{ to } v_L\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{3. insert } \textit{newkey } \text{ as the key for } v_L\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{4. let } \textit{success } := 1 \textbf{ end do}\\ \ \ \ \ \ \ \ \ \textbf{if (} \textit{newkey} > \textit{key(v)}\\ \ \ \ \ \ \ \ \ \ \ \textbf{then if } v \text{ has a right child}\\ \ \ \ \ \ \ \ \ \ \ \ \ \textbf{then } \text{call the right child } v_R \text{, and let } v := v_R\\ \ \ \ \ \ \ \ \ \ \ \ \ \textbf{else do } \text{1. add a vertex } v_R \text{ to } T \text{ as the right child for } v\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{2. add an edge to } T \text{ to join } v \text{ to } v_R\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{3. insert } \textit{newkey } \text{ as the key for } v_R\\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{4. let } \textit{success } := 1 \textbf{ end do}\\ \ \ \ \ \textbf{end while}\\ \ \textbf{end while}$
+
+**Output:** A binary search tree $T$ for the set $K$ of keys
