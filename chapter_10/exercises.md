@@ -3103,20 +3103,40 @@ Find all possible spanning trees for each of the graphs in 1 and 2.
 
 1. (See page 780 for image.)
 
+(Done by hand.)
+
 2. (See page 780 for image.)
+
+(Done by hand.)
 
 Find a spanning tree for each of the graphs in 3 and 4.
 
 3. (See page 780 for image.)
 
+(Done by hand.)
+
 4. (See page 780 for image.)
+
+(Done by hand.)
 
 Use Kruskal's algorithm to find a minimum spanning tree for each of the graphs
 in 5 and 6. Indicate the order in which edges are added to form each tree.
 
 5. (See page 780 for image.)
 
+(Tree drawn by hand.)
+
+Order in which edges are added:
+
+$$ \{a, b\}, \{e, f\}, \{e, d\}, \{d, c\}, \{g, f\}, \{b, c\} $$
+
 6. (See page 780 for image.)
+
+(Tree drawn by hand.)
+
+Order in which edges are added:
+
+$$ \{v_3, v_4\}, \{v_0, v_5\}, \{v_3, v_1\}, \{v_5, v_6\}, \{v_5, v_4\}, \{v_6, v_7\}, \{v_7, v_2\} $$
 
 Use Prim's algorithm starting with vertex $a$ or $v_0$ to find a minimum
 spanning tree for each of the graphs in 7 and 8. Indicate the order in which
@@ -3124,7 +3144,19 @@ edges are added to form each tree.
 
 7. The graph of exercise 5.
 
+Same graph as exercise 5.
+
+Order in which edges are added:
+
+$$ \{a, b\}, \{b, c\}, \{c, d\}, \{d, e\}, \{e, f\}, \{f, g\} $$
+
 8. The graph of exercise 6.
+
+Same graph as exercise 6.
+
+Order in which edges are added (can differ from teacher's):
+
+$$ \{v_3, v_4\}, \{v_3, v_1\}, \{v_4, v_5\}, \{v_5, v_0\}, \{v_5, v_6\}, \{v_6, v_7\}, \{v_7, v_2\} $$
 
 For each of the graphs in 9 and 10, find all minimum spanning trees that can be
 obtained using (a) Kruskal's algorithm and (b) Prim's algorithm starting with
@@ -3133,7 +3165,11 @@ tree.
 
 9. (See page 780 for image.)
 
+(done by hand.)
+
 10. (See page 780 for image.)
+
+(done by hand.)
 
 11. A pipeline is to be built that will link six cities. The cost (in hundreds
     of millions of dollars) of constructing each potential link depends on
@@ -3142,9 +3178,50 @@ tree.
 
 (See page 781 for image.)
 
+Using Kruskal's algorithm, define the given graph as $G$, Denote the cities
+_Sa_, _Ch_, _De_, _Am_, _Al_, __Ph_ based off their initial two letters. Let $E$
+be the set of all edges in $G$.
+
+Let $T$ represent the minimum spanning tree for $G$ and initialize it at the
+vertex that is an endpoint for the least weighted edge. Denote this least
+weighted edge $e$. Connect $e$ in $T$, then delete $e$ from $E$. Next, look for
+the next least weighted edge and add that respective edge to $T$, while deleting
+it from $E$ as long as it does not create a circuit in $T$. Continue in this
+fashion until all vertices in $G$ are in $T$ and $E$ is empty.
+
+The order in which this tree is constructed is:
+
+$$ \{Ch, De\}, \{Al, Am\}, \{Al, Ph\}, \{Ch, Sa\}, \{De, Am\} $$
+
 12. Use Dijkstra's algorithm for the airline route system of Figure 10.6.3 to
     find the shortest distance from Nashville to Minneapolis. Make a table
-    similar to Tabled 10.6.1 to show the action of the algorithm.
+    similar to Table 10.6.1 to show the action of the algorithm.
+
+Let _N_ be Nashville, _S_ be St. Louis, _Lv_ be Louisville, _Ch_ be Chicago,
+_Cn_ be Cincinatti, _D_ be Detroit, _Mw_ be Milwaukee, and _Mn_ be Minneapolis
+
+| Step | $V(T)$                            | $E(T)$                                                                               | $F$                        |
+| ---- | --------------------------------- | ------------------------------------------------------------------------------------ | -------------------------- |
+| 0    | $\{N\}$                           | $\emptyset$                                                                          | $\{N\}$                    |
+| 1    | $\{N\}$                           | $\emptyset$                                                                          | $\{Lv, Mn\}$               |
+| 2    | $\{N, Lv\}$                       | $\{\{N, Lv\}\}$                                                                      | $\{Mn, Cn, Ch, D, Mw, S\}$ |
+| 3    | $\{N, Lv, Cn\}$                   | $\{\{N, Lv\}, \{Lv, Cn\}\}$                                                          | $\{Mn, Ch, D, Mw, S \}$    |
+| 4    | $\{N, Lv, Cn, S\}$                | $\{\{N, Lv\}, \{Lv, Cn\}, \{Lv, S\}\}$                                               | $\{Mn, Ch, D, Mw \}$       |
+| 5    | $\{N, Lv, Cn, S, Ch\}$            | $\{\{N, Lv\}, \{Lv, Cn\}, \{Lv, S\}, \{Lv, Ch\}\}$                                   | $\{Mn, D, Mw \}$           |
+| 6    | $\{N, Lv, Cn, S, Ch, D\}$         | $\{\{N, Lv\}, \{Lv, Cn\}, \{Lv, S\}, \{Lv, Ch\}, \{Lv, D\}\}$                        | $\{Mn, Mw \}$              |
+| 7    | $\{N, Lv, Cn, S, Ch, D, Mw\}$     | $\{\{N, Lv\}, \{Lv, Cn\}, \{Lv, S\}, \{Lv, Ch\}, \{Lv, D\}, \{Ch, Mw\}\}$            | $\{Mn\}$                   |
+| 8    | $\{N, Lv, Cn, S, Ch, D, Mw, Mn\}$ | $\{\{N, Lv\}, \{Lv, Cn\}, \{Lv, S\}, \{Lv, Ch\}, \{Lv, D\}, \{Ch, Mw\}, \{N, Mn\}\}$ | $\emptyset$                |
+
+| Step | $L(N)$ | $L(S)$         | $L(Lv)$        | $L(Cn)$        | $L(Ch)$        | $L(D)$         | $L(Mw)$        | $L(Mn)$        |
+| ---- | ------ | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
+| 0    | $0$    | $\infty$       | $\infty$       | $\infty$       | $\infty$       | $\infty$       | $\infty$       | $\infty$       |
+| 1    | $0$    | $\infty$       | $\textbf{151}$ | $\infty$       | $\infty$       | $\infty$       | $\infty$       | $695$          |
+| 2    | $0$    | $393$          | $151$          | $\textbf{234}$ | $420$          | $457$          | $499$          | $695$          |
+| 3    | $0$    | $393$          | $151$          | $234$          | $420$          | $457$          | $499$          | $695$          |
+| 4    | $0$    | $\textbf{393}$ | $151$          | $234$          | $\textbf{420}$ | $457$          | $499$          | $695$          |
+| 5    | $0$    | $393$          | $151$          | $234$          | $420$          | $\textbf{457}$ | $494$          | $695$          |
+| 6    | $0$    | $393$          | $151$          | $234$          | $420$          | $457$          | $\textbf{494}$ | $695$          |
+| 7    | $0$    | $393$          | $151$          | $234$          | $420$          | $457$          | $494$          | $\textbf{695}$ |
 
 Use Dijkstra's algorithm to find the shortest path from $a$ to $z$ for each of
 the graphs in 13-16. In each case make tables similar to Table 10.6.1 to show
@@ -3152,11 +3229,51 @@ the action of the algorithm.
 
 13. (See page 781 for image.)
 
+| Step | $V(T)$                 | $E(T)$                                                 | $F$           | $L(a)$       | $L(b)$       | $L(c)$       | $L(d)$       | $L(e)$       | $L(z)$       |
+| ---- | ---------------------- | ------------------------------------------------------ | ------------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+| 0    | $\{a\}$                | $\emptyset$                                            | $\{a\}$       | $\textbf{0}$ | $\infty$     | $\infty$     | $\infty$     | $\infty$     | $\infty$     |
+| 1    | $\{a\}$                | $\emptyset$                                            | $\{b, d\}$    | $0$          | $\textbf{2}$ | $\infty$     | $\textbf{1}$ | $\infty$     | $\infty$     |
+| 2    | $\{a, d\}$             | $\{\{a, d\}\}$                                         | $\{b, c, e\}$ | $0$          | $\textbf{2}$ | $6$          | $1$          | $11$         | $\infty$     |
+| 3    | $\{a, b, d\}$          | $\{\{a, d\}, \{a, b\}\}$                               | $\{c, e\}$    | $0$          | $2$          | $\textbf{5}$ | $1$          | $6$          | $\infty$     |
+| 4    | $\{a, b, c, d\}$       | $\{\{a, d\}, \{a, b\}, \{b, c\}\}$                     | $\{e, z\}$    | $0$          | $2$          | $5$          | $1$          | $\textbf{6}$ | $13$         |
+| 5    | $\{a, b, c, d, e\}$    | $\{\{a, d\}, \{a, b\}, \{b, c\}, \{c, e\}\}$           | $\{z\}$       | $0$          | $2$          | $5$          | $1$          | $6$          | $\textbf{8}$ |
+| 6    | $\{a, b, c, d, e, z\}$ | $\{\{a, d\}, \{a, b\}, \{b, c\}, \{c, e\}, \{e, z\}\}$ |               |              |              |              |              |              |              |
+
 14. (See page 781 for image.)
+
+| Step | $V(T)$                       | $E(T)$                                                                     | $F$              | $L(a)$       | $L(b)$   | $L(c)$   | $L(d)$   | $L(e)$   | $L(f)$       | $L(g)$       | $L(z)$       |
+| ---- | ---------------------------- | -------------------------------------------------------------------------- | ---------------- | ------------ | -------- | -------- | -------- | -------- | ------------ | ------------ | ------------ |
+| 0    | $\{a\}$                      | $\emptyset$                                                                | $\{a\}$          | $\textbf{0}$ | $\infty$ | $\infty$ | $\infty$ | $\infty$ | $\infty$     | $\infty$     | $\infty$     |
+| 1    | $\{a\}$                      | $\emptyset$                                                                | $\{b, e\}$       | $0$          | $1$      | $\infty$ | $\infty$ | $4$      | $\infty$     | $\infty$     | $\infty$     |
+| 2    | $\{a, b\}$                   | $\{\{a, b\}\}$                                                             | $\{e, c, f\}$    | $0$          | $1$      | $2$      | $\infty$ | $4$      | $8$          | $\infty$     | $\infty$     |
+| 3    | $\{a, b, c\}$                | $\{\{a, b\}, \{b, c\}\}$                                                   | $\{e, f, d, g\}$ | $0$          | $1$      | $2$      | $3$      | $4$      | $8$          | $10$         | $\infty$     |
+| 4    | $\{a, b, c, d\}$             | $\{\{a, b\}, \{b, c\}, \{c, d\}\}$                                         | $\{e, f, g, z\}$ | $0$          | $1$      | $2$      | $3$      | $4$      | $8$          | $10$         | $23$         |
+| 5    | $\{a, b, c, d, e\}$          | $\{\{a, b\}, \{b, c\}, \{c, d\}, \{a, e\}\}$                               | $\{f, g, z\}$    | $0$          | $1$      | $2$      | $3$      | $4$      | $\mathbf{5}$ | $10$         | $23$         |
+| 6    | $\{a, b, c, d, e, f\}$       | $\{\{a, b\}, \{b, c\}, \{c, d\}, \{a, e\}, \{e, f\}\}$                     | $\{g, z\}$       | $0$          | $1$      | $2$      | $3$      | $4$      | $5$          | $\mathbf{6}$ | $23$         |
+| 7    | $\{a, b, c, d, e, f, g\}$    | $\{\{a, b\}, \{b, c\}, \{c, d\}, \{a, e\}, \{e, f\}, \{f, g\}\}$           | $\{z\}$          | $0$          | $1$      | $2$      | $3$      | $4$      | $5$          | $6$          | $\mathbf{7}$ |
+| 7    | $\{a, b, c, d, e, f, g, z\}$ | $\{\{a, b\}, \{b, c\}, \{c, d\}, \{a, e\}, \{e, f\}, \{f, g\}, \{g, z\}\}$ |                  |              |          |          |          |          |              |              |              |
 
 15. The graph of exercise 9 with $a = a$ and $z = f$
 
+| Step | $V(T)$                                   | $E(T)$                                       | $F$              | $L(a)$       | $L(b)$   | $L(c)$   | $L(d)$   | $L(e)$   | $L(g)$   | $L(f)$       |
+| ---- | ---------------------------------------- | -------------------------------------------- | ---------------- | ------------ | -------- | -------- | -------- | -------- | -------- | ------------ |
+| 0    | $\{a\}$                                  | $\emptyset$                                  | $\{a\}$          | $\textbf{0}$ | $\infty$ | $\infty$ | $\infty$ | $\infty$ | $\infty$ | $\infty$     |
+| 1    | $\{a\}$                                  | $\emptyset$                                  | $\{b, g, e\}$    | $0$          | $3$      | $\infty$ | $\infty$ | $3$      | $4$      | $\infty$     |
+| 2    | $\{a, b\}$                               | $\{\{a, b\}\}$                               | $\{g, e, c\}$    | $0$          | $3$      | $10$     | $\infty$ | $3$      | $4$      | $\infty$     |
+| 3    | $\{a, b\}, \{a, e\}$                     | $\{\{a, b\}, \{a, e\}\}$                     | $\{g, c, d, f\}$ | $0$          | $3$      | $10$     | $14$     | $3$      | $4$      | $7$          |
+| 4    | $\{a, b\}, \{a, e\}, \{a, g\}$           | $\{\{a, b\}, \{a, e\}, \{a, g\}\}$           | $\{c, d, f\}$    | $0$          | $3$      | $10$     | $14$     | $3$      | $4$      | $\textbf{5}$ |
+| 5    | $\{a, b\}, \{a, e\}, \{a, g\}, \{g, f\}$ | $\{\{a, b\}, \{a, e\}, \{a, g\}, \{g, f\}\}$ | $\{c, d\}$       |              |          |          |          |          |          |              |
+
 16. The graph of exercise 10 with $a = u$ and $z = w$
+
+| Step | $V(T)$              | $E(T)$                                       | $F$              | $L(u)$       | $L(t)$   | $L(v)$   | $L(x)$   | $L(y)$       | $L(z)$       | $L(w)$   |
+| ---- | ------------------- | -------------------------------------------- | ---------------- | ------------ | -------- | -------- | -------- | ------------ | ------------ | -------- |
+| 0    | $\{u\}$             | $\emptyset$                                  | $\{u\}$          | $\textbf{0}$ | $\infty$ | $\infty$ | $\infty$ | $\infty$     | $\infty$     | $\infty$ |
+| 1    | $\{u\}$             | $\emptyset$                                  | $\{t, v, x, y\}$ | $0$          | $7$      | $2$      | $1$      | $8$          | $\infty$     | $\infty$ |
+| 2    | $\{u, x\}$          | $\{\{u, x\}\}$                               | $\{t, v, y, w\}$ | $0$          | $7$      | $2$      | $1$      | $\mathbf{3}$ | $\infty$     | $6$      |
+| 3    | $\{u, x, v\}$       | $\{\{u, x\}, \{u, v\}\}$                     | $\{t, y, w, z\}$ | $0$          | $7$      | $2$      | $1$      | $3$          | $9$          | $6$      |
+| 4    | $\{u, x, v, y\}$    | $\{\{u, x\}, \{u, v\}, \{x, y\}\}$           | $\{t, w, z\}$    | $0$          | $7$      | $2$      | $1$      | $3$          | $\textbf{8}$ | $6$      |
+| 5    | $\{u, x, v, y, w\}$ | $\{\{u, x\}, \{u, v\}, \{x, y\}, \{x, w\}\}$ | $\{t, z\}$       |              |          |          |          |              |              |          |
 
 17. Prove part (2) of Proposition 10.6.1: Any two spanning trees for a graph
     have the same number of edges.
@@ -3218,3 +3335,31 @@ an edge in common? Prove or give a counterexample.
 
 30. Modify Algorithm 10.6.3 so that the output consists of the sequences of
     edges in the shortest path from $a$ to $z$.
+
+31. Prove that if a connected, weighted graph $G$ is input to Algorithm 10.6.4
+    (shown below), the output is a minimum spanning tree for $G$.
+
+---
+
+**Algorithm 10.6.4**
+
+**Input:** $G$ _[a connected graph]_
+
+**Algorithm Body:**
+
+1. $T := G$.
+
+2. $E :=$ the set of all edges of $G$, $m :=$ the number of edges of $G$.
+
+3. $\textbf{while } (m > 0)$
+
+3a. Find an edge $e$ in $E$ that has maximal weight.
+
+3b. Remove $e$ from $E$ and set $m := m - 1$.
+
+3c. $\textbf{if}$ the subgraph obtained when $e$ is removed from the edge set of
+$T$ is connected $\textbf{then}$ remove $e$ from the edge set of $T$
+
+$\textbf{end while}$
+
+**Output:** $T$ _[a minimum spanning tree for $G$]_

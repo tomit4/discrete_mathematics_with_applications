@@ -216,19 +216,35 @@ Page 780
 
 1. A spanning tree for a graph $G$ is ____.
 
+a subgraph of $G$ that contains every vertex of $G$ and is a tree.
+
 2. A weighted graph is a graph for which ____, and the total weight of the graph
    is ____.
 
+each edge has an associated positive real number weight; the sum of the weights
+of all the edges
+
 3. A minimum spanning tree for a connected, weighted graph is ____.
+
+a spanning tree that has the least possible total weight compared to all other
+spanning trees for the graph
 
 4. In Kruskal's algorithm, the edges of a connected, weighted graph are examined
    one by one in order of ____ starting with ____.
 
+increasing weight; an edge of least weight
+
 5. In Prim's algorithm, a minimum spanning tree is built by expanding outward
    from an ____ in a sequence of ____.
+
+initial vertex; adjacent vertices and edges
 
 6. In Dijkstra's algorithm, a vertex is in the fringe if it is ____ vertex in
    the tree that is being built up.
 
+adjacent to $a$
+
 7. At each stage of Dijkstra's algorithm, the vertex that is added to the tree
    is a vertex in the fringe whose label is a ____.
+
+minimum among all those in the fringe
