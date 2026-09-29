@@ -3278,35 +3278,199 @@ the action of the algorithm.
 17. Prove part (2) of Proposition 10.6.1: Any two spanning trees for a graph
     have the same number of edges.
 
+**Proof**
+
+Suppose $G$ is a connected graph with two spanning trees, $T_1$ and $T_2$.
+
+It is to be shown that $T_1$ and $T_2$ have the same number of edges.
+
+By definition of a spanning tree, this means that $T_1$ and $T_2$ contain every
+vertex of $G$. Let $n$ be the number of vertices in $G$, and thus $T_1$ and
+$T_2$ both contain $n$ vertices.
+
+By Theorem 10.4.2, a tree with $n$ vertices has $n - 1$ edges.
+
+Since both $T_1$ and $T_2$ both have $n$ vertices, it follows that both trees
+have $n - 1$ edges.
+
+Therefore $T_1$ and $T_2$ both have the same number of edges (namely, $n - 1$
+edges.)
+
+This is what was to be shown.
+
+Q.E.D.
+
 18. Given any two distinct vertices of a tree, there exists a unique path from
     one to the other.
 
 a. Give an informal justification for the above statement.
 
+By definition of a tree, a tree is circuit-free and is connected. Given any two
+distinct vertices of a tree, there must exist a unique path from one to the
+other because the tree is connected, and also because it is circuit-free. In
+other words, by definition of connected, there must exist a path from any one
+vertex to any other. By definition of path, no vertex along the path can be
+repeated. If two distinct paths existed between any two distinct vertices along
+this path, then a circuit would exist, which would contradict the definition of
+a tree, and thus we must conclude that the path is unique.
+
 b. Write a formal proof of the above statement.
+
+Omitted.
 
 19. Prove that if $G$ is a graph with a spanning tree $T$ and $e$ is an edge of
     $G$ that is not in $T$, then the graph obtained by adding $e$ to $T$
     contains one and only one set of edges that form a circuit.
+
+**Proof:**
+
+Suppose $G$ is a graph with a spanning tree $T$. Let $e$ be an edge of $G$ that
+is not in $T$.
+
+It is to be shown that the graph obtained by adding $e$ to $T$ contains one, and
+only one set of edges that form a circuit.
+
+By the definition of a spanning tree, $T$ contains all vertices of $G$.
+
+By exercise 18, given any two distinct vertices of a tree, there is a unique
+path from one to the other. By adding an outside edge $e$ to $T$, it follows
+that adding this edge creates a circuit.
+
+Any circuit in the obtained graph must use $e$, since $T$ itself contains no
+circuits (by the definition of a tree). The remaining edges of any such circuit
+must form a path in $T$ between $e$'s endpoints, and by exercise 18 this path is
+unique. Therefore, there is one and only one circuit.
+
+This is what was to be shown.
+
+Q.E.D.
 
 20. Suppose $G$ is a connected graph and $T$ is a circuit-free subgraph of $G$.
     Suppose also that if any edge $e$ of $G$ not in $T$ is added to $T$, the
     resulting graph contains a circuit. Prove that $T$ is a spanning tree for
     $G$.
 
+**Proof:**
+
+Suppose $G$ is a connected graph and $T$ is a circuit-free subgraph of $G$.
+Suppose $e$ is any edge of $G$ that is not in $T$, but is then added to $T$, and
+the resulting graph obtained contains a circuit.
+
+It is to be shown that $T$ is a spanning tree for $G$.
+
+By definition of a spanning tree, it is to be shown that $T$ is circuit-free and
+contains every vertex of $G$. Since the supposition establishes that $T$ is
+circuit-free, it suffices to show that $T$ contains every vertex of $G$.
+
+Suppose $v_G$ is a vertex in $G$ that is not in $T$, but is connected to $T$
+when $e$ is added.
+
+A contradiction must be derived to show that $T$ contains every vertex of $G$.
+
+Then, when $v_G$ is added to $T$, a circuit cannot be created since $v_G$ is a
+new vertex that was not in $T$ before. This contradicts the supposition that
+when $e$ is added to $T$ a circuit is formed. Thus $v_G$ cannot exist, and $T$
+contains every vertex of $G$.
+
+This is what was to be shown.
+
+Q.E.D.
+
 21.
 
 a. Suppose $T_1$ and $T_2$ are two different spanning trees for a graph $G$.
 Must $T_1$ and $T_2$ have an edge in common? Prove or give a counterexample.
 
+No, two spanning trees for the same graph must have the same vertices (by
+definition of spanning), but not necessarily the same edges. Consider $G$ as a
+simple graph with two points and two parallel edges connecting them (a circuit):
+
+$$ G = v_0e_0v_1e_1v_0 $$
+
+Then, two spanning trees can be established as:
+
+$$ T_1 = v_0e_0v_1 \quad \text{ and } \quad T_2 = v_0e_1v_1 $$
+
+Note that both spanning trees follow the definition for spanning trees as they
+both contain all vertices of $G$, but that they both do not share any edges.
+
 b. Suppose that the graph $G$ in part (a) is simple. Must $T_1$ and $T_2$ have
 an edge in common? Prove or give a counterexample.
+
+No, a counterexample exists. (Done by hand.)
 
 22. Prove that an edge $e$ is contained in every spanning tree for a connected
     graph $G$ if, and only if, removal of $e$ disconnects $G$.
 
+**Proof:**
+
+Suppose $G$ is a connected graph, with an arbitrary amount of spanning trees of
+$G$.
+
+_Proof (1<sup>st</sup> part):_
+
+Suppose $e$ is an edge contained in every spanning tree for $G$.
+
+It must be shown that the removal of $e$ disconnects $G$.
+
+Suppose not, suppose that the removal of $e$ does not disconnect $G$.
+
+A contradiction to this supposition must be derived.
+
+Since the removal of $e$ does not disconnect $G$, this means that a spanning
+tree can exist within $G$ without $e$, which contradicts the supposition that
+$e$ is in every spanning tree for $G$.
+
+Therefore the removal of $e$ disconnects $G$.
+
+_Proof (2<sup>nd</sup> part):_
+
+Suppose $e$ is removed from $G$ such that $G$ is disconnected.
+
+It must be shown that $e$ is contained in every spanning tree for $G$.
+
+Since $G$ is disconnected after the removal of $e$, it follows that no spanning
+tree can exist from the obtained graph (by the definition for spanning tree).
+Thus it follows that $e$ must exist in every spanning tree for $G$, since $e$ is
+necessary for $G$ to be connected.
+
+_Conclusion:_
+
+Since both sides of the if and only if statement have been shown, it can be
+concluded that the given statement has been proven.
+
+Q.E.D.
+
 23. Consider the spanning trees $T_1$ and $T_2$ in the proof of Theorem 10.6.3.
-    Prove that $w(T_2) \leq w(TS_1)$.
+    Prove that $w(T_2) \leq w(T_1)$.
+
+**Proof:**
+
+Following from the proof of Theorem 10.6.3, it is known that $T_2$ is obtained
+from $T_1$ by removing $e'$ and adding $e$. It is also known that
+$w(e) \leq w(e')$.
+
+From this, it follows that:
+
+$$ w(T_2) = w(T_1) - w(e') + w(e) $$
+
+This can be rewritten as:
+
+$$ w(T_2) = w(T_1) + [w(e) - w(e')] $$
+
+Since it is known that $w(e) \leq w(e')$, it follows that:
+
+$$ w(e) - w(e') \leq 0 $$
+
+Thus:
+
+$$ w(T_2) = w(T_1) + [w(e) - w(e')] \leq w(T_1) + 0 = w(T_1) $$
+
+And simplifying this expression, it can be concluded that:
+
+$$ w(T_2) \leq w(T_1) $$
+
+Q.E.D.
 
 24. Suppose that $T$ is a minimum spanning tree for a connected, weighted graph
     $G$ and that $G$ contains an edge $e$ (not a loop) that is not in $T$. Let
@@ -3314,27 +3478,104 @@ an edge in common? Prove or give a counterexample.
     in $T$ from $v$ to $w$. Let $e'$ be any edge of this path. Prove that
     $w(e') \leq w(e)$.
 
+**Proof:**
+
+Suppose that $T$ is a minimum spanning tree for a connected, weighted graph $G$
+and that $G$ contains an edge $e$ (not a loop) that is not in $T$.
+
+Let $v$ and $w$ be the endpoints of $e$. By exercise 18 there is a unique path
+in $T$ from $v$ to $w$.
+
+Let $e'$ be any edge of this path.
+
+It is to be shown that $w(e') \leq w(e)$ (where $w$ in this context is the
+weight function for edges of a graph).
+
+Consider the path in $T$ from $v$ to $w$ expressed as follows:
+
+$$ T_{v \to w} = ve_0v_0e_1v_1 \dots v'e'v'' \dots w $$
+
+Suppose not, that is, suppose $w(e) < w(e')$.
+
+By definition of a minimum spanning tree, the weight of $T$ must be the minimal
+weight possible among all spanning trees of $G$.
+
+Then, suppose $e$ replaces $e'$ in $T$, obtaining a new tree, $T'$. $T'$ would
+still be a spanning tree since $e$ connects $v$ and $w$, but the weight of $T'$
+with the $e$ replacement would be less than $T$ with $e'$.
+
+It follows that $T$ is not a minimum spanning tree, which contradicts the
+supposition.
+
+Therefore $w(e') \leq w(e)$, which is what was to be shown.
+
+Q.E.D.
+
 25. Prove that if $G$ is a connected, weighted graph and $e$ is an edge of $G$
     (not a loop) that has smaller weight than any other edge of $G$, then $e$ is
     in every minimum spanning tree for $G$.
 
+_Hint:_ Suppose $e$ is an edge that has smaller weight than any other edge of
+$G$, and suppose $T$ is a minimum spanning tree for $G$ that does not contain
+$e$. Create a new spanning tree $T'$ by adding $e$ to $T$ and removing another
+edge of $T$ (which one?). Then $w(T') < w(T)$.
+
+**Proof:**
+
+Suppose $G$ is a connected weighted graph. Let $e$ be an edge of $G$ that is not
+a loop, and has a smaller weight than any other edge of $G$.
+
+It must be shown that $e$ is in every minimum spanning tree for $G$.
+
+Let $T$ be a minimum spanning tree for $G$ that does not contain $e$.
+
+Then, obtain a new spanning tree $T'$ by adding $e$ to $T$. By exercise 19, it
+is known that adding an outside edge to $T$ creates a circuit.
+
+Now, remove from this circuit an edge that is not $e$ that will break this
+circuit.
+
+Since $e$ has the smallest weight of $G$, it follows that the weight of $e$ is
+lower than the weight of this removed edge. Thus, when obtaining $T'$, it can be
+concluded that $w(T') < w(T)$, and therefore $T$ is not a minimal spanning tree
+for $G$, which is a contradiction.
+
+Since a contradiction to the supposition has been shown, it can be concluded
+that $e$ is in every minimum spanning tree for $G$, which is what was to be
+shown.
+
+Q.E.D.
+
 26. If $G$ is a connected, weighted graph and no two edges of $G$ have the same
     weight, does there exist a unique minimum spanning tree for $G$? Use the
     result of exercise 19 to help justify your answer.
+
+Omitted.
 
 27. Prove that if $G$ is a connected, weighted graph and $e$ is an edge of $G$
     that (1) has greater weight than any other edge of $G$ and (2) is in a
     circuit of $G$, then there is no minimum spanning tree $T$ for $G$ such that
     $e$ is in $T$.
 
+Omitted.
+
 28. Suppose a disconnected graph is input to Kruskal's algorithm. What will be
     the output?
+
+The output will be a series of minimal spanning trees, or a minimal spanning
+forest, where each minimal spanning tree is for each connected component of the
+overall disconnected graph.
 
 29. Suppose a disconnected graph is input to Prim's algorithm. What will be the
     output?
 
+A single minimal spanning tree for one arbitrary component of the overall
+disconnected graph, depending on the starting vertex chosen.
+
 30. Modify Algorithm 10.6.3 so that the output consists of the sequences of
     edges in the shortest path from $a$ to $z$.
+
+Omitted.
 
 31. Prove that if a connected, weighted graph $G$ is input to Algorithm 10.6.4
     (shown below), the output is a minimum spanning tree for $G$.
@@ -3363,3 +3604,68 @@ $T$ is connected $\textbf{then}$ remove $e$ from the edge set of $T$
 $\textbf{end while}$
 
 **Output:** $T$ _[a minimum spanning tree for $G$]_
+
+**Proof:**
+
+Suppose $G$ is any weighted graph that is inputted into Algorithm 10.6.4.
+
+Let $T$ be a subgraph of $G$, initially set equal to $G$.
+
+It must be shown that once Algorithm 10.6.4 has completed, that $T$ is a minimum
+spanning tree for $G$.
+
+The algorithm first establishes $T$ as being equal to $G$, it then keeps track
+of all edges of $G$ in a set denoted $E$ (presumably this set also keeps track
+of the weight of each edge), and also a count of the number of edges of $G$
+denoted $m$.
+
+It then establishes a while loop, whose end condition is set to $m > 0$.
+
+Each loop of this iteration body first finds the edge in $E$ with the maximal
+weight, denoted $e$.
+
+The loop's logic subsequently removes $e$ from $E$ and decreases the count for
+$m$ by $1$.
+
+Finally, the subgraph obtained when $e$ is removed from $T$ is checked to see if
+the edge set of $T$ is connected, and if this condition is met, then $e$ is
+removed from the edge set of $T$.
+
+Once the while loop ends, the algorithm claims that the resulting subgraph $T$
+is a minimum spanning tree for $G$.
+
+First, it is to be shown that $T$ is a spanning tree for $G$.
+
+To show that $T$ is a spanning tree, it must be shown that $T$ has all vertices
+of $G$ and that $T$ is connected.
+
+Since the algorithm removes only edges from $T$, and not vertices, and since $T$
+starts off as a subgraph with all vertices of $G$, it follows that $T$ maintains
+all vertices of $G$ throughout the algorithm's logic.
+
+The last check of the while loop ensures that when $e$ is removed from the edge
+set of $T$ that $T$ is still connected, thus $T$ is connected after the while
+loop ends.
+
+Thus $T$ is a spanning tree for $G$.
+
+Second, it is to be shown that $T$ is a minimum spanning tree for $G$.
+
+In order to show that $T$ is a minimum spanning tree for $G$, it must be shown
+that the weight of $T$ is less than or equal to the weight of any other spanning
+tree for $G$.
+
+Notice that the algorithm's while loop always removes the edge in $E$ with the
+maximal weight. This ensures that the weight of the current $e$ is always less
+than or equal to the weight of the previously removed edge, and since the last
+step of the while loop always ensures that $T$ remains connected, it ensures
+that $T$ is always a tree (as shown earlier).
+
+Furthermore, the first step ensures that all edges that hold the highest weight
+are (greedily) removed first. This ensures that the resulting tree is a minimal
+spanning tree.
+
+Therefore it has been shown that the output for Algorithm 10.6.4 is a minimal
+spanning tree for $G$ (namely, $T$). This is what was to be shown.
+
+Q.E.D.
