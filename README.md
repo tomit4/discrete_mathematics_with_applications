@@ -5,3 +5,6 @@ This repository contains my notes and exercises for Susanna Epp's book,
 
 Answers in Tex can be found
 [here](https://raw.githubusercontent.com/spamegg1/Epp-Discrete-Math-5th-solutions/refs/heads/master/src/Epp.tex).
+
+And images can be found
+[here](https://github.com/spamegg1/Epp-Discrete-Math-5th-solutions/tree/master/images).
