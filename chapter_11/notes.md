@@ -103,6 +103,28 @@ $$ \text{if } $r \leq s$ \text{, then } $n^r \leq n^s $$
 
 ---
 
+Page 799
+
+**Method 2 (Using a general procedure) (Finding a Big-Omega and a Big-O for a
+Polynomial Function with Some Negative Coefficients):**
+
+Let $m$ be a nonnegative integer, let $P(n)$ be a polynomial of degree $m$, and
+suppose the coefficient $a_m$ of $n^m$ is positive.
+
+To find big-Omega for $P(n)$: Let $A = \dfrac{1}{2}a_m$, and let $a$ be the
+number obtained as follows:
+
+1. Find the sum of the absolute values of all the coefficients of $P(n)$ except
+   for $a_m$.
+
+2. Multiply the result of step 1 by $\dfrac{2}{a_m}$.
+
+3. Let $a$ be the larger of the number 1 and the result of step 2.
+
+Show that $An^m \leq P(n)$ for every integer $n \geq a$.
+
+---
+
 Page 800
 
 **Theorem 11.2.3 A Limit on What Can Be Inferred from Big-_O_**
