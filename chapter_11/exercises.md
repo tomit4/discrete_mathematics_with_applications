@@ -697,3 +697,309 @@ Omitted.
 28. $f(x) = x^2 + 125x + 254$ and $g(x) = x^2$ for each real number $x \geq 0$
 
 Omitted.
+
+---
+
+Page 807
+
+**Exercise Set 11.2**
+
+1. The following is a formal definition for $\Omega$-notation, written using
+   quantifiers and variables: $f(n)$ is $\Omega(g(n))$ if, and only if,
+   $\exists$ positive real numbers $a$ and $A$ such that $\forall n \geq a$,
+
+$$ Ag(n) \leq f(n) $$
+
+a. Write the formal negation for the definition using the symbols $\forall$ and
+$\exists$.
+
+b. Restate the negation less formally without using the symbols $\forall$ and
+$\exists$ or the words "for any," "for every," or "there exists."
+
+2. The following is a formal definition for $O$-notation, written using
+   quantifiers and variables: $f(n)$ is $O(g(n))$ if, and only if, $\exists$
+   positive real numbers $b$ and $B$ such that $\forall n \geq b$,
+
+$$ 0 \leq f(n) \leq Bg(n) $$
+
+a. Write the formal negation for the definition using the symbols $\forall$ and
+$\exists$.
+
+b. Restate the negation less formally without using the symbols $\forall$ and
+$\exists$ or the words "for any," "for every," or "there exists."
+
+3. The following is a formal definition for $\Theta$-notation, written using
+   quantifiers and variables: $f(n)$ is $\Theta(g(n))$ if, and only if,
+   $\exists$ positive real numbers $k$, $A$, and $B$ such that
+   $\forall n \geq k$,
+
+$$ Ag(n) \leq f(n) \leq Bg(n) $$
+
+a. Write the formal negation for the definition using the symbols $\forall$ and
+$\exists$.
+
+b. Restate the negation less formally without using the symbols $\forall$ and
+$\exists$ or the words "for any," "for every," or "there exists."
+
+In 4-9, express each statement using $\Omega$-, $O$-, or $\Theta$-notation.
+
+4. $\dfrac{1}{2}n \leq n - \left\lfloor \dfrac{n}{2} \right\rfloor + 1$ for
+   every integer $n \geq 1$. (Use $\Omega$-notation.)
+
+5. $0 \leq n - \left\lfloor \dfrac{n}{2} \right\rfloor + 1 \leq n$ for every
+   integer $n \geq 3$. (Use $O$-notation.)
+
+6. $n^2 \leq 3n(n - 2) \leq 4n^2$ for every integer $n \geq 3$. (Use
+   $\Theta$-notation.)
+
+7. $\dfrac{1}{2}n^2 \leq \dfrac{n(3n - 2)}{2}$ for every integer $n \geq 3$.
+   (Use $\Omega$-notation.)
+
+8. $0 \leq \dfrac{n(3n - 2)}{2} \leq n^2$ for every integer $n \geq 1$. (Use
+   $O$-notation.)
+
+9. $\dfrac{n^3}{6} \leq n^2\left(\left\lceil \frac{n}{3} \right\rceil - 1\right ) \leq n^3$
+   for every integer $n \geq 2$. (Use $\Theta$-notation.)
+
+10.
+
+a. Show that for any integer $n \geq 1$, $0 \leq 2n^2 + 15n + 4 \leq 21n^2$.
+
+b. Show that for any integer $n \geq 1$, $2n^2 \leq 2n^2 + 15n + 4$.
+
+c. Sketch a graph to illustrate the results of parts (a) and (b).
+
+d. Use the $O$- and $\Omega$-notations to express the results of parts (a) and
+(b).
+
+e. What can you deduce about the order of $2n^2 + 15n + 4$?
+
+11.
+
+a. Show that for any integer $n \geq 1$, $0 \leq 23n^4 + 8n^2 + 4n \leq 35n^4$.
+
+b. Show that for any integer $n \geq 1$, $23n^4 \leq 23n^4 + 8n^2 + 4n$.
+
+c. Sketch a graph to illustrate the results of parts (a) and (b).
+
+d. Use the $O$-and $\Omega$-notations to express the results of parts (a) and
+(b).
+
+e. What can you deduce about the order of $23n^4 + 8n^2 + 4n$?
+
+12.
+
+a. Show that or any integer $n \geq 1$, $0 \leq 7n^3 + 10n^2 + 3 \leq 20n^3$.
+
+b. Show that for any integer $n \geq 1$, $7n^3 \leq 7n^3 + 10n^2 + 3$.
+
+c. Sketch a graph to illustrate the result of parts (a) and (b).
+
+d. Use the $O$- and $\Omega$-notations to express the results of parts (a) and
+(b).
+
+e. What can you deduce about the order of $7n^3 + 10n^2 + 3$?
+
+13. Use the definition of $\Theta$-notation to show that $5n^3 + 65n + 30$ is
+    $\Theta(n^3)$.
+
+14. Use the definition of $\Theta$-notation to show that $n^2 + 100n + 88$ is
+    $\Theta(n^2)$.
+
+15. Use the definition of $\Theta$-notation to show that
+    $\left\lfloor n + \dfrac{1}{2}\right\rfloor$ is $\Theta(n)$.
+
+16. Use the definition of $\Theta$-notation to show that
+    $\left\lceil n + \dfrac{1}{2}\right\rceil$ is $\Theta(n)$.
+
+17. Use the definition of $\Theta$-notation to show that
+    $\left\lfloor \dfrac{n}{2} \right\rfloor$ is $\Theta(n)$. (_Hint:_ Show that
+    if $n \geq 4$, then $\dfrac{n}{2} - 1 \geq \dfrac{1}{4}n$.)
+
+18. Prove Theorem 11.2.7(b): If $f$ and $g$ are real-valued functions defined on
+    the same set of nonnegative integers and if $f(n) \geq 0$ and $g(n) \geq 0$
+    for every integer $n \geq r$, where $r$ is a positive real number, then if
+    $f(n)$ is $\Theta(g(n))$, then $g(n)$ is $\Theta(f(n))$.
+
+19. Prove Theorem 11.2.1: If $f$ and $g$ are real-valued functions defined on
+    the same set of nonnegative integers and if $f(n) \geq 0$ and $g(n) \geq 0$
+    for every integer $n \geq r$, where $r$ is a positive real number, then
+    $f(n)$ is $\Theta(g(n))$ if, and only if, $f(n)$ is $\Omega(g(n))$ and
+    $f(n)$ is $O(g(n))$.
+
+20. Without using Theorem 11.2.4 prove that $n^5$ is not $O(n^2)$.
+
+21. Prove Theorem 11.2.4: If $f$ is a real-valued function defined on a set of
+    nonnegative integers and $f(n)$ is $\Omega(n^m)$, where $m$ is a positive
+    integer, then $f(n)$ is not $O(n^p)$ for any positive real number $p < m$.
+
+22.
+
+a. Use one of the methods of Example 11.2.4 to show that $2n^4 - 90n^3 + 3$ is
+$\Omega(n^4)$.
+
+b. Show that $2n^4 - 90n^3 + 3$ is $O(n^4)$.
+
+c. Justify the conclusion that $2n^4 - 90n^3 + 3$ is $\Theta(n^4)$.
+
+23.
+
+a. Use one of the methods of Example 11.2.4 to show that
+$\dfrac{1}{5}n^2 - 42n - 8$ is $\Omega(n^2)$.
+
+b. Show that $\dfrac{1}{5}n^2 - 42n - 8$ is $O(n^2)$.
+
+c. Justify the conclusion that $\dfrac{1}{5}n^2 - 42n - 8$ is $\Theta(n^2)$.
+
+24.
+
+a. Use one of the methods of Example 11.2.4 to show that
+$\dfrac{1}{4}n^5 - 50n^3 + 3n + 12$ is $\Omega(n^5)$.
+
+b. Show that $\dfrac{1}{4}n^5 - 50n^3 + 3n + 12$ is $O(n^5)$.
+
+c. Justify the conclusion that $\dfrac{1}{4}n^5 - 50n^3 + 3n + 12$ is
+$\Theta(n^5)$.
+
+25. Suppose $P(n) = a_mn^m + a_{m - 1}n^{m - 1} + \cdots + a_2n^2 + a_1n + a_0$,
+    where all the coefficients $a_0, a_1, \dots, a_m$ are real numbers and
+    $a_m > 0$.
+
+a. Prove that $P(n)$ is $\Omega(n^m)$ by using the general procedure described
+in Example 11.2.4.
+
+b. Prove that $P(n)$ is $O(n^m)$.
+
+c. Justify the conclusion that $P(n)$ is $\Theta(n^m)$.
+
+Use the theorem on polynomial orders to prove each of the statements in 26-31.
+
+26. $\dfrac{(n + 1)(n - 2)}{4}$ is $\Theta(n^2)$
+
+27. $\dfrac{n}{3}(4n^2 - 1)$ is $\Theta(n^3)$
+
+28. $\dfrac{n(n - 1)}{2} + 2n$ is $\Theta(n^2)$
+
+29. $\dfrac{n(n - 1)(2n + 1)}{6}$ is $\Theta(n^3)$
+
+30. $\left[\dfrac{n(n + 1)}{2}\right]^2$ is $\Theta(n^4)$
+
+31. $2(n - 1) + \dfrac{n(n + 1)}{2} + 4\left(\dfrac{n(n - 1)}{2}\right)$ is
+    $\Theta(n^2)$
+
+Prove each of the statements in 32-39. Use the theorem on polynomial orders and
+results from the theorems in exercises in Section 5.2 as appropriate.
+
+32. $1^2 + 2^2 + 3^2 + \cdots + n^2$ is $\Theta(n^3)$
+
+33. $1^3 + 2^3 + 3^3 + \cdots + n^3$ is $\Theta(n^4)$
+
+34. $2 + 4 + 6 + \cdots + 2n$ is $\Theta(n^2)$
+
+35. $5 + 10 + 15 + 20 + 25 + \cdots + 5n$ is $\Theta(n^2)$
+
+36. $\sum_{i = 1}^{n}{(4i - 9)}$ is $\Theta(n^2)$
+
+37. $\sum_{k = 1}^{n}{(k + 3)}$ is $\Theta(n^2)$
+
+38. $\sum_{i = 1}^{n}{i(i + 1)}$ is $\Theta(n^3)$
+
+39. $\sum_{k = 3}^{n}{(k^2 - 2k)}$ is $\Theta(n^3)$
+
+40.
+
+a. Prove: If $c$ is a positive real number and if $f$ is a real-valued function
+defined on a set of nonnegative integers with $f(n) \geq 0$ for every integer
+$n$ greater than or equal to some positive real number, then $cf(n)$ is
+$\Theta(f(n))$.
+
+b. Use part (a) to show that $3n$ is $\Theta(n)$.
+
+41. Prove: If $c$ is a positive real number and $f(n) = c$ for every integer
+    $n \geq 1$, then $f(n)$ is $\Theta(1)$.
+
+42. What can you say about a function $f$ with the property that $f(n)$ is
+    $\Theta(1)$?
+
+Use Theorems 11.2.5-11.2.9 and the results of exercises 15-17, 40, and 41 to
+justify the statements in 43-45.
+
+43. $\left\lfloor \dfrac{n + 1}{2} \right\rfloor + 3n$ is $\Theta(n)$
+
+44. $\dfrac{n(n - 1)}{2} + \left\lfloor \dfrac{n}{2} \right\rfloor + 1$ is
+    $\Theta(n^2)$
+
+45. $\left\lfloor \dfrac{n}{2} \right\rfloor + 4n + 3$ is $\Theta(n)$
+
+46.
+
+a. Use mathematical induction to prove that if $n$ is any integer with
+$n \geq 1$, then for every integer $m \geq 1$, $n^m \geq 1$.
+
+b. Prove that if $n$ is any integer with $n \geq 1$, then $n^r \leq n^s$ for all
+integers $r$ and $s$ with $r \leq s$.
+
+47.
+
+a. Let $x$ be any positive real number. Use mathematical induction to prove that
+for every integer $m \geq 1$, if $x \leq 1$ then $x^m \leq 1$.
+
+b. Explain how it follows from part (a) that if $x$ is any positive real number,
+then for every integer $m \geq 1$, if $x^m > 1$ then $x > 1$.
+
+c. Explain how it follows from part (b) that if $x$ is any positive real number,
+then for every integer $m \geq 1$, if $x > 1$ then $x^{\frac{1}{m}} > 1$.
+
+d. Let $p$, $q$, $r$, and $s$ be positive integers, and suppose
+$\dfrac{p}{q} > \dfrac{r}{s}$. Use part \(c\) and the result of exercise 40 to
+prove Theorem 11.2.2. In other words, show that for any integer $n$, if $n > 1$,
+then $n^{\frac{p}{q}} > n^{\frac{r}{s}}$.
+
+48. Prove Theorem 11.2.6(b): If $f$ and $g$ are real-valued functions defined on
+    the same set of nonnegative integers, and if there is a positive real number
+    $r$ such that $f(n) \geq 0$ and $g(n) \geq 0$ for every integer $n \geq r$,
+    and if $g(n)$ is $O(f(n))$, then $f(n)$ is $\Omega(g(n))$.
+
+49. Prove Theorem 11.2.7(a): If $f$ is a real-valued function defined on a set
+    of nonnegative integers and there is a real number $r$ such that
+    $f(n) \geq 0$ for every integer $n \geq r$, then $f(n)$ is $\Theta(f(n))$.
+
+50. Prove Theorem 11.2.8:
+
+a. Let $f$ and $g$ be real-valued functions defined on the same set of
+nonnegative integers, and suppose there is a positive real number $r$ such that
+$f(n) \geq 0$ and $g(n) \geq 0$ for every integer $n \geq r$. If $f(n)$ is
+$\Omega(g(n))$ and $c$ is any positive real number, then $cf(n)$ is
+$\Omega(g(n))$.
+
+b. Let $f$ and $g$ be real-valued functions defined on the same set of
+nonnegative integers, and suppose there is a positive real number $r$ such that
+$f(n) \geq 0$ and $g(n) \geq 0$ for every integer $n \geq r$. If $f(n)$ is
+$O(g(n))$ and $c$ is any positive real number, then $cf(n)$ is $O(g(n))$.
+
+c. Let $f$ and $g$ be real-valued functions defined on the same set of
+nonnegative integers, and suppose there is a positive real number $r$ such that
+$f(n) \geq 0$ and $g(n) \geq 0$ for every integer $n \geq r$. If $f(n)$ is
+$\Theta(g(n))$ and $c$ is any positive real number, then $cf(n)$ is
+$\Theta(g(n))$.
+
+51. Prove Theorem 11.2.9:
+
+a. Let $f_1, f_2$, and $g$ be real-valued functions defined on the same set of
+nonnegative integers, and suppose there is a positive real number $r$ such that
+$f_1(n) \geq 0$, $f_2(n) \geq 0$, and $g(n) \geq 0$ for every integer
+$n \geq r$. If $f_1(n)$ is $\Theta(g(n))$ and $f_2(n)$ is $\Theta(g(n))$, then
+$(f_1(n) + f_2(n))$ is $\Theta(g(n))$.
+
+b. Let $f_1, f_2, g_1$, and $g_2$ be real-valued functions defined on the same
+set of nonnegative integers, and suppose there is a positive real number $r$
+such that $f_1(n) \geq 0$, $f_2(n) \geq 0$, $g_1(n) \geq 0$, and $g_2(n) \geq 0$
+for every integer $n \geq r$. If $f_1(n)$ is $\Theta(g_1(n))$ and $f_2(n)$ is
+$\Theta(g_2(n))$, then $(f_1(n)f_2(n))$ is $\Theta(g_1(n)g_2(n))$.
+
+c. Let $f_1, f_2, g_1$, and $g_2$ be real-valued functions defined on the same
+set of nonnegative integers, and suppose there is a positive real number $r$
+such that $f_1(n) \geq 0$, $f_2(n) \geq 0$, $g_1(n) \geq 0$, and $g_2(n) \geq 0$
+for every integer $n \geq r$. If $f_1(n)$ is $\Theta(g_1(n))$ and $f_2(n)$ is
+$\Theta(g_2(n))$, and if there is a real number $s$ so that $g_1(n) \leq g_2(n)$
+for every integer $n \geq s$, then $(f_1(n) + f_2(n))$ is $\Theta(g_2(n))$.
