@@ -713,8 +713,20 @@ $$ Ag(n) \leq f(n) $$
 a. Write the formal negation for the definition using the symbols $\forall$ and
 $\exists$.
 
+First, the formal notation is:
+
+$$ f(n) \text{ is } \Omega(g(n)) \Leftrightarrow \exists a, A \in \mathbf{R}^+ | \forall n \geq a, Ag(n) \leq f(n) $$
+
+Then, the formal negation is:
+
+$$ f(n) \text{ is not } \Omega(g(n)) \Leftrightarrow \forall a, A \in \mathbf{R}^+, \exists n \geq a | Ag(n) > f(n) $$
+
 b. Restate the negation less formally without using the symbols $\forall$ and
 $\exists$ or the words "for any," "for every," or "there exists."
+
+$f(n)$ is not $\Omega(g(n))$ if, and only if, no matter what positive real
+numbers $a$ and $A$ are chosen, it is possible to find an integer $n$ that is
+greater than or equal to $a$ where $Ag(n) > f(n)$.
 
 2. The following is a formal definition for $O$-notation, written using
    quantifiers and variables: $f(n)$ is $O(g(n))$ if, and only if, $\exists$
@@ -725,8 +737,20 @@ $$ 0 \leq f(n) \leq Bg(n) $$
 a. Write the formal negation for the definition using the symbols $\forall$ and
 $\exists$.
 
+First, the formal notation is:
+
+$$ f(n) \text{ is } O(g(n)) \Leftrightarrow \exists b, B \in \mathbf{R}^+ | \forall n \geq b, 0 \leq f(n) \leq Bg(n) $$
+
+Then, the negation is:
+
+$$ f(n) \text{ is not } O(g(n)) \Leftrightarrow \forall b, B \in \mathbf{R}^+, \exists n \geq b | (0 > f(n) \vee f(n) > Bg(n)) $$
+
 b. Restate the negation less formally without using the symbols $\forall$ and
 $\exists$ or the words "for any," "for every," or "there exists."
+
+$f(n)$ is not $O(g(n))$ if, and only if, no matter what positive real numbers
+$b$ and $B$, it is possible to find an integer $n$ that is greater than or equal
+to $b$ where $0 > f(n)$ or $f(n) > Bg(n)$.
 
 3. The following is a formal definition for $\Theta$-notation, written using
    quantifiers and variables: $f(n)$ is $\Theta(g(n))$ if, and only if,
@@ -738,67 +762,316 @@ $$ Ag(n) \leq f(n) \leq Bg(n) $$
 a. Write the formal negation for the definition using the symbols $\forall$ and
 $\exists$.
 
+First, the formal notation is:
+
+$$ f(n) \text{ is } \Theta(g(n)) \Leftrightarrow \exists k, A, B \in \mathbf{R}^+ | \forall n \geq k, (Ag(n) \leq f(n) \leq Bg(n)) $$
+
+Then, the negation is:
+
+$$ f(n) \text{ is not } \Theta(g(n)) \Leftrightarrow \forall k, A, B \in \mathbf{R}^+, \exists n \geq k | (Ag(n) > f(n) \vee f(n) > Bg(n)) $$
+
 b. Restate the negation less formally without using the symbols $\forall$ and
 $\exists$ or the words "for any," "for every," or "there exists."
+
+$f(n)$ is not $\Theta(g(n))$ if, and only if, no matter which positive real
+numbers $k$, $A$, $B$, one can find a positive integer $n$ that is greater than
+or equal to $k$ where $Ag(n) > f(n)$ or $f(n) > Bg(n)$.
 
 In 4-9, express each statement using $\Omega$-, $O$-, or $\Theta$-notation.
 
 4. $\dfrac{1}{2}n \leq n - \left\lfloor \dfrac{n}{2} \right\rfloor + 1$ for
    every integer $n \geq 1$. (Use $\Omega$-notation.)
 
+Let $A = \dfrac{1}{2}$, $g(n) = n$,
+$f(n) = n - \left\lfloor \dfrac{n}{2} \right\rfloor + 1$, and $a = 1$ then:
+
+$$ Ag(n) \leq f(n) \quad \text{ for every integer } n \geq a $$
+
+Thus, by definition of $\Omega$-notation:
+
+$$ f(n) \text{ is } \Omega(n) $$
+
 5. $0 \leq n - \left\lfloor \dfrac{n}{2} \right\rfloor + 1 \leq n$ for every
    integer $n \geq 3$. (Use $O$-notation.)
+
+Let $B = 1$, $b = 3$, and
+$f(n) = n - \left\lfloor \dfrac{n}{2} \right\rfloor + 1$, and $g(n) = n$ then:
+
+$$ 0 \leq f(n) \leq B(g(n)) \text{ for every integer } n \geq b $$
+
+Thus, by definition of $O$-notation:
+
+$$ f(n) \text{ is } O(n) $$
 
 6. $n^2 \leq 3n(n - 2) \leq 4n^2$ for every integer $n \geq 3$. (Use
    $\Theta$-notation.)
 
+Let $A = 1$, $g(n) = n^2$, $f(n) = 3n(n - 2)$, $B = 4$, and $k = 3$, then:
+
+$$ Ag(n) \leq f(n) \leq Bg(n) \text{ for every integer } n \geq k $$
+
+By definition for $\Theta$-notation:
+
+$$ f(n) \text{ is } \Theta(n^2) $$
+
 7. $\dfrac{1}{2}n^2 \leq \dfrac{n(3n - 2)}{2}$ for every integer $n \geq 3$.
    (Use $\Omega$-notation.)
+
+Let $A = \dfrac{1}{2}$, $g(n) = n^2$, $f(n) = \dfrac{n(3n - 2)}{2}$, and
+$a = 3$, then:
+
+$$ Ag(n) \leq f(n) \text{ for every integer } n \geq a $$
+
+Thus, by definition of $\Omega$-notation:
+
+$$ f(n) \text{ is } \Omega(n^2) $$
 
 8. $0 \leq \dfrac{n(3n - 2)}{2} \leq n^2$ for every integer $n \geq 1$. (Use
    $O$-notation.)
 
-9. $\dfrac{n^3}{6} \leq n^2\left(\left\lceil \frac{n}{3} \right\rceil - 1\right ) \leq n^3$
+Let $B = 1$, $g(n) = n^2$, $f(n) = \dfrac{n(3n - 2)}{2}$, and $b = 1$, then:
+
+$$ 0 \leq f(n) \leq Bg(n) \quad \text{ for every integer } n \geq b $$
+
+Thus, by definition for $O$-notation:
+
+$$ f(n) \text{ is } O(n^2) $$
+
+9. $\dfrac{n^3}{6} \leq n^2\left(\left\lceil \frac{n}{3} \right\rceil - 1\right) \leq n^3$
    for every integer $n \geq 2$. (Use $\Theta$-notation.)
+
+Let $A = \dfrac{1}{6}$, $g(n) = n^3$,
+$f(n) = n^2\left(\left \lceil \frac{n}{3} \right\rceil - 1\right)$, $B = 1$, and
+$k = 2$, then:
+
+$$ Ag(n) \leq f(n) \leq Bg(n) \quad \text{ for every integer } n \geq k $$
+
+Then, by definition for $\Theta$-notation:
+
+$$ f(n) \text{ is } \Theta(n^3) $$
 
 10.
 
 a. Show that for any integer $n \geq 1$, $0 \leq 2n^2 + 15n + 4 \leq 21n^2$.
 
+**Proof:**
+
+Suppose $n \in \mathbf{Z}$ where $n \geq 1$.
+
+It is to be shown that $0 \leq 2n^2 + 15n + 4 \leq 21n^2$.
+
+Since $n \geq 1$, all terms in $2n^2 + 15n + 4$ are positive, so it is true that
+$0 \leq 2n^2 + 15n + 4$.
+
+Moreover,
+
+$$ 0 \leq 2n^2 + 15n + 4 \leq 2n^2 + 15n^2 + 4n^2 $$
+
+because when $n \geq 1$, $15n \leq 15n^2$, and $4 \leq 4n^2$
+
+Then, by combining like terms, this yields:
+
+$$ 0 \leq 2n^2 + 15n + 4 \leq 21n^2 $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 b. Show that for any integer $n \geq 1$, $2n^2 \leq 2n^2 + 15n + 4$.
 
+**Proof:**
+
+Suppose $n \in \mathbf{Z}$ where $n \geq 1$.
+
+It is to be shown that $2n^2 \leq 2n^2 + 15n + 4$.
+
+Since $n \geq 1$, $15n + 4$ is positive (_i.e._ $15n + 4 > 0$).
+
+It follows, by the law of addition of positive numbers, that
+$2n^2 \leq 2n^2 + 15n + 4$, which is what was to be shown.
+
+Q.E.D
+
 c. Sketch a graph to illustrate the results of parts (a) and (b).
+
+(See Page 1019 for Epp's graph.)
 
 d. Use the $O$- and $\Omega$-notations to express the results of parts (a) and
 (b).
 
+Part (a) concludes:
+
+$$ 0 \leq 2n^2 + 15n + 4 \leq 21n^2 $$
+
+Which can be expressed in $O$-notation as:
+
+$$ 2n^2 + 15n + 4 \text{ is } O(n^2) $$
+
+And part (b) concludes:
+
+$$ 2n^2 \leq 2n^2 + 15n + 4 $$
+
+Which can be expressed in $\Omega$-notation as:
+
+$$ 2n^2 + 15n + 4 \text{ is } \Omega(n^2) $$
+
 e. What can you deduce about the order of $2n^2 + 15n + 4$?
+
+Both parts (a) and (b) can be used to find the $\Theta$-notation (which is the
+expression of order of a function). By transitivity of inequality, it follows
+from parts (a) and (b) that:
+
+$$ 2n^2 \leq 2n^2 + 15n + 4 \leq 21n^2 $$
+
+Let $A = 2$, $g(n) = n^2$, $f(n) = 2n^2 + 15n + 4$, $B = 21$, and $k = 1$, then:
+
+$$ Ag(n) \leq f(n) \leq Bg(n) \quad \text{ for every } n \geq k $$
+
+Thus, by definition for $\Theta$-notation:
+
+$$ 2n^2 + 15n + 4 \text{ is } \Theta(n^2) $$
 
 11.
 
 a. Show that for any integer $n \geq 1$, $0 \leq 23n^4 + 8n^2 + 4n \leq 35n^4$.
 
+**Proof:**
+
+Suppose $n \in \mathbf{Z}$ where $n \geq 1$.
+
+It must be shown that $0 \leq 23n^4 + 8n^2 + 4n \leq 35n^4$.
+
+Since $n \geq 1$, it follows that $0 \leq 23n^4 + 8n^2 + 4n$.
+
+Also, since $n \geq 1$, it follows that:
+
+$$ 0 \leq 23n^4 + 8n^2 + 4n \leq 23n^4 + 8n^4 + 4n^4 $$
+
+since $8n^2 \leq 8n^4$ and $4n \leq 4n^4$.
+
+Then, by simple summation:
+
+$$ 0 \leq 23n^4 + 8n^2 + 4n \leq 35n^4 $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 b. Show that for any integer $n \geq 1$, $23n^4 \leq 23n^4 + 8n^2 + 4n$.
 
+**Proof:**
+
+Suppose $n \in \mathbf{Z}$ where $n \geq 1$.
+
+It is to be shown that $23n^4 \leq 23n^4 + 8n^2 + 4n$.
+
+Since $n \geq 1$, it follows that $8n^2 + 4n > 0$, and therefore
+$23n^4 \leq 23n^4 + 8n^2 + 4n$ (by the law of addition of positive numbers),
+which is what was to be shown.
+
+Q.E.D.
+
 c. Sketch a graph to illustrate the results of parts (a) and (b).
+
+(Done by hand.)
 
 d. Use the $O$-and $\Omega$-notations to express the results of parts (a) and
 (b).
 
+Part (a) concludes:
+
+$$ 0 \leq 23n^4 + 8n^2 + 4n \leq 35n^4 $$
+
+Thus, by the definition of $O$-notation:
+
+$$ 23n^4 + 8n^2 + 4n \text{ is } O(n^4) $$
+
+Part (b) concludes:
+
+$$ 23n^4 \leq 23n^4 + 8n^2 + 4n $$
+
+Thus, by the definition of $\Omega$-notation:
+
+$$ 23n^4 + 8n^2 + 4n \text{ is } \Omega(n^4) $$
+
 e. What can you deduce about the order of $23n^4 + 8n^2 + 4n$?
+
+From both parts (a) and (b), it follows that:
+
+$$ 23n^4 \leq 23n^4 + 8n^2 + 4n \leq 35n^4 $$
+
+Then, by definition of $\Theta$-notation:
+
+$$ 23n^4 + 8n^2 + 4n \text{ is } \Theta(n^4) $$
 
 12.
 
 a. Show that or any integer $n \geq 1$, $0 \leq 7n^3 + 10n^2 + 3 \leq 20n^3$.
 
+**Proof:**
+
+Suppose $n \in \mathbf{Z}$, where $n \geq 1$.
+
+It must be shown that $0 \leq 7n^3 + 10n^2 + 3 \leq 20n^3$.
+
+Since $n \geq 1$, it follows that $0 \leq 7n^3 + 10n^2 + 3$.
+
+Furthermore, since $n \geq 1$, it follows that:
+
+$$ 0 \leq 7n^3 + 10n^2 + 3 \leq 7n^3 + 10n^3 + 3n^3 $$
+
+since $10n^2 \leq 10n^3$ and $3 \leq 3n^3$.
+
+Then, by simple summation:
+
+$$ 0 \leq 7n^3 + 10n^2 + 3 \leq 20n^3 $$
+
+This is what was to be shown.
+
+Q.E.D.
+
 b. Show that for any integer $n \geq 1$, $7n^3 \leq 7n^3 + 10n^2 + 3$.
+
+**Proof:**
+
+Suppose $n \in \mathbf{Z}$ where $n \geq 1$.
+
+Since $n \geq 1$, it follows that $10n^2 + 3 > 0$, and thus (by the laws of
+summation of positive numbers) $7n^3 \leq 7n^3 + 10n^2 + 3$, which is what was
+to be shown.
+
+Q.E.D.
 
 c. Sketch a graph to illustrate the result of parts (a) and (b).
 
 d. Use the $O$- and $\Omega$-notations to express the results of parts (a) and
 (b).
 
+Part (a) concludes:
+
+$$ 0 \leq 7n^3 + 10n^2 + 3 \leq 20n^3 $$
+
+Thus, by definition for $O$-notation:
+
+$$ 7n^3 + 10n^2 + 3 \text{ is } O(n^3) $$
+
+Part (b) concludes:
+
+$$ 7n^3 \leq 7n^3 + 10n^2 + 3 $$
+
+Thus, by definition for $\Omega$-notation:
+
+$$ 7n^3 + 10n^2 + 3 \text{ is } \Omega(n^3) $$
+
 e. What can you deduce about the order of $7n^3 + 10n^2 + 3$?
+
+By parts (a) and (b), it follows that:
+
+$$ 7n^3 \leq 7n^3 + 10n^2 + 3 \leq 20n^3 $$
+
+Thus, by definition for $\Theta$-notation:
+
+$$ 7n^3 + 10n^2 + 3 \text{ is } \Theta(n^3) $$
 
 13. Use the definition of $\Theta$-notation to show that $5n^3 + 65n + 30$ is
     $\Theta(n^3)$.

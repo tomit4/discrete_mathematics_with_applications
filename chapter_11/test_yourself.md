@@ -39,15 +39,27 @@ Page 806
 1. A sentence of the form "$Ag(n) \leq f(n)$ for every $n \geq a$" translates
    into $\Omega$-notation as ____.
 
+$f(n)$ is at least of order $g(n)$ or $f(n)$ is $\Omega(g(n))$.
+
 2. A sentence of the form "$0 \leq f(n) \leq Bg(n)$ for every $n \geq b$"
    translates into $O$-notation as ____.
+
+$f(n)$ is $O(g(n))$
 
 3. A sentence of the form "$Ag(n) \leq f(n) \leq Bg(n)$ for every $n \geq k$"
    translates into $\Theta$-notation as ____.
 
+$f(n)$ is $\Theta(g(n))$
+
 4. When $n \geq 1$, $n$ ____ $n^2$ and $n^2$ ____ $n^5$.
+
+$\leq$; $\leq$
 
 5. According to the theorem on polynomial orders, if $p(n)$ is a polynomial in
    $n$, then $p(n)$ is $\Theta(n^m)$, where $m$ is ____.
 
+the degree of $p(n)$
+
 6. If $n$ is a positive integer, then $1 + 2 + 3 + \cdots + n$ has order ____.
+
+$n^2$
