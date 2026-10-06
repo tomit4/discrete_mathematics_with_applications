@@ -74,9 +74,15 @@ Page 819
    the number of times the loop will iterate by constructing a table in which
    each column represents ____.
 
+one iteration of the innermost loop
+
 2. In the worst case for an input array of length $n$, the sequential search
    algorithm has to look through ____ elements of the array before it
    terminates.
 
+$n$
+
 3. The worst-case order of the insertion sort algorithm is ____, and its
    average-case order is ____.
+
+$n^2$; $n^2$

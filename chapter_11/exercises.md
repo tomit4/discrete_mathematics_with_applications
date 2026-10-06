@@ -2592,15 +2592,27 @@ Page 819
 
 a. $\log_{2}200$
 
-b. 200
+$$ \log_{2}200 = \frac{\ln(200)}{\ln(2)} \approx 7.643856190 \text{ nanoseconds} \approx 0.0000000076 \text{ seconds} $$
+
+b. $200$
+
+$$ 200 = 200 \text{nanoseconds} = 0.0000002 \text{ seconds}  $$
 
 c. $200\log_{2}200$
 
-d. 200^2
+$$ 200\log_{2}200 = 200\left(\frac{\ln(200)}{\ln(2)}\right) \approx 1528.771238 \text{ nanoseconds} \approx 0.000001520 \text{ seconds} $$
 
-e. 200^8
+d. $200^2$
 
-f. 2^{200}
+$$ 200^2 = 40000 \text{nanoseconds} = 0.00004 \text{ seconds} $$
+
+e. $200^8$
+
+$$ 200^8 = 2.56 \cdot 10^{18} \text{nanoseconds} = 2560000000 \text{seconds} \approx 81.17706748 \text{ years}  $$
+
+f. $2^{200}$
+
+$$ 2^{200} \approx 5.095567111 \cdot 10^{43} \text{ years} $$
 
 2. Suppose an algorithm requires $cn^2$ operations when performed with an input
    of size $n$ (where $c$ is a constant).
@@ -2608,11 +2620,22 @@ f. 2^{200}
 a. How many operations will be required when the input size is increased from
 $m$ to $2m$ (where $m$ is a positive integer)?
 
+Going from $m$ to $2m$ operations means that the number of operations will be
+$c(2m)^2 = 4cm^2$.
+
 b. By what factor will the number of operations increase when the input size is
 doubled?
 
+By part (a), it is shown that when the input size is doubled, the number of
+operations goes from $cm^2$ to $4cm^2$. $\dfrac{4cm^2}{cm^2} = 4$, so that is a
+factor of $4$.
+
 c. By what factor will the number of operations increase when the input size is
 increased by a factor of ten?
+
+$$ c(10m)^2 = 100cm^2 $$
+
+$$ \frac{100cm^2}{cm^2} = 100 $$
 
 3. Suppose an algorithm requires $cn^3$ operations when performed with an input
    of size $n$ (where $c$ is a constant).
@@ -2620,11 +2643,19 @@ increased by a factor of ten?
 a. How many operations will be required when the input size is increased from
 $m$ to $2m$ (where $m$ is a positive integer)?
 
+$$ c(2m)^3 = 8cm^3 $$
+
 b. By what factor will the number of operations increase when the input size is
 doubled?
 
+By part (a), $\dfrac{8cm^3}{cm^3} = 8$
+
 c. By what factor will the number of operations increase when the input size is
 increased by a factor of ten?
+
+$$ c(10m)^3 = 1000cm^3 $$
+
+$$ \frac{1000cm^3}{cm^3} = 1000 $$
 
 Exercises 4-5 explore the fact that for relatively small values of $n$,
 algorithms with larger orders can be more efficient than algorithms with smaller
@@ -2636,10 +2667,59 @@ orders.
 a. What are orders for algorithms $A$ and $B$ from among the set of power
 functions?
 
+Algorithm $A$ has an order of $n^2$ and algorithm $B$ has an order of
+$n^{\frac{3}{2}}$.
+
 b. For what values of $n$ is algorithm $A$ more efficient than algorithm $B$?
+
+Algorithm $A$ is more efficient than algorithm $B$ when
+$2n^2 < 80n^{\frac{3}{2}}$. Analyzing exactly where this inequality holds is as
+follows:
+
+$$ 2n^2 < 80n^{\frac{3}{2}} $$
+
+$$ n^2 < 40n^{\frac{3}{2}} $$
+
+$$ \frac{n^2}{n^{\frac{3}{2}}} < 40 $$
+
+$$ n^{2 - \frac{3}{2}}< 40 $$
+
+$$ n^{\frac{1}{2}} < 40 $$
+
+$$ \sqrt{n} < 40 $$
+
+$$ n < 40^2 $$
+
+$$ n < 1600 $$
+
+Thus, algorithm $A$ is more efficient than algorithm $B$ when $n < 1600$.
 
 c. For what values of $n$ is algorithm $B$ at least 100 times more efficient
 than algorithm $A$?
+
+In order for algorithm $B$ to be at least 100 times more efficient than
+algorithm $A$, the following inequality must hold:
+
+$$ 100(80n^{\frac{3}{2}}) \leq 2n^2 $$
+
+$$ 50(80n^{\frac{3}{2}}) \leq n^2 $$
+
+$$ 4000n^{\frac{3}{2}} \leq n^2 $$
+
+$$ 4000 \leq \frac{n^2}{n^{\frac{3}{2}}} $$
+
+$$ 4000 \leq n^{2 - \frac{3}{2}} $$
+
+$$ 4000 \leq n^{\frac{1}{2}} $$
+
+$$ 4000 \leq \sqrt{n} $$
+
+$$ (4000)^2 \leq n $$
+
+$$ 16000000 \leq n $$
+
+So algorithm $B$ is at least 100 times more efficient than algorithm $A$ when
+$n \geq 16000000$.
 
 5. Suppose that when run with an input size of $n$, algorithm $A$ requires
    $10^6n^2$ operations and algorithm $B$ requires $n^3$ operations.
@@ -2647,10 +2727,46 @@ than algorithm $A$?
 a. What are orders for algorithms $A$ and $B$ from among the set of power
 functions?
 
+Algorithm $A$ is $\Theta(n^2)$ and algorithm $B$ is $\Theta(n^3)$.
+
 b. For what values of $n$ is algorithm $A$ more efficient than algorithm $B$?
+
+For algorithm $A$ to be more efficient than algorithm $B$, the following
+inequality must hold:
+
+$$ 10^6n^2 < n^3 $$
+
+$$ 10^6 < \frac{n^3}{n^2} $$
+
+$$ 10^6 < n^{3 - 2} $$
+
+$$ 10^6 < n^1 $$
+
+$$ 10^6 < n $$
+
+So algorithm $A$ is more efficient than algorithm $B$ when $n > 10^6$ or
+$n > 1000000$.
 
 c. For what values of $n$ is algorithm $B$ at least 100 times more efficient
 than algorithm $A$?
+
+For algorithm $B$ to be at least 100 times more efficient than algorithm $A$,
+the following inequality must hold:
+
+$$ 100(n^3) \leq 10^6n^2 $$
+
+$$ 10^2(n^3) \leq 10^6n^2 $$
+
+$$ n^3 \leq 10^4n^2 $$
+
+$$ \frac{n^3}{n^2} \leq 10^4 $$
+
+$$ n \leq 10^4 $$
+
+$$ n \leq 10000 $$
+
+Thus algorithm $B$ is at least 100 times more efficient than algorithm $A$ when
+$n \leq 10000$.
 
 For each of the algorithm segments in 6-19, assume that $n$ is a positive
 integer. (a) Compute the actual number of elementary operations (additions,
@@ -2664,89 +2780,548 @@ for the algorithm segment.
 
 $\textbf{for } i := 3 \textbf{ to } n - 1\\ \ \ a := 3 \cdot n + 2 \cdot i - 1\\ \textbf{next } i$
 
+a.
+
+There are 2 multiplication, 1 addition, and 1 subtraction operations done inside
+the innermost loop. $2 + 1 + 1 = 4$ operations in total per iteration of the
+loop.
+
+Then, there are $(n - 1) - (3) + 1 = n - 3$ loop iterations.
+
+Thus there are $4(n - 3) = 4n - 12$ operations in total for this algorithm.
+
+b. By the theorem on polynomial orders, this algorithm is $\Theta(n)$, or of an
+order of $n$.
+
 7.
 
 $\textit{max } := a[1]\\ \textbf{for } i := 2 \textbf{ to } n\\ \ \ \textbf{if } \textit{max } < a[i] \textbf{ then } \textit{max } := a[i]\\ \textbf{next } i$
+
+a.
+
+There is 1 comparison per iteration of the loop. Thus there is 1 operation per
+loop iteration.
+
+The amount of loop iterations is $(n) - (2) + 1 = n - 1$.
+
+Thus there are $1(n - 1) = n - 1$ total operations for this algorithm.
+
+b.
+
+By the theorem on polynomial orders, this algorithm is $\Theta(n)$, or of an
+order of $n$.
 
 8.
 
 $a := 0\\ \textbf{for } i := 1 \textbf{ to } \left\lfloor \dfrac{n}{2} \right\rfloor\\ \ \ a := a + 3\\ \textbf{next } i$
 
+a.
+
+There is 1 addition operation of the loop, thus there is $1$ operations per loop
+iteration.
+
+The total number of loop iterations is
+$\left\lfloor \dfrac{n}{2} \right\rfloor - 1 + 1 = \left\lfloor \dfrac{n}{2} \right\rfloor$.
+
+Thus the total number of operations is
+$1\left\lfloor \dfrac{n}{2} \right\rfloor = \left\lfloor \dfrac{n}{2} \right\rfloor$
+total operations for this algorithm.
+
+b.
+
+$$
+\left\lfloor \frac{n}{2} \right\rfloor =
+\begin{cases}
+\frac{n}{2} & \text{if } n \text{ is even} \\
+\frac{n - 1}{2} & \text{if } n \text{ is odd}
+\end{cases}
+$$
+
+In both cases, by the theorem on polynomial orders, this algorithm is
+$\Theta(n)$, or of an order of $n$.
+
 9.
 
 $s := 0\\ \textbf{for } i := 1 \textbf{ to } n\\ \ \ \textbf{for } j := 1 \textbf{ to } 2n\\ \ \ \ \ s := s + i \cdot j\\ \ \ \textbf{next } j\\ \textbf{next } i$
+
+a.
+
+There is 1 addition operation and 1 multiplication operation per iteration of
+the inner loop. Thus there are $1 + 1 = 2$ operations per iteration of the inner
+loop.
+
+The number of iterations of the inner loop is $2n - 1 + 1 = 2n$.
+
+The number of iterations of the outer loop is $n - 1 + 1 = n$.
+
+Thus there are $2(2n(n)) = 4n^2$ total operations for this algorithm.
+
+b.
+
+By the theorem on polynomial orders, this algorithm is $\Theta(n^2)$.
 
 10.
 
 $\textbf{for } k := 2 \textbf{ to } n\\ \ \ \textbf{for } j := 1 \textbf{ to } 3n\\ \ \ \ \ x := a[k] - b[j]\\ \ \ \textbf{next } j\\ \textbf{next } k$
 
+a.
+
+This algorithm has 1 subtraction operation in its innermost loop. Thus there is
+$1$ total operations per iteration of the innermost loop.
+
+The innermost loop iterates $3n - 1 + 1 = 3n$ times.
+
+The outer loop iterates $n - 2 + 1 = n - 1$ times.
+
+Thus the total operations for this algorithm is $1(3n(n - 1)) = 3n^2 - 3n$.
+
+b.
+
+By the theorem on polynomial orders, this algorithm is $\Theta(n^2)$.
+
 11.
 
 $\textbf{for } k := 1 \textbf{ to } n - 1\\ \ \ \textbf{for } j := 1 \textbf{ to } k + 1\\ \ \ \ \ x := a[k] + b[j]\\ \ \ \textbf{next } j\\ \textbf{next } k$
+
+a.
+
+The innermost loop has 1 addition operation. Thus there are $1$ operations per
+iteration of the innermost loop.
+
+(See Page 1023 for justification of the number of iterations of both the inner
+and outer loop, it is essentially a standard summation).
+
+The total loop iterations are:
+
+$$ 2 + 3 + \cdots + n = (1 + 2 + 3 \cdots + n) - 1 $$
+
+And by Theorem 5.2.1:
+
+$$ = \frac{n(n + 1)}{2} - 1 $$
+
+$$ = \frac{n^2 + n}{2} - 1 $$
+
+$$ = \frac{n^2 + n - 2}{2} $$
+
+$$ = \frac{1}{2}n^2 + \frac{1}{2}n - 1 $$
+
+Because there is a total of 1 operations per iteration of the inner loop, the
+total number of iterations is:
+
+$$ = \frac{1}{2}n^2 + \frac{1}{2}n - 1 $$
+
+b.
+
+By the theorem on polynomial orders, this algorithm is $\Theta(n^2)$.
 
 12.
 
 $\textbf{for } k := 1 \textbf{ to } n - 1\\ \ \ \textit{max } := a[k]\\ \ \ \textbf{for } i := k + 1 \textbf{ to } n\\ \ \ \ \ \textbf{if } \textit{max } < a[i] \textbf{ then } \textit{max } := a[i]\\ \ \ \textbf{next} i\\ a[k] := \textit{max}\\ \textbf{next } k$
 
+a.
+
+There is 1 comparison operation in the inner loop.
+
+Consider the following table that illustrates the iterations:
+
+|     |   |   |     |   |   |          |         |
+| --- | - | - | --- | - | - | -------- | ------- |
+| $k$ | 1 | 1 | 1   | 2 | 2 | $\cdots$ | $n - 1$ |
+| $i$ | 2 | 3 | $n$ | 3 | 4 | $\cdots$ | $n$     |
+
+So the total number of operations can be expressed as:
+
+$$ (n - 1) + (n - 2) + \cdots + 1 = (1 + 2 + \cdots + n) - n $$
+
+$$ = \frac{n(n + 1)}{2} - n $$
+
+$$ = \frac{n^2 + n}{2} - n $$
+
+$$ = \frac{n^2 + n - 2n}{2} $$
+
+$$ = \frac{n^2 - n}{2} $$
+
+$$ = \frac{1}{2}n^2 - \frac{1}{2}n $$
+
+b.
+
+This is $\Theta(n^2)$.
+
 13.
 
 $\textbf{for } i := 1 \textbf{ to } n - 1\\ \ \ \textbf{for } j := i \textbf{ to } n\\ \ \ \ \ \textbf{if } a[j] > a[i] \textbf{ then do}\\ \ \ \ \ \ \ \textit{temp } := a[i]\\ \ \ \ \ \ \ a[i] := a[j]\\ \ \ \ \ \ \ a[j] := \textit{temp}\\ \ \ \ \ \ \ \textbf{end do}\\ \ \ \textbf{next } j\\ \textbf{next } i$
+
+a.
+
+The inner loop has $1$ comparison operation.
+
+The outer loop iterates $(n - 1) - (1) + 1 = n - 1$ times.
+
+When $i = 1$, the inner loop iterates $n - 1 + 1 = n$ times. When $i = 2$, the
+inner loop iterates $n - 2 + 1 = n - 1$ times, and so on. When $i = n - 1$, the
+inner loop iterates $n - (n - 1) + 1 = n - n + 1 + 1 = 2$ times.
+
+The total number of operations is then:
+
+$$ n + (n - 1) + \cdots + 3 + 2 = (1 + 2 + \cdots + n) - 1 $$
+
+$$ = \frac{n(n + 1)}{2} - 1 $$
+
+$$ = \frac{n^2 + n}{2} - 1 $$
+
+$$ = \frac{n^2 + n - 2}{2} $$
+
+$$ = \frac{1}{2}n^2 + \frac{1}{2}n - 1 $$
+
+b.
+
+This is $\Theta(n^2)$.
 
 14.
 
 $t := 0\\ \textbf{for } i := 1 \textbf{ to } n\\ \ \ s := 0\\ \ \ \textbf{for } j := 1 \textbf{ to } i\\ \ \ \ \ s := s + a[j]\\ \ \ \textbf{next } j\\ \ \ t := t + s^2\\ \textbf{next } i$
 
+a.
+
+The number of operations per inner loop iteration is 1 addition operation.
+
+When $i = 1$, the inner loop iterates $1 - 1 + 1 = 1$ times, when $i = 2$,
+$2 - 1 + 1 = 2$ times, and so on. When $i = n$, the inner loop iterates
+$n - 1 + 1 = n$ times.
+
+Thus the total number of inner loop iterations is:
+
+$$ 1 + 2 + \cdots + n = \frac{n(n + 1)}{2} = \frac{1}{2}n^2 + \frac{1}{2}n $$
+
+Now, there are 2 additional operations per outer loop iteration (1 addition and
+1 multiplication per the exponent), and the total number of outer loop
+iterations is $n - 1 + 1 = n$. Thus there are an additional $2n$ operations in
+total. So the total number of operations is:
+
+$$ \frac{1}{2}n^2 + \frac{1}{2}n + 2n $$
+
+$$ = \frac{1}{2}n^2 + \frac{3}{2}n $$
+
+b.
+
+This is $\Theta(n^2)$.
+
 15.
 
 $\textbf{for } i := 1 \textbf{ to } n - 1\\ \ \ p := 1\\ \ \ q := 1\\ \ \ \textbf{for } j := i + 1 \textbf{ to } n\\ \ \ \ \ p := p \cdot c[j]\\ \ \ \ \ q := q \cdot (c[j])^2\\ \ \ \textbf{next } j\\ \ \ r := p + q\\ \textbf{next } i$
+
+a.
+
+The inner loop has 3 operations per iteration (two multiplication directly and a
+third multiplication via exponentiation).
+
+When $j = 2$, the inner loop iterates $n - 2 + 1 = n - 1$ times, when $j = 3$,
+the inner loop iterates $n - 3 + 1 = n - 2$ times, and so on. When $j = n$, the
+inner loop iterates $n - n + 1 = 1$ times.
+
+Thus the number of times the inner loop iterates is:
+
+$$ (n - 1) + (n - 2) + \dots + 1 $$
+
+$$ = 1 + 2 + \dots + (n - 1) $$
+
+$$ = \frac{(n - 1)((n - 1) + 1)}{2} $$
+
+$$ = \frac{(n - 1)(n)}{2} $$
+
+$$ = \frac{n^2 - n}{2} $$
+
+And because there are 3 operations per loop, the total number of _inner_ loop
+operations is:
+
+$$ 3\left(\frac{n^2 - n}{2}\right) $$
+
+$$ = \frac{3(n^2 - n)}{2} $$
+
+$$ = \frac{3n^2 - 3n}{2} $$
+
+$$ = \frac{3}{2}n^2 - \frac{3}{2}n $$
+
+Now, the outer loop does have 1 addition operation per iteration, and the outer
+loop iterates $(n - 1) - (1) + 1 = n - 1$ times. So there is an additional
+$1(n - 1) = n - 1$ operations per outer loop iteration. Thus the total
+operations for the algorithm are:
+
+$$ \frac{3}{2}n^2 - \frac{3}{2}n + (n - 1) $$
+
+$$ = \frac{3}{2}n^2 - \frac{3}{2}n + n - 1 $$
+
+$$ = \frac{3}{2}n^2 - \frac{1}{2}n - 1 $$
+
+b. This is $\Theta(n^2)$.
 
 16.
 
 $\textbf{for } i := 1 \textbf{ to } n\\ \ \ s := 0\\ \ \ \textbf{for } j := 1 \textbf{ to } i - 1\\ \ \ \ \ s := s + j \cdot (i - j + 1)\\ \ \ \textbf{next } j\\ \ \ r := s^2\\ \textbf{next i}$
 
+a.
+
+The inner loop has 4 operations (2 addition, 1 subtraction, 1 multiplication).
+
+When $i = 1$, the inner loop runs $(1 - 1) - 1 + 1 = 0$ times, when $i = 2$, it
+runs $(2 - 1) - 1 + 1 = 1$ times. When $i = n$, the inner loop runs
+$(n - 1) - 1 + 1 = n - 1$ times.
+
+Thus the total amount of inner loop iterations is:
+
+$$ 0 + 1 + \cdots + n - 1 $$
+
+$$ = \frac{(n - 1)((n - 1) + 1)}{2} $$
+
+$$ = \frac{(n - 1)(n)}{2} $$
+
+$$ = \frac{n^2 - n}{2} $$
+
+And since there are 4 operations per iteration, the total number of _inner_ loop
+operations is:
+
+$$ 4\left(\frac{n^2 - n}{2}\right) $$
+
+$$ = 2(n^2 - n) $$
+
+$$ = 2n^2 - 2n $$
+
+Now, there is 1 multiplication operation per _outer_ loop iteration (via
+exponentiation), and the outer loop runs $n - 1 + 1 = n$ times. Thus there is an
+additional $n$ operations. Therefore, the total operations for the algorithm is:
+
+$$ 2n^2 - 2n + n $$
+
+$$ = 2n^2 - n $$
+
+b.
+
+This is $\Theta(n^2)$.
+
 17.
 
 $\textbf{for } i := 1 \textbf{ to } n\\ \ \ \textbf{for } j := 1 \textbf{ to } \left\lfloor  \dfrac{(i + 1)}{2} \right\rfloor\\ \ \ \ \ a := (n - 1) \cdot (n - j)\\ \ \ \textbf{next } j\\ \textbf{next } i$
+
+a.
+
+Omitted.
+
+b.
+
+Omitted.
 
 18.
 
 $\textbf{for } i := 1 \textbf{ to } n\\ \ \ \textbf{for } j := \left\lfloor \dfrac{(i + 1)}{2} \right\rfloor \textbf{ to } n\\ \ \ \ \ x := i \cdot j\\ \ \ \textbf{next } j\\ \textbf{next } i$
 
+a.
+
+Omitted.
+
+b.
+
+Omitted.
+
 19.
 
 $\textbf{for } i := 1 \textbf{ to } n\\ \ \ \textbf{for } j := 1 \textbf{ to } i\\ \ \ \ \ \textbf{for } k := 1 \textbf{ to } j\\ \ \ \ \ \ \ x := i \cdot j \cdot k\\ \ \ \ \ \textbf{next } k\\ \ \ \textbf{next } j\\ \textbf{next } i$
+
+a.
+
+Omitted.
+
+b.
+
+Omitted.
 
 20. Construct a table showing the result of each step when insertion sort is
     applied to the array $a[1] = 6, a[2] = 2, a[3] = 1, a[4] = 8,$ and
     $a[5] = 4$.
 
+|                  | $a[1]$ | $a[2]$ | $a[3]$ | $a[4]$ | $a[5]$ |
+| ---------------- | ------ | ------ | ------ | ------ | ------ |
+| Initial Order    | 6      | 2      | 1      | 8      | 4      |
+| Result of step 1 | 2      | 6      | 1      | 8      | 4      |
+| Result of step 2 | 1      | 2      | 6      | 8      | 4      |
+| Result of step 3 | 1      | 2      | 6      | 8      | 4      |
+| Final order      | 1      | 2      | 4      | 6      | 8      |
+
 21. Construct a table showing the result of each step when insertion sort is
     applied to the array $a[1] = 7, a[2] = 3, a[3] = 6, a[4] = 9,$ and
     $a[5] = 5$.
 
+|                  | $a[1]$ | $a[2]$ | $a[3]$ | $a[4]$ | $a[5]$ |
+| ---------------- | ------ | ------ | ------ | ------ | ------ |
+| Initial Order    | 7      | 3      | 6      | 9      | 5      |
+| Result of step 1 | 3      | 7      | 6      | 9      | 5      |
+| Result of step 2 | 3      | 6      | 7      | 9      | 5      |
+| Result of step 3 | 3      | 6      | 7      | 9      | 5      |
+| Final order      | 3      | 5      | 6      | 7      | 9      |
+
 22. Construct a trace table showing the action of insertion sort on the array of
     exercise 20.
+
+|        |   |   |   |   |   |   |   |   |   |   |   |
+| ------ | - | - | - | - | - | - | - | - | - | - | - |
+| $n$    | 5 |   |   |   |   |   |   |   |   |   |   |
+| $a[1]$ | 6 | 2 |   |   | 1 |   |   |   |   |   |   |
+| $a[2]$ | 2 | 6 |   | 1 | 2 |   |   |   |   |   |   |
+| $a[3]$ | 1 |   |   | 6 |   |   |   |   |   | 4 |   |
+| $a[4]$ | 8 |   |   |   |   |   |   |   | 4 | 6 |   |
+| $a[5]$ | 4 |   |   |   |   |   |   |   | 8 |   |   |
+| $k$    | 2 |   | 3 |   |   | 4 |   | 5 |   |   |   |
+| $x$    | 2 |   | 1 |   |   | 8 |   | 4 |   |   |   |
+| $j$    | 1 | 0 | 2 | 1 | 0 | 3 | 0 | 4 | 3 | 2 | 0 |
 
 23. Construct a trace table showing the action of insertion sort on the array of
     exercise 21.
 
+|            |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| ---------- | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
+| $n$        | 5 |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| $a[1]$     | 7 | 3 |   |   |   |   |   |   |   |   |   |   |   |   |
+| $a[2]$     | 3 | 7 | 6 |   |   |   |   |   |   |   |   | 5 |   |   |
+| $a[3]$     | 6 |   | 7 |   |   |   |   |   |   |   | 5 | 6 |   |   |
+| $a[4]$     | 9 |   |   |   |   |   |   |   |   | 5 | 7 |   |   |   |
+| $a[5]$     | 5 |   |   |   |   |   |   |   |   | 9 |   |   |   |   |
+| $k$        | 2 |   | 3 |   |   | 4 |   |   |   | 5 |   |   |   |   |
+| $x$/$a[k]$ | 3 |   | 6 |   |   | 9 |   |   |   | 5 |   |   |   |   |
+| $j$        | 1 | 0 | 2 | 1 | 0 | 3 | 2 | 1 | 0 | 4 | 3 | 2 | 1 | 0 |
+
 24. How many comparisons between values of $a[j]$ and $x$ actually occur when
     insertion sort is applied to the array of exercise 20?
+
+When $k = 2$, there is 1 comparison operation, when $k = 3$, there is 2
+operations, when $k = 4$, there is 1 operations, and when $k = 5$, there is 3
+operations. Thus the total comparisons is $1 + 2 + 1 + 3 = 7$.
 
 25. How many comparisons between values of $a[j]$ and $x$ actually occur when
     insertion sort is applied to the array of exercise 21?
 
+When $k = 2$, there is 1, when $k = 3$, there is 2, when $k = 4$, there is 1,
+when $k = 5$, there is 3. So total comparisons is $1 + 2 + 1 + 4 = 8$
+
 26. According to Example 11.3.6, the maximum number of comparisons needed to
     perform insertion sort on an array of length five is $5^2 + 5 - 2 = 28$.
-    Find an array of length five that requires the maximum number 9f comparisons
+    Find an array of length five that requires the maximum number of comparisons
     when insertion sort is applied to it.
+
+$$ a[1] = 5, a[2] = 4, a[3] = 3, a[4] = 2, a[5] = 1 $$
 
 27. Consider the recurrence relation that arose in Example 11.3.7: $E_1 = 0$ and
     $E_k = E_{k - 1} + \dfrac{k + 1}{2}$, for each integer $k \geq 2$.
 
+_Hint:_ $E_n = \dfrac{1}{2}[3 + 4 + \cdots + (n + 1)]$, which equals
+$\dfrac{1}{2}[(1 + 2 + 3 + \cdots + (n + 1)) - (1 + 2)]$
+
 a. Use iteration to find an explicit formula for the sequence.
 
+$$ E_1 = 0, E_2 = E_1 + \frac{2 + 1}{2} = 0 + \frac{3}{2}, E_3 = E_2 + \frac{3 + 1}{2} = \frac{3}{2} + 2 = \frac{7}{2} $$
+
+By the hint:
+
+$$ E_n = \frac{1}{2}[(1 + 2 + 3 + \cdots + (n + 1)) - (1 + 2)] $$
+
+So:
+
+$$ E_n = \frac{1}{2}\left(\frac{(n + 1)((n + 1) + 1)}{2} - 3\right) $$
+
+$$ = \frac{1}{2}\left(\frac{(n + 1)(n + 2)}{2} - 3\right) $$
+
+$$ = \frac{1}{2}\left(\frac{n^2 + 3n + 2}{2} - 3\right) $$
+
+$$ = \frac{1}{2}\left(\frac{n^2 + 3n + 2 - 6}{2}\right) $$
+
+$$ = \frac{1}{2}\left(\frac{n^2 + 3n - 4}{2}\right) $$
+
+$$ = \frac{n^2 + 3n - 4}{4} $$
+
+$$ = \frac{1}{4}n^2 + \frac{3}{4}n - 1 $$
+
 b. Use mathematical induction to verify the correctness of the formula.
+
+**Proof (by mathematical induction):**
+
+Suppose $n \in \mathbf{Z}$, with $n \geq 1$.
+
+Let $P(n)$ be the equation:
+
+$$ E_n = \frac{1}{4}n^2 + \frac{3}{4}n - 1 $$
+
+It is to be shown that $P(n)$ holds for all $n \geq 1$.
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ E_1 = \frac{1}{4}(1)^2 + \frac{3}{4}(1) - 1 $$
+
+$$ = \frac{1}{4} + \frac{3}{4} - 1 $$
+
+$$ = \frac{4}{4} - 1 $$
+
+$$ = 1 - 1 $$
+
+$$ = 0 $$
+
+By Example 11.3.7, this is known to be true, thus $P(1)$ is true.
+
+_Inductive Step:_
+
+Suppose $k \in \mathbf{Z}$, with $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ E_k = \frac{1}{4}k^2 + \frac{3}{4}k - 1 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ E_{k + 1} = \frac{1}{4}(k + 1)^2 + \frac{3}{4}(k + 1) - 1 $$
+
+Equivalently, prove that $E_{k + 1}$:
+
+$$ = \frac{1}{4}(k + 1)(k + 1) + \frac{3}{4}(k + 1) - 1 $$
+
+$$ = \frac{1}{4}(k^2 + 2k + 1) + \frac{3}{4}(k + 1) - 1 $$
+
+$$ = \frac{1}{4}k^2 + \frac{1}{2}k + \frac{1}{4} + \frac{3}{4}k + \frac{3}{4} - 1 $$
+
+$$ = \frac{1}{4}k^2 + \frac{5}{4}k + \frac{4}{4} - 1 $$
+
+$$ = \frac{1}{4}k^2 + \frac{5}{4}k + 1 - 1 $$
+
+$$ = \frac{1}{4}k^2 + \frac{5}{4}k $$
+
+Now, by the given recurrence relation, it is known that:
+
+$$ E_k = E_{k - 1} + \frac{k + 1}{2} $$
+
+Equivalently, this means that:
+
+$$ E_{k + 1} = E_k + \frac{k + 2}{2} $$
+
+By the inductive hypothesis this is:
+
+$$ = \frac{1}{4}k^2 + \frac{3}{4}k - 1 + \frac{k + 2}{2} $$
+
+$$ = \frac{1}{4}k^2 + \frac{3}{4}k - 1 + \frac{1}{2}(k + 2) $$
+
+$$ = \frac{1}{4}k^2 + \frac{3}{4}k - 1 + \frac{1}{2}k + 1 $$
+
+$$ = \frac{1}{4}k^2 + \frac{3}{4}k + \frac{1}{2}k $$
+
+$$ = \frac{1}{4}k^2 + \frac{5}{4}k $$
+
+And this is what was to be shown, thus $P(k + 1)$ is true.
+
+_Conclusion:_
+
+Since both the basis and inductive steps have been demonstrated, it can be
+concluded that $P(n)$ is true for all $n \geq 1$.
+
+Q.E.D.
 
 Exercises 28-35 refer to _selection sort_, which is another algorithm to arrange
 the items in an array in ascending order.
