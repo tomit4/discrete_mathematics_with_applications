@@ -406,3 +406,104 @@ $\ \ x := a[k]\\ \ \ j := k - 1\\ \ \ \textbf{while } (j \neq 0)\\ \ \ \ \ \text
 **Output:** $a[1], a[2], a[3], \dots, a[n]$ _[in ascending order]_
 
 ---
+
+Page 824
+
+**Definition**
+
+If $b$ is a positive real number not equal to $1$, then the **logarithmic
+function with base $b$, $\log_{b}: \mathbf{R}^+ \to \mathbf{R}$**, is the
+function that sends each positive real number $x$ to the number $\log_{b}x$,
+which is the exponent to which $b$ must be raised to obtain $x$.
+
+---
+
+Page 824
+
+11.4.1
+
+If $b > 1$, then for all positive numbers $x_1$ and $x_2$,
+
+$$ \text{if } x_1 < x_2 \text{, then } \log_{b}(x_1) < \log_{b}(x_2) $$
+
+---
+
+Page 825
+
+11.4.2
+
+If $k$ is an integer and $x$ is a real number with
+
+$$ 2^k \leq x < 2^{k + 1} \text{, then } \lfloor \log_{2}x \rfloor = k $$
+
+---
+
+Page 825
+
+11.4.2 described in words as follows:
+
+If $x$ is a positive number that lies between two consecutive integer powers of
+$2$, the floor of the logarithm with base $2$ of $x$ is the exponent of the
+smaller power of $2$.
+
+---
+
+Page 826
+
+11.4.3
+
+$$ \text{For any odd integer } n > 1, \lfloor \log_{2}(n - 1) \rfloor = \lfloor \log_{2}n \rfloor $$
+
+---
+
+Page 829
+
+For all real numbers $b$ and $r$ with $b > 1$ and $r > 0$, there is a positive
+real number $s$ such that
+
+11.4.9
+
+$$ \log_{b}x \leq x^r \quad \text{ for every real number } x \geq s $$
+
+and
+
+11.4.10
+
+$$ x^r \leq b^x \quad \text{ for every real number } x \geq s $$
+
+---
+
+Page 829
+
+For all real numbers $b$ and $r$ with $b > 1$ and $r > 0$,
+
+11.4.11
+
+$$ \log_{b}n \text{ is } O(n^r) $$
+
+and
+
+11.4.12
+
+$$ n^r \text{ is } O(b^n) $$
+
+---
+
+Page 830
+
+11.4.13
+
+For every real number $b$ with $b > 1$, there is a positive real number $s$ such
+that for every real number $x \geq s$,
+
+$$ x \leq x\log_{b}x \leq x^2 $$
+
+---
+
+Page 830
+
+11.4.14
+
+For every real number $b > 1$,
+
+$$ n \text{ is } O(n\log_{b}n) \text{ and } n\log_{b}n \text{ is } O(n^2) $$

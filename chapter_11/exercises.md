@@ -3624,3 +3624,239 @@ By 42 and the theorem on polynomial orders, Algorithm 11.3.4 is $\Theta(n)$.
 
 Algorithm 11.3.3 is $\Theta(n^2)$, and thus is less efficient than Algorithm
 11.3.4 since $n \leq n^2$.
+
+---
+
+Page 834
+
+**Exercise Set 11.4**
+
+Graph each function defined in 1-8.
+
+1. $f(x) = 3^x$ for each real number $x$
+
+2. $g(x) = \left(\dfrac{1}{3}\right)^x$ for each real number $x$
+
+3. $h(x) = \log_{10}x$ for each positive real number $x$
+
+4. $k(x) = \log_{2}x$ for each positive real number $x$
+
+5. $F(x) = \left\lfloor \log_{2}x right\rfloor$ for each positive real number
+   $x$
+
+6. $G(x) = \left\lfloor \log_{10}x right\rfloor$ for each positive real number
+   $x$
+
+7. $H(x) = x\log_{2}x$ for each positive real number $x$
+
+8. $K(x) = x\log_{10}x$ for each positive real number $x$
+
+9. The scale of the graph shown in Figure 11.4.1 is one-fourth inch to each
+   unit. If the point $(2, 2^{64})$ is plotted on the graph of $y = 2^x$, how
+   many miles will it lie above the horizontal axis? What is the ratio of the
+   height of the point to the distance of the earth from the sun? (There are 12
+   inches per foot and 5,280 feet per mile. The earth is approximately
+   93,000,000 miles from the sun on average.)
+   ($\dfrac{1}{4} \text{ inch } \approx 0.635 \text{ cm}, 1 \text{ mile } \approx 0.62 \text{ km}$)
+
+10.
+
+a. Use the definition of logarithm to show that $\log_{b}b^x = x$ for every real
+number $x$.
+
+b. Use the definition of logarithm to show that $b^{\log_{b}x} = x$ for every
+positive real number $x$.
+
+c. By the result of exercise 28 in Section 7.3, if $f: X \to Y$ and $g: Y \to X$
+are functions and $g \circ f = I_X$ and $f \circ g = I_Y$, then $f$ and $g$ are
+inverse functions. Use this result to show that $\log_{b}$ and $\text{exp}_b$
+(the exponential function with base $b$) are inverse functions.
+
+11. Let $b > 1$.
+
+a. Use the fact that $u = \log_{b}v \Leftrightarrow v = b^u$ to show that a
+point $(u, v)$ lies on the graph of the logarithmic function with base $b$ if,
+and only if, $(v, u)$ lies on the graph of the exponential function with base
+$b$.
+
+b. Plot several pairs of points of the form $(u, v)$ and $(v, u)$ on a
+coordinate system. Describe the geometric relationship between the locations of
+the points in each pair.
+
+c. Draw the graphs of $y = \log_{2}x$ and $y = 2^x$. Describe the geometric
+relationship between these graphs.
+
+12. Give a graphical interpretation for property (11.4.2) in Example 11.4.1(a)
+    for $0 < x < 1$.
+
+13. Suppose a positive real number $x$ satisfies the inequality
+    $10^m \leq x < 10^{m + 1}$ where $m$ is an integer. What can be inferred
+    about $\lfloor \log_{10}x \rfloor$? Justify your answer.
+
+14.
+
+a. Prove that if $x$ is a positive real number and $k$ is a nonnegative integer
+such that $2^{k - 1} < x \leq 2^k$, then $\lceil \log_{2}k \rceil = k$.
+
+b. Describe in words the statement proved in part (a).
+
+15. If $n$ is an odd integer and $n > 1$, is
+    $\lceil \log_{2}(n - 1) \rceil = \lceil \log_{2}(n) \rceil$? Justify your
+    answer.
+
+16. If $n$ is an odd integer and $n > 1$, is
+    $\lceil \log_{2}(n - 1) \rceil = \lceil \log_{2}(n) \rceil$? Justify your
+    answer.
+
+17. If $n$ is an odd integer and $n > 1$, is
+    $\lfloor \log_{2}(n - 1) \rfloor = \lfloor \log_{2}(n) \rfloor$? Justify
+    your answer.
+
+In 18 and 19, indicate how many binary digits are needed to represent the
+numbers in binary notation. Use the method shown in Example 11.4.3.
+
+18. 148,206
+
+19. 5,067,329
+
+20. It was shown in the text that the number of binary digits needed to
+    represent a positive integer $n$ is $\lfloor \log_{2}n \rfloor + 1$. Can
+    this also be given as $\lceil \log_{2}n \rceil$? Why or why not?
+
+In each of 21 and 22, a sequence is specified by a recurrence relation and
+initial conditions. In each case, (a) use iteration to guess an explicit formula
+for the sequence; (b) use strong mathematical induction to confirm the
+correctness of the formula you obtained in part (a).
+
+21.
+
+$$ a_k = a_{\lfloor \frac{k}{2} \rfloor} \text{, for each integer } k \geq 2 $$
+
+$$ a_1 = 1 $$
+
+22.
+
+$$ b_k = b_{\lfloor \frac{k}{2} \rfloor} \text{, for each integer } k \geq 2 $$
+
+$$ b_1 = 1 $$
+
+23. Define a sequence $c_1, c_2, c_3, \dots$ recursively as follows:
+
+$$ c_1 = 0 $$
+
+$$ c_k = c_{\lfloor \frac{k}{2} \rfloor}  + k \text{, for each integer } k \geq 2$$
+
+Use strong mathematical induction to show that $c_n \leq n^2$ for every integer
+$n \geq 1$.
+
+24. Use strong mathematical induction to show that for the sequence of exercise
+    23, $c_n \leq n\log_{2}n$, for every integer $n \geq 4$.
+
+Exercises 25 and 26 refer to properties 11.4.9 and 11.4.10. To solve them, think
+big!
+
+25. Find a real number $x > 3$ such that $\log_{2}x < x^{\frac{1}{10}}$.
+
+26. Find a real number $x > 1$ such that $x^{50} < 2^x$.
+
+Use Theorems 11.2.7-11.2.9 and properties 11.4.11, 11.4.12, and 11.4.13 to
+derive each statement in 27-30.
+
+27. $2n + \log_{2}n$ is $\Theta(n)$
+
+28. $n^2 + 5n\log_{2}n$ is $\Theta(n^2)$
+
+29. $n^2 + 2^n$ is $\Theta(2^n)$
+
+30. $2^{n + 1}$ is $\Theta(2^n)$
+
+31. Show that $4^n$ is not $O(2^n)$.
+
+Prove each of the statements in 32-37, assuming $n$ is an integer variable that
+takes positive integer values. Use identities from Section 5.2 as needed.
+
+32. $1 + 2 + 2^2 + 2^3 + \cdots + 2^n$ is $\Theta(2^n)$.
+
+33. $4 + 4^2 + 4^3 + \cdots + 4^n$ is $\Theta(4^n)$.
+
+34. $2 + 2 \cdot 3^2 + 2 \cdot 3^4 + \cdots + 2 \cdot 3^{2n}$ is
+    $\Theta(3^{2n})$.
+
+35. $\dfrac{1}{5} + \dfrac{4}{5^2} + \dfrac{4^2}{5^3} + \cdots + \dfrac{4^n}{5^{n + 1}}$
+    is $\Theta(1)$.
+
+36. $n + \dfrac{n}{2} + \dfrac{n}{4} + \cdots + \dfrac{n}{2^n}$ is $\Theta(n)$.
+
+37. $\dfrac{2n}{3} + \dfrac{2n}{3^2} + \dfrac{2n}{3^3} + \cdots + \dfrac{2n}{3^n}$
+    is $\Theta(n)$.
+
+38. Quantities of the form
+
+$$ k_1n + k_2n\log n \text{ for positive integers } k_1, k_2, \text{ and } n $$
+
+arise in the analysis of the merge sort algorithm in computer science. Show that
+for any positive integer $k$,
+
+$$ k_1n + k_2n\log_{2}n \text{ is } \Theta(n\log_{2}n) $$
+
+39. Calculate the values of the harmonic sums
+
+$$ 1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n} \text{ for } n = 2, 3, 4, \text{ and } 5 $$
+
+40. Use part (d) of Example 11.4.7 to show that
+
+$$ n + \frac{n}{2} + \frac{n}{3} + \cdots + \frac{n}{n} \text{ is } \Theta(n \ln n) $$
+
+41. Show that $\lfloor \log_{2}n \rfloor$ is $\Theta(\log_{2}n)$.
+
+42. Show that $\lceil \log_{2}n \rceil$ is $\Theta(\log_{2}n)$.
+
+43. Prove by mathematical induction that $n \leq 10^n$ for every integer
+    $n \geq 1$.
+
+44. Prove by mathematical induction that $\log_{2}n leq n$ for every integer
+    $n \geq 1$.
+
+45. Show that if $n$ is a variable that takes positive integer values, then
+    $2^n$ is $O(n!)$.
+
+46. Let $n$ be a variable that takes positive values.
+
+a. Use Example 11.4.6 to show that $\log_{2}(n!)$ is $O(n \log_{2} n)$.
+
+b. Show that $n^n \leq (n!)^2$ for every integer $n \geq 1$.
+
+c. Use part (b) to show that $\log_{2}(n!)$ is $\Omega(n \log_{2} n)$.
+
+d. Use parts (a) and \(c\) to find an order for $\log_{2}(n!)$.
+
+47. For each positive real number $u$, $\log_{2}u < u$. Use this fact and the
+    result of exercise 21 in Section 11.1 to prove the following: For every
+    integer $n \geq 1$, if $x$ is any real number with $x > (2n)^{2n}$, then
+    $\log_{2}x < x^{\frac{1}{n}}$.
+
+48. Use the result of exercise 47 above to prove the following: For every
+    integer $n \geq 1$, if $x$ is any real number with $x > (2n)^{2n}$, then
+    $x^n < 2^x$.
+
+49.
+
+a. Let $b$ be any real number greater than 1. Use L'Hospital's rule and
+mathematical induction to prove that for every integer $n \geq 1$,
+
+$$ \lim\limits_{x \to \infty}\frac{x^a}{b^x} = 0 $$
+
+b. Use the result of part (a) and the definitions of limit and of $O$-notation
+to prove that $x^n$ is $O(b^x)$ for any integer $n \geq 1$.
+
+50.
+
+a. Let $b$ be any real number greater than 1. Use L'Hospital's rule to prove
+that for every integer $n \geq 1$,
+
+$$ \lim\limits_{x \to \infty}\frac{\log_{b}x}{x^{\frac{1}{n}}} = 0 $$
+
+b. Use the result of part (a) and the definitions of limit and of $O$-notation
+to prove that $\log_{b}x$ is $O(x^{\frac{1}{n}})$ for any integer $n \geq 1$.
+
+51. Complete the proof in Example 11.4.4.
