@@ -2577,3 +2577,331 @@ $\Theta(g_2(n))$, and if there is a real number $s$ so that $g_1(n) \leq g_2(n)$
 for every integer $n \geq s$, then $(f_1(n) + f_2(n))$ is $\Theta(g_2(n))$.
 
 Omitted.
+
+---
+
+Page 819
+
+**Exercise Set 11.3**
+
+1. Suppose a computer takes 1 nanosecond ($= 10^{-9}$ second) to execute each
+   operation. Approximately how long will it take the computer to execute the
+   following numbers of operations? Convert your answers into seconds, minutes,
+   hours, days, weeks, or years, as appropriate. For example, instead of
+   $2^{50}$ nanoseconds, write 13 days.
+
+a. $\log_{2}200$
+
+b. 200
+
+c. $200\log_{2}200$
+
+d. 200^2
+
+e. 200^8
+
+f. 2^{200}
+
+2. Suppose an algorithm requires $cn^2$ operations when performed with an input
+   of size $n$ (where $c$ is a constant).
+
+a. How many operations will be required when the input size is increased from
+$m$ to $2m$ (where $m$ is a positive integer)?
+
+b. By what factor will the number of operations increase when the input size is
+doubled?
+
+c. By what factor will the number of operations increase when the input size is
+increased by a factor of ten?
+
+3. Suppose an algorithm requires $cn^3$ operations when performed with an input
+   of size $n$ (where $c$ is a constant).
+
+a. How many operations will be required when the input size is increased from
+$m$ to $2m$ (where $m$ is a positive integer)?
+
+b. By what factor will the number of operations increase when the input size is
+doubled?
+
+c. By what factor will the number of operations increase when the input size is
+increased by a factor of ten?
+
+Exercises 4-5 explore the fact that for relatively small values of $n$,
+algorithms with larger orders can be more efficient than algorithms with smaller
+orders.
+
+4. Suppose that when run with an input size of $n$, algorithm $A$ requires
+   $2n^2$ operations and algorithm $B$ requires $80n^{\frac{3}{2}}$ operations.
+
+a. What are orders for algorithms $A$ and $B$ from among the set of power
+functions?
+
+b. For what values of $n$ is algorithm $A$ more efficient than algorithm $B$?
+
+c. For what values of $n$ is algorithm $B$ at least 100 times more efficient
+than algorithm $A$?
+
+5. Suppose that when run with an input size of $n$, algorithm $A$ requires
+   $10^6n^2$ operations and algorithm $B$ requires $n^3$ operations.
+
+a. What are orders for algorithms $A$ and $B$ from among the set of power
+functions?
+
+b. For what values of $n$ is algorithm $A$ more efficient than algorithm $B$?
+
+c. For what values of $n$ is algorithm $B$ at least 100 times more efficient
+than algorithm $A$?
+
+For each of the algorithm segments in 6-19, assume that $n$ is a positive
+integer. (a) Compute the actual number of elementary operations (additions,
+subtractions, multiplications, divisions, and comparisons) that are performed
+when the algorithm segment is executed. For simplicity, however, count only
+comparisons that occur within **if-then** statements; ignore those implied by
+**for-next** loops. (b) Use the theorem on polynomial orders to find an order
+for the algorithm segment.
+
+6.
+
+$\textbf{for } i := 3 \textbf{ to } n - 1\\ \ \ a := 3 \cdot n + 2 \cdot i - 1\\ \textbf{next } i$
+
+7.
+
+$\textit{max } := a[1]\\ \textbf{for } i := 2 \textbf{ to } n\\ \ \ \textbf{if } \textit{max } < a[i] \textbf{ then } \textit{max } := a[i]\\ \textbf{next } i$
+
+8.
+
+$a := 0\\ \textbf{for } i := 1 \textbf{ to } \left\lfloor \dfrac{n}{2} \right\rfloor\\ \ \ a := a + 3\\ \textbf{next } i$
+
+9.
+
+$s := 0\\ \textbf{for } i := 1 \textbf{ to } n\\ \ \ \textbf{for } j := 1 \textbf{ to } 2n\\ \ \ \ \ s := s + i \cdot j\\ \ \ \textbf{next } j\\ \textbf{next } i$
+
+10.
+
+$\textbf{for } k := 2 \textbf{ to } n\\ \ \ \textbf{for } j := 1 \textbf{ to } 3n\\ \ \ \ \ x := a[k] - b[j]\\ \ \ \textbf{next } j\\ \textbf{next } k$
+
+11.
+
+$\textbf{for } k := 1 \textbf{ to } n - 1\\ \ \ \textbf{for } j := 1 \textbf{ to } k + 1\\ \ \ \ \ x := a[k] + b[j]\\ \ \ \textbf{next } j\\ \textbf{next } k$
+
+12.
+
+$\textbf{for } k := 1 \textbf{ to } n - 1\\ \ \ \textit{max } := a[k]\\ \ \ \textbf{for } i := k + 1 \textbf{ to } n\\ \ \ \ \ \textbf{if } \textit{max } < a[i] \textbf{ then } \textit{max } := a[i]\\ \ \ \textbf{next} i\\ a[k] := \textit{max}\\ \textbf{next } k$
+
+13.
+
+$\textbf{for } i := 1 \textbf{ to } n - 1\\ \ \ \textbf{for } j := i \textbf{ to } n\\ \ \ \ \ \textbf{if } a[j] > a[i] \textbf{ then do}\\ \ \ \ \ \ \ \textit{temp } := a[i]\\ \ \ \ \ \ \ a[i] := a[j]\\ \ \ \ \ \ \ a[j] := \textit{temp}\\ \ \ \ \ \ \ \textbf{end do}\\ \ \ \textbf{next } j\\ \textbf{next } i$
+
+14.
+
+$t := 0\\ \textbf{for } i := 1 \textbf{ to } n\\ \ \ s := 0\\ \ \ \textbf{for } j := 1 \textbf{ to } i\\ \ \ \ \ s := s + a[j]\\ \ \ \textbf{next } j\\ \ \ t := t + s^2\\ \textbf{next } i$
+
+15.
+
+$\textbf{for } i := 1 \textbf{ to } n - 1\\ \ \ p := 1\\ \ \ q := 1\\ \ \ \textbf{for } j := i + 1 \textbf{ to } n\\ \ \ \ \ p := p \cdot c[j]\\ \ \ \ \ q := q \cdot (c[j])^2\\ \ \ \textbf{next } j\\ \ \ r := p + q\\ \textbf{next } i$
+
+16.
+
+$\textbf{for } i := 1 \textbf{ to } n\\ \ \ s := 0\\ \ \ \textbf{for } j := 1 \textbf{ to } i - 1\\ \ \ \ \ s := s + j \cdot (i - j + 1)\\ \ \ \textbf{next } j\\ \ \ r := s^2\\ \textbf{next i}$
+
+17.
+
+$\textbf{for } i := 1 \textbf{ to } n\\ \ \ \textbf{for } j := 1 \textbf{ to } \left\lfloor  \dfrac{(i + 1)}{2} \right\rfloor\\ \ \ \ \ a := (n - 1) \cdot (n - j)\\ \ \ \textbf{next } j\\ \textbf{next } i$
+
+18.
+
+$\textbf{for } i := 1 \textbf{ to } n\\ \ \ \textbf{for } j := \left\lfloor \dfrac{(i + 1)}{2} \right\rfloor \textbf{ to } n\\ \ \ \ \ x := i \cdot j\\ \ \ \textbf{next } j\\ \textbf{next } i$
+
+19.
+
+$\textbf{for } i := 1 \textbf{ to } n\\ \ \ \textbf{for } j := 1 \textbf{ to } i\\ \ \ \ \ \textbf{for } k := 1 \textbf{ to } j\\ \ \ \ \ \ \ x := i \cdot j \cdot k\\ \ \ \ \ \textbf{next } k\\ \ \ \textbf{next } j\\ \textbf{next } i$
+
+20. Construct a table showing the result of each step when insertion sort is
+    applied to the array $a[1] = 6, a[2] = 2, a[3] = 1, a[4] = 8,$ and
+    $a[5] = 4$.
+
+21. Construct a table showing the result of each step when insertion sort is
+    applied to the array $a[1] = 7, a[2] = 3, a[3] = 6, a[4] = 9,$ and
+    $a[5] = 5$.
+
+22. Construct a trace table showing the action of insertion sort on the array of
+    exercise 20.
+
+23. Construct a trace table showing the action of insertion sort on the array of
+    exercise 21.
+
+24. How many comparisons between values of $a[j]$ and $x$ actually occur when
+    insertion sort is applied to the array of exercise 20?
+
+25. How many comparisons between values of $a[j]$ and $x$ actually occur when
+    insertion sort is applied to the array of exercise 21?
+
+26. According to Example 11.3.6, the maximum number of comparisons needed to
+    perform insertion sort on an array of length five is $5^2 + 5 - 2 = 28$.
+    Find an array of length five that requires the maximum number 9f comparisons
+    when insertion sort is applied to it.
+
+27. Consider the recurrence relation that arose in Example 11.3.7: $E_1 = 0$ and
+    $E_k = E_{k - 1} + \dfrac{k + 1}{2}$, for each integer $k \geq 2$.
+
+a. Use iteration to find an explicit formula for the sequence.
+
+b. Use mathematical induction to verify the correctness of the formula.
+
+Exercises 28-35 refer to _selection sort_, which is another algorithm to arrange
+the items in an array in ascending order.
+
+---
+
+**Algorithm 11.3.2 Selection Sort**
+
+_[Given an array $a[1], a[2], a[3], \dots, a[n]$, this algorithm selects the
+smallest element and places it in the first position, then selects the second
+smallest element and places it in the second position, and so forth, until the
+entire array is sorted. In general, for each $k = 1$ to $n - 1$, the $k$th step
+of the algorithm selects the index of the array item with the minimum value from
+among $a[k + 1], a[k + 2], a[k + 3], \dots, a[n]$. Once this index is found, the
+value of the corresponding array item is interchanged with the value of $a[k]$
+unless the index already equals $k$. At the end of execution the array elements
+are in order.]_
+
+**Input:** _$n$ [a positive integer], $a[1], a[2], a[3], \dots, a[n]$ [an array
+of data items capable of being ordered]_
+
+**Algorithm Body:**
+
+$\textbf{for } k := 1 \textbf{ to } n - 1\\ \ \ \textit{IndexOfMin } := k\\ \ \ \textbf{for } i := k + 1 \textbf{ to } n\\ \ \ \ \ \textbf{if } (a[i] < a[\textit{IndexOfMin}])\\ \ \ \ \ \textbf{then } \textit{IndexOfMin } := i\\ \ \ \textbf{next } i\\ \ \ \textbf{if } \textit{IndexOfMin } \neq k \textbf{ then}\\ \ \ \ \ \textit{Temp } := a[k]\\ \ \ \ \ a[k] := a[\textit{IndexOfMin}]\\ \ \ \ \ a[\textit{IndexOfMin}] := \textit{Temp}\\ \textbf{next } k$
+
+**Output:** _$a[1], a[2], a[3], \dots, a[n]$ [in ascending order]_
+
+The action of selection sort can be represented pictorially as follows:
+
+$a[1] a[2] \cdots \boxed{a[k]} a[k + 1] \cdots a[n]$
+
+Where the boxed $a[k]$ is the $k$th step: Find the index of the array element
+with minimum value from among $a[k + 1], \dots, a[n]$. If the value of this
+array element is less than the value of $a[k]$, then its value and the value of
+$a[k]$ are interchanged.
+
+---
+
+28. Construct a table showing the interchanges that occur when selection sort is
+    applied to the array $a[1] = 7, a[2] = 3, a[3] = 8, a[4] = 4,$ and
+    $a[5] = 2$.
+
+29. Construct a table showing the interchanges that occur when selection sort is
+    applied to the array $a[1] = 6, a[2] = 4, a[3] = 5, a[4] = 8,$ and
+    $a[5] = 1$.
+
+30. Construct a trace table showing the action of selection sort on the array of
+    exercise 28.
+
+31. Construct a trace table showing the action of selection sort on the array of
+    exercise 29.
+
+32. When selection sort is applied to the array of exercise 28, how many times
+    is the comparison in the **if-then** statement performed?
+
+33. When selection sort is applied to the array of exercise 29, how many times
+    is the comparison in the **if-then** statement performed?
+
+34. When selection sort is applied to an array $a[1], a[2], a[3], a[4]$, how
+    many times is the comparison in the **if-then** statement performed?
+
+35. Consider applying selection sort to an array
+    $a[1], a[2], a[3], \dots, a[n]$.
+
+a. How many times is the comparison in the **if-then** statement performed when
+$a[1]$ is compared to each of $a[2], a[3], \dots, a[n]$?
+
+b. How many times is the comparison in the **if-then** statement performed when
+$a[2]$ is compared to each of $a[3], a[4], \dots, a[n]$?
+
+c. How many times is the comparison in the **if-then** statement performed when
+$a[k]$ is compared to each of $a[k - 1], a[k + 2], \dots, a[n]$?
+
+d. Using the number of times the comparison in the **if-then** statement is
+performed as a measure of the time efficiency of selection sort, find a
+worst-case order for selection sort. Use the theorem on polynomial orders.
+
+Exercises 36-39 refer to the following algorithm to compute the value of a real
+polynomial.
+
+---
+
+**Algorithm 11.3.3 Term-by-Term Polynomial Evaluation**
+
+_[This algorithm computes the value of a polynomial
+$a[n]x^n + a[n - 1]x^{n - 1} + \cdots + a[2]x^2 + a[1]x + a[0]$ by computing
+each term separately, starting with $a[0]$, and adding it to an accumulating
+sum.]_
+
+**Input:** _$n$ [a nonnegative integer], $a[0], a[1], a[2], \dots, a[n]$ [an
+array of real numbers], $x$ [ a real number]_
+
+**Algorithm Body:**
+
+$\textit{polyval } := a[0]\\ \textbf{for } i := 1 \textbf{ to } n\\ \ \ \textit{term } := a[i]\\ \ \ \textbf{for } j := 1 \textbf{ to } i\\ \ \ \ \ \text{term } := \text{term } \cdot x\\ \ \ \textbf{next } j\\ \ \ \textit{polyval } := \textit{polyval } + \textit{ term}\\ \textbf{next } i$
+
+_[At this point
+$\textit{polyval } = a[n]x^n + a[n - 1]x^{n - 1} + \cdots + a[2]x^2 + a[1]x + a[0]$.]_
+
+**Output:** $\textit{polyval}$ _[a real number]_
+
+---
+
+36. Trace Algorithm 11.3.3 for the input $n = 3$,
+    $a[0] = 2, a[1] = 1, a[2] = -1, a[3] = 3$, and $x = 2$.
+
+37. Trace Algorithm 11.3.3 for the input $n = 2$,
+    $a[0] = 5, a[1] = -1, a[2] = 2$, and $x = 3$.
+
+38. Let $s_n =$ the number of additions and multiplications that are performed
+    when Algorithm 11.3.3 is executed for a polynomial of degree $n$. Express
+    $s_n$ as a function of $n$.
+
+39. Use the theorem on polynomial orders to find an order for Algorithm 11.3.3.
+
+Exercises 40-43 refer to another algorithm, known as Horner's rule, for finding
+the value of a polynomial.
+
+---
+
+**Algorithm 11.3.4 Horner's Rule**
+
+_[This algorithm computes the value of a polynomial
+$a[n]x^n + a[n - 1]x^{n - 1} + \cdots + a[2]x^2 + a[1]x + a[0]$ by nesting
+successive additions and multiplications as indicated in the following
+parenthesization:]_
+
+$$ ((\cdots ((a[n]x + a[n - 1]x + a[n - 2])x + \cdots a[2])x + a[1])x + a[0]) $$
+
+_At each stage, starting with $a[n]$, the current value of polyval is multiplied
+by $x$ and the next lower coefficient of the polynomial is added to it._
+
+**Input:** _$n$ [a nonnegative integer], $a[0], a[1], a[2], \dots, a[n]$ [an
+array of real numbers], $x$ [a real number]_
+
+**Algorithm Body:**
+
+$\textit{polyval } := a[n]\\ \textbf{for } i := 1 \textbf{ to } n\\ \ \ \textit{polyval } := \textit{polyval } \cdot x + a[n - i]\\ \textbf{next } i$
+
+_[At this point
+$\textit{polyval } = a[n]x^n + a[n - 1]x^{n - 1} + \cdots + a[2]x^2 + a[1]x + a[0]$.]_
+
+**Output:** $\textit{polyval}$ _[a real number]_
+
+---
+
+40. Trace Algorithm 11.3.4 for the input
+    $n = 3, a[0] = 2, a[1] = 1, a[2] = -1, a[3] = 3,$ and $x = 2$.
+
+41. Trace Algorithm 11.3.4 for the input $n = 2, a[0] = 5, a[1] = -1, a[2] = 2,$
+    and $x = 3$.
+
+42. Let $t_n =$ the number of additions and multiplications that are performed
+    when Algorithm 11.3.4 is executed for a polynomial of degree $n$. Express
+    $t_n$ as a function of $n$.
+
+43. Use the theorem on polynomial orders to find an order for Algorithm 11.3.4.
+    How does this order compare with that of Algorithm 11.3.3?

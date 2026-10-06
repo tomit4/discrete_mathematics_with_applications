@@ -347,3 +347,62 @@ $$ Ah(n) = A_1(A_2h(n)) \leq A_1g(n) \leq f(n) \leq B_1g(n) \leq B_1(B_2h(n)) = 
 
 and so, by definition of $\Theta$-notation, $f(n)$ is $\Theta(h(n))$ _[as was to
 be shown]_.
+
+---
+
+Page 812
+
+**Definition**
+
+Let $A$ be an algorithm.
+
+1. Suppose the number of elementary operations performed when $A$ is executed
+   for an input of size $n$ depends on $n$ alone and not on the nature of the
+   input data; say it equals $f(n)$. If $f(n)$ is $\Theta(g(n))$, we say that
+   **$A$ is $\Theta(g(n))$** or **$A$ is of order $g(n)$**.
+
+2. Suppose the number of elementary operations performed when $A$ is executed
+   for an input of size $n$ depends on the nature of the input data as well as
+   on $n$.
+
+a. Let $b(n)$ be the _minimum_ number of elementary operations required to
+execute $A$ for all possible input sets of size $n$. If $b(n)$ is
+$\Theta(g(n))$, we say that **in the best case, $A$ is $\Theta(g(n))$** or **$A$
+has a best-case order of $g(n)$**.
+
+b. Let $w(n)$ be the _maximum_ number of elementary operations required to
+execute $A$ for all possible input sets of size $n$. If $w(n)$ is
+$\Theta(g(n))$, we say that **in the worst case, $A$ is $\Theta(g(n))$** or
+**$A$ has a worst-case order of $g(n)$**.
+
+---
+
+Page 815
+
+**Algorithm 11.3.1 Insertion Sort**
+
+_[The aim of this algorithm is to take an array $a[1], a[2], a[3], \dots, a[n]$,
+where $n \geq 1$, and reorder it. The output array is also denoted
+$a[1], a[2], a[3], \dots, a[n]$. It has the same values as the input array, but
+they are in ascending order. In the $k$th step,
+$a[1], a[2], a[3], \dots, a[k - 1]$ is in ascending order, and $a[k]$ is
+inserted into the correct position with respect to it.]_
+
+**Input:** _$n$ [a positive integer], $a[1], a[2], a[3], \dots, a[n]$ [an array
+of data items capable of being ordered]_
+
+**Algorithm Body:**
+
+$\textbf{for } k := 2 \textbf{ to } n$
+
+_[Compare $a[k]$ to previous items in the array
+$a[1], a[2], a[3], \dots, a[k - 1]$, starting from the largest and moving
+downward. Whenever $a[k]$ is less than a preceding array item, the indexes of
+$a[k]$ and the preceding item are switched. As soon as $a[k]$ is greater than or
+equal to an array item, the value of $a[k]$ is left unchanged.]_
+
+$\ \ x := a[k]\\ \ \ j := k - 1\\ \ \ \textbf{while } (j \neq 0)\\ \ \ \ \ \textbf{if } x < a[j] \textbf{ then}\\ \ \ \ \ \ \ a[j + 1] := a[j]\\ \ \ \ \ \ \ a[j] := x\\ \ \ \ \ \ \ j:= j - 1\\ \ \ \ \ \ \ \textbf{else } j := 0\\ \ \ \ \ \textbf{end if}\\ \ \ \textbf{end while}\\ \ \ \textbf{next } k$
+
+**Output:** $a[1], a[2], a[3], \dots, a[n]$ _[in ascending order]_
+
+---

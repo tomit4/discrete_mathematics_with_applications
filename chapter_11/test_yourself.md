@@ -63,3 +63,20 @@ the degree of $p(n)$
 6. If $n$ is a positive integer, then $1 + 2 + 3 + \cdots + n$ has order ____.
 
 $n^2$
+
+---
+
+Page 819
+
+**Test Yourself**
+
+1. When an algorithm segment contains a nested **for-next** loop, you can find
+   the number of times the loop will iterate by constructing a table in which
+   each column represents ____.
+
+2. In the worst case for an input array of length $n$, the sequential search
+   algorithm has to look through ____ elements of the array before it
+   terminates.
+
+3. The worst-case order of the insertion sort algorithm is ____, and its
+   average-case order is ____.
