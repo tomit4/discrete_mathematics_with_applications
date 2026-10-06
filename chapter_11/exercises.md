@@ -3364,24 +3364,76 @@ $a[k]$ are interchanged.
     applied to the array $a[1] = 7, a[2] = 3, a[3] = 8, a[4] = 4,$ and
     $a[5] = 2$.
 
+| $k$     | $a[1]$ | $a[2]$ | $a[3]$ | $a[4]$ | $a[5]$ |
+| ------- | ------ | ------ | ------ | ------ | ------ |
+| Initial | 7      | 3      | 8      | 4      | 2      |
+| 1       | 2      | 3      | 8      | 4      | 7      |
+| 2       | 2      | 3      | 8      | 4      | 7      |
+| 3       | 2      | 3      | 4      | 8      | 7      |
+| 4       | 2      | 3      | 4      | 7      | 8      |
+| 5       | 2      | 3      | 4      | 7      | 8      |
+
 29. Construct a table showing the interchanges that occur when selection sort is
     applied to the array $a[1] = 6, a[2] = 4, a[3] = 5, a[4] = 8,$ and
     $a[5] = 1$.
 
+| $k$     | $a[1]$ | $a[2]$ | $a[3]$ | $a[4]$ | $a[5]$ |
+| ------- | ------ | ------ | ------ | ------ | ------ |
+| Initial | 6      | 4      | 5      | 8      | 1      |
+| 1       | 1      | 4      | 5      | 8      | 6      |
+| 2       | 1      | 4      | 5      | 8      | 6      |
+| 3       | 1      | 4      | 5      | 8      | 6      |
+| 4       | 1      | 4      | 5      | 6      | 8      |
+| 5       | 1      | 4      | 5      | 6      | 8      |
+
 30. Construct a trace table showing the action of selection sort on the array of
     exercise 28.
+
+|                       |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| --------------------- | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
+| $n$                   | 5 |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| $a[1]$                | 7 | 3 |   |   |   | 2 |   |   |   |   |   |   |   |   |   |
+| $a[2]$                | 3 | 7 |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| $a[3]$                | 8 |   |   |   |   |   |   |   |   |   |   | 4 |   |   | 7 |
+| $a[4]$                | 4 |   |   |   |   |   |   |   |   |   |   | 8 |   |   | 8 |
+| $a[5]$                | 2 |   |   |   |   | 7 |   |   |   |   |   |   |   |   |   |
+| $k$                   | 1 |   |   |   |   |   | 2 |   |   | 3 |   |   | 4 |   |   |
+| $\textit{IndexOfMin}$ | 1 | 2 |   |   | 5 |   | 2 |   |   | 3 | 4 |   | 4 | 5 |   |
+| $i$                   | 2 |   | 3 | 4 | 5 |   | 3 | 4 | 5 | 4 | 5 |   | 5 |   |   |
+| $\textit{temp}$       |   |   |   |   |   | 7 |   |   |   |   |   | 8 |   |   | 7 |
 
 31. Construct a trace table showing the action of selection sort on the array of
     exercise 29.
 
+|                       |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| --------------------- | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
+| $n$                   | 5 |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| $a[1]$                | 6 |   |   |   |   | 1 |   |   |   |   |   |   |   |   |   |   |
+| $a[2]$                | 4 |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| $a[3]$                | 5 |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| $a[4]$                | 8 |   |   |   |   |   |   |   |   |   |   |   |   |   |   | 6 |
+| $a[5]$                | 1 |   |   |   |   | 6 |   |   |   |   |   |   |   |   |   | 8 |
+| $k$                   | 1 |   |   |   |   |   | 2 |   |   |   | 3 |   |   | 4 |   |   |
+| $\textit{IndexOfMin}$ | 1 | 2 |   |   | 5 |   | 2 |   |   |   | 3 |   |   | 4 | 5 |   |
+| $i$                   | 2 |   | 3 | 4 | 5 |   |   | 3 | 4 | 5 |   | 4 | 5 |   | 5 |   |
+| $\textit{temp}$       |   |   |   |   |   | 6 |   |   |   |   |   |   |   |   |   | 8 |
+
 32. When selection sort is applied to the array of exercise 28, how many times
     is the comparison in the **if-then** statement performed?
+
+There is one comparison for each combination of values of $k$ and $i$: namely,
+$4 + 3 + 2 + 1 = 10$.
 
 33. When selection sort is applied to the array of exercise 29, how many times
     is the comparison in the **if-then** statement performed?
 
+There is one comparison for each combination of values of $k$ and $i$: namely,
+$4 + 3 + 2 + 1 = 10$.
+
 34. When selection sort is applied to an array $a[1], a[2], a[3], a[4]$, how
     many times is the comparison in the **if-then** statement performed?
+
+$$ 3 + 2 + 1 = 7 $$
 
 35. Consider applying selection sort to an array
     $a[1], a[2], a[3], \dots, a[n]$.
@@ -3389,15 +3441,36 @@ $a[k]$ are interchanged.
 a. How many times is the comparison in the **if-then** statement performed when
 $a[1]$ is compared to each of $a[2], a[3], \dots, a[n]$?
 
+$n - 1$
+
 b. How many times is the comparison in the **if-then** statement performed when
 $a[2]$ is compared to each of $a[3], a[4], \dots, a[n]$?
 
+$n - 2$
+
 c. How many times is the comparison in the **if-then** statement performed when
-$a[k]$ is compared to each of $a[k - 1], a[k + 2], \dots, a[n]$?
+$a[k]$ is compared to each of $a[k + 1], a[k + 2], \dots, a[n]$?
+
+$n - k$
 
 d. Using the number of times the comparison in the **if-then** statement is
 performed as a measure of the time efficiency of selection sort, find a
 worst-case order for selection sort. Use the theorem on polynomial orders.
+
+The total if-then comparisons are:
+
+$$ (n - 1) + (n - 2) \cdots + 1 $$
+
+$$ = \frac{(n - 1)((n - 1) + 1)}{2} $$
+
+$$ = \frac{n(n - 1)}{2} $$
+
+$$ = \frac{n^2 - n}{2} $$
+
+$$ = \frac{1}{2}n^2 - \frac{1}{2}n $$
+
+Which, by the theorem on polynomial orders is $\Theta(n^2)$, which is the
+worst-case order for selection sort.
 
 Exercises 36-39 refer to the following algorithm to compute the value of a real
 polynomial.
@@ -3428,14 +3501,69 @@ $\textit{polyval } = a[n]x^n + a[n - 1]x^{n - 1} + \cdots + a[2]x^2 + a[1]x + a[
 36. Trace Algorithm 11.3.3 for the input $n = 3$,
     $a[0] = 2, a[1] = 1, a[2] = -1, a[3] = 3$, and $x = 2$.
 
+|                    |    |   |    |    |    |   |   |    |    |    |
+| ------------------ | -- | - | -- | -- | -- | - | - | -- | -- | -- |
+| $n$                | 3  |   |    |    |    |   |   |    |    |    |
+| $a[0]$             | 2  |   |    |    |    |   |   |    |    |    |
+| $a[1]$             | 1  |   |    |    |    |   |   |    |    |    |
+| $a[2]$             | -1 |   |    |    |    |   |   |    |    |    |
+| $a[3]$             | 3  |   |    |    |    |   |   |    |    |    |
+| $x$                | 2  |   |    |    |    |   |   |    |    |    |
+| $\textit{polyval}$ | 2  |   | 4  |    |    | 0 |   |    |    | 24 |
+| $i$                | 1  |   | 2  |    |    | 3 |   |    |    |    |
+| $\textit{term}$    | 1  | 2 | -1 | -2 | -4 | 3 | 6 | 12 | 24 |    |
+| $j$                | 1  |   | 1  | 2  |    | 1 | 2 | 3  |    |    |
+
 37. Trace Algorithm 11.3.3 for the input $n = 2$,
     $a[0] = 5, a[1] = -1, a[2] = 2$, and $x = 3$.
+
+|                    |    |    |   |   |    |    |
+| ------------------ | -- | -- | - | - | -- | -- |
+| $n$                | 2  |    |   |   |    |    |
+| $a[0]$             | 5  |    |   |   |    |    |
+| $a[1]$             | -1 |    |   |   |    |    |
+| $a[2]$             | 2  |    |   |   |    |    |
+| $x$                | 3  |    |   |   |    |    |
+| $\textit{polyval}$ | 5  |    | 2 |   |    | 20 |
+| $i$                | 1  |    | 2 |   |    |    |
+| $\textit{term}$    | -1 | -3 | 2 | 6 | 18 |    |
+| $j$                | 1  |    | 1 |   | 2  |    |
 
 38. Let $s_n =$ the number of additions and multiplications that are performed
     when Algorithm 11.3.3 is executed for a polynomial of degree $n$. Express
     $s_n$ as a function of $n$.
 
+The number of operations for the inner loop is 1 (multiplication).
+
+When $i = 1$, the inner loop runs $(1) - (1) + 1 = 1$ times. When $i = 2$,
+$(2) - (1) + 1 = 2$ times, and so on. When $i = n$, the inner loop runs
+$(n) - (1) + 1 = n$ times.
+
+So the inner loop runs this many times:
+
+$$ 1 + 2 + \cdots + n $$
+
+$$ = \frac{n(n + 1)}{2} $$
+
+$$ = \frac{n^2 + n}{2} $$
+
+The outer loop has 1 operation (addition), and the outer loop runs
+$n - 1 + 1 = n$ times.
+
+So the total operations for the algorithm is:
+
+$$ s_n = \frac{n^2 + n}{2} + n $$
+
+$$ = \frac{n^2 + n + 2n}{2} $$
+
+$$ = \frac{n^2 + 3n}{2} $$
+
+$$ = \frac{1}{2}n^2 + \frac{3}{2}n $$
+
 39. Use the theorem on polynomial orders to find an order for Algorithm 11.3.3.
+
+By exercise 38 and the theorem on polynomial orders, Algorithm 11.3.3 is
+$\Theta(n^2)$.
 
 Exercises 40-43 refer to another algorithm, known as Horner's rule, for finding
 the value of a polynomial.
@@ -3471,12 +3599,28 @@ $\textit{polyval } = a[n]x^n + a[n - 1]x^{n - 1} + \cdots + a[2]x^2 + a[1]x + a[
 40. Trace Algorithm 11.3.4 for the input
     $n = 3, a[0] = 2, a[1] = 1, a[2] = -1, a[3] = 3,$ and $x = 2$.
 
+Omitted.
+
 41. Trace Algorithm 11.3.4 for the input $n = 2, a[0] = 5, a[1] = -1, a[2] = 2,$
     and $x = 3$.
+
+Omitted.
 
 42. Let $t_n =$ the number of additions and multiplications that are performed
     when Algorithm 11.3.4 is executed for a polynomial of degree $n$. Express
     $t_n$ as a function of $n$.
 
+There are 2 operations in the loop (1 multiplication, 1 addition).
+
+The loop runs $n - 1 + 1 = n$ times, so there are $2n$ operations for this
+algorithm.
+
+$$ t_n = 2n $$
+
 43. Use the theorem on polynomial orders to find an order for Algorithm 11.3.4.
     How does this order compare with that of Algorithm 11.3.3?
+
+By 42 and the theorem on polynomial orders, Algorithm 11.3.4 is $\Theta(n)$.
+
+Algorithm 11.3.3 is $\Theta(n^2)$, and thus is less efficient than Algorithm
+11.3.4 since $n \leq n^2$.
