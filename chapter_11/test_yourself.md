@@ -95,15 +95,25 @@ Page 834
 
 1. The domain of any exponential function is ____, and its range is ____.
 
-2. The domain of any logarithmic function is ____, and its range is ____.
+$\mathbf{R}; $\mathbf{R}^+$$
+
+' 2. The domain of any logarithmic function is ____, and its range is ____.
+
+$\mathbf{R}^+$; $\mathbf{R}$
 
 3. If $k$ is an integer and $2^k \leq x < 2^{k + 1}$, then
    $\lfloor \log_{2}x \rfloor =$ ____.
+
+$k$
 
 4. If $b$ is a real number with $b > 1$, then there is a positive real number
    $s$ with the property that for any real number $x$ that is greater than $s$,
    when the quantities $x$, $x^2$, $\log x$ and $x\log x$ are arranged in order
    of increasing size, the result is ____.
 
+$\log x < x < x\log x < x^2$
+
 5. If $n$ is a positive integer, then
    $1 + \dfrac{1}{2} + \dfrac{1}{3} + \cdots + \dfrac{1}{n}$ has order ____.
+
+$\ln x$ or $\log_{2}x$

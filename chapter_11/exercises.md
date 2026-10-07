@@ -3635,21 +3635,37 @@ Graph each function defined in 1-8.
 
 1. $f(x) = 3^x$ for each real number $x$
 
+(Done by hand.)
+
 2. $g(x) = \left(\dfrac{1}{3}\right)^x$ for each real number $x$
+
+(Done by hand.)
 
 3. $h(x) = \log_{10}x$ for each positive real number $x$
 
+(Done by hand.)
+
 4. $k(x) = \log_{2}x$ for each positive real number $x$
+
+(Done by hand.)
 
 5. $F(x) = \left\lfloor \log_{2}x right\rfloor$ for each positive real number
    $x$
 
+(Done by hand.)
+
 6. $G(x) = \left\lfloor \log_{10}x right\rfloor$ for each positive real number
    $x$
 
+(Done by hand.)
+
 7. $H(x) = x\log_{2}x$ for each positive real number $x$
 
+(Done by hand.)
+
 8. $K(x) = x\log_{10}x$ for each positive real number $x$
+
+(Done by hand.)
 
 9. The scale of the graph shown in Figure 11.4.1 is one-fourth inch to each
    unit. If the point $(2, 2^{64})$ is plotted on the graph of $y = 2^x$, how
@@ -3659,18 +3675,43 @@ Graph each function defined in 1-8.
    93,000,000 miles from the sun on average.)
    ($\dfrac{1}{4} \text{ inch } \approx 0.635 \text{ cm}, 1 \text{ mile } \approx 0.62 \text{ km}$)
 
+Omitted.
+
 10.
 
 a. Use the definition of logarithm to show that $\log_{b}b^x = x$ for every real
 number $x$.
 
+By the definition of logarithmic function with base $b$, where
+$\log_{b}: \mathbf{R}^+ \to \mathbf{R}$, $\log_{b}n$ is the exponent to which
+$b$ must be raised to obtain $n$.
+
+Thus it follows that $\log_{b}b^x$ is the exponent to which $b$ must be raised
+to obtain $b^x$. Therefore it can be concluded that $x$ is the exponent to which
+$b$ must be raised to obtain $b^x$.
+
 b. Use the definition of logarithm to show that $b^{\log_{b}x} = x$ for every
 positive real number $x$.
+
+By the definition of logarithmic function with base $b$, where
+$\log_{b}: \mathbf{R}^+ \to \mathbf{R}$, $\log_{b}$ is the exponent to which $b$
+must be raised to obtain $x$.
+
+Thus it follows that
+$b^{\text{the exponent to which $b$ must be raised to obtain $x$}}$ is $x$.
 
 c. By the result of exercise 28 in Section 7.3, if $f: X \to Y$ and $g: Y \to X$
 are functions and $g \circ f = I_X$ and $f \circ g = I_Y$, then $f$ and $g$ are
 inverse functions. Use this result to show that $\log_{b}$ and $\text{exp}_b$
 (the exponential function with base $b$) are inverse functions.
+
+Let $f(x) = \log_{b}x$ and $g(y) = \text{exp}_b(y) = b^y$.
+
+Then, by part (a), $f(g(y)) = \log_{b}(b^y) = y$, and so by exercise 28, it
+follows that $f \circ g = I_Y.$
+
+Also, by part (b), $g(f(x)) = b^{\log_bx} = x$, and so by exercise 28, it
+follows that $g \circ f = I_X$.
 
 11. Let $b > 1$.
 
@@ -3679,49 +3720,240 @@ point $(u, v)$ lies on the graph of the logarithmic function with base $b$ if,
 and only if, $(v, u)$ lies on the graph of the exponential function with base
 $b$.
 
+**Proof:**
+
+Suppose $u, b \in \mathbf{R}$, where $$b > 1$, and suppose $v \in \mathbf{R}^+$.
+
+_[It is known that $u = \log_{b}v \Leftrightarrow v = b^u$.]_
+
+It must be shown that $(u, v)$ lies on the graph of the logarithmic function
+with base $b$ if, and only if $(v, u)$ lies on the graph of the exponential
+function with base $b$.
+
+_Proof($(v, u)$ lies on the graph of exponential function with base $b$):_
+
+Suppose $(u, v)$ lies on the graph of the logarithmic function with base $b$.
+
+By the definition of logarithmic function, this means that $u = \log_{b}v$, and
+by exercise 10\(c\), it is known that this then means that $v = b^u$, which
+implies that $(v, u)$ lies on the graph of exponential function with base $b$.
+
+_Proof($(u, v)$ lies on the graph of the logarithmic function with base $b$):_
+
+Suppose $(v, u)$ lies on the graph of the exponential function with base $b$.
+
+By the definition of exponential function, this means that $v = b^u$, and by
+exercise 10\(c\), it is known that this then means that $u = \log_{b}v$, which
+implies that $(u, v)$ lies on the graph of logarithmic function with base $b$.
+
+_Conclusion:_
+
+Since both sides of the propositional statement have been demonstrated, it can
+be concluded that the proposition is true.
+
+Q.E.D.
+
 b. Plot several pairs of points of the form $(u, v)$ and $(v, u)$ on a
 coordinate system. Describe the geometric relationship between the locations of
 the points in each pair.
 
+(See page 1026 for graph).
+
+Essentially the two graphs are symmetric along the diagonal axis of $y = x$.
+
 c. Draw the graphs of $y = \log_{2}x$ and $y = 2^x$. Describe the geometric
 relationship between these graphs.
 
+Once again, the two graphs are symmetric along the diagonal axis of $y = x$.
+
 12. Give a graphical interpretation for property (11.4.2) in Example 11.4.1(a)
     for $0 < x < 1$.
+
+As a reminder, 11.4.2 states:
+
+If $k$ is an integer and $x$ is a real number with
+
+$$ 2^k \leq x < 2^{k + 1} \text{, then } \lfloor \log_{2}x \rfloor = k $$
+
+(This essentially asks us to extend the graph displayed on page 826, with
+showing that $\log_2x$ lying below the $x$ axis and $x$ lying in between $2^k$
+and $2^{k + 1}$ which itself is in between $0$ and $1$.)
 
 13. Suppose a positive real number $x$ satisfies the inequality
     $10^m \leq x < 10^{m + 1}$ where $m$ is an integer. What can be inferred
     about $\lfloor \log_{10}x \rfloor$? Justify your answer.
 
+If we take the given inequality:
+
+$$ 10^m \leq x < 10^{m + 1} $$
+
+And then take $\log_{10}$ of all sides, we get:
+
+$$ \log_{10}(10^m) \leq \log_{10}(x) < \log_{10}(10^{m + 1}) $$
+
+$$ m \leq \log_{10}x < m + 1 $$
+
+By the definition of floor, this means that:
+
+$$ \lfloor \log_{10}x \rfloor = m $$
+
 14.
 
 a. Prove that if $x$ is a positive real number and $k$ is a nonnegative integer
-such that $2^{k - 1} < x \leq 2^k$, then $\lceil \log_{2}k \rceil = k$.
+such that $2^{k - 1} < x \leq 2^k$, then $\lceil \log_{2}x \rceil = k$.
+
+**Proof:**
+
+Suppose $x \in \mathbf{R}^+$ and $k \in \mathbf{Z}$ where $k$ is nonnegative.
+
+Furthermore, suppose $2^{k - 1} < x \leq 2^k$.
+
+It is to be shown that $\lceil \log_{2}x \rceil = k$.
+
+If we take the given equality:
+
+$$ 2^{k - 1} < x \leq 2^k $$
+
+And then take $\log_{2}$ of all sides:
+
+$$ \log_{2}(2^{k - 1}) < \log_{2}(x) \leq \log_{2}(2^k) $$
+
+$$ k - 1 < \log_{2}x \leq k $$
+
+And then, by the definition of ceiling, this means that:
+
+$$ \lceil \log_{2}x \rceil = k $$
+
+This is what was to be shown.
+
+Q.E.D.
 
 b. Describe in words the statement proved in part (a).
+
+In essence, what has been shown in part (a) is that if $2^{k - 1} < x \leq 2^k$
+(or in interval notation x \in (2^{k - 1}, 2k]), then
+$\lceil \log_{2}x \rceil = k$.
 
 15. If $n$ is an odd integer and $n > 1$, is
     $\lceil \log_{2}(n - 1) \rceil = \lceil \log_{2}(n) \rceil$? Justify your
     answer.
 
+Suppose $n$ is an odd integer and $n > 1$.
+
+Since $n$ is odd, it follows that $n$ lies in between 2 consecutive powers of 2:
+
+$$ 2^k < n < 2^{k + 1} $$
+
+where $k \in \mathbf{Z}$.
+
+If we then subtract $1$ from $n$, this means that $n - 1$ is an even integer,
+which lies between 2 consecutive powers of 2 but might equal $2^{k}$:
+
+$$ 2^k \leq n - 1 < 2^{k + 1} $$
+
+This implies that when we take the $\log_{2}$ of this that we will equate the
+floor function, not the ceiling. Thus let us look for a counterexample.
+
+Suppose $n = 3$, then:
+
+$$ \lceil \log_{2}(3 - 1) \rceil = 1  $$
+
+and:
+
+$$ \lceil \log_{2}(3) \rceil = \lceil \frac{\ln(3)}{\ln(2)} \rceil = 2 $$
+
+And so:
+
+$$ \lceil \log_{2}(3 - 1) \rceil = 1  \neq 2 = \lceil \log_{2}(3) \rceil $$
+
 16. If $n$ is an odd integer and $n > 1$, is
     $\lceil \log_{2}(n - 1) \rceil = \lceil \log_{2}(n) \rceil$? Justify your
     answer.
 
+Omitted (same as 15, she likely meant $\log_{10}$).
+
 17. If $n$ is an odd integer and $n > 1$, is
     $\lfloor \log_{2}(n - 1) \rfloor = \lfloor \log_{2}(n) \rfloor$? Justify
     your answer.
+
+**Proof:**
+
+Suppose $n \in \mathbf{Z}$ where $n$ is odd and $n > 1$.
+
+Since $n$ is odd, it lies between two consecutive powers of 2:
+
+$$ 2^{k} < n < 2^{k + 1} $$
+
+for some $k \in \mathbf{Z}$ where $k \geq 1$.
+
+Then, taking $\log_{2}$ of all sides:
+
+$$ \log_{2}(2^{k}) < \log_{2}(n) < \log_{2}(2^{k + 1}) $$
+
+$$ k < \log_{2}n < k + 1 $$
+
+and since $k < \log_{2}n \Rightarrow k \leq \log_{2}n$:
+
+$$ k \leq \log_{2}n < k + 1 $$
+
+By the definition of floor function, this means that:
+
+$$ \lfloor \log_{2}n \rfloor = k $$
+
+Now, if we then take our original inequality:
+
+$$ 2^{k} < n < 2^{k + 1} $$
+
+and subtract $1$ from $n$, this means that $n - 1$ is even, and also that
+$2^{k} \leq n - 1$ (since $2^k < n$):
+
+$$ 2^{k} \leq n - 1 < 2^{k + 1} $$
+
+And once again, apply $\log_{2}$ to all sides:
+
+$$ \log_{2}(2^{k}) \leq \log_{2}(n - 1) < \log_{2}(2^{k + 1}) $$
+
+$$ k \leq \log_{2}(n - 1) < k + 1 $$
+
+And once again, by the definition for floor:
+
+$$ \lfloor \log_{2}(n - 1) \rfloor = k $$
+
+Thus, it has been shown that:
+
+$$ \lfloor \log_{2}n \rfloor = k = \lfloor \log_{2}(n - 1) \rfloor $$
+
+Q.E.D.
 
 In 18 and 19, indicate how many binary digits are needed to represent the
 numbers in binary notation. Use the method shown in Example 11.4.3.
 
 18. 148,206
 
+By Example 11.4.3, it has been shown that the number of binary digits to
+represent a real number $n$ is $\lfloor \log_{2}n \rfloor + 1$, so:
+
+$$ \lfloor \log_{2}(148206) \rfloor + 1 = 18 $$
+
 19. 5,067,329
+
+$$ \lfloor \log_{2}(5067329) \rfloor + 1 = 23 $$
 
 20. It was shown in the text that the number of binary digits needed to
     represent a positive integer $n$ is $\lfloor \log_{2}n \rfloor + 1$. Can
     this also be given as $\lceil \log_{2}n \rceil$? Why or why not?
+
+No, counterexample:
+
+Let $n = 2$, then:
+
+$$ \lfloor \log_{2}(2) \rfloor + 1 = 1 + 1 = 2 $$
+
+$$ \lceil \log_{2}(2) \rceil = 1 $$
+
+And:
+
+$$ \lfloor \log_{2}(2) \rfloor + 1 = 1 + 1 = 2 \neq 1 = \lceil \log_{2}(2) \rceil $$
 
 In each of 21 and 22, a sequence is specified by a recurrence relation and
 initial conditions. In each case, (a) use iteration to guess an explicit formula
@@ -3730,15 +3962,309 @@ correctness of the formula you obtained in part (a).
 
 21.
 
-$$ a_k = a_{\lfloor \frac{k}{2} \rfloor} \text{, for each integer } k \geq 2 $$
+$$ a_k = a_{\lfloor \frac{k}{2} \rfloor} + 2 \text{, for each integer } k \geq 2 $$
 
 $$ a_1 = 1 $$
 
+a.
+
+Iteration:
+
+$$ a_1 = 1 $$
+
+$$ a_2 = a_{\lfloor \frac{2}{2} \rfloor} + 2 = a_1 + 2 = 1 + 2 = 3 $$
+
+$$ a_3 = a_{\lfloor \frac{3}{2} \rfloor} + 2 = a_1 + 2 = 1 + 2 = 3 $$
+
+$$ a_4 = a_{\lfloor \frac{4}{2} \rfloor} + 2 = a_2 + 2 = 3 + 2 = 5 $$
+
+$$ a_5 = a_{\lfloor \frac{5}{2} \rfloor} + 2 = a_2 + 2 = 3 + 2 = 5 $$
+
+$$ a_6 = a_{\lfloor \frac{6}{2} \rfloor} + 2 = a_3 + 2 = 3 + 2 = 5 $$
+
+$$ a_7 = a_{\lfloor \frac{7}{2} \rfloor} + 2 = a_3 + 2 = 3 + 2 = 5 $$
+
+$$ a_8 = a_{\lfloor \frac{8}{2} \rfloor} + 2 = a_4 + 2 = 5 + 2 = 7 $$
+
+Guess:
+
+$$ a_n = 2\lfloor\log_{2}n\rfloor + 1 $$
+
+b.
+
+**Proof (by strong mathematical induction):**
+
+Let $a_1, a_2, a_3, \dots$ be the sequence defined by specifying that $a_1 = 1$
+and $a_k = a_{\lfloor \frac{k}{2} \rfloor} + 2$ for each integer $k \geq 2$.
+
+Let $P(n)$ be the equation:
+
+$$ a_n = 2\lfloor\log_{2}n\rfloor + 1 $$
+
+for all $n \in \mathbf{Z}$ with $n \geq 1$.
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ a_1 = 2\lfloor \log_{2}(1) \rfloor + 1 $$
+
+$$ a_1 = 2\lfloor 0 \rfloor + 1 $$
+
+$$ a_1 = 2(0) + 1 $$
+
+$$ a_1 = 0 + 1 $$
+
+$$ a_1 = 1 $$
+
+This is true by the supposition, thus $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $i, k \in \mathbf{Z}$ with $1 \leq i \leq k$.
+
+Suppose $P(i)$, that is:
+
+$$ a_i = 2\lfloor \log_{2}i \rfloor + 1 $$
+
+for every $i$.
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ a_{k + 1} = 2\lfloor \log_{2}(k + 1) \rfloor + 1 $$
+
+By the recurrence relation:
+
+$$ a_{k + 1} = a_{\lfloor \frac{k + 1}{2} \rfloor} + 2 $$
+
+_Case ($k$ is odd):_
+
+Since $k$ is odd, $k + 1$ is even.
+
+Then, it follows by Theorem 4.6.2 that:
+
+$$ a_{k + 1} = a_{\frac{k + 1}{2}} + 2 $$
+
+By the inductive hypothesis:
+
+$$ = (2\lfloor \log_{2}(k + 1) \rfloor + 1) + 2 $$
+
+By arithmetic:
+
+$$ = 2\lfloor \log_{2}\left(\frac{k + 1}{2}\right) \rfloor + 3 $$
+
+By Theorem 7.2.1(b):
+
+$$ = 2\lfloor \log_{2}(k + 1) - \log_{2}(2) \rfloor + 3 $$
+
+$$ = 2\lfloor \log_{2}(k + 1) - 1 \rfloor + 3 $$
+
+By exercise 15, section 4.6:
+
+$$ = 2\left(\lfloor \log_{2}(k + 1) \rfloor - 1\right) + 3 $$
+
+$$ = 2\lfloor \log_{2}(k + 1) \rfloor - 2 + 3 $$
+
+$$ = 2\lfloor \log_{2}(k + 1) \rfloor + 1 $$
+
+This demonstrates that $P(k + 1)$ is true when $k$ is odd.
+
+_Case ($k$ is even):_
+
+Since $k$ is even $k + 1$ is odd.
+
+By Theorem 4.6.2:
+
+$$ a_{k + 1} = a_{\frac{(k + 1) - 1}{2}} + 2 $$
+
+$$ = a_{\frac{k}{2}} + 2 $$
+
+By the inductive hypothesis:
+
+$$ = \left(2\lfloor \log_{2}\left(\frac{k}{2}\right) \rfloor + 1\right) + 2 $$
+
+By arithmetic:
+
+$$ = 2\lfloor \log_{2}\left(\frac{k}{2}\right) \rfloor + 3 $$
+
+By Theorem 7.2.1(b):
+
+$$ = 2\lfloor \log_{2}(k) - \log_{2}(2) \rfloor + 3 $$
+
+$$ = 2\lfloor \log_{2}(k) - 1 \rfloor + 3 $$
+
+By exercise 15, section 4.6:
+
+$$ = 2(\lfloor \log_{2}(k) \rfloor - 1) + 3 $$
+
+$$ = 2\lfloor \log_{2}(k) \rfloor - 2 + 3 $$
+
+$$ = 2\lfloor \log_{2}(k) \rfloor + 1 $$
+
+By property 11.4.3:
+
+$$ = 2\lfloor \log_{2}(k + 1) \rfloor + 1 $$
+
+This demonstrates that $P(k + 1)$ is true when $k$ is even.
+
+In both cases, $P(k + 1)$ is true.
+
+_Conclusion:_
+
+Since both the basis step and inductive step have been demonstrated, it can be
+concluded that $P(n)$ is true for all $n \geq 1$.
+
+Q.E.D.
+
 22.
 
-$$ b_k = b_{\lfloor \frac{k}{2} \rfloor} \text{, for each integer } k \geq 2 $$
+$$ b_k = b_{\lfloor \frac{k}{2} \rfloor} + 1 \text{, for each integer } k \geq 2 $$
 
 $$ b_1 = 1 $$
+
+a.
+
+$$ b_1 = 1 $$
+
+$$ b_2 = b_{\lfoor \frac{2}{2} \rfloor} + 1 = b_1 + 1 = 1 + 1 = 2 $$
+
+$$ b_3 = b_{\lfoor \frac{3}{2} \rfloor} + 1 = b_1 + 1 = 1 + 1 = 2 $$
+
+$$ b_4 = b_{\lfoor \frac{4}{2} \rfloor} + 1 = b_2 + 1 = 2 + 1 = 3 $$
+
+$$ b_5 = b_{\lfoor \frac{5}{2} \rfloor} + 1 = b_2 + 1 = 2 + 1 = 3 $$
+
+$$ b_6 = b_{\lfoor \frac{6}{2} \rfloor} + 1 = b_3 + 1 = 2 + 1 = 3 $$
+
+$$ b_7 = b_{\lfoor \frac{7}{2} \rfloor} + 1 = b_3 + 1 = 2 + 1 = 3 $$
+
+$$ b_8 = b_{\lfoor \frac{8}{2} \rfloor} + 1 = b_4 + 1 = 3 + 1 = 4 $$
+
+Guess:
+
+$$ b_n = \lfloor \log_{2}n \rfloor + 1 $$
+
+b.
+
+**Proof (by strong mathematical induction):**
+
+Let $b_1, b_2, b_3, \dots$ be the sequence defined specifying that $b_1 = 1$ and
+$b_k = b_{\lfloor \frac{k}{2} \rfloor} + 1$ for each $k \geq 2$.
+
+Let $P(n)$ be:
+
+$$ b_n = \lfloor \log_{2}n \rfloor + 1 $$
+
+for all $n \in \mathbf{Z}$, where $n \geq 1$.
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ b_1 = \lfloor \log_{2}(1) \rfloor + 1 $$
+
+$$ b_1 = \lfloor 0 \rfloor + 1 $$
+
+$$ b_1 = 0 + 1 $$
+
+$$ b_1 = 1 $$
+
+This is true by the supposition, therefore $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $i, k \in \mathbf{Z}$ with $1 \leq i \leq k$.
+
+Suppose $P(i)$, that is, for every $i$ from $1$ through $k$:
+
+$$ b_i = \lfloor \log_{2}i \rfloor + 1 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ b_{k + 1} = \lfloor \log_{2}(k + 1) \rfloor + 1 $$
+
+By the defined recurrence relation:
+
+$$ b_{k + 1} = b_{\lfloor \frac{k + 1}{2} \rfloor} + 1 $$
+
+_Case ($k$ is odd):_
+
+Since $k$ is odd, $k + 1$ is even.
+
+Then, it follows by Theorem 4.6.2 that:
+
+$$ b_{k + 1} = b_{\frac{k + 1}{2}} + 1 $$
+
+By the inductive hypothesis:
+
+$$ = (\lfloor \log_{2}\left(\frac{k + 1}{2}\right) \rfloor + 1) + 1 $$
+
+By arithmetic:
+
+$$ = \lfloor \log_{2}\left(\frac{k + 1}{2}\right) \rfloor + 2 $$
+
+By Theorem 7.2.1(b):
+
+$$ = \lfloor \log_{2}(k + 1) - \log_{2}(2) \rfloor + 2 $$
+
+$$ = \lfloor \log_{2}(k + 1) - 1 \rfloor + 2 $$
+
+By exercise 15, section 4.6:
+
+$$ = (\lfloor \log_{2}(k + 1) \rfloor - 1) + 2 $$
+
+$$ = \lfloor \log_{2}(k + 1) \rfloor + 1 $$
+
+Thus it has been shown that $P(k + 1)$ is true when $k$ is odd.
+
+_Case ($k$ is even):_
+
+Since $k$ is even, $k + 1$ is odd.
+
+Then, it follows by Theorem 4.6.2 that:
+
+$$ b_{k + 1} = b_{\frac{k}{2}} + 1 $$
+
+Then, by the inductive hypothesis:
+
+$$ = \left(\left\lfloor \log_{2}\left(\frac{k}{2}\right) \right\rfloor + 1\right) + 1 $$
+
+By arithmetic:
+
+$$ = \left\lfloor \log_{2}\left(\frac{k}{2}\right) \right\rfloor + 2 $$
+
+By Theorem 7.2.1(b):
+
+$$ = \lfloor \log_{2}(k) - \log_{2}(2) \rfloor + 2 $$
+
+$$ = \lfloor \log_{2}(k) - 1 \rfloor + 2 $$
+
+By exercise 15, section 4.6:
+
+$$ = (\lfloor \log_{2}(k) \rfloor - 1) + 2 $$
+
+By arithmetic:
+
+$$ = \lfloor \log_{2}(k) \rfloor + 1 $$
+
+By property 11.4.3:
+
+$$ = \lfloor \log_{2}(k + 1) \rfloor + 1 $$
+
+Thus $P(k + 1)$ is true when $k$ is even.
+
+In both cases $P(k + 1)$ has been demonstrated, completing the inductive step.
+
+_Conclusion:_
+
+Since both the basis and inductive steps have been shown, it can be concluded
+that $P(n)$ is true for all $n \geq 1$.
+
+Q.E.D.
 
 23. Define a sequence $c_1, c_2, c_3, \dots$ recursively as follows:
 
@@ -3749,46 +4275,478 @@ $$ c_k = c_{\lfloor \frac{k}{2} \rfloor}  + k \text{, for each integer } k \geq 
 Use strong mathematical induction to show that $c_n \leq n^2$ for every integer
 $n \geq 1$.
 
+**Proof (by strong mathematical induction):**
+
+Let $c_1, c_2, c_3, \dots$ be the given sequence where $c_1 =0$ and
+$c_k = c_{\lfloor \frac{k}{2} \rfloor} + k$ for each integer $k \geq 2$.
+
+Let $P(n)$ be the statement:
+
+$$ c_n \leq n^2 $$
+
+for every integer $n \geq 1$.
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ c_1 \leq (1)^2 $$
+
+By algebra:
+
+$$ c_1 \leq 1^2 $$
+
+$$ c_1 \leq 1 $$
+
+By the supposition, this is true since $c_1 = 0$, and $0 \leq 1$. Therefore
+$P(1)$ is true.
+
+_Inductive Step:_
+
+Suppose $i, k \in \mathbf{Z}$ where $1 \leq i \leq k$.
+
+Suppose $P(i)$, that is, for every $i$ from $1$ through $k$:
+
+$$ c_i \leq i^2 $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ c_{k + 1} \leq (k + 1)^2 $$
+
+By the given recurrence relation:
+
+$$ c_{k + 1} = c_{\lfloor \frac{k + 1}{2} \rfloor} + (k + 1) $$
+
+By the inductive hypothesis:
+
+$$ c_{\lfloor \frac{k + 1}{2} \rfloor} \leq \left(\left\lfloor \frac{k + 1}{2}
+\right\rfloor \right)^2 $$
+
+It follows that:
+
+$$ c_{\lfloor \frac{k + 1}{2} \rfloor} + (k + 1) \leq \left(\left\lfloor \frac{k + 1}{2} \right\rfloor \right)^2 + (k + 1) $$
+
+Since
+$\left(\left\lfloor \dfrac{k + 1}{2} \right\rfloor\right)^2 \leq \left(\dfrac{k + 1}{2}\right)^2$,
+by the laws of transitivity:
+
+$$ c_{\lfloor \frac{k + 1}{2} \rfloor} + (k + 1) \leq \left(\frac{k + 1}{2}\right)^2 + (k + 1) $$
+
+Evaluating further we find:
+
+$$ \leq \frac{(k + 1)(k + 1)}{4} + (k + 1) $$
+
+$$ \leq \frac{k^2 + 2k + 1}{4} + (k + 1) $$
+
+$$ \leq \frac{k^2 + 2k + 1 + 4(k + 1)}{4} $$
+
+$$ \leq \frac{k^2 + 2k + 1 + 4k + 4}{4} $$
+
+$$ \leq \frac{k^2 + 6k + 5}{4} $$
+
+Now notice that when this function is divided by $4$, we get:
+
+$$ k^2 + 6k + 5 $$
+
+And to prove $P(k + 1)$, it suffices to show that this is:
+
+$$ k^2 + 6k + 5 \leq 4(k + 1)^2  $$
+
+$$ \leq 4(k + 1)(k + 1)  $$
+
+$$ \leq 4(k^2 + 2k + 1)  $$
+
+$$ \leq 4k^2 + 8k + 4  $$
+
+By algebra:
+
+$$ 0 \leq 3k^2 + 2k - 1 $$
+
+which holds for $k \geq 1$.
+
+This inequality holds, thus by the transitivity of inequality:
+
+$$ c_{k + 1} = c_{\lfloor \frac{k + 1}{2} \rfloor} + (k + 1) \leq k^2 + 6k + 5 \leq 4k^2 + 8k + 4 $$
+
+This implies that:
+
+$$ c_{k + 1} \leq (k + 1)^2 $$
+
+Thus $P(k + 1)$ is true.
+
+_Conclusion:_
+
+Since both the basis and inductive step have been demonstrated, it can be
+concluded that $P(n)$ is true for all $n \geq 1$.
+
+Q.E.D.
+
 24. Use strong mathematical induction to show that for the sequence of exercise
     23, $c_n \leq n\log_{2}n$, for every integer $n \geq 4$.
+
+Omitted.
 
 Exercises 25 and 26 refer to properties 11.4.9 and 11.4.10. To solve them, think
 big!
 
 25. Find a real number $x > 3$ such that $\log_{2}x < x^{\frac{1}{10}}$.
 
+$x = 10^{20}$
+
 26. Find a real number $x > 1$ such that $x^{50} < 2^x$.
+
+$$ x^{50} < 2^x \Leftrightarrow \log_{2}(x^{50}) < \log_{2}(2^x) \Leftrightarrow 50\log_{2}x < x $$
+
+Thus we can start guessing that $x = 2^n$ for some $n \in \mathbb{Z}^+$.
+
+Working on the calculator, this inequality holds when $x \geq 2^9$.
 
 Use Theorems 11.2.7-11.2.9 and properties 11.4.11, 11.4.12, and 11.4.13 to
 derive each statement in 27-30.
 
 27. $2n + \log_{2}n$ is $\Theta(n)$
 
+By Theorem 11.2.7(a), $n$ is $\Theta(n)$.
+
+By Theorem 11.2.7(a), $\log_{2}n$ is $\Theta(\log_{2}n)$.
+
+By 11.2.8\(\c), since $n$ is $\Theta(n)$, $2n$ is $\Theta(n)$.
+
+By Theorem 11.4.9, there is a positive real number $s$ such that for each
+$n \geq s$, $\log_{2}n \leq n$.
+
+If $n \geq 1$, it follows that $n \geq 0$.
+
+Thus, by Theorem 11.2.9\(c\), $2n + \log_{2}n$ is $\Theta(n)$.
+
 28. $n^2 + 5n\log_{2}n$ is $\Theta(n^2)$
+
+Omitted (uses too much of just citing old notes, no way this is helpful in
+retaining the info).
 
 29. $n^2 + 2^n$ is $\Theta(2^n)$
 
+Omitted (uses too much of just citing old notes, no way this is helpful in
+retaining the info).
+
 30. $2^{n + 1}$ is $\Theta(2^n)$
 
+Omitted (uses too much of just citing old notes, no way this is helpful in
+retaining the info).
+
 31. Show that $4^n$ is not $O(2^n)$.
+
+_Hint:_ Use a proof by contradiction. Start by supposing that $4^n$ is $O(2^n)$.
+That is, that there are positive real numbers $B$ and $b$ such that
+$O \leq 4^n \leq B \cdot 2^n$ for every real number $n > b$, and use the fact
+that $\dfrac{4^n}{2^n} = \left(\dfrac{4}{2}\right)^n = 2^n$ to obtain a
+contradiction.
+
+**Proof (by contradiction):**
+
+Suppose $4^n$ is $O(2^n)$.
+
+Since $4^n$ is $O(2^n)$, there exists positive real numbers $B$ and $b$ such
+that:
+
+$$ 0 \leq 4^n \leq B(2^n) \text{ for every integer } n > b $$
+
+By division:
+
+$$ 0 \leq \frac{4^n}{2^n} \leq B $$
+
+$$ 0 \leq \left(\frac{4}{2}\right)^n \leq B $$
+
+$$ 0 \leq 2^n \leq B $$
+
+Thus $2^n$ grows without bound and there exists some value for $n$ such that
+$2^n > B$, which contradicts the fact that $2^n \leq B$.
+
+Since a contradiction to the supposition has been derived, it can be concluded
+that the supposition is false and therefore $4^n$ is not $O(2^n)$.
+
+Q.E.D.
 
 Prove each of the statements in 32-37, assuming $n$ is an integer variable that
 takes positive integer values. Use identities from Section 5.2 as needed.
 
 32. $1 + 2 + 2^2 + 2^3 + \cdots + 2^n$ is $\Theta(2^n)$.
 
+**Proof:**
+
+By Theorem 5.2.2:
+
+$$ 1 + 2 + 2^2 + 2^3 + \cdots + 2^n = \frac{2^{n + 1} - 1}{2 - 1} = 2^{n + 1} - 1 $$
+
+It suffices to show that $2^{n + 1} - 1$ is $\Theta(2^n)$, that is there exists
+positive real numbers $A$, $B$ and $k$ such that:
+
+$$ A(2^n) \leq 2^{n + 1} - 1 \leq B(2^n) \text{ for each integer } n \geq k $$
+
+Now, notice that $2^{n + 1} - 1$ lies in between two consecutive powers of 2:
+
+$$ 2^n \leq 2^{n + 1} - 1 \leq 2^{n + 1} $$
+
+Thus, let $A = 1$, $B = 2$, and $k = 1$, then:
+
+$$ A(2^n) \leq 2^{n + 1} - 1 \leq B(2^n) \text{ for each integer } n \geq k $$
+
+This inequality holds given these definitions for $A$, $B$, and $k$, and
+therefore it has been shown that the given sequence is $\Theta(2^n)$.
+
+Q.E.D.
+
 33. $4 + 4^2 + 4^3 + \cdots + 4^n$ is $\Theta(4^n)$.
+
+**Proof:**
+
+By theorem 5.2.2:
+
+$$ 4 + 4^2 + 4^3 + \cdots 4^n = \frac{4^{n + 1} - 1}{4 - 1} - 1 = \frac{4^{n + 1} - 1}{3} - 1 $$
+
+$$ = \frac{4^{n + 1} - 1 - 3}{3} $$
+
+$$ = \frac{4^{n + 1} - 4}{3} $$
+
+It suffices to show that:
+
+$$ \frac{4^{n + 1} - 4}{3} \text{ is } \Theta(4^n) $$
+
+In other words, it must be shown there exists positive real numbers $A$, $B$ and
+$k$ such that:
+
+$$ A(4^n) \leq \frac{4^{n + 1} - 4}{3} \leq B(4^n) \text{ for every integer } n \geq k $$
+
+Now, notice that $\dfrac{4^{n + 1} - 4}{3}$ must lie within the range of two
+positive powers of $4$:
+
+$$ 4^n \leq \frac{4^{n + 1} - 4}{3} \leq 4^{n + 1} $$
+
+So, let $A = 1$, $B = 4$, and $k = 1$, then:
+
+$$ A(4^n) \leq \frac{4^{n + 1} - 4}{3} \leq B(4^n) \text{ for every integer } n \geq k $$
+
+holds.
+
+Thus the given sequence is $\Theta(4^n)$.
+
+Q.E.D.
 
 34. $2 + 2 \cdot 3^2 + 2 \cdot 3^4 + \cdots + 2 \cdot 3^{2n}$ is
     $\Theta(3^{2n})$.
 
+**Proof:**
+
+Notice that:
+
+$$ 2 + 2 \cdot 3^2 + 2 \cdot 3^4 + \cdots + 2 \cdot 3^{2n} = 2(1 + 9 + 81 + \cdots + 9^n) $$
+
+By Theorem 5.2.2:
+
+$$ = 2\left(\frac{9^{n + 1} - 1}{9 - 1}\right) $$
+
+$$ = 2\left(\frac{9^{n + 1} - 1}{8}\right) $$
+
+$$ = \frac{9^{n + 1} - 1}{4} $$
+
+It suffices to show that this is $\Theta(3^{2n})$. That is, there exists
+positive real numbers $A$, $B$, and $k$ such that:
+
+$$ A(3^{2n}) \leq \frac{9^{n + 1} - 1}{4} \leq B(3^{2n}) \text{ for every integer } n \geq k $$
+
+$$ A(9^n) \leq \frac{9^{n + 1} - 1}{4} \leq B(9^n) \text{ for every integer } n \geq k $$
+
+Notice that $\dfrac{9^{n + 1} - 1}{4}$ lies in the range between two positive
+powers of $9$:
+
+$$ 9^n \leq \frac{9^{n + 1} - 1}{4} \leq 9^{n + 1} \text{ for every integer } n \geq 1 $$
+
+Thus, let $A = 1$, $B = 9$, and $k = 1$, and the inequality for the given
+sequence being $\Theta(3^{2n})$ is satisfied.
+
+Q.E.D.
+
 35. $\dfrac{1}{5} + \dfrac{4}{5^2} + \dfrac{4^2}{5^3} + \cdots + \dfrac{4^n}{5^{n + 1}}$
     is $\Theta(1)$.
 
+**Proof:**
+
+Notice that:
+
+$$ \dfrac{1}{5} + \dfrac{4}{5^2} + \dfrac{4^2}{5^3} + \cdots + \dfrac{4^n}{5^{n + 1}} $$
+
+$$ = \frac{1}{5}\left[\left(\frac{4}{5}\right)^0 + \left(\frac{4}{5}\right)^1 + \cdots + \left(\frac{4}{5}\right)^n\right] $$
+
+By Theorem 5.2.2:
+
+$$ = \frac{1}{5}\left(\frac{\left(\dfrac{4}{5}\right)^{n + 1} -
+1}{\dfrac{4}{5} - 1\right) $$
+
+$$ = \frac{1}{5}\left(\frac{\left(\dfrac{4}{5}\right)^{n + 1} -
+1}{-\dfrac{1}{5}}\right) $$
+
+$$ = (-1)\left(\left(\frac{4}{5}\right)^{n + 1} - 1\right) $$
+
+$$ = 1 - \left(\frac{4}{5}\right)^{n + 1} $$
+
+It suffices to show that this is $\Theta(1)$, or, there exists positive real
+numbers $A$, $B$, and $k$ such that:
+
+$$ A(1) \leq 1 - \left(\frac{4}{5}\right)^{n + 1} \leq B(1) \text{ for every integer } n \geq k $$
+
+$$ A \leq 1 - \left(\frac{4}{5}\right)^{n + 1} \leq B \text{ for every integer } n \geq k $$
+
+Consider $n = 1$, and notice that:
+
+$$ \left(\frac{4}{5}\right)^{n + 1} \leq \frac{4}{5} \Rightarrow 1 - \frac{4}{5} \leq 1 - \left(\frac{4}{5}\right)^{n + 1} $$
+
+$$ \frac{1}{5} \leq 1 - \left(\frac{4}{5}\right)^{n + 1} $$
+
+Thus, this inequality will hold at $A = \frac{1}{5}$ when $n \geq 1$.
+
+Now, notice that when $n \geq 1$:
+
+$$ \left(\frac{4}{5}\right)^{n + 1} \geq 0 $$
+
+Now multiply by $-1$:
+
+$$ -\left(\frac{4}{5}\right)^{n + 1} \leq 0 $$
+
+And now add $1$:
+
+$$ 1 + \left(-\left(\frac{4}{5}\right)^{n + 1}\right) \leq 1 + 0 $$
+
+$$ 1 - \left(\frac{4}{5}\right)^{n + 1} \leq 1 $$
+
+Thus let $B = 1$.
+
+So let $A = \dfrac{9}{25}$, $B = 1$, and $k = 1$, then the inequality holds and
+the given sequence is $\Theta(1)$.
+
+Q.E.D.
+
 36. $n + \dfrac{n}{2} + \dfrac{n}{4} + \cdots + \dfrac{n}{2^n}$ is $\Theta(n)$.
+
+**Proof:**
+
+Notice that:
+
+$$ n + \dfrac{n}{2} + \dfrac{n}{4} + \cdots + \dfrac{n}{2^n} $$
+
+$$ = n\left(1 + \frac{1}{2} + \frac{1}{4} + \cdots + \frac{1}{2^{n - 1}}\right) $$
+
+By Theorem 5.2.2:
+
+$$ = n\left(\frac{\left(\dfrac{1}{2}\right)^{(n - 1) + 1} - 1}{\dfrac{1}{2} - 1}\right) $$
+
+$$ = n\left(\frac{\left(\dfrac{1}{2}\right)^{n} - 1}{\dfrac{1}{2} - 1}\right) $$
+
+$$ = n\left(\frac{\left(\dfrac{1}{2}\right)^{n} - 1}{-\dfrac{1}{2}}\right) $$
+
+$$ = -2n\left[\left(\frac{1}{2}\right)^n - 1\right] $$
+
+$$ = -2n\left(\frac{1}{2}\right)^n + 2n $$
+
+$$ = 2n - 2n\left(\frac{1}{2}\right)^n $$
+
+$$ = 2n - 2n\left(\frac{1^n}{2^n}\right) $$
+
+$$ = 2n - \left(\frac{2n \cdot 1^n}{2^n}\right) $$
+
+$$ = 2n - \left(\frac{2n \cdot 1}{2^n}\right) $$
+
+$$ = 2n - \left(\frac{2n}{2^n}\right) $$
+
+$$ = 2n - \left(\frac{n}{2^{n - 1}}\right) $$
+
+It suffices to show that this is $\Theta(n)$.
+
+It suffices to show $\exists A, B, k \in \mathbf{R}^+$, such that:
+
+$$ A(n) \leq 2n - \left(\frac{n}{2^{n - 1}}\right) \leq B(n) \text{ for every integer } n \geq k $$
+
+$$ A \leq 2 - \frac{1}{2^{n - 1}} \leq B $$
+
+Notice that:
+
+$$ \frac{1}{2^{n - 1}} \leq \frac{1}{2} $$
+
+$$ \Rightarrow 2 - \frac{1}{2^{n - 1}} \geq 2 - \frac{1}{2} = \frac{3}{2} $$
+
+Note that this holds only if $2^{n - 1} \geq 2$, so let $k = 2$.
+
+So, let $A = \dfrac{3}{2}$.
+
+Furthermore, notice that:
+
+$$ \frac{1}{2^{n - 1}} \geq 0 $$
+
+$$ \Rightarrow 2 - \frac{1}{2^{n - 1}} \leq 2 $$
+
+So, let $B = 2$, and finally let $k = 2$.
+
+Then the inequality holds and the given sequence is $\Theta(n)$.
+
+Q.E.D.
 
 37. $\dfrac{2n}{3} + \dfrac{2n}{3^2} + \dfrac{2n}{3^3} + \cdots + \dfrac{2n}{3^n}$
     is $\Theta(n)$.
+
+**Proof:**
+
+Notice that:
+
+$$ \dfrac{2n}{3} + \dfrac{2n}{3^2} + \dfrac{2n}{3^3} + \cdots + \dfrac{2n}{3^n} $$
+
+$$ = 2n\left(\frac{1}{3} + \frac{1}{3^2} + \frac{1}{3^3} + \cdots + \frac{1}{3^n}\right) $$
+
+By theorem 5.2.2:
+
+$$ = 2n\left(\frac{\left(\dfrac{1}{3}\right)^{n + 1} - 1}{\dfrac{1}{3} - 1}\right) $$
+
+$$ = 2n\left(\frac{\left(\dfrac{1}{3}\right)^{n + 1} - 1}{-\dfrac{2}{3}}\right) $$
+
+$$ = 2n\left(-\frac{3}{2}\right)\left[\left(\frac{1}{3}\right)^{n + 1} - 1\right]$$
+
+$$ = -3n\left[\left(\frac{1}{3}\right)^{n + 1} - 1\right]$$
+
+$$ = -3n\left(\frac{1}{3}\right)^{n + 1} - (-3n) $$
+
+$$ = -3n\left(\frac{1}{3}\right)^{n + 1} + 3n $$
+
+$$ = -3n\left(\frac{1}{3^{n + 1}}\right) + 3n $$
+
+$$ = \left(\frac{-3n}{3^{n + 1}}\right) + 3n $$
+
+$$ = 3n - \frac{3n}{3^{n + 1}} $$
+
+$$ = 3n - \frac{n}{3^n} $$
+
+It suffices to show this is $\Theta(n)$, that is
+$\exists A, B, k \in \mathbf{R}^+$ such that:
+
+$$ A(n) \leq 3n - \frac{n}{3^n} \leq B(n) \forall n \geq k $$
+
+$$ A \leq 3 - \frac{1}{3^n} \leq B \forall n \geq k $$
+
+Now:
+
+$$ 1 \leq 3 - \frac{1}{3^n} \leq 3 \forall n \geq 1 $$
+
+The left-hand inequality holds because when $n = 1$,
+$3 - \dfrac{1}{3^1} = \frac{8}{3} \geq 1$, and $3 - \dfrac{1}{3^n}$ increases as
+$n$ increases.
+
+The right-hand inequality holds because when $n = 1$,
+$3 - \dfrac{1}{3^1} = \dfrac{8}{3} \leq 3$, and $3 - \dfrac{1}{3^n}$ is bounded
+by $3$.
+
+Thus let $A = 1$, $B = 3$, and $k = 1$. Then the inequality holds and the series
+is $\Theta(n)$.
+
+Q.E.D.
 
 38. Quantities of the form
 
@@ -3799,45 +4757,375 @@ for any positive integer $k$,
 
 $$ k_1n + k_2n\log_{2}n \text{ is } \Theta(n\log_{2}n) $$
 
+**Proof:**
+
+By Theorem 11.2.7(a), $n$ is $\Theta(n)$, and also $n\log_{2}n$ is
+$\Theta(n\log_{2}n)$
+
+By Theorem 11.2.8\(c\), $k_1n$ is $\Theta(n)$, and $k_2n\log_{2}n$ is
+$\Theta(k_2n\log_{2}n)$.
+
+Then, by 11.4.13, there is a positive real number $s$ such that for each integer
+$n \geq s$, $n \leq n\log_{2}n$
+
+Thus, by Theorem 11.2.9\(\c\), $k_1n + k_2n\log_{2}n$ is $\Theta(n\log_{2}n)$.
+
+Q.E.D.
+
 39. Calculate the values of the harmonic sums
 
 $$ 1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n} \text{ for } n = 2, 3, 4, \text{ and } 5 $$
+
+$$ 1 + \frac{1}{2} = \frac{3}{2} $$
+
+$$ 1 + \frac{1}{2} + \frac{1}{3} = \frac{11}{6} $$
+
+$$ 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} = \frac{25}{12} $$
+
+$$ 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} = \frac{137}{60} $$
 
 40. Use part (d) of Example 11.4.7 to show that
 
 $$ n + \frac{n}{2} + \frac{n}{3} + \cdots + \frac{n}{n} \text{ is } \Theta(n \ln n) $$
 
+Notice that:
+
+$$ n + \frac{n}{2} + \frac{n}{3} + \cdots + \frac{n}{n} $$
+
+$$ = n\left(1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n}\right) $$
+
+Example 11.4.7 (d) states that:
+
+$$ 1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n} \text{ is } \Theta(\ln n) $$
+
+Now, by 11.2.7(a), $n$ is $\Theta(n)$.
+
+And by 11.2.9(b),
+$n\left(1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n}\right)$ is
+$\Theta(n\ln n)$.
+
 41. Show that $\lfloor \log_{2}n \rfloor$ is $\Theta(\log_{2}n)$.
 
+**Proof:**
+
+Suppose that $n \in \mathbf{Z}^+$.
+
+Then $\log_{2}n$ is defined by the definition of floor as:
+
+$$ \lfloor \log_{2}n \rfloor \leq \log_{2}n \leq \lfloor \log_{2}n \rfloor + 1 $$
+
+If $n \geq 2$, then the logarithmic function with base $2$ is increasing.
+
+$$ \log_{2}n > \log_{2}2 = 1 $$
+
+And, by definition of floor:
+
+$$ 1 \leq \lfloor \log_{2}n \rfloor  $$
+
+Now, add $\lfloor \log_{2}n \rfloor$ to both sides:
+
+$$ 1 + \lfloor \log_{2}n \rfloor \leq 2\lfloor \log_{2}n \rfloor $$
+
+And notice that:
+
+$$ \log_{2}n \leq 1 + \lfloor \log_{2}n \rfloor \leq 2\lfloor \log_{2}n \rfloor $$
+
+By the transitive property:
+
+$$ \log_{2}n \leq 2\lfloor \log_{2}n \rfloor $$
+
+Then divide both sides by $2$:
+
+$$ \frac{1}{2}\log_{2}n \leq \lfloor \log_{2}n \rfloor $$
+
+So, let $A = \dfrac{1}{2}$, $B = 1$, and $k = 2$, then:
+
+$$ A\log_{2}n \leq \lfloor \log_{2}n \rfloor \leq B\log_{2}n $$
+
+This means (by the definition of $\Theta$-notation), that
+$\lfloor \log_{2}n \rfloor$ is $\Theta(\log_{2}n)$.
+
+Q.E.D.
+
 42. Show that $\lceil \log_{2}n \rceil$ is $\Theta(\log_{2}n)$.
+
+**Proof:**
+
+Suppose $n \in \mathbf{Z}^+$.
+
+Then $\log_{2}n$ is defined by the definition of ceiling,
+
+$$ \lceil\log_{2}n \rceil - 1 < \log_{2}n \leq \lceil\log_{2}n \rceil $$
+
+If, in addition, $n$ is greater than $2$, then since the logarithmic function
+with base $2$ is increasing
+
+$$ \log_{2}n > \log_{2}2 = 1 $$
+
+Thus, since $\log_{2}n > 1$, and by definition of ceiling:
+
+$$ 1 \leq \lceil \log_{2}n \rceil $$
+
+and:
+
+$$ \lceil \log_{2}n \rceil \leq \log_{2}n + 1 $$
+
+Adding $\lceil \log_{2}n \rceil$ to both sides of the first inequality yields:
+
+$$ 1 + \lceil \log_{2}n \rceil \leq 2\lceil \log_{2}n \rceil $$
+
+And notice that:
+
+$$ \log_{2}n \leq 1 + \lceil \log_{2}n \rceil \leq 2\lceil \log_{2}n \rceil $$
+
+So, by the transitive property:
+
+$$ \log_{2}n \leq 2\lceil \log_{2}n \rceil $$
+
+Divide both sides by $2$:
+
+$$ \frac{1}{2}\log_{2}n \leq \lceil \log_{2}n \rceil $$
+
+And, similar to 41, let $A = \dfrac{1}{2}$.
+
+Now, for the other inequality we have:
+
+$$ \lceil \log_{2}n \rceil \leq \log_{2}n + 1 $$
+
+Now, notice that:
+
+$$ \lceil \log_{2}n \rceil \leq \log_{2}n + 1 \leq 2\log_{2}n $$
+
+This holds because it has been established that when $n \geq 2$,
+$\log_{2}n \geq 1$, and so it follows that $\log_{2}n + 1 \leq 2\log_{2}n$.
+
+By the transitive property:
+
+$$ \lceil \log_{2}n \rceil \leq 2\log_{2}n $$
+
+So let $B = 2$.
+
+In total, we have $A = \dfrac{1}{2}$, $B = 2$, and $k = 2$.
+
+$$ A\log_{2}n \leq \lceil \log_{2}n \rceil \leq B\log_{2}n $$
+
+Thus (by the definition of $\Theta$-notation), $\lceil \log_{2}n \rceil$ is
+$\Theta(\log_{2}n)$.
+
+This is what was to be shown.
+
+Q.E.D.
 
 43. Prove by mathematical induction that $n \leq 10^n$ for every integer
     $n \geq 1$.
 
+**Proof (by mathematical induction):**
+
+Suppose $n \in \mathbf{Z}$ such that $n \geq 1$.
+
+Let $P(n)$ be the statement:
+
+$n \leq 10^n$
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ 1 \leq 10^1 $$
+
+This is true since:
+
+$$ 1 \leq 10^1 = 10 $$
+
+Thus $P(1)$ is true.
+
+_Inductive Step:_
+
+Suppose $k \in \mathbf{Z}$ where $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ k \leq 10^k $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ (k + 1) \leq 10^{k + 1} $$
+
+Now, since:
+
+$$ k \leq 10^k $$
+
+Add $1$ to both sides:
+
+$$ (k + 1) \leq (10^k + 1)  $$
+
+Then, notice that when $k \geq 1$:
+
+$$ (10^k + 1) \leq 10^k \cdot 10 = 10^{k + 1} $$
+
+(This holds since $1 \leq 9 \cdot 10^k$ when $k \geq 1$.)
+
+Thus, by transitivity:
+
+$$ (k + 1) \leq 10^{k + 1} $$
+
+Thus $P(k + 1)$ is true.
+
+_Conclusion:_
+
+Since both the basis and inductive step have been demonstrated, it can be
+concluded that $P(n)$ is true for all $n \geq 1$.
+
+Q.E.D.
+
 44. Prove by mathematical induction that $\log_{2}n leq n$ for every integer
     $n \geq 1$.
 
+_Hint:_ To prove the inductive step, use the fact that if $k > 1$, then
+$k + 1 \leq 2k$. Apply the logarithmic function with base $2$ to both sides of
+the this inequality, and use properties of logarithms.
+
+**Proof (by mathematical induction):**
+
+Suppose $n \in \mathbf{Z}$ with $n \geq 1$.
+
+Let $P(n)$ be the statement:
+
+$$ \log_{2}n \leq n $$
+
+_Basis Step:_
+
+Prove $P(1)$, that is:
+
+$$ \log_{2}1 \leq 1 $$
+
+This is true since:
+
+$$ \log_{2}1 = 0 \leq 1 $$
+
+Thus $P(1)$ is true.
+
+_Inductive Step:_
+
+Let $k \in \mathbf{Z}$, where $k \geq 1$.
+
+Suppose $P(k)$, that is:
+
+$$ \log_{2}k \leq k $$
+
+This is the inductive hypothesis.
+
+Prove $P(k + 1)$, that is:
+
+$$ \log_{2}(k + 1) \leq (k + 1) $$
+
+Now, since $k > 1$, it follows that:
+
+$$ k + 1 \leq 2k $$
+
+Taking $\log_{2}$ of both sides yields:
+
+$$ \log_{2}(k + 1) \leq \log_{2}(2k) $$
+
+By the product rule for logarithms:
+
+$$ \log_{2}(k + 1) \leq \log_{2}(2) + \log_{2}(k) = 1 + \log_{2}k  $$
+
+$$ \log_{2}(k + 1) \leq 1 + \log_{2}k  $$
+
+Now, by the inductive hypothesis, since $\log_{2}k \leq k$, it follows that:
+
+$$ \log_{2}(k + 1) \leq 1 + \log_{2}k \leq k + 1  $$
+
+Then, by the transitive property:
+
+$$ \log_{2}(k + 1) \leq k + 1  $$
+
+This is what was to be shown, and therefore $P(k + 1)$ is true.
+
+_Conclusion:_
+
+Since both the basis and inductive steps have been demonstrated, it can be
+concluded that $P(n)$ is true for all $n \geq 1$.
+
+Q.E.D.
+
 45. Show that if $n$ is a variable that takes positive integer values, then
     $2^n$ is $O(n!)$.
+
+_Hint:_
+$\underbrace{2 \cdot 2 \cdot 2 \dots 2}_{n \text{ factors}} \leq 2 \cdot (2 \cdot e \cdot 4 \dots n) = 2 \cdot n!$
+
+**Proof:**
+
+Notice that
+$0 \leq 2^n = \underbrace{2 \cdot 2 \cdots \cdot 2}_{n \text{ times}} \leq 2 \cdot (2 \cdot 3 \cdot \cdots \cdot n) = 2n!$.
+
+So let $B = 2$ , and let $b \geq 2$, then:
+
+$$ 0 \leq 2^n \leq B(n!) \text{ for } n \geq b $$
+
+By the definition for $O$-notation, this means that $2^n$ is $O(n!)$.
+
+Q.E.D.
 
 46. Let $n$ be a variable that takes positive values.
 
 a. Use Example 11.4.6 to show that $\log_{2}(n!)$ is $O(n \log_{2} n)$.
 
+**Proof:**
+
+Suppose $n \in \mathbf{Z}^+$.
+
+It must be shown there exists some $B, b \in \mathbf{R}^+$ such that:
+
+$$ 0 \leq \log_{2}(n!) \leq B(n \log_{2} n) \text{ for every integer } n \geq b $$
+
+By Example 11.4.6, it is known that when $n \geq 1$, that $n! \leq n^n$.
+
+Since $\log_{2}$ is increasing, it follows that:
+
+$$ \log_{2}(n!) \leq \log_{2}(n^n) = n\log_{2}n $$
+
+And when $n \geq 1$,
+
+$$ \log_{2}(n!) \geq \log_{2}1 = 0 $$
+
+So, let $B = 1$, $b = 1$, then:
+
+$$ 0 \leq \log_{2}(n!) \leq B(n\log_{2}n) \text{ for every integer } n \geq b $$
+
+By the definition for $O$-notation, this means that $\log_{2}(n!)$ is
+$O(n\log_{2}n)$, as was to be shown.
+
+Q.E.D.
+
 b. Show that $n^n \leq (n!)^2$ for every integer $n \geq 1$.
+
+Omitted.
 
 c. Use part (b) to show that $\log_{2}(n!)$ is $\Omega(n \log_{2} n)$.
 
+Omitted.
+
 d. Use parts (a) and \(c\) to find an order for $\log_{2}(n!)$.
+
+Omitted.
 
 47. For each positive real number $u$, $\log_{2}u < u$. Use this fact and the
     result of exercise 21 in Section 11.1 to prove the following: For every
     integer $n \geq 1$, if $x$ is any real number with $x > (2n)^{2n}$, then
     $\log_{2}x < x^{\frac{1}{n}}$.
 
+Omitted.
+
 48. Use the result of exercise 47 above to prove the following: For every
     integer $n \geq 1$, if $x$ is any real number with $x > (2n)^{2n}$, then
     $x^n < 2^x$.
+
+Omitted.
 
 49.
 
@@ -3846,8 +5134,12 @@ mathematical induction to prove that for every integer $n \geq 1$,
 
 $$ \lim\limits_{x \to \infty}\frac{x^a}{b^x} = 0 $$
 
+Omitted.
+
 b. Use the result of part (a) and the definitions of limit and of $O$-notation
 to prove that $x^n$ is $O(b^x)$ for any integer $n \geq 1$.
+
+Omitted.
 
 50.
 
@@ -3856,7 +5148,13 @@ that for every integer $n \geq 1$,
 
 $$ \lim\limits_{x \to \infty}\frac{\log_{b}x}{x^{\frac{1}{n}}} = 0 $$
 
+Omitted.
+
 b. Use the result of part (a) and the definitions of limit and of $O$-notation
 to prove that $\log_{b}x$ is $O(x^{\frac{1}{n}})$ for any integer $n \geq 1$.
 
+Omitted.
+
 51. Complete the proof in Example 11.4.4.
+
+Omitted.
