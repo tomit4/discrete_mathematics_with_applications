@@ -507,3 +507,80 @@ Page 830
 For every real number $b > 1$,
 
 $$ n \text{ is } O(n\log_{b}n) \text{ and } n\log_{b}n \text{ is } O(n^2) $$
+
+---
+
+Page 838
+
+**Algorithm 11.5.1 Binary Search**
+
+_[The aim of this algorithm is to search for an element $x$ in an ascending
+array of elements $a[1], a[2], \dots, a[n]$ If $x$ is found, the variable index
+is set equal t the index of the array element where $x$ is located. If $x$ is
+not found, index is not changed from its initial value, which is $0$. The
+variables bot and top denote the bottom and top indexes of the array currently
+being examined.]_
+
+**Input:** _$n$ [a positive integer], $a[1], a[2], \dots, a[n]$ [an array of
+data items given in ascending order], $x$ [a data item of the same data type as
+the elements of the array]_
+
+**Algorithm Body:**
+
+$\textit{index } := 0, \textit{ bot } := 1, \textit{ top } := n$
+
+_[Compute the middle index of the array, $\text{mid}$. Compare $x$ to
+$a[\text{mid}]$. If the two are equal, the search is successful. If not, repeat
+the process either for the lower or for the upper subarray, either giving
+$\textit{top}$ the new value $\textit{mid} - 1$ or giving \textit{bot} the new
+value $\textit{mid} + 1$. Each iteration of the loop either decreases the value
+of top or increases the value of $\textit{bot}$. Thus, if the looping is not
+stopped by success in the search process, the value of $\textit{top}$ eventually
+becomes less than the value of $\textit{bot}$, which stops the looping process
+and shows that $x$ is not an element of the array.]_
+
+$\textbf{while } (\textit{top } \geq \textit{ bot } \text{ and } \textit{index } = 0)\\ \ \ \textit{mid } := \left\lfloor \frac{\textit{bot } + \textit{ top}}{2}\right\rfloor\\ \ \ \textbf{if } a[\textit{mid}] = x \textbf{ then } \textit{index } := \textit{mid}\\ \ \ \textbf{if } a[\textit{mid}] > x\\ \ \ \ \ \textbf{then } \textit{top } : = \textit{mid } - 1\\ \ \ \ \ \textbf{else } \textit{bot } := \textit{mid } + 1\\ \textbf{end while}$
+
+_[If index has the value $0$ at this point, then the $\textbf{while}$ loop was
+not entered because $\textit{top } < \textit{ bot}$, and so $x$ is not in the
+array. Otherwise, index gives the index of the array where $x$ is located.]_
+
+**Output:** _$\textit{index}$ [a nonnegative integer]_
+
+---
+
+Page 845
+
+Merge sort works as follows:
+
+Given an array of elements that can be put into order, if the array consists of
+a single element, leave it as it is. It is already sorted. Otherwise:
+
+1. Divide the array into two subarrays of as nearly equal length as possible.
+
+2. Use merge sort to sort each subarray.
+
+3. Merge the two subarrays together.
+
+---
+
+Page 845
+
+**Algorithhm 11.5.2 Merge Sort**
+
+_[The aim of this algorithm is to take an array of elements
+$a[r], a[r + 1], \dots, a[s]$ (where $r \leq s$) and to order it. The output
+array is denoted $a[r], a[r + 1], \dots, a[s]$ also. It has the same values as
+the input array, but they are in ascending order. The input array is split into
+two nearly equal-length subarrays, each of which is ordered using merge sort.
+Then the two subarrays are merged together.]_
+
+**Input:** $r$ and $s$ _[ positive integers with $r \leq s$,
+$a[r], a[r + 1], \dots, a[s]$]_ _[an array of data items that can be ordered]_
+
+**Algorithm Body:**
+
+$\textit{bot } := r, \textit{ top } := s\\ \textbf{while } (\textit{bot } < \textit{ top})\\ \ \ \textit{mid } := \left\lfloor  \dfrac{\textit{bot } + \textit{ top} }{2}\right\rfloor\\ \ \  \text{call } \textbf{ merge sort } \text{with input } \textit{bot, mid, } \text{and}\\ \ \ \ \ a[\textit{bot}], a[\textit{bot} + 1], \dots, a[\textit{mid}]\\ \ \ \text{call } \textbf{merge sort } \text{with input } \textit{mid } +  1, \textit{top } \text{and}\\ \ \ \ \ a[\textit{mid} + 1], a[\textit{mid} + 2], \dots, a[\textit{top}]\\ \ \ \ \ \textit{[After these steps are completed, both arrays } a[\textit{bot}], \dots, a[\textit{mid}]\\ \ \ \ \ \textit{and } a[\textit{mid } + 1], a[\textit{mid} + 2], \dots, a[\textit{top}] \textit{are in order.}]\\ \ \ \ \ \textbf{merge } a[\textit{bot}], a[\textit{bot} + 1], \dots, a[\textit{mid}] \text{ and } a[\textit{mid + 1}], a[\textit{mid} + 2], \dots, a[\textit{top}]\\ \ \ \ \ \textit{[This step can be done with a call to a merge algorithm. To put the final}\\ \ \ \ \ \textit{array in ascending order, the merge algorithm must be written so as to take two}\\ \ \ \ \ \textit{arrays in ascending order and merge them into an array in ascending order.]}\\ \textbf{end while}$
+
+**Output:** _$a[r], a[r + 1], \dots, a[s]$ [an array with the same elements as
+the input array but in ascending order]_

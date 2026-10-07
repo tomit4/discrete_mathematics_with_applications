@@ -117,3 +117,26 @@ $\log x < x < x\log x < x^2$
    $1 + \dfrac{1}{2} + \dfrac{1}{3} + \cdots + \dfrac{1}{n}$ has order ____.
 
 $\ln x$ or $\log_{2}x$
+
+---
+
+Page 848
+
+**Test Yourself**
+
+1. To solve a problem using a divide-and-conquer algorithm, you reduce it to a
+   fixed number of smaller problems of the same kind, which can themselves be
+   ____, and so forth until ____.
+
+2. To search an array using the binary search algorithm in each step, you
+   compare a middle element of the array to ____. If the middle element of the
+   array to ____. If the middle element is less than ____, you ____, and if the
+   middle element is greater than ____, you ____.
+
+3. The worst-case order of the binary search algorithm is ____.
+
+4. To sort an array using the merge sort algorithm, in each step until the last
+   one you split the array into approximately two equal sections and sort each
+   section using ____. Then you ____ the two sorted sections.
+
+5. The worst-case order of the merge sort algorithm is ____.

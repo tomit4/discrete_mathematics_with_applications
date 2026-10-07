@@ -5158,3 +5158,212 @@ Omitted.
 51. Complete the proof in Example 11.4.4.
 
 Omitted.
+
+---
+
+Page 848
+
+**Exercise Set 11.5**
+
+1. Use the facts that $\log_{2}10 \approx 3.32$ and that for each real number
+   $a$, $\log_{2}(10^a) = a\log_{2}10$ to find
+   $\log_{2}(1000), \log_{2}(1000000)$, and $\log_{2}(1000000000000)$.
+
+2. Suppose an algorithm requires $c\lfloor \log_{2}n \rfloor$ operations when
+   performed with an input of size $n$ (where $c$ is a constant).
+
+a. By what factor will the number of operations increase when the input size is
+increased from $m$ to $m^2$ (where $m$ is a positive integer power of $2$)?
+
+b. By what factor will the number of operations increase when the input size is
+increased from $m$ to $m^{10}$ (where $m$ is a positive integer power of $2$)?
+
+c. When $n$ increases from $128 (= 2^7)$ to $268435456 (= 2^{28})$, by what
+factor is $c\lfloor \log_{2}n \rfloor$ increased?
+
+Exercises 3 and 4 illustrate that for relatively small values of $n$, algorithms
+with larger orders can be more efficient than algorithms with smaller orders.
+Use a graphing calculator or computer to answer these questions.
+
+3. For what values of $n$ is an algorithm that requires $n$ operations more
+   efficient than an algorithm that requires $\lfloor 50\log_{2}n \rfloor$
+   operations?
+
+4. For what values of $n$ is an algorithm that requires
+   $\left\lfloor \dfrac{n^2}{10} \right\rfloor$ operations m ore efficient than
+   an algorithm that requires $\lfloor n \log_{2} n \rfloor$ operations?
+
+In 5 and 6, trace the action of the binary search algorithm (Algorithm 11.5.1)
+on the variables $\textit{index}$, $\textit{bot}$, $\textit{bot}$,
+$\textit{mid}$, and the given values of $x$ for the input array $a[1] = $ Chia,
+$a[2] =$ Doug, $a[3] =$ Jan, $a[4] =$ Jim, $a[5] =$ Jose, $a[6] =$ Mary,
+$a[7] =$ Rob, $a[8] =$ Roy, $a[9] =$ Sue, $a[10] =$ Usha, where alphabetical
+ordering is used to compare elements of the array.
+
+5.
+
+a. $x =$ Chia
+
+b. $x =$ Max
+
+6.
+
+a. $x =$ Amanda
+
+b. $x =$ Roy
+
+7. Suppose $\textit{bot}$ and $\textit{top}$ are positive integers with
+   $\textit{bot} \leq \textit{top}$. Consider the array
+
+$$ a[\textit{bot}], a[\textit{bot} + 1], \dots, a[\textit{top}] $$
+
+a. How many elements are in this array?
+
+b. Show that if the number of elements in the array is odd, then the quantity
+$\textit{bot} + \textit{top}$ is even.
+
+c. Show that if the number of elements in the array is even, then the quantity
+$\textit{bot} + \textit{top}$ is odd.
+
+Exercises 8-11 refer to the following algorithm segment. For each positive
+integer $n$, let $a_n$ be the number of iterations of the **while** loop.
+
+$\textbf{while } (n > 0)\\ \ \ n := n \textit{div} 2\\ \textbf{end while}$
+
+8. Trace the action of this algorithm segment on $n $ when the initial value of
+   $n$ is $27$.
+
+9. Find a recurrence relation for $a_n$.
+
+10. Find an explicit formula for $a_n$.
+
+11. Find an order for this algorithm segment.
+
+Exercises 12-15 refer to the following algorithm segment. For each positive
+integer $n$, let $b_n$ be the number of iterations of the **while** loop.
+
+$\textbf{while } (n > 0)\\ \ \ n := n \textit{div} 3\\ \textbf{end while}$
+
+12. Trace the action of this algorithm segment on $n$ when the initial value of
+    $n$ is 424.
+
+13. Find the recurrence relation for $b_n$.
+
+14.
+
+a. Use iteration to guess an explicit formula for $b_n$.
+
+b. Prove that if $k$ is an integer an $x$ is a real number with
+$3^k \leq x < 3^k$, then $\lfloor \log_{3}x \rfloor = k$.
+
+c. Prove that for every integer $m \geq 1$,
+
+$$ \lfloor \log_{3}(3m) \rfloor = \lfloor \log_{3}(3m + 1) \rfloor = \lfloor \log_{3}(3m + 2) \rfloor$$
+
+d. Prove the correctness of the formula you found in part (a).
+
+15. Find an order for the algorithm segment.
+
+16. Complete the proof of case 2 of the strong induction argument in Example
+    11.5.5. In other words, show that if $k$ is an odd integer and
+    $w_i = \lfloor \log_{2} i \rfloor + 1$ for every integer $i$ with $ \leq i
+    \leq k$, then $w_{k + 1} = \lfloor \log_{2}k + 1 \rfloor + 1$.
+
+For 17-19, modify the binary search algorithm (Algorithm 11.5.1) to take the
+upper of the two middle array elements in case the input array has even length.
+In other words, in Algorithm 11.5.1 replace
+
+$$ \textit{mid } := \left\lfloor  \frac{\textit{bot} + \textit{top}}{2} \right\rfloor \text{ with } \textit{mid } :=  \left\lceil  \frac{\textit{bot} + \textit{top}}{2} \right\rceil$$
+
+17. Trace the modified binary search algorithm for the same input as was used in
+    Example 11.5.1.
+
+18. Suppose an array of length $k$ is input to the **while** loop of the
+    modified binary search algorithm. Show that after one iteration of the loop,
+    if $a[\textit{mid}] \neq x$, the input to the next iteration is an array of
+    length oat most $\left\lfloor \dfrac{k}{2} \right\rfloor$.
+
+19. Let $w_n$ be the number of iterations of the **while** loop in a worst-case
+    execution of the modified binary search algorithm for an input array of
+    length $n$. Show that $w_k = 1 + w_{\lfloor \frac{k}{2} \rfloor}$ for
+    $k \geq 2$.
+
+In 20 and 21, draw a diagram like Figure 11.5.4 to show how to merge the given
+subarrays into a single array in ascending order.
+
+20. $3, 5, 6, 9, 12$ and $2, 4, 7, 9, 11$
+
+21. $F, K, L, R, U$ and $C, E, L, P, W$ (alphabetical order)
+
+In 22 and 23, draw a diagram like Figure 11.5.5 to show how merge sort works for
+the given input arrays.
+
+22. $R, G, B, U, C, F, H, G$ (alphabetical order)
+
+23. $5, 2, 3, 9, 7, 4, 3, 2$
+
+24. Show that given an array
+    $a[\textit{bot}], a[\textit{bot} + 1], \dots, a[\textit{top}]$ of length
+    $k$, if
+    $\text{mid } = \left\lfloor  \frac{(\textit{bot} + \textit{top})}{2} \right\rfloor$
+    then
+
+a. the subarray
+$a[\textit{mid} + 1], a[\textit{mid} + 2], \dots, a[\textit{top}]$ has length
+$\left\lfloor \dfrac{k}{2} \right\rfloor$.
+
+b. the subarray $a[\textit{bot}], a[\textit{bot} + 1], \dots, a[\textit{mid}]$
+has length $\left\lceil \dfrac{k}{2} \right\rceil$.
+
+25. The recurrence relation for $m_1, m_2, m_3, \dots$, which arises in the
+    calculation of the efficiency of merge sort, is
+
+$$ m_1 = 0 $$
+
+$$ m_k = m_{\lfloor \frac{k}{2} \rfloor} + m_{\lceil \frac{k}{2} \rceil} + k - 1 $$
+
+Show that for every integer $n \geq 1$,
+
+a. $\dfrac{1}{2}n\log_{2}n \leq m_n$
+
+b. $m_n \leq 2n\log_{2}n$
+
+26. It might seem that $n - 1$ multiplications are needed to compute $x^n$,
+    since
+
+$$ x_n = \underbrace{x \cdot x \cdot \cdots x}_{n - 1 \text{ multiplications}} $$
+
+But observe that, for instance, since $6 = 4 + 2$,
+
+$$ x^6 = x^4x^2 = (x^2)^2x^2 $$
+
+Thus $x^6$ can be computed using three multiplications: one to compute $x^2$,
+one to compute $(x^2)^2$, and one to multiply $(x^2)^2$ times $x^2$. Similarly,n
+since $11 = 8 + 2 + 1$,
+
+$$ x^{11} = x^8x^2x^1 = ((x^2)^2)^2x^2x $$
+
+and so $x^{11}$ can be computed using five multiplications: one to compute
+$x^2$, one to compute $(x^2)^2$, one to compute $((x^2)^2)^2$, one to multiply
+$((x^2)^2)^2$ times $x^2$, and one to multiply that product by $x$.
+
+a. Write an algorithm to take a real number $x$ and a positive integer $n$ and
+compute $x^n$ by
+
+(i) calling Algorithm 5.1.1 to find the binary representation of $n$:
+
+$$ (r[k]r[k - 1] \cdots r[0])_2 $$
+
+where each $r[i]$ is $0$ or $1$;
+
+(ii) computing $x^2, x^{2^2}, x^{2^3}, \dots, x^{2^k}$ by squaring, then
+squaring again, and so forth;
+
+(iii) computing $x^n$ using the fact that
+
+$$ x^n = x^{r[k]2^k + \cdots + r[2]2^2 + r[1]2^1 + r[0]2^0} $$
+
+$$ = x^{r[k]2^k} \cdots x^{r[2]2^2} \cdot x^{r[1]2^1} \cdot x^{r[0]2^0} $$
+
+b. Show that the number of multiplications performed by the algorithm of part
+(a) is less than or equal to $2\lfloor \log_{2}n \rfloor$.
