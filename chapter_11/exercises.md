@@ -5169,17 +5169,47 @@ Page 848
    $a$, $\log_{2}(10^a) = a\log_{2}10$ to find
    $\log_{2}(1000), \log_{2}(1000000)$, and $\log_{2}(1000000000000)$.
 
+Since $10^3 = 1000$, let $a = 3$, then:
+
+$$ \log_{2}(10^a) = a\log_{2}(10) = 3\log_{2}(10) \approx 3 \cdot 3.32 \approx 9.96 $$
+
+Similarly:
+
+$$ \log_{2}(1,000,000) = \log_{2}(10^6) = 6\log_{2}(10) \approx 6(3.32) \approx 19.92 $$
+
+$$ \log_{2}(1,000,000,000,000) = \log_{2}(10^{12}) = 12\log_{2}(10) \approx 12(3.32) \approx 39.84 $$
+
 2. Suppose an algorithm requires $c\lfloor \log_{2}n \rfloor$ operations when
    performed with an input of size $n$ (where $c$ is a constant).
 
 a. By what factor will the number of operations increase when the input size is
 increased from $m$ to $m^2$ (where $m$ is a positive integer power of $2$)?
 
+When the input size is $m$, and $m \in \mathbf{Z}^+$ with power of $2$, this
+means that $m = 2^k$ for some $k \in \mathbf{Z}^+$.
+
+Thus the amount of operations algorithm becomes
+$c\lfloor \log_{2}(2^k) \rfloor =c\lfloor k \rfloor = ck$.
+
+When $m$ grows to $m^2$, then this is $m^2 = (2^k)^2 = 2^{2k}$, then the amount
+of operations algorithm becomes
+$c\lfloor \log_{2}(2^{2k}) \rfloor = c\lfloor 2k \rfloor = 2ck$.
+
+Thus the number of operations doubles, or is increased by a factor of $2$.
+
 b. By what factor will the number of operations increase when the input size is
 increased from $m$ to $m^{10}$ (where $m$ is a positive integer power of $2$)?
 
+$$ m^{10} = (2^k)^{10} = 2^{10k} $$
+
+$$ c\lfloor \log_{2}(2^{10k}) \rfloor = c\lfloor 10k \rfloor = 10ck $$
+
+So it increases by a factor of $10$.
+
 c. When $n$ increases from $128 (= 2^7)$ to $268435456 (= 2^{28})$, by what
 factor is $c\lfloor \log_{2}n \rfloor$ increased?
+
+$$ \frac{c\lfloor \log_{2}(2^{28}) \rfloor}{c\lfloor \log_{2}(2^{7}) \rfloor} = \frac{28c}{7c} = 4 $$
 
 Exercises 3 and 4 illustrate that for relatively small values of $n$, algorithms
 with larger orders can be more efficient than algorithms with smaller orders.
@@ -5189,9 +5219,56 @@ Use a graphing calculator or computer to answer these questions.
    efficient than an algorithm that requires $\lfloor 50\log_{2}n \rfloor$
    operations?
 
+For $n$ to be more efficient than $\lfloor 50\log_{2}n \rfloor$, the following
+inequality must hold:
+
+$$ n < \lfloor 50\log_{2}n \rfloor $$
+
+Exploring values for $n$ will assist in finding a baseline for $n$ that will
+satisfy this inequality.
+
+When $n = 2^8 = 256$, then:
+
+$$ 256 \stackrel{?}{<} 50\log_{2}(256) = 400 $$
+
+$$ 256 < 400 $$
+
+So here the inequality holds.
+
+Now, explore $n = 2^9 = 512$, then:
+
+$$ 512 \stackrel{?}{<} 50\log_{2}(512) = 450 $$
+
+And here the inequality does not hold.
+
+Therefore, inspecting a graph between $n = 2^8$ and $n = 2^9$ will likely show
+us the more precise value for $n$ where the inequality holds and then doesn't
+hold.
+
+Plugging this graph into Desmos graphing calculator, we see that the graphs
+$y = x$ and $y = floor(50\log_{2}(x))$ intersects at approximately $x = 438$,
+thus when:
+
+$$ n < 438 $$
+
+$$ n < \lfloor 50\log_2(n) \rfloor $$
+
 4. For what values of $n$ is an algorithm that requires
-   $\left\lfloor \dfrac{n^2}{10} \right\rfloor$ operations m ore efficient than
+   $\left\lfloor \dfrac{n^2}{10} \right\rfloor$ operations more efficient than
    an algorithm that requires $\lfloor n \log_{2} n \rfloor$ operations?
+
+The value for $n$ must satisfy:
+
+$$ \left\lfloor \dfrac{n^2}{10} \right\rfloor < \lfloor n \log_{2} n \rfloor $$
+
+Plug into desmos:
+
+```
+y = floor(x^2/10)
+y = floor(x log_2 n)
+```
+
+The two intersect at $n \approx 58$, so the inequality holds when $n < 58$.
 
 In 5 and 6, trace the action of the binary search algorithm (Algorithm 11.5.1)
 on the variables $\textit{index}$, $\textit{bot}$, $\textit{bot}$,
@@ -5204,13 +5281,45 @@ ordering is used to compare elements of the array.
 
 a. $x =$ Chia
 
+|                  |      |   |   |   |
+| ---------------- | ---- | - | - | - |
+| $\textit{index}$ | 0    |   |   | 1 |
+| $\textit{bot}$   | 1    |   |   |   |
+| $\textit{top}$   | 10   | 4 | 1 |   |
+| $\textit{mid}$   |      | 5 | 2 | 1 |
+| $x$              | Chia |   |   |   |
+
 b. $x =$ Max
+
+|                  |     |   |   |   |   |
+| ---------------- | --- | - | - | - | - |
+| $\textit{index}$ | 0   |   |   |   |   |
+| $\textit{bot}$   | 1   | 6 |   | 7 |   |
+| $\textit{top}$   | 10  |   | 7 |   | 6 |
+| $\textit{mid}$   |     | 5 | 8 | 6 | 7 |
+| $x$              | Max |   |   |   |   |
 
 6.
 
 a. $x =$ Amanda
 
+|                  |        |   |   |   |
+| ---------------- | ------ | - | - | - |
+| $\textit{index}$ | 0      |   |   |   |
+| $\textit{bot}$   | 1      |   |   |   |
+| $\textit{top}$   | 10     | 4 | 1 | 0 |
+| $\textit{mid}$   |        | 5 | 2 | 1 |
+| $x$              | Amanda |   |   |   |
+
 b. $x =$ Roy
+
+|                  |     |   |   |
+| ---------------- | --- | - | - |
+| $\textit{index}$ | 0   |   |   |
+| $\textit{bot}$   | 1   | 6 |   |
+| $\textit{top}$   | 10  |   |   |
+| $\textit{mid}$   |     | 5 | 8 |
+| $x$              | Roy |   |   |
 
 7. Suppose $\textit{bot}$ and $\textit{top}$ are positive integers with
    $\textit{bot} \leq \textit{top}$. Consider the array
@@ -5219,25 +5328,129 @@ $$ a[\textit{bot}], a[\textit{bot} + 1], \dots, a[\textit{top}] $$
 
 a. How many elements are in this array?
 
+$$ \textit{top} - \textit{bot} + 1 $$
+
 b. Show that if the number of elements in the array is odd, then the quantity
 $\textit{bot} + \textit{top}$ is even.
 
+**Proof:**
+
+Suppose $\textit{bot}, \textit{top} \in \mathbf{Z}^+$ with
+$\textit{bot} \leq \textit{top}$. Let $a$ be an array such that:
+
+$$ a[\textit{bot}], a[\textit{bot} + 1], \dots, a[\textit{top}] $$
+
+Where the length of $a$, denoted $L(a)$, is odd.
+
+It must be shown that $\textit{bot} + \textit{top}$ is even.
+
+Note that by part (a), $L(a)$ can be expressed as:
+
+$$ L(a) = \textit{top} - \textit{bot} + 1 $$
+
+By the supposition, $L(a)$ is odd, and so it follows (by the definition of odd)
+that:
+
+$$ \textit{top} - \textit{bot} + 1 = 2k + 1 $$
+
+for some integer $k$.
+
+Now, by algebra, this is:
+
+$$ \textit{top} - \textit{bot} = 2k $$
+
+Then, add $2\textit{bot}$ to both sides:
+
+$$ \textit{top} + 2\textit{bot} - \textit{bot} = 2k + 2\textit{bot} $$
+
+By algebra:
+
+$$ \textit{bot} + \textit{top} = 2k + 2\textit{bot} $$
+
+$$ \textit{bot} + \textit{top} = 2(k + \textit{bot}) $$
+
+Now, $k + \textit{bot}$ is an integer, by the sum of integers. Thus by the
+definition for even, $\textit{bot} + \textit{top}$ is even, as was to be shown.
+
+Q.E.D.
+
 c. Show that if the number of elements in the array is even, then the quantity
 $\textit{bot} + \textit{top}$ is odd.
+
+**Proof:**
+
+Suppose $\textit{bot}, \textit{top} \in \mathbf{Z}^+$ with
+$\textit{bot} \leq \textit{top}$. Let $a$ be an array such that:
+
+$$ a[\textit{bot}], a[\textit{bot} + 1], \dots, a[\textit{top}] $$
+
+Where the length of $a$, denoted $L(a)$, is even.
+
+It must be shown that $\textit{bot} + \textit{top}$ is odd.
+
+Note that by part (a), $L(a)$ can be expressed as:
+
+$$ L(a) = \textit{top} - \textit{bot} + 1 $$
+
+By the supposition, $L(a)$ is even, and so it follows (by the definition of
+even) that:
+
+$$ \textit{top} - \textit{bot} + 1 = 2k $$
+
+for some integer $k$.
+
+Subtract $2$ from both sides:
+
+$$ \textit{top} - \textit{bot} + 1 - 2 = 2k - 2 $$
+
+$$ \textit{top} - \textit{bot} - 1 = 2k - 2 $$
+
+$$ \textit{top} - \textit{bot} = 2k - 2 + 1 $$
+
+Now, add $2\textit{bot}$ to both sides:
+
+$$ \textit{top} - \textit{bot}  + 2\textit{bot} = 2k - 2 + 2\textit{bot} + 1 $$
+
+$$ \textit{top} + \textit{bot} = 2k - 2 + 2\textit{bot} + 1 $$
+
+$$ \textit{bot} + \textit{top} = 2(k - 1 + \textit{bot}) + 1 $$
+
+Now, $k - 1 + \textit{bot}$ is an integer (by the sum and difference of
+integers), and so, by the definition for odd, it follows that
+$\textit{bot} + \textit{top}$ is odd, which is what was to be shown.
+
+Q.E.D.
 
 Exercises 8-11 refer to the following algorithm segment. For each positive
 integer $n$, let $a_n$ be the number of iterations of the **while** loop.
 
 $\textbf{while } (n > 0)\\ \ \ n := n \textit{div} 2\\ \textbf{end while}$
 
+Note that many of the answers to the following questions can be found by
+investigation of the examples given in this section on the binary search
+algorithm.
+
 8. Trace the action of this algorithm segment on $n $ when the initial value of
    $n$ is $27$.
 
+|       |    |    |   |   |   |   |
+| ----- | -- | -- | - | - | - | - |
+| $a_n$ | 0  | 1  | 2 | 3 | 4 | 5 |
+| $n$   | 27 | 13 | 6 | 3 | 1 | 0 |
+
 9. Find a recurrence relation for $a_n$.
+
+$a_1 = 1$
+
+$a_n = 1 + a_{\lfloor \frac{n}{2} \rfloor}$
 
 10. Find an explicit formula for $a_n$.
 
+$a_n = 1 + \lfloor \log_{2}n \rfloor$
+
 11. Find an order for this algorithm segment.
+
+$\Theta(\log_{2}n)$
 
 Exercises 12-15 refer to the following algorithm segment. For each positive
 integer $n$, let $b_n$ be the number of iterations of the **while** loop.
@@ -5247,27 +5460,289 @@ $\textbf{while } (n > 0)\\ \ \ n := n \textit{div} 3\\ \textbf{end while}$
 12. Trace the action of this algorithm segment on $n$ when the initial value of
     $n$ is 424.
 
+|            |     |     |    |    |   |   |   |
+| ---------- | --- | --- | -- | -- | - | - | - |
+| iterations | 0   | 1   | 2  | 3  | 4 | 5 | 6 |
+| $n$        | 424 | 141 | 47 | 15 | 5 | 1 | 0 |
+
 13. Find the recurrence relation for $b_n$.
+
+$$ b_n = 1 + b_{\lfloor \frac{n}{3} \rfloor} $$
 
 14.
 
 a. Use iteration to guess an explicit formula for $b_n$.
 
+$$ b_{424} = 1 + b_{\lfloor \frac{424}{3} \rfloor} = 1 + b_{141} = 1 + 5 = 6 $$
+
+$$ b_{141} = 1 + b_{\lfloor \frac{141}{3} \rfloor} = 1 + b_{47} = 1 + 4 = 5 $$
+
+$$ b_{47} = 1 + b_{\lfloor \frac{47}{3} \rfloor} = 1 + b_{15} = 1 + 3 = 4 $$
+
+$$ b_{15} = 1 + b_{\lfloor \frac{15}{3} \rfloor} = 1 + b_{5} = 1 + 2 = 3 $$
+
+$$ b_{5} = 1 + b_{\lfloor \frac{5}{3} \rfloor} = 1 + b_{1} = 1 + 1 = 2 $$
+
+$$ b_{1} = 1 + b_{\lfloor \frac{1}{3} \rfloor} = 1 + b_{0} = 1 + 0 = 1 $$
+
+Thus $n$ lies between two powers of $3$.
+
+$$ 3^i \leq n \leq 3^{i + 1} $$
+
+$$ \log_{3}(3^i) \leq \log_{3}(n) < \log_{3}(3^{i + 1}) $$
+
+$$ i \leq \log_{3}n < i + 1 $$
+
+$$ i = \lfloor \log_{3}n \rfloor $$
+
+Thus:
+
+$$ b_n = 1 + \lfloor \log_{3}n \rfloor $$
+
 b. Prove that if $k$ is an integer an $x$ is a real number with
-$3^k \leq x < 3^k$, then $\lfloor \log_{3}x \rfloor = k$.
+$3^k \leq x < 3^{k + 1}$, then $\lfloor \log_{3}x \rfloor = k$.
+
+$$ 3^k \leq x < 3^{k + 1} $$
+
+$$ \log_{3}(3^k) \leq \log_{3}x < \log_{3}(3^{k + 1}) $$
+
+$$ k \leq \log_{3}x < k + 1 $$
+
+By definition for floor:
+
+$$ k = \lfloor\log_{3}x \rfloor $$
 
 c. Prove that for every integer $m \geq 1$,
 
 $$ \lfloor \log_{3}(3m) \rfloor = \lfloor \log_{3}(3m + 1) \rfloor = \lfloor \log_{3}(3m + 2) \rfloor$$
 
+**Proof:**
+
+Suppose $m \in \mathbf{Z}$, where $m \geq 1$.
+
+By the definition for floor:
+
+$$ \lfloor \log_{3}(3m) \rfloor \to 3^k \leq 3m < 3^{k + 1} $$
+
+for some $k \in \mathbf{Z}^+$.
+
+By the definition for floor:
+
+$$ \lfloor \log_{3}(3m + 1) \rfloor \to 3^k \leq 3m + 1 < 3^{k + 1} $$
+
+and also by floor:
+
+$$ \lfloor \log_{3}(3m + 2) \rfloor \to 3^k \leq 3m + 2 < 3^{k + 1} $$
+
+Now, notice that:
+
+$$ 3^k \leq 3m < 3m + 1 < 3m + 2 < 3^{k + 1} $$
+
+Note in particular that $3m + 2 < 3^{k + 1}$, because $3^{k + 1} = 3^k \cdot 3$.
+
+It is known that $3^k \leq 3m$, and so it follows that
+$3m + 2 < 3m + 3 \leq 3^k \cdot 3 = 3^{k + 1}$.
+
+Since $3m$, $3m + 1$, and $3m + 2$ are all within the interval
+$[3^k, 3^{k + 1})$, it follows that
+$k = \lfloor \log_{3}(3m) \rfloor = \lfloor \log_{3}(3m + 1) \rfloor = \lfloor \log_{3}(3m + 2) \rfloor$.
+
+This is what was to be shown.
+
+Q.E.D.
+
 d. Prove the correctness of the formula you found in part (a).
 
+**Proof (by strong mathematical induction):**
+
+Suppose $n \in \mathbf{Z}$ with $n \geq 2$, then let $b_0 = 0$, $b_1 = 1$ for
+the sequence given in part (a).
+
+Let $P(n)$ be the explicit formula for the sequence:
+
+$$ b_n = 1 + \lfloor \log_{3}n \rfloor $$
+
+Strong mathematical induction is to be used to prove that $P(n)$ is true for all
+$n \geq 2$.
+
+_Basis Step:_
+
+Prove $P(2)$, that is:
+
+$$ b_2 = 1 + \lfloor \log_{3}2 \rfloor $$
+
+$$ = 1 + 0 $$
+
+$$ = 1 $$
+
+By exercise 13, it is known that the recurrence relation for this sequence is:
+
+$$ b_n = 1 + b_{\lfloor \frac{n}{3} \rfloor} $$
+
+So:
+
+$$ b_2 = 1 +  b_{\lfloor \frac{2}{3} \rfloor} = 1 + b_0 = 1 + 0 = 1 $$
+
+This confirms that the explicit formula returns the same value for $b_2$ as the
+recurrence relation for $b_2$, and it can be concluded that $P(2)$ is true.
+
+_Inductive Step:_
+
+Suppose $i, k \in \mathbf{Z}$, where $2 \leq i \leq k$.
+
+Suppose $P(i)$, that is:
+
+$$ b_i = 1 + \lfloor \log_{3}i \rfloor $$
+
+for all $2 \leq i \leq k$.
+
+This is the inductive hypothesis.
+
+It is to be proven that $P(k + 1)$ is true, that is:
+
+$$ b_{k + 1} = 1 + \lfloor \log_{3}(k + 1) \rfloor $$
+
+Since $k \geq 2$, it follows that $k + 1 \geq 3$.
+
+Then, by the quotient-remainder theorem, it follows that:
+
+$$ k + 1 = 3m + j $$
+
+for some $m, j \in \mathbf{Z}$, with $1 \leq m \leq k$ and $0 \leq j < 3$.
+
+By the definition of the recurrence relation in exercise 13, it is known that
+$b_{k + 1}$ is:
+
+$$ b_{k + 1} = 1 + b_{\lfloor \frac{(k + 1)}{3} \rfloor} $$
+
+By substitution:
+
+$$ = 1 + b_{\lfloor \frac{3m + j}{3} \rfloor} $$
+
+$$ = 1 + b_{\lfloor m + \frac{j}{3} \rfloor} $$
+
+and by the definition of floor, since $0 \leq \dfrac{j}{3} < 1$, and thus
+$m \leq m + \dfrac{j}{3} < m + 1$), it follows that:
+
+$$ = 1 + b_m $$
+
+By the inductive hypothesis:
+
+$$ b_m = 1 + \lfloor \log_{3}m \rfloor $$
+
+So:
+
+$$ b_{k + 1} = 1 + b_m = 1 + 1 + \lfloor \log_{3}m \rfloor $$
+
+$$ = 1 + 1 + \lfloor \log_{3}\left(\frac{3m}{3}\right) \rfloor $$
+
+By the definition of logarithm:
+
+$$ = 1 + 1 + \lfloor \log_{3}(3m) - \log_{3}(3) \rfloor $$
+
+$$ = 1 + 1 + \lfloor \log_{3}(3m) - 1 \rfloor $$
+
+$$ = 1 + 1 + \lfloor \log_{3}(3m) \rfloor - 1 $$
+
+$$ = 1 + \lfloor \log_{3}(3m) \rfloor $$
+
+Recall that $k + 1 = 3m + j$ for some $1 \leq m \leq k$ and $0 \leq j < 3$.
+
+By part \(c\), it is known that
+$\lfloor \log_{3}(3m) \rfloor = \lfloor \log_{3}(3m + j) \rfloor$, and thus:
+
+$$ = 1 + \lfloor \log_{3}(3m) \rfloor = 1 + \lfloor \log_{3}(3m + j) \rfloor $$
+
+$$ = 1 + \lfloor \log_{3}(k + 1) \rfloor $$
+
+This is what was to be shown, and thus $P(k + 1)$ is true.
+
+_Conclusion:_
+
+Since both the basis and inductive steps have been demonstrated, it can be
+concluded that $P(n)$ is true for all $n \geq 2$.
+
+Q.E.D.
+
 15. Find an order for the algorithm segment.
+
+By 14(a), it has been found that the explicit formula for the given algorithm
+is:
+
+$$ b_n = 1 + \lfloor \log_{3}n \rfloor \text{ for every integer } n \geq 1 $$
+
+The order of this algorithm is to be found.
+
+By the definition of floor, this implies that:
+
+$$ \Rightarrow \log_{3}n \leq b_n \leq \log_{3}n + 1 $$
+
+because $x < \lfloor x \rfloor + 1$ and $\lfloor x \rfloor \leq x$ for every
+$x \in \mathbf{R}$.
+
+since the logarithm with base 3 is increasing when $3 \leq n$, then
+$1 = \log_{3}3 \leq \log_{3}n$, it follows that:
+
+$$ \Rightarrow \log_{3}n \leq b_n \leq \log_{3}n + \log_{3}n $$
+
+$$ \Rightarrow \log_{3}n \leq b_n \leq 2\log_{3}n $$
+
+Let $A = 1$, let $B = 2$ , and let $k = 2$. Then:
+
+$$ A\log_{3}n \leq b_n \leq B\log_{3}n \text{ for every integer } n \geq k $$
+
+Hence, by the definition of $\Theta$-notation:
+
+$$ b_n \text{ is } \Theta(\log_{3}n) $$
 
 16. Complete the proof of case 2 of the strong induction argument in Example
     11.5.5. In other words, show that if $k$ is an odd integer and
     $w_i = \lfloor \log_{2} i \rfloor + 1$ for every integer $i$ with $ \leq i
     \leq k$, then $w_{k + 1} = \lfloor \log_{2}k + 1 \rfloor + 1$.
+
+Picking up fro where Example 11.5.5 left off:
+
+_Case 2($k$ is odd):_
+
+In this case, $k + 1$ is even, and by the definition of the given sequence:
+
+$$ w_{k + 1} = 1 + w_{\lfloor \frac{(k + 1)}{2} \rfloor} $$
+
+Since $k + 1$ is even, $k + 1 = 2m$ for some $m \in \mathbf{Z}$ where
+$1 \leq m \leq k$. It follows that:
+
+$$ = 1 + w_{\lfloor \frac{k + 1}{2} \rfloor} = 1 + w_{\lfloor \frac{2m}{2}\rfloor} $$
+
+$$ = 1 + w_{\lfloor m \rfloor} $$
+
+$$ = 1 + w_m $$
+
+By the inductive hypothesis/substitution:
+
+$$ = 1 + \lfloor \log_{2}m \rfloor + 1 $$
+
+$$ = \lfloor \log_{2}m \rfloor + 2 $$
+
+Now, since $k + 1 = 2m$, it follows that $m = \dfrac{k + 1}{2}$, substitution
+then yields:
+
+$$ = \lfloor \log_{2}\left(\frac{k + 1}{2}\right) \rfloor + 2 $$
+
+The log identity from Theorem 7.2.1 yields:
+
+$$ = \lfloor \log_{2}(k + 1) - \log_{2}2 \rfloor + 2 $$
+
+And since $\log_{2}2 = 1$:
+
+$$ = \lfloor \log_{2}(k + 1) - 1 \rfloor + 2 $$
+
+And by exercise 15 of section 4.6:
+
+$$ = \lfloor \log_{2}(k + 1) \rfloor - 1 + 2 $$
+
+$$ = \lfloor \log_{2}(k + 1) \rfloor + 1 $$
+
+And this is what was to be shown.
 
 For 17-19, modify the binary search algorithm (Algorithm 11.5.1) to take the
 upper of the two middle array elements in case the input array has even length.
@@ -5278,12 +5753,133 @@ $$ \textit{mid } := \left\lfloor  \frac{\textit{bot} + \textit{top}}{2} \right\r
 17. Trace the modified binary search algorithm for the same input as was used in
     Example 11.5.1.
 
+The input for Example 11.5.1 was:
+
+$$ a = [Ann, Dawn, Erik, Gail, Juan, Matt, Max, Rita, Tsuji, Yuen] $$
+
+Part (a) asks us to find Erik
+
+|                  |      |   |   |
+| ---------------- | ---- | - | - |
+| $\textit{index}$ | 0    |   | 3 |
+| $\textit{bot}$   | 1    |   |   |
+| $\textit{top}$   | 10   | 5 |   |
+| $\textit{mid}$   |      | 6 | 3 |
+| $x$              | Erik |   |   |
+
+part (b) asks us to find Sara
+
+|                  |      |   |   |   |   |
+| ---------------- | ---- | - | - | - | - |
+| $\textit{index}$ | 0    |   |   |   | 0 |
+| $\textit{bot}$   | 1    | 7 |   | 8 | 9 |
+| $\textit{top}$   | 10   |   | 8 |   |   |
+| $\textit{mid}$   |      | 6 | 9 | 8 | 8 |
+| $x$              | Sara |   |   |   |   |
+
 18. Suppose an array of length $k$ is input to the **while** loop of the
     modified binary search algorithm. Show that after one iteration of the loop,
     if $a[\textit{mid}] \neq x$, the input to the next iteration is an array of
     length oat most $\left\lfloor \dfrac{k}{2} \right\rfloor$.
 
-19. Let $w_n$ be the number of iterations of the **while** loop in a worst-case
+(i) At the beginning, $\textit{index} = 0$, $\textit{bot} = 1$, and
+$\textit{top} = k$.
+
+(ii) Then, the while loop initiates, and mid is assigned as:
+
+$$ \textit{mid} = \lceil \frac{1 + k}{2} \rceil $$
+
+For the sake of simplicity, say that $k$ is odd, so $k = 2m + 1$ (for some
+$m \in \mathbf{Z}$ where $0 \leq m < k$.), thus
+$\textit{mid} = \lceil \dfrac{2m + 2}{2} \rceil = \lceil m + 1 \rceil = m + 1$.
+
+(iii) By the given problem statement, it is known that $a[\textit{mid}] \neq x$,
+so either $\textit{top} = \textit{mid} - 1$ or
+$\textit{bot} = \textit{mid} + 1$.
+
+(iv) It follows that either $\textit{bot} = 1$ and
+$\textit{top} = \textit{mid} - 1 = (m + 1) - 1 = m$, or
+$\textit{bot} = (m + 1) + 1 = m + 2$ and $\textit{top} = k = 2m + 1$.
+
+(v)
+
+In the first case, the length of the remaining array is:
+
+$$ \textit{top} - \textit{bot} + 1 $$
+
+$$ = (m - 1) + 1 = m $$
+
+In the second case:
+
+$$ \textit{top} - \textit{bot} + 1 $$
+
+$$ = (2m + 1) - (m + 2) + 1 $$
+
+$$ = 2m + 1 - m - 2 + 1 $$
+
+$$ = m $$
+
+(vi) Thus in both cases the length of the remaining array is $m$.
+
+Now, by the definition of floor:
+
+$$ m = \Rightarrow \lfloor m + \frac{1}{2} \rfloor  $$
+
+$$ = \lfloor \frac{2m + 1}{2} \rfloor  $$
+
+$$ = \lfloor \frac{k}{2} \rfloor $$
+
+In further iterations, the interval $[\textit{bot}, \textit{top}]$ only gets
+smaller, as $\textit{bot}$ can only increase and $\textit{top}$ can only
+decrease, so the size of the input is at most the size of the output after the
+first iteration, namely $\lfloor \dfrac{k}{2} \rfloor$.
+
+Now, in the case that $k$ is even, then we pick up right before step (iii)
+above.
+
+Since $k$ is even, then $k = 2m$, for some $m \in \mathbf{Z}$ where
+$0 \leq m < k$, thus
+$\textit{mid} = \lceil \dfrac{2m}{2} \rceil = \lceil m \rceil = m$.
+
+(iii) By the given problem statement, it is known that $a[\textit{mid}] \neq x$,
+so either $\textit{top} = \textit{mid} - 1$ or
+$\textit{bot} = \textit{mid} + 1$.
+
+(iv) It follows that either $\textit{bot} = 1$ and
+$\textit{top} = \textit{mid} - 1 = m - 1$, or
+$\textit{bot} = \textit{mid} + 1 = m + 1$ and $\textit{top} = k = 2m$.
+
+(v)
+
+In the first case, the length of the remaining array is:
+
+$$ \textit{top} - \textit{bot} + 1 $$
+
+$$ = (m - 1) - (1) + 1 = m - 1 $$
+
+In the second case:
+
+$$ \textit{top} - \textit{bot} + 1 $$
+
+$$ = (2m) - (m + 1) + 1 $$
+
+$$ = 2m - m - 1 + 1 $$
+
+$$ = m $$
+
+(vi)
+
+In the first case the length of the remaining array is $m - 1$,
+
+Since $m - 1 \leq m = \lfloor\dfrac{k}{2} \rfloor$, it follows by transitivity
+and the definition of floor that $m - 1 = \lfloor \dfrac{k}{2} \rfloor$.
+
+In the second case the length of the remaining array is $m$, which, again,
+$m = \lfloor \dfrac{k}{2} \rfloor$.
+
+The rest of the case where $k$ is even follows the same as when $k$ is odd.
+
+20. Let $w_n$ be the number of iterations of the **while** loop in a worst-case
     execution of the modified binary search algorithm for an input array of
     length $n$. Show that $w_k = 1 + w_{\lfloor \frac{k}{2} \rfloor}$ for
     $k \geq 2$.
@@ -5293,12 +5889,18 @@ subarrays into a single array in ascending order.
 
 20. $3, 5, 6, 9, 12$ and $2, 4, 7, 9, 11$
 
+(Done by hand.)
+
 21. $F, K, L, R, U$ and $C, E, L, P, W$ (alphabetical order)
+
+(Done by hand.)
 
 In 22 and 23, draw a diagram like Figure 11.5.5 to show how merge sort works for
 the given input arrays.
 
 22. $R, G, B, U, C, F, H, G$ (alphabetical order)
+
+(Done by hand.)
 
 23. $5, 2, 3, 9, 7, 4, 3, 2$
 
@@ -5312,8 +5914,39 @@ a. the subarray
 $a[\textit{mid} + 1], a[\textit{mid} + 2], \dots, a[\textit{top}]$ has length
 $\left\lfloor \dfrac{k}{2} \right\rfloor$.
 
+This is shown in Figure 11.5.3, where an array of
+$a[\textit{mid} + 1], \cdots, a[\textit{top}]$ is shown to have the following
+length when $k$ is odd:
+
+$$ \text{length } = k - \left(\frac{k + 1}{2} + 1\right) + 1 = \frac{k - 1}{2} = \left\lfloor \frac{k}{2} \right\rfloor $$
+
+Similarly when $k$ is even:
+
+$$ \text{length } = k - \left(\frac{k}{2} + 1\right) + 1 = \frac{k}{2} = \left\lfloor \frac{k}{2} \right\rfloor $$
+
 b. the subarray $a[\textit{bot}], a[\textit{bot} + 1], \dots, a[\textit{mid}]$
 has length $\left\lceil \dfrac{k}{2} \right\rceil$.
+
+Length when $k$ is odd:
+
+$$ \text{length } = \textit{mid} - \textit{bot} + 1 $$
+
+$$ = \frac{k + 1}{2} - 1 + 1 $$
+
+$$ = \frac{k + 1}{2} = \left\lceil \frac{k}{2} \right\rceil $$
+
+When $k$ is even:
+
+$$ \text{length } = \textit{mid} - \textit{bot} + 1 $$
+
+$$ = \frac{k}{2} - 1 + 1 $$
+
+$$ = \frac{k}{2} $$
+
+Now, since $k$ is even, $k = 2m$, for some $m \in \mathbf{Z}$, where
+$0 \leq m < k$, so:
+
+$$ = \frac{2m}{2} = m = \lceil m \rceil \Rightarrow \left\lceil \frac{k}{2} \right\rceil $$
 
 25. The recurrence relation for $m_1, m_2, m_3, \dots$, which arises in the
     calculation of the efficiency of merge sort, is
@@ -5326,7 +5959,11 @@ Show that for every integer $n \geq 1$,
 
 a. $\dfrac{1}{2}n\log_{2}n \leq m_n$
 
+Omitted.
+
 b. $m_n \leq 2n\log_{2}n$
+
+Omitted.
 
 26. It might seem that $n - 1$ multiplications are needed to compute $x^n$,
     since
@@ -5365,5 +6002,9 @@ $$ x^n = x^{r[k]2^k + \cdots + r[2]2^2 + r[1]2^1 + r[0]2^0} $$
 
 $$ = x^{r[k]2^k} \cdots x^{r[2]2^2} \cdot x^{r[1]2^1} \cdot x^{r[0]2^0} $$
 
+Omitted.
+
 b. Show that the number of multiplications performed by the algorithm of part
 (a) is less than or equal to $2\lfloor \log_{2}n \rfloor$.
+
+Omitted.

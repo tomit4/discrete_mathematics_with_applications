@@ -128,15 +128,28 @@ Page 848
    fixed number of smaller problems of the same kind, which can themselves be
    ____, and so forth until ____.
 
+reduced to the same finite number of smaller problems of the same kind; easily
+resolved problems are obtained
+
 2. To search an array using the binary search algorithm in each step, you
-   compare a middle element of the array to ____. If the middle element of the
-   array to ____. If the middle element is less than ____, you ____, and if the
-   middle element is greater than ____, you ____.
+   compare a middle element of the array to ____. If the middle element is less
+   than ____, you ____, and if the middle element is greater than ____, you
+   ____.
+
+the element you are looking for; the element you are looking for; apply the
+binary search algorithm to the lower half of the array; the element you are
+looking for; apply the binary search algorithm to the upper half of the array
 
 3. The worst-case order of the binary search algorithm is ____.
+
+$\log_{2}n$, where $n$ is the length of the array
 
 4. To sort an array using the merge sort algorithm, in each step until the last
    one you split the array into approximately two equal sections and sort each
    section using ____. Then you ____ the two sorted sections.
 
+merge sort; merge
+
 5. The worst-case order of the merge sort algorithm is ____.
+
+$n \log_{2} n$

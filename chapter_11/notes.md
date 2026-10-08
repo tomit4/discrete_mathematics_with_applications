@@ -549,6 +549,100 @@ array. Otherwise, index gives the index of the array where $x$ is located.]_
 
 ---
 
+**Example 11.5.5 Verifying the Correctness of the Formula**
+
+Use strong mathematical induction to show that if $w_1, w_2, w_3, \dots$ is a
+sequence of numbers that satisfies the recurrence relation and initial condition
+
+$$ w_1 = 1 \quad \text{ and } \quad w_k = 1 + w_{\lfloor \frac{w}{2} \rfloor} \quad \text{ for every integer} k > 1 $$
+
+then $w_1, w_2, w_3, \dots$ satisfies the formula
+
+$$ w_n = \lfloor \log_{2}n \rfloor + 1 \text{ for every integer } n \geq 1 $$
+
+**Solution**
+
+Let $w_1, w_2, w_3, \dots$ be the sequence defined by specifying that $w_1 = 1$
+and $w_k = 1 + w_{\lfloor \frac{w}{2} \rfloor}$ for each integer $k \geq 2$, and
+let the property $P(n)$ be the equation
+
+$$ w_n = \lfloor \log_{2}n \rfloor + 1 $$
+
+We will use strong mathematical induction to prove that for every integer
+$n \geq 1$, $P(n)$ is true.
+
+_Show that $P(1)$ is true:_
+
+By definition of $w_1, w_2, w_3, \dots$, we have that $w_1 = 1$. But
+$\lfloor \log_{2} \rfloor + 1 = 0 + 1 = 1$ also. Thus
+$w_1 = \lfloor \log_{2}1 \rfloor + 1$ and $P(1)$ is true.
+
+_Show that for every integer $k > 1$, if $P(i)$ is true for each integer $i$
+from $1$ through $k$, then $P(k + 1)$ is also true:_
+
+Let $k$ be any integer with $k \geq 1$, and suppose that
+
+$$ w_i = \lfloor \log_{2}i \rfloor + 1 \text{ for each integer } i \text{ with } 1 \leq i \leq k  $$
+
+This is the inductive hypothesis.
+
+We must show that
+
+$$ w_{k + 1} = \lfloor \log_{2}(k + 1) \rfloor + 1 $$
+
+Consider the two cases: $k$ is even and $k$ is odd.
+
+_Case 1($k$ is even):_
+
+In this case, $k + 1$ is odd, and by the definition of $w_1, w_2, w_3, \dots$
+
+$$ w_{k + 1} = 1 + w_{\lfloor \frac{(k + 1)}{2} \rfloor} $$
+
+And since $\lfloor \dfrac{(k + 1)}{2} \rfloor = \dfrac{k}{2}$ (since $k + 1$ is
+odd), it follows that:
+
+$$ = 1 + w_{\lfloor \frac{k}{2} \rfloor}$$
+
+By the inductive hypothesis, since $k$ is even, $k \geq 2$, and so
+$1 \leq \lfloor \dfrac{k}{2} \rfloor \leq \dfrac{k}{2} < k$, it follows that:
+
+$$ = 1 + \left(\lfloor \log_{2}\left(\frac{k}{2}\right) \rfloor + 1\right) $$
+
+By the identity of $\log_{b}\left(\dfrac{x}{y}\right) = \log_{b}x - \log_{b}y$
+from, Theorem 7.2.1:
+
+$$ = \left(\lfloor \log_{2}k - \log_{2}2 \rfloor + 2\right) $$
+
+and since $\log_{2}2 = 1$:
+
+$$ = \left(\lfloor \log_{2}k - 1 \rfloor + 2\right) $$
+
+Then, by exercise 15 of section 4.6, it is known that
+$\lfloor x - 1 \rfloor = \lfloor x \rfloor - 1$, so:
+
+$$ = \left(\lfloor \log_{2}k \rfloor - 1 + 2\right) $$
+
+$$ = \lfloor \log_{2}k \rfloor + 1 $$
+
+_Case 2($k$ is odd)_
+
+In this case, it can also be shown that $w_k = \lfloor \log_{2}k \rfloor + 1$.
+The analysis is very similar to that of case 1 and is left as exercise 16 at the
+end of the section.
+
+Hence regardless of whether $k$ is even or $k$ is odd,
+
+$$ w_{k + 1} = \lfloor \log_{2}(k + 1) \rfloor + 1 $$
+
+,
+
+as was to be shown. _[Since both the basis and the inductive steps have been
+demonstrated, the proof by strong mathematical induction is complete.]_
+
+Q.E.D.
+
+---
+
 Page 845
 
 Merge sort works as follows:
