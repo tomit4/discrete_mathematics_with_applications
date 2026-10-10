@@ -66,3 +66,39 @@ $(\lambda | r)$
 
 the concatenation of $r$ with itself exactly $n$ times; the concatenation of $r$
 with itself anywhere from $m$ through $n$ times
+
+---
+
+Page 878
+
+**Test Yourself**
+
+1. The five objects that make up a finite-state automaton are ____, ____, ____,
+   ____, and ____.
+
+2. The next-state table for an automaton shows the values of ____.
+
+3. In the annotated next-state table, the initial state is indicated with an
+   ____ and the accepting states are marked by ____.
+
+4. A string $w$ consisting of input symbols is accepted by a finite-state
+   automaton $A$ if, and only if, ____.
+
+5. The language accepted by a finite-state automaton $A$ is ____.
+
+6. If $N$ is the next-state function for a finite-state automaton $A$, the
+   eventual-state function $N^*$ is defined as follows: For each state $s$ of
+   $A$ and for each string $w$ that consists of input symbols of $A$,
+   $N^*(s, w) =$ ____.
+
+7. One part of Kleene's theorem says that given any language that is accepted by
+   a finite-state automaton, there is ____.
+
+8. The second part of Kleene's theorem says that given any language defined by a
+   regular expression, there is ____.
+
+9. A regular language is ____.
+
+10. Given the language consisting of all strings of the form $a^kb^k$, where $k$
+    is a positive integer, the pigeonhole principle can be used to show that the
+    language is ____.

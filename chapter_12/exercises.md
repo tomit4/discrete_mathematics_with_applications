@@ -361,3 +361,260 @@ Omitted.
     with an even number of $0$'s and even number of $1$'s.
 
 Omitted.
+
+---
+
+Page 878
+
+**Exercise Set 12.2**
+
+1. Find the state of the vending machine in Example 12.2.1 after each of the
+   following sequences of coins have been input.
+
+a. Quarter, half-dollar, quarter
+
+b. Quarter, half-dollar, half-dollar
+
+c. Half-dollar, quarter, quarter, half-dollar
+
+In 2-7, a finite-state automaton is given by a transition diagram. For each
+automaton:
+
+a. Find its states.
+
+b. Find its input symbols.
+
+c. Find its initial state.
+
+d. Find its accepting states.
+
+e. Write its annotated next-state table.
+
+2. (See Page 879 for finite-state automaton diagram.)
+
+3. (See Page 879 for finite-state automaton diagram.)
+
+4. (See Page 879 for finite-state automaton diagram.)
+
+5. (See Page 879 for finite-state automaton diagram.)
+
+6. (See Page 879 for finite-state automaton diagram.)
+
+7. (See Page 879 for finite-state automaton diagram.)
+
+In 8 and 9, a finite-state automaton is given by an annotated next-state table.
+For each automaton:
+
+a. Find its states.
+
+b. Find its input symbols.
+
+c. Find its initial state.
+
+d. Find its accepting states.
+
+e. Draw its transition diagram.
+
+8. (See Page 879 for finite-state automaton diagram.)
+
+9. (See Page 879 for finite-state automaton diagram.)
+
+10. A finite-state automaton $A$, given by the transition diagram below, has
+    next-state function $N$ and eventual-state function $N^*$.
+
+(See Page 879 for finite-state automaton diagram.)
+
+a. Find $N(s_1, 1)$ and $N(s_0, 1)$.
+
+b. Find $N(s_2, 0)$ and $N(s_1, 0)$.
+
+c. Find $N^*(s_0, 10011)$ and $N^*(s_1, 01001)$.
+
+d. Find $N^*(s_2, 11010)$ and $N^*(s_0, 01000)$.
+
+11. A finite-state automaton $A$, given by the transition diagram on the next
+    page, has next-state function $N$ and eventual-state function $N^*$.
+
+(See Page 880 for finite-state automaton diagram.)
+
+a. Find $N(s_3, 0)$ and $N(s_2, 1)$.
+
+b. Find $N(s_0, 0)$ and $N(s_4, 1)$.
+
+c. Find $N^*(s_0, 010011)$ and $N^*(s_3, 01101)$.
+
+d. Find $N^*(s_0, 1111)$ and $N^*(s_2, 00111)$.
+
+12. Consider again the finite-state automaton of exercise 2.
+
+a. To what state does the automaton go when the symbols of the following strings
+are input to it in sequence, starting from the initial state?
+
+(i) 1110001
+
+(ii) 0001000
+
+(iii) 11110000
+
+b. Which of the strings in part (a) send the automaton to an accepting state?
+
+c. What is the language accepted by the automaton?
+
+d. Find a regular expression that defines the language.
+
+13. Consider again the finite-state automaton of exercise 3.
+
+a. To what state does the automaton go when the symbols of the following strings
+are input to it in sequence, starting from the initial state?
+
+(i) bb
+
+(ii) aabbbaba
+
+(iii) babbbbbabaa
+
+(iv) bbaaaabaa
+
+b. What of the strings in part (a) send the automaton to an accepting state?
+
+c. What is the language accepted by the automaton?
+
+d. Find a regular expression that defines the language.
+
+In each of 14-19, (a) find the language accepted by the automaton in the
+referenced exercise, and (b) find a regular expression that defines the same
+language.
+
+14. Exercise 4
+
+15. Exercise 5
+
+16. Exercise 6
+
+17. Exercise 7
+
+18. Exercise 8
+
+19. Exercise 9
+
+In each of 20-28, (a) design an automaton with the given input alphabet that
+accepts the given set of strings, and (b) find a regular expression that defines
+the language accepted by the automaton.
+
+20. Input alphabet $= \{0, 1\}$; Accepts the set of all strings for which the
+    final three input symbols are $1$.
+
+21. Input alphabet $= \{0, 1\}$; Accepts the set of all strings that start with
+    $01$.
+
+22. Input alphabet $= \{a, b\}$; Accepts the set of all strings of length at
+    least $2$ for which the final two input symbols are the same.
+
+23. Input alphabet $= \{0, 1\}$; Accepts the set of all strings that start with
+    $01$ or $10$.
+
+24. Input alphabet $= \{0, 1\}$; Accepts the set of all strings that start with
+    $101$.
+
+25. Input alphabet $= \{0, 1\}$; Accepts the set of all strings that end in
+    $10$.
+
+26. $Input alphabet $= \{a, b\}$$; Accepts the set of all strings that contain
+    exactly two $b$'s.
+
+27. Input alphabet $$i= \{0, 1\}; Accepts the set of all strings that start with
+    $0$ and contain exactly one $1$.
+
+28. Input alphabet. $= \{0, 1\}$; Accepts the set of all strings that contain
+    the pattern $010$.
+
+In 29-47, design a finite-state automaton to accept the language defined by the
+regular expression in the referenced exercise from Section 12.1.
+
+29. Exercise 16
+
+30. Exercise 17
+
+31. Exercise 18
+
+32. Exercise 19
+
+33. Exercise 20
+
+34. Exercise 21
+
+35. Exercise 24
+
+36. Exercise 25
+
+37. Exercise 26
+
+38. Exercise 27
+
+39. Exercise 31
+
+40. Exercise 32
+
+41. Exercise 33
+
+42. Exercise 34
+
+43. Exercise 35
+
+44. Exercise 36
+
+45. Exercise 37
+
+46. Exercise 38
+
+47. Exercise 39
+
+48. A simplified telephone switching system allows the following strings as
+    legal telephone numbers:
+
+a. A string of seven digits in which neither of the first two digits is a $0$ or
+$1$ (_a local call string_).
+
+b. A $1$ is followed by a three-digit _area code string_ (any digit except $0$
+or $1$ followed by a $0$ or $1$ followed by any digit) followed by a seven-digit
+local call string.
+
+c. A $0$ alone or followed by a three-digit area code string plus a seven-digit
+local call string.
+
+d. Design a finite-state automaton to recognize all the legal telephone numbers
+in (a), (b), and \(c\). Include an "error state" for invalid telephone numbers.
+
+49. Write a computer algorithm that simulates the action of the finite-state
+    automaton of exercise 2 by mimicking the action of the transition diagram.
+
+50. Write a computer algorithm that simulates the action of the finite-state
+    automaton of exercise 8 by repeated application of the next-state function.
+
+51. Let $L$ be the language consisting of all strings of the form $a^mb^n$,
+    where $m$ and $n$ are positive integers and $m \geq n$. Show that there is
+    no finite-state automaton that accepts $L$.
+
+52. Let $L$ be the language consisting of all strings of the form $a^mb^n$,
+    where $m$ and $n$ are positive integers and $m \leq n$. Show that there is
+    no finite-state automaton that accepts $L$.
+
+53. Let $L$ be the language consisting of all strings of the form $a^n$, where
+    $n = m^2$, for some positive integer $m$. Show that there is no finite-state
+    automaton that accepts $L$.
+
+54.
+
+a. Let $A$ be a finite-state automaton with input alphabet $\Sigma$, and suppose
+$L(A)$ is the language accepted by $A$. The complement of $L(A)$ is the set of
+all strings over $\Sigma$ that are not in $L(A)$. Show that the complement of a
+regular language is regular by proving the following: If $L(A)$ is the language
+accepted by a finite-state automaton $A$, then there is a finite-state automaton
+$A'$ that accepts the complement of $L(A)$.
+
+b. Show that the intersection of any two regular languages is regular as
+follows: First prove that if $L(A_1)$ and $L(A_2)$ are languages accepted by
+automata $A_1$ and $A_2$, respectively, then there is an automaton $A$ that
+accepts $(L(A_1))^c \cup (L(A_2))^c$. Then use one of De Morgan's laws for sets,
+the double complement law for sets, and the result of part (a) to prove that
+there is an automaton that accepts $L(A_2) \cap L(A_2)$.
