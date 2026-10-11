@@ -1138,7 +1138,46 @@ Page 891
 
 a. Find the $0$-, $1$-, and $2$-equivalence classes of states of $A$.
 
+_$0$-equivalence classes:_
+
+$$ \{s_0, s_1, s_3, s_4\}, \{s_2, s_5\} $$
+
+_$1$-equivalence classes:_
+
+$$
+N(s_0, 0) \to s_3 \\
+N(s_3, 0) \to s_1 \\
+N(s_0, 1) \to s_1 \\
+N(s_3, 1) \to s_4 \\
+$$
+
+$$ \{s_0, s_3\} $$
+
+$$
+N(s_1, 0) \to s_2 \\
+N(s_4, 0) \to s_5 \\
+N(s_1, 1) \to s_4 \\
+N(s_4, 1) \to s_1 \\
+$$
+
+$$ \{s_0, s_3\}, \{s_1, s_4\} $$
+
+$$
+N(s_2, 0) \to s_5 \\
+N(s_5, 0) \to s_2 \\
+N(s_2, 1) \to s_0 \\
+N(s_5, 1) \to s_3 \\
+$$
+
+$$ \{s_0, s_3\}, \{s_1, s_4\}, \{s_2, s_5\} $$
+
+_$2$-equivalence classes:_
+
+$$ \{s_0, s_3\}, \{s_1, s_4\}, \{s_2, s_5\} $$
+
 b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
+
+(Done by hand.)
 
 2. Consider the finite-state automaton $A$ given by the following transition
    diagram:
@@ -1147,7 +1186,99 @@ b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
 
 a. Find the $0$-, $1$-, and $2$-equivalence classes of states of $A$.
 
+_$0$-equivalence classes:_
+
+$$ \{s_0, s_1, s_3, s_4\}, \{s_2, s_5, s_6\} $$
+
+_$1$-equivalence classes:_
+
+$$
+N(s_0, 0) \to s_1 \\
+N(s_1, 0) \to s_0 \\
+N(s_0, 1) \to s_6 \\
+N(s_1, 1) \to s_6 \\
+$$
+
+$$ \{s_0, s_1\} $$
+
+$$
+N(s_0, 0) \to s_1 \\
+N(s_3, 0) \to s_6 \\
+N(s_0, 1) \to s_6 \\
+N(s_3, 1) \to s_4 \\
+$$
+
+no adjustments.
+
+$$
+N(s_0, 0) \to s_1 \\
+N(s_4, 0) \to s_5 \\
+N(s_0, 1) \to s_6 \\
+N(s_4, 1) \to s_2 \\
+$$
+
+no adjustments.
+
+$$
+N(s_3, 0) \to s_6 \\
+N(s_4, 0) \to s_5 \\
+N(s_3, 1) \to s_4 \\
+N(s_4, 1) \to s_2 \\
+$$
+
+$$ \{s_0, s_1\}, \{s_3\}, \{s_4\} $$
+
+$$
+N(s_2, 0) \to s_3 \\
+N(s_5, 0) \to s_3 \\
+N(s_2, 1) \to s_4 \\
+N(s_5, 1) \to s_4 \\
+$$
+
+$$ \{s_0, s_1\}, \{s_3\}, \{s_4\}, \{s_2, s_5\} $$
+
+$$
+N(s_2, 0) \to s_3 \\
+N(s_6, 0) \to s_3 \\
+N(s_2, 1) \to s_4 \\
+N(s_6, 1) \to s_6 \\
+$$
+
+$$ \{s_0, s_1\}, \{s_3\}, \{s_4\}, \{s_2, s_5\}, \{s_6\} $$
+
+_$2$-equivalence classes:_
+
+Starting with the $1$-:
+
+$$ \{s_0, s_1\}, \{s_3\}, \{s_4\}, \{s_2, s_5\}, \{s_6\} $$
+
+Only check duals (_i.e._ $\{s_0, s_1\}$ and $\{s_2, s_5\}$).
+
+$$
+N(s_0, 0) \to s_1 \\
+N(s_1, 0) \to s_0 \\
+N(s_0, 1) \to s_6 \\
+N(s_1, 1) \to s_6 \\
+$$
+
+no adjustments from $1$-.
+
+$$
+N(s_2, 0) \to s_3 \\
+N(s_5, 0) \to s_3 \\
+N(s_2, 1) \to s_4 \\
+N(s_5, 1) \to s_4 \\
+$$
+
+no adjustments from, $1$.
+
+So $2$- is:
+
+$$ \{s_0, s_1\}, \{s_3\}, \{s_4\}, \{s_2, s_5\}, \{s_6\} $$
+
 b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
+
+(Done by hand.)
 
 3. Consider the finite-state automaton $A$ discussed in Example 12.3.1:
 
@@ -1155,7 +1286,11 @@ b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
 
 a. Find the $0$-, and $1$-equivalence classes of states of $A$.
 
+(Done by hand.)
+
 b. Draw the transition diagram of $\bar{A}$, the quotient automaton of $A$.
+
+(Done by hand.)
 
 4. Consider the finite-state automaton $A$ given by the following transition
    diagram:
@@ -1164,7 +1299,11 @@ b. Draw the transition diagram of $\bar{A}$, the quotient automaton of $A$.
 
 a. Find the $0$-, $1$-, $2$-, and $3$-equivalence classes of states of $A$.
 
+(Done by hand.)
+
 b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
+
+(Done by hand.)
 
 5. Consider the finite-state automaton $A$ given by the following transition
    diagram:
@@ -1173,7 +1312,11 @@ b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
 
 a. Find the $0$-, $1$-, $2$-, and $3$-equivalence classes of states of $A$.
 
+(Done by hand.)
+
 b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
+
+(Done by hand.)
 
 6. Consider the finite-state automaton $A$ given by the following transition
    diagram:
@@ -1182,41 +1325,356 @@ b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
 
 a. Find the $0$-, $1$-, $2$-, and $3$-equivalence classes of states of $A$.
 
+(Done by hand.)
+
 b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
+
+(Done by hand.) (the same as the original diagram except with class $[s_i]$
+notation).
 
 7. Are the automata $A$ and $A'$ shown below equivalent?
 
 (see Page 892 for diagram.)
 
+For $A$, $0$-class:
+
+$$ \{s_0, s_2\}, \{s_1, s_3\} $$
+
+$1$-class:
+
+$$
+N(s_0, 0) \to s_1 \\
+N(s_2, 0) \to s_2 \\
+N(s_0, 1) \to s_2 \\
+N(s_2, 1) \to s_0 \\
+$$
+
+$$ \{s_0\}, \{s_2\} $$
+
+$$
+N(s_1, 0) \to s_0 \\
+N(s_3, 0) \to s_0 \\
+N(s_1, 1) \to s_3 \\
+N(s_3, 1) \to s_3 \\
+$$
+
+Final:
+
+$$ \{s_0\}, \{s_2\}, \{s_1, s_3\} $$
+
+$2$-class:
+
+Start ($1$-class): $\{s_0\}, \{s_2\}, \{s_1, s_3\}$
+
+$$
+N(s_1, 0) \to s_0 \\
+N(s_3, 0) \to s_0 \\
+N(s_1, 1) \to s_3 \\
+N(s_3, 1) \to s_3 \\
+$$
+
+Final for $A$:
+
+$$ \{s_0\}, \{s_2\}, \{s_1, s_3\} $$
+
+$\bar{A}$ diagram done by hand.
+
+For $A'$:
+
+$0$-class:
+
+$$ \{s_0^{'}, s_1^{'}, s_2^{'}\}, \{s_3^{'}\} $$
+
+$1$-class:
+
+$$
+N(s_0^{'}, 0) \to s_3^{'} \\
+N(s_1^{'}, 0) \to s_1^{'} \\
+N(s_0^{'}, 1) \to s_1^{'} \\
+N(s_1^{'}, 1) \to s_2^{'}\\
+$$
+
+$$ \{s_0^{'}\}, \{s_1^{'}\} $$
+
+$$
+N(s_0^{'}, 0) \to s_3^{'} \\
+N(s_2^{'}, 0) \to s_3^{'} \\
+N(s_0^{'}, 1) \to s_1^{'} \\
+N(s_2^{'}, 1) \to s_1^{'}\\
+$$
+
+Final:
+
+$$ \{s_0^{'}, s_2^{'}\}, \{s_1^{'}\}, \{s_3^{'}\} $$
+
+$2$-class:
+
+start ($1$-class): $\{s_0^{'}, s_2^{'}\}, \{s_1^{'}\}, \{s_3^{'}\}$
+
+$$
+N(s_0^{'}, 0) \to s_3^{'} \\
+N(s_2^{'}, 0) \to s_3^{'} \\
+N(s_0^{'}, 1) \to s_1^{'} \\
+N(s_2^{'}, 1) \to s_1^{'}\\
+$$
+
+Final:
+
+$$ \{s_0^{'}, s_2^{'}\}, \{s_1^{'}\}, \{s_3^{'}\} $$
+
+transition diagram for $\bar{A'}$ done by hand.
+
+Since both transition diagrams for $\bar{A}$ and $\bar{A'}$ match (except for
+labeling), they are equivalent.
+
 8. Are the automata $A$ and $A'$ shown below equivalent?
 
 (see Page 893 for diagram.)
+
+Evaluating automata $A$:
+
+$0$-classes:
+
+$$ \{s_0, s_1, s_3\}, \{s_2, s_4\} $$
+
+$1$-classes:
+
+starting ($0$-classes): $\{s_0, s_1, s_3\}, \{s_2, s_4\}$
+
+$$
+N(s_0, 0) \to s_3 \\
+N(s_1, 0) \to s_3 \\
+N(s_0, 1) \to s_2 \\
+N(s_1, 1) \to s_4 \\
+$$
+
+$$ \{s_0, s_1\} $$
+
+$$
+N(s_0, 0) \to s_3 \\
+N(s_3, 0) \to s_4 \\
+N(s_0, 1) \to s_2 \\
+N(s_3, 1) \to s_0 \\
+$$
+
+$$ \{s_0, s_1\}, \{s_3\} $$
+
+$$
+N(s_2, 0) \to s_1 \\
+N(s_4, 0) \to s_0 \\
+N(s_2, 1) \to s_2 \\
+N(s_4, 1) \to s_2 \\
+$$
+
+$$ \{s_0, s_1\}, \{s_3\}, \{s_2, s_4\} $$
+
+$2$-classes:
+
+starting ($1$-classes): $\{s_0, s_1\}, \{s_3\}, \{s_2, s_4\}$
+
+$$
+N(s_0, 0) \to s_3 \\
+N(s_1, 0) \to s_3 \\
+N(s_0, 1) \to s_2 \\
+N(s_1, 1) \to s_4 \\
+$$
+
+$$ \{s_0, s_1\} $$
+
+$$
+N(s_2, 0) \to s_1 \\
+N(s_4, 0) \to s_0 \\
+N(s_2, 1) \to s_2 \\
+N(s_4, 1) \to s_2 \\
+$$
+
+$$ \{s_0, s_1\}, \{s_2, s_4\} $$
+
+Final:
+
+$$ \{s_0, s_1\}, \{s_2, s_4\}, \{s_3\} $$
+
+diagram of quotient automata $\bar{A}$ done by hand.
+
+Evaluating automata $A'$:
+
+$0$-classes:
+
+$$ \{s_0^{'}, s_1^{'}, s_2^{'}, s_3^{'}\}, \{s_4^{'}\} $$
+
+$1$-classes:
+
+starting ($0$-classes): $\{s_0^{'}, s_1^{'}, s_2^{'}, s_3^{'}\}, \{s_4^{'}\}$
+
+$$
+N(s_0^{'}, 0) \to s_4^{'} \\
+N(s_1^{'}, 0) \to s_2^{'} \\
+N(s_0^{'}, 1) \to s_1^{'} \\
+N(s_1^{'}, 1) \to s_4^{'} \\
+$$
+
+$$ \{s_0^{'}\}, \{s_1^{'}\}, \{s_4^{'}\} $$
+
+$$
+N(s_0^{'}, 0) \to s_4^{'} \\
+N(s_2^{'}, 0) \to s_4^{'} \\
+N(s_0^{'}, 1) \to s_1^{'} \\
+N(s_2^{'}, 1) \to s_3^{'} \\
+$$
+
+$$ \{s_0^{'}, s_2^{'}\}, \{s_1^{'}\}, \{s_4^{'}\} $$
+
+$$
+N(s_0^{'}, 0) \to s_4^{'} \\
+N(s_3^{'}, 0) \to s_2^{'} \\
+N(s_0^{'}, 1) \to s_1^{'} \\
+N(s_3^{'}, 1) \to s_4^{'} \\
+$$
+
+$$ \{s_0^{'}, s_2^{'}\}, \{s_1^{'}\}, \{s_3^{'}\}, \{s_4^{'}\} $$
+
+$$
+N(s_1^{'}, 0) \to s_2^{'} \\
+N(s_3^{'}, 0) \to s_2^{'} \\
+N(s_1^{'}, 1) \to s_4^{'} \\
+N(s_3^{'}, 1) \to s_4^{'} \\
+$$
+
+$$ \{s_0^{'}, s_2^{'}\}, \{s_1^{'}, \{s_3^{'}\}\}, \{s_4^{'}\} $$
+
+$2$-classes:
+
+starting ($1$-classes):
+$\{s_0^{'}, s_2^{'}\}, \{s_1^{'}, \{s_3^{'}\}\}, \{s_4^{'}\}$
+
+$$
+N(s_0^{'}, 0) \to s_4^{'} \\
+N(s_2^{'}, 0) \to s_4^{'} \\
+N(s_0^{'}, 1) \to s_1^{'} \\
+N(s_2^{'}, 1) \to s_3^{'} \\
+$$
+
+$$ \{s_0^{'}, s_2^{'}\}, \{s_4^{'}\} $$
+
+$$
+N(s_1^{'}, 0) \to s_2^{'} \\
+N(s_3^{'}, 0) \to s_2^{'} \\
+N(s_1^{'}, 1) \to s_4^{'} \\
+N(s_3^{'}, 1) \to s_4^{'} \\
+$$
+
+Final:
+
+$$ \{s_0^{'}, s_2^{'}\}, \{s_1^{'}, \{s_3^{'}\}\}, \{s_4^{'}\} $$
+
+diagram of quotient automata $\bar{A}$ done by hand.
+
+Though the two diagrams can be shown to look similar, the ending states and
+loops do not match, and thus automata $A$ and $A'$ are not equivalent.
 
 9. Are the automata $A$ and $A'$ shown below equivalent?
 
 (see Page 893 for diagram.)
 
+Omitted.
+
 10. Are the automata $A$ and $A'$ shown below equivalent?
 
 (see Page 893 for diagram.)
 
+Omitted.
+
 11. Prove property (12.3.1).
+
+**Proof:**
+
+_Partial answer:_
+
+Suppose $A$ is a finite-state automaton with set of states $S$ and relation
+$R_*$ of *-equivalence of states. _[To show that $R_*$ is an equivalence
+relation, we must show that $R$ is reflexive, symmetric, and transitive.]_
+
+_Proof that $R_*$ is symmetric:_
+
+_[We must show that for all states $s$ and $t$, if $s R_* t$ then $t R_* s$]_
+
+Suppose that $s$ and $t$ are any states of $A$ such that $s R_* t$.
+
+_[We must show that $t R_* s$.]_
+
+Since $s R_* t$, then for every input string $w$,
+
+$$ [N^*(s, w) \text{ is an accepting state}] \Leftrightarrow [N^*(t, w) \text{ is an accepting state}] $$
+
+where $N^*$ is the eventual-state function on $A$. It follows from the symmetry
+of the $\Leftrightarrow$ relation that for every input string w,
+
+$$ [N^*(t, w) \text{ is an accepting state}] \Leftrightarrow [N^*(s, w) \text{ is an accepting state}] $$
+
+Hence $t R_* s$ _[as was to be shown]_, and so $R_*$ is symmetric.
+
+_Proof that $R_*$ is reflexive:_
+
+_[Omitted.]_
+
+_Proof that $R_*$ is transitive:_
+
+_[Omitted.]_
 
 12. How should the proof of property (12.3.1) be modified to prove property
     (12.3.2)?
 
+The proof is identical to the proof of property (12.3.1) given in the solution
+to exercise 11 provided every occurence of "for each input string $w$" is
+replaced by "for each input string $w$ of length less than or equal to $k$."
+
 13. Prove property (12.3.3).
+
+**Proof:**
+
+By property (12.3.2), for each integer $k \geq 0$, $k$-equivalence is an
+equivalence relation. Now by Theorem 10.3.4, the distinct equivalence classes of
+an equivalence relation form a partition of the set on which the relation is
+defined. In this case, the relation defined on the set of all states of the
+automaton. So the $k$-equivalence classes form a partition of the set of all
+states of the automaton.
 
 14. Prove property (12.3.4).
 
+Omitted.
+
 15. Prove property (12.3.5).
 
+_Hint 1:_ Suppose $C_k$ is a particular but arbitrary chosen $k$-equivalence
+class. You must show that there is a $(k - 1)$-equivalence class $C_{k - 1}$
+such that $C_k \subseteq C_{k - 1}$.
+
+_Hint 2:_ If $s$ is any element in $C_k$ then $s$ is a state of the automaton.
+Now the $(k - 1)$-equivalence classes partition the set of all states of the
+automaton into a union of mutually disjoint subsets, so $s \subseteq C^{k - 1}$
+for _some_ $(k - 1)$-equivalence class $C_{k - 1}$.
+
+_Hint 3:_ To show that $C_k \subseteq C_{k - 1}$, you must show that for any
+state $t$, if $t \in C_k$, then $t \in C_{k - 1}$.
+
 16. Prove property (12.3.6).
+
+Omitted.
 
 17. Prove that if two states of a finite-state automaton are $k$-equivalent for
     some integer $k$, then those states are $m$-equivalent for every nonnegative
     integer $m < k$.
 
+_Hint:_ If $m < k$, then every input string of length less than or equal to $m$
+has length less than or equal to $k$.
+
 18. Write a complete proof of property (12.3.7).
 
+Omitted.
+
 19. Write a complete proof of property (12.3.8).
+
+_Hint:_ Suppose two states $s$ and $t$ are equivalent. You must show that for
+any input symbol $m$, the next-states $N(s, m)$ and $N(t, m)$ are equivalent. To
+do this, use the definition of equivalence and the fact that for any string
+$w'$, input symbol $m$, and state $s$, $N^*(N(s, m), w') = N^*(s, mw')$.

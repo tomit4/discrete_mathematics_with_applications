@@ -139,9 +139,16 @@ Page 891
    given any states $s$ and $t$ in $A$, we say that $s$ and $t$ are *-equivalent
    if, and only if, ____.
 
+for all input strings $w$, either $N^*(s, w)$ and $N^*(t, w)$ are both accepting
+states or both are nonaccepting states.
+
 2. Given a finite-state automaton $A$ with eventual-state function $N^*$ and
    given any states $s$ and $t$ in $A$, we say that $s$ and $t$ are
    $k$-equivalent if, and only if, ____.
+
+for all input strings $w$ of length less than or equal to $k$, either
+$N^*(s, w)$ and $N^*(t, w)$ are both accepting states or both are nonaccepting
+states.
 
 3. Given states $s$ and $t$ in a finite-state automaton $A$, $s$ is
    $0$-equivalent to $t$ if, and only if, either both $s$ and $t$ are ____ or
@@ -149,10 +156,17 @@ Page 891
    to $t$, if, and only if, (1) $s$ and $t$ are $(k - 1)$-equivalent and (2)
    ____.
 
+accepting states; nonaccepting states; for any input symbol $m$, $N(s, m)$ and
+$N(t, m)$ are also $(k - 1)$-equivalent
+
 4. If $A$ is a finite-state automaton, then for some integer $K \geq 0$, the set
    of $K$-equivalence classes of states of $a$ equals the set of
    ____-equivalence classes of $A$, and for all such $K$ these are both equal to
    the set of ____.
 
+$(K + 1)$; *-equivalence classes of states of $A$.
+
 5. Given a finite-state automaton $A$, the set of states of the quotient
    automaton $\bar{A}$ is ____.
+
+the set of *-equivalence classes of states of $A$
