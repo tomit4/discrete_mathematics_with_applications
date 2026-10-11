@@ -326,3 +326,167 @@ Page 876
 
 Given any language defined by a regular expression, there is a finite-state
 automaton that accepts the same language.
+
+---
+
+Page 883
+
+**Definition**
+
+Let $A$ be a finite-state automaton with next-state function $N$ and
+eventual-state function $N^*$. Define a binary relation on the set of states of
+$A$ as follows: Given any states $s$ and $t$ of $A$, we say that **$s$ and $t$
+are \*-equivalent** and write $s R_* t$ if, and only if, for each input string
+$w$,
+
+either both $N^*(s, w)$ and $N^*(t, w)$ are accepting states or both are
+nonaccepting states.
+
+---
+
+Page 883
+
+12.3.1
+
+$R_*$ is an equivalence relation on $S$, the set of states of $A$.
+
+---
+
+Page 884
+
+**Definition**
+
+Let $A$ be a finite-state automaton with next-state function $N$ and
+eventual-state function $N^*$. Define a relation on the set of states of $A$ as
+follows: Given any states $s$ and $t$ of $A$ and an integer $k \geq 0$, we say
+that $s$ is **$k$-equivalent** to $t$ and write $s R_k t$ if, and only if, for
+every input string _$w$ of length less than or equal to $k$_, either $N^*(s, w)$
+and $N^*(t, w)$ are both accepting states or they are both nonaccepting states.
+
+---
+
+Page 884
+
+12.3.2
+
+For each integer $k \geq 0$, $k$-equivalence is an equivalence relation.
+
+12.3.3
+
+For each integer $k \geq 0$, the $k$-equivalence classes partition the set of
+all states of the automaton into a union of mutually disjoint subsets.
+
+12.3.4
+
+For each integer $k \geq 1$, if two states are $k$-equivalent, then they are
+also $(k - 1)$ equivalent.
+
+12.3.5
+
+For each integer $k \geq 1$, each $k$-equivalence class is a subset of a
+$(k - 1)$-equivalence class.
+
+12.3.6
+
+Any two states that are $k$-equivalent for every integer $k \geq 0$ are
+*-equivalent.
+
+---
+
+Page 884
+
+**Theorem 12.3.1**
+
+Let $A$ be a finite-state automaton with next-state function $N$. Given any
+states $s$ and $t$ in $A$,
+
+1.
+
+$$ s \text{ is } 0\text{-equivalent to } t \Leftrightarrow [\text{either } s \text{ and } t \text{ are both accepting states or they are both nonaccepting states}] $$
+
+2.
+
+$$ \text{for every integer } k \geq 1, s \text{ is } k-\text{equivalent to } t \Leftrightarrow [s \text{ and } t \text{ are } (k - 1)\text{-equivalent, and for any input symbol } m, N(s, m) \text{ and } N(t, m) \text{ are also } (k - 1)\text{-equivlanet}] $$
+
+---
+
+Page 886
+
+**Theorem 12.3.2**
+
+If $A$ is a finite-state automaton, then for some integer $K \geq 0$, the set of
+$K$-equivalence classes of states of $A$ equals the set of $(K + 1)$-equivalence
+classes of states of $A$, and for all such $K$ these are both equal to the set
+of *-equivalence classes of states of $A$.
+
+---
+
+Page 886
+
+12.3.7
+
+No *-equivalence class of states of $A$ can contain both accepting and
+nonaccepting states.
+
+---
+
+Page 886
+
+12.3.8
+
+If two states are *-equivalent, then their next-states are also *-equivalent for
+each input symbol $m$.
+
+---
+
+Page 887
+
+**Definition**
+
+Let $A$ be a finite-state automaton with set of states $S$, set of input symbols
+$I$, and next-state function $N$. The **quotient automaton $\bar{A}$** is
+defined as follows:
+
+1. The set of states, $\bar{S}$, of $\bar{A}$ is the set of *-equivalence
+   classes of states of $A$.
+
+2. The set of input symbols, $\bar{I}$, of $\bar{A}$ equals $I$.
+
+3. The initial state of $\bar{A}$ is $[s_0]$, where $s_0$ is the initial state
+   of $A$.
+
+4. The accepting states of $\bar{A}$ are the states of the form $[s]$, where $s$
+   is an accepting state of $A$.
+
+5. The next-state function $\bar{N}: \bar{S} \times I \to \bar{S}$ is defined as
+   follows:
+
+For all states $[s]$ in $\bar{S}$ and input symbols $m$ and $I$,
+$\bar{N}([s], m) = [N(s, m)]$.
+
+(That is, if $m$ is input to $\bar{A}$ when $\bar{A}$ is in state $[s]$, then
+$\bar{A}$ goes to the state that is the *-equivalence class of $N(s, m)$.)
+
+---
+
+Page 887
+
+**Theorem 12.3.3**
+
+If $A$ is a finite-state automaton, then the quotient automaton $\bar{A}$
+accepts exactly the same languages as $A$. In other words, if $L(A)$ denotes the
+language accepted by $A$ and $L(\bar{A})$ denotes the language accepted by
+$\bar{A}$, then
+
+$$ L(A) = L(\bar{A}) $$
+
+---
+
+Page 889
+
+**Definition**
+
+Let $A$ and $A'$ be finite-state automata with the same set of input symbols
+$I$. Let $L(A)$ denote the language accepted by $A$ and $L(A')$ the language
+accepted by $A'$. Then $A$ is said to be **equivalent** to $A'$ if, and only if,
+$L(A) = L(A')$.

@@ -1124,3 +1124,99 @@ the double complement law for sets, and the result of part (a) to prove that
 there is an automaton that accepts $L(A_2) \cap L(A_2)$.
 
 Omitted.
+
+---
+
+Page 891
+
+**Exercise Set 12.3**
+
+1. Consider the finite-state automaton $A$ given by the following transition
+   diagram:
+
+(see Page 891 for diagram.)
+
+a. Find the $0$-, $1$-, and $2$-equivalence classes of states of $A$.
+
+b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
+
+2. Consider the finite-state automaton $A$ given by the following transition
+   diagram:
+
+(see Page 891 for diagram.)
+
+a. Find the $0$-, $1$-, and $2$-equivalence classes of states of $A$.
+
+b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
+
+3. Consider the finite-state automaton $A$ discussed in Example 12.3.1:
+
+(see Page 891 for diagram.)
+
+a. Find the $0$-, and $1$-equivalence classes of states of $A$.
+
+b. Draw the transition diagram of $\bar{A}$, the quotient automaton of $A$.
+
+4. Consider the finite-state automaton $A$ given by the following transition
+   diagram:
+
+(see Page 892 for diagram.)
+
+a. Find the $0$-, $1$-, $2$-, and $3$-equivalence classes of states of $A$.
+
+b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
+
+5. Consider the finite-state automaton $A$ given by the following transition
+   diagram:
+
+(see Page 892 for diagram.)
+
+a. Find the $0$-, $1$-, $2$-, and $3$-equivalence classes of states of $A$.
+
+b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
+
+6. Consider the finite-state automaton $A$ given by the following transition
+   diagram:
+
+(see Page 892 for diagram.)
+
+a. Find the $0$-, $1$-, $2$-, and $3$-equivalence classes of states of $A$.
+
+b. Draw the transition diagram for $\bar{A}$, the quotient automaton of $A$.
+
+7. Are the automata $A$ and $A'$ shown below equivalent?
+
+(see Page 892 for diagram.)
+
+8. Are the automata $A$ and $A'$ shown below equivalent?
+
+(see Page 893 for diagram.)
+
+9. Are the automata $A$ and $A'$ shown below equivalent?
+
+(see Page 893 for diagram.)
+
+10. Are the automata $A$ and $A'$ shown below equivalent?
+
+(see Page 893 for diagram.)
+
+11. Prove property (12.3.1).
+
+12. How should the proof of property (12.3.1) be modified to prove property
+    (12.3.2)?
+
+13. Prove property (12.3.3).
+
+14. Prove property (12.3.4).
+
+15. Prove property (12.3.5).
+
+16. Prove property (12.3.6).
+
+17. Prove that if two states of a finite-state automaton are $k$-equivalent for
+    some integer $k$, then those states are $m$-equivalent for every nonnegative
+    integer $m < k$.
+
+18. Write a complete proof of property (12.3.7).
+
+19. Write a complete proof of property (12.3.8).

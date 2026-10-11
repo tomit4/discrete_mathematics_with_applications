@@ -128,3 +128,31 @@ finite-state automaton)
     language is ____.
 
 not regular
+
+---
+
+Page 891
+
+**Test Yourself**
+
+1. Given a finite-state automaton $A$ with eventual-state function $N^*$ and
+   given any states $s$ and $t$ in $A$, we say that $s$ and $t$ are *-equivalent
+   if, and only if, ____.
+
+2. Given a finite-state automaton $A$ with eventual-state function $N^*$ and
+   given any states $s$ and $t$ in $A$, we say that $s$ and $t$ are
+   $k$-equivalent if, and only if, ____.
+
+3. Given states $s$ and $t$ in a finite-state automaton $A$, $s$ is
+   $0$-equivalent to $t$ if, and only if, either both $s$ and $t$ are ____ or
+   both are ____. Moreover, for every integer $k \geq 1$, $s$ is $k$-equivalent
+   to $t$, if, and only if, (1) $s$ and $t$ are $(k - 1)$-equivalent and (2)
+   ____.
+
+4. If $A$ is a finite-state automaton, then for some integer $K \geq 0$, the set
+   of $K$-equivalence classes of states of $a$ equals the set of
+   ____-equivalence classes of $A$, and for all such $K$ these are both equal to
+   the set of ____.
+
+5. Given a finite-state automaton $A$, the set of states of the quotient
+   automaton $\bar{A}$ is ____.
