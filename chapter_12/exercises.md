@@ -373,9 +373,15 @@ Page 878
 
 a. Quarter, half-dollar, quarter
 
+Ends in accepted state "$1 or more deposited"
+
 b. Quarter, half-dollar, half-dollar
 
+Ends in accepted state "$1 or more deposited"
+
 c. Half-dollar, quarter, quarter, half-dollar
+
+Ends in state "50 cents deposited"
 
 In 2-7, a finite-state automaton is given by a transition diagram. For each
 automaton:
@@ -392,18 +398,212 @@ e. Write its annotated next-state table.
 
 2. (See Page 879 for finite-state automaton diagram.)
 
+a. Find its states.
+
+$$ s_0, s_1, s_2 $$
+
+b. Find its input symbols.
+
+$$ 0, 1 $$
+
+c. Find its initial state.
+
+$$ s_0 $$
+
+d. Find its accepting states.
+
+$$ s_2 $$
+
+e. Write its annotated next-state table.
+
+|                |       | $0$   | $1$   |
+| -------------- | ----- | ----- | ----- |
+| $\rightarrow$  | $s_0$ | $s_1$ | $s_0$ |
+|                | $s_1$ | $s_1$ | $s_2$ |
+| $\circledcirc$ | $s_2$ | $s_2$ | $s_2$ |
+
 3. (See Page 879 for finite-state automaton diagram.)
+
+a. Find its states.
+
+$$ U_0, U_1, U_2, U_3 $$
+
+b. Find its input symbols.
+
+$$ a, b $$
+
+c. Find its initial state.
+
+$$ U_0 $$
+
+d. Find its accepting states.
+
+$$ U_3 $$
+
+e. Write its annotated next-state table.
+
+|                |       | $a$   | $b$   |
+| -------------- | ----- | ----- | ----- |
+| $\rightarrow$  | $U_0$ | $U_2$ | $U_1$ |
+|                | $U_1$ | $U_2$ | $U_3$ |
+|                | $U_2$ | $U_2$ | $U_2$ |
+| $\circledcirc$ | $U_3$ | $U_3$ | $U_3$ |
 
 4. (See Page 879 for finite-state automaton diagram.)
 
+a. Find its states.
+
+$$ s_0, s_1, s_2 $$
+
+b. Find its input symbols.
+
+$$ 0, 1 $$
+
+c. Find its initial state.
+
+$$ s_0 $$
+
+d. Find its accepting states.
+
+$$ s_2 $$
+
+e. Write its annotated next-state table.
+
+|                |       | $0$   | $1$   |
+| -------------- | ----- | ----- | ----- |
+| $\rightarrow$  | $s_0$ | $s_1$ | $s_0$ |
+|                | $s_1$ | $s_2$ | $s_0$ |
+| $\circledcirc$ | $s_2$ | $s_2$ | $s_0$ |
+
 5. (See Page 879 for finite-state automaton diagram.)
+
+a. Find its states.
+
+$$ A, B, C, D, E, F $$
+
+b. Find its input symbols.
+
+$$ x, y $$
+
+c. Find its initial state.
+
+$$ A $$
+
+d. Find its accepting states.
+
+$$ D, E $$
+
+e. Write its annotated next-state table.
+
+|                |     | $x$ | $y$ |
+| -------------- | --- | --- | --- |
+| $\rightarrow$  | $A$ | $C$ | $B$ |
+|                | $B$ | $F$ | $D$ |
+|                | $C$ | $E$ | $F$ |
+|                | $F$ | $F$ | $F$ |
+| $\circledcirc$ | $D$ | $F$ | $D$ |
+| $\circledcirc$ | $E$ | $E$ | $F$ |
 
 6. (See Page 879 for finite-state automaton diagram.)
 
+a. Find its states.
+
+$$ s_0, s_1, s_2, s_3 $$
+
+b. Find its input symbols.
+
+$$ 0, 1 $$
+
+c. Find its initial state.
+
+$$ s_0 $$
+
+d. Find its accepting states.
+
+$$ s_0 $$
+
+e. Write its annotated next-state table.
+
+|                             |       | $0$   | $1$   |
+| --------------------------- | ----- | ----- | ----- |
+| $\rightarrow, \circledcirc$ | $s_0$ | $s_0$ | $s_1$ |
+|                             | $s_1$ | $s_1$ | $s_2$ |
+|                             | $s_2$ | $s_2$ | $s_3$ |
+|                             | $s_3$ | $s_3$ | $s_0$ |
+
 7. (See Page 879 for finite-state automaton diagram.)
+
+a. Find its states.
+
+$$ s_0, s_1, s_2, s_3 $$
+
+b. Find its input symbols.
+
+$$ 0, 1 $$
+
+c. Find its initial state.
+
+$$ s_0 $$
+
+d. Find its accepting states.
+
+$$ s_0, s_2 $$
+
+e. Write its annotated next-state table.
+
+|                             |       | $0$   | $1$   |
+| --------------------------- | ----- | ----- | ----- |
+| $\rightarrow, \circledcirc$ | $s_0$ | $s_0$ | $s_1$ |
+|                             | $s_1$ | $s_1$ | $s_2$ |
+|                             | $s_3$ | $s_3$ | $s_0$ |
+| $\circledcirc$              | $s_2$ | $s_2$ | $s_3$ |
 
 In 8 and 9, a finite-state automaton is given by an annotated next-state table.
 For each automaton:
+
+a. Find its states.
+
+$$ s_0, s_1, s_2 $$
+
+b. Find its input symbols.
+
+$$ 0, 1 $$
+
+c. Find its initial state.
+
+$$ s_0 $$
+
+d. Find its accepting states.
+
+$$ s_2 $$
+
+e. Draw its transition diagram.
+
+(Done by hand.)
+
+8. (See Page 879 for finite-state automaton diagram.)
+
+a. Find its states.
+
+$$ s_0, s_1, s_2, s_3 $$
+
+b. Find its input symbols.
+
+$$ 0, 1 $$
+
+c. Find its initial state.
+
+$$ s_0 $$
+
+d. Find its accepting states.
+
+$$ s_1 $$
+
+e. Draw its transition diagram.
+
+(Done by hand.)
+
+9. (See Page 879 for finite-state automaton diagram.)
 
 a. Find its states.
 
@@ -415,10 +615,6 @@ d. Find its accepting states.
 
 e. Draw its transition diagram.
 
-8. (See Page 879 for finite-state automaton diagram.)
-
-9. (See Page 879 for finite-state automaton diagram.)
-
 10. A finite-state automaton $A$, given by the transition diagram below, has
     next-state function $N$ and eventual-state function $N^*$.
 
@@ -426,11 +622,27 @@ e. Draw its transition diagram.
 
 a. Find $N(s_1, 1)$ and $N(s_0, 1)$.
 
+$$ N(s_1, 1) = s_2 $$
+
+$$ N(s_0, 1) = s_3 $$
+
 b. Find $N(s_2, 0)$ and $N(s_1, 0)$.
+
+$$ N(s_2, 0) = s_3 $$
+
+$$ N(s_1, 0) = s_3 $$
 
 c. Find $N^*(s_0, 10011)$ and $N^*(s_1, 01001)$.
 
+$$ N^*(s_0, 10011) = s_2 $$
+
+$$ N^*(s_1, 01001) = s_2 $$
+
 d. Find $N^*(s_2, 11010)$ and $N^*(s_0, 01000)$.
+
+$$ N^*(s_2, 11010) = s_3 $$
+
+$$ N^*(s_0, 01000) = s_3 $$
 
 11. A finite-state automaton $A$, given by the transition diagram on the next
     page, has next-state function $N$ and eventual-state function $N^*$.
@@ -439,11 +651,27 @@ d. Find $N^*(s_2, 11010)$ and $N^*(s_0, 01000)$.
 
 a. Find $N(s_3, 0)$ and $N(s_2, 1)$.
 
+$$ N(s_3, 0) = s_4 $$
+
+$$ N(s_2, 1) = s_4 $$
+
 b. Find $N(s_0, 0)$ and $N(s_4, 1)$.
+
+$$ N(s_0, 0) = s_1 $$
+
+$$ N(s_4, 1) = s_3 $$
 
 c. Find $N^*(s_0, 010011)$ and $N^*(s_3, 01101)$.
 
+$$ N^*(s_0, 010011) = s_3 $$
+
+$$ N^*(s_3, 01101) = s_4 $$
+
 d. Find $N^*(s_0, 1111)$ and $N^*(s_2, 00111)$.
+
+$$ N^*(s_0, 1111) = s_3 $$
+
+$$ N^*(s_2, 00111) = s_2 $$
 
 12. Consider again the finite-state automaton of exercise 2.
 
@@ -452,15 +680,29 @@ are input to it in sequence, starting from the initial state?
 
 (i) 1110001
 
+$$ N^*(s_0, 1110001) = s_2 $$
+
 (ii) 0001000
+
+$$ N^*(s_0, 0001000) = s_2 $$
 
 (iii) 11110000
 
+$$ N^*(s_0, 11110000) = s_1 $$
+
 b. Which of the strings in part (a) send the automaton to an accepting state?
+
+$$ 1110001, 0001000 $$
 
 c. What is the language accepted by the automaton?
 
+The language accepted by this automaton is the set of all strings of $0$'s and
+$1$'s that containa t least one $0$ followed (not necessarily immediately) by at
+least one $1$.
+
 d. Find a regular expression that defines the language.
+
+$$ 1^*00^*1(0 | 1)^* $$
 
 13. Consider again the finite-state automaton of exercise 3.
 
@@ -469,17 +711,34 @@ are input to it in sequence, starting from the initial state?
 
 (i) bb
 
+$$ N^*(U_0, bb) = U_3 $$
+
 (ii) aabbbaba
+
+$$ N^*(U_0, aabbbaba) = U_2 $$
 
 (iii) babbbbbabaa
 
+$$ N^*(U_0, babbbbbabaa) = U_2 $$
+
 (iv) bbaaaabaa
+
+$$ N^*(U_0, bbaaaabaa) =  U_3 $$
 
 b. What of the strings in part (a) send the automaton to an accepting state?
 
+$$ bb, bbaaabaa $$
+
+(or parts (i) and (iv))
+
 c. What is the language accepted by the automaton?
 
+Any language where the first two characters are $bb$ followed by any number of
+$a$'s and/or $b$'s.
+
 d. Find a regular expression that defines the language.
+
+$$ bb(a | b)^* $$
 
 In each of 14-19, (a) find the language accepted by the automaton in the
 referenced exercise, and (b) find a regular expression that defines the same
@@ -487,15 +746,74 @@ language.
 
 14. Exercise 4
 
+a.
+
+The language accepted by this finite-state automaton is the set of all strings
+of $0$ and $1$'s that ends in $00$.
+
+b.
+
+$$ (0 | 1)^*00 $$
+
 15. Exercise 5
+
+a.
+
+The language accepted by this finite-state automaton is the set of all strings
+of $x$'s and $y$'s that either begin with $yy$ and end in any amount of $y$'s,
+or start with $xx$ and end in any amount of $x$'s.
+
+b.
+
+$$ yyy^* | xxx^* $$
 
 16. Exercise 6
 
+a.
+
+The language accepted by this finite-state automaton is the set of all strings
+of $0$'s and $1$'s that have any amount of $0$'s or have any amount of $0$'s but
+have $1$'s that are a multiple of 4.
+
+b.
+
+$$ 0^*|(0^*10^*10^*10^*1)^* $$
+
 17. Exercise 7
+
+a.
+
+The language accepted by this finite-state automaton is the set of all strings
+of $0$'s and $1$'s that have any amount of $0$'s or have any amount of $0$'s but
+have $1$'s that are a multiple of 2.
+
+b.
+
+$$ 0^*|(0^*10^*1)^* $$
 
 18. Exercise 8
 
+a.
+
+The language accepted by this finite-state automaton is the set of all strings
+of $0$'s and $1$'s that start with any amount of $0$'s or $1$'s followed by any
+amount of $1$'s.
+
+b.
+
+$$ (0 | 1)1^* $$
+
 19. Exercise 9
+
+a.
+
+The language accepted by this automaton is the set of all strings of $0$'s and
+$1$'s, with the property that if $n$ is the number of $1$'s in the string, then
+$n \mod 4 = 1$.
+
+b.
+
+$$ (0^*10^*10^*10^*1)^*1(0^*10^*10^*10^*1)^* $$
 
 In each of 20-28, (a) design an automaton with the given input alphabet that
 accepts the given set of strings, and (b) find a regular expression that defines
@@ -504,70 +822,238 @@ the language accepted by the automaton.
 20. Input alphabet $= \{0, 1\}$; Accepts the set of all strings for which the
     final three input symbols are $1$.
 
+a. (Done by hand.)
+
+b.
+
+$$ (0 | 1)^*111 $$
+
 21. Input alphabet $= \{0, 1\}$; Accepts the set of all strings that start with
     $01$.
+
+a. (Done by hand.)
+
+b.
+
+$$ 01(0 | 1)^* $$
 
 22. Input alphabet $= \{a, b\}$; Accepts the set of all strings of length at
     least $2$ for which the final two input symbols are the same.
 
+a. (Done by hand.)
+
+b.
+
+$$ (a|b)^*(aa|bb) $$
+
 23. Input alphabet $= \{0, 1\}$; Accepts the set of all strings that start with
     $01$ or $10$.
+
+a. (Done by hand.)
+
+b.
+
+$$ (01|10)(0 | 1)^* $$
 
 24. Input alphabet $= \{0, 1\}$; Accepts the set of all strings that start with
     $101$.
 
+a. (Done by hand.)
+
+b.
+
+$$ 101(0|1)^* $$
+
 25. Input alphabet $= \{0, 1\}$; Accepts the set of all strings that end in
     $10$.
+
+a. (Done by hand.)
+
+b.
+
+$$ (0|1)^*10 $$
 
 26. $Input alphabet $= \{a, b\}$$; Accepts the set of all strings that contain
     exactly two $b$'s.
 
+a. (Done by hand.)
+
+b.
+
+$$ a^*ba^*ba^* $$
+
 27. Input alphabet $$i= \{0, 1\}; Accepts the set of all strings that start with
     $0$ and contain exactly one $1$.
 
+a. (Done by hand.)
+
+b.
+
+$$ 0^+10^* $$
+
 28. Input alphabet. $= \{0, 1\}$; Accepts the set of all strings that contain
     the pattern $010$.
+
+a. (Done by hand.)
+
+b.
+
+$$ (0 | 1)^*010(0 | 1)^* $$
 
 In 29-47, design a finite-state automaton to accept the language defined by the
 regular expression in the referenced exercise from Section 12.1.
 
 29. Exercise 16
 
+Regex:
+
+$$ 0^*1(0^*1^*)^* $$
+
+(Done by hand.)
+
 30. Exercise 17
+
+Regex:
+
+$$ b^* | b^*ab^* $$
+
+(Done by hand.)
 
 31. Exercise 18
 
+Regex:
+
+$$ x^*(yxxy | x)^* $$
+
+(Done by hand.)
+
 32. Exercise 19
+
+Regex:
+
+$$ b^*ab^*ab^*a $$
+
+(Done by hand.)
 
 33. Exercise 20
 
+Regex:
+
+$$ 1(0 | 1)^*00 $$
+
+(Done by hand.)
+
 34. Exercise 21
+
+Regex:
+
+$$ (x | y)y(x | y)^* $$
+
+(Done by hand.)
 
 35. Exercise 24
 
+Regex:
+
+$$ (01^*2)^* $$
+
+(Done by hand.)
+
 36. Exercise 25
+
+Regex:
+
+$$ 0^*10^*(0^*10^*1)^* $$
+
+(Done by hand.)
 
 37. Exercise 26
 
+Regex:
+
+$$ (a | b)^*b(a | b)(a | b) $$
+
+(Done by hand.)
+
 38. Exercise 27
+
+Regex:
+
+$$ y^*(xy^+)^*xy^* | y^* $$
+
+Omitted.
 
 39. Exercise 31
 
+Regex:
+
+$$ pre[a - z]^+ $$
+
+(Done by hand.)
+
 40. Exercise 32
+
+Regex:
+
+$$ [A - Z]^*(BIO | INFO)[A - Z]^* $$
+
+(Done by hand.)
 
 41. Exercise 33
 
+Regex:
+
+$$ [a - z]^3[a - z]^*ly $$
+
+(Done by hand.)
+
 42. Exercise 34
+
+Regex:
+
+$$ [a - z]^*(a | e | i | o | u)[a - z]^* $$
+
+(Done by hand.)
 
 43. Exercise 35
 
+Regex:
+
+$$ [b-d f-h j-n p-t v-z]^*(a | e | i | o | u)[b-d f-h j-n p-t v-z]^* $$
+
+(Done by hand.)
+
 44. Exercise 36
+
+Regex:
+
+$$ [B-D F-H J-N P-T V-Z]^+(A | E | I | O | U)(A | E | I | O | U)[B-D F-H J-N P-T V-Z]^* $$
+
+(Done by hand.)
 
 45. Exercise 37
 
+Regex:
+
+$$ [0-9]^3-[0-9]^2-3[0-9]^26 $$
+
+(Done by hand.)
+
 46. Exercise 38
 
+Regex:
+
+$$ (800 | 888)-[0-9]^3-2[0-9]^22 $$
+
+(Done by hand.)
+
 47. Exercise 39
+
+Regex:
+
+$$ (+ | -)?[0-9]^+(\.[0-9]^+)? $$
+
+(Done by hand.)
 
 48. A simplified telephone switching system allows the following strings as
     legal telephone numbers:
@@ -582,26 +1068,42 @@ local call string.
 c. A $0$ alone or followed by a three-digit area code string plus a seven-digit
 local call string.
 
-d. Design a finite-state automaton to recognize all the legal telephone numbers
-in (a), (b), and \(c\). Include an "error state" for invalid telephone numbers.
+Design a finite-state automaton to recognize all the legal telephone numbers in
+(a), (b), and \(c\). Include an "error state" for invalid telephone numbers.
+
+Regex is:
+
+$$ 0([2-9](0 | 1)[0-9][2-9]^2[0-9]^5)? | (1[2-9](0 | 1)[0-9])?[2-9]^2[0-9]^5  $$
+
+(Graph omitted, this is a bit much.)
 
 49. Write a computer algorithm that simulates the action of the finite-state
     automaton of exercise 2 by mimicking the action of the transition diagram.
 
+Omitted.
+
 50. Write a computer algorithm that simulates the action of the finite-state
     automaton of exercise 8 by repeated application of the next-state function.
+
+Omitted.
 
 51. Let $L$ be the language consisting of all strings of the form $a^mb^n$,
     where $m$ and $n$ are positive integers and $m \geq n$. Show that there is
     no finite-state automaton that accepts $L$.
 
+Omitted.
+
 52. Let $L$ be the language consisting of all strings of the form $a^mb^n$,
     where $m$ and $n$ are positive integers and $m \leq n$. Show that there is
     no finite-state automaton that accepts $L$.
 
+Omitted.
+
 53. Let $L$ be the language consisting of all strings of the form $a^n$, where
     $n = m^2$, for some positive integer $m$. Show that there is no finite-state
     automaton that accepts $L$.
+
+Omitted.
 
 54.
 
@@ -612,9 +1114,13 @@ regular language is regular by proving the following: If $L(A)$ is the language
 accepted by a finite-state automaton $A$, then there is a finite-state automaton
 $A'$ that accepts the complement of $L(A)$.
 
+Omitted.
+
 b. Show that the intersection of any two regular languages is regular as
 follows: First prove that if $L(A_1)$ and $L(A_2)$ are languages accepted by
 automata $A_1$ and $A_2$, respectively, then there is an automaton $A$ that
 accepts $(L(A_1))^c \cup (L(A_2))^c$. Then use one of De Morgan's laws for sets,
 the double complement law for sets, and the result of part (a) to prove that
 there is an automaton that accepts $L(A_2) \cap L(A_2)$.
+
+Omitted.

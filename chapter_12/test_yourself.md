@@ -76,29 +76,55 @@ Page 878
 1. The five objects that make up a finite-state automaton are ____, ____, ____,
    ____, and ____.
 
+a finite set of input symbols; a finite set of states; a designated initial
+state; a designated set of accepting states; a next-state function that
+associates a "next-state" with each state and input symbol of the automaton
+
 2. The next-state table for an automaton shows the values of ____.
+
+the next-state function for each state and input symbol of the automaton
 
 3. In the annotated next-state table, the initial state is indicated with an
    ____ and the accepting states are marked by ____.
 
+arrow; double circles
+
 4. A string $w$ consisting of input symbols is accepted by a finite-state
    automaton $A$ if, and only if, ____.
 
+when the symbols in the string are input to the automaton in sequence from left
+to right, starting from the initial state, the automaton ends up in an accepting
+state
+
 5. The language accepted by a finite-state automaton $A$ is ____.
+
+the set of strings that are accepted by $A$
 
 6. If $N$ is the next-state function for a finite-state automaton $A$, the
    eventual-state function $N^*$ is defined as follows: For each state $s$ of
    $A$ and for each string $w$ that consists of input symbols of $A$,
    $N^*(s, w) =$ ____.
 
+the state to which $A$ goes if it is in state $s$ and the characters of $w$ are
+input to it in sequence
+
 7. One part of Kleene's theorem says that given any language that is accepted by
    a finite-state automaton, there is ____.
+
+a regular expression that defines the same language
 
 8. The second part of Kleene's theorem says that given any language defined by a
    regular expression, there is ____.
 
+a finite-state automaton that accepts the same language
+
 9. A regular language is ____.
+
+a language defined by a regular expression (_Or:_ a language accepted by a
+finite-state automaton)
 
 10. Given the language consisting of all strings of the form $a^kb^k$, where $k$
     is a positive integer, the pigeonhole principle can be used to show that the
     language is ____.
+
+not regular
